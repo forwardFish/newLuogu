@@ -1,0 +1,331 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model AnalyzedSubject {
+  id                   BigInt   @id @default(autoincrement())
+  displayName          String?
+  luoguUid             String
+  subjectType          String   @default("PUBLIC_UID")
+  target               String   @default("CSP-S_FIRST_PRIZE")
+  grade                String?
+  dailyTrainingMinutes Int      @default(120)
+  currentLevel         String?
+  analysisConfidence   Decimal  @default(0)
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  syncJobs           SyncJob[]
+  rawSnapshots       RawSnapshot[]
+  profile            LuoguProfile?
+  submissions        Submission[]
+  attemptStats       ProblemAttemptStat[]
+  manualReviews      ManualReview[]
+  knowledgeStats     SubjectKnowledgeStat[]
+  dataQualityReports DataQualityReport[]
+  featureSnapshots   FeatureSnapshot[]
+  baselineReports    BaselineAnalysisReport[]
+
+  @@unique([luoguUid, subjectType])
+  @@map("analyzed_subjects")
+}
+
+model SyncJob {
+  id                  BigInt    @id @default(autoincrement())
+  subjectId           BigInt
+  luoguUid            String
+  status              String    @default("PENDING")
+  syncType            String    @default("baseline")
+  maxRecordPages      Int       @default(20)
+  recordPagesFetched  Int       @default(0)
+  rawRecordsParsed    Int       @default(0)
+  submissionsUpserted Int       @default(0)
+  uniqueProblemsFound Int       @default(0)
+  problemsFetched     Int       @default(0)
+  problemFetchFailed  Int       @default(0)
+  errorJson           Json      @default("[]")
+  summaryJson         Json      @default("{}")
+  startedAt           DateTime?
+  finishedAt          DateTime?
+  createdAt           DateTime  @default(now())
+
+  subject            AnalyzedSubject @relation(fields: [subjectId], references: [id])
+  steps              SyncJobStep[]
+  rawSnapshots       RawSnapshot[]
+  dataQualityReports DataQualityReport[]
+  featureSnapshots   FeatureSnapshot[]
+  baselineReports    BaselineAnalysisReport[]
+
+  @@map("sync_jobs")
+}
+
+model SyncJobStep {
+  id           BigInt    @id @default(autoincrement())
+  syncJobId    BigInt
+  stepName     String
+  status       String    @default("PENDING")
+  inputJson    Json      @default("{}")
+  outputJson   Json      @default("{}")
+  errorMessage String?
+  startedAt    DateTime?
+  finishedAt   DateTime?
+  createdAt    DateTime  @default(now())
+
+  syncJob SyncJob @relation(fields: [syncJobId], references: [id])
+
+  @@map("sync_job_steps")
+}
+
+model RawSnapshot {
+  id            BigInt   @id @default(autoincrement())
+  syncJobId     BigInt?
+  subjectId     BigInt
+  sourceType    String
+  sourceKey     String?
+  url           String?
+  httpStatus    Int?
+  rawContent    String?
+  rawJson       Json?
+  parserVersion String?
+  fetchedAt     DateTime @default(now())
+
+  subject     AnalyzedSubject @relation(fields: [subjectId], references: [id])
+  syncJob     SyncJob?        @relation(fields: [syncJobId], references: [id])
+  profile     LuoguProfile[]
+  submissions Submission[]
+
+  @@map("raw_snapshots")
+}
+
+model LuoguProfile {
+  id                BigInt    @id @default(autoincrement())
+  subjectId         BigInt    @unique
+  luoguUid          String
+  username          String?
+  rating            Int?
+  passedProblemPids Json      @default("[]")
+  rawSnapshotId     BigInt?
+  fetchedAt         DateTime?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  subject     AnalyzedSubject @relation(fields: [subjectId], references: [id])
+  rawSnapshot RawSnapshot?    @relation(fields: [rawSnapshotId], references: [id])
+
+  @@map("luogu_profiles")
+}
+
+model Problem {
+  id             BigInt    @id @default(autoincrement())
+  luoguPid       String    @unique
+  title          String?
+  difficulty     Int?
+  difficultyName String?
+  tags           Json      @default("[]")
+  source         String?
+  acceptedCount  Int?
+  submittedCount Int?
+  cspWeight      Decimal   @default(0)
+  fetchStatus    String    @default("unknown")
+  lastFetchedAt  DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  submissions   Submission[]
+  attemptStats  ProblemAttemptStat[]
+  knowledgeMaps ProblemKnowledgeMap[]
+  manualReviews ManualReview[]
+
+  @@map("problems")
+}
+
+model Submission {
+  id                BigInt    @id @default(autoincrement())
+  subjectId         BigInt
+  problemId         BigInt?
+  luoguRecordId     String?
+  fallbackRecordKey String?
+  problemPid        String?
+  problemTitle      String?
+  result            String?
+  normalizedResult  String?
+  score             Int?
+  language          String?
+  submitTime        DateTime?
+  source            String    @default("luogu")
+  rawSnapshotId     BigInt?
+  createdAt         DateTime  @default(now())
+
+  subject     AnalyzedSubject @relation(fields: [subjectId], references: [id])
+  problem     Problem?        @relation(fields: [problemId], references: [id])
+  rawSnapshot RawSnapshot?    @relation(fields: [rawSnapshotId], references: [id])
+
+  @@unique([subjectId, luoguRecordId])
+  @@index([subjectId])
+  @@index([problemPid])
+  @@map("submissions")
+}
+
+model ProblemAttemptStat {
+  id              BigInt    @id @default(autoincrement())
+  subjectId       BigInt
+  problemId       BigInt?
+  problemPid      String
+  totalAttempts   Int       @default(0)
+  acAttempts      Int       @default(0)
+  wrongAttempts   Int       @default(0)
+  firstSubmitTime DateTime?
+  firstAcTime     DateTime?
+  lastSubmitTime  DateTime?
+  isAc            Boolean   @default(false)
+  bestScore       Int?
+  mainErrorType   String?
+  avgScore        Decimal?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  subject AnalyzedSubject @relation(fields: [subjectId], references: [id])
+  problem Problem?        @relation(fields: [problemId], references: [id])
+
+  @@unique([subjectId, problemPid])
+  @@map("problem_attempt_stats")
+}
+
+model ManualReview {
+  id               BigInt   @id @default(autoincrement())
+  subjectId        BigInt
+  problemId        BigInt?
+  problemPid       String
+  result           String?
+  timeSpentMinutes Int?
+  solutionUsage    String   @default("unknown")
+  errorTypes       Json     @default("[]")
+  selfNote         String?
+  reviewedAt       DateTime @default(now())
+  createdAt        DateTime @default(now())
+
+  subject AnalyzedSubject @relation(fields: [subjectId], references: [id])
+  problem Problem?        @relation(fields: [problemId], references: [id])
+
+  @@map("manual_reviews")
+}
+
+model KnowledgeNode {
+  id            BigInt   @id @default(autoincrement())
+  code          String   @unique
+  name          String
+  parentCode    String?
+  level         Int      @default(1)
+  cspStage      String?
+  cspImportance Int      @default(3)
+  sortOrder     Int      @default(0)
+  createdAt     DateTime @default(now())
+
+  @@map("knowledge_nodes")
+}
+
+model ProblemKnowledgeMap {
+  id            BigInt   @id @default(autoincrement())
+  problemId     BigInt
+  knowledgeCode String
+  weight        Decimal  @default(1)
+  source        String   @default("tag_rule")
+  confidence    Decimal  @default(0.8)
+  createdAt     DateTime @default(now())
+
+  problem Problem @relation(fields: [problemId], references: [id])
+
+  @@unique([problemId, knowledgeCode])
+  @@map("problem_knowledge_maps")
+}
+
+model SubjectKnowledgeStat {
+  id                    BigInt   @id @default(autoincrement())
+  subjectId             BigInt
+  knowledgeCode         String
+  solvedProblemCount    Int      @default(0)
+  attemptedProblemCount Int      @default(0)
+  acSubmissionCount     Int      @default(0)
+  totalSubmissionCount  Int      @default(0)
+  acRate                Decimal?
+  avgAttemptsToAc       Decimal?
+  maxDifficulty         Int?
+  avgDifficulty         Decimal?
+  recent30dAttempts     Int      @default(0)
+  score                 Int      @default(0)
+  weaknessLevel         String?
+  calculatedAt          DateTime @default(now())
+
+  subject AnalyzedSubject @relation(fields: [subjectId], references: [id])
+
+  @@unique([subjectId, knowledgeCode])
+  @@map("subject_knowledge_stats")
+}
+
+model DataQualityReport {
+  id                 BigInt   @id @default(autoincrement())
+  subjectId          BigInt
+  syncJobId          BigInt?
+  overallScore       Int
+  recordDepthScore   Int
+  problemDetailScore Int
+  tagCoverageScore   Int
+  freshnessScore     Int
+  manualReviewScore  Int
+  confidenceLevel    String
+  issueJson          Json     @default("[]")
+  summary            String?
+  createdAt          DateTime @default(now())
+
+  subject         AnalyzedSubject @relation(fields: [subjectId], references: [id])
+  syncJob         SyncJob?        @relation(fields: [syncJobId], references: [id])
+  baselineReports BaselineAnalysisReport[]
+
+  @@map("data_quality_reports")
+}
+
+model FeatureSnapshot {
+  id             BigInt   @id @default(autoincrement())
+  subjectId      BigInt
+  syncJobId      BigInt?
+  featureJson    Json
+  featureVersion String   @default("feature-v1.0.0")
+  createdAt      DateTime @default(now())
+
+  subject         AnalyzedSubject @relation(fields: [subjectId], references: [id])
+  syncJob         SyncJob?        @relation(fields: [syncJobId], references: [id])
+  baselineReports BaselineAnalysisReport[]
+
+  @@map("feature_snapshots")
+}
+
+model BaselineAnalysisReport {
+  id                 BigInt   @id @default(autoincrement())
+  subjectId          BigInt
+  syncJobId          BigInt?
+  featureSnapshotId  BigInt?
+  dataQualityReportId BigInt?
+  target             String   @default("CSP-S_FIRST_PRIZE")
+  totalScore         Int
+  level              String
+  analysisConfidence Decimal
+  abilityJson        Json
+  gapJson            Json
+  weaknessJson       Json
+  recommendationJson Json
+  llmReportText      String?
+  createdAt          DateTime @default(now())
+
+  subject           AnalyzedSubject  @relation(fields: [subjectId], references: [id])
+  syncJob           SyncJob?         @relation(fields: [syncJobId], references: [id])
+  featureSnapshot   FeatureSnapshot? @relation(fields: [featureSnapshotId], references: [id])
+  dataQualityReport DataQualityReport? @relation(fields: [dataQualityReportId], references: [id])
+
+  @@map("baseline_analysis_reports")
+}

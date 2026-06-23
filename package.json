@@ -1,0 +1,52 @@
+{
+  "name": "ai-oi-coach-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:seed": "tsx prisma/seed.ts",
+    "prisma:studio": "prisma studio",
+    "file:analyze": "tsx scripts/analyze-luogu-file.ts",
+    "file:import": "tsx scripts/import-file-to-db.ts",
+    "luogu:crawl": "tsx scripts/crawl-luogu-records.ts",
+    "luogu:crawl-code": "tsx scripts/crawl-luogu-source-codes.ts",
+    "analyze:codes": "tsx scripts/analyze-codes.ts",
+    "analyze:manifest": "tsx scripts/build-manifest.ts",
+    "analyze:static": "tsx scripts/scan-code-static.ts",
+    "analyze:timeline": "tsx scripts/build-problem-timeline.ts",
+    "analyze:modules": "tsx scripts/detect-algorithm-modules.ts",
+    "analyze:samples": "tsx scripts/select-deep-review-samples.ts",
+    "analyze:report": "tsx scripts/generate-code-analysis-report.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.10.1",
+    "cheerio": "^1.0.0",
+    "next": "^15.3.4",
+    "openai": "^5.7.0",
+    "p-limit": "^6.2.0",
+    "playwright": "^1.56.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@types/node": "^22.15.32",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.29.0",
+    "eslint-config-next": "^15.3.4",
+    "postcss": "^8.5.6",
+    "prisma": "^6.10.1",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "packageManager": "pnpm@11.8.0+sha512.c1f5e7c4cb241c8f174b743851d82f42b802324afc8b0f116b96adb15aa06664948dde36960a3ba1079ba5b4b29dd0140135b94b5b5f5263592249d68e555f26"
+}
