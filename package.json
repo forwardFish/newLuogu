@@ -21,7 +21,15 @@
     "analyze:timeline": "tsx scripts/build-problem-timeline.ts",
     "analyze:modules": "tsx scripts/detect-algorithm-modules.ts",
     "analyze:samples": "tsx scripts/select-deep-review-samples.ts",
-    "analyze:report": "tsx scripts/generate-code-analysis-report.ts"
+    "analyze:report": "tsx scripts/generate-code-analysis-report.ts",
+    "train:profile": "tsx scripts/training/build-training-profile.ts",
+    "train:priority": "tsx scripts/training/build-training-priority.ts",
+    "train:plan": "tsx scripts/training/generate-training-plan.ts",
+    "train:plan-md": "tsx scripts/training/generate-training-plan-md.ts",
+    "train:review": "tsx scripts/training/generate-weekly-review.ts",
+    "train:verify": "tsx scripts/training/verify-training-loop.ts",
+    "train:readiness": "tsx scripts/training/build-readiness-checklist.ts",
+    "train:all": "tsx scripts/training/build-training-system.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.10.1",

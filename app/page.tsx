@@ -2,10 +2,13 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main style={{ padding: 24 }}>
+    <main style={{ padding: 24, display: "grid", gap: 16 }}>
       <h1>AI OI Coach MVP</h1>
-      <p>核心功能优先：用 API 创建对象、同步洛谷公开数据、生成 CSP-S 初始分析报告。</p>
-      <Link href="/analyze">打开最小分析入口</Link>
+      <p>AI 信奥训练教练，优先完成数据分析、代码分析和 CSP-S 一等奖训练闭环。</p>
+      <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+        <Link href="/training">查看训练闭环结果</Link>
+        <Link href="/analyze">打开最小分析入口</Link>
+      </div>
     </main>
   );
 }
