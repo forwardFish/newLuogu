@@ -68,9 +68,13 @@ export class SubmissionService {
       );
       const first = items[0];
       const last = items[items.length - 1];
-      const scores = items.map((item: (typeof submissions)[number]) => item.score).filter((score): score is number => score !== null);
+      const scores = items
+        .map((item: (typeof submissions)[number]) => item.score)
+        .filter((score: number | null): score is number => score !== null);
       const mainErrorType = mostCommon(
-        wrongItems.map((item: (typeof submissions)[number]) => item.normalizedResult).filter((value): value is string => Boolean(value))
+        wrongItems
+          .map((item: (typeof submissions)[number]) => item.normalizedResult)
+          .filter((value: string | null): value is string => Boolean(value))
       );
       await prisma.problemAttemptStat.upsert({
         where: { subjectId_problemPid: { subjectId, problemPid: pid } },

@@ -681,12 +681,34 @@ export async function buildVersionDiffInsights(options: DiagnosisOptions): Promi
   return insights;
 }
 
+async function buildLlmCoverageReportNote(options: DiagnosisOptions): Promise<string> {
+  const base = "本报告基于所有历史题目的提交轨迹、代码静态指标、算法模块识别和问题簇归类生成。";
+  try {
+    const diagnosis = await readJson<JsonObject>(path.join(options.diagnosisDir, "cluster_llm_diagnosis.json"));
+    const provider = isObject(diagnosis.provider) ? diagnosis.provider : {};
+    const items = arrayOfObjects(diagnosis.items);
+    const deepSeekCount = items.filter((item) => getString(item, "source") === "DEEPSEEK_CLUSTER_DIAGNOSIS").length;
+    const ruleCount = items.filter((item) => getString(item, "source") !== "DEEPSEEK_CLUSTER_DIAGNOSIS").length;
+    if (Boolean(provider.keyPresent) && deepSeekCount > 0) {
+      const limit = getNumber(provider, "limit");
+      const limitText = limit > 0 ? `，本次 DIAGNOSIS_LLM_LIMIT=${limit}` : "";
+      return `${base} 当前版本已接入真实 DeepSeek 簇诊断：${deepSeekCount} 个问题簇由大模型生成诊断，${ruleCount} 个问题簇使用规则兜底保持全量覆盖${limitText}。`;
+    }
+  } catch {
+    // Keep report generation available even when the LLM diagnosis artifact is absent.
+  }
+  return `${base} 当前版本使用规则诊断完成全量覆盖；配置 DeepSeek 后可运行 pnpm diagnosis:llm 生成真实大模型簇诊断。`;
+}
+
 export async function generateWeaknessReport(options: DiagnosisOptions): Promise<string> {
   const summary = await readOrBuildWeaknessSummary(options);
   const matrix = await readJson<{ items: JsonObject[] }>(path.join(options.diagnosisDir, "module_weakness_matrix.json"));
   const errors = await readJson<{ items: Record<string, JsonObject> }>(path.join(options.diagnosisDir, "error_type_distribution.json"));
   const topWeaknesses = arrayOfObjects(summary.topWeaknesses).slice(0, 10);
+  const llmCoverageNote = await buildLlmCoverageReportNote(options);
   const md = [
+    llmCoverageNote,
+    "",
     "# 全题目级薄弱点诊断报告",
     "",
     `生成时间：${new Date().toISOString()}`,
@@ -719,7 +741,10 @@ export async function generateWeaknessReport(options: DiagnosisOptions): Promise
     "- 对高严重度问题簇的代表题进行人工或 LLM 深度复盘。",
     "- 完成训练后把结果回填到训练记录，再重新运行诊断。",
     "",
-  ].join("\n");
+  ].filter((line) => !String(line).includes("当前版本先用规则完成全量覆盖"))
+    .join("\n")
+    .replace(`${llmCoverageNote}\n\n`, "")
+    .replace("\n## 2.", `\n${llmCoverageNote}\n\n## 2.`);
   const reportPath = path.join(options.diagnosisDir, "weakness_report.md");
   await fs.writeFile(reportPath, `\uFEFF${md}`, "utf8");
   return reportPath;

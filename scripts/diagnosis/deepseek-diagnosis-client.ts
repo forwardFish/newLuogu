@@ -136,7 +136,7 @@ export async function callDeepSeekClusterDiagnosis(params: {
       throw new Error(`DeepSeek call failed: ${response.status} ${text.slice(0, 300)}`);
     }
     const json = (await response.json()) as JsonObject;
-    const content = getString(json, "choices.0.message.content");
+    const content = getString(json, "choices.0.message.content") || getString(json, "choices.0.message.reasoning_content");
     if (!content) throw new Error("DeepSeek response missing choices[0].message.content.");
     const parsed = extractJson(content);
     return {
@@ -237,12 +237,36 @@ function normalizeErrorTypes(value: unknown): string[] {
 
 function extractJson(text: string): JsonObject {
   const cleaned = String(text || "").replace(/```json/gi, "").replace(/```/g, "").trim();
-  const start = cleaned.indexOf("{");
-  const end = cleaned.lastIndexOf("}");
-  if (start < 0 || end <= start) throw new Error("DeepSeek response did not contain a JSON object.");
-  const parsed = JSON.parse(cleaned.slice(start, end + 1)) as unknown;
-  if (!isObject(parsed)) throw new Error("DeepSeek JSON response is not an object.");
-  return parsed;
+  const parsed = parseFirstJsonObject(cleaned);
+  if (parsed) return parsed;
+  throw new Error(`DeepSeek response did not contain a valid JSON object. Preview: ${cleaned.slice(0, 240) || "<empty>"}`);
+}
+
+function parseFirstJsonObject(text: string): JsonObject | null {
+  const starts = [...text.matchAll(/\{/g)].map((match) => match.index ?? -1).filter((index) => index >= 0);
+  const ends = [...text.matchAll(/\}/g)].map((match) => match.index ?? -1).filter((index) => index >= 0).reverse();
+  for (const start of starts) {
+    for (const end of ends) {
+      if (end <= start) continue;
+      const parsed = tryParseJsonObject(text.slice(start, end + 1));
+      if (parsed) return parsed;
+    }
+  }
+  return null;
+}
+
+function tryParseJsonObject(raw: string): JsonObject | null {
+  try {
+    const parsed = JSON.parse(raw) as unknown;
+    return isObject(parsed) ? parsed : null;
+  } catch {
+    try {
+      const parsed = JSON.parse(raw.replace(/\\(?!["\\/bfnrtu])/g, "\\\\")) as unknown;
+      return isObject(parsed) ? parsed : null;
+    } catch {
+      return null;
+    }
+  }
 }
 
 async function loadAiEnv(projectRoot: string): Promise<{ env: Record<string, string>; sources: string[] }> {

@@ -20,7 +20,7 @@ export class FeatureExtractorService {
     const resultFeatures = buildResultFeatures(submissions.map((s: (typeof submissions)[number]) => s.normalizedResult ?? "UNKNOWN"));
     const difficultyFeatures = buildDifficultyFeatures(attemptStats);
     const attemptFeatures = buildAttemptFeatures(attemptStats);
-    const activityFeatures = buildActivityFeatures(dated.map((s) => s.submitTime as Date));
+    const activityFeatures = buildActivityFeatures(dated.map((s: (typeof submissions)[number]) => s.submitTime as Date));
     const cspReadinessFeatures = buildCspReadinessFeatures(difficultyFeatures, resultFeatures, attemptFeatures);
     const featureJson = {
       subjectId: Number(input.subjectId),

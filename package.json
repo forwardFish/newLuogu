@@ -46,7 +46,20 @@
     "problem-bank:generate": "tsx scripts/problem-bank/generate-diagnostic-problems.ts",
     "problem-bank:pack": "tsx scripts/problem-bank/build-task-pack.ts",
     "problem-bank:all": "tsx scripts/problem-bank/build-problem-engine.ts",
-    "test:smart-engine": "tsx scripts/test-smart-problem-engine.ts"
+    "test:smart-engine": "tsx scripts/test-smart-problem-engine.ts",
+    "coach:simulate": "tsx scripts/coach/build-coach-decision-system.ts",
+    "coach:all": "tsx scripts/coach/build-coach-decision-system.ts",
+    "coach:log:init": "tsx scripts/coach/build-coach-decision-system.ts",
+    "coach:log:append": "tsx scripts/coach/build-coach-decision-system.ts",
+    "coach:state": "tsx scripts/coach/build-coach-decision-system.ts",
+    "coach:validate": "tsx scripts/coach/build-coach-decision-system.ts",
+    "coach:plan": "tsx scripts/coach/build-coach-decision-system.ts",
+    "coach:feedback": "tsx scripts/coach/build-coach-decision-system.ts",
+    "coach:week": "tsx scripts/coach/build-coach-decision-system.ts",
+    "problem-quality:compile": "tsx scripts/problem-quality/check-problem-package.ts",
+    "problem-quality:stress": "tsx scripts/problem-quality/check-problem-package.ts",
+    "problem-quality:all": "tsx scripts/problem-quality/check-problem-package.ts",
+    "problem-quality:report": "tsx scripts/problem-quality/check-problem-package.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.10.1",
