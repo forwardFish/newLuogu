@@ -1,0 +1,197 @@
+{
+  "recordId": "246303808",
+  "url": "https://www.luogu.com.cn/record/246303808?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:34:20.183Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_g9faq12s\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_g9faq12s\\/src:12:13: \\u9519\\u8bef\\uff1ano matching function for call to \\u2018std::__cxx11::basic_string<char>::insert(std::string&)\\u2019\\n   12 |   s.insert(s);\\n      |             ^\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/string:55,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/locale_classes.h:40,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/ios_base.h:41,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ios:42,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/istream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/sstream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/complex:45,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ccomplex:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:54,\\n                 from \\/tmp\\/compiler_g9faq12s\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/basic_string.h:1534:7: \\u9644\\u6ce8\\uff1acandidate: \\u2018std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::iterator std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::insert(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::const_iterator, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::iterator = __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char> >; typename __gnu_cxx::__alloc_traits<typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_CharT>::other>::pointer = char*; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::const_iterator = __gnu_cxx::__normal_iterator<const char*, std::__cxx11::basic_string<char> >; typename __gnu_cxx::__alloc_traits<typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_CharT>::other>::const_pointer = const char*; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]\\u2019\\n 1534 |       insert(const_iterator __p, size_type __n, _CharT __c)\\n      |       ^~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/basic_string.h:1534:7: \\u9644\\u6ce8\\uff1a \\u5907\\u9009\\u9700\\u8981 3 \\u5b9e\\u53c2\\uff0c\\u4f46\\u63d0\\u4f9b\\u4e86 1 \\u4e2a\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/basic_string.h:1578:9: \\u9644\\u6ce8\\uff1acandidate: \\u2018template<class _InputIterator, class> std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::iterator std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::insert(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::const_iterator, _InputIterator, _InputIterator) [with _InputIterator = _InputIterator; <\\u6a21\\u677f\\u5f62\\u53c2-2-2> = <\\u6a21\\u677f\\u5f62\\u53c2-1-2>; _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]\\u2019\\n 1578 |         insert(const_iterator __p, _InputIterator __beg, _InputIterator __end)\\n      |         ^~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/basic_string.h:1578:9: \\u9644\\u6ce8\\uff1a  template argument deduction\\/substitution failed:\\n\\/tmp\\/compiler_g9faq12s\\/src:12:13: \\u9644\\u6ce8\\uff1a \\u5907\\u9009\\u9700\\u8981 3 \\u5b9e\\u53c2\\uff0c\\u4f46\\u63d0\\u4f9b\\u4e86 1 \\u4e2a\\n   12 |   s.insert(s);\\n      |             ^\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/string:55,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/locale_classes.h:40,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/ios_base.h:41,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ios:42,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/istream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/sstream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/complex:45,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ccomplex:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:54,\\n                 from \\/tmp\\/compiler_g9faq12s\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/basic_string.h:1612:7: \\u9644\\u6ce8\\uff1acandidate: \\u2018std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::iterator std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::insert(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::const_iterator, std::initializer_list<_Tp>) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::iterator = __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char> >; typename __gnu_cxx::__alloc_traits<typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_CharT>::other>::pointer = char*; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::const_iterator = __gnu_cxx::__normal_iterator<const char*, std::__cxx11::basic_string<char> >; typename __gnu_cxx::__alloc_traits<typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_CharT>::other>::const_pointer = const char*]\\u2019\\n 1612 |       insert(const_iterator __p, initializer_list<_CharT> __l)\\n      |       ^~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/basic_string.h:1612:7: \\u9644\\u6ce8\\uff1a \\u5907\\u9009\\u9700\\u8981 2 \\u5b9e\\u53c2\\uff0c\\u4f46\\u63d0\\u4f9b\\u4e86 1 \\u4e2a\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/basic_string.h:1639:7: \\u9644\\u6ce8\\uff1acandidate: \\u2018std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::insert(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]\\u2019\\n 1639 |       insert(size_type __pos1, const basic_string& __str)\\n      |       ^~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/basic_string.h:1639:7: \\u9644\\u6ce8\\uff1a \\u5907\\u9009\\u9700\\u8981 2 \\u5b9e\\u53c2\\uff0c\\u4f46\\u63d0\\u4f9b\\u4e86 1 \\u4e2a\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/basic_string.h:1662:7: \\u9644\\u6ce8\\uff1acandidate: \\u2018std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::insert(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]\\u2019\\n 1662 |       insert(size_type __pos1, const basic_string& __str,\\n      |       ^~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/basic_string.h:1662:7: \\u9644\\u6ce8\\uff1a \\u5907\\u9009\\u9700\\u8981 4 \\u5b9e\\u53c2\\uff0c\\u4f46\\u63d0\\u4f9b\\u4e86 1 \\u4e2a\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/basic_string.h:1685:7: \\u9644\\u6ce8\\uff1acandidate: \\u2018std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::insert(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, const _CharT*, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]\\u2019\\n 1685 |       insert(size_type __pos, const _CharT* __s, size_type __n)\\n      |       ^~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/basic_string.h:1685:7: \\u9644\\u6ce8\\uff1a \\u5907\\u9009\\u9700\\u8981 3 \\u5b9e\\u53c2\\uff0c\\u4f46\\u63d0\\u4f9b\\u4e86 1 \\u4e2a\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/basic_string.h:1704:7: \\u9644\\u6ce8\\uff1acandidate: \\u2018std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::insert(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, const _CharT*) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]\\u2019\\n 1704 |       insert(size_type __pos, const _CharT* __s)\\n      |       ^~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/basic_string.h:1704:7: \\u9644\\u6ce8\\uff1a \\u5907\\u9009\\u9700\\u8981 2 \\u5b9e\\u53c2\\uff0c\\u4f46\\u63d0\\u4f9b\\u4e86 1 \\u4e2a\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/basic_string.h:1728:7: \\u9644\\u6ce8\\uff1acandidate: \\u2018std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::insert(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]\\u2019\\n 1728 |       insert(size_type __pos, size_type __n, _CharT __c)\\n      |       ^~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/basic_string.h:1728:7: \\u9644\\u6ce8\\uff1a \\u5907\\u9009\\u9700\\u8981 3 \\u5b9e\\u53c2\\uff0c\\u4f46\\u63d0\\u4f9b\\u4e86 1 \\u4e2a\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/basic_string.h:1746:7: \\u9644\\u6ce8\\uff1acandidate: \\u2018std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::iterator std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::insert(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::__const_iterator, _CharT) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::iterator = __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char> >; typename __gnu_cxx::__alloc_trait\\n...\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h>\\nusing namespace std;\\nset<string> t;\\nint main()\\n{\\n\\tint n;\\n\\tcin>>n;\\n\\tfor(int i=1;i<=n;i++)\\n\\t{\\n\\t\\tstring s;\\n\\t\\tcin>>s;\\n\\t\\ts.insert(s);\\n\\t}\\n\\tcout<<s.size();\\n\\treturn 0;\\n}\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P3370\",\"title\":\"\\u3010\\u6a21\\u677f\\u3011\\u5b57\\u7b26\\u4e32\\u54c8\\u5e0c\",\"difficulty\":2,\"fullScore\":100,\"type\":\"P\"},\"contest\":{\"id\":290011,\"name\":\"\\u5b57\\u7b26\\u4e32\\u54c8\\u5e0c\",\"startTime\":1762669800,\"endTime\":2147483647},\"sourceCodeLength\":185,\"submitTime\":1762671102,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":246303808,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9,10]],\"showStatus\":true},\"currentTitle\":\"R246303808\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782185660,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_g9faq12s/src: 在函数‘int main()’中:\n/tmp/compiler_g9faq12s/src:12:13: 错误：no matching function for call to ‘std::__cxx11::basic_string<char>::insert(std::string&)’\n   12 |   s.insert(s);\n      |             ^\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/string:55,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/locale_classes.h:40,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/ios_base.h:41,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ios:42,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/istream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/sstream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/complex:45,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ccomplex:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:54,\n                 from /tmp/compiler_g9faq12s/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/basic_string.h:1534:7: 附注：candidate: ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::iterator std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::insert(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::const_iterator, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::iterator = __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char> >; typename __gnu_cxx::__alloc_traits<typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_CharT>::other>::pointer = char*; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::const_iterator = __gnu_cxx::__normal_iterator<const char*, std::__cxx11::basic_string<char> >; typename __gnu_cxx::__alloc_traits<typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_CharT>::other>::const_pointer = const char*; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]’\n 1534 |       insert(const_iterator __p, size_type __n, _CharT __c)\n      |       ^~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/basic_string.h:1534:7: 附注： 备选需要 3 实参，但提供了 1 个\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/basic_string.h:1578:9: 附注：candidate: ‘template<class _InputIterator, class> std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::iterator std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::insert(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::const_iterator, _InputIterator, _InputIterator) [with _InputIterator = _InputIterator; <模板形参-2-2> = <模板形参-1-2>; _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’\n 1578 |         insert(const_iterator __p, _InputIterator __beg, _InputIterator __end)\n      |         ^~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/basic_string.h:1578:9: 附注：  template argument deduction/substitution failed:\n/tmp/compiler_g9faq12s/src:12:13: 附注： 备选需要 3 实参，但提供了 1 个\n   12 |   s.insert(s);\n      |             ^\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/string:55,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/locale_classes.h:40,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/ios_base.h:41,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ios:42,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/istream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/sstream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/complex:45,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ccomplex:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:54,\n                 from /tmp/compiler_g9faq12s/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/basic_string.h:1612:7: 附注：candidate: ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::iterator std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::insert(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::const_iterator, std::initializer_list<_Tp>) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::iterator = __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char> >; typename __gnu_cxx::__alloc_traits<typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_CharT>::other>::pointer = char*; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::const_iterator = __gnu_cxx::__normal_iterator<const char*, std::__cxx11::basic_string<char> >; typename __gnu_cxx::__alloc_traits<typename __gnu_cxx::__alloc_traits<_Alloc>::rebind<_CharT>::other>::const_pointer = const char*]’\n 1612 |       insert(const_iterator __p, initializer_list<_CharT> __l)\n      |       ^~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/basic_string.h:1612:7: 附注： 备选需要 2 实参，但提供了 1 个\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/basic_string.h:1639:7: 附注：candidate: ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::insert(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]’\n 1639 |       insert(size_type __pos1, const basic_string& __str)\n      |       ^~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/basic_string.h:1639:7: 附注： 备选需要 2 实参，但提供了 1 个\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/basic_string.h:1662:7: 附注：candidate: ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::insert(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]’\n 1662 |       insert(size_type __pos1, const basic_string& __str,\n      |       ^~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/basic_string.h:1662:7: 附注： 备选需要 4 实参，但提供了 1 个\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/basic_string.h:1685:7: 附注：candidate: ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::insert(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, const _CharT*, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]’\n 1685 |       insert(size_type __pos, const _CharT* __s, size_type __n)\n      |       ^~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/basic_string.h:1685:7: 附注： 备选需要 3 实参，但提供了 1 个\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/basic_string.h:1704:7: 附注：candidate: ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::insert(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, const _CharT*) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]’\n 1704 |       insert(size_type __pos, const _CharT* __s)\n      |       ^~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/basic_string.h:1704:7: 附注： 备选需要 2 实参，但提供了 1 个\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/basic_string.h:1728:7: 附注：candidate: ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>& std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::insert(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]’\n 1728 |       insert(size_type __pos, size_type __n, _CharT __c)\n      |       ^~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/basic_string.h:1728:7: 附注： 备选需要 3 实参，但提供了 1 个\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/basic_string.h:1746:7: 附注：candidate: ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::iterator std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::insert(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::__const_iterator, _CharT) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::iterator = __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char> >; typename __gnu_cxx::__alloc_trait\n...",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h>\nusing namespace std;\nset<string> t;\nint main()\n{\n\tint n;\n\tcin>>n;\n\tfor(int i=1;i<=n;i++)\n\t{\n\t\tstring s;\n\t\tcin>>s;\n\t\ts.insert(s);\n\t}\n\tcout<<s.size();\n\treturn 0;\n}",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P3370",
+          "title": "【模板】字符串哈希",
+          "difficulty": 2,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": {
+          "id": 290011,
+          "name": "字符串哈希",
+          "startTime": 1762669800,
+          "endTime": 2147483647
+        },
+        "sourceCodeLength": 185,
+        "submitTime": 1762671102,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 246303808,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R246303808",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782185660,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

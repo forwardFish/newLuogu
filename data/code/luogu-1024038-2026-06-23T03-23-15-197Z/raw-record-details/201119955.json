@@ -1,0 +1,453 @@
+{
+  "recordId": "201119955",
+  "url": "https://www.luogu.com.cn/record/201119955?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:50:06.091Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[{\"id\":0,\"score\":15,\"status\":14,\"testCases\":{\"1\":{\"id\":1,\"status\":6,\"time\":6,\"memory\":2828,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 1, read 4, expected 7.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"0\":{\"id\":0,\"status\":6,\"time\":5,\"memory\":2736,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 3, read 0, expected 5.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"2\":{\"id\":2,\"status\":6,\"time\":6,\"memory\":2852,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 1, read 1, expected 2.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"3\":{\"id\":3,\"status\":12,\"time\":6,\"memory\":2844,\"score\":5,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"5\":{\"id\":5,\"status\":6,\"time\":38,\"memory\":5340,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 1, read 7, expected 1.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"10\":{\"id\":10,\"status\":6,\"time\":100,\"memory\":8868,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 1, read 1, expected 2.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"7\":{\"id\":7,\"status\":6,\"time\":76,\"memory\":7900,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 12, read 8, expected 7.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"11\":{\"id\":11,\"status\":6,\"time\":5,\"memory\":2792,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 2, read 2, expected 9.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"12\":{\"id\":12,\"status\":12,\"time\":75,\"memory\":7804,\"score\":5,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"14\":{\"id\":14,\"status\":6,\"time\":5,\"memory\":2728,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 1, read 2, expected 3.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"15\":{\"id\":15,\"status\":6,\"time\":5,\"memory\":2736,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 1, read 7, expected 1.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"13\":{\"id\":13,\"status\":6,\"time\":5,\"memory\":2796,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 1, read 2, expected 3.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"17\":{\"id\":17,\"status\":6,\"time\":5,\"memory\":2856,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 1, read 4, expected 7.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"4\":{\"id\":4,\"status\":6,\"time\":21,\"memory\":4088,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 11, read 8, expected 7.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"18\":{\"id\":18,\"status\":6,\"time\":6,\"memory\":2792,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 1, read 8, expected 1.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"16\":{\"id\":16,\"status\":6,\"time\":5,\"memory\":2804,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 1, read 3, expected 7.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"19\":{\"id\":19,\"status\":6,\"time\":6,\"memory\":2788,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 9, read 7, expected 6.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"8\":{\"id\":8,\"status\":12,\"time\":97,\"memory\":9168,\"score\":5,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"9\":{\"id\":9,\"status\":6,\"time\":97,\"memory\":9388,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 1, read 7, expected 1.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"6\":{\"id\":6,\"status\":6,\"time\":65,\"memory\":7244,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 1, read 2, expected 4.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}},\"judger\":\"\",\"time\":634,\"memory\":9388,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}],\"finishedCaseCount\":20,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <iostream>\\r\\n#include <vector>\\r\\n#include <queue>\\r\\n#include <algorithm>\\r\\n#include <iomanip>\\r\\n\\r\\nusing namespace std;\\r\\n\\r\\ntypedef long long ll;\\r\\ntypedef pair<int, int> pii;\\r\\ntypedef pair<ll, int> pli;\\r\\n\\r\\nconst int MAXN = 1e5 + 5;\\r\\nvector<pii> adj[MAXN];\\r\\nll dist[MAXN];\\r\\nint parent[MAXN];\\r\\n\\r\\nvoid bfs(int start, int n) {\\r\\n    fill(dist, dist + n + 1, -1);\\r\\n    queue<int> q;\\r\\n    q.push(start);\\r\\n    dist[start] = 0;\\r\\n    parent[start] = -1;\\r\\n    while (!q.empty()) {\\r\\n        int u = q.front();\\r\\n        q.pop();\\r\\n        for (auto &edge : adj[u]) {\\r\\n            int v = edge.first;\\r\\n            int w = edge.second;\\r\\n            if (dist[v] == -1) {\\r\\n                dist[v] = dist[u] + w;\\r\\n                parent[v] = u;\\r\\n                q.push(v);\\r\\n            }\\r\\n        }\\r\\n    }\\r\\n}\\r\\n\\r\\npli findFarthest(int start, int n) {\\r\\n    bfs(start, n);\\r\\n    ll maxDist = -1;\\r\\n    int farthest = -1;\\r\\n    for (int i = 1; i <= n; ++i) {\\r\\n        if (dist[i] > maxDist) {\\r\\n            maxDist = dist[i];\\r\\n            farthest = i;\\r\\n        }\\r\\n    }\\r\\n    return {maxDist, farthest};\\r\\n}\\r\\n\\r\\nint main() {\\r\\n    int n;\\r\\n    cin >> n;\\r\\n    for (int i = 0; i < n; ++i) {\\r\\n        int a, b, l;\\r\\n        cin >> a >> b >> l;\\r\\n        adj[a].emplace_back(b, l);\\r\\n        adj[b].emplace_back(a, l);\\r\\n    }\\r\\n\\r\\n    auto [d1, u] = findFarthest(1, n);\\r\\n    auto [d2, v] = findFarthest(u, n);\\r\\n\\r\\n    vector<int> path;\\r\\n    for (int x = v; x != -1; x = parent[x]) {\\r\\n        path.push_back(x);\\r\\n    }\\r\\n    reverse(path.begin(), path.end());\\r\\n\\r\\n    vector<ll> distU(n + 1), distV(n + 1);\\r\\n    bfs(u, n);\\r\\n    for (int i = 1; i <= n; ++i) {\\r\\n        distU[i] = dist[i];\\r\\n    }\\r\\n    bfs(v, n);\\r\\n    for (int i = 1; i <= n; ++i) {\\r\\n        distV[i] = dist[i];\\r\\n    }\\r\\n\\r\\n    ll diameter = distV[u];\\r\\n    ll radius = diameter \\/ 2;\\r\\n    if (diameter % 2 == 1) {\\r\\n        radius++;\\r\\n    }\\r\\n\\r\\n    cout << fixed << setprecision(1) << radius << \\\".0\\\" << endl;\\r\\n\\r\\n    return 0;\\r\\n}\",\"time\":634,\"memory\":9388,\"problem\":{\"pid\":\"P1399\",\"title\":\"[NOI2013] \\u5feb\\u9910\\u5e97\",\"difficulty\":6,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":1944,\"submitTime\":1738546070,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":201119955,\"status\":14,\"enableO2\":true,\"score\":15},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]],\"showStatus\":true},\"currentTitle\":\"R201119955\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186606,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [
+              {
+                "id": 0,
+                "score": 15,
+                "status": 14,
+                "testCases": {
+                  "0": {
+                    "id": 0,
+                    "status": 6,
+                    "time": 5,
+                    "memory": 2736,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 3, read 0, expected 5.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "1": {
+                    "id": 1,
+                    "status": 6,
+                    "time": 6,
+                    "memory": 2828,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 1, read 4, expected 7.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "2": {
+                    "id": 2,
+                    "status": 6,
+                    "time": 6,
+                    "memory": 2852,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 1, read 1, expected 2.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "3": {
+                    "id": 3,
+                    "status": 12,
+                    "time": 6,
+                    "memory": 2844,
+                    "score": 5,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "4": {
+                    "id": 4,
+                    "status": 6,
+                    "time": 21,
+                    "memory": 4088,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 11, read 8, expected 7.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "5": {
+                    "id": 5,
+                    "status": 6,
+                    "time": 38,
+                    "memory": 5340,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 1, read 7, expected 1.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "6": {
+                    "id": 6,
+                    "status": 6,
+                    "time": 65,
+                    "memory": 7244,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 1, read 2, expected 4.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "7": {
+                    "id": 7,
+                    "status": 6,
+                    "time": 76,
+                    "memory": 7900,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 12, read 8, expected 7.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "8": {
+                    "id": 8,
+                    "status": 12,
+                    "time": 97,
+                    "memory": 9168,
+                    "score": 5,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "9": {
+                    "id": 9,
+                    "status": 6,
+                    "time": 97,
+                    "memory": 9388,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 1, read 7, expected 1.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "10": {
+                    "id": 10,
+                    "status": 6,
+                    "time": 100,
+                    "memory": 8868,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 1, read 1, expected 2.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "11": {
+                    "id": 11,
+                    "status": 6,
+                    "time": 5,
+                    "memory": 2792,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 2, read 2, expected 9.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "12": {
+                    "id": 12,
+                    "status": 12,
+                    "time": 75,
+                    "memory": 7804,
+                    "score": 5,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "13": {
+                    "id": 13,
+                    "status": 6,
+                    "time": 5,
+                    "memory": 2796,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 1, read 2, expected 3.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "14": {
+                    "id": 14,
+                    "status": 6,
+                    "time": 5,
+                    "memory": 2728,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 1, read 2, expected 3.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "15": {
+                    "id": 15,
+                    "status": 6,
+                    "time": 5,
+                    "memory": 2736,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 1, read 7, expected 1.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "16": {
+                    "id": 16,
+                    "status": 6,
+                    "time": 5,
+                    "memory": 2804,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 1, read 3, expected 7.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "17": {
+                    "id": 17,
+                    "status": 6,
+                    "time": 5,
+                    "memory": 2856,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 1, read 4, expected 7.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "18": {
+                    "id": 18,
+                    "status": 6,
+                    "time": 6,
+                    "memory": 2792,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 1, read 8, expected 1.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "19": {
+                    "id": 19,
+                    "status": 6,
+                    "time": 6,
+                    "memory": 2788,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 9, read 7, expected 6.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                },
+                "judger": "",
+                "time": 634,
+                "memory": 9388,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            ],
+            "finishedCaseCount": 20,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <iostream>\r\n#include <vector>\r\n#include <queue>\r\n#include <algorithm>\r\n#include <iomanip>\r\n\r\nusing namespace std;\r\n\r\ntypedef long long ll;\r\ntypedef pair<int, int> pii;\r\ntypedef pair<ll, int> pli;\r\n\r\nconst int MAXN = 1e5 + 5;\r\nvector<pii> adj[MAXN];\r\nll dist[MAXN];\r\nint parent[MAXN];\r\n\r\nvoid bfs(int start, int n) {\r\n    fill(dist, dist + n + 1, -1);\r\n    queue<int> q;\r\n    q.push(start);\r\n    dist[start] = 0;\r\n    parent[start] = -1;\r\n    while (!q.empty()) {\r\n        int u = q.front();\r\n        q.pop();\r\n        for (auto &edge : adj[u]) {\r\n            int v = edge.first;\r\n            int w = edge.second;\r\n            if (dist[v] == -1) {\r\n                dist[v] = dist[u] + w;\r\n                parent[v] = u;\r\n                q.push(v);\r\n            }\r\n        }\r\n    }\r\n}\r\n\r\npli findFarthest(int start, int n) {\r\n    bfs(start, n);\r\n    ll maxDist = -1;\r\n    int farthest = -1;\r\n    for (int i = 1; i <= n; ++i) {\r\n        if (dist[i] > maxDist) {\r\n            maxDist = dist[i];\r\n            farthest = i;\r\n        }\r\n    }\r\n    return {maxDist, farthest};\r\n}\r\n\r\nint main() {\r\n    int n;\r\n    cin >> n;\r\n    for (int i = 0; i < n; ++i) {\r\n        int a, b, l;\r\n        cin >> a >> b >> l;\r\n        adj[a].emplace_back(b, l);\r\n        adj[b].emplace_back(a, l);\r\n    }\r\n\r\n    auto [d1, u] = findFarthest(1, n);\r\n    auto [d2, v] = findFarthest(u, n);\r\n\r\n    vector<int> path;\r\n    for (int x = v; x != -1; x = parent[x]) {\r\n        path.push_back(x);\r\n    }\r\n    reverse(path.begin(), path.end());\r\n\r\n    vector<ll> distU(n + 1), distV(n + 1);\r\n    bfs(u, n);\r\n    for (int i = 1; i <= n; ++i) {\r\n        distU[i] = dist[i];\r\n    }\r\n    bfs(v, n);\r\n    for (int i = 1; i <= n; ++i) {\r\n        distV[i] = dist[i];\r\n    }\r\n\r\n    ll diameter = distV[u];\r\n    ll radius = diameter / 2;\r\n    if (diameter % 2 == 1) {\r\n        radius++;\r\n    }\r\n\r\n    cout << fixed << setprecision(1) << radius << \".0\" << endl;\r\n\r\n    return 0;\r\n}",
+        "time": 634,
+        "memory": 9388,
+        "problem": {
+          "pid": "P1399",
+          "title": "[NOI2013] 快餐店",
+          "difficulty": 6,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 1944,
+        "submitTime": 1738546070,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 201119955,
+        "status": 14,
+        "enableO2": true,
+        "score": 15
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R201119955",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186606,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

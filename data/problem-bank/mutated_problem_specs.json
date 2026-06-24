@@ -1,0 +1,300 @@
+{
+  "generatedAt": "2026-06-24T02:59:44.983Z",
+  "items": [
+    {
+      "mutationId": "mut_math_001",
+      "baseWeaknessId": "math_model_error_5",
+      "baseProblemPids": [
+        "P3585",
+        "P1075",
+        "P6691"
+      ],
+      "mutationGoal": "改变子任务数据范围，训练 30/50/70 分拆解。",
+      "targetAbility": "T3_PARTIAL_SCORE",
+      "module": "math",
+      "difficulty": "提高+/省选-",
+      "problemArchetype": {
+        "coreAlgorithm": "math",
+        "stateShape": "module-specific",
+        "keyChallenge": "MODEL_ERROR, PARTIAL_SCORE_MISSED",
+        "mustTest": [
+          "small case",
+          "boundary case",
+          "stress case"
+        ]
+      },
+      "newProblemSpec": {
+        "title": "数学 迁移诊断题 1",
+        "storyBrief": "全新语境，保留核心能力点，不复制原题题面。",
+        "inputSpec": "根据具体变式补充输入格式。",
+        "outputSpec": "根据具体变式补充输出格式。",
+        "constraints": "应包含小数据、特殊性质和完整数据范围。",
+        "requiredSubtasks": [
+          "30 分暴力",
+          "60 分基础模型",
+          "100 分完整做法"
+        ]
+      },
+      "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。",
+      "status": "SPEC_DRAFT_NEEDS_AUTHORING"
+    },
+    {
+      "mutationId": "mut_partial_score_002",
+      "baseWeaknessId": "partial_score_partial_score_missed_16",
+      "baseProblemPids": [
+        "P10135",
+        "P1273",
+        "T23806"
+      ],
+      "mutationGoal": "改变子任务数据范围，训练 30/50/70 分拆解。",
+      "targetAbility": "T3_PARTIAL_SCORE",
+      "module": "partial_score",
+      "difficulty": "提高+/省选-",
+      "problemArchetype": {
+        "coreAlgorithm": "partial_score",
+        "stateShape": "module-specific",
+        "keyChallenge": "PARTIAL_SCORE_MISSED",
+        "mustTest": [
+          "small case",
+          "boundary case",
+          "stress case"
+        ]
+      },
+      "newProblemSpec": {
+        "title": "部分分 迁移诊断题 2",
+        "storyBrief": "全新语境，保留核心能力点，不复制原题题面。",
+        "inputSpec": "根据具体变式补充输入格式。",
+        "outputSpec": "根据具体变式补充输出格式。",
+        "constraints": "应包含小数据、特殊性质和完整数据范围。",
+        "requiredSubtasks": [
+          "30 分暴力",
+          "60 分基础模型",
+          "100 分完整做法"
+        ]
+      },
+      "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。",
+      "status": "SPEC_DRAFT_NEEDS_AUTHORING"
+    },
+    {
+      "mutationId": "mut_interval_dp_003",
+      "baseWeaknessId": "interval_dp_state_error_4",
+      "baseProblemPids": [
+        "P8699",
+        "U467266",
+        "U463446"
+      ],
+      "mutationGoal": "改变输出目标或初始化条件，验证是否真正理解区间 DP 状态和 len 枚举。",
+      "targetAbility": "T3_PARTIAL_SCORE",
+      "module": "interval_dp",
+      "difficulty": "提高",
+      "problemArchetype": {
+        "coreAlgorithm": "interval_dp",
+        "stateShape": "dp[l][r]",
+        "keyChallenge": "初始化与区间长度枚举",
+        "mustTest": [
+          "len=1",
+          "len=2",
+          "full interval",
+          "empty transition"
+        ]
+      },
+      "newProblemSpec": {
+        "title": "区间 DP 迁移诊断题 3",
+        "storyBrief": "全新语境，保留核心能力点，不复制原题题面。",
+        "inputSpec": "根据具体变式补充输入格式。",
+        "outputSpec": "根据具体变式补充输出格式。",
+        "constraints": "应包含小数据、特殊性质和完整数据范围。",
+        "requiredSubtasks": [
+          "30 分暴力",
+          "60 分基础模型",
+          "100 分完整做法"
+        ]
+      },
+      "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。",
+      "status": "SPEC_DRAFT_NEEDS_AUTHORING"
+    },
+    {
+      "mutationId": "mut_dp_004",
+      "baseWeaknessId": "dp_state_error_13",
+      "baseProblemPids": [
+        "AT_dp_a",
+        "CF1051D",
+        "P12678"
+      ],
+      "mutationGoal": "改变子任务数据范围，训练 30/50/70 分拆解。",
+      "targetAbility": "T3_PARTIAL_SCORE",
+      "module": "dp",
+      "difficulty": "普及+/提高-",
+      "problemArchetype": {
+        "coreAlgorithm": "dp",
+        "stateShape": "module-specific",
+        "keyChallenge": "STATE_ERROR, INIT_ERROR, BOUNDARY_ERROR, PARTIAL_SCORE_MISSED",
+        "mustTest": [
+          "small case",
+          "boundary case",
+          "stress case"
+        ]
+      },
+      "newProblemSpec": {
+        "title": "DP 迁移诊断题 4",
+        "storyBrief": "全新语境，保留核心能力点，不复制原题题面。",
+        "inputSpec": "根据具体变式补充输入格式。",
+        "outputSpec": "根据具体变式补充输出格式。",
+        "constraints": "应包含小数据、特殊性质和完整数据范围。",
+        "requiredSubtasks": [
+          "30 分暴力",
+          "60 分基础模型",
+          "100 分完整做法"
+        ]
+      },
+      "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。",
+      "status": "SPEC_DRAFT_NEEDS_AUTHORING"
+    },
+    {
+      "mutationId": "mut_graph_005",
+      "baseWeaknessId": "graph_model_error_7",
+      "baseProblemPids": [
+        "U465842",
+        "P2899",
+        "P15267"
+      ],
+      "mutationGoal": "改变子任务数据范围，训练 30/50/70 分拆解。",
+      "targetAbility": "T3_PARTIAL_SCORE",
+      "module": "graph",
+      "difficulty": "普及+/提高-",
+      "problemArchetype": {
+        "coreAlgorithm": "graph",
+        "stateShape": "module-specific",
+        "keyChallenge": "MODEL_ERROR, PARTIAL_SCORE_MISSED",
+        "mustTest": [
+          "small case",
+          "boundary case",
+          "stress case"
+        ]
+      },
+      "newProblemSpec": {
+        "title": "图论 迁移诊断题 5",
+        "storyBrief": "全新语境，保留核心能力点，不复制原题题面。",
+        "inputSpec": "根据具体变式补充输入格式。",
+        "outputSpec": "根据具体变式补充输出格式。",
+        "constraints": "应包含小数据、特殊性质和完整数据范围。",
+        "requiredSubtasks": [
+          "30 分暴力",
+          "60 分基础模型",
+          "100 分完整做法"
+        ]
+      },
+      "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。",
+      "status": "SPEC_DRAFT_NEEDS_AUTHORING"
+    },
+    {
+      "mutationId": "mut_binary_search_006",
+      "baseWeaknessId": "binary_search_model_error_18",
+      "baseProblemPids": [
+        "P11849",
+        "T717044",
+        "P1439"
+      ],
+      "mutationGoal": "改变判定函数含义，验证 check 单调性和边界。",
+      "targetAbility": "T3_PARTIAL_SCORE",
+      "module": "binary_search",
+      "difficulty": "普及+/提高-",
+      "problemArchetype": {
+        "coreAlgorithm": "binary_search_answer",
+        "stateShape": "check(x)",
+        "keyChallenge": "单调性与边界收缩",
+        "mustTest": [
+          "min answer",
+          "max answer",
+          "boundary false/true"
+        ]
+      },
+      "newProblemSpec": {
+        "title": "二分答案 迁移诊断题 6",
+        "storyBrief": "全新语境，保留核心能力点，不复制原题题面。",
+        "inputSpec": "根据具体变式补充输入格式。",
+        "outputSpec": "根据具体变式补充输出格式。",
+        "constraints": "应包含小数据、特殊性质和完整数据范围。",
+        "requiredSubtasks": [
+          "30 分暴力",
+          "60 分基础模型",
+          "100 分完整做法"
+        ]
+      },
+      "verifyMethod": "同类题提交次数 <= 2，能独立证明 check 单调性并说明边界收缩。",
+      "status": "SPEC_DRAFT_NEEDS_AUTHORING"
+    },
+    {
+      "mutationId": "mut_greedy_007",
+      "baseWeaknessId": "greedy_partial_score_missed_1",
+      "baseProblemPids": [
+        "U619605"
+      ],
+      "mutationGoal": "改变子任务数据范围，训练 30/50/70 分拆解。",
+      "targetAbility": "T3_PARTIAL_SCORE",
+      "module": "greedy",
+      "difficulty": "普及+/提高-",
+      "problemArchetype": {
+        "coreAlgorithm": "greedy",
+        "stateShape": "module-specific",
+        "keyChallenge": "PARTIAL_SCORE_MISSED",
+        "mustTest": [
+          "small case",
+          "boundary case",
+          "stress case"
+        ]
+      },
+      "newProblemSpec": {
+        "title": "greedy 迁移诊断题 7",
+        "storyBrief": "全新语境，保留核心能力点，不复制原题题面。",
+        "inputSpec": "根据具体变式补充输入格式。",
+        "outputSpec": "根据具体变式补充输出格式。",
+        "constraints": "应包含小数据、特殊性质和完整数据范围。",
+        "requiredSubtasks": [
+          "30 分暴力",
+          "60 分基础模型",
+          "100 分完整做法"
+        ]
+      },
+      "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。",
+      "status": "SPEC_DRAFT_NEEDS_AUTHORING"
+    },
+    {
+      "mutationId": "mut_shortest_path_008",
+      "baseWeaknessId": "shortest_path_state_error_3",
+      "baseProblemPids": [
+        "P2452",
+        "P1713",
+        "P3685"
+      ],
+      "mutationGoal": "改变子任务数据范围，训练 30/50/70 分拆解。",
+      "targetAbility": "T3_PARTIAL_SCORE",
+      "module": "shortest_path",
+      "difficulty": "普及+/提高-",
+      "problemArchetype": {
+        "coreAlgorithm": "shortest_path",
+        "stateShape": "module-specific",
+        "keyChallenge": "STATE_ERROR, INIT_ERROR, BOUNDARY_ERROR, PARTIAL_SCORE_MISSED",
+        "mustTest": [
+          "small case",
+          "boundary case",
+          "stress case"
+        ]
+      },
+      "newProblemSpec": {
+        "title": "shortest_path 迁移诊断题 8",
+        "storyBrief": "全新语境，保留核心能力点，不复制原题题面。",
+        "inputSpec": "根据具体变式补充输入格式。",
+        "outputSpec": "根据具体变式补充输出格式。",
+        "constraints": "应包含小数据、特殊性质和完整数据范围。",
+        "requiredSubtasks": [
+          "30 分暴力",
+          "60 分基础模型",
+          "100 分完整做法"
+        ]
+      },
+      "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。",
+      "status": "SPEC_DRAFT_NEEDS_AUTHORING"
+    }
+  ]
+}

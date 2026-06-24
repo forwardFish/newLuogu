@@ -1,0 +1,258 @@
+{
+  "recordId": "207004277",
+  "url": "https://www.luogu.com.cn/record/207004277?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:48:27.421Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[{\"id\":0,\"score\":100,\"status\":12,\"testCases\":{\"1\":{\"id\":1,\"status\":12,\"time\":17,\"memory\":4016,\"score\":20,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"2\":{\"id\":2,\"status\":12,\"time\":18,\"memory\":4044,\"score\":20,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"4\":{\"id\":4,\"status\":12,\"time\":17,\"memory\":4068,\"score\":20,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"0\":{\"id\":0,\"status\":12,\"time\":17,\"memory\":4064,\"score\":20,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"3\":{\"id\":3,\"status\":12,\"time\":17,\"memory\":4100,\"score\":20,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}},\"judger\":\"\",\"time\":86,\"memory\":4100,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}],\"finishedCaseCount\":5,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"import sys\\nfrom itertools import permutations\\n\\ndef main():\\n    n = int(sys.stdin.readline())\\n    rows = [sys.stdin.readline().split() for _ in range(n)]\\n    if n < 3 or n > 9:\\n        print(\\\"ERROR!\\\")\\n        return\\n    \\n    s_list = rows[0][1:]  # \\u7b26\\u53f7\\u5217\\u8868\\n    m = n - 1\\n    \\n    # \\u68c0\\u67e5\\u7b26\\u53f7\\u6570\\u91cf\\u662f\\u5426\\u6b63\\u786e\\u4e14\\u552f\\u4e00\\n    if len(s_list) != m or len(set(s_list)) != m:\\n        print(\\\"ERROR!\\\")\\n        return\\n    \\n    # \\u9884\\u5904\\u7406\\u52a0\\u6cd5\\u8868\\n    add_table = []\\n    for i in range(m):\\n        row = rows[i+1][1:]\\n        if len(row) != m:\\n            print(\\\"ERROR!\\\")\\n            return\\n        add_table.append(row)\\n    \\n    # \\u68c0\\u67e5\\u6240\\u6709\\u7ed3\\u679c\\u5b57\\u7b26\\u4e32\\u7684\\u5b57\\u7b26\\u662f\\u5426\\u5728\\u7b26\\u53f7\\u5217\\u8868\\u4e2d\\uff0c\\u4e14\\u957f\\u5ea6\\u6b63\\u786e\\n    valid = True\\n    for i in range(m):\\n        for j in range(m):\\n            res_str = add_table[i][j]\\n            if len(res_str) not in (1, 2):\\n                valid = False\\n                break\\n            for c in res_str:\\n                if c not in s_list:\\n                    valid = False\\n                    break\\n            if not valid:\\n                break\\n        if not valid:\\n            break\\n    if not valid:\\n        print(\\\"ERROR!\\\")\\n        return\\n    \\n    # \\u67e5\\u627e\\u96f6\\u7b26\\u53f7\\n    zero_idx = None\\n    for i in range(m):\\n        if add_table[i][i] == s_list[i]:\\n            if zero_idx is not None:\\n                print(\\\"ERROR!\\\")\\n                return\\n            zero_idx = i\\n    if zero_idx is None:\\n        print(\\\"ERROR!\\\")\\n        return\\n    \\n    # \\u5efa\\u7acb\\u5b57\\u7b26\\u5230\\u7d22\\u5f15\\u7684\\u6620\\u5c04\\n    char_to_index = {c: idx for idx, c in enumerate(s_list)}\\n    \\n    # \\u751f\\u6210\\u5269\\u4f59\\u7684\\u7b26\\u53f7\\u7d22\\u5f15\\n    others = [i for i in range(m) if i != zero_idx]\\n    if len(others) != m-1:\\n        print(\\\"ERROR!\\\")\\n        return\\n    \\n    # \\u5c1d\\u8bd5\\u6240\\u6709\\u53ef\\u80fd\\u7684\\u6392\\u5217\\n    found = False\\n    for perm in permutations(range(1, m)):\\n        val = [0] * m\\n        val[zero_idx] = 0\\n        for idx, num in zip(others, perm):\\n            val[idx] = num\\n        \\n        # \\u68c0\\u67e5\\u6240\\u6709\\u52a0\\u6cd5\\u9879\\n        all_ok = True\\n        for i in range(m):\\n            for j in range(m):\\n                sum_val = val[i] + val[j]\\n                high = sum_val \\/\\/ m\\n                low = sum_val % m\\n                res_str = add_table[i][j]\\n                expected_len = 1 if sum_val < m else 2\\n                if len(res_str) != expected_len:\\n                    all_ok = False\\n                    break\\n                if expected_len == 1:\\n                    c = res_str[0]\\n                    c_idx = char_to_index[c]\\n                    if val[c_idx] != sum_val:\\n                        all_ok = False\\n                        break\\n                else:\\n                    c1, c2 = res_str[0], res_str[1]\\n                    c1_idx = char_to_index[c1]\\n                    c2_idx = char_to_index[c2]\\n                    if val[c1_idx] != high or val[c2_idx] != low:\\n                        all_ok = False\\n                        break\\n            if not all_ok:\\n                break\\n        if all_ok:\\n            output = [f\\\"{s}={val[idx]}\\\" for idx, s in enumerate(s_list)]\\n            print(' '.join(output))\\n            print(m)\\n            found = True\\n            break\\n    if not found:\\n        print(\\\"ERROR!\\\")\\n\\nif __name__ == \\\"__main__\\\":\\n    main()\",\"time\":86,\"memory\":4100,\"problem\":{\"pid\":\"P1013\",\"title\":\"[NOIP 1998 \\u63d0\\u9ad8\\u7ec4] \\u8fdb\\u5236\\u4f4d\",\"difficulty\":4,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":3068,\"submitTime\":1741524185,\"language\":7,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":207004277,\"status\":12,\"enableO2\":false,\"score\":100},\"testCaseGroup\":[[0,1,2,3,4]],\"showStatus\":true},\"currentTitle\":\"R207004277\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186507,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [
+              {
+                "id": 0,
+                "score": 100,
+                "status": 12,
+                "testCases": {
+                  "0": {
+                    "id": 0,
+                    "status": 12,
+                    "time": 17,
+                    "memory": 4064,
+                    "score": 20,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "1": {
+                    "id": 1,
+                    "status": 12,
+                    "time": 17,
+                    "memory": 4016,
+                    "score": 20,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "2": {
+                    "id": 2,
+                    "status": 12,
+                    "time": 18,
+                    "memory": 4044,
+                    "score": 20,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "3": {
+                    "id": 3,
+                    "status": 12,
+                    "time": 17,
+                    "memory": 4100,
+                    "score": 20,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "4": {
+                    "id": 4,
+                    "status": 12,
+                    "time": 17,
+                    "memory": 4068,
+                    "score": 20,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                },
+                "judger": "",
+                "time": 86,
+                "memory": 4100,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            ],
+            "finishedCaseCount": 5,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "import sys\nfrom itertools import permutations\n\ndef main():\n    n = int(sys.stdin.readline())\n    rows = [sys.stdin.readline().split() for _ in range(n)]\n    if n < 3 or n > 9:\n        print(\"ERROR!\")\n        return\n    \n    s_list = rows[0][1:]  # 符号列表\n    m = n - 1\n    \n    # 检查符号数量是否正确且唯一\n    if len(s_list) != m or len(set(s_list)) != m:\n        print(\"ERROR!\")\n        return\n    \n    # 预处理加法表\n    add_table = []\n    for i in range(m):\n        row = rows[i+1][1:]\n        if len(row) != m:\n            print(\"ERROR!\")\n            return\n        add_table.append(row)\n    \n    # 检查所有结果字符串的字符是否在符号列表中，且长度正确\n    valid = True\n    for i in range(m):\n        for j in range(m):\n            res_str = add_table[i][j]\n            if len(res_str) not in (1, 2):\n                valid = False\n                break\n            for c in res_str:\n                if c not in s_list:\n                    valid = False\n                    break\n            if not valid:\n                break\n        if not valid:\n            break\n    if not valid:\n        print(\"ERROR!\")\n        return\n    \n    # 查找零符号\n    zero_idx = None\n    for i in range(m):\n        if add_table[i][i] == s_list[i]:\n            if zero_idx is not None:\n                print(\"ERROR!\")\n                return\n            zero_idx = i\n    if zero_idx is None:\n        print(\"ERROR!\")\n        return\n    \n    # 建立字符到索引的映射\n    char_to_index = {c: idx for idx, c in enumerate(s_list)}\n    \n    # 生成剩余的符号索引\n    others = [i for i in range(m) if i != zero_idx]\n    if len(others) != m-1:\n        print(\"ERROR!\")\n        return\n    \n    # 尝试所有可能的排列\n    found = False\n    for perm in permutations(range(1, m)):\n        val = [0] * m\n        val[zero_idx] = 0\n        for idx, num in zip(others, perm):\n            val[idx] = num\n        \n        # 检查所有加法项\n        all_ok = True\n        for i in range(m):\n            for j in range(m):\n                sum_val = val[i] + val[j]\n                high = sum_val // m\n                low = sum_val % m\n                res_str = add_table[i][j]\n                expected_len = 1 if sum_val < m else 2\n                if len(res_str) != expected_len:\n                    all_ok = False\n                    break\n                if expected_len == 1:\n                    c = res_str[0]\n                    c_idx = char_to_index[c]\n                    if val[c_idx] != sum_val:\n                        all_ok = False\n                        break\n                else:\n                    c1, c2 = res_str[0], res_str[1]\n                    c1_idx = char_to_index[c1]\n                    c2_idx = char_to_index[c2]\n                    if val[c1_idx] != high or val[c2_idx] != low:\n                        all_ok = False\n                        break\n            if not all_ok:\n                break\n        if all_ok:\n            output = [f\"{s}={val[idx]}\" for idx, s in enumerate(s_list)]\n            print(' '.join(output))\n            print(m)\n            found = True\n            break\n    if not found:\n        print(\"ERROR!\")\n\nif __name__ == \"__main__\":\n    main()",
+        "time": 86,
+        "memory": 4100,
+        "problem": {
+          "pid": "P1013",
+          "title": "[NOIP 1998 提高组] 进制位",
+          "difficulty": 4,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 3068,
+        "submitTime": 1741524185,
+        "language": 7,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 207004277,
+        "status": 12,
+        "enableO2": false,
+        "score": 100
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R207004277",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186507,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

@@ -1,0 +1,6148 @@
+{
+  "generatedAt": "2026-06-24T03:33:41.474Z",
+  "items": [
+    {
+      "problemPid": "P8699",
+      "versionCount": 16,
+      "scorePattern": "0 -> 40 -> 40 -> 30 -> 30 -> 30 -> 40 -> 40 -> 40 -> 40 -> 40 -> 40 -> 40 -> 50 -> 30 -> 100",
+      "lineCountChange": "+6",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "U688514",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+3",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P3372",
+      "versionCount": 7,
+      "scorePattern": "0 -> 0 -> 100 -> 100 -> 100 -> 100",
+      "lineCountChange": "-464",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "LONG_CODE"
+        ]
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "UVA11572",
+      "versionCount": 2,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+15",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P1115",
+      "versionCount": 5,
+      "scorePattern": "80 -> 80 -> 100 -> 100 -> 100",
+      "lineCountChange": "+21",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG",
+          "LARGE_GLOBAL_ARRAY",
+          "RECURSION",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "U683709",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1001",
+      "versionCount": 5,
+      "scorePattern": "100 -> 100 -> 100",
+      "lineCountChange": "+639",
+      "riskFlagChange": {
+        "added": [
+          "LONG_CODE",
+          "RECURSION"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "代码规模明显增加，可能从暴力改为复杂模型或增加数据结构。"
+    },
+    {
+      "problemPid": "B2001",
+      "versionCount": 2,
+      "scorePattern": "100 -> 0",
+      "lineCountChange": "+639",
+      "riskFlagChange": {
+        "added": [
+          "LONG_CODE",
+          "LONG_LINE",
+          "RECURSION"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "代码规模明显增加，可能从暴力改为复杂模型或增加数据结构。"
+    },
+    {
+      "problemPid": "P3557",
+      "versionCount": 3,
+      "scorePattern": "100 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1268",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P3677",
+      "versionCount": 3,
+      "scorePattern": "100 -> 100 -> 100",
+      "lineCountChange": "-53",
+      "riskFlagChange": {
+        "added": [
+          "LONG_LINE"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P3524",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P16316",
+      "versionCount": 5,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P14785",
+      "versionCount": 2,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "B4458",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P15347",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P11139",
+      "versionCount": 3,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P2345",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P7413",
+      "versionCount": 5,
+      "scorePattern": "5 -> 10 -> 10 -> 10 -> 25",
+      "lineCountChange": "+17",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P7410",
+      "versionCount": 6,
+      "scorePattern": "10 -> 0 -> 80 -> 100 -> 100",
+      "lineCountChange": "+36",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "RECURSION",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P7411",
+      "versionCount": 5,
+      "scorePattern": "10 -> 10 -> 10 -> 100 -> 100",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P7412",
+      "versionCount": 4,
+      "scorePattern": "10 -> 10 -> 100 -> 100",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P16181",
+      "versionCount": 3,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "-8",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "DEFINE_INT_LONG_LONG",
+          "LARGE_GLOBAL_ARRAY"
+        ]
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P5740",
+      "versionCount": 8,
+      "scorePattern": "0 -> 90 -> 100 -> 100 -> 0 -> 20 -> 100",
+      "lineCountChange": "-3",
+      "riskFlagChange": {
+        "added": [
+          "POSSIBLE_INT_OVERFLOW"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P16158",
+      "versionCount": 2,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P2161",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P16173",
+      "versionCount": 5,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+22",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P16151",
+      "versionCount": 3,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P16180",
+      "versionCount": 3,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P1066",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "-32",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1119",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+26",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "MEMSET_SENTINEL"
+        ]
+      },
+      "likelyChangeReason": "后续版本减少了部分实现风险，可能修复了边界或溢出问题。"
+    },
+    {
+      "problemPid": "P1022",
+      "versionCount": 8,
+      "scorePattern": "84 -> 84 -> 0 -> 84 -> 100 -> 84 -> 100",
+      "lineCountChange": "-6",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1908",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P3374",
+      "versionCount": 9,
+      "scorePattern": "0 -> 100 -> 0 -> 0 -> 100 -> 100 -> 100 -> 100 -> 100",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P3368",
+      "versionCount": 3,
+      "scorePattern": "100 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "T699486",
+      "versionCount": 2,
+      "scorePattern": "50 -> 0",
+      "lineCountChange": "-25",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "RECURSION",
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "后续版本减少了部分实现风险，可能修复了边界或溢出问题。"
+    },
+    {
+      "problemPid": "P8865",
+      "versionCount": 4,
+      "scorePattern": "1 -> 1 -> 97 -> 100",
+      "lineCountChange": "+29",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P7960",
+      "versionCount": 3,
+      "scorePattern": "70 -> 50 -> 100",
+      "lineCountChange": "+2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P15767",
+      "versionCount": 3,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+13",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P15766",
+      "versionCount": 2,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P15785",
+      "versionCount": 4,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P14362",
+      "versionCount": 2,
+      "scorePattern": "16 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P2852",
+      "versionCount": 13,
+      "scorePattern": "0 -> 10 -> 20 -> 30 -> 40 -> 70 -> 100 -> 100 -> 100 -> 100 -> 100",
+      "lineCountChange": "+56",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION"
+        ],
+        "removed": [
+          "POSSIBLE_INT_OVERFLOW"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1226",
+      "versionCount": 6,
+      "scorePattern": "72 -> 100 -> 100 -> 100 -> 100 -> 0",
+      "lineCountChange": "-207",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "LONG_CODE",
+          "POSSIBLE_INT_OVERFLOW",
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P15199",
+      "versionCount": 4,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+5",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG",
+          "LARGE_GLOBAL_ARRAY",
+          "MEMSET_SENTINEL",
+          "RECURSION",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "POSSIBLE_INT_OVERFLOW"
+        ]
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P15216",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P3618",
+      "versionCount": 3,
+      "scorePattern": "100 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P15268",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P15266",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P15267",
+      "versionCount": 6,
+      "scorePattern": "0 -> 0 -> 20 -> 20 -> 100 -> 100",
+      "lineCountChange": "+105",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P9709",
+      "versionCount": 4,
+      "scorePattern": "0 -> 0 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "U656632",
+      "versionCount": 3,
+      "scorePattern": "0 -> 0 -> 0",
+      "lineCountChange": "-41",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P1195",
+      "versionCount": 3,
+      "scorePattern": "5 -> 100 -> 100",
+      "lineCountChange": "-3",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P3435",
+      "versionCount": 3,
+      "scorePattern": "0 -> 100 -> 100",
+      "lineCountChange": "+24",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "RECURSION",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P4391",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P11276",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P3375",
+      "versionCount": 3,
+      "scorePattern": "70 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P15269",
+      "versionCount": 2,
+      "scorePattern": "14 -> 14",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "U519362",
+      "versionCount": 24,
+      "scorePattern": "0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0",
+      "lineCountChange": "+9",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P11738",
+      "versionCount": 3,
+      "scorePattern": "100 -> 0 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "U657403",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P14725",
+      "versionCount": 4,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+12",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P15018",
+      "versionCount": 7,
+      "scorePattern": "9 -> 54 -> 78 -> 3 -> 3 -> 100 -> 100",
+      "lineCountChange": "+14",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P15131",
+      "versionCount": 6,
+      "scorePattern": "90 -> 90 -> 95 -> 100 -> 100",
+      "lineCountChange": "+8",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "U463446",
+      "versionCount": 11,
+      "scorePattern": "0 -> 0 -> 66 -> 66 -> 100 -> 100 -> 100 -> 100",
+      "lineCountChange": "-134",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG"
+        ],
+        "removed": [
+          "LARGE_GLOBAL_ARRAY",
+          "RECURSION",
+          "POSSIBLE_INT_OVERFLOW",
+          "ARRAY_INDEX_RISK",
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P8687",
+      "versionCount": 3,
+      "scorePattern": "0 -> 100 -> 100",
+      "lineCountChange": "+25",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P12593",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "T205934",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P7859",
+      "versionCount": 2,
+      "scorePattern": "80 -> 80",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P15052",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P15069",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P14727",
+      "versionCount": 2,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P1471",
+      "versionCount": 10,
+      "scorePattern": "0 -> 0 -> 0 -> 0 -> 0 -> 100 -> 0 -> 0 -> 0 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [
+          "POSSIBLE_INT_OVERFLOW"
+        ],
+        "removed": [
+          "DEFINE_INT_LONG_LONG"
+        ]
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1314",
+      "versionCount": 3,
+      "scorePattern": "0 -> 100 -> 100",
+      "lineCountChange": "+50",
+      "riskFlagChange": {
+        "added": [
+          "DEEP_BRACE_NESTING",
+          "LARGE_GLOBAL_ARRAY",
+          "RECURSION",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 global_array, init_logic，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P2390",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P5815",
+      "versionCount": 5,
+      "scorePattern": "20 -> 20 -> 10 -> 100 -> 100",
+      "lineCountChange": "+14",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P3670",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1955",
+      "versionCount": 19,
+      "scorePattern": "10 -> 10 -> 10 -> 10 -> 10 -> 10 -> 50 -> 50 -> 70 -> 70 -> 70 -> 70 -> 90 -> 90 -> 90 -> 90 -> 90 -> 100 -> 100",
+      "lineCountChange": "+25",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P3379",
+      "versionCount": 10,
+      "scorePattern": "0 -> 100 -> 100 -> 100 -> 100 -> 100 -> 100 -> 100 -> 100 -> 100",
+      "lineCountChange": "-587",
+      "riskFlagChange": {
+        "added": [
+          "POSSIBLE_INT_OVERFLOW"
+        ],
+        "removed": [
+          "LONG_CODE"
+        ]
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P10135",
+      "versionCount": 16,
+      "scorePattern": "6 -> 6 -> 12 -> 18 -> 24 -> 30 -> 0 -> 6 -> 30 -> 30 -> 30 -> 30 -> 30 -> 36 -> 36",
+      "lineCountChange": "+25",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P14740",
+      "versionCount": 4,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+44",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P2899",
+      "versionCount": 8,
+      "scorePattern": "0 -> 0 -> 20 -> 0 -> 20 -> 100 -> 100",
+      "lineCountChange": "+45",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P2996",
+      "versionCount": 3,
+      "scorePattern": "70 -> 100 -> 100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P2063",
+      "versionCount": 3,
+      "scorePattern": "0",
+      "lineCountChange": "-281",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "U643929",
+      "versionCount": 10,
+      "scorePattern": "397096 -> 407279 -> 0 -> 0 -> 0 -> 0 -> 0",
+      "lineCountChange": "+204",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "代码规模明显增加，可能从暴力改为复杂模型或增加数据结构。"
+    },
+    {
+      "problemPid": "P1352",
+      "versionCount": 4,
+      "scorePattern": "100 -> 100 -> 100 -> 100",
+      "lineCountChange": "+8",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P2379",
+      "versionCount": 2,
+      "scorePattern": "0 -> 0",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P1435",
+      "versionCount": 15,
+      "scorePattern": "0 -> 10 -> 20 -> 30 -> 0 -> 30 -> 40 -> 40 -> 40 -> 40 -> 40 -> 20 -> 40 -> 100 -> 100",
+      "lineCountChange": "-402",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "LONG_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P4017",
+      "versionCount": 6,
+      "scorePattern": "100 -> 0 -> 100 -> 100 -> 20 -> 100",
+      "lineCountChange": "+669",
+      "riskFlagChange": {
+        "added": [
+          "LONG_CODE",
+          "DEFINE_INT_LONG_LONG",
+          "LARGE_GLOBAL_ARRAY"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P2014",
+      "versionCount": 3,
+      "scorePattern": "0 -> 100 -> 100",
+      "lineCountChange": "+36",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG",
+          "LARGE_GLOBAL_ARRAY",
+          "RECURSION",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 global_array, vector_structure，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P2279",
+      "versionCount": 6,
+      "scorePattern": "0 -> 0 -> 0 -> 0 -> 100 -> 100",
+      "lineCountChange": "+44",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "RECURSION",
+          "POSSIBLE_INT_OVERFLOW",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "U467266",
+      "versionCount": 16,
+      "scorePattern": "79 -> 60 -> 1 -> 1 -> 100 -> 1 -> 1 -> 1 -> 0 -> 0 -> 0 -> 0 -> 0 -> 1 -> 1",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1273",
+      "versionCount": 7,
+      "scorePattern": "10 -> 10 -> 20 -> 30 -> 40 -> 50 -> 50",
+      "lineCountChange": "+21",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P12198",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1463",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P2303",
+      "versionCount": 2,
+      "scorePattern": "0 -> 65",
+      "lineCountChange": "+9",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG",
+          "PARTIAL_SCORE_CODE"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P2152",
+      "versionCount": 3,
+      "scorePattern": "20 -> 20 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P2613",
+      "versionCount": 4,
+      "scorePattern": "0 -> 0 -> 100 -> 100",
+      "lineCountChange": "+12",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "U233632",
+      "versionCount": 3,
+      "scorePattern": "0 -> 0 -> 100",
+      "lineCountChange": "+16",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG",
+          "RECURSION"
+        ],
+        "removed": [
+          "POSSIBLE_INT_OVERFLOW"
+        ]
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P2158",
+      "versionCount": 4,
+      "scorePattern": "0 -> 91 -> 100 -> 100",
+      "lineCountChange": "+5",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1967",
+      "versionCount": 4,
+      "scorePattern": "0 -> 10 -> 30 -> 30",
+      "lineCountChange": "+41",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG",
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK",
+          "PARTIAL_SCORE_CODE"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P3958",
+      "versionCount": 5,
+      "scorePattern": "80 -> 80 -> 80 -> 100 -> 100",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG"
+        ],
+        "removed": [
+          "POSSIBLE_INT_OVERFLOW",
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P2330",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1396",
+      "versionCount": 4,
+      "scorePattern": "0 -> 0 -> 100 -> 100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P2814",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P3366",
+      "versionCount": 5,
+      "scorePattern": "84 -> 84 -> 0 -> 100 -> 100",
+      "lineCountChange": "+6",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1551",
+      "versionCount": 5,
+      "scorePattern": "100 -> 10 -> 10 -> 100 -> 100",
+      "lineCountChange": "-3",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P2820",
+      "versionCount": 8,
+      "scorePattern": "0 -> 0 -> 0 -> 100 -> 100 -> 100 -> 100 -> 100",
+      "lineCountChange": "+27",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P3367",
+      "versionCount": 3,
+      "scorePattern": "100 -> 50 -> 100",
+      "lineCountChange": "-7",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1111",
+      "versionCount": 3,
+      "scorePattern": "10 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1821",
+      "versionCount": 4,
+      "scorePattern": "0 -> 10 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1629",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B3647",
+      "versionCount": 3,
+      "scorePattern": "20 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P4779",
+      "versionCount": 8,
+      "scorePattern": "14 -> 14 -> 0 -> 14 -> 14 -> 14 -> 100 -> 100",
+      "lineCountChange": "-2",
+      "riskFlagChange": {
+        "added": [
+          "POSSIBLE_INT_OVERFLOW"
+        ],
+        "removed": [
+          "DEFINE_INT_LONG_LONG",
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P3371",
+      "versionCount": 9,
+      "scorePattern": "60 -> 60 -> 60 -> 60 -> 60 -> 0 -> 70 -> 100 -> 100",
+      "lineCountChange": "-10",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "B3643",
+      "versionCount": 4,
+      "scorePattern": "0 -> 0 -> 100 -> 100",
+      "lineCountChange": "+2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P2580",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1381",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P3879",
+      "versionCount": 5,
+      "scorePattern": "0 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P10468",
+      "versionCount": 5,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+14",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "RECURSION",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "T690823",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1481",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P3370",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "UVA1330",
+      "versionCount": 2,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P4147",
+      "versionCount": 2,
+      "scorePattern": "20 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P14361",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1919",
+      "versionCount": 14,
+      "scorePattern": "0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0",
+      "lineCountChange": "+29",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION"
+        ],
+        "removed": [
+          "POSSIBLE_INT_OVERFLOW"
+        ]
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P2293",
+      "versionCount": 4,
+      "scorePattern": "80 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P2000",
+      "versionCount": 4,
+      "scorePattern": "0 -> 0 -> 0 -> 0",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "U622366",
+      "versionCount": 4,
+      "scorePattern": "0 -> 20 -> 0 -> 100",
+      "lineCountChange": "-2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "U622364",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "-2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "U619605",
+      "versionCount": 10,
+      "scorePattern": "10 -> 10 -> 10 -> 10 -> 10 -> 10 -> 10 -> 10",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [
+          "PARTIAL_SCORE_CODE"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "U619606",
+      "versionCount": 7,
+      "scorePattern": "0 -> 0 -> 0 -> 50 -> 50 -> 50 -> 50",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [
+          "PARTIAL_SCORE_CODE"
+        ],
+        "removed": [
+          "LARGE_GLOBAL_ARRAY",
+          "POSSIBLE_INT_OVERFLOW",
+          "ARRAY_INDEX_RISK"
+        ]
+      },
+      "likelyChangeReason": "后续版本减少了部分实现风险，可能修复了边界或溢出问题。"
+    },
+    {
+      "problemPid": "U619604",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "-2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "U615694",
+      "versionCount": 4,
+      "scorePattern": "20 -> 40 -> 40",
+      "lineCountChange": "+26",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION",
+          "PARTIAL_SCORE_CODE"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "U615693",
+      "versionCount": 8,
+      "scorePattern": "0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "U615692",
+      "versionCount": 2,
+      "scorePattern": "30 -> 100",
+      "lineCountChange": "-20",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "RECURSION",
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P5331",
+      "versionCount": 2,
+      "scorePattern": "0 -> 0",
+      "lineCountChange": "-463",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "MEMSET_SENTINEL",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "LONG_CODE"
+        ]
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "U465826",
+      "versionCount": 3,
+      "scorePattern": "100 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "U465842",
+      "versionCount": 27,
+      "scorePattern": "100 -> 96 -> 96 -> 100 -> 100 -> 96 -> 100 -> 46 -> 100 -> 100 -> 82 -> 100 -> 100 -> 82 -> 82 -> 82 -> 100 -> 100 -> 43 -> 21 -> 21 -> 100 -> 100 -> 0 -> 0 -> 4 -> 100",
+      "lineCountChange": "+40",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "DEFINE_INT_LONG_LONG"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "U466962",
+      "versionCount": 4,
+      "scorePattern": "100 -> 100 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1055",
+      "versionCount": 6,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P13426",
+      "versionCount": 5,
+      "scorePattern": "20 -> 50 -> 30 -> 10 -> 50",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1598",
+      "versionCount": 4,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B3868",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1480",
+      "versionCount": 6,
+      "scorePattern": "0 -> 100 -> 100 -> 84 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1303",
+      "versionCount": 3,
+      "scorePattern": "100 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1601",
+      "versionCount": 4,
+      "scorePattern": "80 -> 100 -> 100 -> 100",
+      "lineCountChange": "+652",
+      "riskFlagChange": {
+        "added": [
+          "LONG_CODE",
+          "DEFINE_INT_LONG_LONG",
+          "LARGE_GLOBAL_ARRAY",
+          "RECURSION"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P11310",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P5686",
+      "versionCount": 2,
+      "scorePattern": "20 -> 70",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P3909",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "-7",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P5461",
+      "versionCount": 9,
+      "scorePattern": "0 -> 0 -> 0 -> 20 -> 30 -> 70 -> 70 -> 100",
+      "lineCountChange": "+24",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P3585",
+      "versionCount": 24,
+      "scorePattern": "0 -> 0 -> 7 -> 0 -> 7 -> 21 -> 21 -> 21 -> 21 -> 21 -> 21 -> 21 -> 21 -> 21 -> 21 -> 21 -> 21 -> 21 -> 21 -> 100 -> 100",
+      "lineCountChange": "+89",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P2615",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1328",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1563",
+      "versionCount": 4,
+      "scorePattern": "80 -> 80 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1969",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1031",
+      "versionCount": 6,
+      "scorePattern": "20 -> 0 -> 100 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1014",
+      "versionCount": 5,
+      "scorePattern": "100 -> 100 -> 100 -> 100 -> 100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P3908",
+      "versionCount": 2,
+      "scorePattern": "40 -> 100",
+      "lineCountChange": "+6",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1414",
+      "versionCount": 4,
+      "scorePattern": "0 -> 100 -> 60 -> 100",
+      "lineCountChange": "-627",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "POSSIBLE_INT_OVERFLOW",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "LONG_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1853",
+      "versionCount": 3,
+      "scorePattern": "100 -> 100 -> 100",
+      "lineCountChange": "-344",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "LONG_CODE",
+          "RECURSION"
+        ]
+      },
+      "likelyChangeReason": "后续版本减少了部分实现风险，可能修复了边界或溢出问题。"
+    },
+    {
+      "problemPid": "P1125",
+      "versionCount": 4,
+      "scorePattern": "100 -> 100 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P8926",
+      "versionCount": 12,
+      "scorePattern": "55 -> 55 -> 55 -> 55 -> 85 -> 0 -> 85 -> 85 -> 85 -> 85 -> 100 -> 100",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1516",
+      "versionCount": 3,
+      "scorePattern": "0 -> 0 -> 20",
+      "lineCountChange": "+7",
+      "riskFlagChange": {
+        "added": [
+          "PARTIAL_SCORE_CODE"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1865",
+      "versionCount": 7,
+      "scorePattern": "40 -> 34 -> 100 -> 100 -> 100 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [
+          "POSSIBLE_INT_OVERFLOW",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1036",
+      "versionCount": 6,
+      "scorePattern": "100 -> 16 -> 100 -> 100 -> 100 -> 100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1075",
+      "versionCount": 17,
+      "scorePattern": "60 -> 60 -> 0 -> 60 -> 0 -> 60 -> 60 -> 60 -> 60 -> 60 -> 30 -> 30 -> 100 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P10472",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "U328616",
+      "versionCount": 4,
+      "scorePattern": "100 -> 18 -> 18 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1060",
+      "versionCount": 3,
+      "scorePattern": "100 -> 100 -> 100",
+      "lineCountChange": "-310",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "LONG_CODE",
+          "RECURSION"
+        ]
+      },
+      "likelyChangeReason": "后续版本减少了部分实现风险，可能修复了边界或溢出问题。"
+    },
+    {
+      "problemPid": "P1541",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P2285",
+      "versionCount": 11,
+      "scorePattern": "0 -> 0 -> 0 -> 10 -> 10 -> 10 -> 10 -> 10 -> 100 -> 100 -> 100",
+      "lineCountChange": "+18",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1009",
+      "versionCount": 4,
+      "scorePattern": "0 -> 100 -> 50 -> 100",
+      "lineCountChange": "-2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1005",
+      "versionCount": 3,
+      "scorePattern": "100 -> 60 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1198",
+      "versionCount": 3,
+      "scorePattern": "0 -> 0 -> 0",
+      "lineCountChange": "+29",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG",
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P4085",
+      "versionCount": 6,
+      "scorePattern": "0 -> 10 -> 20 -> 30 -> 40 -> 50",
+      "lineCountChange": "+33",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG",
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK",
+          "PARTIAL_SCORE_CODE"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P5836",
+      "versionCount": 8,
+      "scorePattern": "0 -> 0 -> 8 -> 8 -> 8 -> 8 -> 0 -> 100",
+      "lineCountChange": "+54",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG",
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P2420",
+      "versionCount": 5,
+      "scorePattern": "0 -> 0 -> 10 -> 10 -> 100",
+      "lineCountChange": "+35",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P3128",
+      "versionCount": 3,
+      "scorePattern": "0 -> 6 -> 6",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [
+          "PARTIAL_SCORE_CODE"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P5002",
+      "versionCount": 6,
+      "scorePattern": "5 -> 5 -> 5 -> 35 -> 100 -> 100",
+      "lineCountChange": "+35",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG",
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1890",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1816",
+      "versionCount": 3,
+      "scorePattern": "100 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P3865",
+      "versionCount": 9,
+      "scorePattern": "63 -> 0 -> 70 -> 70 -> 63 -> 70 -> 100 -> 100 -> 100",
+      "lineCountChange": "-2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P13500",
+      "versionCount": 4,
+      "scorePattern": "10 -> 100 -> 100 -> 100",
+      "lineCountChange": "-575",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "LONG_CODE",
+          "RECURSION",
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P13499",
+      "versionCount": 4,
+      "scorePattern": "100 -> 100 -> 100 -> 100",
+      "lineCountChange": "-576",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG"
+        ],
+        "removed": [
+          "LONG_CODE",
+          "RECURSION"
+        ]
+      },
+      "likelyChangeReason": "后续版本减少了部分实现风险，可能修复了边界或溢出问题。"
+    },
+    {
+      "problemPid": "P13498",
+      "versionCount": 5,
+      "scorePattern": "70 -> 70 -> 70 -> 70",
+      "lineCountChange": "-577",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG"
+        ],
+        "removed": [
+          "LONG_CODE"
+        ]
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1526",
+      "versionCount": 3,
+      "scorePattern": "100 -> 100 -> 100",
+      "lineCountChange": "+8",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "MEMSET_SENTINEL"
+        ]
+      },
+      "likelyChangeReason": "后续版本减少了部分实现风险，可能修复了边界或溢出问题。"
+    },
+    {
+      "problemPid": "P4342",
+      "versionCount": 5,
+      "scorePattern": "0 -> 0 -> 0",
+      "lineCountChange": "-534",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG",
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "LONG_CODE"
+        ]
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P2610",
+      "versionCount": 2,
+      "scorePattern": "0 -> 0",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P1040",
+      "versionCount": 4,
+      "scorePattern": "100 -> 100 -> 100 -> 100",
+      "lineCountChange": "+588",
+      "riskFlagChange": {
+        "added": [
+          "LONG_CODE",
+          "DEFINE_INT_LONG_LONG",
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "代码规模明显增加，可能从暴力改为复杂模型或增加数据结构。"
+    },
+    {
+      "problemPid": "P1229",
+      "versionCount": 9,
+      "scorePattern": "30 -> 0 -> 30 -> 40 -> 50 -> 60 -> 70 -> 100 -> 100",
+      "lineCountChange": "+33",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1030",
+      "versionCount": 12,
+      "scorePattern": "0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 20 -> 100 -> 100 -> 100",
+      "lineCountChange": "+312",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "DEFINE_INT_LONG_LONG"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "B4016",
+      "versionCount": 5,
+      "scorePattern": "0 -> 0 -> 100 -> 100",
+      "lineCountChange": "+33",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 vector_structure，可能是关键修正点。"
+    },
+    {
+      "problemPid": "B3642",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1019",
+      "versionCount": 4,
+      "scorePattern": "67 -> 67 -> 100 -> 100",
+      "lineCountChange": "-20",
+      "riskFlagChange": {
+        "added": [
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "B2083",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B2054",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+577",
+      "riskFlagChange": {
+        "added": [
+          "LONG_CODE",
+          "RECURSION"
+        ],
+        "removed": [
+          "DEFINE_INT_LONG_LONG"
+        ]
+      },
+      "likelyChangeReason": "代码规模明显增加，可能从暴力改为复杂模型或增加数据结构。"
+    },
+    {
+      "problemPid": "P3205",
+      "versionCount": 9,
+      "scorePattern": "0 -> 0 -> 60 -> 60 -> 60 -> 60 -> 100",
+      "lineCountChange": "+140",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "DEFINE_INT_LONG_LONG"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1077",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1049",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P9325",
+      "versionCount": 4,
+      "scorePattern": "15 -> 15",
+      "lineCountChange": "+12",
+      "riskFlagChange": {
+        "added": [
+          "PARTIAL_SCORE_CODE"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1220",
+      "versionCount": 3,
+      "scorePattern": "0 -> 100 -> 100",
+      "lineCountChange": "+35",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P9232",
+      "versionCount": 6,
+      "scorePattern": "100 -> 100 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P2858",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P4118",
+      "versionCount": 5,
+      "scorePattern": "0 -> 0 -> 0",
+      "lineCountChange": "-51",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P1063",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+9",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1775",
+      "versionCount": 4,
+      "scorePattern": "60 -> 60 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P12707",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P2760",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1004",
+      "versionCount": 10,
+      "scorePattern": "100 -> 100 -> 0 -> 42 -> 42 -> 100 -> 100 -> 100 -> 100",
+      "lineCountChange": "-3",
+      "riskFlagChange": {
+        "added": [
+          "LONG_LINE"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1833",
+      "versionCount": 4,
+      "scorePattern": "100 -> 0 -> 100",
+      "lineCountChange": "+348",
+      "riskFlagChange": {
+        "added": [
+          "LONG_CODE",
+          "DEFINE_INT_LONG_LONG",
+          "LARGE_GLOBAL_ARRAY",
+          "RECURSION"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "代码规模明显增加，可能从暴力改为复杂模型或增加数据结构。"
+    },
+    {
+      "problemPid": "P1616",
+      "versionCount": 5,
+      "scorePattern": "80 -> 90 -> 90 -> 90 -> 100",
+      "lineCountChange": "+2",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG"
+        ],
+        "removed": [
+          "POSSIBLE_INT_OVERFLOW",
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P2871",
+      "versionCount": 2,
+      "scorePattern": "91 -> 100",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "POSSIBLE_INT_OVERFLOW"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1048",
+      "versionCount": 4,
+      "scorePattern": "30 -> 100 -> 100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "LARGE_GLOBAL_ARRAY"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P12678",
+      "versionCount": 12,
+      "scorePattern": "90 -> 90 -> 0 -> 90 -> 90 -> 90 -> 100 -> 90 -> 90 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1006",
+      "versionCount": 6,
+      "scorePattern": "100 -> 40 -> 40 -> 80 -> 100 -> 100",
+      "lineCountChange": "+5",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "POSSIBLE_INT_OVERFLOW",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "B3637",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1020",
+      "versionCount": 4,
+      "scorePattern": "200 -> 200 -> 200",
+      "lineCountChange": "+3",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1002",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1216",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1464",
+      "versionCount": 4,
+      "scorePattern": "0 -> 0 -> 100",
+      "lineCountChange": "+5",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P1579",
+      "versionCount": 5,
+      "scorePattern": "30 -> 30 -> 30 -> 100",
+      "lineCountChange": "+2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P2241",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P2676",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1923",
+      "versionCount": 4,
+      "scorePattern": "20 -> 60 -> 60 -> 100",
+      "lineCountChange": "-3",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG",
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1177",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1138",
+      "versionCount": 4,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1719",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P12199",
+      "versionCount": 2,
+      "scorePattern": "0 -> 0",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P1387",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1359",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B4163",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "-2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1064",
+      "versionCount": 4,
+      "scorePattern": "20 -> 100 -> 100 -> 100",
+      "lineCountChange": "+2",
+      "riskFlagChange": {
+        "added": [
+          "LONG_LINE"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1038",
+      "versionCount": 5,
+      "scorePattern": "0 -> 100 -> 100 -> 100",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "POSSIBLE_INT_OVERFLOW",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P1113",
+      "versionCount": 10,
+      "scorePattern": "100 -> 100 -> 100 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P6691",
+      "versionCount": 17,
+      "scorePattern": "100 -> 25 -> 40 -> 40 -> 100 -> 10 -> 25 -> 25 -> 25 -> 25 -> 100 -> 100 -> 25 -> 100",
+      "lineCountChange": "+23",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG",
+          "MEMSET_SENTINEL"
+        ],
+        "removed": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P5318",
+      "versionCount": 5,
+      "scorePattern": "0 -> 0 -> 100 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P6685",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P7995",
+      "versionCount": 4,
+      "scorePattern": "0 -> 100 -> 100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P2141",
+      "versionCount": 3,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1713",
+      "versionCount": 2,
+      "scorePattern": "20 -> 20",
+      "lineCountChange": "+66",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 global_array, init_logic, vector_structure，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P2012",
+      "versionCount": 3,
+      "scorePattern": "60 -> 60 -> 100",
+      "lineCountChange": "+43",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P2019",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+17",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1638",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P4980",
+      "versionCount": 3,
+      "scorePattern": "0 -> 0 -> 100",
+      "lineCountChange": "+78",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1189",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "-276",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "LONG_CODE"
+        ]
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P1154",
+      "versionCount": 2,
+      "scorePattern": "30 -> 100",
+      "lineCountChange": "-16",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1159",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1166",
+      "versionCount": 3,
+      "scorePattern": "68 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "LARGE_GLOBAL_ARRAY",
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1039",
+      "versionCount": 3,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+67",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P1033",
+      "versionCount": 3,
+      "scorePattern": "20 -> 20 -> 100",
+      "lineCountChange": "-14",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1037",
+      "versionCount": 4,
+      "scorePattern": "20 -> 20 -> 100",
+      "lineCountChange": "+3",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1045",
+      "versionCount": 3,
+      "scorePattern": "0 -> 0 -> 100",
+      "lineCountChange": "+143",
+      "riskFlagChange": {
+        "added": [
+          "LONG_CODE",
+          "POSSIBLE_INT_OVERFLOW"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "代码规模明显增加，可能从暴力改为复杂模型或增加数据结构。"
+    },
+    {
+      "problemPid": "P1057",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "-9",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P1058",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "-9",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "LARGE_GLOBAL_ARRAY",
+          "POSSIBLE_INT_OVERFLOW"
+        ]
+      },
+      "likelyChangeReason": "后续版本减少了部分实现风险，可能修复了边界或溢出问题。"
+    },
+    {
+      "problemPid": "P1042",
+      "versionCount": 3,
+      "scorePattern": "90 -> 90 -> 100",
+      "lineCountChange": "-33",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1105",
+      "versionCount": 2,
+      "scorePattern": "110",
+      "lineCountChange": "+11",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1130",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1143",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+20",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "RECURSION",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "AT_abc129_c",
+      "versionCount": 2,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "T431882",
+      "versionCount": 4,
+      "scorePattern": "10 -> 0 -> 100",
+      "lineCountChange": "-2",
+      "riskFlagChange": {
+        "added": [
+          "PARTIAL_SCORE_CODE"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "T433808",
+      "versionCount": 7,
+      "scorePattern": "0 -> 0 -> 0 -> 0 -> 0",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P1897",
+      "versionCount": 4,
+      "scorePattern": "40 -> 40 -> 40 -> 100",
+      "lineCountChange": "-12",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1067",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1024",
+      "versionCount": 6,
+      "scorePattern": "75 -> 75 -> 75 -> 75 -> 100",
+      "lineCountChange": "+4",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1018",
+      "versionCount": 3,
+      "scorePattern": "20 -> 20 -> 100",
+      "lineCountChange": "+28",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION",
+          "POSSIBLE_INT_OVERFLOW"
+        ],
+        "removed": [
+          "ARRAY_INDEX_RISK",
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "T23806",
+      "versionCount": 7,
+      "scorePattern": "0 -> 0 -> 80 -> 80",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [
+          "PARTIAL_SCORE_CODE"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P11858",
+      "versionCount": 10,
+      "scorePattern": "6 -> 6 -> 6 -> 6 -> 6 -> 6 -> 6 -> 15",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P11860",
+      "versionCount": 5,
+      "scorePattern": "8 -> 8 -> 8 -> 8 -> 8",
+      "lineCountChange": "+5",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P11849",
+      "versionCount": 4,
+      "scorePattern": "15 -> 15 -> 55 -> 55",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P11855",
+      "versionCount": 2,
+      "scorePattern": "0 -> 0",
+      "lineCountChange": "-19",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "LARGE_GLOBAL_ARRAY",
+          "POSSIBLE_INT_OVERFLOW",
+          "ARRAY_INDEX_RISK"
+        ]
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P11463",
+      "versionCount": 3,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "-9",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P11827",
+      "versionCount": 3,
+      "scorePattern": "0 -> 0 -> 0",
+      "lineCountChange": "+29",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P11825",
+      "versionCount": 3,
+      "scorePattern": "36 -> 36 -> 100",
+      "lineCountChange": "-5",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P10509",
+      "versionCount": 3,
+      "scorePattern": "0 -> 0 -> 100",
+      "lineCountChange": "-2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P2678",
+      "versionCount": 3,
+      "scorePattern": "100 -> 10 -> 100",
+      "lineCountChange": "+7",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1173",
+      "versionCount": 4,
+      "scorePattern": "100 -> 100 -> 0 -> 0",
+      "lineCountChange": "-42",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "LARGE_GLOBAL_ARRAY",
+          "POSSIBLE_INT_OVERFLOW",
+          "ARRAY_INDEX_RISK"
+        ]
+      },
+      "likelyChangeReason": "后续版本减少了部分实现风险，可能修复了边界或溢出问题。"
+    },
+    {
+      "problemPid": "P1399",
+      "versionCount": 2,
+      "scorePattern": "100 -> 15",
+      "lineCountChange": "-22",
+      "riskFlagChange": {
+        "added": [
+          "PARTIAL_SCORE_CODE"
+        ],
+        "removed": [
+          "LONG_LINE",
+          "MEMSET_SENTINEL"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1012",
+      "versionCount": 3,
+      "scorePattern": "0 -> 100 -> 100",
+      "lineCountChange": "+18",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 vector_structure，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P2367",
+      "versionCount": 5,
+      "scorePattern": "20 -> 20 -> 100",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "U194704",
+      "versionCount": 2,
+      "scorePattern": "0",
+      "lineCountChange": "-2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P1980",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P2859",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "U515861",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P2887",
+      "versionCount": 2,
+      "scorePattern": "38 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "B2030",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B2031",
+      "versionCount": 2,
+      "scorePattern": "50 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P11231",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P11228",
+      "versionCount": 3,
+      "scorePattern": "0 -> 10 -> 100",
+      "lineCountChange": "+3",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1887",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B2128",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B2132",
+      "versionCount": 2,
+      "scorePattern": "80 -> 100",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P10722",
+      "versionCount": 2,
+      "scorePattern": "0 -> 40",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [
+          "PARTIAL_SCORE_CODE"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B3873",
+      "versionCount": 3,
+      "scorePattern": "30 -> 30 -> 30",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P10250",
+      "versionCount": 3,
+      "scorePattern": "36 -> 36 -> 100",
+      "lineCountChange": "+4",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P3987",
+      "versionCount": 10,
+      "scorePattern": "27 -> 21 -> 21 -> 42 -> 88 -> 88 -> 88 -> 88 -> 88 -> 88",
+      "lineCountChange": "-8",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ]
+      },
+      "likelyChangeReason": "后续版本减少了部分实现风险，可能修复了边界或溢出问题。"
+    },
+    {
+      "problemPid": "B3893",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P3420",
+      "versionCount": 4,
+      "scorePattern": "100 -> 100 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P8654",
+      "versionCount": 3,
+      "scorePattern": "100 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P3144",
+      "versionCount": 3,
+      "scorePattern": "0 -> 0 -> 10",
+      "lineCountChange": "-3",
+      "riskFlagChange": {
+        "added": [
+          "PARTIAL_SCORE_CODE"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1621",
+      "versionCount": 3,
+      "scorePattern": "30 -> 30 -> 100",
+      "lineCountChange": "+4",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG"
+        ],
+        "removed": [
+          "POSSIBLE_INT_OVERFLOW",
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P2256",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P5908",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P8681",
+      "versionCount": 3,
+      "scorePattern": "10 -> 10 -> 100",
+      "lineCountChange": "-33",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK",
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P3915",
+      "versionCount": 6,
+      "scorePattern": "10 -> 0 -> 10 -> 0 -> 10 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P4913",
+      "versionCount": 8,
+      "scorePattern": "0 -> 0 -> 0 -> 100 -> 0 -> 100 -> 100",
+      "lineCountChange": "+314",
+      "riskFlagChange": {
+        "added": [
+          "LONG_CODE",
+          "DEFINE_INT_LONG_LONG"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "代码规模明显增加，可能从暴力改为复杂模型或增加数据结构。"
+    },
+    {
+      "problemPid": "U465513",
+      "versionCount": 4,
+      "scorePattern": "70 -> 70 -> 100 -> 100",
+      "lineCountChange": "-2",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "POSSIBLE_INT_OVERFLOW",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "U452710",
+      "versionCount": 4,
+      "scorePattern": "0 -> 0 -> 0 -> 0",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "U465508",
+      "versionCount": 2,
+      "scorePattern": "10 -> 10",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "U452718",
+      "versionCount": 5,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "U452713",
+      "versionCount": 6,
+      "scorePattern": "30 -> 30 -> 60 -> 0 -> 100 -> 100",
+      "lineCountChange": "-9",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "CF1249E",
+      "versionCount": 3,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "CF163A",
+      "versionCount": 6,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+17",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "POSSIBLE_INT_OVERFLOW",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "CF1914B",
+      "versionCount": 16,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P2782",
+      "versionCount": 5,
+      "scorePattern": "50 -> 20 -> 20 -> 100 -> 100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [
+          "POSSIBLE_INT_OVERFLOW"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P10376",
+      "versionCount": 3,
+      "scorePattern": "40 -> 100 -> 100",
+      "lineCountChange": "-5",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "CF1051D",
+      "versionCount": 8,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+4",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "CF191A",
+      "versionCount": 4,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P1091",
+      "versionCount": 3,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+331",
+      "riskFlagChange": {
+        "added": [
+          "LONG_CODE"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "代码规模明显增加，可能从暴力改为复杂模型或增加数据结构。"
+    },
+    {
+      "problemPid": "P1439",
+      "versionCount": 7,
+      "scorePattern": "90 -> 90 -> 0 -> 0 -> 100 -> 100",
+      "lineCountChange": "+325",
+      "riskFlagChange": {
+        "added": [
+          "LONG_CODE",
+          "LARGE_GLOBAL_ARRAY",
+          "POSSIBLE_INT_OVERFLOW"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1765",
+      "versionCount": 4,
+      "scorePattern": "0 -> 0 -> 100 -> 100",
+      "lineCountChange": "+329",
+      "riskFlagChange": {
+        "added": [
+          "LONG_CODE",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "代码规模明显增加，可能从暴力改为复杂模型或增加数据结构。"
+    },
+    {
+      "problemPid": "U255600",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "AT_dp_b",
+      "versionCount": 5,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "AT_dp_a",
+      "versionCount": 9,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P8707",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1192",
+      "versionCount": 3,
+      "scorePattern": "20 -> 100",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1596",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1215",
+      "versionCount": 2,
+      "scorePattern": "0 -> 0",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "T492859",
+      "versionCount": 2,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "-231",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "LONG_CODE",
+          "DEFINE_INT_LONG_LONG"
+        ]
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P2080",
+      "versionCount": 4,
+      "scorePattern": "80 -> 80 -> 100",
+      "lineCountChange": "+287",
+      "riskFlagChange": {
+        "added": [
+          "LONG_CODE",
+          "DEFINE_INT_LONG_LONG",
+          "RECURSION",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P7870",
+      "versionCount": 8,
+      "scorePattern": "50 -> 50 -> 50 -> 100 -> 100 -> 100 -> 100",
+      "lineCountChange": "+18",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK",
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "CF808D",
+      "versionCount": 6,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+47",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "CF1996D",
+      "versionCount": 10,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "-2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "U248278",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "-2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P3383",
+      "versionCount": 9,
+      "scorePattern": "0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 100",
+      "lineCountChange": "-195",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG"
+        ],
+        "removed": [
+          "LONG_CODE",
+          "POSSIBLE_INT_OVERFLOW"
+        ]
+      },
+      "likelyChangeReason": "后续版本减少了部分实现风险，可能修复了边界或溢出问题。"
+    },
+    {
+      "problemPid": "B3634",
+      "versionCount": 5,
+      "scorePattern": "40 -> 40 -> 40 -> 40 -> 100",
+      "lineCountChange": "+179",
+      "riskFlagChange": {
+        "added": [
+          "LONG_CODE",
+          "DEFINE_INT_LONG_LONG"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "CF1927C",
+      "versionCount": 8,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+67",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "RECURSION",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "POSSIBLE_INT_OVERFLOW"
+        ]
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "CF545D",
+      "versionCount": 3,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "-2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P1803",
+      "versionCount": 3,
+      "scorePattern": "100 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "CF1978A",
+      "versionCount": 2,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "CF1629A",
+      "versionCount": 3,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P3918",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P3913",
+      "versionCount": 8,
+      "scorePattern": "0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 100",
+      "lineCountChange": "+2",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG"
+        ],
+        "removed": [
+          "POSSIBLE_INT_OVERFLOW"
+        ]
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B3959",
+      "versionCount": 2,
+      "scorePattern": "75 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P9094",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B2002",
+      "versionCount": 5,
+      "scorePattern": "100 -> 100 -> 100 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "CF1729D",
+      "versionCount": 4,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "-20",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "POSSIBLE_INT_OVERFLOW"
+        ]
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "B3799",
+      "versionCount": 5,
+      "scorePattern": "10 -> 10 -> 10 -> 40 -> 100",
+      "lineCountChange": "+10",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "U460090",
+      "versionCount": 5,
+      "scorePattern": "50 -> 100 -> 100 -> 100",
+      "lineCountChange": "+5",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "CF1776H",
+      "versionCount": 4,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "CF1840A",
+      "versionCount": 3,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P1147",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "CF1791C",
+      "versionCount": 2,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "U269021",
+      "versionCount": 3,
+      "scorePattern": "45 -> 55 -> 100",
+      "lineCountChange": "+16",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "RECURSION",
+          "POSSIBLE_INT_OVERFLOW",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "DEFINE_INT_LONG_LONG",
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "U268985",
+      "versionCount": 5,
+      "scorePattern": "91 -> 0 -> 91 -> 91 -> 100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "CF1793C",
+      "versionCount": 2,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P1873",
+      "versionCount": 3,
+      "scorePattern": "0 -> 50 -> 100",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [
+          "DEFINE_INT_LONG_LONG"
+        ],
+        "removed": [
+          "POSSIBLE_INT_OVERFLOW"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1577",
+      "versionCount": 5,
+      "scorePattern": "100 -> 7 -> 7 -> 7 -> 0",
+      "lineCountChange": "-5",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "CF279B",
+      "versionCount": 5,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "-8",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "CF1335C",
+      "versionCount": 4,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+14",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "CF1873E",
+      "versionCount": 5,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "CF18C",
+      "versionCount": 8,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P4552",
+      "versionCount": 6,
+      "scorePattern": "0 -> 100 -> 100 -> 100 -> 0",
+      "lineCountChange": "+7",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1114",
+      "versionCount": 2,
+      "scorePattern": "10 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "CF1560A",
+      "versionCount": 2,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "CF750A",
+      "versionCount": 3,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P9497",
+      "versionCount": 2,
+      "scorePattern": "50 -> 100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "DEFINE_INT_LONG_LONG",
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "B3938",
+      "versionCount": 3,
+      "scorePattern": "10 -> 0 -> 0",
+      "lineCountChange": "-6",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "后续版本减少了部分实现风险，可能修复了边界或溢出问题。"
+    },
+    {
+      "problemPid": "B3782",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B3929",
+      "versionCount": 4,
+      "scorePattern": "0 -> 100 -> 100 -> 100",
+      "lineCountChange": "-3",
+      "riskFlagChange": {
+        "added": [
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "CF33C",
+      "versionCount": 4,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "-15",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "RECURSION"
+        ]
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "CF816B",
+      "versionCount": 3,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+6",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "ARRAY_INDEX_RISK"
+        ]
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "CF873B",
+      "versionCount": 7,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "-5",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "AT_abc345_c",
+      "versionCount": 2,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P10709",
+      "versionCount": 3,
+      "scorePattern": "0 -> 49 -> 100",
+      "lineCountChange": "-8",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "RECURSION"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "B2110",
+      "versionCount": 5,
+      "scorePattern": "10 -> 30 -> 100 -> 100 -> 100",
+      "lineCountChange": "+11",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P2452",
+      "versionCount": 11,
+      "scorePattern": "0 -> 70 -> 70 -> 70 -> 70 -> 70 -> 70 -> 70 -> 70 -> 70 -> 20",
+      "lineCountChange": "-79",
+      "riskFlagChange": {
+        "added": [
+          "PARTIAL_SCORE_CODE"
+        ],
+        "removed": [
+          "POSSIBLE_INT_OVERFLOW"
+        ]
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1330",
+      "versionCount": 2,
+      "scorePattern": "40 -> 40",
+      "lineCountChange": "+83",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "代码规模明显增加，可能从暴力改为复杂模型或增加数据结构。"
+    },
+    {
+      "problemPid": "P1756",
+      "versionCount": 4,
+      "scorePattern": "0 -> 0 -> 0 -> 0",
+      "lineCountChange": "-2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P8605",
+      "versionCount": 5,
+      "scorePattern": "0 -> 0 -> 100 -> 100",
+      "lineCountChange": "-3",
+      "riskFlagChange": {
+        "added": [
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "RECURSION"
+        ]
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P1123",
+      "versionCount": 4,
+      "scorePattern": "0 -> 0 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1200",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P3197",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1010",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1003",
+      "versionCount": 8,
+      "scorePattern": "0 -> 0 -> 0 -> 0 -> 0 -> 100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "DEFINE_INT_LONG_LONG",
+          "LARGE_GLOBAL_ARRAY"
+        ]
+      },
+      "likelyChangeReason": "后续版本减少了部分实现风险，可能修复了边界或溢出问题。"
+    },
+    {
+      "problemPid": "P1867",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1830",
+      "versionCount": 5,
+      "scorePattern": "100",
+      "lineCountChange": "+6",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P1749",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1739",
+      "versionCount": 3,
+      "scorePattern": "70 -> 100",
+      "lineCountChange": "+6",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1634",
+      "versionCount": 4,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1614",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1567",
+      "versionCount": 5,
+      "scorePattern": "10 -> 19 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1534",
+      "versionCount": 3,
+      "scorePattern": "0 -> 20 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1720",
+      "versionCount": 4,
+      "scorePattern": "80 -> 80 -> 100",
+      "lineCountChange": "-7",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1427",
+      "versionCount": 3,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P1059",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1271",
+      "versionCount": 3,
+      "scorePattern": "0 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1029",
+      "versionCount": 12,
+      "scorePattern": "90 -> 90 -> 90 -> 90 -> 90 -> 90 -> 10 -> 10 -> 10 -> 10 -> 100 -> 100",
+      "lineCountChange": "+3",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1223",
+      "versionCount": 4,
+      "scorePattern": "100 -> 100 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1478",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1157",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1422",
+      "versionCount": 4,
+      "scorePattern": "60 -> 60 -> 100 -> 100",
+      "lineCountChange": "-19",
+      "riskFlagChange": {
+        "added": [
+          "LONG_LINE"
+        ],
+        "removed": [
+          "RECURSION",
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1420",
+      "versionCount": 2,
+      "scorePattern": "60 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1321",
+      "versionCount": 6,
+      "scorePattern": "0 -> 0 -> 100",
+      "lineCountChange": "+2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1320",
+      "versionCount": 3,
+      "scorePattern": "20 -> 100",
+      "lineCountChange": "-12",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "RECURSION",
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1706",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P9750",
+      "versionCount": 13,
+      "scorePattern": "10 -> 60 -> 60 -> 60 -> 60 -> 60 -> 60 -> 60 -> 60 -> 60 -> 100",
+      "lineCountChange": "+30",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1102",
+      "versionCount": 7,
+      "scorePattern": "0 -> 0 -> 0 -> 76 -> 76 -> 92 -> 100",
+      "lineCountChange": "-10",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "RECURSION"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1781",
+      "versionCount": 5,
+      "scorePattern": "20",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P2142",
+      "versionCount": 2,
+      "scorePattern": "30 -> 50",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "U218402",
+      "versionCount": 3,
+      "scorePattern": "0 -> 10 -> 10",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "U218403",
+      "versionCount": 3,
+      "scorePattern": "0 -> 100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P5721",
+      "versionCount": 5,
+      "scorePattern": "0 -> 0 -> 0 -> 0 -> 100",
+      "lineCountChange": "+4",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P3395",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P7074",
+      "versionCount": 3,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "-3",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "RECURSION"
+        ]
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "AT_codefestival_2016_qualC_a",
+      "versionCount": 4,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+4",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P9749",
+      "versionCount": 5,
+      "scorePattern": "0 -> 100 -> 100 -> 0 -> 100",
+      "lineCountChange": "-31",
+      "riskFlagChange": {
+        "added": [
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "RECURSION"
+        ]
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P5661",
+      "versionCount": 3,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+14",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P7072",
+      "versionCount": 5,
+      "scorePattern": "100 -> 100 -> 70 -> 0 -> 100",
+      "lineCountChange": "-26",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "RECURSION",
+          "POSSIBLE_INT_OVERFLOW"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P10571",
+      "versionCount": 9,
+      "scorePattern": "0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 0",
+      "lineCountChange": "-13",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "RECURSION"
+        ]
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "T461430",
+      "versionCount": 2,
+      "scorePattern": "0 -> 0",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "B2125",
+      "versionCount": 3,
+      "scorePattern": "100 -> 100 -> 100",
+      "lineCountChange": "+3",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1307",
+      "versionCount": 3,
+      "scorePattern": "30 -> 100",
+      "lineCountChange": "+11",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P10517",
+      "versionCount": 2,
+      "scorePattern": "0",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P1161",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1008",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 init_logic，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P1000",
+      "versionCount": 4,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P5753",
+      "versionCount": 3,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1737",
+      "versionCount": 2,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+65",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "T219209",
+      "versionCount": 2,
+      "scorePattern": "75 -> 100",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1152",
+      "versionCount": 4,
+      "scorePattern": "50 -> 50 -> 50 -> 100",
+      "lineCountChange": "-8",
+      "riskFlagChange": {
+        "added": [
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "RECURSION",
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "U262609",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "CF1743A",
+      "versionCount": 4,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+9",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "CF1736A",
+      "versionCount": 3,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "ARRAY_INDEX_RISK"
+        ]
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "CF1772A",
+      "versionCount": 2,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "B3672",
+      "versionCount": 2,
+      "scorePattern": "20 -> 20",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "U408377",
+      "versionCount": 3,
+      "scorePattern": "0 -> 0 -> 0",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "U331327",
+      "versionCount": 5,
+      "scorePattern": "0 -> 0 -> 0 -> 0",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "U260492",
+      "versionCount": 2,
+      "scorePattern": "80 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "B2109",
+      "versionCount": 3,
+      "scorePattern": "100",
+      "lineCountChange": "+3",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B2126",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B2124",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P2084",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P5015",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "-8",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P4702",
+      "versionCount": 2,
+      "scorePattern": "48 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P5735",
+      "versionCount": 4,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P5723",
+      "versionCount": 2,
+      "scorePattern": "80 -> 100",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P5736",
+      "versionCount": 2,
+      "scorePattern": "80 -> 100",
+      "lineCountChange": "+4",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1304",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "-6",
+      "riskFlagChange": {
+        "added": [
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "后续版本新增 global_array，可能是关键修正点。"
+    },
+    {
+      "problemPid": "B2137",
+      "versionCount": 4,
+      "scorePattern": "20 -> 40 -> 40 -> 100",
+      "lineCountChange": "+8",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P5737",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P2089",
+      "versionCount": 3,
+      "scorePattern": "30 -> 100",
+      "lineCountChange": "+44",
+      "riskFlagChange": {
+        "added": [
+          "DEEP_BRACE_NESTING"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "CF1593A",
+      "versionCount": 3,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "-37",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "RECURSION"
+        ]
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "B3908",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "CF740A",
+      "versionCount": 4,
+      "scorePattern": "UNKNOWN_PATTERN",
+      "lineCountChange": "-8",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "POSSIBLE_INT_OVERFLOW"
+        ]
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "B2105",
+      "versionCount": 4,
+      "scorePattern": "100 -> 50 -> 100",
+      "lineCountChange": "+2",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1011",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ]
+      },
+      "likelyChangeReason": "后续版本减少了部分实现风险，可能修复了边界或溢出问题。"
+    },
+    {
+      "problemPid": "B2041",
+      "versionCount": 2,
+      "scorePattern": "10 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "B2044",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B2045",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B2050",
+      "versionCount": 2,
+      "scorePattern": "30 -> 100",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1151",
+      "versionCount": 2,
+      "scorePattern": "40 -> 100",
+      "lineCountChange": "-8",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "RECURSION",
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P2020",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1587",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P1721",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B2004",
+      "versionCount": 5,
+      "scorePattern": "20 -> 20 -> 0 -> 0 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P6033",
+      "versionCount": 6,
+      "scorePattern": "30 -> 30 -> 30 -> 30",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "后续版本减少了部分实现风险，可能修复了边界或溢出问题。"
+    },
+    {
+      "problemPid": "P5657",
+      "versionCount": 2,
+      "scorePattern": "0 -> 0",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "长期 0 分，优先检查模型、复杂度或读题理解。"
+    },
+    {
+      "problemPid": "P1255",
+      "versionCount": 5,
+      "scorePattern": "50 -> 60 -> 60",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P9751",
+      "versionCount": 3,
+      "scorePattern": "100 -> 100 -> 100",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P9748",
+      "versionCount": 2,
+      "scorePattern": "100 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "P5662",
+      "versionCount": 2,
+      "scorePattern": "25 -> 100",
+      "lineCountChange": "+1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P7071",
+      "versionCount": 3,
+      "scorePattern": "55 -> 55 -> 100",
+      "lineCountChange": "-5",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "B3845",
+      "versionCount": 3,
+      "scorePattern": "0 -> 80 -> 80",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [
+          "PARTIAL_SCORE_CODE"
+        ],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B3836",
+      "versionCount": 4,
+      "scorePattern": "50 -> 50 -> 70 -> 100",
+      "lineCountChange": "-1",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "B2019",
+      "versionCount": 2,
+      "scorePattern": "50 -> 100",
+      "lineCountChange": "-7",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P1027",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+47",
+      "riskFlagChange": {
+        "added": [
+          "LARGE_GLOBAL_ARRAY",
+          "ARRAY_INDEX_RISK"
+        ],
+        "removed": [
+          "POSSIBLE_INT_OVERFLOW"
+        ]
+      },
+      "likelyChangeReason": "后续版本新增 global_array, vector_structure，可能是关键修正点。"
+    },
+    {
+      "problemPid": "P1932",
+      "versionCount": 3,
+      "scorePattern": "10 -> 0 -> 100",
+      "lineCountChange": "+7",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "P2895",
+      "versionCount": 3,
+      "scorePattern": "0 -> 7 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "B2023",
+      "versionCount": 2,
+      "scorePattern": "0 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B2018",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B2034",
+      "versionCount": 3,
+      "scorePattern": "90 -> 90 -> 100",
+      "lineCountChange": "+7",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "B2022",
+      "versionCount": 2,
+      "scorePattern": "90 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "B2021",
+      "versionCount": 4,
+      "scorePattern": "90 -> 90 -> 90 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "B2036",
+      "versionCount": 2,
+      "scorePattern": "40 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "B2040",
+      "versionCount": 3,
+      "scorePattern": "70 -> 70 -> 100",
+      "lineCountChange": "+7",
+      "riskFlagChange": {
+        "added": [
+          "RECURSION"
+        ],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "B2037",
+      "versionCount": 2,
+      "scorePattern": "100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "版本变化不明显，需要结合人工复盘确认。"
+    },
+    {
+      "problemPid": "B2035",
+      "versionCount": 3,
+      "scorePattern": "75 -> 75 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": [
+          "PARTIAL_SCORE_CODE"
+        ]
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    },
+    {
+      "problemPid": "B2033",
+      "versionCount": 3,
+      "scorePattern": "90 -> 100",
+      "lineCountChange": "+0",
+      "riskFlagChange": {
+        "added": [],
+        "removed": []
+      },
+      "likelyChangeReason": "从部分分到 AC，疑似逐步修正模型、边界或初始化。"
+    }
+  ]
+}

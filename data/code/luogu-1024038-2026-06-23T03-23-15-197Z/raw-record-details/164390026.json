@@ -1,0 +1,186 @@
+{
+  "recordId": "164390026",
+  "url": "https://www.luogu.com.cn/record/164390026?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T04:06:22.132Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_kq2_pn1a\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_kq2_pn1a\\/src:15:13: \\u9519\\u8bef\\uff1a\\u2018cjn\\u2019 was not declared in this scope; did you mean \\u2018jn\\u2019?\\n   15 |             cjn>>x>>y;\\n      |             ^~~\\n      |             jn\\n\\/tmp\\/compiler_kq2_pn1a\\/src:45:12: \\u9519\\u8bef\\uff1a\\u2018q\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   45 |         if(q!=t)\\n      |            ^\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h>\\r\\nusing namespace std;\\r\\nint main()\\r\\n{\\r\\n\\tint t;\\r\\n    cin>>t;\\r\\n    int a[1005][1005];\\r\\n    for(int i=0;i<t;i++)\\r\\n    {\\r\\n    \\tint n;\\r\\n        cin>>n;\\r\\n        for(int j=1;j<=2*n-2;j++)\\r\\n        {\\r\\n        \\tint x,y;\\r\\n            cjn>>x>>y;\\r\\n            if(x==n && y==n && x+y-2<j)\\r\\n            {\\r\\n                cout<<\\\"No\\\"<<endl;\\r\\n                break;\\r\\n            }\\r\\n            if(x+y-2>j)\\r\\n            {\\r\\n            \\ta[x][y]=-1;\\r\\n\\t\\t\\t}\\r\\n        }\\r\\n        a[1][1]=1;\\r\\n        for(int i=1;i<=n;i++)\\r\\n        {\\r\\n        \\tfor(int j=1;j<=n;j++)\\r\\n        \\t{\\r\\n        \\t\\tif((a[i-1][j]==1 || a[i][j-1]==1) && a[i][j]!=-1)\\r\\n        \\t\\t{\\r\\n                   a[i][j]=1;       \\t\\t\\t\\r\\n\\t\\t\\t\\t}\\r\\n\\t\\t\\t}\\r\\n\\t\\t}\\r\\n        if(a[n][n]==1)\\r\\n        {\\r\\n            cout<<\\\"Yes\\\"<<endl;        \\t\\r\\n\\t\\t}\\r\\n        else\\r\\n        {\\r\\n            cout<<\\\"No\\\"<<endl;\\r\\n    \\t}\\r\\n        if(q!=t)\\r\\n        {\\r\\n        \\tfor(int i=1;i<=n;i++)\\r\\n        \\t{\\r\\n        \\t\\tfor(int j=1;j<=n;j++)\\r\\n        \\t\\t{\\r\\n        \\t\\t\\ta[i][j]=0; \\r\\n\\t\\t\\t\\t}\\r\\n\\t\\t\\t}       \\t\\r\\n\\t\\t}\\r\\n    }\\r\\n}\\r\\n\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P3395\",\"title\":\"\\u8def\\u969c\",\"difficulty\":3,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":1036,\"submitTime\":1720324279,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":164390026,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1,2,3,4]],\"showStatus\":true},\"currentTitle\":\"R164390026\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782187581,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_kq2_pn1a/src: 在函数‘int main()’中:\n/tmp/compiler_kq2_pn1a/src:15:13: 错误：‘cjn’ was not declared in this scope; did you mean ‘jn’?\n   15 |             cjn>>x>>y;\n      |             ^~~\n      |             jn\n/tmp/compiler_kq2_pn1a/src:45:12: 错误：‘q’在此作用域中尚未声明\n   45 |         if(q!=t)\n      |            ^\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h>\r\nusing namespace std;\r\nint main()\r\n{\r\n\tint t;\r\n    cin>>t;\r\n    int a[1005][1005];\r\n    for(int i=0;i<t;i++)\r\n    {\r\n    \tint n;\r\n        cin>>n;\r\n        for(int j=1;j<=2*n-2;j++)\r\n        {\r\n        \tint x,y;\r\n            cjn>>x>>y;\r\n            if(x==n && y==n && x+y-2<j)\r\n            {\r\n                cout<<\"No\"<<endl;\r\n                break;\r\n            }\r\n            if(x+y-2>j)\r\n            {\r\n            \ta[x][y]=-1;\r\n\t\t\t}\r\n        }\r\n        a[1][1]=1;\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n        \tfor(int j=1;j<=n;j++)\r\n        \t{\r\n        \t\tif((a[i-1][j]==1 || a[i][j-1]==1) && a[i][j]!=-1)\r\n        \t\t{\r\n                   a[i][j]=1;       \t\t\t\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n        if(a[n][n]==1)\r\n        {\r\n            cout<<\"Yes\"<<endl;        \t\r\n\t\t}\r\n        else\r\n        {\r\n            cout<<\"No\"<<endl;\r\n    \t}\r\n        if(q!=t)\r\n        {\r\n        \tfor(int i=1;i<=n;i++)\r\n        \t{\r\n        \t\tfor(int j=1;j<=n;j++)\r\n        \t\t{\r\n        \t\t\ta[i][j]=0; \r\n\t\t\t\t}\r\n\t\t\t}       \t\r\n\t\t}\r\n    }\r\n}\r\n",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P3395",
+          "title": "路障",
+          "difficulty": 3,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 1036,
+        "submitTime": 1720324279,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 164390026,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R164390026",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782187581,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "recordId": "168548749",
+  "url": "https://www.luogu.com.cn/record/168548749?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T04:02:34.949Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_8kn3ow__\\/src:7:3: \\u9519\\u8bef\\uff1a\\u2018a\\u2019\\u4e0d\\u662f\\u4e00\\u4e2a\\u7c7b\\u578b\\u540d\\n    7 | };a[1000005];\\n      |   ^\\n\\/tmp\\/compiler_8kn3ow__\\/src: \\u5728\\u51fd\\u6570\\u2018int dfs(int, int)\\u2019\\u4e2d:\\n\\/tmp\\/compiler_8kn3ow__\\/src:12:6: \\u9519\\u8bef\\uff1a\\u2018a\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   12 |  dfs(a[r].l,s+1);\\n      |      ^\\n\\/tmp\\/compiler_8kn3ow__\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_8kn3ow__\\/src:21:8: \\u9519\\u8bef\\uff1a\\u2018a\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   21 |   cin>>a[i].l>>a[i].r;\\n      |        ^\\n\\/tmp\\/compiler_8kn3ow__\\/src: \\u5728\\u51fd\\u6570\\u2018int dfs(int, int)\\u2019\\u4e2d:\\n\\/tmp\\/compiler_8kn3ow__\\/src:11:5: \\u8b66\\u544a\\uff1a\\u5728\\u6709\\u8fd4\\u56de\\u503c\\u7684\\u51fd\\u6570\\u4e2d\\uff0c\\u63a7\\u5236\\u6d41\\u7a0b\\u5230\\u8fbe\\u51fd\\u6570\\u5c3e [-Wreturn-type]\\n   11 |  ans=max(ans,s);\\n      |  ~~~^~~~~~~~~~~\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h>\\r\\nusing namespace std;\\r\\nint ans=-1,n;\\r\\nstruct node \\r\\n{\\r\\n\\tint l,r;\\r\\n};a[1000005]; \\r\\nint dfs(int r,int s)\\r\\n{\\r\\n\\tif(r==0) return 0;\\r\\n\\tans=max(ans,s);\\r\\n\\tdfs(a[r].l,s+1);\\r\\n\\tdfs(a[r].r,s+1);\\r\\n}\\r\\nint main()\\r\\n{\\r\\n\\tint n;\\r\\n\\tcin>>n;\\r\\n\\tfor(int i=1;i<=n;i++)\\r\\n\\t{\\r\\n\\t\\tcin>>a[i].l>>a[i].r;\\r\\n\\t}\\r\\n\\tdfs(1,1);\\r\\n\\tcout<<ans;\\r\\n\\treturn 0;\\r\\n}\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P4913\",\"title\":\"\\u3010\\u6df1\\u57fa16.\\u4f8b3\\u3011\\u4e8c\\u53c9\\u6811\\u6df1\\u5ea6\",\"difficulty\":2,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":339,\"submitTime\":1721909968,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":168548749,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1,2,3,4]],\"showStatus\":true},\"currentTitle\":\"R168548749\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782187354,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_8kn3ow__/src:7:3: 错误：‘a’不是一个类型名\n    7 | };a[1000005];\n      |   ^\n/tmp/compiler_8kn3ow__/src: 在函数‘int dfs(int, int)’中:\n/tmp/compiler_8kn3ow__/src:12:6: 错误：‘a’在此作用域中尚未声明\n   12 |  dfs(a[r].l,s+1);\n      |      ^\n/tmp/compiler_8kn3ow__/src: 在函数‘int main()’中:\n/tmp/compiler_8kn3ow__/src:21:8: 错误：‘a’在此作用域中尚未声明\n   21 |   cin>>a[i].l>>a[i].r;\n      |        ^\n/tmp/compiler_8kn3ow__/src: 在函数‘int dfs(int, int)’中:\n/tmp/compiler_8kn3ow__/src:11:5: 警告：在有返回值的函数中，控制流程到达函数尾 [-Wreturn-type]\n   11 |  ans=max(ans,s);\n      |  ~~~^~~~~~~~~~~\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h>\r\nusing namespace std;\r\nint ans=-1,n;\r\nstruct node \r\n{\r\n\tint l,r;\r\n};a[1000005]; \r\nint dfs(int r,int s)\r\n{\r\n\tif(r==0) return 0;\r\n\tans=max(ans,s);\r\n\tdfs(a[r].l,s+1);\r\n\tdfs(a[r].r,s+1);\r\n}\r\nint main()\r\n{\r\n\tint n;\r\n\tcin>>n;\r\n\tfor(int i=1;i<=n;i++)\r\n\t{\r\n\t\tcin>>a[i].l>>a[i].r;\r\n\t}\r\n\tdfs(1,1);\r\n\tcout<<ans;\r\n\treturn 0;\r\n}",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P4913",
+          "title": "【深基16.例3】二叉树深度",
+          "difficulty": 2,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 339,
+        "submitTime": 1721909968,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 168548749,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R168548749",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782187354,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

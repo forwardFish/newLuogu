@@ -1,0 +1,195 @@
+{
+  "recordId": "213301709",
+  "url": "https://www.luogu.com.cn/record/213301709?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:46:32.819Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_iwqqbh5m\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_iwqqbh5m\\/src:52:17: \\u9519\\u8bef\\uff1a\\u2018gets\\u2019 was not declared in this scope; did you mean \\u2018fgets\\u2019?\\n   52 |                 gets(asdfghjkl);\\n      |                 ^~~~\\n      |                 fgets\\n\\/tmp\\/compiler_iwqqbh5m\\/src:77:13: \\u9519\\u8bef\\uff1a\\u2018gets\\u2019 was not declared in this scope; did you mean \\u2018fgets\\u2019?\\n   77 |             gets(asdfghjkl);\\n      |             ^~~~\\n      |             fgets\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h>\\nusing namespace std;\\nmap<string,int> per;\\nstring nm[25];\\nmap<string,int> day;\\nstruct sta\\n{\\n    int u;\\n    bool to;\\n    bool is;\\n    sta(int u,bool to,bool is)\\n    {\\n        this->u=u;\\n        this->to=to;\\n        this->is=is;\\n    }\\n    sta(){}\\n};\\nvector<sta> v[25];\\nchar asdfghjkl[1000];\\nint main()\\n{\\n    int n,m,p;\\n    cin>>n>>m>>p;\\n    string s;\\n    for(int i=1;i<=n;++i)\\n    {\\n        cin>>s;\\n        per[s]=i;\\n        nm[i]=s;\\n    }\\n    per[\\\"Today\\\"]=n+1;\\n    day[\\\"Monday.\\\"]=1;\\n    day[\\\"Tuesday.\\\"]=2;\\n    day[\\\"Wednesday.\\\"]=3;\\n    day[\\\"Thursday.\\\"]=4;\\n    day[\\\"Friday.\\\"]=5;\\n    day[\\\"Saturday.\\\"]=6;\\n    day[\\\"Sunday.\\\"]=7;\\n    for(int i=1;i<=p;++i)\\n    {\\n        cin>>s;\\n        s=s.substr(0,s.size()-1);\\n        int t=per[s];\\n        cin>>s;\\n        int u=per[s];\\n        if(u<=n)\\n        {\\n            cin>>s;\\n            if((u&&s!=\\\"is\\\")||(!u&&s!=\\\"am\\\"))\\n            {\\n                gets(asdfghjkl);\\n                continue;\\n            }\\n            if(!u)\\n                u=t;\\n            cin>>s;\\n            if(s==\\\"not\\\")\\n            {\\n                cin>>s;\\n                if(s==\\\"guilty.\\\")\\n                    v[t].push_back(sta(u,0,0));\\n            }\\n            else if(s==\\\"guilty.\\\")\\n                v[t].push_back(sta(u,0,1));\\n        }\\n        else if(u==n+1)\\n        {\\n            cin>>s;\\n            if(s!=\\\"is\\\")\\n                continue;\\n            cin>>s;\\n            if(day[s])\\n                v[t].push_back(sta(day[s],1,1));\\n        }\\n        else\\n            gets(asdfghjkl);\\n    }\\n    string ans=\\\"\\\";\\n    for(int i=1;i<=n;++i)\\n    {\\n        for(int j=1;j<=7;++j)\\n        {\\n            int flag=0,cnt=n,ran=0;\\n            for(int k=1;!flag&&k<=n;++k)\\n            {\\n                vector<sta>::iterator it=v[k].begin();\\n                if(!v[k].size())\\n                {\\n                    ++ran;\\n                    continue;\\n                }\\n                sta tmp=*it;\\n                bool rea;\\n                if(tmp.to)\\n                    rea=(tmp.u==j);\\n                else\\n                    rea=((tmp.u==i)^(!tmp.is));\\n                ++it;\\n                for(;!flag&&it!=v[k].end();++it)\\n                {\\n                    if(it->to)\\n                    {\\n                        if(rea!=(it->u==j))\\n                            flag=1;\\n                    }\\n                    else\\n                    {\\n                        if(rea==((it->u==i)^it->is))\\n                            flag=1;\\n                    }\\n                }\\n                cnt-=rea;\\n            }\\n            if(!flag&&cnt>=m&&cnt-ran<=m)\\n            {\\n                if(ans==\\\"\\\")\\n                    ans=nm[i];\\n                else if(ans!=nm[i])\\n                {\\n                    cout<<\\\"Cannot Determine\\\"<<endl;\\n                    return 0;\\n                }\\n            }\\n        }\\n    }\\n    if(ans==\\\"\\\")\\n        cout<<\\\"Impossible\\\"<<endl;\\n    else\\n        cout<<ans<<endl;\\n    return 0;\\n}\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P1039\",\"title\":\"[NOIP 2003 \\u63d0\\u9ad8\\u7ec4] \\u4fa6\\u63a2\\u63a8\\u7406\",\"difficulty\":5,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":2933,\"submitTime\":1744432923,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":213301709,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":{\"1\":[0,1],\"0\":[2,3,4,5,6,7,8,9,10,11]},\"showStatus\":true},\"currentTitle\":\"R213301709\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186392,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_iwqqbh5m/src: 在函数‘int main()’中:\n/tmp/compiler_iwqqbh5m/src:52:17: 错误：‘gets’ was not declared in this scope; did you mean ‘fgets’?\n   52 |                 gets(asdfghjkl);\n      |                 ^~~~\n      |                 fgets\n/tmp/compiler_iwqqbh5m/src:77:13: 错误：‘gets’ was not declared in this scope; did you mean ‘fgets’?\n   77 |             gets(asdfghjkl);\n      |             ^~~~\n      |             fgets\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h>\nusing namespace std;\nmap<string,int> per;\nstring nm[25];\nmap<string,int> day;\nstruct sta\n{\n    int u;\n    bool to;\n    bool is;\n    sta(int u,bool to,bool is)\n    {\n        this->u=u;\n        this->to=to;\n        this->is=is;\n    }\n    sta(){}\n};\nvector<sta> v[25];\nchar asdfghjkl[1000];\nint main()\n{\n    int n,m,p;\n    cin>>n>>m>>p;\n    string s;\n    for(int i=1;i<=n;++i)\n    {\n        cin>>s;\n        per[s]=i;\n        nm[i]=s;\n    }\n    per[\"Today\"]=n+1;\n    day[\"Monday.\"]=1;\n    day[\"Tuesday.\"]=2;\n    day[\"Wednesday.\"]=3;\n    day[\"Thursday.\"]=4;\n    day[\"Friday.\"]=5;\n    day[\"Saturday.\"]=6;\n    day[\"Sunday.\"]=7;\n    for(int i=1;i<=p;++i)\n    {\n        cin>>s;\n        s=s.substr(0,s.size()-1);\n        int t=per[s];\n        cin>>s;\n        int u=per[s];\n        if(u<=n)\n        {\n            cin>>s;\n            if((u&&s!=\"is\")||(!u&&s!=\"am\"))\n            {\n                gets(asdfghjkl);\n                continue;\n            }\n            if(!u)\n                u=t;\n            cin>>s;\n            if(s==\"not\")\n            {\n                cin>>s;\n                if(s==\"guilty.\")\n                    v[t].push_back(sta(u,0,0));\n            }\n            else if(s==\"guilty.\")\n                v[t].push_back(sta(u,0,1));\n        }\n        else if(u==n+1)\n        {\n            cin>>s;\n            if(s!=\"is\")\n                continue;\n            cin>>s;\n            if(day[s])\n                v[t].push_back(sta(day[s],1,1));\n        }\n        else\n            gets(asdfghjkl);\n    }\n    string ans=\"\";\n    for(int i=1;i<=n;++i)\n    {\n        for(int j=1;j<=7;++j)\n        {\n            int flag=0,cnt=n,ran=0;\n            for(int k=1;!flag&&k<=n;++k)\n            {\n                vector<sta>::iterator it=v[k].begin();\n                if(!v[k].size())\n                {\n                    ++ran;\n                    continue;\n                }\n                sta tmp=*it;\n                bool rea;\n                if(tmp.to)\n                    rea=(tmp.u==j);\n                else\n                    rea=((tmp.u==i)^(!tmp.is));\n                ++it;\n                for(;!flag&&it!=v[k].end();++it)\n                {\n                    if(it->to)\n                    {\n                        if(rea!=(it->u==j))\n                            flag=1;\n                    }\n                    else\n                    {\n                        if(rea==((it->u==i)^it->is))\n                            flag=1;\n                    }\n                }\n                cnt-=rea;\n            }\n            if(!flag&&cnt>=m&&cnt-ran<=m)\n            {\n                if(ans==\"\")\n                    ans=nm[i];\n                else if(ans!=nm[i])\n                {\n                    cout<<\"Cannot Determine\"<<endl;\n                    return 0;\n                }\n            }\n        }\n    }\n    if(ans==\"\")\n        cout<<\"Impossible\"<<endl;\n    else\n        cout<<ans<<endl;\n    return 0;\n}",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P1039",
+          "title": "[NOIP 2003 提高组] 侦探推理",
+          "difficulty": 5,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 2933,
+        "submitTime": 1744432923,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 213301709,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": {
+        "0": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "1": [
+          0,
+          1
+        ]
+      },
+      "showStatus": true
+    },
+    "currentTitle": "R213301709",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186392,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

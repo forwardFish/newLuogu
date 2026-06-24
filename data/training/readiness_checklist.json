@@ -1,0 +1,49 @@
+{
+  "generatedAt": "2026-06-23T12:17:44.043Z",
+  "target": "CSP-S_FIRST_PRIZE",
+  "criteria": {
+    "t1T2Accuracy": {
+      "target": 0.9,
+      "actual": null,
+      "passed": false
+    },
+    "t1AvgTimeMinutes": {
+      "target": 35,
+      "actual": null,
+      "passed": false
+    },
+    "t2AvgTimeMinutes": {
+      "target": 60,
+      "actual": null,
+      "passed": false
+    },
+    "t3StablePartialScore": {
+      "target": 30,
+      "actual": null,
+      "passed": false
+    },
+    "mockExamScoreStreak": {
+      "target": 5,
+      "actual": 0,
+      "passed": false
+    },
+    "mockExamSafetyMargin": {
+      "target": 20,
+      "actual": null,
+      "passed": false
+    },
+    "historicalProfileBaseline": {
+      "target": "T1>=82, T2>=82, T3>=75, T4 validated by mocks",
+      "actual": {
+        "t1Stability": 72.97,
+        "t2Modeling": 81.48,
+        "t3PartialScore": 66.46,
+        "t4Strategy": 71.53,
+        "overall": 73.11
+      },
+      "passed": false
+    }
+  },
+  "overallReadiness": "NOT_READY",
+  "explanation": "当前已完成历史诊断和训练计划生成，但缺少训练执行记录与连续模拟赛达标记录，因此不能判断为接近一等奖稳定区间。"
+}

@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-06-23T09:46:21.345Z",
+  "scores": {
+    "t1Stability": 72.97,
+    "t2Solving": 81.48,
+    "t3Partial": 66.46,
+    "t4Strategy": 71.53,
+    "overall": 73.11
+  },
+  "profile": {
+    "totalCodeFiles": 2345,
+    "totalProblems": 829,
+    "solvedProblems": 614,
+    "unsolvedProblems": 215,
+    "averageAttemptsPerProblem": 2.83,
+    "solvedRatio": 0.74,
+    "stuckRatio": 0.1,
+    "riskFileRatio": 0.86,
+    "moduleCoverage": {
+      "dpProblems": 224,
+      "graphProblems": 225,
+      "dataStructureProblems": 26,
+      "mathProblems": 312,
+      "stringProblems": 187
+    }
+  },
+  "mainRisks": [
+    {
+      "name": "Debug iteration cost",
+      "level": "medium",
+      "evidence": "Average attempts per problem is 2.83."
+    },
+    {
+      "name": "Implementation risk",
+      "level": "high",
+      "evidence": "1955/2281 files carry static risk flags."
+    },
+    {
+      "name": "Complex code pressure",
+      "level": "low",
+      "evidence": "Average non-empty lines: 125.05, max brace depth: 55."
+    },
+    {
+      "name": "Hard-problem partial scoring",
+      "level": "medium",
+      "evidence": "60 problems have partial-score submissions."
+    }
+  ],
+  "trainingFocus": [
+    "Review high-attempt problems first and extract the first wrong assumption from each one.",
+    "For partial-score problems, compare the accepted or best-score code against earlier code to identify missing cases.",
+    "Create a small template-risk checklist: integer range, array boundary, initialization, recursion depth, and complexity proof.",
+    "Use module representatives to build a personal template library, but keep each template tied to a verified problem."
+  ]
+}

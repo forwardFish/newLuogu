@@ -1,0 +1,31 @@
+{
+  "generatedProblemId": "gen_string_002",
+  "weaknessId": "string_state_error_2",
+  "targetAbility": "T3_PARTIAL_SCORE",
+  "module": "string",
+  "difficulty": "提高",
+  "goal": "诊断并训练：字符串 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+  "problemPackage": {
+    "statementPath": "data\\generated-problems\\gen_string_002\\statement.md",
+    "solutionPath": "data\\generated-problems\\gen_string_002\\solution.md",
+    "bruteForcePath": "data\\generated-problems\\gen_string_002\\bruteforce.cpp",
+    "standardSolutionPath": "data\\generated-problems\\gen_string_002\\std.cpp",
+    "generatorPath": "data\\generated-problems\\gen_string_002\\generator.cpp",
+    "testsPath": "data\\generated-problems\\gen_string_002\\tests"
+  },
+  "subtasks": [
+    {
+      "score": 30,
+      "description": "小 n 暴力"
+    },
+    {
+      "score": 60,
+      "description": "特殊性质或基础模型"
+    },
+    {
+      "score": 100,
+      "description": "完整正解"
+    }
+  ],
+  "status": "DRAFT_NOT_FOR_FORMAL_TEST"
+}

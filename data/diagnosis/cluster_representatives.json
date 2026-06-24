@@ -1,0 +1,2735 @@
+{
+  "generatedAt": "2026-06-24T02:56:56.359Z",
+  "items": [
+    {
+      "clusterId": "greedy_unknown_068",
+      "representatives": [
+        {
+          "problemPid": "U619605",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "SEVERE_UNSOLVED",
+          "attemptCount": 10,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "string_state_init_boundary_027",
+      "representatives": [
+        {
+          "problemPid": "P9750",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 13,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P5740",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 8,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_013",
+      "representatives": [
+        {
+          "problemPid": "P2452",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "SEVERE_UNSOLVED",
+          "attemptCount": 11,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P3685",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 1,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_001",
+      "representatives": [
+        {
+          "problemPid": "P8699",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 16,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "U463446",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 11,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_037",
+      "representatives": [
+        {
+          "problemPid": "P11858",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "SEVERE_UNSOLVED",
+          "attemptCount": 10,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "T699486",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 2,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P1967",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "math_model_template_011",
+      "representatives": [
+        {
+          "problemPid": "P3585",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 24,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P1115",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 5,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P4017",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 6,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "search_unknown_024",
+      "representatives": [
+        {
+          "problemPid": "P7411",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 5,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "graph_model_template_044",
+      "representatives": [
+        {
+          "problemPid": "U465842",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 27,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P15267",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 6,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "string_state_init_boundary_047",
+      "representatives": [
+        {
+          "problemPid": "U519362",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "SEVERE_UNSOLVED",
+          "attemptCount": 24,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dsu_model_template_054",
+      "representatives": [
+        {
+          "problemPid": "P1955",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 19,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "graph_model_template_057",
+      "representatives": [
+        {
+          "problemPid": "U643929",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "SEVERE_UNSOLVED",
+          "attemptCount": 10,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_063",
+      "representatives": [
+        {
+          "problemPid": "P3371",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 9,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P4779",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 8,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_066",
+      "representatives": [
+        {
+          "problemPid": "P1919",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "SEVERE_UNSOLVED",
+          "attemptCount": 14,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_075",
+      "representatives": [
+        {
+          "problemPid": "P1030",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 12,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "math_model_template_090",
+      "representatives": [
+        {
+          "problemPid": "CF1914B",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "SEVERE_UNSOLVED",
+          "attemptCount": 16,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "CF1996D",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "SEVERE_UNSOLVED",
+          "attemptCount": 10,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dp_state_init_boundary_092",
+      "representatives": [
+        {
+          "problemPid": "AT_dp_a",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "SEVERE_UNSOLVED",
+          "attemptCount": 9,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "CF1051D",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "SEVERE_UNSOLVED",
+          "attemptCount": 8,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "state_compression_dp_unknown_095",
+      "representatives": [
+        {
+          "problemPid": "CF1927C",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "SEVERE_UNSOLVED",
+          "attemptCount": 8,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "implementation_implementation_risk_098",
+      "representatives": [
+        {
+          "problemPid": "CF18C",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "SEVERE_UNSOLVED",
+          "attemptCount": 8,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dp_state_init_boundary_072",
+      "representatives": [
+        {
+          "problemPid": "P12678",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 12,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P3865",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 9,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "math_model_template_069",
+      "representatives": [
+        {
+          "problemPid": "U619606",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 7,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P13498",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 5,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "partial_score_partial_score_022",
+      "representatives": [
+        {
+          "problemPid": "P10135",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "SEVERE_UNSOLVED",
+          "attemptCount": 16,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P7413",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 5,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "U615694",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "partial_score_partial_score_023",
+      "representatives": [
+        {
+          "problemPid": "P15018",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 7,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P7410",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 6,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "state_compression_dp_unknown_048",
+      "representatives": [
+        {
+          "problemPid": "P11860",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 5,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P7859",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "binary_search_model_template_038",
+      "representatives": [
+        {
+          "problemPid": "P11849",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "T717044",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 1,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "binary_search_model_template_053",
+      "representatives": [
+        {
+          "problemPid": "P1439",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 7,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P5815",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 5,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "segment_tree_model_template_101",
+      "representatives": [
+        {
+          "problemPid": "P7072",
+          "reason": "存在部分分到 AC 的轨迹，适合分析修正过程。",
+          "role": "INFORMATIVE_PARTIAL_TO_AC",
+          "attemptCount": 5,
+          "scorePattern": "PARTIAL_TO_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "fenwick_tree_index_boundary_035",
+      "representatives": [
+        {
+          "problemPid": "P3374",
+          "reason": "提交次数高，适合比较多个版本的错误修正。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 9,
+          "scorePattern": "MULTI_FAIL_THEN_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dp_state_init_boundary_067",
+      "representatives": [
+        {
+          "problemPid": "B3873",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 3,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "U622367",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 1,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "string_state_init_boundary_088",
+      "representatives": [
+        {
+          "problemPid": "P10722",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_099",
+      "representatives": [
+        {
+          "problemPid": "P1330",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dsu_model_template_065",
+      "representatives": [
+        {
+          "problemPid": "P3144",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 3,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P5659",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 1,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "graph_model_template_084",
+      "representatives": [
+        {
+          "problemPid": "B3938",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 3,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P1825",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 1,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "fenwick_tree_index_boundary_055",
+      "representatives": [
+        {
+          "problemPid": "P3431",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 1,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "search_unknown_074",
+      "representatives": [
+        {
+          "problemPid": "P13501",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 1,
+          "scorePattern": "PARTIAL_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dsu_model_template_056",
+      "representatives": [
+        {
+          "problemPid": "P3379",
+          "reason": "提交次数高，适合比较多个版本的错误修正。",
+          "role": "SEVERE_AND_INFORMATIVE",
+          "attemptCount": 10,
+          "scorePattern": "MULTI_FAIL_THEN_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_094",
+      "representatives": [
+        {
+          "problemPid": "P3383",
+          "reason": "提交次数高，适合比较多个版本的错误修正。",
+          "role": "SEVERE_AND_INFORMATIVE",
+          "attemptCount": 9,
+          "scorePattern": "MULTI_FAIL_THEN_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "binary_search_model_template_026",
+      "representatives": [
+        {
+          "problemPid": "CF279B",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 5,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P16181",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 3,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P14725",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "segment_tree_model_template_051",
+      "representatives": [
+        {
+          "problemPid": "P1471",
+          "reason": "提交次数高，适合比较多个版本的错误修正。",
+          "role": "SEVERE_AND_INFORMATIVE",
+          "attemptCount": 10,
+          "scorePattern": "MULTI_FAIL_THEN_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_089",
+      "representatives": [
+        {
+          "problemPid": "P4913",
+          "reason": "提交次数高，适合比较多个版本的错误修正。",
+          "role": "SEVERE_AND_INFORMATIVE",
+          "attemptCount": 8,
+          "scorePattern": "MULTI_FAIL_THEN_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "greedy_unknown_097",
+      "representatives": [
+        {
+          "problemPid": "P3913",
+          "reason": "提交次数高，适合比较多个版本的错误修正。",
+          "role": "SEVERE_AND_INFORMATIVE",
+          "attemptCount": 8,
+          "scorePattern": "MULTI_FAIL_THEN_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "graph_model_template_020",
+      "representatives": [
+        {
+          "problemPid": "P16316",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 5,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P14740",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dp_state_init_boundary_028",
+      "representatives": [
+        {
+          "problemPid": "AT_dp_b",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 5,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P16158",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 2,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_041",
+      "representatives": [
+        {
+          "problemPid": "P15199",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 4,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dp_state_init_boundary_077",
+      "representatives": [
+        {
+          "problemPid": "P9232",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 6,
+          "scorePattern": "MULTI_FAIL_THEN_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "implementation_implementation_risk_082",
+      "representatives": [
+        {
+          "problemPid": "P1113",
+          "reason": "提交次数高，适合比较多个版本的错误修正。",
+          "role": "SEVERE_AND_INFORMATIVE",
+          "attemptCount": 10,
+          "scorePattern": "MULTI_FAIL_THEN_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P1830",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 5,
+          "scorePattern": "MULTI_FAIL_THEN_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "graph_model_template_014",
+      "representatives": [
+        {
+          "problemPid": "P4552",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 6,
+          "scorePattern": "MULTI_FAIL_THEN_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P1001",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 5,
+          "scorePattern": "MULTI_FAIL_THEN_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "string_state_init_boundary_029",
+      "representatives": [
+        {
+          "problemPid": "CF873B",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 7,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P16173",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 5,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P1737",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "math_model_template_009",
+      "representatives": [
+        {
+          "problemPid": "P3372",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 7,
+          "scorePattern": "MULTI_FAIL_THEN_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_058",
+      "representatives": [
+        {
+          "problemPid": "P4118",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 5,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P2379",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "string_state_init_boundary_070",
+      "representatives": [
+        {
+          "problemPid": "P1055",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 6,
+          "scorePattern": "MULTI_FAIL_THEN_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "search_unknown_100",
+      "representatives": [
+        {
+          "problemPid": "P8605",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 5,
+          "scorePattern": "MULTI_FAIL_THEN_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "state_compression_dp_unknown_086",
+      "representatives": [
+        {
+          "problemPid": "P11827",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 3,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "math_model_template_050",
+      "representatives": [
+        {
+          "problemPid": "T433808",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 7,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P2343",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 1,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P4342",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 5,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "math_model_template_010",
+      "representatives": [
+        {
+          "problemPid": "CF163A",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 6,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "UVA11572",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 2,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "T492859",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "implementation_implementation_risk_002",
+      "representatives": [
+        {
+          "problemPid": "U331327",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 5,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P10156",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 1,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "U194704",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "implementation_implementation_risk_030",
+      "representatives": [
+        {
+          "problemPid": "P15785",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 4,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P16180",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 3,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "CF1593A",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 3,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "binary_search_model_template_087",
+      "representatives": [
+        {
+          "problemPid": "P1756",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P11791",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 1,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_093",
+      "representatives": [
+        {
+          "problemPid": "P1215",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "greedy_unknown_096",
+      "representatives": [
+        {
+          "problemPid": "CF545D",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 3,
+          "scorePattern": "UNKNOWN_PATTERN",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dsu_model_template_085",
+      "representatives": [
+        {
+          "problemPid": "P11855",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "string_state_init_boundary_046",
+      "representatives": [
+        {
+          "problemPid": "U656632",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 3,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "graph_model_template_031",
+      "representatives": [
+        {
+          "problemPid": "T461430",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P15945",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 1,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_062",
+      "representatives": [
+        {
+          "problemPid": "P1144",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 1,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dp_state_init_boundary_091",
+      "representatives": [
+        {
+          "problemPid": "U257605",
+          "reason": "未 AC 或长期卡住，能代表该簇的关键薄弱点。",
+          "role": "TYPICAL",
+          "attemptCount": 1,
+          "scorePattern": "ZERO_STUCK",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "fenwick_tree_index_boundary_036",
+      "representatives": [
+        {
+          "problemPid": "P3368",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 3,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "search_unknown_078",
+      "representatives": [
+        {
+          "problemPid": "P1464",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "graph_model_template_016",
+      "representatives": [
+        {
+          "problemPid": "B3643",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P3557",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 3,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P4980",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 3,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dp_state_init_boundary_042",
+      "representatives": [
+        {
+          "problemPid": "U328616",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P3618",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 3,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P1040",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_033",
+      "representatives": [
+        {
+          "problemPid": "P1119",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P1027",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "greedy_unknown_025",
+      "representatives": [
+        {
+          "problemPid": "P7412",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 4,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P1152",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dsu_model_template_045",
+      "representatives": [
+        {
+          "problemPid": "P9709",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P1352",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "binary_search_model_template_052",
+      "representatives": [
+        {
+          "problemPid": "P2293",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P1314",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 3,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P13500",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "string_state_init_boundary_018",
+      "representatives": [
+        {
+          "problemPid": "P8865",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 4,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P3677",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 3,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P1765",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "search_unknown_019",
+      "representatives": [
+        {
+          "problemPid": "P3524",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P1154",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_073",
+      "representatives": [
+        {
+          "problemPid": "P13499",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_102",
+      "representatives": [
+        {
+          "problemPid": "P9751",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 3,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "math_model_template_039",
+      "representatives": [
+        {
+          "problemPid": "P2158",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P7960",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 3,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P1601",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "fenwick_tree_index_boundary_034",
+      "representatives": [
+        {
+          "problemPid": "P1908",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "implementation_implementation_risk_021",
+      "representatives": [
+        {
+          "problemPid": "U622366",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P11139",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 3,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P1422",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_032",
+      "representatives": [
+        {
+          "problemPid": "P1821",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 4,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P1066",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P2089",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 3,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "graph_model_template_015",
+      "representatives": [
+        {
+          "problemPid": "B2001",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dsu_model_template_040",
+      "representatives": [
+        {
+          "problemPid": "P14362",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P1399",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "binary_search_model_template_049",
+      "representatives": [
+        {
+          "problemPid": "P15069",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P9497",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dp_state_init_boundary_064",
+      "representatives": [
+        {
+          "problemPid": "P1481",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "B4163",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "string_state_init_boundary_003",
+      "representatives": [
+        {
+          "problemPid": "U688514",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "U615692",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "implementation_implementation_risk_017",
+      "representatives": [
+        {
+          "problemPid": "P1268",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P1063",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "math_model_template_012",
+      "representatives": [
+        {
+          "problemPid": "U683709",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "B2054",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "search_unknown_007",
+      "representatives": [
+        {
+          "problemPid": "U316801",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 1,
+          "scorePattern": "ONE_SHOT_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_043",
+      "representatives": [
+        {
+          "problemPid": "P15268",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        },
+        {
+          "problemPid": "P1189",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "greedy_unknown_080",
+      "representatives": [
+        {
+          "problemPid": "P2676",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 2,
+          "scorePattern": "QUICK_FIX_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_005",
+      "representatives": [
+        {
+          "problemPid": "T568349",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 1,
+          "scorePattern": "ONE_SHOT_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "graph_model_template_006",
+      "representatives": [
+        {
+          "problemPid": "U316802",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 1,
+          "scorePattern": "ONE_SHOT_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dp_state_init_boundary_059",
+      "representatives": [
+        {
+          "problemPid": "P4933",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 1,
+          "scorePattern": "ONE_SHOT_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dsu_model_template_060",
+      "representatives": [
+        {
+          "problemPid": "P2016",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 1,
+          "scorePattern": "ONE_SHOT_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "binary_search_model_template_071",
+      "representatives": [
+        {
+          "problemPid": "P1733",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 1,
+          "scorePattern": "ONE_SHOT_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_103",
+      "representatives": [
+        {
+          "problemPid": "P5663",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 1,
+          "scorePattern": "ONE_SHOT_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "implementation_implementation_risk_004",
+      "representatives": [
+        {
+          "problemPid": "U688515",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 1,
+          "scorePattern": "ONE_SHOT_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "math_model_template_008",
+      "representatives": [
+        {
+          "problemPid": "U316800",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "RECENT_LEVEL",
+          "attemptCount": 1,
+          "scorePattern": "ONE_SHOT_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "string_state_init_boundary_061",
+      "representatives": [
+        {
+          "problemPid": "P5091",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 1,
+          "scorePattern": "ONE_SHOT_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_076",
+      "representatives": [
+        {
+          "problemPid": "P1827",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 1,
+          "scorePattern": "ONE_SHOT_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "greedy_unknown_079",
+      "representatives": [
+        {
+          "problemPid": "P5143",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 1,
+          "scorePattern": "ONE_SHOT_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "state_compression_dp_unknown_081",
+      "representatives": [
+        {
+          "problemPid": "P1244",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 1,
+          "scorePattern": "ONE_SHOT_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "segment_tree_model_template_083",
+      "representatives": [
+        {
+          "problemPid": "P8959",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 1,
+          "scorePattern": "ONE_SHOT_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    },
+    {
+      "clusterId": "tree_unknown_104",
+      "representatives": [
+        {
+          "problemPid": "P1090",
+          "reason": "特征接近该问题簇，适合作为典型样本。",
+          "role": "TYPICAL",
+          "attemptCount": 1,
+          "scorePattern": "ONE_SHOT_AC",
+          "includeCodeVersions": [
+            "first",
+            "best",
+            "firstAc",
+            "final"
+          ]
+        }
+      ]
+    }
+  ]
+}

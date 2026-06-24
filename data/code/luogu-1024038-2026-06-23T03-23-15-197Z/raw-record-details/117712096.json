@@ -1,0 +1,327 @@
+{
+  "recordId": "117712096",
+  "url": "https://www.luogu.com.cn/record/117712096?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T04:17:28.718Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[{\"id\":0,\"score\":70,\"status\":14,\"testCases\":{\"6\":{\"id\":6,\"status\":6,\"time\":6,\"memory\":1632,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 1, read 1, expected 6.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"9\":{\"id\":9,\"status\":12,\"time\":5,\"memory\":1504,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"1\":{\"id\":1,\"status\":12,\"time\":17,\"memory\":1596,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"0\":{\"id\":0,\"status\":12,\"time\":6,\"memory\":1504,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"5\":{\"id\":5,\"status\":12,\"time\":5,\"memory\":1624,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"2\":{\"id\":2,\"status\":6,\"time\":96,\"memory\":1536,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 1, read 1, expected 0.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"3\":{\"id\":3,\"status\":12,\"time\":307,\"memory\":1536,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"7\":{\"id\":7,\"status\":12,\"time\":681,\"memory\":1668,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"8\":{\"id\":8,\"status\":12,\"time\":679,\"memory\":1636,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"4\":{\"id\":4,\"status\":6,\"time\":692,\"memory\":1540,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 1, read 1, expected 7.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}},\"judger\":\"\",\"time\":2494,\"memory\":1668,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}],\"finishedCaseCount\":10,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<cmath>\\r\\n#include<queue>\\r\\n#include<cstdio>\\r\\n#include<vector>\\r\\n#include<cstring>\\r\\n#include<iostream>\\r\\n#include<algorithm>\\r\\nusing namespace std;\\/\\/\\u6b64\\u7b97\\u6cd5\\u6709\\u6bd2\\uff0c\\u53ea\\u662f\\u4e3a\\u4e86\\u5f97\\u70b9\\u66b4\\u529b\\u5206\\u3002 \\r\\nconst int N=20000;\\r\\nconst double eps=1e-10;\\r\\nconst double PI=acos(-1.0);\\r\\nstruct data{\\/\\/\\u6240\\u6709\\u7684\\u5411\\u91cf\\u4ee5\\u70b9\\u8868\\u793a\\u6cd5\\uff0c\\u8282\\u7701\\u53d8\\u91cf\\u58f0\\u660e\\u3002 \\r\\n    double x,y;\\r\\n    data(){}\\r\\n    data(double x,double y):x(x),y(y){}\\r\\n};\\r\\ndata operator+(data A,data B){\\/\\/\\u57fa\\u7840\\u70b9\\u503c\\u8fd0\\u7b97 \\r\\n    return data(A.x+B.x,A.y+B.y);\\r\\n}\\r\\ndata operator-(data A,data B){\\r\\n    return data(A.x-B.x,A.y-B.y);\\r\\n}\\r\\nstruct Seg{\\/\\/\\u7ebf\\u6bb5\\u53ef\\u8868\\u793a\\u4e3a\\u4e24\\u7aef\\u70b9\\u7684\\u8fde\\u7ebf\\u3002 \\r\\n    data A,B;\\r\\n    Seg(){}\\r\\n    Seg(data A,data B):A(A),B(B){}\\r\\n};\\r\\nstruct Line{\\/\\/\\u7528\\u70b9\\u503c+\\u65b9\\u5411\\uff08\\u6cd5\\u5ea6\\uff09\\u8868\\u793a\\u6cd5 \\r\\n    double a,b,c;\\r\\n    Line(){}\\r\\n    Line(data A,data B){a=B.y-A.y;b=A.x-B.x;c=(B.x-A.x)*A.y-(B.y-A.y)*A.x;}\\r\\n};\\r\\nstruct Cir{\\/\\/\\u70b9+\\u534a\\u5f84 \\r\\n    data c;\\r\\n    double r;\\r\\n    Cir(){}\\r\\n    Cir(data c,double r):c(c),r(r){}\\r\\n};\\r\\nint n,tot,cnt,flag,vis[N];\\r\\ndouble x,y,a,r,angle,d,dis[N];\\r\\ndata s,t,u,V[N];\\/\\/V\\u8bb0\\u5f55\\u76f8\\u90bb\\u7279\\u5224\\u70b9\\u3002 \\r\\nSeg S[N];\\/\\/Edge \\r\\nLine A,B;\\r\\nCir C[N];\\/\\/\\u5706 \\r\\nvector<int>G[N];\\/\\/to[] \\r\\nvector<double>val[N];\\/\\/val[]\\r\\ninline int judge(double x){\\/\\/\\u5173\\u952e--eps\\u4e0d\\u597d\\u5361 \\r\\n    return fabs(x)<eps?0:(x>0?1:-1);\\r\\n}\\r\\ninline double Dot(data A,data B){\\/\\/\\u70b9\\u4e58 \\r\\n    return A.x*B.x+A.y*B.y;\\r\\n}\\r\\ninline double Cross(data A,data B){\\/\\/\\u53c9\\u4e58 \\r\\n    return A.x*B.y-A.y*B.x;\\r\\n}\\r\\ninline double Length(data A){\\/\\/\\u79bb\\u539f\\u70b9\\u8ddd\\u79bb \\r\\n    return sqrt(Dot(A,A));\\r\\n}\\r\\ninline double Angle(data A,data B){\\/\\/cos\\u65b9\\u5411 \\u9ad8\\u4e00\\u4e0a\\u518c\\u3002\\u3002\\u3002 \\r\\n    return acos(Dot(A,B)\\/(Length(A)*Length(B)));\\r\\n}\\r\\ninline double dist(data A,data B){\\/\\/\\u5c3d\\u91cf\\u5c11\\u7528sqrt \\r\\n    return sqrt((A.x-B.x)*(A.x-B.x)+(A.y-B.y)*(A.y-B.y));\\r\\n}\\r\\ninline bool OnCir(data p,Cir c){\\/\\/\\u5728\\u5706\\u4e0a\\uff1f \\r\\n    return judge(dist(p,c.c)-c.r)==0;\\r\\n}\\r\\ninline data rotate(data A,double rad){\\/\\/\\u5bf9\\u8fb9\\u65cb\\u8f6c\\u3002 \\r\\n    return data(A.x*cos(rad)-A.y*sin(rad),A.x*sin(rad)+A.y*cos(rad));\\r\\n}\\r\\ninline bool JX(Seg A,Seg B){\\/\\/\\u7ebf\\u6bb5\\u5224\\u5b9a\\uff0c\\u662f\\u5426\\u6709\\u969c\\u788d\\u963b\\u6321 \\r\\n    return judge((Cross(A.B-A.A,B.A-A.A))*(Cross(A.B-A.A,B.B-A.A)))<0\\r\\n         &&judge((Cross(B.B-B.A,A.A-B.A))*(Cross(B.B-B.A,A.B-B.A)))<0;\\r\\n}\\r\\ninline data JP(Line A,Line B){\\/\\/\\u4e24\\u76f4\\u7ebf\\u4ea4\\u70b9 \\r\\n    return data((B.c*A.b-A.c*B.b)\\/(A.a*B.b-B.a*A.b),(B.a*A.c-A.a*B.c)\\/(A.a*B.b-B.a*A.b));\\r\\n}\\r\\ninline bool CrCir(Seg A,Cir C){\\/\\/\\u5bf9\\u5706\\u6c42\\u5207\\u7ebf \\r\\n    Line p,q;data u;data t;double d;\\r\\n    u=A.A-A.B;u=rotate(u,PI\\/2.0);\\r\\n    p=Line(A.A,A.B);q=Line(C.c,C.c+u);\\r\\n    t=JP(p,q);\\r\\n    if (judge(dist(A.A,t)+dist(A.B,t)-dist(A.A,A.B))!=0)d=min(dist(A.A,C.c),dist(A.B,C.c));\\r\\n    else d=dist(C.c,t);\\r\\n    return judge(d-C.r)<0?1:0;\\r\\n}\\r\\ninline void SPFA(){\\/\\/\\u677f\\u5b50 \\r\\n    queue<int>q;\\r\\n    memset(vis,0,sizeof(vis));\\r\\n    memset(dis,0x7f,sizeof(dis));\\r\\n    vis[1]=1;dis[1]=0.0;q.push(1);\\r\\n    while(!q.empty()){\\r\\n        int u=q.front();q.pop();vis[u]=0;\\r\\n        for(register int i=0;i<G[u].size();i++){\\r\\n            if(dis[u]+val[u][i]<dis[G[u][i]]){\\r\\n                dis[G[u][i]]=dis[u]+val[u][i];\\r\\n                if(!vis[G[u][i]]){\\r\\n                    vis[G[u][i]]=1;\\r\\n                    q.push(G[u][i]);\\r\\n                }\\r\\n            }\\r\\n        }\\r\\n    }\\r\\n}\\r\\ninline void INsert(data k,int i){\\r\\n    angle=fabs(asin(C[i].r\\/dist(k,C[i].c)));\\r\\n    u=C[i].c-k;u=rotate(u,angle);A=Line(k,k+u);\\r\\n    B=Line(C[i].c,C[i].c+rotate(u,PI\\/2.0));\\r\\n    V[++cnt]=JP(A,B);\\r\\n    u=C[i].c-k;u=rotate(u,-angle);A=Line(k,k+u);\\r\\n    B=Line(C[i].c,C[i].c+rotate(u,PI\\/2.0));\\r\\n    V[++cnt]=JP(A,B);\\r\\n}\\r\\ninline void Addedge(int x,int y,double d){\\r\\n    G[x].push_back(y),G[y].push_back(x);\\r\\n    val[x].push_back(d),val[y].push_back(d);\\r\\n}\\r\\nint main(){\\r\\n    scanf(\\\"%lf%lf%lf%lf%lf\\\",&s.x,&s.y,&r,&t.x,&t.y);\\r\\n    scanf(\\\"%d\\\",&n);\\r\\n    for(register int i=1;i<=n;i++){\\r\\n        scanf(\\\"%lf%lf%lf\\\",&x,&y,&a);\\/\\/\\u52a8\\u70b9\\u8f6c\\u9759\\u6001\\u5ef6\\u4f38 \\r\\n        S[++tot]=Seg(data(x,y-r),data(x+a,y-r));\\/\\/\\u56db\\u89d2\\u5ef6\\u4f38r\\uff0c\\u5706\\u7f29\\u70b9\\u3002 \\r\\n        C[tot]=Cir(data(x,y),r);\\r\\n        S[++tot]=Seg(data(x+a+r,y),data(x+a+r,y+a));\\r\\n        C[tot]=Cir(data(x+a,y),r);\\r\\n        S[++tot]=Seg(data(x+a,y+a+r),data(x,y+a+r));\\r\\n        C[tot]=Cir(data(x+a,y+a),r);\\r\\n        S[++tot]=Seg(data(x-r,y+a),data(x-r,y));\\r\\n        C[tot]=Cir(data(x,y+a),r);\\r\\n    }\\r\\n    V[++cnt]=s;V[++cnt]=t;\\r\\n    for(register int i=1;i<=tot;i++){\\/\\/\\u5224\\u5b9a\\u662f\\u5426\\u6709\\u7279\\u6b8a\\u60c5\\u51b5 \\r\\n        if(!OnCir(s,C[i]))INsert(s,i);\\/\\/\\u51fa\\u5165\\u82e5\\u5728\\u6269\\u5c55\\u5706\\u5185\\uff0c\\u7279\\u5224\\u91cd\\u6784\\u3002 \\r\\n        if(!OnCir(t,C[i]))INsert(t,i);\\r\\n    }\\r\\n    for(register int i=1;i<=cnt;i++){\\r\\n        for(register int j=i+1;j<=cnt;j++){\\r\\n            flag=1;\\r\\n            for(register int k=1;k<=tot;k++){\\/\\/\\u5207\\u7ebf\\u4e0e\\u516c\\u5207\\u7ebf \\r\\n                if(JX(Seg(V[i],V[j]),S[k])||CrCir(Seg(V[i],V[j]),C[k]))flag=0;\\r\\n                if(OnCir(V[i],C[k])&&OnCir(V[j],C[k])){\\r\\n                    d=Angle(V[i]-C[k].c,V[j]-C[k].c)*C[k].r;\\r\\n                    Addedge(i,j,d);\\/\\/\\u82e5\\u6709\\u969c\\u788d\\u5219\\u62c6\\u8fb9\\u91cd\\u6784\\u6210\\u4e24\\u6761\\u8fb9\\u3002 \\r\\n                }\\r\\n            }\\r\\n            if(flag)Addedge(i,j,dist(V[i],V[j]));\\r\\n        }\\r\\n    }\\r\\n    SPFA();\\/\\/\\u867d\\u66b4\\u529b\\u62c6\\u8fb9\\uff0c\\u4f46\\u7531\\u4e8e\\u969c\\u788d\\u6027\\u8d28\\uff0cSPFA\\u8fd8\\u662f\\u4f18\\u4e00\\u70b9\\u3002 \\r\\n    printf(\\\"%.2lf\\\\n\\\",dis[2]);\\/\\/\\u7b97\\u6cd5\\u95ee\\u9898\\u6240\\u5728\\uff1a\\u8d77\\u70b9or\\u7ec8\\u70b9\\u88ab\\u5927\\u91cf\\u70b9\\u6240\\u5305\\u56f4\\u3002 \\r\\n    return 0;\\/\\/\\u5939\\u7f1d\\u5f0f\\u6570\\u636e\\u53ef\\u5361\\u3002 \\r\\n}\\/\\/\\u603b\\u8ba12.3\\u5c0f\\u65f6\\u3002\\u3002 \",\"time\":2494,\"memory\":1668,\"problem\":{\"pid\":\"P2452\",\"title\":\"[SDOI2005] \\u5c60\\u9f99\\u4f20\\u8bf4-\\u5c60\\u9f99\\u67aa\\u5377\",\"difficulty\":7,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":4764,\"submitTime\":1690450378,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":117712096,\"status\":14,\"enableO2\":false,\"score\":70},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9],[10,11]],\"showStatus\":true},\"currentTitle\":\"R117712096\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782188248,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [
+              {
+                "id": 0,
+                "score": 70,
+                "status": 14,
+                "testCases": {
+                  "0": {
+                    "id": 0,
+                    "status": 12,
+                    "time": 6,
+                    "memory": 1504,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "1": {
+                    "id": 1,
+                    "status": 12,
+                    "time": 17,
+                    "memory": 1596,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "2": {
+                    "id": 2,
+                    "status": 6,
+                    "time": 96,
+                    "memory": 1536,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 1, read 1, expected 0.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "3": {
+                    "id": 3,
+                    "status": 12,
+                    "time": 307,
+                    "memory": 1536,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "4": {
+                    "id": 4,
+                    "status": 6,
+                    "time": 692,
+                    "memory": 1540,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 1, read 1, expected 7.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "5": {
+                    "id": 5,
+                    "status": 12,
+                    "time": 5,
+                    "memory": 1624,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "6": {
+                    "id": 6,
+                    "status": 6,
+                    "time": 6,
+                    "memory": 1632,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 1, read 1, expected 6.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "7": {
+                    "id": 7,
+                    "status": 12,
+                    "time": 681,
+                    "memory": 1668,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "8": {
+                    "id": 8,
+                    "status": 12,
+                    "time": 679,
+                    "memory": 1636,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "9": {
+                    "id": 9,
+                    "status": 12,
+                    "time": 5,
+                    "memory": 1504,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                },
+                "judger": "",
+                "time": 2494,
+                "memory": 1668,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            ],
+            "finishedCaseCount": 10,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<cmath>\r\n#include<queue>\r\n#include<cstdio>\r\n#include<vector>\r\n#include<cstring>\r\n#include<iostream>\r\n#include<algorithm>\r\nusing namespace std;//此算法有毒，只是为了得点暴力分。 \r\nconst int N=20000;\r\nconst double eps=1e-10;\r\nconst double PI=acos(-1.0);\r\nstruct data{//所有的向量以点表示法，节省变量声明。 \r\n    double x,y;\r\n    data(){}\r\n    data(double x,double y):x(x),y(y){}\r\n};\r\ndata operator+(data A,data B){//基础点值运算 \r\n    return data(A.x+B.x,A.y+B.y);\r\n}\r\ndata operator-(data A,data B){\r\n    return data(A.x-B.x,A.y-B.y);\r\n}\r\nstruct Seg{//线段可表示为两端点的连线。 \r\n    data A,B;\r\n    Seg(){}\r\n    Seg(data A,data B):A(A),B(B){}\r\n};\r\nstruct Line{//用点值+方向（法度）表示法 \r\n    double a,b,c;\r\n    Line(){}\r\n    Line(data A,data B){a=B.y-A.y;b=A.x-B.x;c=(B.x-A.x)*A.y-(B.y-A.y)*A.x;}\r\n};\r\nstruct Cir{//点+半径 \r\n    data c;\r\n    double r;\r\n    Cir(){}\r\n    Cir(data c,double r):c(c),r(r){}\r\n};\r\nint n,tot,cnt,flag,vis[N];\r\ndouble x,y,a,r,angle,d,dis[N];\r\ndata s,t,u,V[N];//V记录相邻特判点。 \r\nSeg S[N];//Edge \r\nLine A,B;\r\nCir C[N];//圆 \r\nvector<int>G[N];//to[] \r\nvector<double>val[N];//val[]\r\ninline int judge(double x){//关键--eps不好卡 \r\n    return fabs(x)<eps?0:(x>0?1:-1);\r\n}\r\ninline double Dot(data A,data B){//点乘 \r\n    return A.x*B.x+A.y*B.y;\r\n}\r\ninline double Cross(data A,data B){//叉乘 \r\n    return A.x*B.y-A.y*B.x;\r\n}\r\ninline double Length(data A){//离原点距离 \r\n    return sqrt(Dot(A,A));\r\n}\r\ninline double Angle(data A,data B){//cos方向 高一上册。。。 \r\n    return acos(Dot(A,B)/(Length(A)*Length(B)));\r\n}\r\ninline double dist(data A,data B){//尽量少用sqrt \r\n    return sqrt((A.x-B.x)*(A.x-B.x)+(A.y-B.y)*(A.y-B.y));\r\n}\r\ninline bool OnCir(data p,Cir c){//在圆上？ \r\n    return judge(dist(p,c.c)-c.r)==0;\r\n}\r\ninline data rotate(data A,double rad){//对边旋转。 \r\n    return data(A.x*cos(rad)-A.y*sin(rad),A.x*sin(rad)+A.y*cos(rad));\r\n}\r\ninline bool JX(Seg A,Seg B){//线段判定，是否有障碍阻挡 \r\n    return judge((Cross(A.B-A.A,B.A-A.A))*(Cross(A.B-A.A,B.B-A.A)))<0\r\n         &&judge((Cross(B.B-B.A,A.A-B.A))*(Cross(B.B-B.A,A.B-B.A)))<0;\r\n}\r\ninline data JP(Line A,Line B){//两直线交点 \r\n    return data((B.c*A.b-A.c*B.b)/(A.a*B.b-B.a*A.b),(B.a*A.c-A.a*B.c)/(A.a*B.b-B.a*A.b));\r\n}\r\ninline bool CrCir(Seg A,Cir C){//对圆求切线 \r\n    Line p,q;data u;data t;double d;\r\n    u=A.A-A.B;u=rotate(u,PI/2.0);\r\n    p=Line(A.A,A.B);q=Line(C.c,C.c+u);\r\n    t=JP(p,q);\r\n    if (judge(dist(A.A,t)+dist(A.B,t)-dist(A.A,A.B))!=0)d=min(dist(A.A,C.c),dist(A.B,C.c));\r\n    else d=dist(C.c,t);\r\n    return judge(d-C.r)<0?1:0;\r\n}\r\ninline void SPFA(){//板子 \r\n    queue<int>q;\r\n    memset(vis,0,sizeof(vis));\r\n    memset(dis,0x7f,sizeof(dis));\r\n    vis[1]=1;dis[1]=0.0;q.push(1);\r\n    while(!q.empty()){\r\n        int u=q.front();q.pop();vis[u]=0;\r\n        for(register int i=0;i<G[u].size();i++){\r\n            if(dis[u]+val[u][i]<dis[G[u][i]]){\r\n                dis[G[u][i]]=dis[u]+val[u][i];\r\n                if(!vis[G[u][i]]){\r\n                    vis[G[u][i]]=1;\r\n                    q.push(G[u][i]);\r\n                }\r\n            }\r\n        }\r\n    }\r\n}\r\ninline void INsert(data k,int i){\r\n    angle=fabs(asin(C[i].r/dist(k,C[i].c)));\r\n    u=C[i].c-k;u=rotate(u,angle);A=Line(k,k+u);\r\n    B=Line(C[i].c,C[i].c+rotate(u,PI/2.0));\r\n    V[++cnt]=JP(A,B);\r\n    u=C[i].c-k;u=rotate(u,-angle);A=Line(k,k+u);\r\n    B=Line(C[i].c,C[i].c+rotate(u,PI/2.0));\r\n    V[++cnt]=JP(A,B);\r\n}\r\ninline void Addedge(int x,int y,double d){\r\n    G[x].push_back(y),G[y].push_back(x);\r\n    val[x].push_back(d),val[y].push_back(d);\r\n}\r\nint main(){\r\n    scanf(\"%lf%lf%lf%lf%lf\",&s.x,&s.y,&r,&t.x,&t.y);\r\n    scanf(\"%d\",&n);\r\n    for(register int i=1;i<=n;i++){\r\n        scanf(\"%lf%lf%lf\",&x,&y,&a);//动点转静态延伸 \r\n        S[++tot]=Seg(data(x,y-r),data(x+a,y-r));//四角延伸r，圆缩点。 \r\n        C[tot]=Cir(data(x,y),r);\r\n        S[++tot]=Seg(data(x+a+r,y),data(x+a+r,y+a));\r\n        C[tot]=Cir(data(x+a,y),r);\r\n        S[++tot]=Seg(data(x+a,y+a+r),data(x,y+a+r));\r\n        C[tot]=Cir(data(x+a,y+a),r);\r\n        S[++tot]=Seg(data(x-r,y+a),data(x-r,y));\r\n        C[tot]=Cir(data(x,y+a),r);\r\n    }\r\n    V[++cnt]=s;V[++cnt]=t;\r\n    for(register int i=1;i<=tot;i++){//判定是否有特殊情况 \r\n        if(!OnCir(s,C[i]))INsert(s,i);//出入若在扩展圆内，特判重构。 \r\n        if(!OnCir(t,C[i]))INsert(t,i);\r\n    }\r\n    for(register int i=1;i<=cnt;i++){\r\n        for(register int j=i+1;j<=cnt;j++){\r\n            flag=1;\r\n            for(register int k=1;k<=tot;k++){//切线与公切线 \r\n                if(JX(Seg(V[i],V[j]),S[k])||CrCir(Seg(V[i],V[j]),C[k]))flag=0;\r\n                if(OnCir(V[i],C[k])&&OnCir(V[j],C[k])){\r\n                    d=Angle(V[i]-C[k].c,V[j]-C[k].c)*C[k].r;\r\n                    Addedge(i,j,d);//若有障碍则拆边重构成两条边。 \r\n                }\r\n            }\r\n            if(flag)Addedge(i,j,dist(V[i],V[j]));\r\n        }\r\n    }\r\n    SPFA();//虽暴力拆边，但由于障碍性质，SPFA还是优一点。 \r\n    printf(\"%.2lf\\n\",dis[2]);//算法问题所在：起点or终点被大量点所包围。 \r\n    return 0;//夹缝式数据可卡。 \r\n}//总计2.3小时。。 ",
+        "time": 2494,
+        "memory": 1668,
+        "problem": {
+          "pid": "P2452",
+          "title": "[SDOI2005] 屠龙传说-屠龙枪卷",
+          "difficulty": 7,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 4764,
+        "submitTime": 1690450378,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 117712096,
+        "status": 14,
+        "enableO2": false,
+        "score": 70
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R117712096",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782188248,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

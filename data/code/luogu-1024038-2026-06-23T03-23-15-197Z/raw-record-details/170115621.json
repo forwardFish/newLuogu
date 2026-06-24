@@ -1,0 +1,210 @@
+{
+  "recordId": "170115621",
+  "url": "https://www.luogu.com.cn/record/170115621?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T04:01:55.166Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[{\"id\":0,\"score\":87,\"status\":14,\"testCases\":[{\"id\":7,\"status\":5,\"time\":2500,\"memory\":3924,\"score\":0,\"signal\":null,\"exitCode\":255,\"description\":\"\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}],\"judger\":\"\",\"time\":2500,\"memory\":3924,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}],\"finishedCaseCount\":0,\"status\":14,\"time\":2500,\"memory\":3924,\"score\":87,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":401,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h>\\nusing namespace std;\\nint n,k,q;\\nint l[200005],r[200005],q1[200005],q2[200005],t[200005];\\nint main()\\n{\\n\\tcin>>n>>k>>q;\\n\\tfor(int i=0;i<n;i++)\\n\\t{\\n\\t\\tcin>>l[i]>>r[i];\\n\\t\\tfor(int j=l[i];j<=r[i];j++)\\n\\t\\t{\\n\\t\\t\\tt[j]++;\\n\\t\\t}\\n\\t}\\n\\tint ans=0;\\n\\tfor(int i=0;i<q;i++)\\n\\t{\\n\\t\\tans=0;\\n\\t\\tcin>>q1[i]>>q2[i];\\n\\t\\tfor(int j=q1[i];j<=q2[i];j++)\\n\\t\\t{\\n\\t\\t\\tif(t[j]>=k)\\n\\t\\t\\t{\\n\\t\\t\\t\\tans++;\\n\\t\\t\\t}\\n\\t\\t}\\n\\t\\tcout<<ans<<endl;\\n\\t}\\n\\treturn 0;\\n}\",\"time\":2500,\"memory\":3924,\"problem\":{\"pid\":\"CF816B\",\"title\":\"Karen and Coffee\",\"difficulty\":3,\"fullScore\":100,\"type\":\"CF\"},\"contest\":{\"id\":188326,\"name\":\"8.2\\u4e0b\\u5348\\u7ec3\\u4e60\",\"startTime\":1722583680,\"endTime\":1722587160},\"sourceCodeLength\":414,\"submitTime\":1722586111,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":170115621,\"status\":14,\"enableO2\":false},\"testCaseGroup\":[[0]],\"showStatus\":true},\"currentTitle\":\"R170115621\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782187315,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [
+              {
+                "id": 0,
+                "score": 87,
+                "status": 14,
+                "testCases": [
+                  {
+                    "id": 7,
+                    "status": 5,
+                    "time": 2500,
+                    "memory": 3924,
+                    "score": 0,
+                    "signal": null,
+                    "exitCode": 255,
+                    "description": "",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                ],
+                "judger": "",
+                "time": 2500,
+                "memory": 3924,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            ],
+            "finishedCaseCount": 0,
+            "status": 14,
+            "time": 2500,
+            "memory": 3924,
+            "score": 87,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 401,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h>\nusing namespace std;\nint n,k,q;\nint l[200005],r[200005],q1[200005],q2[200005],t[200005];\nint main()\n{\n\tcin>>n>>k>>q;\n\tfor(int i=0;i<n;i++)\n\t{\n\t\tcin>>l[i]>>r[i];\n\t\tfor(int j=l[i];j<=r[i];j++)\n\t\t{\n\t\t\tt[j]++;\n\t\t}\n\t}\n\tint ans=0;\n\tfor(int i=0;i<q;i++)\n\t{\n\t\tans=0;\n\t\tcin>>q1[i]>>q2[i];\n\t\tfor(int j=q1[i];j<=q2[i];j++)\n\t\t{\n\t\t\tif(t[j]>=k)\n\t\t\t{\n\t\t\t\tans++;\n\t\t\t}\n\t\t}\n\t\tcout<<ans<<endl;\n\t}\n\treturn 0;\n}",
+        "time": 2500,
+        "memory": 3924,
+        "problem": {
+          "pid": "CF816B",
+          "title": "Karen and Coffee",
+          "difficulty": 3,
+          "fullScore": 100,
+          "type": "CF"
+        },
+        "contest": {
+          "id": 188326,
+          "name": "8.2下午练习",
+          "startTime": 1722583680,
+          "endTime": 1722587160
+        },
+        "sourceCodeLength": 414,
+        "submitTime": 1722586111,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 170115621,
+        "status": 14,
+        "enableO2": false
+      },
+      "testCaseGroup": [
+        [
+          0
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R170115621",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782187315,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "recordId": "215282178",
+  "url": "https://www.luogu.com.cn/record/215282178?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:45:32.486Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_icwtjlfl\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_icwtjlfl\\/src:50:67: \\u9519\\u8bef\\uff1aexpected \\u2018}\\u2019 at end of input\\n   50 |             int S_mod = int((long long)t1 * t2 % MOD * INV2 % MOD);\\n      |                                                                   ^\\n\\/tmp\\/compiler_icwtjlfl\\/src:31:35: \\u9644\\u6ce8\\uff1ato match this \\u2018{\\u2019\\n   31 |         for(int r = l; r < n; r++){\\n      |                                   ^\\n\\/tmp\\/compiler_icwtjlfl\\/src:39:17: \\u8b66\\u544a\\uff1aunused variable \\u2018d_mod\\u2019 [-Wunused-variable]\\n   39 |             int d_mod = (d_all >= MOD ? int(d_all - MOD) : int(d_all));\\n      |                 ^~~~~\\n\\/tmp\\/compiler_icwtjlfl\\/src:50:17: \\u8b66\\u544a\\uff1aunused variable \\u2018S_mod\\u2019 [-Wunused-variable]\\n   50 |             int S_mod = int((long long)t1 * t2 % MOD * INV2 % MOD);\\n      |                 ^~~~~\\n\\/tmp\\/compiler_icwtjlfl\\/src:50:67: \\u9519\\u8bef\\uff1aexpected \\u2018}\\u2019 at end of input\\n   50 |             int S_mod = int((long long)t1 * t2 % MOD * INV2 % MOD);\\n      |                                                                   ^\\n\\/tmp\\/compiler_icwtjlfl\\/src:26:31: \\u9644\\u6ce8\\uff1ato match this \\u2018{\\u2019\\n   26 |     for(int l = 0; l < n; l++){\\n      |                               ^\\n\\/tmp\\/compiler_icwtjlfl\\/src:27:19: \\u8b66\\u544a\\uff1aunused variable \\u2018P\\u2019 [-Wunused-variable]\\n   27 |         long long P = 1; \\/\\/ \\u220f d_i mod MOD\\n      |                   ^\\n\\/tmp\\/compiler_icwtjlfl\\/src:28:19: \\u8b66\\u544a\\uff1aunused variable \\u2018F\\u2019 [-Wunused-variable]\\n   28 |         long long F = 0; \\/\\/ \\u5f53\\u524d f(l, r) \\u7684\\u503c\\n      |                   ^\\n\\/tmp\\/compiler_icwtjlfl\\/src:24:15: \\u8b66\\u544a\\uff1aunused variable \\u2018answer\\u2019 [-Wunused-variable]\\n   24 |     long long answer = 0;\\n      |               ^~~~~~\\n\\/tmp\\/compiler_icwtjlfl\\/src:50:67: \\u9519\\u8bef\\uff1aexpected \\u2018}\\u2019 at end of input\\n   50 |             int S_mod = int((long long)t1 * t2 % MOD * INV2 % MOD);\\n      |                                                                   ^\\n\\/tmp\\/compiler_icwtjlfl\\/src:7:11: \\u9644\\u6ce8\\uff1ato match this \\u2018{\\u2019\\n    7 | int main(){\\n      |           ^\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <bits\\/stdc++.h>\\nusing namespace std;\\n\\nstatic const int MOD = 998244353;\\nstatic const int INV2 = 499122177; \\/\\/ (MOD+1)\\/2\\n\\nint main(){\\n    ios::sync_with_stdio(false);\\n    cin.tie(nullptr);\\n\\n    int n;\\n    cin >> n;\\n    vector<long long> a(n);\\n    for(int i = 0; i < n; i++){\\n        cin >> a[i];\\n    }\\n    \\/\\/ \\u9884\\u5148\\u5316\\u7b80 a[i] mod MOD\\uff08\\u56e0\\u4e3a a[i] <= 1e9 < 2*MOD\\uff09\\n    vector<int> a_mod(n);\\n    for(int i = 0; i < n; i++){\\n        long long v = a[i];\\n        a_mod[i] = (v >= MOD ? int(v - MOD) : int(v));\\n    }\\n\\n    long long answer = 0;\\n    \\/\\/ \\u679a\\u4e3e\\u5b50\\u6570\\u7ec4\\u8d77\\u70b9 l\\n    for(int l = 0; l < n; l++){\\n        long long P = 1; \\/\\/ \\u220f d_i mod MOD\\n        long long F = 0; \\/\\/ \\u5f53\\u524d f(l, r) \\u7684\\u503c\\n\\n        \\/\\/ \\u4f9d\\u6b21\\u6269\\u5c55\\u7ec8\\u70b9 r\\n        for(int r = l; r < n; r++){\\n            int k = r - l + 1;              \\/\\/ \\u5b50\\u6570\\u7ec4\\u957f\\u5ea6\\n            long long ai = a[r];\\n            \\/\\/ \\u539f\\u59cb d = a[r] - k + 1\\n            long long d_all = ai - k + 1;\\n            if(d_all <= 0) break;          \\/\\/ \\u4e00\\u65e6 d<=0\\uff0c\\u540e\\u7eed\\u90fd\\u65e0\\u6548\\n\\n            \\/\\/ d mod MOD\\uff08\\u56e0\\u4e3a d_all<2*MOD\\uff0c\\u53ef\\u7528\\u51cf\\u6cd5\\u66ff\\u4ee3\\u53d6\\u6a21\\uff09\\n            int d_mod = (d_all >= MOD ? int(d_all - MOD) : int(d_all));\\n\\n            \\/\\/ \\u8ba1\\u7b97 S = sum_{x=k..a[r]} x = ((a + k) * (a - k + 1) \\/ 2) mod MOD\\n            int am = a_mod[r];\\n            int km = k;\\n            \\/\\/ t1 = (a_mod + k) % MOD\\n            int t1 = am + km;\\n            if(t1 >= MOD) t1 -= MOD;\\n            \\/\\/ t2 = (a_mod - k + 1) mod MOD\\n            int t2 = am - km + 1;\\n            if(t2 < 0) t2 += MOD;\\n            int S_mod = int((long long)t1 * t2 % MOD * INV2 % MOD);\\n\\n            \\/\\/ \\u9012\\u63a8\\u66f4\\u65b0 F \\u548c P\\n            \\/\\/   F_new = d_mod * F + S\\n\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P12374\",\"title\":\"\\u300cLAOI-12\\u300dSigma\",\"difficulty\":4,\"fullScore\":400,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":1554,\"submitTime\":1745750024,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":215282178,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":{\"1\":[0,1,2,3,4],\"2\":[5,6,7,8,9],\"3\":[10,11,12],\"4\":[13,14,15,16,17,18,19]},\"showStatus\":true},\"currentTitle\":\"R215282178\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186332,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_icwtjlfl/src: 在函数‘int main()’中:\n/tmp/compiler_icwtjlfl/src:50:67: 错误：expected ‘}’ at end of input\n   50 |             int S_mod = int((long long)t1 * t2 % MOD * INV2 % MOD);\n      |                                                                   ^\n/tmp/compiler_icwtjlfl/src:31:35: 附注：to match this ‘{’\n   31 |         for(int r = l; r < n; r++){\n      |                                   ^\n/tmp/compiler_icwtjlfl/src:39:17: 警告：unused variable ‘d_mod’ [-Wunused-variable]\n   39 |             int d_mod = (d_all >= MOD ? int(d_all - MOD) : int(d_all));\n      |                 ^~~~~\n/tmp/compiler_icwtjlfl/src:50:17: 警告：unused variable ‘S_mod’ [-Wunused-variable]\n   50 |             int S_mod = int((long long)t1 * t2 % MOD * INV2 % MOD);\n      |                 ^~~~~\n/tmp/compiler_icwtjlfl/src:50:67: 错误：expected ‘}’ at end of input\n   50 |             int S_mod = int((long long)t1 * t2 % MOD * INV2 % MOD);\n      |                                                                   ^\n/tmp/compiler_icwtjlfl/src:26:31: 附注：to match this ‘{’\n   26 |     for(int l = 0; l < n; l++){\n      |                               ^\n/tmp/compiler_icwtjlfl/src:27:19: 警告：unused variable ‘P’ [-Wunused-variable]\n   27 |         long long P = 1; // ∏ d_i mod MOD\n      |                   ^\n/tmp/compiler_icwtjlfl/src:28:19: 警告：unused variable ‘F’ [-Wunused-variable]\n   28 |         long long F = 0; // 当前 f(l, r) 的值\n      |                   ^\n/tmp/compiler_icwtjlfl/src:24:15: 警告：unused variable ‘answer’ [-Wunused-variable]\n   24 |     long long answer = 0;\n      |               ^~~~~~\n/tmp/compiler_icwtjlfl/src:50:67: 错误：expected ‘}’ at end of input\n   50 |             int S_mod = int((long long)t1 * t2 % MOD * INV2 % MOD);\n      |                                                                   ^\n/tmp/compiler_icwtjlfl/src:7:11: 附注：to match this ‘{’\n    7 | int main(){\n      |           ^\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nstatic const int MOD = 998244353;\nstatic const int INV2 = 499122177; // (MOD+1)/2\n\nint main(){\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int n;\n    cin >> n;\n    vector<long long> a(n);\n    for(int i = 0; i < n; i++){\n        cin >> a[i];\n    }\n    // 预先化简 a[i] mod MOD（因为 a[i] <= 1e9 < 2*MOD）\n    vector<int> a_mod(n);\n    for(int i = 0; i < n; i++){\n        long long v = a[i];\n        a_mod[i] = (v >= MOD ? int(v - MOD) : int(v));\n    }\n\n    long long answer = 0;\n    // 枚举子数组起点 l\n    for(int l = 0; l < n; l++){\n        long long P = 1; // ∏ d_i mod MOD\n        long long F = 0; // 当前 f(l, r) 的值\n\n        // 依次扩展终点 r\n        for(int r = l; r < n; r++){\n            int k = r - l + 1;              // 子数组长度\n            long long ai = a[r];\n            // 原始 d = a[r] - k + 1\n            long long d_all = ai - k + 1;\n            if(d_all <= 0) break;          // 一旦 d<=0，后续都无效\n\n            // d mod MOD（因为 d_all<2*MOD，可用减法替代取模）\n            int d_mod = (d_all >= MOD ? int(d_all - MOD) : int(d_all));\n\n            // 计算 S = sum_{x=k..a[r]} x = ((a + k) * (a - k + 1) / 2) mod MOD\n            int am = a_mod[r];\n            int km = k;\n            // t1 = (a_mod + k) % MOD\n            int t1 = am + km;\n            if(t1 >= MOD) t1 -= MOD;\n            // t2 = (a_mod - k + 1) mod MOD\n            int t2 = am - km + 1;\n            if(t2 < 0) t2 += MOD;\n            int S_mod = int((long long)t1 * t2 % MOD * INV2 % MOD);\n\n            // 递推更新 F 和 P\n            //   F_new = d_mod * F + S\n",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P12374",
+          "title": "「LAOI-12」Sigma",
+          "difficulty": 4,
+          "fullScore": 400,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 1554,
+        "submitTime": 1745750024,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 215282178,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": {
+        "1": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "2": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "3": [
+          10,
+          11,
+          12
+        ],
+        "4": [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      "showStatus": true
+    },
+    "currentTitle": "R215282178",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186332,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

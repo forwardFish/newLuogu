@@ -1,0 +1,335 @@
+{
+  "recordId": "206479989",
+  "url": "https://www.luogu.com.cn/record/206479989?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:49:24.956Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_w79ldfdq\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_w79ldfdq\\/src:23:12: \\u9519\\u8bef\\uff1a\\u2018Block [100000][char [20]]\\u2019\\u7528\\u4f5c\\u6570\\u7ec4\\u4e0b\\u6807\\u7c7b\\u578b\\u65e0\\u6548\\n   23 |         a[c].ch=ch;\\n      |            ^\\n\\/tmp\\/compiler_w79ldfdq\\/src:24:12: \\u9519\\u8bef\\uff1a\\u2018Block [100000][char [20]]\\u2019\\u7528\\u4f5c\\u6570\\u7ec4\\u4e0b\\u6807\\u7c7b\\u578b\\u65e0\\u6548\\n   24 |         a[c].count=cnt;\\n      |            ^\\n\\/tmp\\/compiler_w79ldfdq\\/src:25:10: \\u9519\\u8bef\\uff1a\\u81ea\\u589e\\u64cd\\u4f5c\\u6570\\u5fc5\\u987b\\u662f\\u5de6\\u503c\\n   25 |         c++;\\n      |          ^~\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <bits\\/stdc++.h>\\nstruct Block{\\n    char ch;\\n    long long count;\\n};\\nBlock a[100000];int c=0;\\nint main(){\\n    char s[100001];\\n    long long c;\\n    scanf(\\\"%100000s%lld\\\",s,&c);\\n    int i=0;\\n    while(s[i]!='\\\\0'){\\n        char ch=s[i];\\n        i++;\\n        char c[20];\\n        int l=0;\\n        while(s[i]!='\\\\0'&&isdigit(s[i])){\\n            c[l++]=s[i];\\n            i++;\\n        }\\n        c[l]='\\\\0';\\n        long long cnt=strtoll(c,NULL,10);\\n        a[c].ch=ch;\\n        a[c].count=cnt;\\n        c++;\\n    }\\n    long long ans=0;\\n    for(int j=0;j<c;++j){\\n        ans+=a[j].count;\\n    }\\n    if(ans==0){\\n        printf(\\\"\\\\n\\\");\\n        return 0;\\n    }\\n    long long k=c%ans;\\n    long long current=0;\\n    for(int j=0;j<c;++j){\\n        if(current+a[j].count>k){\\n            printf(\\\"%c\\\\n\\\",a[j].ch);\\n            return 0;\\n        }\\n        current+=a[j].count;\\n    }\\n    return 0;\\n}\\n\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P11858\",\"title\":\"[CCC 2025 Senior] \\u7834\\u8bd1 \\/ Cryptogram Cracking Club\",\"difficulty\":3,\"fullScore\":15,\"type\":\"P\"},\"contest\":{\"id\":234304,\"name\":\"CCC 2025 Senior Unofficial Mirror\",\"startTime\":1741345200,\"endTime\":1741356000},\"sourceCodeLength\":875,\"submitTime\":1741353167,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":206479989,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1],[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34],[35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54],[55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101],[102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140]],\"showStatus\":true},\"currentTitle\":\"R206479989\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186565,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_w79ldfdq/src: 在函数‘int main()’中:\n/tmp/compiler_w79ldfdq/src:23:12: 错误：‘Block [100000][char [20]]’用作数组下标类型无效\n   23 |         a[c].ch=ch;\n      |            ^\n/tmp/compiler_w79ldfdq/src:24:12: 错误：‘Block [100000][char [20]]’用作数组下标类型无效\n   24 |         a[c].count=cnt;\n      |            ^\n/tmp/compiler_w79ldfdq/src:25:10: 错误：自增操作数必须是左值\n   25 |         c++;\n      |          ^~\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <bits/stdc++.h>\nstruct Block{\n    char ch;\n    long long count;\n};\nBlock a[100000];int c=0;\nint main(){\n    char s[100001];\n    long long c;\n    scanf(\"%100000s%lld\",s,&c);\n    int i=0;\n    while(s[i]!='\\0'){\n        char ch=s[i];\n        i++;\n        char c[20];\n        int l=0;\n        while(s[i]!='\\0'&&isdigit(s[i])){\n            c[l++]=s[i];\n            i++;\n        }\n        c[l]='\\0';\n        long long cnt=strtoll(c,NULL,10);\n        a[c].ch=ch;\n        a[c].count=cnt;\n        c++;\n    }\n    long long ans=0;\n    for(int j=0;j<c;++j){\n        ans+=a[j].count;\n    }\n    if(ans==0){\n        printf(\"\\n\");\n        return 0;\n    }\n    long long k=c%ans;\n    long long current=0;\n    for(int j=0;j<c;++j){\n        if(current+a[j].count>k){\n            printf(\"%c\\n\",a[j].ch);\n            return 0;\n        }\n        current+=a[j].count;\n    }\n    return 0;\n}\n",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P11858",
+          "title": "[CCC 2025 Senior] 破译 / Cryptogram Cracking Club",
+          "difficulty": 3,
+          "fullScore": 15,
+          "type": "P"
+        },
+        "contest": {
+          "id": 234304,
+          "name": "CCC 2025 Senior Unofficial Mirror",
+          "startTime": 1741345200,
+          "endTime": 1741356000
+        },
+        "sourceCodeLength": 875,
+        "submitTime": 1741353167,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 206479989,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34
+        ],
+        [
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54
+        ],
+        [
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101
+        ],
+        [
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R206479989",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186565,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

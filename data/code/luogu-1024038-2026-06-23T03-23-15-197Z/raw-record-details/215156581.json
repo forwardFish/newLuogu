@@ -1,0 +1,191 @@
+{
+  "recordId": "215156581",
+  "url": "https://www.luogu.com.cn/record/215156581?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:45:48.005Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_e78u0dc8\\/src: \\u5728\\u51fd\\u6570\\u2018int64 pollards_rho(int64)\\u2019\\u4e2d:\\n\\/tmp\\/compiler_e78u0dc8\\/src:63:22: \\u9519\\u8bef\\uff1a\\u2018gcd\\u2019\\u4e0d\\u662f\\u2018std\\u2019\\u7684\\u6210\\u5458\\n   63 |             d = std::gcd(abs(x - y), n);\\n      |                      ^~~\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <bits\\/stdc++.h>\\nusing namespace std;\\nusing int64 = long long;\\nconst int64 MOD = 1000000007;\\n\\n\\/\\/ \\u8ba1\\u7b97 a^b mod m\\nint64 modexp(int64 a, int64 b, int64 m) {\\n    int64 res = 1 % m;\\n    a %= m;\\n    while (b > 0) {\\n        if (b & 1) res = (__int128)res * a % m;\\n        a = (__int128)a * a % m;\\n        b >>= 1;\\n    }\\n    return res;\\n}\\n\\n\\/\\/ Miller-Rabin \\u7d20\\u6027\\u6d4b\\u8bd5\\uff0c\\u786e\\u5b9a n \\u662f\\u5426\\u4e3a\\u8d28\\u6570\\nbool isPrime(int64 n) {\\n    if (n < 2) return false;\\n    for (int64 p : {2,3,5,7,11,13,17,19,23,29,31,37}) {\\n        if (n%p == 0) return n == p;\\n    }\\n    int64 d = n - 1, s = 0;\\n    while ((d & 1) == 0) {\\n        d >>= 1; s++;\\n    }\\n    \\/\\/ \\u9009\\u53d6\\u57fa\\u6570\\u6d4b\\u8bd5\\n    for (int64 a : {2, 325, 9375, 28178, 450775, 9780504, 1795265022}) {\\n        if (a % n == 0) continue;\\n        int64 x = modexp(a, d, n);\\n        if (x == 1 || x == n-1) continue;\\n        bool composite = true;\\n        for (int i = 1; i < s; i++) {\\n            x = (__int128)x * x % n;\\n            if (x == n-1) {\\n                composite = false;\\n                break;\\n            }\\n        }\\n        if (composite) return false;\\n    }\\n    return true;\\n}\\n\\n\\/\\/ Pollard's Rho \\u968f\\u673a\\u51fd\\u6570 f(x) = x^2 + c mod n\\nint64 f_rho(int64 x, int64 c, int64 mod) {\\n    return ( (__int128)x * x + c ) % mod;\\n}\\n\\n\\/\\/ Pollard's Rho \\u5bfb\\u627e n \\u7684\\u975e\\u5e73\\u51e1\\u56e0\\u5b50\\nint64 pollards_rho(int64 n) {\\n    if (n % 2 == 0) return 2;\\n    std::mt19937_64 rnd((unsigned)chrono::high_resolution_clock::now().time_since_epoch().count());\\n    while (true) {\\n        int64 x = std::uniform_int_distribution<int64>(2, n-2)(rnd);\\n        int64 y = x;\\n        int64 c = std::uniform_int_distribution<int64>(1, n-1)(rnd);\\n        int64 d = 1;\\n        while (d == 1) {\\n            x = f_rho(x, c, n);\\n            y = f_rho(f_rho(y, c, n), c, n);\\n            d = std::gcd(abs(x - y), n);\\n            if (d == n) break;\\n        }\\n        if (d > 1 && d < n) return d;\\n    }\\n}\\n\\n\\/\\/ \\u5bf9 n \\u8fdb\\u884c\\u5206\\u89e3\\uff0c\\u5c06\\u6240\\u6709\\u8d28\\u56e0\\u5b50\\u53ca\\u5176\\u5e42\\u5b58\\u5165 map \\u4e2d\\nvoid factor(int64 n, map<int64,int>& mp) {\\n    if (n == 1) return;\\n    if (isPrime(n)) {\\n        mp[n]++;\\n    } else {\\n        int64 d = pollards_rho(n);\\n        factor(d, mp);\\n        factor(n \\/ d, mp);\\n    }\\n}\\n\\nint main(){\\n    ios::sync_with_stdio(false);\\n    cin.tie(NULL);\\n\\n    int T;\\n    cin >> T;\\n    while (T--) {\\n        int64 n;\\n        cin >> n;\\n\\n        \\/\\/ \\u5bf9 n \\u53ca n\\/4(\\u82e5\\u53ef\\u9664) \\u8fdb\\u884c\\u5206\\u89e3\\u5e76\\u8ba1\\u7b97 \\u03c3\\n        map<int64,int> fac;\\n        factor(n, fac);\\n\\n        \\/\\/ \\u8ba1\\u7b97 \\u03c3(n) \\u6a21 1e9+7\\n        int64 sigma_n = 1;\\n        for (auto &kv : fac) {\\n            int64 p = kv.first;\\n            int e = kv.second;\\n            \\/\\/ \\u8ba1\\u7b97 (p^(e+1)-1)\\/(p-1) mod MOD\\n            int64 num = modexp(p % MOD, e+1, MOD) - 1;\\n            if (num < 0) num += MOD;\\n            int64 denom = (p - 1) % MOD;\\n            if (denom < 0) denom += MOD;\\n            \\/\\/ denom \\u4e0e MOD \\u4e92\\u7d20\\uff0c\\u56e0\\u4e3a MOD \\u662f\\u8d28\\u6570\\u4e14 p != 1\\n            int64 inv = modexp(denom, MOD-2, MOD);\\n            int64 term = num * inv % MOD;\\n            sigma_n = sigma_n * term % MOD;\\n        }\\n\\n        \\/\\/ \\u8ba1\\u7b97 \\u03c3(n\\/4) \\u6a21 MOD\\uff0c\\u5982\\u679c 4|n\\n        int64 sigma_n4 = 0;\\n        if (n % 4 == 0) {\\n            \\/\\/ \\u8c03\\u6574 n \\u4e2d 2 \\u7684\\u5e42\\u6b21\\u6570\\n            map<int64,int> fac_n4 = fac;\\n            fac_n4[2] -= 2;\\n            if (fac_n4[2] == 0) fac_n4.erase(2);\\n\\n            sigma_n4 = 1;\\n            for (auto &kv : fac_n4) {\\n                int64 p = kv.first;\\n                int e = kv.second;\\n                int64 num = modexp(p % MOD, e+1, MOD) - 1;\\n                if (num < 0) num += MOD;\\n                int64 denom = (p - 1) % MOD;\\n                if (denom < 0) denom += MOD;\\n                int64 inv = modexp(denom, MOD-2, MOD);\\n                int64 term = num * inv % MOD;\\n                sigma_n4 = sigma_n4 * term % MOD;\\n            }\\n        }\\n\\n        \\/\\/ \\u6839\\u636e Jacobi \\u56db\\u5e73\\u65b9\\u5b9a\\u7406\\u516c\\u5f0f\\u8ba1\\u7b97 r4(n)\\n        int64 ans;\\n        if (n % 4 == 0) {\\n            ans = (sigma_n - 4 * sigma_n4 % MOD) % MOD;\\n            if (ans < 0) ans += MOD;\\n            ans = ans * 8 % MOD;\\n        } else {\\n            ans = sigma_n * 8 % MOD;\\n        }\\n        cout << ans << \\\"\\\\n\\\";\\n    }\\n    return 0;\\n}\\n\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P2019\",\"title\":\"\\u56db\\u5e73\\u65b9\\u548c\\u5b9a\\u7406\",\"difficulty\":7,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":3931,\"submitTime\":1745653264,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":215156581,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9]],\"showStatus\":true},\"currentTitle\":\"R215156581\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186347,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_e78u0dc8/src: 在函数‘int64 pollards_rho(int64)’中:\n/tmp/compiler_e78u0dc8/src:63:22: 错误：‘gcd’不是‘std’的成员\n   63 |             d = std::gcd(abs(x - y), n);\n      |                      ^~~\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <bits/stdc++.h>\nusing namespace std;\nusing int64 = long long;\nconst int64 MOD = 1000000007;\n\n// 计算 a^b mod m\nint64 modexp(int64 a, int64 b, int64 m) {\n    int64 res = 1 % m;\n    a %= m;\n    while (b > 0) {\n        if (b & 1) res = (__int128)res * a % m;\n        a = (__int128)a * a % m;\n        b >>= 1;\n    }\n    return res;\n}\n\n// Miller-Rabin 素性测试，确定 n 是否为质数\nbool isPrime(int64 n) {\n    if (n < 2) return false;\n    for (int64 p : {2,3,5,7,11,13,17,19,23,29,31,37}) {\n        if (n%p == 0) return n == p;\n    }\n    int64 d = n - 1, s = 0;\n    while ((d & 1) == 0) {\n        d >>= 1; s++;\n    }\n    // 选取基数测试\n    for (int64 a : {2, 325, 9375, 28178, 450775, 9780504, 1795265022}) {\n        if (a % n == 0) continue;\n        int64 x = modexp(a, d, n);\n        if (x == 1 || x == n-1) continue;\n        bool composite = true;\n        for (int i = 1; i < s; i++) {\n            x = (__int128)x * x % n;\n            if (x == n-1) {\n                composite = false;\n                break;\n            }\n        }\n        if (composite) return false;\n    }\n    return true;\n}\n\n// Pollard's Rho 随机函数 f(x) = x^2 + c mod n\nint64 f_rho(int64 x, int64 c, int64 mod) {\n    return ( (__int128)x * x + c ) % mod;\n}\n\n// Pollard's Rho 寻找 n 的非平凡因子\nint64 pollards_rho(int64 n) {\n    if (n % 2 == 0) return 2;\n    std::mt19937_64 rnd((unsigned)chrono::high_resolution_clock::now().time_since_epoch().count());\n    while (true) {\n        int64 x = std::uniform_int_distribution<int64>(2, n-2)(rnd);\n        int64 y = x;\n        int64 c = std::uniform_int_distribution<int64>(1, n-1)(rnd);\n        int64 d = 1;\n        while (d == 1) {\n            x = f_rho(x, c, n);\n            y = f_rho(f_rho(y, c, n), c, n);\n            d = std::gcd(abs(x - y), n);\n            if (d == n) break;\n        }\n        if (d > 1 && d < n) return d;\n    }\n}\n\n// 对 n 进行分解，将所有质因子及其幂存入 map 中\nvoid factor(int64 n, map<int64,int>& mp) {\n    if (n == 1) return;\n    if (isPrime(n)) {\n        mp[n]++;\n    } else {\n        int64 d = pollards_rho(n);\n        factor(d, mp);\n        factor(n / d, mp);\n    }\n}\n\nint main(){\n    ios::sync_with_stdio(false);\n    cin.tie(NULL);\n\n    int T;\n    cin >> T;\n    while (T--) {\n        int64 n;\n        cin >> n;\n\n        // 对 n 及 n/4(若可除) 进行分解并计算 σ\n        map<int64,int> fac;\n        factor(n, fac);\n\n        // 计算 σ(n) 模 1e9+7\n        int64 sigma_n = 1;\n        for (auto &kv : fac) {\n            int64 p = kv.first;\n            int e = kv.second;\n            // 计算 (p^(e+1)-1)/(p-1) mod MOD\n            int64 num = modexp(p % MOD, e+1, MOD) - 1;\n            if (num < 0) num += MOD;\n            int64 denom = (p - 1) % MOD;\n            if (denom < 0) denom += MOD;\n            // denom 与 MOD 互素，因为 MOD 是质数且 p != 1\n            int64 inv = modexp(denom, MOD-2, MOD);\n            int64 term = num * inv % MOD;\n            sigma_n = sigma_n * term % MOD;\n        }\n\n        // 计算 σ(n/4) 模 MOD，如果 4|n\n        int64 sigma_n4 = 0;\n        if (n % 4 == 0) {\n            // 调整 n 中 2 的幂次数\n            map<int64,int> fac_n4 = fac;\n            fac_n4[2] -= 2;\n            if (fac_n4[2] == 0) fac_n4.erase(2);\n\n            sigma_n4 = 1;\n            for (auto &kv : fac_n4) {\n                int64 p = kv.first;\n                int e = kv.second;\n                int64 num = modexp(p % MOD, e+1, MOD) - 1;\n                if (num < 0) num += MOD;\n                int64 denom = (p - 1) % MOD;\n                if (denom < 0) denom += MOD;\n                int64 inv = modexp(denom, MOD-2, MOD);\n                int64 term = num * inv % MOD;\n                sigma_n4 = sigma_n4 * term % MOD;\n            }\n        }\n\n        // 根据 Jacobi 四平方定理公式计算 r4(n)\n        int64 ans;\n        if (n % 4 == 0) {\n            ans = (sigma_n - 4 * sigma_n4 % MOD) % MOD;\n            if (ans < 0) ans += MOD;\n            ans = ans * 8 % MOD;\n        } else {\n            ans = sigma_n * 8 % MOD;\n        }\n        cout << ans << \"\\n\";\n    }\n    return 0;\n}\n",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P2019",
+          "title": "四平方和定理",
+          "difficulty": 7,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 3931,
+        "submitTime": 1745653264,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 215156581,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R215156581",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186347,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

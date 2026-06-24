@@ -1,0 +1,217 @@
+{
+  "recordId": "170781212",
+  "url": "https://www.luogu.com.cn/record/170781212?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:58:51.919Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[{\"id\":0,\"score\":100,\"status\":14,\"testCases\":[{\"id\":0,\"status\":12,\"time\":46,\"memory\":0,\"score\":1,\"signal\":null,\"exitCode\":0,\"description\":\"ok 6 token(s): yes count is 3, no count is 3\\r\\n\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},{\"id\":1,\"status\":12,\"time\":483,\"memory\":0,\"score\":1,\"signal\":null,\"exitCode\":0,\"description\":\"ok 10000 token(s): yes count is 2737, no count is 7263\\r\\n\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}],\"judger\":\"\",\"time\":483,\"memory\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}],\"finishedCaseCount\":0,\"status\":14,\"time\":483,\"memory\":0,\"score\":100,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":401,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h>\\nusing namespace std;\\n\\nbool check(vector<int>& a, vector<int>& b, int k) {\\n    int n = a.size();\\n    int m = b.size();\\n    for (int i = 0; i < (1 << n); ++i)\\n\\t{\\n        for (int j = 0; j < (1 << m); ++j)\\n\\t\\t{\\n            vector<int> sa, sb;\\n            for (int x = 0; x < n; ++x)\\n\\t\\t\\t{\\n                if (i & (1 << x)) {\\n                    sa.push_back(a[x]);\\n                }\\n            }\\n            for (int y = 0; y < m; ++y)\\n\\t\\t\\t{\\n                if (j & (1 << y))\\n\\t\\t\\t\\t{\\n                    sb.push_back(b[y]);\\n                }\\n            }\\n            if (sa.size() == k \\/ 2 && sb.size() == k \\/ 2)\\n\\t\\t\\t{\\n                vector<bool> v(k + 1, false);\\n                for (int num : sa)\\n\\t\\t\\t\\t{\\n                    if (num <= k) v[num] = true;\\n                }\\n                for (int num : sb)\\n\\t\\t\\t\\t{\\n                    if (num <= k) v[num] = true;\\n                }\\n                bool a = true;\\n                for (int z = 1; z <= k; ++z)\\n\\t\\t\\t\\t{\\n                    if (!v[z])\\n\\t\\t\\t\\t\\t{\\n                        a = false;\\n                        break;\\n                    }\\n                }\\n                if (a) return true;\\n            }\\n        }\\n    }\\n    return false;\\n}\\nint main() {\\n    ios::sync_with_stdio(false);\\n    cin.tie(0);cout.tie();\\n    int T;\\n    cin >> T;\\n    while (T--) {\\n        int n, m, k;\\n        cin >> n >> m >> k; \\n        vector<int> a(n), b(m);     \\n        for (int i = 0; i < n; ++i)\\n\\t\\t{\\n            cin >> a[i];\\n        }\\n        for (int i = 0; i < m; ++i)\\n\\t\\t{\\n            cin >> b[i];\\n        }\\n        if (check(a, b, k))\\n\\t\\t{\\n            cout << \\\"YES\\\" << endl;\\n        }\\n\\t\\telse\\n\\t\\t{\\n            cout << \\\"NO\\\" << endl;\\n        }\\n    }\\n    return 0;\\n}\\n\",\"time\":483,\"memory\":0,\"problem\":{\"pid\":\"CF1927C\",\"title\":\"Choose the Different Ones!\",\"difficulty\":2,\"fullScore\":100,\"type\":\"CF\"},\"contest\":null,\"sourceCodeLength\":1717,\"submitTime\":1722858021,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":170781212,\"status\":14,\"enableO2\":false},\"testCaseGroup\":[[0]],\"showStatus\":true},\"currentTitle\":\"R170781212\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782187131,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [
+              {
+                "id": 0,
+                "score": 100,
+                "status": 14,
+                "testCases": [
+                  {
+                    "id": 0,
+                    "status": 12,
+                    "time": 46,
+                    "memory": 0,
+                    "score": 1,
+                    "signal": null,
+                    "exitCode": 0,
+                    "description": "ok 6 token(s): yes count is 3, no count is 3\r\n",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  {
+                    "id": 1,
+                    "status": 12,
+                    "time": 483,
+                    "memory": 0,
+                    "score": 1,
+                    "signal": null,
+                    "exitCode": 0,
+                    "description": "ok 10000 token(s): yes count is 2737, no count is 7263\r\n",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                ],
+                "judger": "",
+                "time": 483,
+                "memory": 0,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            ],
+            "finishedCaseCount": 0,
+            "status": 14,
+            "time": 483,
+            "memory": 0,
+            "score": 100,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 401,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h>\nusing namespace std;\n\nbool check(vector<int>& a, vector<int>& b, int k) {\n    int n = a.size();\n    int m = b.size();\n    for (int i = 0; i < (1 << n); ++i)\n\t{\n        for (int j = 0; j < (1 << m); ++j)\n\t\t{\n            vector<int> sa, sb;\n            for (int x = 0; x < n; ++x)\n\t\t\t{\n                if (i & (1 << x)) {\n                    sa.push_back(a[x]);\n                }\n            }\n            for (int y = 0; y < m; ++y)\n\t\t\t{\n                if (j & (1 << y))\n\t\t\t\t{\n                    sb.push_back(b[y]);\n                }\n            }\n            if (sa.size() == k / 2 && sb.size() == k / 2)\n\t\t\t{\n                vector<bool> v(k + 1, false);\n                for (int num : sa)\n\t\t\t\t{\n                    if (num <= k) v[num] = true;\n                }\n                for (int num : sb)\n\t\t\t\t{\n                    if (num <= k) v[num] = true;\n                }\n                bool a = true;\n                for (int z = 1; z <= k; ++z)\n\t\t\t\t{\n                    if (!v[z])\n\t\t\t\t\t{\n                        a = false;\n                        break;\n                    }\n                }\n                if (a) return true;\n            }\n        }\n    }\n    return false;\n}\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(0);cout.tie();\n    int T;\n    cin >> T;\n    while (T--) {\n        int n, m, k;\n        cin >> n >> m >> k; \n        vector<int> a(n), b(m);     \n        for (int i = 0; i < n; ++i)\n\t\t{\n            cin >> a[i];\n        }\n        for (int i = 0; i < m; ++i)\n\t\t{\n            cin >> b[i];\n        }\n        if (check(a, b, k))\n\t\t{\n            cout << \"YES\" << endl;\n        }\n\t\telse\n\t\t{\n            cout << \"NO\" << endl;\n        }\n    }\n    return 0;\n}\n",
+        "time": 483,
+        "memory": 0,
+        "problem": {
+          "pid": "CF1927C",
+          "title": "Choose the Different Ones!",
+          "difficulty": 2,
+          "fullScore": 100,
+          "type": "CF"
+        },
+        "contest": null,
+        "sourceCodeLength": 1717,
+        "submitTime": 1722858021,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 170781212,
+        "status": 14,
+        "enableO2": false
+      },
+      "testCaseGroup": [
+        [
+          0
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R170781212",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782187131,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

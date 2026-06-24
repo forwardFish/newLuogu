@@ -1,0 +1,321 @@
+{
+  "recordId": "271121579",
+  "url": "https://www.luogu.com.cn/record/271121579?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:25:31.229Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":\"\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <iostream>\\n#include <vector>\\n#include <algorithm>\\nusing namespace std;\\n\\ntypedef long long ll;\\n\\nconst int MAXL = 2000; \\/\\/ \\u4ec5\\u7528\\u4e8e\\u5c0f\\u6570\\u636e\\uff0c\\u5927\\u6570\\u636e\\u65e0\\u6cd5\\u5904\\u7406\\n\\nint L, N, K;\\nint X[200005], Y[200005], Z[200005];\\n\\nint main() {\\n    cin >> L >> N >> K;\\n    for (int i = 0; i < N; i++) {\\n        cin >> X[i] >> Y[i] >> Z[i];\\n    }\\n\\n    \\/\\/ \\u53ea\\u5904\\u7406\\u5c0f\\u6570\\u636e\\uff08\\u5b50\\u4efb\\u52a12,3\\uff09\\n    if (L > MAXL) {\\n        for (int k = 1; k <= K; k++) cout << 0 << endl;\\n        return 0;\\n    }\\n\\n    \\/\\/ cnt[x][y] \\u8868\\u793a\\u671d\\u4e0a\\u5c0f\\u4e09\\u89d2\\u5f62\\uff08\\u5de6\\u4e0b\\u89d2\\u4e3a(x,y)\\uff09\\u88ab\\u8986\\u76d6\\u7684\\u6b21\\u6570\\n    \\/\\/ cnt2[x][y] \\u8868\\u793a\\u671d\\u4e0b\\u5c0f\\u4e09\\u89d2\\u5f62\\uff08\\u5de6\\u4e0b\\u89d2\\u4e3a(x,y)\\uff09\\u88ab\\u8986\\u76d6\\u7684\\u6b21\\u6570\\n    vector<vector<int>> cnt(L, vector<int>(L, 0));\\n    vector<vector<int>> cnt2(L, vector<int>(L, 0));\\n\\n    \\/\\/ \\u5904\\u7406\\u6bcf\\u4e2a\\u9884\\u62a5\\n    for (int i = 0; i < N; i++) {\\n        int x0 = X[i], y0 = Y[i], z = Z[i];\\n\\n        \\/\\/ \\u671d\\u4e0a\\u5c0f\\u4e09\\u89d2\\u5f62\\uff1a\\u9876\\u70b9 (x,y), (x+1,y), (x,y+1)\\n        int S = x0 + y0 + z - 1;          \\/\\/ x+y \\u2264 S\\n        for (int x = x0; x <= S; x++) {\\n            int ymax = S - x;\\n            if (ymax < y0) continue;\\n            for (int y = y0; y <= ymax; y++) {\\n                if (x + y <= L - 1) {\\n                    cnt[x][y]++;\\n                }\\n            }\\n        }\\n\\n        \\/\\/ \\u671d\\u4e0b\\u5c0f\\u4e09\\u89d2\\u5f62\\uff1a\\u9876\\u70b9 (x+1,y), (x,y+1), (x+1,y+1)\\n        S = x0 + y0 + z - 2;              \\/\\/ x+y \\u2264 S\\n        int xmin = x0 - 1, ymin = y0 - 1;\\n        for (int x = xmin; x <= S; x++) {\\n            int ymax = S - x;\\n            if (ymax < ymin) continue;\\n            for (int y = ymin; y <= ymax; y++) {\\n                if (x >= 0 && y >= 0 && x + y <= L - 2) {\\n                    cnt2[x][y]++;\\n                }\\n            }\\n        }\\n    }\\n\\n    \\/\\/ \\u7edf\\u8ba1\\u6bcf\\u4e2a\\u8986\\u76d6\\u6b21\\u6570\\u7684\\u5c0f\\u4e09\\u89d2\\u5f62\\u4e2a\\u6570\\n    vector<int> freq(N + 1, 0);\\n    for (int x = 0; x < L; x++) {\\n        for (int y = 0; y < L; y++) {\\n            if (x + y <= L - 1) {\\n                int c = cnt[x][y];\\n                if (c > N) c = N;\\n                freq[c]++;\\n            }\\n            if (x + y <= L - 2) {\\n                int c = cnt2[x][y];\\n                if (c > N) c = N;\\n                freq[c]++;\\n            }\\n        }\\n    }\\n\\n    \\/\\/ \\u8f93\\u51fa\\u81f3\\u5c11 k \\u5929\\u7684\\u533a\\u57df\\u6570\\u91cf\\n    for (int k = 1; k <= K; k++) {\\n        ll ans = 0;\\n        for (int c = k; c <= N; c++) ans += freq[c];\\n        cout << ans << endl;\\n    }\\n\\n    return 0;\\n}\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P15945\",\"title\":\"[JOI Final 2026] \\u96e8\\u843d\\u4e09\\u89d2 \\/ Triangular Rainfall\",\"difficulty\":7,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":2143,\"submitTime\":1774917972,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":271121579,\"status\":11,\"enableO2\":true,\"score\":0},\"testCaseGroup\":{\"1\":[0,1,2,3,4,5,6,7,122],\"2\":[8,9,10,11,12,13,14,15,16,17,123],\"3\":[18,19,20,21,22,23,24,25,26,27,28,29],\"4\":[30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45],\"5\":[46,47,48,49,50,51,52,53,54,55,56,57,58,59,73],\"6\":[60,61,62,63,64,65,66,67,68,69,70,71,72,87,101],\"7\":[74,75,76,77,78,79,80,81,82,83,84,85,86],\"8\":[88,89,90,91,92,93,94,95,96,97,98,99,100],\"9\":[102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121]},\"showStatus\":true},\"currentTitle\":\"R271121579\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782185131,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": "",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\ntypedef long long ll;\n\nconst int MAXL = 2000; // 仅用于小数据，大数据无法处理\n\nint L, N, K;\nint X[200005], Y[200005], Z[200005];\n\nint main() {\n    cin >> L >> N >> K;\n    for (int i = 0; i < N; i++) {\n        cin >> X[i] >> Y[i] >> Z[i];\n    }\n\n    // 只处理小数据（子任务2,3）\n    if (L > MAXL) {\n        for (int k = 1; k <= K; k++) cout << 0 << endl;\n        return 0;\n    }\n\n    // cnt[x][y] 表示朝上小三角形（左下角为(x,y)）被覆盖的次数\n    // cnt2[x][y] 表示朝下小三角形（左下角为(x,y)）被覆盖的次数\n    vector<vector<int>> cnt(L, vector<int>(L, 0));\n    vector<vector<int>> cnt2(L, vector<int>(L, 0));\n\n    // 处理每个预报\n    for (int i = 0; i < N; i++) {\n        int x0 = X[i], y0 = Y[i], z = Z[i];\n\n        // 朝上小三角形：顶点 (x,y), (x+1,y), (x,y+1)\n        int S = x0 + y0 + z - 1;          // x+y ≤ S\n        for (int x = x0; x <= S; x++) {\n            int ymax = S - x;\n            if (ymax < y0) continue;\n            for (int y = y0; y <= ymax; y++) {\n                if (x + y <= L - 1) {\n                    cnt[x][y]++;\n                }\n            }\n        }\n\n        // 朝下小三角形：顶点 (x+1,y), (x,y+1), (x+1,y+1)\n        S = x0 + y0 + z - 2;              // x+y ≤ S\n        int xmin = x0 - 1, ymin = y0 - 1;\n        for (int x = xmin; x <= S; x++) {\n            int ymax = S - x;\n            if (ymax < ymin) continue;\n            for (int y = ymin; y <= ymax; y++) {\n                if (x >= 0 && y >= 0 && x + y <= L - 2) {\n                    cnt2[x][y]++;\n                }\n            }\n        }\n    }\n\n    // 统计每个覆盖次数的小三角形个数\n    vector<int> freq(N + 1, 0);\n    for (int x = 0; x < L; x++) {\n        for (int y = 0; y < L; y++) {\n            if (x + y <= L - 1) {\n                int c = cnt[x][y];\n                if (c > N) c = N;\n                freq[c]++;\n            }\n            if (x + y <= L - 2) {\n                int c = cnt2[x][y];\n                if (c > N) c = N;\n                freq[c]++;\n            }\n        }\n    }\n\n    // 输出至少 k 天的区域数量\n    for (int k = 1; k <= K; k++) {\n        ll ans = 0;\n        for (int c = k; c <= N; c++) ans += freq[c];\n        cout << ans << endl;\n    }\n\n    return 0;\n}",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P15945",
+          "title": "[JOI Final 2026] 雨落三角 / Triangular Rainfall",
+          "difficulty": 7,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 2143,
+        "submitTime": 1774917972,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 271121579,
+        "status": 11,
+        "enableO2": true,
+        "score": 0
+      },
+      "testCaseGroup": {
+        "1": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          122
+        ],
+        "2": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          123
+        ],
+        "3": [
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ],
+        "4": [
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45
+        ],
+        "5": [
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          73
+        ],
+        "6": [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          87,
+          101
+        ],
+        "7": [
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86
+        ],
+        "8": [
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100
+        ],
+        "9": [
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121
+        ]
+      },
+      "showStatus": true
+    },
+    "currentTitle": "R271121579",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782185131,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

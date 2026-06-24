@@ -1,0 +1,186 @@
+{
+  "recordId": "207006054",
+  "url": "https://www.luogu.com.cn/record/207006054?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:48:21.609Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_y65hcb2v\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_y65hcb2v\\/src:19:5: \\u9519\\u8bef\\uff1a\\u2018unordered_map\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   19 |     unordered_map<char, char> rules;\\n      |     ^~~~~~~~~~~~~\\n\\/tmp\\/compiler_y65hcb2v\\/src:4:1: \\u9644\\u6ce8\\uff1a\\u2018std::unordered_map\\u2019 is defined in header \\u2018<unordered_map>\\u2019; did you forget to \\u2018#include <unordered_map>\\u2019?\\n    3 | #include <queue>\\n  +++ |+#include <unordered_map>\\n    4 | #include <string>\\n\\/tmp\\/compiler_y65hcb2v\\/src:19:19: \\u9519\\u8bef\\uff1aexpected primary-expression before \\u2018char\\u2019\\n   19 |     unordered_map<char, char> rules;\\n      |                   ^~~~\\n\\/tmp\\/compiler_y65hcb2v\\/src:25:13: \\u9519\\u8bef\\uff1a\\u2018rules\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   25 |             rules[x] = y;\\n      |             ^~~~~\\n\\/tmp\\/compiler_y65hcb2v\\/src:33:27: \\u8b66\\u544a\\uff1acomparison of integer expressions of different signedness: \\u2018int\\u2019 and \\u2018std::__cxx11::basic_string<char>::size_type\\u2019 {aka \\u2018long unsigned int\\u2019} [-Wsign-compare]\\n   33 |         for (int i = 0; i < current.length(); i++) {\\n      |                         ~~^~~~~~~~~~~~~~~~~~\\n\\/tmp\\/compiler_y65hcb2v\\/src:34:17: \\u9519\\u8bef\\uff1a\\u2018rules\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   34 |             if (rules.find(current[i]) != rules.end()) {\\n      |                 ^~~~~\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <iostream>\\n#include <unordered_set>\\n#include <queue>\\n#include <string>\\n\\nusing namespace std;\\n\\nint main() {\\n    string n;\\n    int k;\\n    cin >> n >> k;\\n\\n    unordered_set<string> generatedNumbers;\\n    queue<string> toProcess;\\n\\n    generatedNumbers.insert(n);\\n    toProcess.push(n);\\n\\n    unordered_map<char, char> rules;\\n\\n    for (int i = 0; i < k; i++) {\\n        char x, y;\\n        cin >> x >> y;\\n        if (y != '0') {\\n            rules[x] = y;\\n        }\\n    }\\n\\n    while (!toProcess.empty()) {\\n        string current = toProcess.front();\\n        toProcess.pop();\\n\\n        for (int i = 0; i < current.length(); i++) {\\n            if (rules.find(current[i]) != rules.end()) {\\n                string newNumber = current;\\n                newNumber[i] = rules[current[i]];\\n\\n                if (generatedNumbers.find(newNumber) == generatedNumbers.end()) {\\n                    generatedNumbers.insert(newNumber);\\n                    toProcess.push(newNumber);\\n                }\\n            }\\n        }\\n    }\\n\\n    cout << generatedNumbers.size() << endl;\\n\\n    return 0;\\n}\\n\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P1037\",\"title\":\"[NOIP 2002 \\u666e\\u53ca\\u7ec4] \\u4ea7\\u751f\\u6570\",\"difficulty\":3,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":1076,\"submitTime\":1741524548,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":207006054,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1,2,3,4]],\"showStatus\":true},\"currentTitle\":\"R207006054\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186501,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_y65hcb2v/src: 在函数‘int main()’中:\n/tmp/compiler_y65hcb2v/src:19:5: 错误：‘unordered_map’在此作用域中尚未声明\n   19 |     unordered_map<char, char> rules;\n      |     ^~~~~~~~~~~~~\n/tmp/compiler_y65hcb2v/src:4:1: 附注：‘std::unordered_map’ is defined in header ‘<unordered_map>’; did you forget to ‘#include <unordered_map>’?\n    3 | #include <queue>\n  +++ |+#include <unordered_map>\n    4 | #include <string>\n/tmp/compiler_y65hcb2v/src:19:19: 错误：expected primary-expression before ‘char’\n   19 |     unordered_map<char, char> rules;\n      |                   ^~~~\n/tmp/compiler_y65hcb2v/src:25:13: 错误：‘rules’在此作用域中尚未声明\n   25 |             rules[x] = y;\n      |             ^~~~~\n/tmp/compiler_y65hcb2v/src:33:27: 警告：comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]\n   33 |         for (int i = 0; i < current.length(); i++) {\n      |                         ~~^~~~~~~~~~~~~~~~~~\n/tmp/compiler_y65hcb2v/src:34:17: 错误：‘rules’在此作用域中尚未声明\n   34 |             if (rules.find(current[i]) != rules.end()) {\n      |                 ^~~~~\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <iostream>\n#include <unordered_set>\n#include <queue>\n#include <string>\n\nusing namespace std;\n\nint main() {\n    string n;\n    int k;\n    cin >> n >> k;\n\n    unordered_set<string> generatedNumbers;\n    queue<string> toProcess;\n\n    generatedNumbers.insert(n);\n    toProcess.push(n);\n\n    unordered_map<char, char> rules;\n\n    for (int i = 0; i < k; i++) {\n        char x, y;\n        cin >> x >> y;\n        if (y != '0') {\n            rules[x] = y;\n        }\n    }\n\n    while (!toProcess.empty()) {\n        string current = toProcess.front();\n        toProcess.pop();\n\n        for (int i = 0; i < current.length(); i++) {\n            if (rules.find(current[i]) != rules.end()) {\n                string newNumber = current;\n                newNumber[i] = rules[current[i]];\n\n                if (generatedNumbers.find(newNumber) == generatedNumbers.end()) {\n                    generatedNumbers.insert(newNumber);\n                    toProcess.push(newNumber);\n                }\n            }\n        }\n    }\n\n    cout << generatedNumbers.size() << endl;\n\n    return 0;\n}\n",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P1037",
+          "title": "[NOIP 2002 普及组] 产生数",
+          "difficulty": 3,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 1076,
+        "submitTime": 1741524548,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 207006054,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R207006054",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186501,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

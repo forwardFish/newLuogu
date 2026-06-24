@@ -1,0 +1,14 @@
+a=int(input())
+l=[]
+for i in range(a):
+    b=int(input())
+    l.append(b)
+d=l
+l.sort()
+c=0
+for i in range(a):
+   if(d[i]==l[a-1]):
+       c=i
+print(i) 
+print(l[a-1])
+    

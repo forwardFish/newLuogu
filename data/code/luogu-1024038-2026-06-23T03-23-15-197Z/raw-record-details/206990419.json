@@ -1,0 +1,245 @@
+{
+  "recordId": "206990419",
+  "url": "https://www.luogu.com.cn/record/206990419?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:48:29.754Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[{\"id\":0,\"score\":100,\"status\":12,\"testCases\":{\"1\":{\"id\":1,\"status\":12,\"time\":3,\"memory\":556,\"score\":25,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"0\":{\"id\":0,\"status\":12,\"time\":4,\"memory\":564,\"score\":25,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"2\":{\"id\":2,\"status\":12,\"time\":3,\"memory\":556,\"score\":25,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"3\":{\"id\":3,\"status\":12,\"time\":4,\"memory\":564,\"score\":25,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}},\"judger\":\"\",\"time\":14,\"memory\":564,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}],\"finishedCaseCount\":4,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <iostream>\\n#include <vector>\\n#include <algorithm>\\n#include <cmath>\\n#include <climits>\\n#include <limits>\\nusing namespace std;\\n\\nconst double INF = numeric_limits<double>::infinity();\\n\\nstruct Price {\\n    int price;\\n    int sales;\\n    Price(int p, int s) : price(p), sales(s) {}\\n};\\n\\nint expected_price;\\nint cost, sales_at_cost;\\nvector<Price> known_prices;\\nint d;\\n\\nvoid read_input() {\\n    cin >> expected_price;\\n    cin >> cost >> sales_at_cost;\\n    known_prices.push_back(Price(cost, sales_at_cost));\\n    int p, s;\\n    while (cin >> p >> s && !(p == -1 && s == -1)) {\\n        known_prices.push_back(Price(p, s));\\n    }\\n    sort(known_prices.begin(), known_prices.end(), [](const Price& a, const Price& b) {\\n        return a.price < b.price;\\n    });\\n    cin >> d;\\n}\\n\\nvector<int> generate_all_p() {\\n    vector<int> all_p;\\n    int max_known = known_prices.back().price;\\n    for (int p = cost; p <= max_known; ++p) {\\n        all_p.push_back(p);\\n    }\\n    int last_p = max_known;\\n    int last_s = known_prices.back().sales;\\n    int current_p = last_p + 1;\\n    while (true) {\\n        int s = last_s - d * (current_p - last_p);\\n        if (s <= 0) break;\\n        all_p.push_back(current_p);\\n        current_p++;\\n    }\\n    sort(all_p.begin(), all_p.end());\\n    all_p.erase(unique(all_p.begin(), all_p.end()), all_p.end());\\n    return all_p;\\n}\\n\\nint get_sales(int p) {\\n    if (p < cost) return 0;\\n    for (const Price& ps : known_prices) {\\n        if (ps.price == p) return ps.sales;\\n    }\\n    if (p > known_prices.back().price) {\\n        int delta = p - known_prices.back().price;\\n        int s = known_prices.back().sales - d * delta;\\n        return max(s, 0);\\n    }\\n    for (size_t i = 1; i < known_prices.size(); ++i) {\\n        int p_prev = known_prices[i-1].price;\\n        int p_curr = known_prices[i].price;\\n        if (p_prev < p && p < p_curr) {\\n            int delta_p = p - p_prev;\\n            int total_p = p_curr - p_prev;\\n            int delta_s = known_prices[i].sales - known_prices[i-1].sales;\\n            return known_prices[i-1].sales + (delta_s * delta_p) \\/ total_p;\\n        }\\n    }\\n    return 0;\\n}\\n\\nint main() {\\n    read_input();\\n    vector<int> all_p = generate_all_p();\\n    auto it = find(all_p.begin(), all_p.end(), expected_price);\\n    if (it == all_p.end()) {\\n        cout << \\\"NO SOLUTION\\\" << endl;\\n        return 0;\\n    }\\n    int p0 = expected_price;\\n    int s0 = get_sales(p0);\\n    if (s0 == 0) {\\n        cout << \\\"NO SOLUTION\\\" << endl;\\n        return 0;\\n    }\\n    vector<double> lower_bounds, upper_bounds;\\n    for (int p : all_p) {\\n        if (p == p0) continue;\\n        int s_p = get_sales(p);\\n        if (s_p == 0) continue;\\n        if (s_p == s0) {\\n            if (p > p0) {\\n                cout << \\\"NO SOLUTION\\\" << endl;\\n                return 0;\\n            }\\n            continue;\\n        }\\n        long long A = (long long)(p0 - cost) * s0 - (long long)(p - cost) * s_p;\\n        int B = s_p - s0;\\n        if (B == 0) continue;\\n        double critical = (double)A \\/ B;\\n        if (B > 0) {\\n            upper_bounds.push_back(critical);\\n        } else {\\n            lower_bounds.push_back(critical);\\n        }\\n    }\\n    double max_lower = -INF;\\n    if (!lower_bounds.empty()) {\\n        max_lower = *max_element(lower_bounds.begin(), lower_bounds.end());\\n    }\\n    double min_upper = INF;\\n    if (!upper_bounds.empty()) {\\n        min_upper = *min_element(upper_bounds.begin(), upper_bounds.end());\\n    }\\n    double start_x = lower_bounds.empty() ? -INF : ceil(max_lower);\\n    double end_x = upper_bounds.empty() ? INF : floor(min_upper);\\n    if (start_x > end_x) {\\n        cout << \\\"NO SOLUTION\\\" << endl;\\n        return 0;\\n    }\\n    int x = 0;\\n    if (start_x <= 0 && 0 <= end_x) {\\n        x = 0;\\n    } else {\\n        if (start_x > 0) {\\n            x = ceil(start_x);\\n        } else {\\n            x = floor(end_x);\\n        }\\n    }\\n    bool valid = true;\\n    int profit0 = (p0 - cost + x) * s0;\\n    for (int p : all_p) {\\n        if (p == p0) continue;\\n        int s_p = get_sales(p);\\n        if (s_p == 0) continue;\\n        int profit_p = (p - cost + x) * s_p;\\n        if (profit_p > profit0) {\\n            valid = false;\\n            break;\\n        }\\n    }\\n    if (valid) {\\n        cout << x << endl;\\n    } else {\\n        cout << \\\"NO SOLUTION\\\" << endl;\\n    }\\n    return 0;\\n}\",\"time\":14,\"memory\":564,\"problem\":{\"pid\":\"P1023\",\"title\":\"[NOIP 2000 \\u666e\\u53ca\\u7ec4] \\u7a0e\\u6536\\u4e0e\\u8865\\u8d34\\u95ee\\u9898\",\"difficulty\":3,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":4299,\"submitTime\":1741521408,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":206990419,\"status\":12,\"enableO2\":true,\"score\":100},\"testCaseGroup\":[[0,1,2,3]],\"showStatus\":true},\"currentTitle\":\"R206990419\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186509,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [
+              {
+                "id": 0,
+                "score": 100,
+                "status": 12,
+                "testCases": {
+                  "0": {
+                    "id": 0,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 564,
+                    "score": 25,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "1": {
+                    "id": 1,
+                    "status": 12,
+                    "time": 3,
+                    "memory": 556,
+                    "score": 25,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "2": {
+                    "id": 2,
+                    "status": 12,
+                    "time": 3,
+                    "memory": 556,
+                    "score": 25,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "3": {
+                    "id": 3,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 564,
+                    "score": 25,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                },
+                "judger": "",
+                "time": 14,
+                "memory": 564,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            ],
+            "finishedCaseCount": 4,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <cmath>\n#include <climits>\n#include <limits>\nusing namespace std;\n\nconst double INF = numeric_limits<double>::infinity();\n\nstruct Price {\n    int price;\n    int sales;\n    Price(int p, int s) : price(p), sales(s) {}\n};\n\nint expected_price;\nint cost, sales_at_cost;\nvector<Price> known_prices;\nint d;\n\nvoid read_input() {\n    cin >> expected_price;\n    cin >> cost >> sales_at_cost;\n    known_prices.push_back(Price(cost, sales_at_cost));\n    int p, s;\n    while (cin >> p >> s && !(p == -1 && s == -1)) {\n        known_prices.push_back(Price(p, s));\n    }\n    sort(known_prices.begin(), known_prices.end(), [](const Price& a, const Price& b) {\n        return a.price < b.price;\n    });\n    cin >> d;\n}\n\nvector<int> generate_all_p() {\n    vector<int> all_p;\n    int max_known = known_prices.back().price;\n    for (int p = cost; p <= max_known; ++p) {\n        all_p.push_back(p);\n    }\n    int last_p = max_known;\n    int last_s = known_prices.back().sales;\n    int current_p = last_p + 1;\n    while (true) {\n        int s = last_s - d * (current_p - last_p);\n        if (s <= 0) break;\n        all_p.push_back(current_p);\n        current_p++;\n    }\n    sort(all_p.begin(), all_p.end());\n    all_p.erase(unique(all_p.begin(), all_p.end()), all_p.end());\n    return all_p;\n}\n\nint get_sales(int p) {\n    if (p < cost) return 0;\n    for (const Price& ps : known_prices) {\n        if (ps.price == p) return ps.sales;\n    }\n    if (p > known_prices.back().price) {\n        int delta = p - known_prices.back().price;\n        int s = known_prices.back().sales - d * delta;\n        return max(s, 0);\n    }\n    for (size_t i = 1; i < known_prices.size(); ++i) {\n        int p_prev = known_prices[i-1].price;\n        int p_curr = known_prices[i].price;\n        if (p_prev < p && p < p_curr) {\n            int delta_p = p - p_prev;\n            int total_p = p_curr - p_prev;\n            int delta_s = known_prices[i].sales - known_prices[i-1].sales;\n            return known_prices[i-1].sales + (delta_s * delta_p) / total_p;\n        }\n    }\n    return 0;\n}\n\nint main() {\n    read_input();\n    vector<int> all_p = generate_all_p();\n    auto it = find(all_p.begin(), all_p.end(), expected_price);\n    if (it == all_p.end()) {\n        cout << \"NO SOLUTION\" << endl;\n        return 0;\n    }\n    int p0 = expected_price;\n    int s0 = get_sales(p0);\n    if (s0 == 0) {\n        cout << \"NO SOLUTION\" << endl;\n        return 0;\n    }\n    vector<double> lower_bounds, upper_bounds;\n    for (int p : all_p) {\n        if (p == p0) continue;\n        int s_p = get_sales(p);\n        if (s_p == 0) continue;\n        if (s_p == s0) {\n            if (p > p0) {\n                cout << \"NO SOLUTION\" << endl;\n                return 0;\n            }\n            continue;\n        }\n        long long A = (long long)(p0 - cost) * s0 - (long long)(p - cost) * s_p;\n        int B = s_p - s0;\n        if (B == 0) continue;\n        double critical = (double)A / B;\n        if (B > 0) {\n            upper_bounds.push_back(critical);\n        } else {\n            lower_bounds.push_back(critical);\n        }\n    }\n    double max_lower = -INF;\n    if (!lower_bounds.empty()) {\n        max_lower = *max_element(lower_bounds.begin(), lower_bounds.end());\n    }\n    double min_upper = INF;\n    if (!upper_bounds.empty()) {\n        min_upper = *min_element(upper_bounds.begin(), upper_bounds.end());\n    }\n    double start_x = lower_bounds.empty() ? -INF : ceil(max_lower);\n    double end_x = upper_bounds.empty() ? INF : floor(min_upper);\n    if (start_x > end_x) {\n        cout << \"NO SOLUTION\" << endl;\n        return 0;\n    }\n    int x = 0;\n    if (start_x <= 0 && 0 <= end_x) {\n        x = 0;\n    } else {\n        if (start_x > 0) {\n            x = ceil(start_x);\n        } else {\n            x = floor(end_x);\n        }\n    }\n    bool valid = true;\n    int profit0 = (p0 - cost + x) * s0;\n    for (int p : all_p) {\n        if (p == p0) continue;\n        int s_p = get_sales(p);\n        if (s_p == 0) continue;\n        int profit_p = (p - cost + x) * s_p;\n        if (profit_p > profit0) {\n            valid = false;\n            break;\n        }\n    }\n    if (valid) {\n        cout << x << endl;\n    } else {\n        cout << \"NO SOLUTION\" << endl;\n    }\n    return 0;\n}",
+        "time": 14,
+        "memory": 564,
+        "problem": {
+          "pid": "P1023",
+          "title": "[NOIP 2000 普及组] 税收与补贴问题",
+          "difficulty": 3,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 4299,
+        "submitTime": 1741521408,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 206990419,
+        "status": 12,
+        "enableO2": true,
+        "score": 100
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R206990419",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186509,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "recordId": "261097721",
+  "url": "https://www.luogu.com.cn/record/261097721?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:28:32.561Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[{\"id\":0,\"score\":0,\"status\":14,\"testCases\":[{\"id\":0,\"status\":7,\"time\":0,\"memory\":0,\"score\":0,\"signal\":11,\"exitCode\":0,\"description\":\"\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}],\"judger\":\"\",\"time\":0,\"memory\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}],\"finishedCaseCount\":1,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#ifndef __linux__\\n#include<windows.h>\\n#endif\\n\\/\\/#include<cstdlib>\\n\\/\\/#include<sys\\/types.h>\\n\\/\\/#include<unistd.h>\\n#include<dirent.h>\\n#include<string>\\n#include<vector>\\n#include<cstring>\\n#include<algorithm>\\nusing namespace std;\\nstring f=__FILE__;int n,l;\\ntypedef std::pair<int,string> p;\\nvector<p>v;char s[1000];\\ninline char*rread(int&r,char*s)\\n{\\n  r=0;\\n  while(*s<'0'||*s>'9')s--;\\n  for(int b=1;*s>='0'&&*s<='9';b*=10,s--)\\n    r+=b*(*s-'0');\\n  return s;\\n}\\n#include<iostream>\\nint main()\\n{\\n  f=f.substr(0,f.find_last_of('.',f.length()));\\n#ifdef __linux__\\n  DIR*dir=opendir((\\\"..\\/..\\/data\\/\\\"+f).c_str());\\n  dirent*ptr;\\n  while((ptr=readdir(dir))!=NULL)\\n    if((l=strlen(ptr->d_name))>3&&\\n       (string(ptr->d_name).rfind(\\\".out\\\",l)==l-4||\\n        string(ptr->d_name).rfind(\\\".ans\\\",l)==l-4))\\n    {\\n      rread(n,ptr->d_name+strlen(ptr->d_name));\\n      v.push_back(p(n,string(ptr->d_name)));\\n    }\\n  realpath(\\\".\\\",s);\\n#else\\n  f=f.substr(f.find_last_of('\\\\\\\\',f.length())+1,f.length());\\n  WIN32_FIND_DATA d;\\n  HANDLE hFind=FindFirstFile((\\\"..\\\\\\\\..\\\\\\\\data\\\\\\\\\\\"+f+\\\"\\\\\\\\*\\\").c_str(), &d);\\n  do if((l=strlen(d.cFileName))>3&&\\n       (string(d.cFileName).rfind(\\\".out\\\",l)==l-4||\\n        string(d.cFileName).rfind(\\\".ans\\\",l)==l-4)){\\n    rread(n,d.cFileName+strlen(d.cFileName));\\n    v.push_back(p(n,string(d.cFileName)));\\n  }while (FindNextFile(hFind, &d) != 0);\\n  FindClose(hFind);\\n  GetModuleFileName(NULL,s,1000);\\n#endif\\n  rread(n,rread(l,s+strlen(s)));\\n  sort(v.begin(),v.end());\\n#ifdef __linux__\\n  system((\\\"cp -f ..\\/..\\/data\\/\\\"+f+'\\/'+v[n].second+\\\" \\\"+f+\\\".out\\\").c_str());\\n#else\\n  system((\\\"copy ..\\\\\\\\..\\\\\\\\data\\\\\\\\\\\"+f+'\\\\\\\\'+v[n].second+\\\" \\\"+f+\\\".out\\\").c_str());\\n#endif\\n  return 0;\\n}\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"U656632\",\"title\":\"============\\u8fd9\\u4e0b\\u9762\\u662f\\u4f5c\\u4e1a============\",\"difficulty\":0,\"fullScore\":0,\"type\":\"U\"},\"contest\":{\"id\":308177,\"name\":\"\\u72b6\\u538b\",\"startTime\":1770271200,\"endTime\":2147483647},\"sourceCodeLength\":1640,\"submitTime\":1770273303,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":261097721,\"status\":14,\"enableO2\":true,\"score\":0},\"testCaseGroup\":[[0]],\"showStatus\":true},\"currentTitle\":\"R261097721\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782185312,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [
+              {
+                "id": 0,
+                "score": 0,
+                "status": 14,
+                "testCases": [
+                  {
+                    "id": 0,
+                    "status": 7,
+                    "time": 0,
+                    "memory": 0,
+                    "score": 0,
+                    "signal": 11,
+                    "exitCode": 0,
+                    "description": "",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                ],
+                "judger": "",
+                "time": 0,
+                "memory": 0,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            ],
+            "finishedCaseCount": 1,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#ifndef __linux__\n#include<windows.h>\n#endif\n//#include<cstdlib>\n//#include<sys/types.h>\n//#include<unistd.h>\n#include<dirent.h>\n#include<string>\n#include<vector>\n#include<cstring>\n#include<algorithm>\nusing namespace std;\nstring f=__FILE__;int n,l;\ntypedef std::pair<int,string> p;\nvector<p>v;char s[1000];\ninline char*rread(int&r,char*s)\n{\n  r=0;\n  while(*s<'0'||*s>'9')s--;\n  for(int b=1;*s>='0'&&*s<='9';b*=10,s--)\n    r+=b*(*s-'0');\n  return s;\n}\n#include<iostream>\nint main()\n{\n  f=f.substr(0,f.find_last_of('.',f.length()));\n#ifdef __linux__\n  DIR*dir=opendir((\"../../data/\"+f).c_str());\n  dirent*ptr;\n  while((ptr=readdir(dir))!=NULL)\n    if((l=strlen(ptr->d_name))>3&&\n       (string(ptr->d_name).rfind(\".out\",l)==l-4||\n        string(ptr->d_name).rfind(\".ans\",l)==l-4))\n    {\n      rread(n,ptr->d_name+strlen(ptr->d_name));\n      v.push_back(p(n,string(ptr->d_name)));\n    }\n  realpath(\".\",s);\n#else\n  f=f.substr(f.find_last_of('\\\\',f.length())+1,f.length());\n  WIN32_FIND_DATA d;\n  HANDLE hFind=FindFirstFile((\"..\\\\..\\\\data\\\\\"+f+\"\\\\*\").c_str(), &d);\n  do if((l=strlen(d.cFileName))>3&&\n       (string(d.cFileName).rfind(\".out\",l)==l-4||\n        string(d.cFileName).rfind(\".ans\",l)==l-4)){\n    rread(n,d.cFileName+strlen(d.cFileName));\n    v.push_back(p(n,string(d.cFileName)));\n  }while (FindNextFile(hFind, &d) != 0);\n  FindClose(hFind);\n  GetModuleFileName(NULL,s,1000);\n#endif\n  rread(n,rread(l,s+strlen(s)));\n  sort(v.begin(),v.end());\n#ifdef __linux__\n  system((\"cp -f ../../data/\"+f+'/'+v[n].second+\" \"+f+\".out\").c_str());\n#else\n  system((\"copy ..\\\\..\\\\data\\\\\"+f+'\\\\'+v[n].second+\" \"+f+\".out\").c_str());\n#endif\n  return 0;\n}",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "U656632",
+          "title": "============这下面是作业============",
+          "difficulty": 0,
+          "fullScore": 0,
+          "type": "U"
+        },
+        "contest": {
+          "id": 308177,
+          "name": "状压",
+          "startTime": 1770271200,
+          "endTime": 2147483647
+        },
+        "sourceCodeLength": 1640,
+        "submitTime": 1770273303,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 261097721,
+        "status": 14,
+        "enableO2": true,
+        "score": 0
+      },
+      "testCaseGroup": [
+        [
+          0
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R261097721",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782185312,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

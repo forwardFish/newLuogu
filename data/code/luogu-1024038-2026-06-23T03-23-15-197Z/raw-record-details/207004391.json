@@ -1,0 +1,271 @@
+{
+  "recordId": "207004391",
+  "url": "https://www.luogu.com.cn/record/207004391?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:48:26.307Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[{\"id\":0,\"score\":84,\"status\":14,\"testCases\":[{\"id\":0,\"status\":12,\"time\":4,\"memory\":556,\"score\":16,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},{\"id\":1,\"status\":12,\"time\":3,\"memory\":680,\"score\":16,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},{\"id\":2,\"status\":12,\"time\":3,\"memory\":556,\"score\":16,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},{\"id\":3,\"status\":12,\"time\":4,\"memory\":680,\"score\":16,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},{\"id\":4,\"status\":6,\"time\":4,\"memory\":556,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 3, read -, expected 0.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},{\"id\":5,\"status\":12,\"time\":4,\"memory\":564,\"score\":20,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}],\"judger\":\"\",\"time\":22,\"memory\":680,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}],\"finishedCaseCount\":6,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <iostream>\\n#include <string>\\n#include <iomanip>\\n#include <cctype>\\n\\nusing namespace std;\\n\\nstruct ExprResult {\\n    char var = '\\\\0';\\n    double x_coeff = 0.0;\\n    double const_coeff = 0.0;\\n};\\n\\nExprResult parse_expression(const string& expr) {\\n    ExprResult result;\\n    int sign = 1; \\/\\/ \\u5f53\\u524d\\u9879\\u7684\\u7b26\\u53f7\\uff0c\\u9ed8\\u8ba4\\u4e3a\\u6b63\\n    int i = 0;\\n    int n = expr.size();\\n\\n    while (i < n) {\\n        \\/\\/ \\u5904\\u7406\\u7b26\\u53f7\\n        if (expr[i] == '+' || expr[i] == '-') {\\n            int new_sign = (expr[i] == '+') ? 1 : -1;\\n            sign *= new_sign; \\/\\/ \\u7d2f\\u79ef\\u7b26\\u53f7\\n            i++;\\n            \\/\\/ \\u8fde\\u7eed\\u7b26\\u53f7\\u5904\\u7406\\uff0c\\u5982 \\\"--\\\" \\u8f6c\\u6362\\u4e3a \\\"+\\\"\\n            while (i < n && (expr[i] == '+' || expr[i] == '-')) {\\n                new_sign = (expr[i] == '+') ? 1 : -1;\\n                sign *= new_sign;\\n                i++;\\n            }\\n        }\\n\\n        \\/\\/ \\u63d0\\u53d6\\u9879\\u7684\\u5b57\\u7b26\\u4e32\\n        int start = i;\\n        while (i < n && !(expr[i] == '+' || expr[i] == '-')) {\\n            i++;\\n        }\\n        string term = expr.substr(start, i - start);\\n        if (term.empty()) {\\n            term = \\\"1\\\"; \\/\\/ \\u5904\\u7406\\u7c7b\\u4f3c \\\"+x\\\" \\u7684\\u60c5\\u51b5\\n        }\\n\\n        \\/\\/ \\u89e3\\u6790\\u9879\\n        size_t var_pos = term.find_first_of(\\\"abcdefghijklmnopqrstuvwxyz\\\");\\n        if (var_pos != string::npos) {\\n            \\/\\/ \\u5904\\u7406\\u672a\\u77e5\\u6570\\u9879\\n            result.var = term[var_pos];\\n            string coeff_str = term.substr(0, var_pos);\\n            double coeff = 1.0;\\n            if (!coeff_str.empty()) {\\n                coeff = stod(coeff_str);\\n            }\\n            result.x_coeff += sign * coeff;\\n        } else {\\n            \\/\\/ \\u5904\\u7406\\u5e38\\u6570\\u9879\\n            if (!term.empty()) {\\n                double coeff = stod(term);\\n                result.const_coeff += sign * coeff;\\n            }\\n        }\\n\\n        sign = 1; \\/\\/ \\u91cd\\u7f6e\\u7b26\\u53f7\\n    }\\n\\n    return result;\\n}\\n\\nint main() {\\n    string equation;\\n    getline(cin, equation);\\n\\n    size_t equal_pos = equation.find('=');\\n    string left_expr = equation.substr(0, equal_pos);\\n    string right_expr = equation.substr(equal_pos + 1);\\n\\n    ExprResult left = parse_expression(left_expr);\\n    ExprResult right = parse_expression(right_expr);\\n\\n    \\/\\/ \\u5408\\u5e76\\u65b9\\u7a0b: ax + b = cx + d \\u2192 (a - c)x + (b - d) = 0\\n    double total_x = left.x_coeff - right.x_coeff;\\n    double total_const = right.const_coeff - left.const_coeff;\\n\\n    char var = (left.var != '\\\\0') ? left.var : right.var;\\n\\n    if (total_x == 0) {\\n        cout << var << \\\"=0.000\\\" << endl;\\n    } else {\\n        double ans = total_const \\/ total_x;\\n        cout << var << \\\"=\\\" << fixed << setprecision(3) << ans << endl;\\n    }\\n\\n    return 0;\\n}\",\"time\":22,\"memory\":680,\"problem\":{\"pid\":\"P1022\",\"title\":\"[NOIP 2000 \\u666e\\u53ca\\u7ec4] \\u8ba1\\u7b97\\u5668\\u7684\\u6539\\u826f\",\"difficulty\":3,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":2468,\"submitTime\":1741524213,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":207004391,\"status\":14,\"enableO2\":true,\"score\":84},\"testCaseGroup\":[[0,1,2,3,4,5]],\"showStatus\":true},\"currentTitle\":\"R207004391\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186506,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [
+              {
+                "id": 0,
+                "score": 84,
+                "status": 14,
+                "testCases": [
+                  {
+                    "id": 0,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 556,
+                    "score": 16,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  {
+                    "id": 1,
+                    "status": 12,
+                    "time": 3,
+                    "memory": 680,
+                    "score": 16,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  {
+                    "id": 2,
+                    "status": 12,
+                    "time": 3,
+                    "memory": 556,
+                    "score": 16,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  {
+                    "id": 3,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 680,
+                    "score": 16,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  {
+                    "id": 4,
+                    "status": 6,
+                    "time": 4,
+                    "memory": 556,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 3, read -, expected 0.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  {
+                    "id": 5,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 564,
+                    "score": 20,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                ],
+                "judger": "",
+                "time": 22,
+                "memory": 680,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            ],
+            "finishedCaseCount": 6,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <iostream>\n#include <string>\n#include <iomanip>\n#include <cctype>\n\nusing namespace std;\n\nstruct ExprResult {\n    char var = '\\0';\n    double x_coeff = 0.0;\n    double const_coeff = 0.0;\n};\n\nExprResult parse_expression(const string& expr) {\n    ExprResult result;\n    int sign = 1; // 当前项的符号，默认为正\n    int i = 0;\n    int n = expr.size();\n\n    while (i < n) {\n        // 处理符号\n        if (expr[i] == '+' || expr[i] == '-') {\n            int new_sign = (expr[i] == '+') ? 1 : -1;\n            sign *= new_sign; // 累积符号\n            i++;\n            // 连续符号处理，如 \"--\" 转换为 \"+\"\n            while (i < n && (expr[i] == '+' || expr[i] == '-')) {\n                new_sign = (expr[i] == '+') ? 1 : -1;\n                sign *= new_sign;\n                i++;\n            }\n        }\n\n        // 提取项的字符串\n        int start = i;\n        while (i < n && !(expr[i] == '+' || expr[i] == '-')) {\n            i++;\n        }\n        string term = expr.substr(start, i - start);\n        if (term.empty()) {\n            term = \"1\"; // 处理类似 \"+x\" 的情况\n        }\n\n        // 解析项\n        size_t var_pos = term.find_first_of(\"abcdefghijklmnopqrstuvwxyz\");\n        if (var_pos != string::npos) {\n            // 处理未知数项\n            result.var = term[var_pos];\n            string coeff_str = term.substr(0, var_pos);\n            double coeff = 1.0;\n            if (!coeff_str.empty()) {\n                coeff = stod(coeff_str);\n            }\n            result.x_coeff += sign * coeff;\n        } else {\n            // 处理常数项\n            if (!term.empty()) {\n                double coeff = stod(term);\n                result.const_coeff += sign * coeff;\n            }\n        }\n\n        sign = 1; // 重置符号\n    }\n\n    return result;\n}\n\nint main() {\n    string equation;\n    getline(cin, equation);\n\n    size_t equal_pos = equation.find('=');\n    string left_expr = equation.substr(0, equal_pos);\n    string right_expr = equation.substr(equal_pos + 1);\n\n    ExprResult left = parse_expression(left_expr);\n    ExprResult right = parse_expression(right_expr);\n\n    // 合并方程: ax + b = cx + d → (a - c)x + (b - d) = 0\n    double total_x = left.x_coeff - right.x_coeff;\n    double total_const = right.const_coeff - left.const_coeff;\n\n    char var = (left.var != '\\0') ? left.var : right.var;\n\n    if (total_x == 0) {\n        cout << var << \"=0.000\" << endl;\n    } else {\n        double ans = total_const / total_x;\n        cout << var << \"=\" << fixed << setprecision(3) << ans << endl;\n    }\n\n    return 0;\n}",
+        "time": 22,
+        "memory": 680,
+        "problem": {
+          "pid": "P1022",
+          "title": "[NOIP 2000 普及组] 计算器的改良",
+          "difficulty": 3,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 2468,
+        "submitTime": 1741524213,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 207004391,
+        "status": 14,
+        "enableO2": true,
+        "score": 84
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R207004391",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186506,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

@@ -1,0 +1,2 @@
+#include<bits/stdc++.h>
+using namespace std;int a[1000][1000]; int main(){int n,m,k,x,y,map=0;cin>>n>>m>>k;for(int i=1;i<=m;i++){cin>>x>>y;x+=2;y+=2;for(int j=x-2;j<=x+2;j++){a[j][y]=1;}for(int j=y-2;j<=y+2;j++){a[x][j]=1;}a[x+1][y+1]=1;a[x-1][y-1]=1;a[x+1][y-1]=1;a[x-1][y+1]=1;}for(int i=1;i<=k;i++){cin>>x>>y;x+=2;y+=2;for(int j=x-2;j<=x+2;j++){for(int k=y-2;k<=y+2;k++){a[j][k]=1;}}}for(int i=3;i<=n+2;i++){for(int j=3;j<=n+2;j++){if(a[i][j]==0){map++;}}}cout<<map;return 0;}

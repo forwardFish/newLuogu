@@ -1,0 +1,388 @@
+{
+  "recordId": "215164123",
+  "url": "https://www.luogu.com.cn/record/215164123?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:45:40.564Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[{\"id\":0,\"score\":100,\"status\":12,\"testCases\":{\"3\":{\"id\":3,\"status\":12,\"time\":4,\"memory\":536,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"4\":{\"id\":4,\"status\":12,\"time\":4,\"memory\":552,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"8\":{\"id\":8,\"status\":12,\"time\":4,\"memory\":556,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"0\":{\"id\":0,\"status\":12,\"time\":3,\"memory\":600,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"6\":{\"id\":6,\"status\":12,\"time\":4,\"memory\":552,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"1\":{\"id\":1,\"status\":12,\"time\":4,\"memory\":568,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"5\":{\"id\":5,\"status\":12,\"time\":4,\"memory\":556,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"10\":{\"id\":10,\"status\":12,\"time\":218,\"memory\":2528,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"11\":{\"id\":11,\"status\":12,\"time\":218,\"memory\":2528,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"7\":{\"id\":7,\"status\":12,\"time\":5,\"memory\":564,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"2\":{\"id\":2,\"status\":12,\"time\":4,\"memory\":540,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"9\":{\"id\":9,\"status\":12,\"time\":4,\"memory\":588,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"13\":{\"id\":13,\"status\":12,\"time\":222,\"memory\":2504,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"12\":{\"id\":12,\"status\":12,\"time\":220,\"memory\":2528,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"14\":{\"id\":14,\"status\":12,\"time\":219,\"memory\":2532,\"score\":16,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}},\"judger\":\"\",\"time\":1137,\"memory\":2532,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}],\"finishedCaseCount\":15,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <bits\\/stdc++.h>\\nusing namespace std;\\n\\n\\/*\\n    \\u9898\\u76ee\\u5206\\u6790\\uff1a\\n    \\u7ed9\\u5b9a n\\uff0c\\u8981\\u6c42 K(n) = (1\\/256)*(12^n - 4*8^n + 6*4^n + (-4)^n) mod 1e9\\u3002\\n    n \\u6700\\u5927 <2^63\\uff0c\\u591a\\u7ec4\\u8be2\\u95ee\\u6700\\u591a 2e5 \\u7ec4\\u3002\\n    \\u76f4\\u63a5 fast mod pow \\u9700\\u8981\\u6ce8\\u610f\\u9664\\u4ee5256\\u53ca\\u6a21\\u6570\\u7ec4\\u5408\\u95ee\\u9898\\uff0c\\u56e0\\u4e3a 1e9=10^9=2^9*5^9\\uff0c256=2^8\\u3002\\n    \\u53d1\\u73b0\\u516c\\u5f0f\\u6570\\u503c(12^n - 4*8^n + 6*4^n + (-4)^n)\\u603b\\u662f 256 \\u7684\\u500d\\u6570\\uff0c\\u6240\\u4ee5\\u7ed3\\u679c\\u662f\\u6574\\u6570\\u3002\\n    \\n    \\u8ba1\\u7b97\\u601d\\u8def\\uff1a\\n    - \\u5c06\\u95ee\\u9898\\u62c6\\u5206\\u6a21 2^17 \\u548c\\u6a21 5^9 \\u8fdb\\u884c\\u8ba1\\u7b97\\uff0c\\u7136\\u540e\\u7528\\u4e2d\\u56fd\\u5269\\u4f59\\u5b9a\\u7406\\u5408\\u5e76\\uff1a\\n      1. \\u56e0\\u4e3a n>=9 \\u65f6\\uff0c12^n,8^n,4^n,(-4)^n \\u5728 mod 2^17 (131072) \\u4e0b\\u5747\\u4e3a0\\uff08\\u56e0\\u4e3a\\u5e95\\u6570\\u5747\\u542b2\\u7684\\u9ad8\\u6b21\\u5e42\\uff09\\uff0c\\u6240\\u4ee5\\u516c\\u5f0f\\u5728 mod 2^17 \\u4e0b\\u7ed3\\u679c\\u4e3a0\\u3002\\u6545 X mod 2^17=0\\u3002\\n         \\u5c06 X = 12^n - 4*8^n + 6*4^n + (-4)^n\\u3002\\n         \\u53ef\\u77e5 n>=9 \\u65f6 X \\u2261 0 (mod 2^17)\\uff0c\\u8fdb\\u4e00\\u6b65 Y = X\\/256 mod 2^9 \\u4e5f\\u4e3a0\\u3002\\n      2. \\u5728 mod 5^9 \\u4e0b (1953125)\\uff0c\\u4f7f\\u7528\\u5feb\\u901f\\u5e42\\u8ba1\\u7b97 12^n,8^n,4^n,(-4)^n mod 5^9\\uff0c\\u7136\\u540e\\u8ba1\\u7b97 X5 = (12^n - 4*8^n + 6*4^n + (-4)^n) mod 5^9\\u3002\\n         \\u7531\\u4e8e 256 \\u4e0e 5^9 \\u4e92\\u8d28\\uff0c\\u6c42\\u9006\\uff0cY5 = X5 * inv(256) mod 5^9\\u3002\\n      3. \\u7531\\u4e2d\\u56fd\\u5269\\u4f59\\u5b9a\\u7406\\u5408\\u5e76 Y = Y mod 2^9 (2^9=512, \\u7531\\u4e0a\\u6b65\\u7ed3\\u679c\\u4e3a0) \\u548c Y mod 5^9 (Y5)\\u3002\\n         \\u5373\\u6c42 Y \\u6ee1\\u8db3 Y \\u2261 0 (mod 512) \\u4e14 Y \\u2261 Y5 (mod 1953125)\\u3002\\n         \\u8bbe Y = Y5 + k*1953125\\uff0c\\u4ee3\\u5165\\u6a21 512 \\u5f97 k * (1953125 mod 512) \\u2261 -Y5 (mod 512)\\u3002\\n         \\u8ba1\\u7b97 1953125 mod 512 = 357\\uff0c\\u9006\\u5143 357^{-1} mod 512 = 109\\uff08\\u53ef\\u9884\\u5148\\u8ba1\\u7b97\\uff09\\u3002\\n         \\u5f97 k = (-Y5 * 109) mod 512\\u3002\\u4ee4 diff = (512 - Y5 mod 512) mod 512\\uff0c\\u5219 k = diff * 109 mod 512\\u3002\\n         \\u6700\\u7ec8 Y = Y5 + k*1953125\\uff0c\\u7b54\\u6848\\u4e3a Y mod 1e9\\u3002\\n    - \\u7279\\u6b8a\\u60c5\\u51b5\\uff1an<9 \\u65f6\\uff0c\\u76f4\\u63a5\\u7528\\u516c\\u5f0f\\u8ba1\\u7b97\\uff08\\u56e0\\u6570\\u503c\\u8f83\\u5c0f\\u76f4\\u63a5\\u6574\\u9664256\\u5f97\\u5230\\u7cbe\\u786e\\u6574\\u6570\\uff09\\uff0c\\u5e76\\u53d6 mod 1e9\\u3002\\n    - \\u56e0\\u4e3a\\u67e5\\u8be2\\u591a\\u4e14 n \\u53ef\\u8fbe 2^63\\uff0c\\u5feb\\u901f\\u5e42\\u53d6\\u6a21\\u7528\\u4e8e 5^9\\uff0c\\u4ee5 n mod phi(5^9)=1562500 \\u964d\\u4f4e\\u6b21\\u6570\\uff0cphi(5^9)=5^9-5^8=1562500\\u3002\\n    - \\u9884\\u8ba1\\u7b97 256 \\u5728 5^9 \\u4e0a\\u7684\\u9006\\u5143\\u4e3a inv256_mod5 = 1121521\\uff1b\\u540c\\u65f6\\u8ba1\\u7b97 1953125 mod 512 = 357 \\u53ca\\u5176\\u9006\\u5143 109\\u3002\\n*\\/\\n\\n\\/\\/ \\u6a21\\u6570\\u5e38\\u91cf\\nstatic const int MOD2 = 131072;     \\/\\/ 2^17\\nstatic const int MOD5 = 1953125;    \\/\\/ 5^9\\nstatic const int INV256_MOD5 = 1121521; \\/\\/ 256 \\u53d6 5^9 \\u6a21\\u7684\\u9006\\u5143\\uff08precomputed\\uff09\\nstatic const int INV357_MOD512 = 109;   \\/\\/ 357 \\u7684\\u6a21 512 (2^9) \\u9006\\u5143\\n\\n\\/\\/ \\u5feb\\u901f\\u5e42\\uff1a\\u8ba1\\u7b97 (base^exp) mod mod (\\u4f7f\\u7528 128 \\u4f4d\\u4e58\\u6cd5\\u9632\\u6ea2\\u51fa)\\nlong long mod_pow(long long base, long long exp, int mod) {\\n    long long result = 1;\\n    base %= mod;\\n    while (exp > 0) {\\n        if (exp & 1LL) result = (__int128)result * base % mod;\\n        base = (__int128)base * base % mod;\\n        exp >>= 1LL;\\n    }\\n    return result;\\n}\\n\\n\\/\\/ \\u9884\\u8ba1\\u7b97 n<9 \\u65f6\\u7684 K(n) \\u7cbe\\u786e\\u503c mod 1e9\\uff08\\u76f4\\u63a5\\u901a\\u8fc7\\u516c\\u5f0f\\u7b97\\uff0c\\u6570\\u503c\\u8f83\\u5c0f\\uff09\\nlong long Ksmall[9] = {\\n    0,       \\/\\/ 0 \\u4e0d\\u4f7f\\u7528\\n    0,       \\/\\/ n=1\\n    0,       \\/\\/ n=2\\n    0,       \\/\\/ n=3\\n    24,      \\/\\/ n=4\\n    480,     \\/\\/ n=5\\n    7680,    \\/\\/ n=6\\n    107520,  \\/\\/ n=7\\n    1419264  \\/\\/ n=8\\n};\\n\\n\\/\\/ \\u5feb\\u901f\\u8f93\\u5165\\u8f93\\u51fa\\u8bbe\\u7f6e\\nstatic const int IN_BUF = 1<<20;\\nstatic char inbuf[IN_BUF];\\nstatic int inpos = 0, inlen = 0;\\ninline char readChar() {\\n    if (inpos == inlen) {\\n        inpos = 0;\\n        inlen = fread(inbuf, 1, IN_BUF, stdin);\\n        if (inlen == 0) return EOF;\\n    }\\n    return inbuf[inpos++];\\n}\\ninline bool readULL(unsigned long long &x) {\\n    char c; x = 0;\\n    do {\\n        c = readChar();\\n        if (c == EOF) return false;\\n    } while (c < '0' || c > '9');\\n    for (; c >= '0' && c <= '9'; c = readChar()) {\\n        x = x * 10 + (c - '0');\\n    }\\n    return true;\\n}\\n\\nstatic const int OUT_BUF = 1<<20;\\nstatic char outbuf[OUT_BUF];\\nstatic int outpos = 0;\\ninline void flushOut() {\\n    fwrite(outbuf, 1, outpos, stdout);\\n    outpos = 0;\\n}\\ninline void writeULL(unsigned long long x) {\\n    if (x == 0) {\\n        outbuf[outpos++] = '0';\\n    } else {\\n        char s[32];\\n        int n = 0;\\n        while (x > 0) {\\n            s[n++] = char('0' + (x % 10));\\n            x \\/= 10;\\n        }\\n        while (n--) outbuf[outpos++] = s[n];\\n    }\\n    outbuf[outpos++] = '\\\\n';\\n    if (outpos > OUT_BUF - 50) flushOut();\\n}\\n\\nint main() {\\n    unsigned long long n;\\n    while (readULL(n)) {\\n        if (n == 0) break; \\/\\/ \\u8f93\\u51650\\u7ed3\\u675f\\n        long long ans = 0;\\n        if (n < 9) {\\n            \\/\\/ n<9 \\u76f4\\u63a5\\u8f93\\u51fa\\u9884\\u8ba1\\u7b97\\u7ed3\\u679c\\n            ans = Ksmall[n] % 1000000000;\\n        } else {\\n            \\/\\/ n>=9\\uff0c\\u4f7f\\u7528\\u6a215^9\\u548c\\u6a212^9\\u7684\\u65b9\\u6cd5\\n            long long exp = n % 1562500;        \\/\\/ 5^9 \\u7684 phi \\u503c\\n            if (exp == 0) exp = 1562500;\\n            long long p12 = mod_pow(12, exp, MOD5);\\n            long long p8  = mod_pow(8,  exp, MOD5);\\n            long long p4  = mod_pow(4,  exp, MOD5);\\n            long long pm4 = (n & 1ULL) ? (MOD5 - p4) : p4; \\/\\/ (-4)^n mod 5^9\\n            long long X5 = (p12 - 4LL*p8 + 6LL*p4 + pm4) % MOD5;\\n            if (X5 < 0) X5 += MOD5;\\n            long long Y5 = (X5 * INV256_MOD5) % MOD5; \\/\\/ \\u9664\\u4ee5256\\n            \\/\\/ \\u5408\\u5e76 CRT\\uff1aY \\u2261 0 (mod 512), Y \\u2261 Y5 (mod 1953125)\\n            int Y5_mod512 = int(Y5 & 511);\\n            int diff = (512 - Y5_mod512) & 511;  \\/\\/ -Y5 (mod 512)\\n            int k = (diff * INV357_MOD512) & 511;\\n            long long Y = Y5 + (long long)k * MOD5;\\n            ans = Y % 1000000000;\\n        }\\n        writeULL((unsigned long long)ans);\\n    }\\n    flushOut();\\n    return 0;\\n}\\n\",\"time\":1137,\"memory\":2532,\"problem\":{\"pid\":\"P2012\",\"title\":\"\\u62ef\\u6551\\u4e16\\u754c2\",\"difficulty\":6,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":4481,\"submitTime\":1745654726,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":215164123,\"status\":12,\"enableO2\":true,\"score\":100},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]],\"showStatus\":true},\"currentTitle\":\"R215164123\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186340,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [
+              {
+                "id": 0,
+                "score": 100,
+                "status": 12,
+                "testCases": {
+                  "0": {
+                    "id": 0,
+                    "status": 12,
+                    "time": 3,
+                    "memory": 600,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "1": {
+                    "id": 1,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 568,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "2": {
+                    "id": 2,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 540,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "3": {
+                    "id": 3,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 536,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "4": {
+                    "id": 4,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 552,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "5": {
+                    "id": 5,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 556,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "6": {
+                    "id": 6,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 552,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "7": {
+                    "id": 7,
+                    "status": 12,
+                    "time": 5,
+                    "memory": 564,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "8": {
+                    "id": 8,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 556,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "9": {
+                    "id": 9,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 588,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "10": {
+                    "id": 10,
+                    "status": 12,
+                    "time": 218,
+                    "memory": 2528,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "11": {
+                    "id": 11,
+                    "status": 12,
+                    "time": 218,
+                    "memory": 2528,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "12": {
+                    "id": 12,
+                    "status": 12,
+                    "time": 220,
+                    "memory": 2528,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "13": {
+                    "id": 13,
+                    "status": 12,
+                    "time": 222,
+                    "memory": 2504,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "14": {
+                    "id": 14,
+                    "status": 12,
+                    "time": 219,
+                    "memory": 2532,
+                    "score": 16,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                },
+                "judger": "",
+                "time": 1137,
+                "memory": 2532,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            ],
+            "finishedCaseCount": 15,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <bits/stdc++.h>\nusing namespace std;\n\n/*\n    题目分析：\n    给定 n，要求 K(n) = (1/256)*(12^n - 4*8^n + 6*4^n + (-4)^n) mod 1e9。\n    n 最大 <2^63，多组询问最多 2e5 组。\n    直接 fast mod pow 需要注意除以256及模数组合问题，因为 1e9=10^9=2^9*5^9，256=2^8。\n    发现公式数值(12^n - 4*8^n + 6*4^n + (-4)^n)总是 256 的倍数，所以结果是整数。\n    \n    计算思路：\n    - 将问题拆分模 2^17 和模 5^9 进行计算，然后用中国剩余定理合并：\n      1. 因为 n>=9 时，12^n,8^n,4^n,(-4)^n 在 mod 2^17 (131072) 下均为0（因为底数均含2的高次幂），所以公式在 mod 2^17 下结果为0。故 X mod 2^17=0。\n         将 X = 12^n - 4*8^n + 6*4^n + (-4)^n。\n         可知 n>=9 时 X ≡ 0 (mod 2^17)，进一步 Y = X/256 mod 2^9 也为0。\n      2. 在 mod 5^9 下 (1953125)，使用快速幂计算 12^n,8^n,4^n,(-4)^n mod 5^9，然后计算 X5 = (12^n - 4*8^n + 6*4^n + (-4)^n) mod 5^9。\n         由于 256 与 5^9 互质，求逆，Y5 = X5 * inv(256) mod 5^9。\n      3. 由中国剩余定理合并 Y = Y mod 2^9 (2^9=512, 由上步结果为0) 和 Y mod 5^9 (Y5)。\n         即求 Y 满足 Y ≡ 0 (mod 512) 且 Y ≡ Y5 (mod 1953125)。\n         设 Y = Y5 + k*1953125，代入模 512 得 k * (1953125 mod 512) ≡ -Y5 (mod 512)。\n         计算 1953125 mod 512 = 357，逆元 357^{-1} mod 512 = 109（可预先计算）。\n         得 k = (-Y5 * 109) mod 512。令 diff = (512 - Y5 mod 512) mod 512，则 k = diff * 109 mod 512。\n         最终 Y = Y5 + k*1953125，答案为 Y mod 1e9。\n    - 特殊情况：n<9 时，直接用公式计算（因数值较小直接整除256得到精确整数），并取 mod 1e9。\n    - 因为查询多且 n 可达 2^63，快速幂取模用于 5^9，以 n mod phi(5^9)=1562500 降低次数，phi(5^9)=5^9-5^8=1562500。\n    - 预计算 256 在 5^9 上的逆元为 inv256_mod5 = 1121521；同时计算 1953125 mod 512 = 357 及其逆元 109。\n*/\n\n// 模数常量\nstatic const int MOD2 = 131072;     // 2^17\nstatic const int MOD5 = 1953125;    // 5^9\nstatic const int INV256_MOD5 = 1121521; // 256 取 5^9 模的逆元（precomputed）\nstatic const int INV357_MOD512 = 109;   // 357 的模 512 (2^9) 逆元\n\n// 快速幂：计算 (base^exp) mod mod (使用 128 位乘法防溢出)\nlong long mod_pow(long long base, long long exp, int mod) {\n    long long result = 1;\n    base %= mod;\n    while (exp > 0) {\n        if (exp & 1LL) result = (__int128)result * base % mod;\n        base = (__int128)base * base % mod;\n        exp >>= 1LL;\n    }\n    return result;\n}\n\n// 预计算 n<9 时的 K(n) 精确值 mod 1e9（直接通过公式算，数值较小）\nlong long Ksmall[9] = {\n    0,       // 0 不使用\n    0,       // n=1\n    0,       // n=2\n    0,       // n=3\n    24,      // n=4\n    480,     // n=5\n    7680,    // n=6\n    107520,  // n=7\n    1419264  // n=8\n};\n\n// 快速输入输出设置\nstatic const int IN_BUF = 1<<20;\nstatic char inbuf[IN_BUF];\nstatic int inpos = 0, inlen = 0;\ninline char readChar() {\n    if (inpos == inlen) {\n        inpos = 0;\n        inlen = fread(inbuf, 1, IN_BUF, stdin);\n        if (inlen == 0) return EOF;\n    }\n    return inbuf[inpos++];\n}\ninline bool readULL(unsigned long long &x) {\n    char c; x = 0;\n    do {\n        c = readChar();\n        if (c == EOF) return false;\n    } while (c < '0' || c > '9');\n    for (; c >= '0' && c <= '9'; c = readChar()) {\n        x = x * 10 + (c - '0');\n    }\n    return true;\n}\n\nstatic const int OUT_BUF = 1<<20;\nstatic char outbuf[OUT_BUF];\nstatic int outpos = 0;\ninline void flushOut() {\n    fwrite(outbuf, 1, outpos, stdout);\n    outpos = 0;\n}\ninline void writeULL(unsigned long long x) {\n    if (x == 0) {\n        outbuf[outpos++] = '0';\n    } else {\n        char s[32];\n        int n = 0;\n        while (x > 0) {\n            s[n++] = char('0' + (x % 10));\n            x /= 10;\n        }\n        while (n--) outbuf[outpos++] = s[n];\n    }\n    outbuf[outpos++] = '\\n';\n    if (outpos > OUT_BUF - 50) flushOut();\n}\n\nint main() {\n    unsigned long long n;\n    while (readULL(n)) {\n        if (n == 0) break; // 输入0结束\n        long long ans = 0;\n        if (n < 9) {\n            // n<9 直接输出预计算结果\n            ans = Ksmall[n] % 1000000000;\n        } else {\n            // n>=9，使用模5^9和模2^9的方法\n            long long exp = n % 1562500;        // 5^9 的 phi 值\n            if (exp == 0) exp = 1562500;\n            long long p12 = mod_pow(12, exp, MOD5);\n            long long p8  = mod_pow(8,  exp, MOD5);\n            long long p4  = mod_pow(4,  exp, MOD5);\n            long long pm4 = (n & 1ULL) ? (MOD5 - p4) : p4; // (-4)^n mod 5^9\n            long long X5 = (p12 - 4LL*p8 + 6LL*p4 + pm4) % MOD5;\n            if (X5 < 0) X5 += MOD5;\n            long long Y5 = (X5 * INV256_MOD5) % MOD5; // 除以256\n            // 合并 CRT：Y ≡ 0 (mod 512), Y ≡ Y5 (mod 1953125)\n            int Y5_mod512 = int(Y5 & 511);\n            int diff = (512 - Y5_mod512) & 511;  // -Y5 (mod 512)\n            int k = (diff * INV357_MOD512) & 511;\n            long long Y = Y5 + (long long)k * MOD5;\n            ans = Y % 1000000000;\n        }\n        writeULL((unsigned long long)ans);\n    }\n    flushOut();\n    return 0;\n}\n",
+        "time": 1137,
+        "memory": 2532,
+        "problem": {
+          "pid": "P2012",
+          "title": "拯救世界2",
+          "difficulty": 6,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 4481,
+        "submitTime": 1745654726,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 215164123,
+        "status": 12,
+        "enableO2": true,
+        "score": 100
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R215164123",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186340,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "recordId": "213360679",
+  "url": "https://www.luogu.com.cn/record/213360679?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:46:12.056Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_2id223di\\/src:1:1: \\u9519\\u8bef\\uff1a\\u2018include\\u2019\\u4e0d\\u662f\\u4e00\\u4e2a\\u7c7b\\u578b\\u540d\\n    1 | include<bits\\/stdc++.h>\\n      | ^~~~~~~\\n\\/tmp\\/compiler_2id223di\\/src:3:1: \\u9519\\u8bef\\uff1a\\u2018string\\u2019\\u4e0d\\u662f\\u4e00\\u4e2a\\u7c7b\\u578b\\u540d\\n    3 | string Sup[101],Sdown[101],ans[101];\\n      | ^~~~~~\\n\\/tmp\\/compiler_2id223di\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_2id223di\\/src:8:2: \\u9519\\u8bef\\uff1a\\u2018cin\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n    8 |  cin>>n;\\n      |  ^~~\\n\\/tmp\\/compiler_2id223di\\/src:11:3: \\u9519\\u8bef\\uff1a\\u2018string\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   11 |   string s1,s2;\\n      |   ^~~~~~\\n\\/tmp\\/compiler_2id223di\\/src:12:8: \\u9519\\u8bef\\uff1a\\u2018s1\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   12 |   cin>>s1>>s2;\\n      |        ^~\\n\\/tmp\\/compiler_2id223di\\/src:12:12: \\u9519\\u8bef\\uff1a\\u2018s2\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   12 |   cin>>s1>>s2;\\n      |            ^~\\n\\/tmp\\/compiler_2id223di\\/src:16:4: \\u9519\\u8bef\\uff1a\\u2018Sup\\u2019 was not declared in this scope; did you mean \\u2018up\\u2019?\\n   16 |    Sup[up]=s1;\\n      |    ^~~\\n      |    up\\n\\/tmp\\/compiler_2id223di\\/src:21:4: \\u9519\\u8bef\\uff1a\\u2018Sdown\\u2019 was not declared in this scope; did you mean \\u2018down\\u2019?\\n   21 |    Sdown[down]=s1;\\n      |    ^~~~~\\n      |    down\\n\\/tmp\\/compiler_2id223di\\/src:25:4: \\u9519\\u8bef\\uff1a\\u2018ans\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   25 |    ans[i]=s1;\\n      |    ^~~\\n\\/tmp\\/compiler_2id223di\\/src:30:6: \\u9519\\u8bef\\uff1a\\u2018ans\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   30 |   if(ans[i]!=\\\"\\\") continue;\\n      |      ^~~\\n\\/tmp\\/compiler_2id223di\\/src:36:12: \\u9519\\u8bef\\uff1a\\u2018Sdown\\u2019 was not declared in this scope; did you mean \\u2018down\\u2019?\\n   36 |     ans[i]=Sdown[now1];\\n      |            ^~~~~\\n      |            down\\n\\/tmp\\/compiler_2id223di\\/src:41:12: \\u9519\\u8bef\\uff1a\\u2018Sup\\u2019 was not declared in this scope; did you mean \\u2018up\\u2019?\\n   41 |     ans[i]=Sup[now2];\\n      |            ^~~\\n      |            up\\n\\/tmp\\/compiler_2id223di\\/src:46:3: \\u9519\\u8bef\\uff1a\\u2018cout\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   46 |   cout<<ans[i]<<endl;\\n      |   ^~~~\\n\\/tmp\\/compiler_2id223di\\/src:46:9: \\u9519\\u8bef\\uff1a\\u2018ans\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   46 |   cout<<ans[i]<<endl;\\n      |         ^~~\\n\\/tmp\\/compiler_2id223di\\/src:46:17: \\u9519\\u8bef\\uff1a\\u2018endl\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   46 |   cout<<ans[i]<<endl;\\n      |                 ^~~~\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"include<bits\\/stdc++.h>\\nusing namespace std;\\nstring Sup[101],Sdown[101],ans[101];\\nint up=0,down=0,now1=0,now2=0;\\nint n;\\nint main()\\n{\\n\\tcin>>n;\\n\\tfor(int i=1;i<=n;i++)\\n\\t{\\n\\t\\tstring s1,s2;\\n\\t\\tcin>>s1>>s2;\\n\\t\\tif(s2==\\\"UP\\\")\\n\\t\\t{\\n\\t\\t\\tup++;\\n\\t\\t\\tSup[up]=s1;\\n\\t\\t}\\n\\t\\tif(s2==\\\"DOWN\\\")\\n\\t\\t{\\n\\t\\t\\tdown++;\\n\\t\\t\\tSdown[down]=s1;\\n\\t\\t}\\n\\t\\tif(s2==\\\"SAME\\\")\\n\\t\\t{\\n\\t\\t\\tans[i]=s1;\\n\\t\\t}\\n\\t}\\n\\tfor(int i=1;i<=n;i++)\\n\\t{\\n\\t\\tif(ans[i]!=\\\"\\\") continue;\\n\\t\\telse\\n\\t\\t{\\n\\t\\t\\tif(now1<down)\\n\\t\\t\\t{\\n\\t\\t\\t\\tnow1++;\\n\\t\\t\\t\\tans[i]=Sdown[now1];\\n\\t\\t\\t}\\n\\t\\t\\telse\\n\\t\\t\\t{\\n\\t\\t\\t\\tnow2++;\\n\\t\\t\\t\\tans[i]=Sup[now2];\\n\\t\\t\\t}\\n\\t\\t}\\n\\t}\\n\\tfor(int i=1;i<=n;i++)\\n\\t\\tcout<<ans[i]<<endl;\\n\\treturn 0;\\n}\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P1159\",\"title\":\"[CHCI 2001 National Competition #2 Seniors] \\u6392\\u884c\\u699c\",\"difficulty\":3,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":585,\"submitTime\":1744444617,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":213360679,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9]],\"showStatus\":true},\"currentTitle\":\"R213360679\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186372,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_2id223di/src:1:1: 错误：‘include’不是一个类型名\n    1 | include<bits/stdc++.h>\n      | ^~~~~~~\n/tmp/compiler_2id223di/src:3:1: 错误：‘string’不是一个类型名\n    3 | string Sup[101],Sdown[101],ans[101];\n      | ^~~~~~\n/tmp/compiler_2id223di/src: 在函数‘int main()’中:\n/tmp/compiler_2id223di/src:8:2: 错误：‘cin’在此作用域中尚未声明\n    8 |  cin>>n;\n      |  ^~~\n/tmp/compiler_2id223di/src:11:3: 错误：‘string’在此作用域中尚未声明\n   11 |   string s1,s2;\n      |   ^~~~~~\n/tmp/compiler_2id223di/src:12:8: 错误：‘s1’在此作用域中尚未声明\n   12 |   cin>>s1>>s2;\n      |        ^~\n/tmp/compiler_2id223di/src:12:12: 错误：‘s2’在此作用域中尚未声明\n   12 |   cin>>s1>>s2;\n      |            ^~\n/tmp/compiler_2id223di/src:16:4: 错误：‘Sup’ was not declared in this scope; did you mean ‘up’?\n   16 |    Sup[up]=s1;\n      |    ^~~\n      |    up\n/tmp/compiler_2id223di/src:21:4: 错误：‘Sdown’ was not declared in this scope; did you mean ‘down’?\n   21 |    Sdown[down]=s1;\n      |    ^~~~~\n      |    down\n/tmp/compiler_2id223di/src:25:4: 错误：‘ans’在此作用域中尚未声明\n   25 |    ans[i]=s1;\n      |    ^~~\n/tmp/compiler_2id223di/src:30:6: 错误：‘ans’在此作用域中尚未声明\n   30 |   if(ans[i]!=\"\") continue;\n      |      ^~~\n/tmp/compiler_2id223di/src:36:12: 错误：‘Sdown’ was not declared in this scope; did you mean ‘down’?\n   36 |     ans[i]=Sdown[now1];\n      |            ^~~~~\n      |            down\n/tmp/compiler_2id223di/src:41:12: 错误：‘Sup’ was not declared in this scope; did you mean ‘up’?\n   41 |     ans[i]=Sup[now2];\n      |            ^~~\n      |            up\n/tmp/compiler_2id223di/src:46:3: 错误：‘cout’在此作用域中尚未声明\n   46 |   cout<<ans[i]<<endl;\n      |   ^~~~\n/tmp/compiler_2id223di/src:46:9: 错误：‘ans’在此作用域中尚未声明\n   46 |   cout<<ans[i]<<endl;\n      |         ^~~\n/tmp/compiler_2id223di/src:46:17: 错误：‘endl’在此作用域中尚未声明\n   46 |   cout<<ans[i]<<endl;\n      |                 ^~~~\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "include<bits/stdc++.h>\nusing namespace std;\nstring Sup[101],Sdown[101],ans[101];\nint up=0,down=0,now1=0,now2=0;\nint n;\nint main()\n{\n\tcin>>n;\n\tfor(int i=1;i<=n;i++)\n\t{\n\t\tstring s1,s2;\n\t\tcin>>s1>>s2;\n\t\tif(s2==\"UP\")\n\t\t{\n\t\t\tup++;\n\t\t\tSup[up]=s1;\n\t\t}\n\t\tif(s2==\"DOWN\")\n\t\t{\n\t\t\tdown++;\n\t\t\tSdown[down]=s1;\n\t\t}\n\t\tif(s2==\"SAME\")\n\t\t{\n\t\t\tans[i]=s1;\n\t\t}\n\t}\n\tfor(int i=1;i<=n;i++)\n\t{\n\t\tif(ans[i]!=\"\") continue;\n\t\telse\n\t\t{\n\t\t\tif(now1<down)\n\t\t\t{\n\t\t\t\tnow1++;\n\t\t\t\tans[i]=Sdown[now1];\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\tnow2++;\n\t\t\t\tans[i]=Sup[now2];\n\t\t\t}\n\t\t}\n\t}\n\tfor(int i=1;i<=n;i++)\n\t\tcout<<ans[i]<<endl;\n\treturn 0;\n}",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P1159",
+          "title": "[CHCI 2001 National Competition #2 Seniors] 排行榜",
+          "difficulty": 3,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 585,
+        "submitTime": 1744444617,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 213360679,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R213360679",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186372,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

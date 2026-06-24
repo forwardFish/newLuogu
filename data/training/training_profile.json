@@ -1,0 +1,805 @@
+{
+  "generatedAt": "2026-06-23T12:15:05.300Z",
+  "goal": "CSP-S_FIRST_PRIZE",
+  "sourceAnalysisDir": "C:\\LYH\\Code\\newLuogu\\data\\analysis",
+  "currentScores": {
+    "t1Stability": 72.97,
+    "t2Modeling": 81.48,
+    "t3PartialScore": 66.46,
+    "t4Strategy": 71.53,
+    "overall": 73.11
+  },
+  "currentDiagnosis": {
+    "summary": "题型覆盖较广，T2 建模转化相对较强；当前主要短板是 T1 实现稳定性、T3 部分分策略和 T4 模拟赛验证数据不足。",
+    "strengths": [
+      "T2 建模转化相对较强，DP、图论、数学、字符串等模块有较多历史覆盖。",
+      "历史已 AC 题量较多，说明基础算法接触面比较广。",
+      "存在一定一次 AC 基础，可用于建立稳定拿分训练。"
+    ],
+    "weaknesses": [
+      "T1 稳定性 72.97，未达到稳定一等奖区间，需要降低低级错误和实现风险。",
+      "T3 部分分策略 66.46，需要专项训练 30/50/70 分拆解。",
+      "平均每题提交 2.83 次，调试成本偏高。",
+      "疑似卡题 86 道，需要旧题复盘和重做闭环。"
+    ],
+    "mainRisks": [
+      {
+        "name": "Debug iteration cost",
+        "level": "medium",
+        "evidence": "Average attempts per problem is 2.83."
+      },
+      {
+        "name": "Implementation risk",
+        "level": "high",
+        "evidence": "1955/2281 files carry static risk flags."
+      },
+      {
+        "name": "Complex code pressure",
+        "level": "low",
+        "evidence": "Average non-empty lines: 125.05, max brace depth: 55."
+      },
+      {
+        "name": "Hard-problem partial scoring",
+        "level": "medium",
+        "evidence": "60 problems have partial-score submissions."
+      },
+      {
+        "name": "Array and boundary risk",
+        "level": "high",
+        "evidence": "ARRAY_INDEX_RISK=1013, LARGE_GLOBAL_ARRAY=895"
+      },
+      {
+        "name": "Partial-score weakness",
+        "level": "high",
+        "evidence": "部分分题目=60, 未 AC/未知题目=215"
+      }
+    ],
+    "evidence": {
+      "totalProblems": 829,
+      "solvedProblems": 614,
+      "unsolvedProblems": 215,
+      "averageAttemptsPerProblem": 2.83,
+      "riskFileRatio": 0.86,
+      "riskFlagCounts": {
+        "ARRAY_INDEX_RISK": 1013,
+        "PARTIAL_SCORE_CODE": 566,
+        "LARGE_GLOBAL_ARRAY": 895,
+        "RECURSION": 1554,
+        "POSSIBLE_INT_OVERFLOW": 347,
+        "MEMSET_SENTINEL": 44,
+        "LONG_CODE": 436,
+        "LONG_LINE": 41,
+        "DEEP_BRACE_NESTING": 6,
+        "DEFINE_INT_LONG_LONG": 735,
+        "DEEP_LOOP_NESTING": 9
+      }
+    }
+  },
+  "moduleProfile": {
+    "dp": {
+      "problemCount": 101,
+      "acProblemCount": 76,
+      "fileCount": 272,
+      "avgAttempts": 3.38,
+      "representativeProblems": [
+        "P8699",
+        "P1435",
+        "P12678",
+        "P2285",
+        "P1004",
+        "P3379",
+        "P10571",
+        "AT_dp_a"
+      ],
+      "priority": "medium",
+      "reason": "覆盖较多，是中档题稳定得分的重要模块。"
+    },
+    "knapsack_dp": {
+      "problemCount": 24,
+      "acProblemCount": 21,
+      "fileCount": 56,
+      "avgAttempts": 3.04,
+      "representativeProblems": [
+        "U643929",
+        "P1865",
+        "P1616",
+        "P1048",
+        "U328616",
+        "P1352",
+        "P1064",
+        "P1833"
+      ],
+      "priority": "normal",
+      "reason": "保持训练覆盖，作为专项计划的补充模块。"
+    },
+    "interval_dp": {
+      "problemCount": 79,
+      "acProblemCount": 60,
+      "fileCount": 199,
+      "avgAttempts": 4.19,
+      "representativeProblems": [
+        "U467266",
+        "P8699",
+        "P1435",
+        "P1919",
+        "U463446",
+        "P3987",
+        "P1004",
+        "P11858"
+      ],
+      "priority": "high",
+      "reason": "覆盖不少但平均提交次数或历史短板较突出，需要提升稳定转化。"
+    },
+    "tree_dp": {
+      "problemCount": 11,
+      "acProblemCount": 9,
+      "fileCount": 26,
+      "avgAttempts": 3.27,
+      "representativeProblems": [
+        "P3379",
+        "P1821",
+        "P1967",
+        "P1352",
+        "B3647",
+        "P2014",
+        "P2996",
+        "P1629"
+      ],
+      "priority": "normal",
+      "reason": "保持训练覆盖，作为专项计划的补充模块。"
+    },
+    "state_compression_dp": {
+      "problemCount": 9,
+      "acProblemCount": 4,
+      "fileCount": 15,
+      "avgAttempts": 5.22,
+      "representativeProblems": [
+        "P6691",
+        "P5461",
+        "CF1927C",
+        "P11860",
+        "P11827",
+        "P7859",
+        "P1087",
+        "P11475"
+      ],
+      "priority": "high",
+      "reason": "覆盖不少但平均提交次数或历史短板较突出，需要提升稳定转化。"
+    },
+    "graph": {
+      "problemCount": 138,
+      "acProblemCount": 91,
+      "fileCount": 332,
+      "avgAttempts": 3.28,
+      "representativeProblems": [
+        "U465842",
+        "P6691",
+        "U467266",
+        "P2452",
+        "P3987",
+        "P1004",
+        "P3379",
+        "U643929"
+      ],
+      "priority": "medium",
+      "reason": "覆盖较多，是中档题稳定得分的重要模块。"
+    },
+    "shortest_path": {
+      "problemCount": 14,
+      "acProblemCount": 8,
+      "fileCount": 46,
+      "avgAttempts": 3.57,
+      "representativeProblems": [
+        "P2452",
+        "P3371",
+        "P4779",
+        "P11860",
+        "P9751",
+        "P1027",
+        "P1399",
+        "P1713"
+      ],
+      "priority": "normal",
+      "reason": "保持训练覆盖，作为专项计划的补充模块。"
+    },
+    "dfs_bfs": {
+      "problemCount": 92,
+      "acProblemCount": 70,
+      "fileCount": 218,
+      "avgAttempts": 3.14,
+      "representativeProblems": [
+        "P6691",
+        "P8699",
+        "P1030",
+        "P2452",
+        "P1004",
+        "P3379",
+        "U643929",
+        "P3371"
+      ],
+      "priority": "medium",
+      "reason": "覆盖较多，是中档题稳定得分的重要模块。"
+    },
+    "dsu": {
+      "problemCount": 35,
+      "acProblemCount": 28,
+      "fileCount": 113,
+      "avgAttempts": 4.09,
+      "representativeProblems": [
+        "P1955",
+        "P6691",
+        "P3379",
+        "P2820",
+        "P5836",
+        "P2279",
+        "P1551",
+        "P3366"
+      ],
+      "priority": "high",
+      "reason": "覆盖不少但平均提交次数或历史短板较突出，需要提升稳定转化。"
+    },
+    "segment_tree": {
+      "problemCount": 7,
+      "acProblemCount": 5,
+      "fileCount": 26,
+      "avgAttempts": 5.57,
+      "representativeProblems": [
+        "P3987",
+        "P1471",
+        "P3372",
+        "P7072",
+        "P4118",
+        "P1117",
+        "P8959"
+      ],
+      "priority": "high",
+      "reason": "覆盖不少但平均提交次数或历史短板较突出，需要提升稳定转化。"
+    },
+    "fenwick_tree": {
+      "problemCount": 9,
+      "acProblemCount": 6,
+      "fileCount": 23,
+      "avgAttempts": 4.33,
+      "representativeProblems": [
+        "P3987",
+        "P3374",
+        "P3372",
+        "P1601",
+        "P3368",
+        "P9094",
+        "P1908",
+        "CF409H"
+      ],
+      "priority": "high",
+      "reason": "覆盖不少但平均提交次数或历史短板较突出，需要提升稳定转化。"
+    },
+    "heap": {
+      "problemCount": 10,
+      "acProblemCount": 5,
+      "fileCount": 28,
+      "avgAttempts": 4.3,
+      "representativeProblems": [
+        "P2452",
+        "P3371",
+        "P4779",
+        "P11860",
+        "P9751",
+        "P1027",
+        "P14785",
+        "P2048"
+      ],
+      "priority": "high",
+      "reason": "覆盖不少但平均提交次数或历史短板较突出，需要提升稳定转化。"
+    },
+    "greedy": {
+      "problemCount": 98,
+      "acProblemCount": 75,
+      "fileCount": 236,
+      "avgAttempts": 2.93,
+      "representativeProblems": [
+        "P1955",
+        "U619605",
+        "U643929",
+        "P5740",
+        "P3913",
+        "P2820",
+        "P1024",
+        "P2279"
+      ],
+      "priority": "medium",
+      "reason": "覆盖较多，是中档题稳定得分的重要模块。"
+    },
+    "binary_search": {
+      "problemCount": 57,
+      "acProblemCount": 41,
+      "fileCount": 148,
+      "avgAttempts": 3.61,
+      "representativeProblems": [
+        "P1955",
+        "P3987",
+        "P1471",
+        "CF1927C",
+        "P1439",
+        "P3372",
+        "P1024",
+        "P9232"
+      ],
+      "priority": "high",
+      "reason": "覆盖不少但平均提交次数或历史短板较突出，需要提升稳定转化。"
+    },
+    "math": {
+      "problemCount": 312,
+      "acProblemCount": 225,
+      "fileCount": 907,
+      "avgAttempts": 3.43,
+      "representativeProblems": [
+        "U465842",
+        "U519362",
+        "P3585",
+        "P1075",
+        "P6691",
+        "CF1914B",
+        "P8699",
+        "P1435"
+      ],
+      "priority": "medium",
+      "reason": "覆盖较多，是中档题稳定得分的重要模块。"
+    },
+    "string": {
+      "problemCount": 187,
+      "acProblemCount": 130,
+      "fileCount": 506,
+      "avgAttempts": 3.44,
+      "representativeProblems": [
+        "U465842",
+        "U519362",
+        "P3585",
+        "P6691",
+        "U467266",
+        "P1435",
+        "P1919",
+        "P9750"
+      ],
+      "priority": "medium",
+      "reason": "覆盖较多，是中档题稳定得分的重要模块。"
+    },
+    "search": {
+      "problemCount": 83,
+      "acProblemCount": 65,
+      "fileCount": 195,
+      "avgAttempts": 3.27,
+      "representativeProblems": [
+        "P6691",
+        "P8699",
+        "P1030",
+        "P2452",
+        "P1004",
+        "P3379",
+        "U643929",
+        "P3371"
+      ],
+      "priority": "medium",
+      "reason": "覆盖较多，是中档题稳定得分的重要模块。"
+    },
+    "toposort": {
+      "problemCount": 12,
+      "acProblemCount": 9,
+      "fileCount": 33,
+      "avgAttempts": 5.33,
+      "representativeProblems": [
+        "P6691",
+        "P2452",
+        "P1004",
+        "P4017",
+        "P1038",
+        "P5318",
+        "P11827",
+        "P1399"
+      ],
+      "priority": "high",
+      "reason": "覆盖不少但平均提交次数或历史短板较突出，需要提升稳定转化。"
+    },
+    "mst": {
+      "problemCount": 2,
+      "acProblemCount": 0,
+      "fileCount": 3,
+      "avgAttempts": 3.5,
+      "representativeProblems": [
+        "P11860",
+        "P10517"
+      ],
+      "priority": "normal",
+      "reason": "保持训练覆盖，作为专项计划的补充模块。"
+    },
+    "tree": {
+      "problemCount": 38,
+      "acProblemCount": 26,
+      "fileCount": 79,
+      "avgAttempts": 3.39,
+      "representativeProblems": [
+        "P6691",
+        "P8699",
+        "P3987",
+        "P3379",
+        "P1471",
+        "P6033",
+        "P7072",
+        "P8605"
+      ],
+      "priority": "normal",
+      "reason": "保持训练覆盖，作为专项计划的补充模块。"
+    }
+  },
+  "highValueReviewProblems": [
+    {
+      "problemPid": "U465842",
+      "problemTitle": "cspj 2024模拟 1升级版",
+      "attemptCount": 27,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [],
+      "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+    },
+    {
+      "problemPid": "U519362",
+      "problemTitle": "函数",
+      "attemptCount": 24,
+      "bestScore": 0,
+      "finalResult": "UNKNOWN",
+      "tags": [
+        "NEVER_AC",
+        "STUCK_PROBLEM"
+      ],
+      "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+    },
+    {
+      "problemPid": "P3585",
+      "problemTitle": "[POI 2015 R1] 印章 Seal",
+      "attemptCount": 24,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC",
+        "LONG_CODE_PROBLEM"
+      ],
+      "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+    },
+    {
+      "problemPid": "P1955",
+      "problemTitle": "[NOI2015] 程序自动分析",
+      "attemptCount": 19,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC"
+      ],
+      "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+    },
+    {
+      "problemPid": "P1075",
+      "problemTitle": "[NOIP 2012 普及组] 质因数分解",
+      "attemptCount": 17,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC"
+      ],
+      "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+    },
+    {
+      "problemPid": "P6691",
+      "problemTitle": "选择题",
+      "attemptCount": 17,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "LONG_CODE_PROBLEM"
+      ],
+      "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+    },
+    {
+      "problemPid": "P8699",
+      "problemTitle": "[蓝桥杯 2019 国 B] 排列数",
+      "attemptCount": 16,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC"
+      ],
+      "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+    },
+    {
+      "problemPid": "P10135",
+      "problemTitle": "[USACO24JAN] Potion Farming S",
+      "attemptCount": 16,
+      "bestScore": 36,
+      "finalResult": "PC",
+      "tags": [
+        "NEVER_AC",
+        "PARTIAL_SCORE",
+        "STUCK_PROBLEM"
+      ],
+      "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+    },
+    {
+      "problemPid": "U467266",
+      "problemTitle": "cspj 2024模拟 2 升级版",
+      "attemptCount": 16,
+      "bestScore": 100,
+      "finalResult": "PC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC"
+      ],
+      "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+    },
+    {
+      "problemPid": "CF1914B",
+      "problemTitle": "Preparing for the Contest",
+      "attemptCount": 16,
+      "bestScore": null,
+      "finalResult": "UNKNOWN",
+      "tags": [
+        "NEVER_AC",
+        "STUCK_PROBLEM",
+        "LONG_CODE_PROBLEM"
+      ],
+      "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+    },
+    {
+      "problemPid": "P1435",
+      "problemTitle": "[IOI 2000] 回文字串",
+      "attemptCount": 15,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC",
+        "LONG_CODE_PROBLEM"
+      ],
+      "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+    },
+    {
+      "problemPid": "P1919",
+      "problemTitle": "【模板】高精度乘法 / A*B Problem 升级版",
+      "attemptCount": 14,
+      "bestScore": 0,
+      "finalResult": "UNKNOWN",
+      "tags": [
+        "NEVER_AC",
+        "STUCK_PROBLEM"
+      ],
+      "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+    },
+    {
+      "problemPid": "P2852",
+      "problemTitle": "[USACO06DEC] Milk Patterns G",
+      "attemptCount": 13,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC"
+      ],
+      "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+    },
+    {
+      "problemPid": "P9750",
+      "problemTitle": "[CSP-J 2023] 一元二次方程",
+      "attemptCount": 13,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC"
+      ],
+      "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+    },
+    {
+      "problemPid": "P8926",
+      "problemTitle": "「GMOI R1-T3」Number Pair",
+      "attemptCount": 12,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC",
+        "LONG_CODE_PROBLEM"
+      ],
+      "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+    },
+    {
+      "problemPid": "P1030",
+      "problemTitle": "[NOIP 2001 普及组] 求先序排列",
+      "attemptCount": 12,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC",
+        "LONG_CODE_PROBLEM"
+      ],
+      "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+    },
+    {
+      "problemPid": "P12678",
+      "problemTitle": "Brooklyn Round 1 & NNOI Round 1 B - Gift",
+      "attemptCount": 12,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC"
+      ],
+      "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+    },
+    {
+      "problemPid": "P1029",
+      "problemTitle": "[NOIP 2001 普及组] 最大公约数和最小公倍数问题",
+      "attemptCount": 12,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC"
+      ],
+      "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+    },
+    {
+      "problemPid": "U463446",
+      "problemTitle": "a*b 高高高高高精度 prepreprepreprepreblem",
+      "attemptCount": 11,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC"
+      ],
+      "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+    },
+    {
+      "problemPid": "P2285",
+      "problemTitle": "[HNOI2004] 打鼹鼠",
+      "attemptCount": 11,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC",
+        "LONG_CODE_PROBLEM"
+      ],
+      "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+    },
+    {
+      "problemPid": "P2452",
+      "problemTitle": "[SDOI2005] 屠龙传说-屠龙枪卷",
+      "attemptCount": 11,
+      "bestScore": 70,
+      "finalResult": "PC",
+      "tags": [
+        "NEVER_AC",
+        "PARTIAL_SCORE",
+        "STUCK_PROBLEM"
+      ],
+      "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+    },
+    {
+      "problemPid": "P1471",
+      "problemTitle": "方差",
+      "attemptCount": 10,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC"
+      ],
+      "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+    },
+    {
+      "problemPid": "P3379",
+      "problemTitle": "【模板】最近公共祖先（LCA）",
+      "attemptCount": 10,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC",
+        "LONG_CODE_PROBLEM"
+      ],
+      "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+    },
+    {
+      "problemPid": "U643929",
+      "problemTitle": "基于日线的 A 股量化交易模拟（一年）",
+      "attemptCount": 10,
+      "bestScore": 407279,
+      "finalResult": "UNKNOWN",
+      "tags": [
+        "NEVER_AC",
+        "STUCK_PROBLEM",
+        "LONG_CODE_PROBLEM"
+      ],
+      "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+    },
+    {
+      "problemPid": "U619605",
+      "problemTitle": "夜",
+      "attemptCount": 10,
+      "bestScore": 10,
+      "finalResult": "PC",
+      "tags": [
+        "NEVER_AC",
+        "PARTIAL_SCORE",
+        "STUCK_PROBLEM"
+      ],
+      "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+    },
+    {
+      "problemPid": "P1113",
+      "problemTitle": "[USACO02FEB] 杂务",
+      "attemptCount": 10,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC"
+      ],
+      "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+    },
+    {
+      "problemPid": "P3374",
+      "problemTitle": "【模板】树状数组 1",
+      "attemptCount": 9,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC"
+      ],
+      "reviewReason": "来自深度复盘池，适合人工/AI 进一步分析。"
+    },
+    {
+      "problemPid": "P3371",
+      "problemTitle": "【模板】单源最短路径（弱化版）",
+      "attemptCount": 9,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC"
+      ],
+      "reviewReason": "来自深度复盘池，适合人工/AI 进一步分析。"
+    },
+    {
+      "problemPid": "P5461",
+      "problemTitle": "赦免战俘",
+      "attemptCount": 9,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC",
+        "LONG_CODE_PROBLEM"
+      ],
+      "reviewReason": "来自深度复盘池，适合人工/AI 进一步分析。"
+    },
+    {
+      "problemPid": "P3865",
+      "problemTitle": "【模板】ST 表 & RMQ 问题",
+      "attemptCount": 9,
+      "bestScore": 100,
+      "finalResult": "AC",
+      "tags": [
+        "MULTI_FAIL_THEN_AC",
+        "LONG_CODE_PROBLEM"
+      ],
+      "reviewReason": "来自深度复盘池，适合人工/AI 进一步分析。"
+    }
+  ],
+  "trainingFocus": {
+    "t1": [
+      "每天保留基础稳定性题，重点检查数组边界、初始化、数据范围和 long long。",
+      "提交前强制执行检查清单，把会做但错细节的问题压下来。",
+      "重写带 ARRAY_INDEX_RISK、DEFINE_INT_LONG_LONG、RECURSION 的旧题。"
+    ],
+    "t2": [
+      "围绕 DP、图论、二分、并查集做中档建模训练。",
+      "每题写出模型、状态/点边含义、复杂度和边界，再开始代码。",
+      "目标不是只 AC，而是降低平均提交次数。"
+    ],
+    "t3": [
+      "每周固定难题拆分训练，必须写 30/50/70 分方案。",
+      "优先复盘部分分题和长期未 AC 题，找出错过的可拿分子任务。",
+      "不要求一开始满分，要求比赛中有稳定部分分下限。"
+    ],
+    "t4": [
+      "每周至少一次四题模拟赛，记录开题顺序、止损点和调试时间。",
+      "用模拟赛数据验证 T1/T2 是否保住、T3/T4 是否拿到部分分。",
+      "没有模拟赛记录前，T4 只能视为初步估计，不能认为已稳定。"
+    ]
+  }
+}

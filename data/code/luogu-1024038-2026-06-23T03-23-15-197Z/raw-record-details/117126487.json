@@ -1,0 +1,182 @@
+{
+  "recordId": "117126487",
+  "url": "https://www.luogu.com.cn/record/117126487?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T04:18:28.036Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_zhjnfz1u\\/src:5:12: \\u8b66\\u544a\\uff1a\\u7f3a\\u5c11\\u7ed3\\u5c3e\\u7684 \\\" \\u5b57\\u7b26\\n    5 |     printf(\\\"    ********\\n      |            ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:5:12: \\u9519\\u8bef\\uff1a\\u7f3a\\u5c11\\u7ed3\\u5c3e\\u7684 \\\" \\u5b57\\u7b26\\n    5 |     printf(\\\"    ********\\n      |            ^~~~~~~~~~~~~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:7:16: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n    7 |                ####....#.\\n      |                ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:7:18: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n    7 |                ####....#.\\n      |                  ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:7:24: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n    7 |                ####....#.\\n      |                        ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:8:15: \\u9519\\u8bef\\uff1a\\u65e0\\u6548\\u7684\\u9884\\u5904\\u7406\\u6307\\u793a #.\\n    8 |              #..###.....##....\\n      |               ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:9:14: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n    9 |              ###.......######              ###            ###\\n      |              ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:9:16: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n    9 |              ###.......######              ###            ###\\n      |                ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:9:24: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n    9 |              ###.......######              ###            ###\\n      |                        ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:9:26: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n    9 |              ###.......######              ###            ###\\n      |                          ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:9:28: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n    9 |              ###.......######              ###            ###\\n      |                            ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:9:44: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n    9 |              ###.......######              ###            ###\\n      |                                            ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:9:46: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n    9 |              ###.......######              ###            ###\\n      |                                              ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:9:59: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n    9 |              ###.......######              ###            ###\\n      |                                                           ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:9:61: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n    9 |              ###.......######              ###            ###\\n      |                                                             ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:10:43: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   10 |                 ...........               #...#          #...#\\n      |                                           ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:10:47: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   10 |                 ...........               #...#          #...#\\n      |                                               ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:10:58: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   10 |                 ...........               #...#          #...#\\n      |                                                          ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:10:62: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   10 |                 ...........               #...#          #...#\\n      |                                                              ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:11:16: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   11 |                ##*#######                 #.#.#          #.#.#\\n      |                ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:11:19: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   11 |                ##*#######                 #.#.#          #.#.#\\n      |                   ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:11:21: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   11 |                ##*#######                 #.#.#          #.#.#\\n      |                     ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:11:23: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   11 |                ##*#######                 #.#.#          #.#.#\\n      |                       ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:11:25: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   11 |                ##*#######                 #.#.#          #.#.#\\n      |                         ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:11:43: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   11 |                ##*#######                 #.#.#          #.#.#\\n      |                                           ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:11:45: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   11 |                ##*#######                 #.#.#          #.#.#\\n      |                                             ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:11:47: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   11 |                ##*#######                 #.#.#          #.#.#\\n      |                                               ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:11:58: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   11 |                ##*#######                 #.#.#          #.#.#\\n      |                                                          ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:11:60: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   11 |                ##*#######                 #.#.#          #.#.#\\n      |                                                            ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:11:62: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   11 |                ##*#######                 #.#.#          #.#.#\\n      |                                                              ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:12:13: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   12 |             ####*******######             #.#.#          #.#.#\\n      |             ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:12:15: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   12 |             ####*******######             #.#.#          #.#.#\\n      |               ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:12:24: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   12 |             ####*******######             #.#.#          #.#.#\\n      |                        ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:12:26: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   12 |             ####*******######             #.#.#          #.#.#\\n      |                          ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:12:28: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   12 |             ####*******######             #.#.#          #.#.#\\n      |                            ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:12:43: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   12 |             ####*******######             #.#.#          #.#.#\\n      |                                           ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:12:45: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   12 |             ####*******######             #.#.#          #.#.#\\n      |                                             ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:12:47: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   12 |             ####*******######             #.#.#          #.#.#\\n      |                                               ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:12:58: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   12 |             ####*******######             #.#.#          #.#.#\\n      |                                                          ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:12:60: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   12 |             ####*******######             #.#.#          #.#.#\\n      |                                                            ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:12:62: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   12 |             ####*******######             #.#.#          #.#.#\\n      |                                                              ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:13:15: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   13 |            ...#***.****.*###....          #...#          #...#\\n      |               ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:13:26: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   13 |            ...#***.****.*###....          #...#          #...#\\n      |                          ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:13:28: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   13 |            ...#***.****.*###....          #...#          #...#\\n      |                            ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:13:43: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   13 |            ...#***.****.*###....          #...#          #...#\\n      |                                           ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:13:47: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   13 |            ...#***.****.*###....          #...#          #...#\\n      |                                               ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:13:58: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   13 |            ...#***.****.*###....          #...#          #...#\\n      |                                                          ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:13:62: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   13 |            ...#***.****.*###....          #...#          #...#\\n      |                                                              ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:14:26: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   14 |            ....**********##.....           ###            ###\\n      |                          ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:14:44: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   14 |            ....**********##.....           ###            ###\\n      |                                            ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:14:46: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   14 |            ....**********##.....           ###            ###\\n      |                                              ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:14:59: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   14 |            ....**********##.....           ###            ###\\n      |                                                           ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:14:61: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018#\\u2019\\n   14 |            ....**********##.....           ###            ###\\n      |                                                             ^\\n\\/tmp\\/compiler_zhjnfz1u\\/src:16:14: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   16 |              ####        ####\\n      |              ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:16:16: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   16 |              ####        ####\\n      |                ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:16:26: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   16 |              ####        ####\\n      |                          ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:16:28: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   16 |              ####        ####\\n      |                            ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:17:12: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   17 |            ######        ######\\n      |            ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:17:14: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   17 |            ######        ######\\n      |              ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:17:16: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   17 |            ######        ######\\n      |                ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:17:26: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   17 |            ######        ######\\n      |                          ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:17:28: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   17 |            ######        ######\\n      |                            ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:17:30: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   17 |            ######        ######\\n      |                              ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:18:1: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   18 | ##############################################################\\n      | ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:18:3: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   18 | ##############################################################\\n      |   ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:18:5: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   18 | ##############################################################\\n      |     ^~\\n\\/tmp\\/compiler_zhjnfz1u\\/src:18:7: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018##\\u2019\\n   18 | #########################\\n...\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h>\\nusing namespace std;\\nint main()\\n{\\n    printf(\\\"    ********\\n               ************\\n               ####....#.\\n             #..###.....##....\\n             ###.......######              ###            ###\\n                ...........               #...#          #...#\\n               ##*#######                 #.#.#          #.#.#\\n            ####*******######             #.#.#          #.#.#\\n           ...#***.****.*###....          #...#          #...#\\n           ....**********##.....           ###            ###\\n           ....****    *****....\\n             ####        ####\\n           ######        ######\\n##############################################################\\n#...#......#.##...#......#.##...#......#.##------------------#\\n###########################################------------------#\\n#..#....#....##..#....#....##..#....#....#####################\\n##########################################    #----------#\\n#.....#......##.....#......##.....#......#    #----------#\\n##########################################    #----------#\\n#.#..#....#..##.#..#....#..##.#..#....#..#    #----------#\\n##########################################    ############\\\")\\n    return 0;\\n}\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P1000\",\"title\":\"\\u8d85\\u7ea7\\u739b\\u4e3d\\u6e38\\u620f\",\"difficulty\":1,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":1203,\"submitTime\":1690122611,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":117126487,\"status\":2,\"enableO2\":false,\"score\":null},\"testCaseGroup\":[[0]],\"showStatus\":true},\"currentTitle\":\"R117126487\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782188307,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_zhjnfz1u/src:5:12: 警告：缺少结尾的 \" 字符\n    5 |     printf(\"    ********\n      |            ^\n/tmp/compiler_zhjnfz1u/src:5:12: 错误：缺少结尾的 \" 字符\n    5 |     printf(\"    ********\n      |            ^~~~~~~~~~~~~\n/tmp/compiler_zhjnfz1u/src:7:16: 错误：程序中有游离的‘##’\n    7 |                ####....#.\n      |                ^~\n/tmp/compiler_zhjnfz1u/src:7:18: 错误：程序中有游离的‘##’\n    7 |                ####....#.\n      |                  ^~\n/tmp/compiler_zhjnfz1u/src:7:24: 错误：程序中有游离的‘#’\n    7 |                ####....#.\n      |                        ^\n/tmp/compiler_zhjnfz1u/src:8:15: 错误：无效的预处理指示 #.\n    8 |              #..###.....##....\n      |               ^\n/tmp/compiler_zhjnfz1u/src:9:14: 错误：程序中有游离的‘##’\n    9 |              ###.......######              ###            ###\n      |              ^~\n/tmp/compiler_zhjnfz1u/src:9:16: 错误：程序中有游离的‘#’\n    9 |              ###.......######              ###            ###\n      |                ^\n/tmp/compiler_zhjnfz1u/src:9:24: 错误：程序中有游离的‘##’\n    9 |              ###.......######              ###            ###\n      |                        ^~\n/tmp/compiler_zhjnfz1u/src:9:26: 错误：程序中有游离的‘##’\n    9 |              ###.......######              ###            ###\n      |                          ^~\n/tmp/compiler_zhjnfz1u/src:9:28: 错误：程序中有游离的‘##’\n    9 |              ###.......######              ###            ###\n      |                            ^~\n/tmp/compiler_zhjnfz1u/src:9:44: 错误：程序中有游离的‘##’\n    9 |              ###.......######              ###            ###\n      |                                            ^~\n/tmp/compiler_zhjnfz1u/src:9:46: 错误：程序中有游离的‘#’\n    9 |              ###.......######              ###            ###\n      |                                              ^\n/tmp/compiler_zhjnfz1u/src:9:59: 错误：程序中有游离的‘##’\n    9 |              ###.......######              ###            ###\n      |                                                           ^~\n/tmp/compiler_zhjnfz1u/src:9:61: 错误：程序中有游离的‘#’\n    9 |              ###.......######              ###            ###\n      |                                                             ^\n/tmp/compiler_zhjnfz1u/src:10:43: 错误：程序中有游离的‘#’\n   10 |                 ...........               #...#          #...#\n      |                                           ^\n/tmp/compiler_zhjnfz1u/src:10:47: 错误：程序中有游离的‘#’\n   10 |                 ...........               #...#          #...#\n      |                                               ^\n/tmp/compiler_zhjnfz1u/src:10:58: 错误：程序中有游离的‘#’\n   10 |                 ...........               #...#          #...#\n      |                                                          ^\n/tmp/compiler_zhjnfz1u/src:10:62: 错误：程序中有游离的‘#’\n   10 |                 ...........               #...#          #...#\n      |                                                              ^\n/tmp/compiler_zhjnfz1u/src:11:16: 错误：程序中有游离的‘##’\n   11 |                ##*#######                 #.#.#          #.#.#\n      |                ^~\n/tmp/compiler_zhjnfz1u/src:11:19: 错误：程序中有游离的‘##’\n   11 |                ##*#######                 #.#.#          #.#.#\n      |                   ^~\n/tmp/compiler_zhjnfz1u/src:11:21: 错误：程序中有游离的‘##’\n   11 |                ##*#######                 #.#.#          #.#.#\n      |                     ^~\n/tmp/compiler_zhjnfz1u/src:11:23: 错误：程序中有游离的‘##’\n   11 |                ##*#######                 #.#.#          #.#.#\n      |                       ^~\n/tmp/compiler_zhjnfz1u/src:11:25: 错误：程序中有游离的‘#’\n   11 |                ##*#######                 #.#.#          #.#.#\n      |                         ^\n/tmp/compiler_zhjnfz1u/src:11:43: 错误：程序中有游离的‘#’\n   11 |                ##*#######                 #.#.#          #.#.#\n      |                                           ^\n/tmp/compiler_zhjnfz1u/src:11:45: 错误：程序中有游离的‘#’\n   11 |                ##*#######                 #.#.#          #.#.#\n      |                                             ^\n/tmp/compiler_zhjnfz1u/src:11:47: 错误：程序中有游离的‘#’\n   11 |                ##*#######                 #.#.#          #.#.#\n      |                                               ^\n/tmp/compiler_zhjnfz1u/src:11:58: 错误：程序中有游离的‘#’\n   11 |                ##*#######                 #.#.#          #.#.#\n      |                                                          ^\n/tmp/compiler_zhjnfz1u/src:11:60: 错误：程序中有游离的‘#’\n   11 |                ##*#######                 #.#.#          #.#.#\n      |                                                            ^\n/tmp/compiler_zhjnfz1u/src:11:62: 错误：程序中有游离的‘#’\n   11 |                ##*#######                 #.#.#          #.#.#\n      |                                                              ^\n/tmp/compiler_zhjnfz1u/src:12:13: 错误：程序中有游离的‘##’\n   12 |             ####*******######             #.#.#          #.#.#\n      |             ^~\n/tmp/compiler_zhjnfz1u/src:12:15: 错误：程序中有游离的‘##’\n   12 |             ####*******######             #.#.#          #.#.#\n      |               ^~\n/tmp/compiler_zhjnfz1u/src:12:24: 错误：程序中有游离的‘##’\n   12 |             ####*******######             #.#.#          #.#.#\n      |                        ^~\n/tmp/compiler_zhjnfz1u/src:12:26: 错误：程序中有游离的‘##’\n   12 |             ####*******######             #.#.#          #.#.#\n      |                          ^~\n/tmp/compiler_zhjnfz1u/src:12:28: 错误：程序中有游离的‘##’\n   12 |             ####*******######             #.#.#          #.#.#\n      |                            ^~\n/tmp/compiler_zhjnfz1u/src:12:43: 错误：程序中有游离的‘#’\n   12 |             ####*******######             #.#.#          #.#.#\n      |                                           ^\n/tmp/compiler_zhjnfz1u/src:12:45: 错误：程序中有游离的‘#’\n   12 |             ####*******######             #.#.#          #.#.#\n      |                                             ^\n/tmp/compiler_zhjnfz1u/src:12:47: 错误：程序中有游离的‘#’\n   12 |             ####*******######             #.#.#          #.#.#\n      |                                               ^\n/tmp/compiler_zhjnfz1u/src:12:58: 错误：程序中有游离的‘#’\n   12 |             ####*******######             #.#.#          #.#.#\n      |                                                          ^\n/tmp/compiler_zhjnfz1u/src:12:60: 错误：程序中有游离的‘#’\n   12 |             ####*******######             #.#.#          #.#.#\n      |                                                            ^\n/tmp/compiler_zhjnfz1u/src:12:62: 错误：程序中有游离的‘#’\n   12 |             ####*******######             #.#.#          #.#.#\n      |                                                              ^\n/tmp/compiler_zhjnfz1u/src:13:15: 错误：程序中有游离的‘#’\n   13 |            ...#***.****.*###....          #...#          #...#\n      |               ^\n/tmp/compiler_zhjnfz1u/src:13:26: 错误：程序中有游离的‘##’\n   13 |            ...#***.****.*###....          #...#          #...#\n      |                          ^~\n/tmp/compiler_zhjnfz1u/src:13:28: 错误：程序中有游离的‘#’\n   13 |            ...#***.****.*###....          #...#          #...#\n      |                            ^\n/tmp/compiler_zhjnfz1u/src:13:43: 错误：程序中有游离的‘#’\n   13 |            ...#***.****.*###....          #...#          #...#\n      |                                           ^\n/tmp/compiler_zhjnfz1u/src:13:47: 错误：程序中有游离的‘#’\n   13 |            ...#***.****.*###....          #...#          #...#\n      |                                               ^\n/tmp/compiler_zhjnfz1u/src:13:58: 错误：程序中有游离的‘#’\n   13 |            ...#***.****.*###....          #...#          #...#\n      |                                                          ^\n/tmp/compiler_zhjnfz1u/src:13:62: 错误：程序中有游离的‘#’\n   13 |            ...#***.****.*###....          #...#          #...#\n      |                                                              ^\n/tmp/compiler_zhjnfz1u/src:14:26: 错误：程序中有游离的‘##’\n   14 |            ....**********##.....           ###            ###\n      |                          ^~\n/tmp/compiler_zhjnfz1u/src:14:44: 错误：程序中有游离的‘##’\n   14 |            ....**********##.....           ###            ###\n      |                                            ^~\n/tmp/compiler_zhjnfz1u/src:14:46: 错误：程序中有游离的‘#’\n   14 |            ....**********##.....           ###            ###\n      |                                              ^\n/tmp/compiler_zhjnfz1u/src:14:59: 错误：程序中有游离的‘##’\n   14 |            ....**********##.....           ###            ###\n      |                                                           ^~\n/tmp/compiler_zhjnfz1u/src:14:61: 错误：程序中有游离的‘#’\n   14 |            ....**********##.....           ###            ###\n      |                                                             ^\n/tmp/compiler_zhjnfz1u/src:16:14: 错误：程序中有游离的‘##’\n   16 |              ####        ####\n      |              ^~\n/tmp/compiler_zhjnfz1u/src:16:16: 错误：程序中有游离的‘##’\n   16 |              ####        ####\n      |                ^~\n/tmp/compiler_zhjnfz1u/src:16:26: 错误：程序中有游离的‘##’\n   16 |              ####        ####\n      |                          ^~\n/tmp/compiler_zhjnfz1u/src:16:28: 错误：程序中有游离的‘##’\n   16 |              ####        ####\n      |                            ^~\n/tmp/compiler_zhjnfz1u/src:17:12: 错误：程序中有游离的‘##’\n   17 |            ######        ######\n      |            ^~\n/tmp/compiler_zhjnfz1u/src:17:14: 错误：程序中有游离的‘##’\n   17 |            ######        ######\n      |              ^~\n/tmp/compiler_zhjnfz1u/src:17:16: 错误：程序中有游离的‘##’\n   17 |            ######        ######\n      |                ^~\n/tmp/compiler_zhjnfz1u/src:17:26: 错误：程序中有游离的‘##’\n   17 |            ######        ######\n      |                          ^~\n/tmp/compiler_zhjnfz1u/src:17:28: 错误：程序中有游离的‘##’\n   17 |            ######        ######\n      |                            ^~\n/tmp/compiler_zhjnfz1u/src:17:30: 错误：程序中有游离的‘##’\n   17 |            ######        ######\n      |                              ^~\n/tmp/compiler_zhjnfz1u/src:18:1: 错误：程序中有游离的‘##’\n   18 | ##############################################################\n      | ^~\n/tmp/compiler_zhjnfz1u/src:18:3: 错误：程序中有游离的‘##’\n   18 | ##############################################################\n      |   ^~\n/tmp/compiler_zhjnfz1u/src:18:5: 错误：程序中有游离的‘##’\n   18 | ##############################################################\n      |     ^~\n/tmp/compiler_zhjnfz1u/src:18:7: 错误：程序中有游离的‘##’\n   18 | #########################\n...",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h>\nusing namespace std;\nint main()\n{\n    printf(\"    ********\n               ************\n               ####....#.\n             #..###.....##....\n             ###.......######              ###            ###\n                ...........               #...#          #...#\n               ##*#######                 #.#.#          #.#.#\n            ####*******######             #.#.#          #.#.#\n           ...#***.****.*###....          #...#          #...#\n           ....**********##.....           ###            ###\n           ....****    *****....\n             ####        ####\n           ######        ######\n##############################################################\n#...#......#.##...#......#.##...#......#.##------------------#\n###########################################------------------#\n#..#....#....##..#....#....##..#....#....#####################\n##########################################    #----------#\n#.....#......##.....#......##.....#......#    #----------#\n##########################################    #----------#\n#.#..#....#..##.#..#....#..##.#..#....#..#    #----------#\n##########################################    ############\")\n    return 0;\n}",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P1000",
+          "title": "超级玛丽游戏",
+          "difficulty": 1,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 1203,
+        "submitTime": 1690122611,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 117126487,
+        "status": 2,
+        "enableO2": false,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R117126487",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782188307,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

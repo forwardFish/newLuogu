@@ -1,0 +1,31 @@
+{
+  "generatedProblemId": "gen_interval_dp_003",
+  "weaknessId": "interval_dp_state_error_4",
+  "targetAbility": "T3_PARTIAL_SCORE",
+  "module": "interval_dp",
+  "difficulty": "提高",
+  "goal": "诊断并训练：区间 DP：区间 DP 的状态设计、初始化和枚举顺序不稳定",
+  "problemPackage": {
+    "statementPath": "data\\generated-problems\\gen_interval_dp_003\\statement.md",
+    "solutionPath": "data\\generated-problems\\gen_interval_dp_003\\solution.md",
+    "bruteForcePath": "data\\generated-problems\\gen_interval_dp_003\\bruteforce.cpp",
+    "standardSolutionPath": "data\\generated-problems\\gen_interval_dp_003\\std.cpp",
+    "generatorPath": "data\\generated-problems\\gen_interval_dp_003\\generator.cpp",
+    "testsPath": "data\\generated-problems\\gen_interval_dp_003\\tests"
+  },
+  "subtasks": [
+    {
+      "score": 30,
+      "description": "小 n 暴力"
+    },
+    {
+      "score": 60,
+      "description": "特殊性质或基础模型"
+    },
+    {
+      "score": 100,
+      "description": "完整正解"
+    }
+  ],
+  "status": "DRAFT_NOT_FOR_FORMAL_TEST"
+}

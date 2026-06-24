@@ -1,0 +1,388 @@
+{
+  "recordId": "215160613",
+  "url": "https://www.luogu.com.cn/record/215160613?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:45:44.201Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[{\"id\":0,\"score\":60,\"status\":14,\"testCases\":{\"2\":{\"id\":2,\"status\":12,\"time\":4,\"memory\":644,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"9\":{\"id\":9,\"status\":12,\"time\":6,\"memory\":552,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"5\":{\"id\":5,\"status\":12,\"time\":4,\"memory\":560,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"1\":{\"id\":1,\"status\":12,\"time\":3,\"memory\":560,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"8\":{\"id\":8,\"status\":12,\"time\":6,\"memory\":608,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"0\":{\"id\":0,\"status\":12,\"time\":3,\"memory\":532,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"6\":{\"id\":6,\"status\":12,\"time\":5,\"memory\":552,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"7\":{\"id\":7,\"status\":12,\"time\":6,\"memory\":556,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"4\":{\"id\":4,\"status\":12,\"time\":4,\"memory\":564,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"3\":{\"id\":3,\"status\":12,\"time\":4,\"memory\":552,\"score\":6,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"13\":{\"id\":13,\"status\":5,\"time\":1089,\"memory\":564,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"14\":{\"id\":14,\"status\":5,\"time\":1072,\"memory\":520,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"12\":{\"id\":12,\"status\":5,\"time\":1041,\"memory\":556,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"11\":{\"id\":11,\"status\":5,\"time\":1065,\"memory\":556,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"10\":{\"id\":10,\"status\":5,\"time\":1071,\"memory\":528,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}},\"judger\":\"\",\"time\":5383,\"memory\":644,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}],\"finishedCaseCount\":15,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <iostream>\\nusing namespace std;\\n\\n\\/*\\n \\u672c\\u4ee3\\u7801\\u7528\\u4e8e\\u8ba1\\u7b97\\u6ee1\\u8db3\\u7279\\u5b9a\\u57fa\\u56e0\\u5e8f\\u5217\\u7ea6\\u675f\\u6761\\u4ef6\\u7684\\u5e8f\\u5217\\u6570\\u3002\\n \\u95ee\\u9898\\u63cf\\u8ff0\\uff1a\\u7ed9\\u5b9a\\u57fa\\u56e0\\u5e8f\\u5217\\u957f\\u5ea6 n\\uff0c\\u5e8f\\u5217\\u5b57\\u7b26\\u96c6\\u5305\\u62ec\\u666e\\u901a\\u57fa\\u56e0 {A, C, G, T} (4 \\u79cd)\\u548c\\u7279\\u6b8a\\u57fa\\u56e0 {\\u4e7e\\u3001\\u5151\\u3001\\u79bb\\u3001\\u9707\\u3001\\u5dfd\\u3001\\u574e\\u3001\\u826e\\u3001\\u5764} (8 \\u79cd)\\u3002\\n \\u5176\\u4e2d\\uff0c\\u9633\\u6027\\u5b57\\u7b26 (\\u4e7e\\u3001\\u574e\\u3001\\u826e\\u3001\\u9707) \\u5728\\u5e8f\\u5217\\u4e2d\\u51fa\\u73b0\\u6b21\\u6570\\u5fc5\\u987b\\u4e3a\\u5947\\u6570\\uff1b\\u9634\\u6027\\u5b57\\u7b26 (\\u5764\\u3001\\u5151\\u3001\\u79bb\\u3001\\u5dfd) \\u5728\\u5e8f\\u5217\\u4e2d\\u51fa\\u73b0\\u6b21\\u6570\\u5fc5\\u987b\\u4e3a\\u5076\\u6570\\u3002\\n \\u666e\\u901a\\u5b57\\u7b26\\u6b21\\u6570\\u65e0\\u9650\\u5236\\u3002\\u95ee\\u6ee1\\u8db3\\u4e0a\\u8ff0\\u6761\\u4ef6\\u7684\\u957f\\u5ea6\\u4e3a n \\u7684\\u5e8f\\u5217\\u6570\\u91cf\\uff0c\\u5bf9 10^9 \\u53d6\\u6a21\\u3002\\n\\n \\u5206\\u6790\\uff1a\\n \\u4ee4\\u603b\\u5b57\\u7b26\\u6570\\u4e3a12(4\\u666e\\u901a + 8\\u7279\\u6b8a)\\u3002\\u5bf9\\u6bcf\\u4e2a\\u7279\\u6b8a\\u5b57\\u7b26\\u8ba1\\u6570\\u7684\\u5947\\u5076\\u6027\\u6709\\u8981\\u6c42\\uff0c\\u53ef\\u4ee5\\u4f7f\\u7528\\u5305\\u542b-\\u6392\\u9664\\u6216\\u79bb\\u6563\\u5085\\u91cc\\u53f6\\u6280\\u5de7\\u8ba1\\u7b97\\u7b26\\u5408\\u8981\\u6c42\\u7684\\u5e8f\\u5217\\u6570\\u3002\\n \\u7ecf\\u8fc7\\u63a8\\u5bfc\\u53ef\\u5f97\\uff0c\\u7b26\\u5408\\u6761\\u4ef6\\u7684\\u5e8f\\u5217\\u6570\\u4e3a\\uff1a\\n   K(n) = (1\\/256) * (12^n - 4 * 8^n + 6 * 4^n + (-4)^n)\\n \\u516c\\u5f0f\\u4e2d 256 = 2^8 \\u662f\\u56e0\\u4e3a\\u5171\\u67098\\u4e2a\\u7279\\u6b8a\\u5b57\\u7b26\\uff0c\\u6bcf\\u4e2a\\u5947\\u5076\\u7ea6\\u675f\\u8d21\\u732e\\u56e0\\u5b501\\/2^8\\u3002\\n\\n \\u6211\\u4eec\\u9700\\u8981\\u5bf9 10^9 (\\u4e0d\\u662f\\u7d20\\u6570) \\u53d6\\u6a21\\uff0c\\u6ce8\\u610f 12^n \\u7b49\\u6570\\u503c\\u5f88\\u5927\\uff0cn \\u6700\\u5927\\u53ef\\u8fbe 2^63\\u3002\\n \\u4e3a\\u4e86\\u9ad8\\u6548\\u8ba1\\u7b97\\uff0c\\u4f7f\\u7528\\u5feb\\u901f\\u5e42\\uff0c\\u5e76\\u8003\\u8651\\u6a21\\u8fd0\\u7b97\\u7ec6\\u8282\\uff1a\\n \\u7531\\u4e8e\\u9664\\u4ee5256\\uff0c\\u76f4\\u63a5\\u505a\\u6a21\\u8fd0\\u7b97\\u4f1a\\u4ea7\\u751f\\u9664\\u6cd5\\u9006\\u5143\\u95ee\\u9898\\u3002\\u6211\\u4eec\\u91c7\\u7528\\u5982\\u4e0b\\u7b56\\u7565\\uff1a\\n   1. \\u5b9a\\u4e49\\u5927\\u6a21\\u6570 M = 256 * 10^9 (\\u65b9\\u4fbf\\u4fdd\\u7559\\u88ab256\\u6574\\u9664\\u7684\\u4fe1\\u606f)\\u3002\\n   2. \\u5206\\u522b\\u8ba1\\u7b97 base^n mod M\\u3002\\n   3. \\u8ba1\\u7b97\\u516c\\u5f0f\\u5206\\u5b50 mod M\\uff0c\\u7136\\u540e\\u9664\\u4ee5256\\u540e\\u518d\\u53d6 10^9 \\u6a21\\u5373\\u53ef\\u3002\\n \\n \\u8fdb\\u4e00\\u6b65\\u4f18\\u5316\\uff1a\\u7531\\u4e8e\\u9700\\u8981\\u8ba1\\u7b97 12^n,8^n,4^n,(-4)^n\\uff0c\\u6ce8\\u610f\\u5230\\n   12^n = (3 * 4)^n = 3^n * 4^n,\\n   8^n = 2^(3n) = (2^n)^3,\\n   4^n = 2^(2n) = (2^n)^2,\\n   (-4)^n = \\u00b14^n (\\u7b26\\u53f7\\u53d6\\u51b3\\u4e8e n \\u7684\\u5947\\u5076).\\n \\u6211\\u4eec\\u5148\\u8ba1\\u7b97 2^n mod M \\u548c 3^n mod M\\uff0c\\u7528\\u5b83\\u4eec\\u6765\\u6784\\u9020 4^n, 8^n, 12^n, (-4)^n\\u3002\\n \\u8fd9\\u6837\\u53ea\\u9700\\u8fdb\\u884c\\u4e24\\u6b21\\u5feb\\u901f\\u5e42\\u8fd0\\u7b97 (2^n, 3^n)\\uff0c\\u51cf\\u5c11\\u8ba1\\u7b97\\u91cf\\u3002\\n\\n \\u7b97\\u6cd5\\u6b65\\u9aa4\\uff1a\\n - \\u8bfb\\u5165 n (\\u76f4\\u5230\\u8bfb\\u5230 0 \\u7ed3\\u675f)\\u3002\\n - \\u5bf9\\u6bcf\\u4e2a n\\uff1a\\n    * \\u8ba1\\u7b97 pow2 = 2^n mod M, pow3 = 3^n mod M (\\u4f7f\\u7528\\u5feb\\u901f\\u5e42)\\u3002\\n    * \\u7531\\u6b64\\u8ba1\\u7b97 pow4 = pow2 * pow2 mod M (\\u5373 4^n), pow8 = pow4 * pow2 mod M (\\u5373 8^n), pow12 = pow3 * pow4 mod M (\\u5373 12^n)\\u3002\\n    * \\u6839\\u636e n \\u7684\\u5947\\u5076\\u8ba1\\u7b97\\u516c\\u5f0f\\uff1anum = 12^n - 4*8^n + (7 or 5)*4^n (\\u5bf9 M \\u53d6\\u6a21)\\u3002\\n      \\u5982\\u679c n \\u4e3a\\u5076\\u6570\\uff0c(-4)^n = +4^n\\uff0c\\u5219\\u7cfb\\u6570\\u4e3a +7\\uff1b\\u5982\\u679c n \\u4e3a\\u5947\\u6570\\uff0c(-4)^n = -4^n\\uff0c\\u5219\\u7cfb\\u6570\\u4e3a +5\\u3002\\n    * \\u786e\\u4fdd num \\u5728 [0, M) \\u8303\\u56f4\\u5185\\uff0c\\u518d\\u9664\\u4ee5256\\u5f97\\u5230 K = num\\/256\\u3002\\n    * \\u8f93\\u51fa K mod (10^9)\\u3002\\n - \\u4f7f\\u7528\\u5feb\\u901f\\u5e42\\u65f6\\u91c7\\u7528 128 \\u4f4d\\u4e2d\\u95f4\\u8fd0\\u7b97\\u4ee5\\u9632\\u6b62\\u6ea2\\u51fa\\u3002\\n\\n \\u65f6\\u95f4\\u590d\\u6742\\u5ea6\\uff1a\\u6bcf\\u4e2a n \\u6267\\u884c\\u4e24\\u6b21 O(log n) \\u7684\\u5feb\\u901f\\u5e42\\uff0c\\u603b\\u4f53\\u7ea6 O(T * log n)\\uff0cT<=2e5\\uff0c\\u5e94\\u80fd\\u5728\\u65f6\\u95f4\\u9650\\u5236\\u5185\\u5b8c\\u6210\\u3002\\n*\\/\\n\\ntypedef unsigned long long ull;\\nconst long long MOD = 1000000000LL;    \\/\\/ \\u6700\\u7ec8\\u53d6\\u6a21\\u6570 10^9\\nconst long long BIG_MOD = 256LL * MOD; \\/\\/ \\u4e2d\\u95f4\\u6a21\\u6570 256*10^9\\n\\n\\/\\/ \\u5feb\\u901f\\u5e42\\u51fd\\u6570\\uff1a\\u8ba1\\u7b97 base^exp mod mod_val\\nlong long modExp(long long base, ull exp, long long mod_val) {\\n    __int128 result = 1;\\n    __int128 b = base % mod_val;\\n    while (exp > 0) {\\n        if (exp & 1ULL) {\\n            result = (result * b) % mod_val;\\n        }\\n        b = (b * b) % mod_val;\\n        exp >>= 1;\\n    }\\n    return (long long)result;\\n}\\n\\nint main() {\\n    ios::sync_with_stdio(false);\\n    cin.tie(nullptr);\\n\\n    while (true) {\\n        ull n;\\n        cin >> n;\\n        if (!cin || n == 0) break; \\/\\/ 0 \\u7ed3\\u675f\\u8f93\\u5165\\n\\n        \\/\\/ \\u8ba1\\u7b97 2^n mod (256*10^9) \\u548c 3^n mod (256*10^9)\\n        long long pow2 = modExp(2, n, BIG_MOD);\\n        long long pow3 = modExp(3, n, BIG_MOD);\\n\\n        \\/\\/ \\u6784\\u9020 4^n, 8^n, 12^n\\n        __int128 pow4 = (__int128)pow2 * pow2 % BIG_MOD; \\/\\/ 4^n\\n        __int128 pow8 = pow4 * pow2 % BIG_MOD;           \\/\\/ 8^n = 4^n * 2^n\\n        __int128 pow12 = pow3 * pow4 % BIG_MOD;          \\/\\/ 12^n = 3^n * 4^n\\n\\n        \\/\\/ \\u6839\\u636e n \\u7684\\u5947\\u5076\\u8ba1\\u7b97\\u516c\\u5f0f\\uff1a12^n - 4*8^n + (7 or 5)*4^n\\n        __int128 num = pow12;\\n        num -= (__int128)4 * pow8; \\/\\/ -4*8^n\\n        if ((n & 1ULL) == 0) {\\n            \\/\\/ n \\u5076\\u6570: (-4)^n = +4^n, \\u7cfb\\u6570+7\\n            num += (__int128)7 * pow4;\\n        } else {\\n            \\/\\/ n \\u5947\\u6570: (-4)^n = -4^n, \\u7cfb\\u6570+5\\n            num += (__int128)5 * pow4;\\n        }\\n        \\/\\/ \\u5bf9\\u7ed3\\u679c\\u53d6\\u6a21\\u5e76\\u79fb\\u81f3\\u975e\\u8d1f\\n        long long num_mod = (long long)(num % BIG_MOD);\\n        if (num_mod < 0) num_mod += BIG_MOD;\\n\\n        \\/\\/ \\u9664\\u4ee5256\\u5f97\\u5230\\u6700\\u7ec8\\u8ba1\\u6570\\uff0c\\u7136\\u540e\\u5bf910^9\\u53d6\\u6a21\\n        long long result = (num_mod \\/ 256) % MOD;\\n        cout << result << '\\\\n';\\n    }\\n    return 0;\\n}\\n\",\"time\":5383,\"memory\":644,\"problem\":{\"pid\":\"P2012\",\"title\":\"\\u62ef\\u6551\\u4e16\\u754c2\",\"difficulty\":6,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":3085,\"submitTime\":1745654048,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":215160613,\"status\":14,\"enableO2\":true,\"score\":60},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]],\"showStatus\":true},\"currentTitle\":\"R215160613\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186344,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [
+              {
+                "id": 0,
+                "score": 60,
+                "status": 14,
+                "testCases": {
+                  "0": {
+                    "id": 0,
+                    "status": 12,
+                    "time": 3,
+                    "memory": 532,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "1": {
+                    "id": 1,
+                    "status": 12,
+                    "time": 3,
+                    "memory": 560,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "2": {
+                    "id": 2,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 644,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "3": {
+                    "id": 3,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 552,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "4": {
+                    "id": 4,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 564,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "5": {
+                    "id": 5,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 560,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "6": {
+                    "id": 6,
+                    "status": 12,
+                    "time": 5,
+                    "memory": 552,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "7": {
+                    "id": 7,
+                    "status": 12,
+                    "time": 6,
+                    "memory": 556,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "8": {
+                    "id": 8,
+                    "status": 12,
+                    "time": 6,
+                    "memory": 608,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "9": {
+                    "id": 9,
+                    "status": 12,
+                    "time": 6,
+                    "memory": 552,
+                    "score": 6,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "10": {
+                    "id": 10,
+                    "status": 5,
+                    "time": 1071,
+                    "memory": 528,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "11": {
+                    "id": 11,
+                    "status": 5,
+                    "time": 1065,
+                    "memory": 556,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "12": {
+                    "id": 12,
+                    "status": 5,
+                    "time": 1041,
+                    "memory": 556,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "13": {
+                    "id": 13,
+                    "status": 5,
+                    "time": 1089,
+                    "memory": 564,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "14": {
+                    "id": 14,
+                    "status": 5,
+                    "time": 1072,
+                    "memory": 520,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                },
+                "judger": "",
+                "time": 5383,
+                "memory": 644,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            ],
+            "finishedCaseCount": 15,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <iostream>\nusing namespace std;\n\n/*\n 本代码用于计算满足特定基因序列约束条件的序列数。\n 问题描述：给定基因序列长度 n，序列字符集包括普通基因 {A, C, G, T} (4 种)和特殊基因 {乾、兑、离、震、巽、坎、艮、坤} (8 种)。\n 其中，阳性字符 (乾、坎、艮、震) 在序列中出现次数必须为奇数；阴性字符 (坤、兑、离、巽) 在序列中出现次数必须为偶数。\n 普通字符次数无限制。问满足上述条件的长度为 n 的序列数量，对 10^9 取模。\n\n 分析：\n 令总字符数为12(4普通 + 8特殊)。对每个特殊字符计数的奇偶性有要求，可以使用包含-排除或离散傅里叶技巧计算符合要求的序列数。\n 经过推导可得，符合条件的序列数为：\n   K(n) = (1/256) * (12^n - 4 * 8^n + 6 * 4^n + (-4)^n)\n 公式中 256 = 2^8 是因为共有8个特殊字符，每个奇偶约束贡献因子1/2^8。\n\n 我们需要对 10^9 (不是素数) 取模，注意 12^n 等数值很大，n 最大可达 2^63。\n 为了高效计算，使用快速幂，并考虑模运算细节：\n 由于除以256，直接做模运算会产生除法逆元问题。我们采用如下策略：\n   1. 定义大模数 M = 256 * 10^9 (方便保留被256整除的信息)。\n   2. 分别计算 base^n mod M。\n   3. 计算公式分子 mod M，然后除以256后再取 10^9 模即可。\n \n 进一步优化：由于需要计算 12^n,8^n,4^n,(-4)^n，注意到\n   12^n = (3 * 4)^n = 3^n * 4^n,\n   8^n = 2^(3n) = (2^n)^3,\n   4^n = 2^(2n) = (2^n)^2,\n   (-4)^n = ±4^n (符号取决于 n 的奇偶).\n 我们先计算 2^n mod M 和 3^n mod M，用它们来构造 4^n, 8^n, 12^n, (-4)^n。\n 这样只需进行两次快速幂运算 (2^n, 3^n)，减少计算量。\n\n 算法步骤：\n - 读入 n (直到读到 0 结束)。\n - 对每个 n：\n    * 计算 pow2 = 2^n mod M, pow3 = 3^n mod M (使用快速幂)。\n    * 由此计算 pow4 = pow2 * pow2 mod M (即 4^n), pow8 = pow4 * pow2 mod M (即 8^n), pow12 = pow3 * pow4 mod M (即 12^n)。\n    * 根据 n 的奇偶计算公式：num = 12^n - 4*8^n + (7 or 5)*4^n (对 M 取模)。\n      如果 n 为偶数，(-4)^n = +4^n，则系数为 +7；如果 n 为奇数，(-4)^n = -4^n，则系数为 +5。\n    * 确保 num 在 [0, M) 范围内，再除以256得到 K = num/256。\n    * 输出 K mod (10^9)。\n - 使用快速幂时采用 128 位中间运算以防止溢出。\n\n 时间复杂度：每个 n 执行两次 O(log n) 的快速幂，总体约 O(T * log n)，T<=2e5，应能在时间限制内完成。\n*/\n\ntypedef unsigned long long ull;\nconst long long MOD = 1000000000LL;    // 最终取模数 10^9\nconst long long BIG_MOD = 256LL * MOD; // 中间模数 256*10^9\n\n// 快速幂函数：计算 base^exp mod mod_val\nlong long modExp(long long base, ull exp, long long mod_val) {\n    __int128 result = 1;\n    __int128 b = base % mod_val;\n    while (exp > 0) {\n        if (exp & 1ULL) {\n            result = (result * b) % mod_val;\n        }\n        b = (b * b) % mod_val;\n        exp >>= 1;\n    }\n    return (long long)result;\n}\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    while (true) {\n        ull n;\n        cin >> n;\n        if (!cin || n == 0) break; // 0 结束输入\n\n        // 计算 2^n mod (256*10^9) 和 3^n mod (256*10^9)\n        long long pow2 = modExp(2, n, BIG_MOD);\n        long long pow3 = modExp(3, n, BIG_MOD);\n\n        // 构造 4^n, 8^n, 12^n\n        __int128 pow4 = (__int128)pow2 * pow2 % BIG_MOD; // 4^n\n        __int128 pow8 = pow4 * pow2 % BIG_MOD;           // 8^n = 4^n * 2^n\n        __int128 pow12 = pow3 * pow4 % BIG_MOD;          // 12^n = 3^n * 4^n\n\n        // 根据 n 的奇偶计算公式：12^n - 4*8^n + (7 or 5)*4^n\n        __int128 num = pow12;\n        num -= (__int128)4 * pow8; // -4*8^n\n        if ((n & 1ULL) == 0) {\n            // n 偶数: (-4)^n = +4^n, 系数+7\n            num += (__int128)7 * pow4;\n        } else {\n            // n 奇数: (-4)^n = -4^n, 系数+5\n            num += (__int128)5 * pow4;\n        }\n        // 对结果取模并移至非负\n        long long num_mod = (long long)(num % BIG_MOD);\n        if (num_mod < 0) num_mod += BIG_MOD;\n\n        // 除以256得到最终计数，然后对10^9取模\n        long long result = (num_mod / 256) % MOD;\n        cout << result << '\\n';\n    }\n    return 0;\n}\n",
+        "time": 5383,
+        "memory": 644,
+        "problem": {
+          "pid": "P2012",
+          "title": "拯救世界2",
+          "difficulty": 6,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 3085,
+        "submitTime": 1745654048,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 215160613,
+        "status": 14,
+        "enableO2": true,
+        "score": 60
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R215160613",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186344,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

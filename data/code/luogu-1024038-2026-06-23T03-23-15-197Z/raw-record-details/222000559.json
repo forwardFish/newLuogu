@@ -1,0 +1,201 @@
+{
+  "recordId": "222000559",
+  "url": "https://www.luogu.com.cn/record/222000559?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:44:56.662Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler__eii_tzy\\/src: \\u5728\\u51fd\\u6570\\u2018void find_components()\\u2019\\u4e2d:\\n\\/tmp\\/compiler__eii_tzy\\/src:88:27: \\u8b66\\u544a\\uff1acomparison of integer expressions of different signedness: \\u2018int\\u2019 and \\u2018std::vector<int>::size_type\\u2019 {aka \\u2018long unsigned int\\u2019} [-Wsign-compare]\\n   88 |         for (int j = 0; j < comp_cycles[i].size(); j++) {\\n      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~\\n\\/tmp\\/compiler__eii_tzy\\/src: \\u5728\\u51fd\\u6570\\u2018void process_component(int)\\u2019\\u4e2d:\\n\\/tmp\\/compiler__eii_tzy\\/src:133:38: \\u9519\\u8bef\\uff1aconversion from \\u2018int [1000005]\\u2019 to non-scalar type \\u2018std::vector<int>\\u2019 requested\\n  133 |         vector<int> in_tree_degree = in_degree;\\n      |                                      ^~~~~~~~~\\n\\/tmp\\/compiler__eii_tzy\\/src:137:13: \\u8b66\\u544a\\uff1aunused variable \\u2018fixed_correct\\u2019 [-Wunused-variable]\\n  137 |         int fixed_correct = 0;\\n      |             ^~~~~~~~~~~~~\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <iostream>\\n#include <vector>\\n#include <queue>\\n#include <algorithm>\\n#include <cstring>\\n#include <cmath>\\nusing namespace std;\\n\\ntypedef long long ll;\\nconst int MAXN = 1e6 + 5;\\nconst int MOD = 998244353;\\n\\nint n;\\nint a[MAXN], opt[MAXN];\\nvector<int> parent[MAXN]; \\nint in_degree[MAXN];\\nint comp_id[MAXN];\\nint comp_count = 0;\\nvector<int> components[MAXN];\\nint cycle_node_comp_id[MAXN];\\nvector<int> comp_cycles[MAXN];\\nint comp_tree_min[MAXN], comp_tree_max[MAXN];\\nll comp_tree_count[MAXN];\\nint comp_global_min[MAXN], comp_global_max[MAXN];\\nll comp_total_count[MAXN];\\nint in_cycle[MAXN]; \\nint cycle_next[MAXN]; \\nint cycle_index_in_comp[MAXN];\\nint node_assign[MAXN]; \\nint visited[MAXN];\\nint is_cycle_node[MAXN];\\nint is_tree_node[MAXN];\\nint cycle_length[MAXN];\\nint comp_node_count[MAXN];\\nint comp_cycle_length[MAXN];\\nint comp_tree_node_count[MAXN];\\nint in_cycle_index[MAXN];\\nint in_cycle_comp[MAXN];\\nint comp_cycle_start[MAXN];\\n\\nvoid find_components() {\\n    memset(comp_id, -1, sizeof(comp_id));\\n    comp_count = 0;\\n    for (int i = 0; i < n; i++) {\\n        if (comp_id[i] != -1) continue;\\n        int u = i;\\n        vector<int> path;\\n        while (comp_id[u] == -1) {\\n            comp_id[u] = comp_count;\\n            path.push_back(u);\\n            u = a[u];\\n        }\\n        if (comp_id[u] == comp_count) {\\n            auto it = find(path.begin(), path.end(), u);\\n            vector<int> cycle;\\n            for (auto iter = it; iter != path.end(); ++iter) {\\n                cycle.push_back(*iter);\\n                in_cycle[*iter] = 1;\\n            }\\n            comp_cycles[comp_count] = cycle;\\n            comp_cycle_start[comp_count] = u;\\n        } else {\\n            for (int node : path) {\\n                comp_id[node] = comp_id[u];\\n            }\\n        }\\n        comp_count++;\\n    }\\n    for (int i = 0; i < n; i++) {\\n        components[comp_id[i]].push_back(i);\\n        if (in_cycle[i]) {\\n            comp_cycle_length[comp_id[i]]++;\\n        }\\n    }\\n    for (int i = 0; i < comp_count; i++) {\\n        comp_node_count[i] = components[i].size();\\n        if (comp_cycles[i].empty()) {\\n            for (int j = 0; j < comp_node_count[i]; j++) {\\n                int node = components[i][j];\\n                if (in_cycle[node]) {\\n                    comp_cycles[i].push_back(node);\\n                }\\n            }\\n        }\\n    }\\n    for (int i = 0; i < comp_count; i++) {\\n        if (comp_cycles[i].empty()) continue;\\n        for (int j = 0; j < comp_cycles[i].size(); j++) {\\n            int node = comp_cycles[i][j];\\n            in_cycle_index[node] = j;\\n            in_cycle_comp[node] = i;\\n            cycle_next[node] = a[node];\\n        }\\n    }\\n}\\n\\nvoid process_component(int comp) {\\n    if (comp_cycles[comp].empty()) {\\n        comp_total_count[comp] = 0;\\n        return;\\n    }\\n    vector<int> &cycle = comp_cycles[comp];\\n    int k = cycle.size();\\n    ll comp_count_val = 0;\\n    int comp_min_correct = 1e9;\\n    int comp_max_correct = -1;\\n    for (int mask = 0; mask < (1 << k); mask++) {\\n        for (int i = 0; i < k; i++) {\\n            int node = cycle[i];\\n            node_assign[node] = (mask >> i) & 1;\\n        }\\n        bool valid_cycle = true;\\n        for (int i = 0; i < k; i++) {\\n            int u = cycle[i];\\n            if (node_assign[u] == 1) {\\n                int target = a[u];\\n                int expected = (opt[u] == 1) ? 1 : 0;\\n                if (node_assign[target] != expected) {\\n                    valid_cycle = false;\\n                    break;\\n                }\\n            }\\n        }\\n        if (!valid_cycle) continue;\\n        queue<int> q;\\n        vector<int> tree_assign(n, -1);\\n        vector<bool> has_parent_set(n, false);\\n        for (int i = 0; i < k; i++) {\\n            int u = cycle[i];\\n            tree_assign[u] = node_assign[u];\\n            q.push(u);\\n        }\\n        vector<int> in_tree_degree = in_degree;\\n        vector<bool> is_free(n, false);\\n        bool valid_tree = true;\\n        ll free_count = 0;\\n        int fixed_correct = 0;\\n        while (!q.empty() && valid_tree) {\\n            int u = q.front(); q.pop();\\n            for (int v : parent[u]) {\\n                if (tree_assign[u] == 1) {\\n                    has_parent_set[v] = true;\\n                    if (opt[u] == 1) {\\n                        if (tree_assign[v] == -1) {\\n                            tree_assign[v] = 1;\\n                            q.push(v);\\n                        } else if (tree_assign[v] != 1) {\\n                            valid_tree = false;\\n                        }\\n                    } else {\\n                        if (tree_assign[v] == -1) {\\n                            tree_assign[v] = 0;\\n                            q.push(v);\\n                        } else if (tree_assign[v] != 0) {\\n                            valid_tree = false;\\n                        }\\n                    }\\n                }\\n            }\\n            if (tree_assign[u] == -1) {\\n                bool must1 = false, must0 = false;\\n                for (int p : parent[u]) {\\n                    if (tree_assign[p] == 1) {\\n                        if (opt[p] == 1) must1 = true;\\n                        else must0 = true;\\n                    }\\n                }\\n                if (must1 && must0) {\\n                    valid_tree = false;\\n                } else if (must1) {\\n                    tree_assign[u] = 1;\\n                } else if (must0) {\\n                    tree_assign[u] = 0;\\n                } else {\\n                    tree_assign[u] = 0;\\n                    is_free[u] = true;\\n                    free_count++;\\n                }\\n            }\\n            if (tree_assign[u] == 1) {\\n                int target = a[u];\\n                int expected = (opt[u] == 1) ? 1 : 0;\\n                if (tree_assign[target] != -1 && tree_assign[target] != expected) {\\n                    valid_tree = false;\\n                }\\n            }\\n        }\\n        if (!valid_tree) continue;\\n        int total_correct = 0;\\n        for (int u : components[comp]) {\\n            if (tree_assign[u] == 1) {\\n                total_correct++;\\n            }\\n        }\\n        for (int u : components[comp]) {\\n            if (tree_assign[u] == 1) {\\n                int target = a[u];\\n                int expected = (opt[u] == 1) ? 1 : 0;\\n                if (tree_assign[target] != expected) {\\n                    valid_tree = false;\\n                    break;\\n                }\\n            }\\n        }\\n        if (!valid_tree) continue;\\n        ll ways = 1;\\n        for (int i = 0; i < free_count; i++) {\\n            ways = (ways * 2) % MOD;\\n        }\\n        comp_count_val = (comp_count_val + ways) % MOD;\\n        comp_min_correct = min(comp_min_correct, total_correct);\\n        comp_max_correct = max(comp_max_correct, total_correct);\\n    }\\n    comp_total_count[comp] = comp_count_val;\\n    comp_global_min[comp] = comp_min_correct;\\n    comp_global_max[comp] = comp_max_correct;\\n}\\n\\nint main() {\\n    scanf(\\\"%d\\\", &n);\\n    for (int i = 0; i < n; i++) {\\n        scanf(\\\"%d %d\\\", &a[i], &opt[i]);\\n        a[i]--; \\n    }\\n    for (int i = 0; i < n; i++) {\\n        parent[a[i]].push_back(i);\\n        in_degree[a[i]]++;\\n    }\\n    find_components();\\n    for (int i = 0; i < comp_count; i++) {\\n        process_component(i);\\n    }\\n    ll total_count = 1;\\n    int total_min = 0, total_max = 0;\\n    bool no_answer = false;\\n    for (int i = 0; i < comp_count; i++) {\\n        if (comp_total_count[i] == 0) {\\n            no_answer = true;\\n            break;\\n        }\\n        total_count = (total_count * comp_total_count[i]) % MOD;\\n        total_min += comp_global_min[i];\\n        total_max += comp_global_max[i];\\n    }\\n    if (no_answer) {\\n        printf(\\\"No answer\\\\n\\\");\\n    } else {\\n        printf(\\\"%lld\\\\n\\\", total_count);\\n        printf(\\\"%d\\\\n\\\", total_max);\\n        printf(\\\"%d\\\\n\\\", total_min);\\n    }\\n    return 0;\\n}\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P6691\",\"title\":\"\\u9009\\u62e9\\u9898\",\"difficulty\":3,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":7806,\"submitTime\":1751380448,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":222000559,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]],\"showStatus\":true},\"currentTitle\":\"R222000559\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186296,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler__eii_tzy/src: 在函数‘void find_components()’中:\n/tmp/compiler__eii_tzy/src:88:27: 警告：comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]\n   88 |         for (int j = 0; j < comp_cycles[i].size(); j++) {\n      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~\n/tmp/compiler__eii_tzy/src: 在函数‘void process_component(int)’中:\n/tmp/compiler__eii_tzy/src:133:38: 错误：conversion from ‘int [1000005]’ to non-scalar type ‘std::vector<int>’ requested\n  133 |         vector<int> in_tree_degree = in_degree;\n      |                                      ^~~~~~~~~\n/tmp/compiler__eii_tzy/src:137:13: 警告：unused variable ‘fixed_correct’ [-Wunused-variable]\n  137 |         int fixed_correct = 0;\n      |             ^~~~~~~~~~~~~\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <iostream>\n#include <vector>\n#include <queue>\n#include <algorithm>\n#include <cstring>\n#include <cmath>\nusing namespace std;\n\ntypedef long long ll;\nconst int MAXN = 1e6 + 5;\nconst int MOD = 998244353;\n\nint n;\nint a[MAXN], opt[MAXN];\nvector<int> parent[MAXN]; \nint in_degree[MAXN];\nint comp_id[MAXN];\nint comp_count = 0;\nvector<int> components[MAXN];\nint cycle_node_comp_id[MAXN];\nvector<int> comp_cycles[MAXN];\nint comp_tree_min[MAXN], comp_tree_max[MAXN];\nll comp_tree_count[MAXN];\nint comp_global_min[MAXN], comp_global_max[MAXN];\nll comp_total_count[MAXN];\nint in_cycle[MAXN]; \nint cycle_next[MAXN]; \nint cycle_index_in_comp[MAXN];\nint node_assign[MAXN]; \nint visited[MAXN];\nint is_cycle_node[MAXN];\nint is_tree_node[MAXN];\nint cycle_length[MAXN];\nint comp_node_count[MAXN];\nint comp_cycle_length[MAXN];\nint comp_tree_node_count[MAXN];\nint in_cycle_index[MAXN];\nint in_cycle_comp[MAXN];\nint comp_cycle_start[MAXN];\n\nvoid find_components() {\n    memset(comp_id, -1, sizeof(comp_id));\n    comp_count = 0;\n    for (int i = 0; i < n; i++) {\n        if (comp_id[i] != -1) continue;\n        int u = i;\n        vector<int> path;\n        while (comp_id[u] == -1) {\n            comp_id[u] = comp_count;\n            path.push_back(u);\n            u = a[u];\n        }\n        if (comp_id[u] == comp_count) {\n            auto it = find(path.begin(), path.end(), u);\n            vector<int> cycle;\n            for (auto iter = it; iter != path.end(); ++iter) {\n                cycle.push_back(*iter);\n                in_cycle[*iter] = 1;\n            }\n            comp_cycles[comp_count] = cycle;\n            comp_cycle_start[comp_count] = u;\n        } else {\n            for (int node : path) {\n                comp_id[node] = comp_id[u];\n            }\n        }\n        comp_count++;\n    }\n    for (int i = 0; i < n; i++) {\n        components[comp_id[i]].push_back(i);\n        if (in_cycle[i]) {\n            comp_cycle_length[comp_id[i]]++;\n        }\n    }\n    for (int i = 0; i < comp_count; i++) {\n        comp_node_count[i] = components[i].size();\n        if (comp_cycles[i].empty()) {\n            for (int j = 0; j < comp_node_count[i]; j++) {\n                int node = components[i][j];\n                if (in_cycle[node]) {\n                    comp_cycles[i].push_back(node);\n                }\n            }\n        }\n    }\n    for (int i = 0; i < comp_count; i++) {\n        if (comp_cycles[i].empty()) continue;\n        for (int j = 0; j < comp_cycles[i].size(); j++) {\n            int node = comp_cycles[i][j];\n            in_cycle_index[node] = j;\n            in_cycle_comp[node] = i;\n            cycle_next[node] = a[node];\n        }\n    }\n}\n\nvoid process_component(int comp) {\n    if (comp_cycles[comp].empty()) {\n        comp_total_count[comp] = 0;\n        return;\n    }\n    vector<int> &cycle = comp_cycles[comp];\n    int k = cycle.size();\n    ll comp_count_val = 0;\n    int comp_min_correct = 1e9;\n    int comp_max_correct = -1;\n    for (int mask = 0; mask < (1 << k); mask++) {\n        for (int i = 0; i < k; i++) {\n            int node = cycle[i];\n            node_assign[node] = (mask >> i) & 1;\n        }\n        bool valid_cycle = true;\n        for (int i = 0; i < k; i++) {\n            int u = cycle[i];\n            if (node_assign[u] == 1) {\n                int target = a[u];\n                int expected = (opt[u] == 1) ? 1 : 0;\n                if (node_assign[target] != expected) {\n                    valid_cycle = false;\n                    break;\n                }\n            }\n        }\n        if (!valid_cycle) continue;\n        queue<int> q;\n        vector<int> tree_assign(n, -1);\n        vector<bool> has_parent_set(n, false);\n        for (int i = 0; i < k; i++) {\n            int u = cycle[i];\n            tree_assign[u] = node_assign[u];\n            q.push(u);\n        }\n        vector<int> in_tree_degree = in_degree;\n        vector<bool> is_free(n, false);\n        bool valid_tree = true;\n        ll free_count = 0;\n        int fixed_correct = 0;\n        while (!q.empty() && valid_tree) {\n            int u = q.front(); q.pop();\n            for (int v : parent[u]) {\n                if (tree_assign[u] == 1) {\n                    has_parent_set[v] = true;\n                    if (opt[u] == 1) {\n                        if (tree_assign[v] == -1) {\n                            tree_assign[v] = 1;\n                            q.push(v);\n                        } else if (tree_assign[v] != 1) {\n                            valid_tree = false;\n                        }\n                    } else {\n                        if (tree_assign[v] == -1) {\n                            tree_assign[v] = 0;\n                            q.push(v);\n                        } else if (tree_assign[v] != 0) {\n                            valid_tree = false;\n                        }\n                    }\n                }\n            }\n            if (tree_assign[u] == -1) {\n                bool must1 = false, must0 = false;\n                for (int p : parent[u]) {\n                    if (tree_assign[p] == 1) {\n                        if (opt[p] == 1) must1 = true;\n                        else must0 = true;\n                    }\n                }\n                if (must1 && must0) {\n                    valid_tree = false;\n                } else if (must1) {\n                    tree_assign[u] = 1;\n                } else if (must0) {\n                    tree_assign[u] = 0;\n                } else {\n                    tree_assign[u] = 0;\n                    is_free[u] = true;\n                    free_count++;\n                }\n            }\n            if (tree_assign[u] == 1) {\n                int target = a[u];\n                int expected = (opt[u] == 1) ? 1 : 0;\n                if (tree_assign[target] != -1 && tree_assign[target] != expected) {\n                    valid_tree = false;\n                }\n            }\n        }\n        if (!valid_tree) continue;\n        int total_correct = 0;\n        for (int u : components[comp]) {\n            if (tree_assign[u] == 1) {\n                total_correct++;\n            }\n        }\n        for (int u : components[comp]) {\n            if (tree_assign[u] == 1) {\n                int target = a[u];\n                int expected = (opt[u] == 1) ? 1 : 0;\n                if (tree_assign[target] != expected) {\n                    valid_tree = false;\n                    break;\n                }\n            }\n        }\n        if (!valid_tree) continue;\n        ll ways = 1;\n        for (int i = 0; i < free_count; i++) {\n            ways = (ways * 2) % MOD;\n        }\n        comp_count_val = (comp_count_val + ways) % MOD;\n        comp_min_correct = min(comp_min_correct, total_correct);\n        comp_max_correct = max(comp_max_correct, total_correct);\n    }\n    comp_total_count[comp] = comp_count_val;\n    comp_global_min[comp] = comp_min_correct;\n    comp_global_max[comp] = comp_max_correct;\n}\n\nint main() {\n    scanf(\"%d\", &n);\n    for (int i = 0; i < n; i++) {\n        scanf(\"%d %d\", &a[i], &opt[i]);\n        a[i]--; \n    }\n    for (int i = 0; i < n; i++) {\n        parent[a[i]].push_back(i);\n        in_degree[a[i]]++;\n    }\n    find_components();\n    for (int i = 0; i < comp_count; i++) {\n        process_component(i);\n    }\n    ll total_count = 1;\n    int total_min = 0, total_max = 0;\n    bool no_answer = false;\n    for (int i = 0; i < comp_count; i++) {\n        if (comp_total_count[i] == 0) {\n            no_answer = true;\n            break;\n        }\n        total_count = (total_count * comp_total_count[i]) % MOD;\n        total_min += comp_global_min[i];\n        total_max += comp_global_max[i];\n    }\n    if (no_answer) {\n        printf(\"No answer\\n\");\n    } else {\n        printf(\"%lld\\n\", total_count);\n        printf(\"%d\\n\", total_max);\n        printf(\"%d\\n\", total_min);\n    }\n    return 0;\n}",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P6691",
+          "title": "选择题",
+          "difficulty": 3,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 7806,
+        "submitTime": 1751380448,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 222000559,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R222000559",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186296,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

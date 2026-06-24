@@ -1,0 +1,185 @@
+{
+  "recordId": "165623846",
+  "url": "https://www.luogu.com.cn/record/165623846?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T04:03:41.263Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_fu9kpffn\\/src:3:52: \\u9519\\u8bef\\uff1a\\u2018int y1\\u2019 redeclared as different kind of entity\\n    3 | int n,m,t1,t2,ans[1000][1000],hz[1000][1000],x1,x2,y1,y2;\\n      |                                                    ^~\\nIn file included from \\/nix\\/store\\/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev\\/include\\/features.h:490,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/os_defines.h:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/c++config.h:524,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/cassert:43,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:33,\\n                 from \\/tmp\\/compiler_fu9kpffn\\/src:1:\\n\\/nix\\/store\\/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev\\/include\\/bits\\/mathcalls.h:224:1: \\u9644\\u6ce8\\uff1aprevious declaration \\u2018double y1(double)\\u2019\\n  224 | __MATHCALL (y1,, (_Mdouble_));\\n      | ^~~~~~~~~~\\n\\/tmp\\/compiler_fu9kpffn\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_fu9kpffn\\/src:9:16: \\u9519\\u8bef\\uff1ano match for \\u2018operator>>\\u2019 (operand types are \\u2018std::basic_istream<char>::__istream_type\\u2019 {aka \\u2018std::basic_istream<char>\\u2019} and \\u2018double(double) noexcept\\u2019 {aka \\u2018double(double)\\u2019})\\n    9 |         cin>>x1>>y1>>x2>>y2;\\n      |         ~~~~~~~^~~~\\n      |            |     |\\n      |            |     double(double) noexcept {aka double(double)}\\n      |            std::basic_istream<char>::__istream_type {aka std::basic_istream<char>}\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/sstream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/complex:45,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ccomplex:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:54,\\n                 from \\/tmp\\/compiler_fu9kpffn\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/istream:120:7: \\u9644\\u6ce8\\uff1acandidate: \\u2018std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__istream_type& (*)(std::basic_istream<_CharT, _Traits>::__istream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]\\u2019 <near match>\\n  120 |       operator>>(__istream_type& (*__pf)(__istream_type&))\\n      |       ^~~~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/istream:120:7: \\u9644\\u6ce8\\uff1a  conversion of argument 1 would be ill-formed:\\n\\/tmp\\/compiler_fu9kpffn\\/src:9:18: \\u9519\\u8bef\\uff1ainvalid conversion from \\u2018double (*)(double) noexcept\\u2019 {aka \\u2018double (*)(double)\\u2019} to \\u2018std::basic_istream<char>::__istream_type& (*)(std::basic_istream<char>::__istream_type&)\\u2019 {aka \\u2018std::basic_istream<char>& (*)(std::basic_istream<char>&)\\u2019} [-fpermissive]\\n    9 |         cin>>x1>>y1>>x2>>y2;\\n      |                  ^~\\n      |                  |\\n      |                  double (*)(double) noexcept {aka double (*)(double)}\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/sstream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/complex:45,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ccomplex:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:54,\\n                 from \\/tmp\\/compiler_fu9kpffn\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/istream:124:7: \\u9644\\u6ce8\\uff1acandidate: \\u2018std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__ios_type& (*)(std::basic_istream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>; std::basic_istream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]\\u2019 <near match>\\n  124 |       operator>>(__ios_type& (*__pf)(__ios_type&))\\n      |       ^~~~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/istream:124:7: \\u9644\\u6ce8\\uff1a  conversion of argument 1 would be ill-formed:\\n\\/tmp\\/compiler_fu9kpffn\\/src:9:18: \\u9519\\u8bef\\uff1ainvalid conversion from \\u2018double (*)(double) noexcept\\u2019 {aka \\u2018double (*)(double)\\u2019} to \\u2018std::basic_istream<char>::__ios_type& (*)(std::basic_istream<char>::__ios_type&)\\u2019 {aka \\u2018std::basic_ios<char>& (*)(std::basic_ios<char>&)\\u2019} [-fpermissive]\\n    9 |         cin>>x1>>y1>>x2>>y2;\\n      |                  ^~\\n      |                  |\\n      |                  double (*)(double) noexcept {aka double (*)(double)}\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/sstream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/complex:45,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ccomplex:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:54,\\n                 from \\/tmp\\/compiler_fu9kpffn\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/istream:131:7: \\u9644\\u6ce8\\uff1acandidate: \\u2018std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]\\u2019 <near match>\\n  131 |       operator>>(ios_base& (*__pf)(ios_base&))\\n      |       ^~~~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/istream:131:7: \\u9644\\u6ce8\\uff1a  conversion of argument 1 would be ill-formed:\\n\\/tmp\\/compiler_fu9kpffn\\/src:9:18: \\u9519\\u8bef\\uff1ainvalid conversion from \\u2018double (*)(double) noexcept\\u2019 {aka \\u2018double (*)(double)\\u2019} to \\u2018std::ios_base& (*)(std::ios_base&)\\u2019 [-fpermissive]\\n    9 |         cin>>x1>>y1>>x2>>y2;\\n      |                  ^~\\n      |                  |\\n      |                  double (*)(double) noexcept {aka double (*)(double)}\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/sstream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/complex:45,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ccomplex:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:54,\\n                 from \\/tmp\\/compiler_fu9kpffn\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/istream:168:7: \\u9644\\u6ce8\\uff1acandidate: \\u2018std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(bool&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]\\u2019 <near match>\\n  168 |       operator>>(bool& __n)\\n      |       ^~~~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/istream:168:7: \\u9644\\u6ce8\\uff1a  conversion of argument 1 would be ill-formed:\\n\\/tmp\\/compiler_fu9kpffn\\/src:9:18: \\u8b66\\u544a\\uff1a\\u2018double y1(double)\\u2019\\u7684\\u5730\\u5740\\u6c38\\u8fdc\\u4e0d\\u4f1a\\u4e3a NULL [-Waddress]\\n    9 |         cin>>x1>>y1>>x2>>y2;\\n      |                  ^~\\n\\/tmp\\/compiler_fu9kpffn\\/src:9:18: \\u9519\\u8bef\\uff1acannot bind non-const lvalue reference of type \\u2018bool&\\u2019 to an rvalue of type \\u2018bool\\u2019\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/sstream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/complex:45,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ccomplex:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:54,\\n                 from \\/tmp\\/compiler_fu9kpffn\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/istream:172:7: \\u9644\\u6ce8\\uff1acandidate: \\u2018std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::operator>>(short int&) [with _CharT = char; _Traits = std::char_traits<char>]\\u2019 <near match>\\n  172 |       operator>>(short& __n);\\n      |       ^~~~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/istream:172:7: \\u9644\\u6ce8\\uff1a  conversion of argument 1 would be ill-formed:\\n\\/tmp\\/compiler_fu9kpffn\\/src:9:18: \\u9519\\u8bef\\uff1ainvalid conversion from \\u2018double (*)(double) noexcept\\u2019 {aka \\u2018double (*)(double)\\u2019} to \\u2018short int\\u2019 [-fpermissive]\\n    9 |         cin>>x1>>y1>>x2>>y2;\\n      |                  ^~\\n      |                  |\\n      |                  double (*)(double) noexcept {aka double (*)(double)}\\n\\/tmp\\/compiler_fu9kpffn\\/src:9:18: \\u9519\\u8bef\\uff1a\\u65e0\\u6cd5\\u5c06\\u53f3\\u503c\\u2018(short int)y1\\u2019\\u7ed1\\u5b9a\\u5230\\u2018short int&\\u2019\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/sstream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/complex:45,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ccomplex:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:54,\\n                 from \\/tmp\\/compiler_fu9kpffn\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/istream:175:7: \\u9644\\u6ce8\\uff1acandidate: \\u2018std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(short unsigned int&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]\\u2019 <near match>\\n  175 |    \\n...\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h> \\r\\nusing namespace std;   \\r\\nint n,m,t1,t2,ans[1000][1000],hz[1000][1000],x1,x2,y1,y2; \\r\\nint main()\\r\\n{  \\r\\n    cin>>n>>m>>t1>>t2;\\r\\n    for (int k=1;k<=t1;k++)\\r\\n\\t{  \\r\\n        cin>>x1>>y1>>x2>>y2;\\r\\n        for(int i=x1;i<=x2;i++)  \\r\\n        {\\r\\n        \\tfor(int j=y1;j<=y2;j++)\\r\\n\\t\\t  \\t{  \\r\\n             \\tans[i][j]++; \\r\\n             \\thz[i][j]=k;\\r\\n        \\t}  \\r\\n\\t\\t}\\r\\n    }  \\r\\n    for (int k=1;k<=t2;k++)\\r\\n\\t{  \\r\\n        scanf(\\\"%d%d\\\",&x1,&y1);  \\r\\n        if (ans[x1][y1]!=0) \\r\\n\\t\\t{\\r\\n\\t\\t\\tcout<<\\\"Y\\\"<<\\\" \\\"<<ans[x1][y1]<<\\\" \\\"<<hz[x1][y1]<<endl; \\r\\n\\t\\t}\\r\\n\\t\\telse \\r\\n\\t\\t{\\r\\n\\t\\t\\tcout<<\\\"N\\\";\\r\\n\\t\\t} \\r\\n    }  \\r\\n}  \",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P1830\",\"title\":\"\\u8f70\\u70b8III\",\"difficulty\":1,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":604,\"submitTime\":1720833002,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":165623846,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1,2,3]],\"showStatus\":true},\"currentTitle\":\"R165623846\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782187421,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_fu9kpffn/src:3:52: 错误：‘int y1’ redeclared as different kind of entity\n    3 | int n,m,t1,t2,ans[1000][1000],hz[1000][1000],x1,x2,y1,y2;\n      |                                                    ^~\nIn file included from /nix/store/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev/include/features.h:490,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/os_defines.h:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/c++config.h:524,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/cassert:43,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:33,\n                 from /tmp/compiler_fu9kpffn/src:1:\n/nix/store/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev/include/bits/mathcalls.h:224:1: 附注：previous declaration ‘double y1(double)’\n  224 | __MATHCALL (y1,, (_Mdouble_));\n      | ^~~~~~~~~~\n/tmp/compiler_fu9kpffn/src: 在函数‘int main()’中:\n/tmp/compiler_fu9kpffn/src:9:16: 错误：no match for ‘operator>>’ (operand types are ‘std::basic_istream<char>::__istream_type’ {aka ‘std::basic_istream<char>’} and ‘double(double) noexcept’ {aka ‘double(double)’})\n    9 |         cin>>x1>>y1>>x2>>y2;\n      |         ~~~~~~~^~~~\n      |            |     |\n      |            |     double(double) noexcept {aka double(double)}\n      |            std::basic_istream<char>::__istream_type {aka std::basic_istream<char>}\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/sstream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/complex:45,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ccomplex:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:54,\n                 from /tmp/compiler_fu9kpffn/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/istream:120:7: 附注：candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__istream_type& (*)(std::basic_istream<_CharT, _Traits>::__istream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’ <near match>\n  120 |       operator>>(__istream_type& (*__pf)(__istream_type&))\n      |       ^~~~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/istream:120:7: 附注：  conversion of argument 1 would be ill-formed:\n/tmp/compiler_fu9kpffn/src:9:18: 错误：invalid conversion from ‘double (*)(double) noexcept’ {aka ‘double (*)(double)’} to ‘std::basic_istream<char>::__istream_type& (*)(std::basic_istream<char>::__istream_type&)’ {aka ‘std::basic_istream<char>& (*)(std::basic_istream<char>&)’} [-fpermissive]\n    9 |         cin>>x1>>y1>>x2>>y2;\n      |                  ^~\n      |                  |\n      |                  double (*)(double) noexcept {aka double (*)(double)}\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/sstream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/complex:45,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ccomplex:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:54,\n                 from /tmp/compiler_fu9kpffn/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/istream:124:7: 附注：candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__ios_type& (*)(std::basic_istream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>; std::basic_istream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]’ <near match>\n  124 |       operator>>(__ios_type& (*__pf)(__ios_type&))\n      |       ^~~~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/istream:124:7: 附注：  conversion of argument 1 would be ill-formed:\n/tmp/compiler_fu9kpffn/src:9:18: 错误：invalid conversion from ‘double (*)(double) noexcept’ {aka ‘double (*)(double)’} to ‘std::basic_istream<char>::__ios_type& (*)(std::basic_istream<char>::__ios_type&)’ {aka ‘std::basic_ios<char>& (*)(std::basic_ios<char>&)’} [-fpermissive]\n    9 |         cin>>x1>>y1>>x2>>y2;\n      |                  ^~\n      |                  |\n      |                  double (*)(double) noexcept {aka double (*)(double)}\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/sstream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/complex:45,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ccomplex:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:54,\n                 from /tmp/compiler_fu9kpffn/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/istream:131:7: 附注：candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’ <near match>\n  131 |       operator>>(ios_base& (*__pf)(ios_base&))\n      |       ^~~~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/istream:131:7: 附注：  conversion of argument 1 would be ill-formed:\n/tmp/compiler_fu9kpffn/src:9:18: 错误：invalid conversion from ‘double (*)(double) noexcept’ {aka ‘double (*)(double)’} to ‘std::ios_base& (*)(std::ios_base&)’ [-fpermissive]\n    9 |         cin>>x1>>y1>>x2>>y2;\n      |                  ^~\n      |                  |\n      |                  double (*)(double) noexcept {aka double (*)(double)}\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/sstream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/complex:45,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ccomplex:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:54,\n                 from /tmp/compiler_fu9kpffn/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/istream:168:7: 附注：candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(bool&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’ <near match>\n  168 |       operator>>(bool& __n)\n      |       ^~~~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/istream:168:7: 附注：  conversion of argument 1 would be ill-formed:\n/tmp/compiler_fu9kpffn/src:9:18: 警告：‘double y1(double)’的地址永远不会为 NULL [-Waddress]\n    9 |         cin>>x1>>y1>>x2>>y2;\n      |                  ^~\n/tmp/compiler_fu9kpffn/src:9:18: 错误：cannot bind non-const lvalue reference of type ‘bool&’ to an rvalue of type ‘bool’\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/sstream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/complex:45,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ccomplex:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:54,\n                 from /tmp/compiler_fu9kpffn/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/istream:172:7: 附注：candidate: ‘std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::operator>>(short int&) [with _CharT = char; _Traits = std::char_traits<char>]’ <near match>\n  172 |       operator>>(short& __n);\n      |       ^~~~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/istream:172:7: 附注：  conversion of argument 1 would be ill-formed:\n/tmp/compiler_fu9kpffn/src:9:18: 错误：invalid conversion from ‘double (*)(double) noexcept’ {aka ‘double (*)(double)’} to ‘short int’ [-fpermissive]\n    9 |         cin>>x1>>y1>>x2>>y2;\n      |                  ^~\n      |                  |\n      |                  double (*)(double) noexcept {aka double (*)(double)}\n/tmp/compiler_fu9kpffn/src:9:18: 错误：无法将右值‘(short int)y1’绑定到‘short int&’\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/sstream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/complex:45,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ccomplex:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:54,\n                 from /tmp/compiler_fu9kpffn/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/istream:175:7: 附注：candidate: ‘std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(short unsigned int&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>]’ <near match>\n  175 |    \n...",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h> \r\nusing namespace std;   \r\nint n,m,t1,t2,ans[1000][1000],hz[1000][1000],x1,x2,y1,y2; \r\nint main()\r\n{  \r\n    cin>>n>>m>>t1>>t2;\r\n    for (int k=1;k<=t1;k++)\r\n\t{  \r\n        cin>>x1>>y1>>x2>>y2;\r\n        for(int i=x1;i<=x2;i++)  \r\n        {\r\n        \tfor(int j=y1;j<=y2;j++)\r\n\t\t  \t{  \r\n             \tans[i][j]++; \r\n             \thz[i][j]=k;\r\n        \t}  \r\n\t\t}\r\n    }  \r\n    for (int k=1;k<=t2;k++)\r\n\t{  \r\n        scanf(\"%d%d\",&x1,&y1);  \r\n        if (ans[x1][y1]!=0) \r\n\t\t{\r\n\t\t\tcout<<\"Y\"<<\" \"<<ans[x1][y1]<<\" \"<<hz[x1][y1]<<endl; \r\n\t\t}\r\n\t\telse \r\n\t\t{\r\n\t\t\tcout<<\"N\";\r\n\t\t} \r\n    }  \r\n}  ",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P1830",
+          "title": "轰炸III",
+          "difficulty": 1,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 604,
+        "submitTime": 1720833002,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 165623846,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R165623846",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782187421,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

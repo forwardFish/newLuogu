@@ -1,0 +1,186 @@
+{
+  "recordId": "207005335",
+  "url": "https://www.luogu.com.cn/record/207005335?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:48:24.034Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_a9s9ber7\\/src: \\u5728\\u51fd\\u6570\\u2018void neural_network_simulation(int, int, std::vector<std::pair<int, int> >&, std::vector<std::tuple<int, int, int> >&)\\u2019\\u4e2d:\\n\\/tmp\\/compiler_a9s9ber7\\/src:26:9: \\u9519\\u8bef\\uff1a\\u2018tie\\u2019 was not declared in this scope; did you mean \\u2018time\\u2019?\\n   26 |         tie(i, j, w) = connection;\\n      |         ^~~\\n      |         time\\n\\/tmp\\/compiler_a9s9ber7\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_a9s9ber7\\/src:80:26: \\u9519\\u8bef\\uff1a\\u2018make_tuple\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   80 |         connections[i] = make_tuple(u, v, w);\\n      |                          ^~~~~~~~~~\\n\\/tmp\\/compiler_a9s9ber7\\/src:5:1: \\u9644\\u6ce8\\uff1a\\u2018std::make_tuple\\u2019 is defined in header \\u2018<tuple>\\u2019; did you forget to \\u2018#include <tuple>\\u2019?\\n    4 | #include <algorithm>\\n  +++ |+#include <tuple>\\n    5 | \\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_algobase.h:67,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/char_traits.h:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ios:40,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ostream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iostream:39,\\n                 from \\/tmp\\/compiler_a9s9ber7\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_iterator.h: In instantiation of \\u2018__gnu_cxx::__normal_iterator<_Iterator, _Container>& __gnu_cxx::__normal_iterator<_Iterator, _Container>::operator++() [with _Iterator = std::tuple<int, int, int>*; _Container = std::vector<std::tuple<int, int, int> >]\\u2019:\\n\\/tmp\\/compiler_a9s9ber7\\/src:24:35:   required from here\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_iterator.h:829:2: \\u9519\\u8bef\\uff1a\\u6307\\u5411\\u4e0d\\u5b8c\\u5168\\u7c7b\\u578b\\u2018std::tuple<int, int, int>\\u2019\\u7684\\u6307\\u9488\\u4e0d\\u80fd\\u81ea\\u589e\\n  829 |  ++_M_current;\\n      |  ^~~~~~~~~~~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/vector:67,\\n                 from \\/tmp\\/compiler_a9s9ber7\\/src:2:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_vector.h: In instantiation of \\u2018std::vector<_Tp, _Alloc>::reference std::vector<_Tp, _Alloc>::operator[](std::vector<_Tp, _Alloc>::size_type) [with _Tp = std::tuple<int, int, int>; _Alloc = std::allocator<std::tuple<int, int, int> >; std::vector<_Tp, _Alloc>::reference = std::tuple<int, int, int>&; std::vector<_Tp, _Alloc>::size_type = long unsigned int]\\u2019:\\n\\/tmp\\/compiler_a9s9ber7\\/src:80:22:   required from here\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_vector.h:1043:34: \\u9519\\u8bef\\uff1a\\u5bf9\\u4e0d\\u5b8c\\u5168\\u7684\\u7c7b\\u578b\\u2018class std::tuple<int, int, int>\\u2019\\u7684\\u975e\\u6cd5\\u4f7f\\u7528\\n 1043 |  return *(this->_M_impl._M_start + __n);\\n      |          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/move.h:55,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/nested_exception.h:40,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/exception:144,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ios:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ostream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iostream:39,\\n                 from \\/tmp\\/compiler_a9s9ber7\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/type_traits:2468:11: \\u9644\\u6ce8\\uff1adeclaration of \\u2018class std::tuple<int, int, int>\\u2019\\n 2468 |     class tuple;\\n      |           ^~~~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/vector:67,\\n                 from \\/tmp\\/compiler_a9s9ber7\\/src:2:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_vector.h: In instantiation of \\u2018std::_Vector_base<_Tp, _Alloc>::~_Vector_base() [with _Tp = std::tuple<int, int, int>; _Alloc = std::allocator<std::tuple<int, int, int> >]\\u2019:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_vector.h:508:47:   required from \\u2018std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>::size_type, const allocator_type&) [with _Tp = std::tuple<int, int, int>; _Alloc = std::allocator<std::tuple<int, int, int> >; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::tuple<int, int, int> >]\\u2019\\n\\/tmp\\/compiler_a9s9ber7\\/src:76:47:   required from here\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_vector.h:333:35: \\u9519\\u8bef\\uff1a\\u5bf9\\u4e0d\\u5b8c\\u5168\\u7684\\u7c7b\\u578b\\u2018class std::tuple<int, int, int>\\u2019\\u7684\\u975e\\u6cd5\\u4f7f\\u7528\\n  333 |         _M_impl._M_end_of_storage - _M_impl._M_start);\\n      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/move.h:55,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/nested_exception.h:40,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/exception:144,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ios:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ostream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iostream:39,\\n                 from \\/tmp\\/compiler_a9s9ber7\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/type_traits:2468:11: \\u9644\\u6ce8\\uff1adeclaration of \\u2018class std::tuple<int, int, int>\\u2019\\n 2468 |     class tuple;\\n      |           ^~~~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/vector:67,\\n                 from \\/tmp\\/compiler_a9s9ber7\\/src:2:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_vector.h: In instantiation of \\u2018static std::vector<_Tp, _Alloc>::size_type std::vector<_Tp, _Alloc>::_S_max_size(const _Tp_alloc_type&) [with _Tp = std::tuple<int, int, int>; _Alloc = std::allocator<std::tuple<int, int, int> >; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::_Tp_alloc_type = std::allocator<std::tuple<int, int, int> >]\\u2019:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_vector.h:1766:23:   required from \\u2018static std::vector<_Tp, _Alloc>::size_type std::vector<_Tp, _Alloc>::_S_check_init_len(std::vector<_Tp, _Alloc>::size_type, const allocator_type&) [with _Tp = std::tuple<int, int, int>; _Alloc = std::allocator<std::tuple<int, int, int> >; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::tuple<int, int, int> >]\\u2019\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_vector.h:508:32:   required from \\u2018std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>::size_type, const allocator_type&) [with _Tp = std::tuple<int, int, int>; _Alloc = std::allocator<std::tuple<int, int, int> >; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::tuple<int, int, int> >]\\u2019\\n\\/tmp\\/compiler_a9s9ber7\\/src:76:47:   required from here\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_vector.h:1779:54: \\u9519\\u8bef\\uff1ainvalid application of \\u2018sizeof\\u2019 to incomplete type \\u2018std::tuple<int, int, int>\\u2019\\n 1779 |    = __gnu_cxx::__numeric_traits<ptrdiff_t>::__max \\/ sizeof(_Tp);\\n      |                                                      ^~~~~~~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_vector.h: In instantiation of \\u2018void std::_Vector_base<_Tp, _Alloc>::_M_create_storage(std::size_t) [with _Tp = std::tuple<int, int, int>; _Alloc = std::allocator<std::tuple<int, int, int> >; std::size_t = long unsigned int]\\u2019:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_vector.h:302:9:   required from \\u2018std::_Vector_base<_Tp, _Alloc>::_Vector_base(std::size_t, const allocator_type&) [with _Tp = std::tuple<int, int, int>; _Alloc = std::allocator<std::tuple<int, int, int> >; std::size_t = long unsigned int; std::_Vector_base<_Tp, _Alloc>::allocator_type = std::allocator<std::tuple<int, int, int> >]\\u2019\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_vector.h:508:47:   required from \\u2018std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>::size_type, const allocator_type&) [with _Tp = std::tuple<int, int, int>; _Alloc = std::allocator<std::tuple<int, int, int> >; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::tuple<int, int, int> >]\\u2019\\n\\/tmp\\/compiler_a9s9ber7\\/src:76:47:   required from here\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_vector.h:360:59: \\u9519\\u8bef\\uff1a\\u5bf9\\u4e0d\\u5b8c\\u5168\\u7684\\u7c7b\\u578b\\u2018class std::tuple<int, int, int>\\u2019\\u7684\\u975e\\u6cd5\\u4f7f\\u7528\\n  360 |  this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __n;\\n      |                                    ~~~~~~~~~~~~~~~~~~~~~~~^~~~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/move.h:55,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/nested_exception.h:40,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/exception:144,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ios:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ostream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iostream:39,\\n                 from \\/tmp\\/compiler_a9s9ber7\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alc\\n...\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <iostream>\\n#include <vector>\\n#include <queue>\\n#include <algorithm>\\n\\nusing namespace std;\\n\\nstruct Neuron {\\n    int C; \\/\\/ Initial state\\n    int U; \\/\\/ Threshold\\n    vector<pair<int, int>> incoming; \\/\\/ Incoming connections: (source, weight)\\n};\\n\\nvoid neural_network_simulation(int n, int p, vector<pair<int, int>>& initial_states, vector<tuple<int, int, int>>& connections) {\\n    vector<Neuron> neurons(n);\\n\\n    \\/\\/ Initialize neurons with initial states and thresholds\\n    for (int i = 0; i < n; ++i) {\\n        neurons[i].C = initial_states[i].first;\\n        neurons[i].U = initial_states[i].second;\\n    }\\n\\n    \\/\\/ Store incoming connections for each neuron\\n    for (const auto& connection : connections) {\\n        int i, j, w;\\n        tie(i, j, w) = connection;\\n        neurons[j - 1].incoming.push_back({i - 1, w});\\n    }\\n\\n    \\/\\/ Perform the simulation\\n    for (int t = 0; t < n; ++t) {\\n        vector<int> next_states(n, 0);\\n\\n        for (int i = 0; i < n; ++i) {\\n            if (neurons[i].C > 0) {\\n                for (const auto& incoming : neurons[i].incoming) {\\n                    int j = incoming.first;\\n                    int w = incoming.second;\\n                    next_states[j] += w * neurons[i].C;\\n                }\\n            }\\n        }\\n\\n        for (int i = 0; i < n; ++i) {\\n            neurons[i].C = next_states[i] - neurons[i].U;\\n        }\\n    }\\n\\n    \\/\\/ Collect and output results\\n    vector<pair<int, int>> output;\\n    for (int i = 0; i < n; ++i) {\\n        if (neurons[i].C > 0) {\\n            output.push_back({i + 1, neurons[i].C});\\n        }\\n    }\\n\\n    if (output.empty()) {\\n        cout << \\\"NULL\\\" << endl;\\n    } else {\\n        sort(output.begin(), output.end());\\n        for (const auto& neuron : output) {\\n            cout << neuron.first << \\\" \\\" << neuron.second << endl;\\n        }\\n    }\\n}\\n\\nint main() {\\n    int n, p;\\n    cin >> n >> p;\\n    \\n    vector<pair<int, int>> initial_states(n);\\n    for (int i = 0; i < n; ++i) {\\n        cin >> initial_states[i].first >> initial_states[i].second;\\n    }\\n\\n    vector<tuple<int, int, int>> connections(p);\\n    for (int i = 0; i < p; ++i) {\\n        int u, v, w;\\n        cin >> u >> v >> w;\\n        connections[i] = make_tuple(u, v, w);\\n    }\\n\\n    neural_network_simulation(n, p, initial_states, connections);\\n\\n    return 0;\\n}\\n\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P1038\",\"title\":\"[NOIP 2003 \\u63d0\\u9ad8\\u7ec4] \\u795e\\u7ecf\\u7f51\\u7edc\",\"difficulty\":4,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":2297,\"submitTime\":1741524400,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":207005335,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1,2,3,4]],\"showStatus\":true},\"currentTitle\":\"R207005335\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186504,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_a9s9ber7/src: 在函数‘void neural_network_simulation(int, int, std::vector<std::pair<int, int> >&, std::vector<std::tuple<int, int, int> >&)’中:\n/tmp/compiler_a9s9ber7/src:26:9: 错误：‘tie’ was not declared in this scope; did you mean ‘time’?\n   26 |         tie(i, j, w) = connection;\n      |         ^~~\n      |         time\n/tmp/compiler_a9s9ber7/src: 在函数‘int main()’中:\n/tmp/compiler_a9s9ber7/src:80:26: 错误：‘make_tuple’在此作用域中尚未声明\n   80 |         connections[i] = make_tuple(u, v, w);\n      |                          ^~~~~~~~~~\n/tmp/compiler_a9s9ber7/src:5:1: 附注：‘std::make_tuple’ is defined in header ‘<tuple>’; did you forget to ‘#include <tuple>’?\n    4 | #include <algorithm>\n  +++ |+#include <tuple>\n    5 | \nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_algobase.h:67,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/char_traits.h:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ios:40,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ostream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iostream:39,\n                 from /tmp/compiler_a9s9ber7/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_iterator.h: In instantiation of ‘__gnu_cxx::__normal_iterator<_Iterator, _Container>& __gnu_cxx::__normal_iterator<_Iterator, _Container>::operator++() [with _Iterator = std::tuple<int, int, int>*; _Container = std::vector<std::tuple<int, int, int> >]’:\n/tmp/compiler_a9s9ber7/src:24:35:   required from here\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_iterator.h:829:2: 错误：指向不完全类型‘std::tuple<int, int, int>’的指针不能自增\n  829 |  ++_M_current;\n      |  ^~~~~~~~~~~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/vector:67,\n                 from /tmp/compiler_a9s9ber7/src:2:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_vector.h: In instantiation of ‘std::vector<_Tp, _Alloc>::reference std::vector<_Tp, _Alloc>::operator[](std::vector<_Tp, _Alloc>::size_type) [with _Tp = std::tuple<int, int, int>; _Alloc = std::allocator<std::tuple<int, int, int> >; std::vector<_Tp, _Alloc>::reference = std::tuple<int, int, int>&; std::vector<_Tp, _Alloc>::size_type = long unsigned int]’:\n/tmp/compiler_a9s9ber7/src:80:22:   required from here\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_vector.h:1043:34: 错误：对不完全的类型‘class std::tuple<int, int, int>’的非法使用\n 1043 |  return *(this->_M_impl._M_start + __n);\n      |          ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/move.h:55,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/nested_exception.h:40,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/exception:144,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ios:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ostream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iostream:39,\n                 from /tmp/compiler_a9s9ber7/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/type_traits:2468:11: 附注：declaration of ‘class std::tuple<int, int, int>’\n 2468 |     class tuple;\n      |           ^~~~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/vector:67,\n                 from /tmp/compiler_a9s9ber7/src:2:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_vector.h: In instantiation of ‘std::_Vector_base<_Tp, _Alloc>::~_Vector_base() [with _Tp = std::tuple<int, int, int>; _Alloc = std::allocator<std::tuple<int, int, int> >]’:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_vector.h:508:47:   required from ‘std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>::size_type, const allocator_type&) [with _Tp = std::tuple<int, int, int>; _Alloc = std::allocator<std::tuple<int, int, int> >; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::tuple<int, int, int> >]’\n/tmp/compiler_a9s9ber7/src:76:47:   required from here\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_vector.h:333:35: 错误：对不完全的类型‘class std::tuple<int, int, int>’的非法使用\n  333 |         _M_impl._M_end_of_storage - _M_impl._M_start);\n      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/move.h:55,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/nested_exception.h:40,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/exception:144,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ios:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ostream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iostream:39,\n                 from /tmp/compiler_a9s9ber7/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/type_traits:2468:11: 附注：declaration of ‘class std::tuple<int, int, int>’\n 2468 |     class tuple;\n      |           ^~~~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/vector:67,\n                 from /tmp/compiler_a9s9ber7/src:2:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_vector.h: In instantiation of ‘static std::vector<_Tp, _Alloc>::size_type std::vector<_Tp, _Alloc>::_S_max_size(const _Tp_alloc_type&) [with _Tp = std::tuple<int, int, int>; _Alloc = std::allocator<std::tuple<int, int, int> >; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::_Tp_alloc_type = std::allocator<std::tuple<int, int, int> >]’:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_vector.h:1766:23:   required from ‘static std::vector<_Tp, _Alloc>::size_type std::vector<_Tp, _Alloc>::_S_check_init_len(std::vector<_Tp, _Alloc>::size_type, const allocator_type&) [with _Tp = std::tuple<int, int, int>; _Alloc = std::allocator<std::tuple<int, int, int> >; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::tuple<int, int, int> >]’\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_vector.h:508:32:   required from ‘std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>::size_type, const allocator_type&) [with _Tp = std::tuple<int, int, int>; _Alloc = std::allocator<std::tuple<int, int, int> >; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::tuple<int, int, int> >]’\n/tmp/compiler_a9s9ber7/src:76:47:   required from here\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_vector.h:1779:54: 错误：invalid application of ‘sizeof’ to incomplete type ‘std::tuple<int, int, int>’\n 1779 |    = __gnu_cxx::__numeric_traits<ptrdiff_t>::__max / sizeof(_Tp);\n      |                                                      ^~~~~~~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_vector.h: In instantiation of ‘void std::_Vector_base<_Tp, _Alloc>::_M_create_storage(std::size_t) [with _Tp = std::tuple<int, int, int>; _Alloc = std::allocator<std::tuple<int, int, int> >; std::size_t = long unsigned int]’:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_vector.h:302:9:   required from ‘std::_Vector_base<_Tp, _Alloc>::_Vector_base(std::size_t, const allocator_type&) [with _Tp = std::tuple<int, int, int>; _Alloc = std::allocator<std::tuple<int, int, int> >; std::size_t = long unsigned int; std::_Vector_base<_Tp, _Alloc>::allocator_type = std::allocator<std::tuple<int, int, int> >]’\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_vector.h:508:47:   required from ‘std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>::size_type, const allocator_type&) [with _Tp = std::tuple<int, int, int>; _Alloc = std::allocator<std::tuple<int, int, int> >; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::tuple<int, int, int> >]’\n/tmp/compiler_a9s9ber7/src:76:47:   required from here\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_vector.h:360:59: 错误：对不完全的类型‘class std::tuple<int, int, int>’的非法使用\n  360 |  this->_M_impl._M_end_of_storage = this->_M_impl._M_start + __n;\n      |                                    ~~~~~~~~~~~~~~~~~~~~~~~^~~~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/move.h:55,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/nested_exception.h:40,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/exception:144,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ios:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ostream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iostream:39,\n                 from /tmp/compiler_a9s9ber7/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alc\n...",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <iostream>\n#include <vector>\n#include <queue>\n#include <algorithm>\n\nusing namespace std;\n\nstruct Neuron {\n    int C; // Initial state\n    int U; // Threshold\n    vector<pair<int, int>> incoming; // Incoming connections: (source, weight)\n};\n\nvoid neural_network_simulation(int n, int p, vector<pair<int, int>>& initial_states, vector<tuple<int, int, int>>& connections) {\n    vector<Neuron> neurons(n);\n\n    // Initialize neurons with initial states and thresholds\n    for (int i = 0; i < n; ++i) {\n        neurons[i].C = initial_states[i].first;\n        neurons[i].U = initial_states[i].second;\n    }\n\n    // Store incoming connections for each neuron\n    for (const auto& connection : connections) {\n        int i, j, w;\n        tie(i, j, w) = connection;\n        neurons[j - 1].incoming.push_back({i - 1, w});\n    }\n\n    // Perform the simulation\n    for (int t = 0; t < n; ++t) {\n        vector<int> next_states(n, 0);\n\n        for (int i = 0; i < n; ++i) {\n            if (neurons[i].C > 0) {\n                for (const auto& incoming : neurons[i].incoming) {\n                    int j = incoming.first;\n                    int w = incoming.second;\n                    next_states[j] += w * neurons[i].C;\n                }\n            }\n        }\n\n        for (int i = 0; i < n; ++i) {\n            neurons[i].C = next_states[i] - neurons[i].U;\n        }\n    }\n\n    // Collect and output results\n    vector<pair<int, int>> output;\n    for (int i = 0; i < n; ++i) {\n        if (neurons[i].C > 0) {\n            output.push_back({i + 1, neurons[i].C});\n        }\n    }\n\n    if (output.empty()) {\n        cout << \"NULL\" << endl;\n    } else {\n        sort(output.begin(), output.end());\n        for (const auto& neuron : output) {\n            cout << neuron.first << \" \" << neuron.second << endl;\n        }\n    }\n}\n\nint main() {\n    int n, p;\n    cin >> n >> p;\n    \n    vector<pair<int, int>> initial_states(n);\n    for (int i = 0; i < n; ++i) {\n        cin >> initial_states[i].first >> initial_states[i].second;\n    }\n\n    vector<tuple<int, int, int>> connections(p);\n    for (int i = 0; i < p; ++i) {\n        int u, v, w;\n        cin >> u >> v >> w;\n        connections[i] = make_tuple(u, v, w);\n    }\n\n    neural_network_simulation(n, p, initial_states, connections);\n\n    return 0;\n}\n",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P1038",
+          "title": "[NOIP 2003 提高组] 神经网络",
+          "difficulty": 4,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 2297,
+        "submitTime": 1741524400,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 207005335,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R207005335",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186504,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

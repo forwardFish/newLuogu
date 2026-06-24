@@ -1,0 +1,258 @@
+{
+  "recordId": "207888268",
+  "url": "https://www.luogu.com.cn/record/207888268?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:47:58.716Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[{\"id\":0,\"score\":0,\"status\":14,\"testCases\":{\"1\":{\"id\":1,\"status\":7,\"time\":0,\"memory\":0,\"score\":0,\"signal\":11,\"exitCode\":0,\"description\":\"\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"3\":{\"id\":3,\"status\":7,\"time\":0,\"memory\":0,\"score\":0,\"signal\":11,\"exitCode\":0,\"description\":\"\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"0\":{\"id\":0,\"status\":5,\"time\":1200,\"memory\":744,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"2\":{\"id\":2,\"status\":5,\"time\":1200,\"memory\":596,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"4\":{\"id\":4,\"status\":5,\"time\":1200,\"memory\":744,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}},\"judger\":\"\",\"time\":3600,\"memory\":744,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}],\"finishedCaseCount\":5,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <iostream>\\n#include <vector>\\n#include <queue>\\n#include <cstring>\\n\\nusing namespace std;\\n\\nconst int MAXN = 100;\\nconst int INF = 1e9;\\n\\nstruct Edge {\\n    int to, cap, rev;\\n};\\n\\nvector<Edge> G[MAXN * MAXN];\\n\\nvoid add_edge(int from, int to, int cap) {\\n    G[from].push_back((Edge){to, cap, (int)G[to].size()});\\n    G[to].push_back((Edge){from, 0, (int)G[from].size() - 1});\\n}\\n\\nint level[MAXN * MAXN];\\nint iter[MAXN * MAXN];\\n\\nvoid bfs(int s) {\\n    memset(level, -1, sizeof(level));\\n    queue<int> q;\\n    level[s] = 0;\\n    q.push(s);\\n    while (!q.empty()) {\\n        int v = q.front();\\n        q.pop();\\n        for (int i = 0; i < G[v].size(); i++) {\\n            Edge &e = G[v][i];\\n            if (e.cap > 0 && level[e.to] < 0) {\\n                level[e.to] = level[v] + 1;\\n                q.push(e.to);\\n            }\\n        }\\n    }\\n}\\n\\nint dfs(int v, int t, int f) {\\n    if (v == t) return f;\\n    for (int &i = iter[v]; i < G[v].size(); i++) {\\n        Edge &e = G[v][i];\\n        if (e.cap > 0 && level[v] < level[e.to]) {\\n            int d = dfs(e.to, t, min(f, e.cap));\\n            if (d > 0) {\\n                e.cap -= d;\\n                G[e.to][e.rev].cap += d;\\n                return d;\\n            }\\n        }\\n    }\\n    return 0;\\n}\\n\\nint max_flow(int s, int t) {\\n    int flow = 0;\\n    while (true) {\\n        bfs(s);\\n        if (level[t] < 0) return flow;\\n        memset(iter, 0, sizeof(iter));\\n        int f;\\n        while ((f = dfs(s, t, INF)) > 0) {\\n            flow += f;\\n        }\\n    }\\n}\\n\\nint main() {\\n    int N;\\n    cin >> N;\\n    int S = 0, T = N * N * 2 + 1;\\n    int grid[N + 1][N + 1];\\n    memset(grid, 0, sizeof(grid));\\n\\n    while (true) {\\n        int x, y, val;\\n        cin >> x >> y >> val;\\n        if (x == 0 && y == 0 && val == 0) break;\\n        grid[x][y] = val;\\n    }\\n\\n    for (int i = 1; i <= N; i++) {\\n        for (int j = 1; j <= N; j++) {\\n            int id = (i - 1) * N + j;\\n            int id2 = id + N * N;\\n            add_edge(id, id2, grid[i][j]);\\n            if (i < N) add_edge(id2, id + N, INF);\\n            if (j < N) add_edge(id2, id + 1, INF);\\n        }\\n    }\\n\\n    add_edge(S, 1, INF);\\n    add_edge(N * N * 2, T, INF);\\n\\n    cout << max_flow(S, T) << endl;\\n\\n    return 0;\\n}\\n\",\"time\":3600,\"memory\":744,\"problem\":{\"pid\":\"P1038\",\"title\":\"[NOIP 2003 \\u63d0\\u9ad8\\u7ec4] \\u795e\\u7ecf\\u7f51\\u7edc\",\"difficulty\":4,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":2209,\"submitTime\":1741960153,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":207888268,\"status\":14,\"enableO2\":true,\"score\":0},\"testCaseGroup\":[[0,1,2,3,4]],\"showStatus\":true},\"currentTitle\":\"R207888268\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186478,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [
+              {
+                "id": 0,
+                "score": 0,
+                "status": 14,
+                "testCases": {
+                  "0": {
+                    "id": 0,
+                    "status": 5,
+                    "time": 1200,
+                    "memory": 744,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "1": {
+                    "id": 1,
+                    "status": 7,
+                    "time": 0,
+                    "memory": 0,
+                    "score": 0,
+                    "signal": 11,
+                    "exitCode": 0,
+                    "description": "",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "2": {
+                    "id": 2,
+                    "status": 5,
+                    "time": 1200,
+                    "memory": 596,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "3": {
+                    "id": 3,
+                    "status": 7,
+                    "time": 0,
+                    "memory": 0,
+                    "score": 0,
+                    "signal": 11,
+                    "exitCode": 0,
+                    "description": "",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "4": {
+                    "id": 4,
+                    "status": 5,
+                    "time": 1200,
+                    "memory": 744,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                },
+                "judger": "",
+                "time": 3600,
+                "memory": 744,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            ],
+            "finishedCaseCount": 5,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <iostream>\n#include <vector>\n#include <queue>\n#include <cstring>\n\nusing namespace std;\n\nconst int MAXN = 100;\nconst int INF = 1e9;\n\nstruct Edge {\n    int to, cap, rev;\n};\n\nvector<Edge> G[MAXN * MAXN];\n\nvoid add_edge(int from, int to, int cap) {\n    G[from].push_back((Edge){to, cap, (int)G[to].size()});\n    G[to].push_back((Edge){from, 0, (int)G[from].size() - 1});\n}\n\nint level[MAXN * MAXN];\nint iter[MAXN * MAXN];\n\nvoid bfs(int s) {\n    memset(level, -1, sizeof(level));\n    queue<int> q;\n    level[s] = 0;\n    q.push(s);\n    while (!q.empty()) {\n        int v = q.front();\n        q.pop();\n        for (int i = 0; i < G[v].size(); i++) {\n            Edge &e = G[v][i];\n            if (e.cap > 0 && level[e.to] < 0) {\n                level[e.to] = level[v] + 1;\n                q.push(e.to);\n            }\n        }\n    }\n}\n\nint dfs(int v, int t, int f) {\n    if (v == t) return f;\n    for (int &i = iter[v]; i < G[v].size(); i++) {\n        Edge &e = G[v][i];\n        if (e.cap > 0 && level[v] < level[e.to]) {\n            int d = dfs(e.to, t, min(f, e.cap));\n            if (d > 0) {\n                e.cap -= d;\n                G[e.to][e.rev].cap += d;\n                return d;\n            }\n        }\n    }\n    return 0;\n}\n\nint max_flow(int s, int t) {\n    int flow = 0;\n    while (true) {\n        bfs(s);\n        if (level[t] < 0) return flow;\n        memset(iter, 0, sizeof(iter));\n        int f;\n        while ((f = dfs(s, t, INF)) > 0) {\n            flow += f;\n        }\n    }\n}\n\nint main() {\n    int N;\n    cin >> N;\n    int S = 0, T = N * N * 2 + 1;\n    int grid[N + 1][N + 1];\n    memset(grid, 0, sizeof(grid));\n\n    while (true) {\n        int x, y, val;\n        cin >> x >> y >> val;\n        if (x == 0 && y == 0 && val == 0) break;\n        grid[x][y] = val;\n    }\n\n    for (int i = 1; i <= N; i++) {\n        for (int j = 1; j <= N; j++) {\n            int id = (i - 1) * N + j;\n            int id2 = id + N * N;\n            add_edge(id, id2, grid[i][j]);\n            if (i < N) add_edge(id2, id + N, INF);\n            if (j < N) add_edge(id2, id + 1, INF);\n        }\n    }\n\n    add_edge(S, 1, INF);\n    add_edge(N * N * 2, T, INF);\n\n    cout << max_flow(S, T) << endl;\n\n    return 0;\n}\n",
+        "time": 3600,
+        "memory": 744,
+        "problem": {
+          "pid": "P1038",
+          "title": "[NOIP 2003 提高组] 神经网络",
+          "difficulty": 4,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 2209,
+        "submitTime": 1741960153,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 207888268,
+        "status": 14,
+        "enableO2": true,
+        "score": 0
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R207888268",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186478,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

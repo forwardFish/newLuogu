@@ -1,0 +1,2928 @@
+{
+  "generatedAt": "2026-06-24T03:44:37.735Z",
+  "note": "DeepSeek key was not found. Deterministic rule-based cluster diagnosis was used as offline fallback.",
+  "provider": {
+    "providerId": "deepseek",
+    "keyPresent": false
+  },
+  "items": [
+    {
+      "clusterId": "greedy_unknown_068",
+      "clusterDiagnosis": "贪心 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "commonErrorTypes": [
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 10 次。",
+        "未解决 1 道，部分分题 1 道。",
+        "共同标签：PARTIAL_STUCK, UNSOLVED_HIGH_ATTEMPT, OVERFLOW_RISK, RECURSION_STACK_RISK, T1_STABILITY, T3_PARTIAL_SCORE"
+      ],
+      "representativeProblems": [
+        "U619605"
+      ],
+      "trainingAction": {
+        "module": "greedy",
+        "tasks": [
+          "2 道 贪心 基础题，要求写清模型含义。",
+          "2 道 贪心 中档题，限时并记录提交次数。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "string_state_init_boundary_027",
+      "clusterDiagnosis": "字符串 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 2 道题，平均提交 10.5 次。",
+        "未解决 0 道，部分分题 2 道。",
+        "共同标签：PARTIAL_TO_AC, MULTI_FAIL_THEN_AC, STRING_BOUNDARY_RISK, T1_STABILITY, T3_PARTIAL_SCORE, T4_STRATEGY"
+      ],
+      "representativeProblems": [
+        "P9750",
+        "P5740"
+      ],
+      "trainingAction": {
+        "module": "string",
+        "tasks": [
+          "2 道 字符串 基础题，要求写清模型含义。",
+          "2 道 字符串 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.9,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_013",
+      "clusterDiagnosis": "最短路 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 3 道题，平均提交 4.67 次。",
+        "未解决 3 道，部分分题 3 道。",
+        "共同标签：PARTIAL_STUCK, SHORTEST_PATH_INIT_RISK, RECURSION_STACK_RISK, T2_MODELING, T3_PARTIAL_SCORE, NEVER_AC"
+      ],
+      "representativeProblems": [
+        "P2452",
+        "P3685"
+      ],
+      "trainingAction": {
+        "module": "shortest_path",
+        "tasks": [
+          "2 道 最短路 基础题，要求写清模型含义。",
+          "2 道 最短路 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_001",
+      "clusterDiagnosis": "区间 DP 相关题目集中暴露出区间 DP 的状态设计、初始化和枚举顺序不稳定。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 8 道题，平均提交 9.63 次。",
+        "未解决 0 道，部分分题 8 道。",
+        "共同标签：PARTIAL_TO_AC, INTERVAL_DP_ORDER_RISK, RECURSION_STACK_RISK, T2_MODELING, T3_PARTIAL_SCORE, T4_STRATEGY"
+      ],
+      "representativeProblems": [
+        "P8699",
+        "U463446"
+      ],
+      "trainingAction": {
+        "module": "interval_dp",
+        "tasks": [
+          "2 道 区间 DP 基础题，要求写清模型含义。",
+          "2 道 区间 DP 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_037",
+      "clusterDiagnosis": "区间 DP 相关题目集中暴露出区间 DP 的状态设计、初始化和枚举顺序不稳定。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 6 道题，平均提交 4.83 次。",
+        "未解决 6 道，部分分题 6 道。",
+        "共同标签：PARTIAL_STUCK, INTERVAL_DP_ORDER_RISK, T2_MODELING, T3_PARTIAL_SCORE, RECURSION_STACK_RISK, MATH_OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "P11858",
+        "T699486",
+        "P1967"
+      ],
+      "trainingAction": {
+        "module": "interval_dp",
+        "tasks": [
+          "2 道 区间 DP 基础题，要求写清模型含义。",
+          "2 道 区间 DP 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "math_model_template_011",
+      "clusterDiagnosis": "数学 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "commonErrorTypes": [
+        "MODEL_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 23 道题，平均提交 9.65 次。",
+        "未解决 0 道，部分分题 23 道。",
+        "共同标签：PARTIAL_TO_AC, MATH_OVERFLOW_RISK, T1_STABILITY, T3_PARTIAL_SCORE, T4_STRATEGY, RECURSION_STACK_RISK"
+      ],
+      "representativeProblems": [
+        "P3585",
+        "P1115",
+        "P4017"
+      ],
+      "trainingAction": {
+        "module": "math",
+        "tasks": [
+          "2 道 数学 基础题，要求写清模型含义。",
+          "2 道 数学 中档题，限时并记录提交次数。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "search_unknown_024",
+      "clusterDiagnosis": "搜索 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "commonErrorTypes": [
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 5 次。",
+        "未解决 0 道，部分分题 1 道。",
+        "共同标签：PARTIAL_TO_AC, MULTI_FAIL_THEN_AC, SEARCH_PRUNING_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK"
+      ],
+      "representativeProblems": [
+        "P7411"
+      ],
+      "trainingAction": {
+        "module": "search",
+        "tasks": [
+          "2 道 搜索 基础题，要求写清模型含义。",
+          "2 道 搜索 中档题，限时并记录提交次数。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "graph_model_template_044",
+      "clusterDiagnosis": "图论建模 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "commonErrorTypes": [
+        "MODEL_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 5 道题，平均提交 10.4 次。",
+        "未解决 0 道，部分分题 5 道。",
+        "共同标签：PARTIAL_TO_AC, GRAPH_MODEL_RISK, T2_MODELING, T3_PARTIAL_SCORE, T4_STRATEGY, OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "U465842",
+        "P15267"
+      ],
+      "trainingAction": {
+        "module": "graph",
+        "tasks": [
+          "2 道 图论建模 基础题，要求写清模型含义。",
+          "2 道 图论建模 中档题，限时并记录提交次数。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "string_state_init_boundary_047",
+      "clusterDiagnosis": "字符串 相关题目集中暴露出高难题部分分与取舍策略不足。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 2 道题，平均提交 16 次。",
+        "未解决 2 道，部分分题 0 道。",
+        "共同标签：ZERO_STUCK, UNSOLVED_HIGH_ATTEMPT, STRING_BOUNDARY_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK, T1_STABILITY"
+      ],
+      "representativeProblems": [
+        "U519362"
+      ],
+      "trainingAction": {
+        "module": "string",
+        "tasks": [
+          "2 道 字符串 基础题，要求写清模型含义。",
+          "2 道 字符串 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.9,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dsu_model_template_054",
+      "clusterDiagnosis": "并查集 相关题目集中暴露出并查集的集合含义、合并条件或离散化细节不稳定。",
+      "commonErrorTypes": [
+        "MODEL_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 4 道题，平均提交 8.5 次。",
+        "未解决 0 道，部分分题 4 道。",
+        "共同标签：PARTIAL_TO_AC, DSU_MODEL_RISK, DSU_DISCRETIZATION_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK"
+      ],
+      "representativeProblems": [
+        "P1955"
+      ],
+      "trainingAction": {
+        "module": "dsu",
+        "tasks": [
+          "2 道 并查集 基础题，要求写清模型含义。",
+          "2 道 并查集 中档题，限时并记录提交次数。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能说明集合含义、合并条件和离散化方式，提交次数 <= 2。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "graph_model_template_057",
+      "clusterDiagnosis": "图论建模 相关题目集中暴露出高难题部分分与取舍策略不足。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 10 次。",
+        "未解决 1 道，部分分题 0 道。",
+        "共同标签：UNKNOWN_PATTERN, UNSOLVED_HIGH_ATTEMPT, GRAPH_MODEL_RISK, STRING_BOUNDARY_RISK, MATH_OVERFLOW_RISK, SEARCH_PRUNING_RISK"
+      ],
+      "representativeProblems": [
+        "U643929"
+      ],
+      "trainingAction": {
+        "module": "graph",
+        "tasks": [
+          "2 道 图论建模 基础题，要求写清模型含义。",
+          "2 道 图论建模 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_063",
+      "clusterDiagnosis": "最短路 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 2 道题，平均提交 8.5 次。",
+        "未解决 0 道，部分分题 2 道。",
+        "共同标签：PARTIAL_TO_AC, MULTI_FAIL_THEN_AC, GRAPH_MODEL_RISK, SHORTEST_PATH_INIT_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "P3371",
+        "P4779"
+      ],
+      "trainingAction": {
+        "module": "shortest_path",
+        "tasks": [
+          "2 道 最短路 基础题，要求写清模型含义。",
+          "2 道 最短路 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.9,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_066",
+      "clusterDiagnosis": "区间 DP 相关题目集中暴露出区间 DP 的状态设计、初始化和枚举顺序不稳定。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 2 道题，平均提交 11.5 次。",
+        "未解决 2 道，部分分题 0 道。",
+        "共同标签：ZERO_STUCK, UNSOLVED_HIGH_ATTEMPT, INTERVAL_DP_ORDER_RISK, STRING_BOUNDARY_RISK, RECURSION_STACK_RISK, T2_MODELING"
+      ],
+      "representativeProblems": [
+        "P1919"
+      ],
+      "trainingAction": {
+        "module": "interval_dp",
+        "tasks": [
+          "2 道 区间 DP 基础题，要求写清模型含义。",
+          "2 道 区间 DP 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。"
+      },
+      "confidence": 0.9,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_075",
+      "clusterDiagnosis": "DFS/BFS 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "commonErrorTypes": [
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 12 次。",
+        "未解决 0 道，部分分题 1 道。",
+        "共同标签：PARTIAL_TO_AC, MULTI_FAIL_THEN_AC, STRING_BOUNDARY_RISK, MATH_OVERFLOW_RISK, SEARCH_PRUNING_RISK, OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "P1030"
+      ],
+      "trainingAction": {
+        "module": "dfs_bfs",
+        "tasks": [
+          "2 道 DFS/BFS 基础题，要求写清模型含义。",
+          "2 道 DFS/BFS 中档题，限时并记录提交次数。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "math_model_template_090",
+      "clusterDiagnosis": "数学 相关题目集中暴露出高难题部分分与取舍策略不足。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 2 道题，平均提交 13 次。",
+        "未解决 2 道，部分分题 0 道。",
+        "共同标签：UNKNOWN_PATTERN, UNSOLVED_HIGH_ATTEMPT, MATH_OVERFLOW_RISK, RECURSION_STACK_RISK, LONG_CODE_DEBUG_RISK, T1_STABILITY"
+      ],
+      "representativeProblems": [
+        "CF1914B",
+        "CF1996D"
+      ],
+      "trainingAction": {
+        "module": "math",
+        "tasks": [
+          "2 道 数学 基础题，要求写清模型含义。",
+          "2 道 数学 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.9,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dp_state_init_boundary_092",
+      "clusterDiagnosis": "DP 相关题目集中暴露出DP 状态、转移和初始化需要进一步稳定。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 2 道题，平均提交 8.5 次。",
+        "未解决 2 道，部分分题 0 道。",
+        "共同标签：UNKNOWN_PATTERN, UNSOLVED_HIGH_ATTEMPT, DP_STATE_RISK, DP_INIT_RISK, MATH_OVERFLOW_RISK, ARRAY_INDEX_RISK"
+      ],
+      "representativeProblems": [
+        "AT_dp_a",
+        "CF1051D"
+      ],
+      "trainingAction": {
+        "module": "dp",
+        "tasks": [
+          "2 道 DP 基础题，要求写清模型含义。",
+          "2 道 DP 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.9,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "state_compression_dp_unknown_095",
+      "clusterDiagnosis": "状态压缩 DP 相关题目集中暴露出高难题部分分与取舍策略不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 8 次。",
+        "未解决 1 道，部分分题 0 道。",
+        "共同标签：UNKNOWN_PATTERN, UNSOLVED_HIGH_ATTEMPT, BINARY_SEARCH_BOUNDARY_RISK, BINARY_SEARCH_CHECK_RISK, GRAPH_MODEL_RISK, ARRAY_INDEX_RISK"
+      ],
+      "representativeProblems": [
+        "CF1927C"
+      ],
+      "trainingAction": {
+        "module": "state_compression_dp",
+        "tasks": [
+          "2 道 状态压缩 DP 基础题，要求写清模型含义。",
+          "2 道 状态压缩 DP 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "implementation_implementation_risk_098",
+      "clusterDiagnosis": "implementation 相关题目集中暴露出高难题部分分与取舍策略不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 8 次。",
+        "未解决 1 道，部分分题 0 道。",
+        "共同标签：UNKNOWN_PATTERN, UNSOLVED_HIGH_ATTEMPT, ARRAY_INDEX_RISK, T1_STABILITY, T3_PARTIAL_SCORE, T4_STRATEGY"
+      ],
+      "representativeProblems": [
+        "CF18C"
+      ],
+      "trainingAction": {
+        "module": "implementation",
+        "tasks": [
+          "2 道 implementation 基础题，要求写清模型含义。",
+          "2 道 implementation 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dp_state_init_boundary_072",
+      "clusterDiagnosis": "DP 相关题目集中暴露出DP 状态、转移和初始化需要进一步稳定。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 4 道题，平均提交 7.75 次。",
+        "未解决 0 道，部分分题 4 道。",
+        "共同标签：PARTIAL_TO_AC, MULTI_FAIL_THEN_AC, DP_STATE_RISK, DP_INIT_RISK, T2_MODELING, T3_PARTIAL_SCORE"
+      ],
+      "representativeProblems": [
+        "P12678",
+        "P3865"
+      ],
+      "trainingAction": {
+        "module": "dp",
+        "tasks": [
+          "2 道 DP 基础题，要求写清模型含义。",
+          "2 道 DP 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "math_model_template_069",
+      "clusterDiagnosis": "数学 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "commonErrorTypes": [
+        "MODEL_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 13 道题，平均提交 3.69 次。",
+        "未解决 13 道，部分分题 13 道。",
+        "共同标签：PARTIAL_STUCK, MATH_OVERFLOW_RISK, T1_STABILITY, T3_PARTIAL_SCORE, RECURSION_STACK_RISK, UNSOLVED_HIGH_ATTEMPT"
+      ],
+      "representativeProblems": [
+        "U619606",
+        "P13498"
+      ],
+      "trainingAction": {
+        "module": "math",
+        "tasks": [
+          "2 道 数学 基础题，要求写清模型含义。",
+          "2 道 数学 中档题，限时并记录提交次数。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "partial_score_partial_score_022",
+      "clusterDiagnosis": "partial_score 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "commonErrorTypes": [
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 18 道题，平均提交 3.61 次。",
+        "未解决 18 道，部分分题 18 道。",
+        "共同标签：PARTIAL_STUCK, T3_PARTIAL_SCORE, NEVER_AC, UNSOLVED_HIGH_ATTEMPT, OVERFLOW_RISK, T4_STRATEGY"
+      ],
+      "representativeProblems": [
+        "P10135",
+        "P7413",
+        "U615694"
+      ],
+      "trainingAction": {
+        "module": "partial_score",
+        "tasks": [
+          "2 道 partial_score 基础题，要求写清模型含义。",
+          "2 道 partial_score 中档题，限时并记录提交次数。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "partial_score_partial_score_023",
+      "clusterDiagnosis": "partial_score 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "commonErrorTypes": [
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 8 道题，平均提交 5.88 次。",
+        "未解决 0 道，部分分题 8 道。",
+        "共同标签：PARTIAL_TO_AC, MULTI_FAIL_THEN_AC, T3_PARTIAL_SCORE, T4_STRATEGY, RECURSION_STACK_RISK, OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "P15018",
+        "P7410"
+      ],
+      "trainingAction": {
+        "module": "partial_score",
+        "tasks": [
+          "2 道 partial_score 基础题，要求写清模型含义。",
+          "2 道 partial_score 中档题，限时并记录提交次数。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "state_compression_dp_unknown_048",
+      "clusterDiagnosis": "状态压缩 DP 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "commonErrorTypes": [
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 3 道题，平均提交 2.67 次。",
+        "未解决 3 道，部分分题 3 道。",
+        "共同标签：PARTIAL_STUCK, T3_PARTIAL_SCORE, NEVER_AC, RECURSION_STACK_RISK, GRAPH_MODEL_RISK, STRING_BOUNDARY_RISK"
+      ],
+      "representativeProblems": [
+        "P11860",
+        "P7859"
+      ],
+      "trainingAction": {
+        "module": "state_compression_dp",
+        "tasks": [
+          "2 道 状态压缩 DP 基础题，要求写清模型含义。",
+          "2 道 状态压缩 DP 中档题，限时并记录提交次数。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "binary_search_model_template_038",
+      "clusterDiagnosis": "二分答案 相关题目集中暴露出二分答案的 check 单调性和边界处理不稳定。",
+      "commonErrorTypes": [
+        "MODEL_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 2 道题，平均提交 2.5 次。",
+        "未解决 2 道，部分分题 2 道。",
+        "共同标签：PARTIAL_STUCK, BINARY_SEARCH_BOUNDARY_RISK, BINARY_SEARCH_CHECK_RISK, RECURSION_STACK_RISK, T2_MODELING, T3_PARTIAL_SCORE"
+      ],
+      "representativeProblems": [
+        "P11849",
+        "T717044"
+      ],
+      "trainingAction": {
+        "module": "binary_search",
+        "tasks": [
+          "2 道 二分答案 基础题，要求写清模型含义。",
+          "2 道 二分答案 中档题，限时并记录提交次数。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，能独立证明 check 单调性并说明边界收缩。"
+      },
+      "confidence": 0.9,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "binary_search_model_template_053",
+      "clusterDiagnosis": "二分答案 相关题目集中暴露出二分答案的 check 单调性和边界处理不稳定。",
+      "commonErrorTypes": [
+        "MODEL_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 6 道题，平均提交 5.5 次。",
+        "未解决 0 道，部分分题 6 道。",
+        "共同标签：PARTIAL_TO_AC, MULTI_FAIL_THEN_AC, BINARY_SEARCH_BOUNDARY_RISK, BINARY_SEARCH_CHECK_RISK, RECURSION_STACK_RISK, T2_MODELING"
+      ],
+      "representativeProblems": [
+        "P1439",
+        "P5815"
+      ],
+      "trainingAction": {
+        "module": "binary_search",
+        "tasks": [
+          "2 道 二分答案 基础题，要求写清模型含义。",
+          "2 道 二分答案 中档题，限时并记录提交次数。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，能独立证明 check 单调性并说明边界收缩。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "segment_tree_model_template_101",
+      "clusterDiagnosis": "线段树 相关题目集中暴露出线段树模板、区间边界和懒标记细节不稳定。",
+      "commonErrorTypes": [
+        "MODEL_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 5 次。",
+        "未解决 0 道，部分分题 1 道。",
+        "共同标签：PARTIAL_TO_AC, SOLVED, BINARY_SEARCH_BOUNDARY_RISK, BINARY_SEARCH_CHECK_RISK, GRAPH_MODEL_RISK, SEGMENT_TREE_TEMPLATE_RISK"
+      ],
+      "representativeProblems": [
+        "P7072"
+      ],
+      "trainingAction": {
+        "module": "segment_tree",
+        "tasks": [
+          "2 道 线段树 基础题，要求写清模型含义。",
+          "2 道 线段树 中档题，限时并记录提交次数。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "fenwick_tree_index_boundary_035",
+      "clusterDiagnosis": "树状数组 相关题目集中暴露出树状数组下标和前缀关系不稳定。",
+      "commonErrorTypes": [
+        "BOUNDARY_ERROR",
+        "INDEX_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 9 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：MULTI_FAIL_THEN_AC, FENWICK_INDEX_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK, T4_STRATEGY"
+      ],
+      "representativeProblems": [
+        "P3374"
+      ],
+      "trainingAction": {
+        "module": "fenwick_tree",
+        "tasks": [
+          "2 道 树状数组 基础题，要求写清模型含义。",
+          "2 道 树状数组 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dp_state_init_boundary_067",
+      "clusterDiagnosis": "DP 相关题目集中暴露出DP 状态、转移和初始化需要进一步稳定。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 2 道题，平均提交 2 次。",
+        "未解决 2 道，部分分题 2 道。",
+        "共同标签：PARTIAL_STUCK, DP_STATE_RISK, DP_INIT_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK, T2_MODELING"
+      ],
+      "representativeProblems": [
+        "B3873",
+        "U622367"
+      ],
+      "trainingAction": {
+        "module": "dp",
+        "tasks": [
+          "2 道 DP 基础题，要求写清模型含义。",
+          "2 道 DP 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.9,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "string_state_init_boundary_088",
+      "clusterDiagnosis": "字符串 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 2 次。",
+        "未解决 1 道，部分分题 1 道。",
+        "共同标签：PARTIAL_STUCK, NEVER_AC, STRING_BOUNDARY_RISK, MATH_OVERFLOW_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK"
+      ],
+      "representativeProblems": [
+        "P10722"
+      ],
+      "trainingAction": {
+        "module": "string",
+        "tasks": [
+          "2 道 字符串 基础题，要求写清模型含义。",
+          "2 道 字符串 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_099",
+      "clusterDiagnosis": "DFS/BFS 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "commonErrorTypes": [
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 2 次。",
+        "未解决 1 道，部分分题 1 道。",
+        "共同标签：PARTIAL_STUCK, NEVER_AC, ARRAY_INDEX_RISK, RECURSION_STACK_RISK, T3_PARTIAL_SCORE"
+      ],
+      "representativeProblems": [
+        "P1330"
+      ],
+      "trainingAction": {
+        "module": "dfs_bfs",
+        "tasks": [
+          "2 道 DFS/BFS 基础题，要求写清模型含义。",
+          "2 道 DFS/BFS 中档题，限时并记录提交次数。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dsu_model_template_065",
+      "clusterDiagnosis": "并查集 相关题目集中暴露出并查集的集合含义、合并条件或离散化细节不稳定。",
+      "commonErrorTypes": [
+        "MODEL_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 3 道题，平均提交 1.67 次。",
+        "未解决 3 道，部分分题 3 道。",
+        "共同标签：PARTIAL_STUCK, DSU_MODEL_RISK, DSU_DISCRETIZATION_RISK, ARRAY_INDEX_RISK, RECURSION_STACK_RISK, T2_MODELING"
+      ],
+      "representativeProblems": [
+        "P3144",
+        "P5659"
+      ],
+      "trainingAction": {
+        "module": "dsu",
+        "tasks": [
+          "2 道 并查集 基础题，要求写清模型含义。",
+          "2 道 并查集 中档题，限时并记录提交次数。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能说明集合含义、合并条件和离散化方式，提交次数 <= 2。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "graph_model_template_084",
+      "clusterDiagnosis": "图论建模 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "commonErrorTypes": [
+        "MODEL_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 4 道题，平均提交 1.5 次。",
+        "未解决 4 道，部分分题 4 道。",
+        "共同标签：PARTIAL_STUCK, GRAPH_MODEL_RISK, RECURSION_STACK_RISK, T2_MODELING, T3_PARTIAL_SCORE, NEVER_AC"
+      ],
+      "representativeProblems": [
+        "B3938",
+        "P1825"
+      ],
+      "trainingAction": {
+        "module": "graph",
+        "tasks": [
+          "2 道 图论建模 基础题，要求写清模型含义。",
+          "2 道 图论建模 中档题，限时并记录提交次数。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "fenwick_tree_index_boundary_055",
+      "clusterDiagnosis": "树状数组 相关题目集中暴露出树状数组下标和前缀关系不稳定。",
+      "commonErrorTypes": [
+        "BOUNDARY_ERROR",
+        "INDEX_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 1 次。",
+        "未解决 1 道，部分分题 1 道。",
+        "共同标签：PARTIAL_STUCK, NEVER_AC, DP_STATE_RISK, DP_INIT_RISK, FENWICK_INDEX_RISK, ARRAY_INDEX_RISK"
+      ],
+      "representativeProblems": [
+        "P3431"
+      ],
+      "trainingAction": {
+        "module": "fenwick_tree",
+        "tasks": [
+          "2 道 树状数组 基础题，要求写清模型含义。",
+          "2 道 树状数组 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.8,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "search_unknown_074",
+      "clusterDiagnosis": "搜索 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "commonErrorTypes": [
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 2 道题，平均提交 1 次。",
+        "未解决 2 道，部分分题 2 道。",
+        "共同标签：PARTIAL_STUCK, NEVER_AC, SEARCH_PRUNING_RISK, ARRAY_INDEX_RISK, RECURSION_STACK_RISK, T2_MODELING"
+      ],
+      "representativeProblems": [
+        "P13501"
+      ],
+      "trainingAction": {
+        "module": "search",
+        "tasks": [
+          "2 道 搜索 基础题，要求写清模型含义。",
+          "2 道 搜索 中档题，限时并记录提交次数。",
+          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+        ],
+        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dsu_model_template_056",
+      "clusterDiagnosis": "并查集 相关题目集中暴露出并查集的集合含义、合并条件或离散化细节不稳定。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 3 道题，平均提交 8 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：MULTI_FAIL_THEN_AC, DSU_MODEL_RISK, DSU_DISCRETIZATION_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK"
+      ],
+      "representativeProblems": [
+        "P3379"
+      ],
+      "trainingAction": {
+        "module": "dsu",
+        "tasks": [
+          "2 道 并查集 基础题，要求写清模型含义。",
+          "2 道 并查集 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "能说明集合含义、合并条件和离散化方式，提交次数 <= 2。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_094",
+      "clusterDiagnosis": "区间 DP 相关题目集中暴露出区间 DP 的状态设计、初始化和枚举顺序不稳定。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 2 道题，平均提交 7.5 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：MULTI_FAIL_THEN_AC, INTERVAL_DP_ORDER_RISK, RECURSION_STACK_RISK, T2_MODELING, T4_STRATEGY, MATH_OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "P3383"
+      ],
+      "trainingAction": {
+        "module": "interval_dp",
+        "tasks": [
+          "2 道 区间 DP 基础题，要求写清模型含义。",
+          "2 道 区间 DP 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。"
+      },
+      "confidence": 0.9,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "binary_search_model_template_026",
+      "clusterDiagnosis": "二分答案 相关题目集中暴露出二分答案的 check 单调性和边界处理不稳定。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 7 道题，平均提交 3.71 次。",
+        "未解决 7 道，部分分题 0 道。",
+        "共同标签：UNKNOWN_PATTERN, BINARY_SEARCH_BOUNDARY_RISK, BINARY_SEARCH_CHECK_RISK, RECURSION_STACK_RISK, T2_MODELING, T3_PARTIAL_SCORE"
+      ],
+      "representativeProblems": [
+        "CF279B",
+        "P16181",
+        "P14725"
+      ],
+      "trainingAction": {
+        "module": "binary_search",
+        "tasks": [
+          "2 道 二分答案 基础题，要求写清模型含义。",
+          "2 道 二分答案 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，能独立证明 check 单调性并说明边界收缩。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "segment_tree_model_template_051",
+      "clusterDiagnosis": "线段树 相关题目集中暴露出线段树模板、区间边界和懒标记细节不稳定。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 10 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：MULTI_FAIL_THEN_AC, BINARY_SEARCH_BOUNDARY_RISK, BINARY_SEARCH_CHECK_RISK, SEGMENT_TREE_TEMPLATE_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "P1471"
+      ],
+      "trainingAction": {
+        "module": "segment_tree",
+        "tasks": [
+          "2 道 线段树 基础题，要求写清模型含义。",
+          "2 道 线段树 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_089",
+      "clusterDiagnosis": "DFS/BFS 相关题目集中暴露出DFS/BFS 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 8 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：MULTI_FAIL_THEN_AC, MATH_OVERFLOW_RISK, SEARCH_PRUNING_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK, LONG_CODE_DEBUG_RISK"
+      ],
+      "representativeProblems": [
+        "P4913"
+      ],
+      "trainingAction": {
+        "module": "dfs_bfs",
+        "tasks": [
+          "2 道 DFS/BFS 基础题，要求写清模型含义。",
+          "2 道 DFS/BFS 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "greedy_unknown_097",
+      "clusterDiagnosis": "贪心 相关题目集中暴露出贪心 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 8 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：MULTI_FAIL_THEN_AC, ARRAY_INDEX_RISK, OVERFLOW_RISK, T1_STABILITY, T4_STRATEGY"
+      ],
+      "representativeProblems": [
+        "P3913"
+      ],
+      "trainingAction": {
+        "module": "greedy",
+        "tasks": [
+          "2 道 贪心 基础题，要求写清模型含义。",
+          "2 道 贪心 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "graph_model_template_020",
+      "clusterDiagnosis": "图论建模 相关题目集中暴露出图论建模 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 9 道题，平均提交 2.78 次。",
+        "未解决 9 道，部分分题 0 道。",
+        "共同标签：UNKNOWN_PATTERN, GRAPH_MODEL_RISK, T2_MODELING, T3_PARTIAL_SCORE, ARRAY_INDEX_RISK, OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "P16316",
+        "P14740"
+      ],
+      "trainingAction": {
+        "module": "graph",
+        "tasks": [
+          "2 道 图论建模 基础题，要求写清模型含义。",
+          "2 道 图论建模 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dp_state_init_boundary_028",
+      "clusterDiagnosis": "DP 相关题目集中暴露出DP 状态、转移和初始化需要进一步稳定。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 5 道题，平均提交 2.8 次。",
+        "未解决 5 道，部分分题 0 道。",
+        "共同标签：UNKNOWN_PATTERN, DP_STATE_RISK, DP_INIT_RISK, MATH_OVERFLOW_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "AT_dp_b",
+        "P16158"
+      ],
+      "trainingAction": {
+        "module": "dp",
+        "tasks": [
+          "2 道 DP 基础题，要求写清模型含义。",
+          "2 道 DP 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_041",
+      "clusterDiagnosis": "区间 DP 相关题目集中暴露出区间 DP 的状态设计、初始化和枚举顺序不稳定。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 2 道题，平均提交 2.5 次。",
+        "未解决 2 道，部分分题 0 道。",
+        "共同标签：UNKNOWN_PATTERN, INTERVAL_DP_ORDER_RISK, ARRAY_INDEX_RISK, T2_MODELING, T3_PARTIAL_SCORE, UNSOLVED_HIGH_ATTEMPT"
+      ],
+      "representativeProblems": [
+        "P15199"
+      ],
+      "trainingAction": {
+        "module": "interval_dp",
+        "tasks": [
+          "2 道 区间 DP 基础题，要求写清模型含义。",
+          "2 道 区间 DP 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。"
+      },
+      "confidence": 0.9,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dp_state_init_boundary_077",
+      "clusterDiagnosis": "DP 相关题目集中暴露出DP 状态、转移和初始化需要进一步稳定。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 6 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：MULTI_FAIL_THEN_AC, DP_STATE_RISK, DP_INIT_RISK, INTERVAL_DP_ORDER_RISK, BINARY_SEARCH_BOUNDARY_RISK, BINARY_SEARCH_CHECK_RISK"
+      ],
+      "representativeProblems": [
+        "P9232"
+      ],
+      "trainingAction": {
+        "module": "dp",
+        "tasks": [
+          "2 道 DP 基础题，要求写清模型含义。",
+          "2 道 DP 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "implementation_implementation_risk_082",
+      "clusterDiagnosis": "implementation 相关题目集中暴露出implementation 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 5 道题，平均提交 6.6 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：MULTI_FAIL_THEN_AC, T1_STABILITY, T4_STRATEGY, OVERFLOW_RISK, ARRAY_INDEX_RISK, SOLVED"
+      ],
+      "representativeProblems": [
+        "P1113",
+        "P1830"
+      ],
+      "trainingAction": {
+        "module": "implementation",
+        "tasks": [
+          "2 道 implementation 基础题，要求写清模型含义。",
+          "2 道 implementation 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "graph_model_template_014",
+      "clusterDiagnosis": "图论建模 相关题目集中暴露出图论建模 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 5 道题，平均提交 5.2 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：MULTI_FAIL_THEN_AC, GRAPH_MODEL_RISK, T2_MODELING, T4_STRATEGY, RECURSION_STACK_RISK, OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "P4552",
+        "P1001"
+      ],
+      "trainingAction": {
+        "module": "graph",
+        "tasks": [
+          "2 道 图论建模 基础题，要求写清模型含义。",
+          "2 道 图论建模 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "string_state_init_boundary_029",
+      "clusterDiagnosis": "字符串 相关题目集中暴露出字符串 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 20 道题，平均提交 2.6 次。",
+        "未解决 20 道，部分分题 0 道。",
+        "共同标签：UNKNOWN_PATTERN, STRING_BOUNDARY_RISK, T1_STABILITY, T3_PARTIAL_SCORE, RECURSION_STACK_RISK, NEVER_AC"
+      ],
+      "representativeProblems": [
+        "CF873B",
+        "P16173",
+        "P1737"
+      ],
+      "trainingAction": {
+        "module": "string",
+        "tasks": [
+          "2 道 字符串 基础题，要求写清模型含义。",
+          "2 道 字符串 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "math_model_template_009",
+      "clusterDiagnosis": "数学 相关题目集中暴露出数学 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 4 道题，平均提交 5.5 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：MULTI_FAIL_THEN_AC, MATH_OVERFLOW_RISK, T1_STABILITY, T4_STRATEGY, RECURSION_STACK_RISK, ARRAY_INDEX_RISK"
+      ],
+      "representativeProblems": [
+        "P3372"
+      ],
+      "trainingAction": {
+        "module": "math",
+        "tasks": [
+          "2 道 数学 基础题，要求写清模型含义。",
+          "2 道 数学 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_058",
+      "clusterDiagnosis": "区间 DP 相关题目集中暴露出区间 DP 的状态设计、初始化和枚举顺序不稳定。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 4 道题，平均提交 2.25 次。",
+        "未解决 4 道，部分分题 0 道。",
+        "共同标签：ZERO_STUCK, INTERVAL_DP_ORDER_RISK, T2_MODELING, T3_PARTIAL_SCORE, NEVER_AC, ARRAY_INDEX_RISK"
+      ],
+      "representativeProblems": [
+        "P4118",
+        "P2379"
+      ],
+      "trainingAction": {
+        "module": "interval_dp",
+        "tasks": [
+          "2 道 区间 DP 基础题，要求写清模型含义。",
+          "2 道 区间 DP 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "string_state_init_boundary_070",
+      "clusterDiagnosis": "字符串 相关题目集中暴露出字符串 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 6 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：MULTI_FAIL_THEN_AC, STRING_BOUNDARY_RISK, MATH_OVERFLOW_RISK, T1_STABILITY, T4_STRATEGY"
+      ],
+      "representativeProblems": [
+        "P1055"
+      ],
+      "trainingAction": {
+        "module": "string",
+        "tasks": [
+          "2 道 字符串 基础题，要求写清模型含义。",
+          "2 道 字符串 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "search_unknown_100",
+      "clusterDiagnosis": "搜索 相关题目集中暴露出搜索 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 5 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：MULTI_FAIL_THEN_AC, SEARCH_PRUNING_RISK, ARRAY_INDEX_RISK, RECURSION_STACK_RISK, T2_MODELING, T4_STRATEGY"
+      ],
+      "representativeProblems": [
+        "P8605"
+      ],
+      "trainingAction": {
+        "module": "search",
+        "tasks": [
+          "2 道 搜索 基础题，要求写清模型含义。",
+          "2 道 搜索 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "state_compression_dp_unknown_086",
+      "clusterDiagnosis": "状态压缩 DP 相关题目集中暴露出状态压缩 DP 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 3 次。",
+        "未解决 1 道，部分分题 0 道。",
+        "共同标签：ZERO_STUCK, UNSOLVED_HIGH_ATTEMPT, GRAPH_MODEL_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK, T3_PARTIAL_SCORE"
+      ],
+      "representativeProblems": [
+        "P11827"
+      ],
+      "trainingAction": {
+        "module": "state_compression_dp",
+        "tasks": [
+          "2 道 状态压缩 DP 基础题，要求写清模型含义。",
+          "2 道 状态压缩 DP 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "math_model_template_050",
+      "clusterDiagnosis": "数学 相关题目集中暴露出数学 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 17 道题，平均提交 2.29 次。",
+        "未解决 17 道，部分分题 0 道。",
+        "共同标签：ZERO_STUCK, MATH_OVERFLOW_RISK, T1_STABILITY, T3_PARTIAL_SCORE, RECURSION_STACK_RISK, NEVER_AC"
+      ],
+      "representativeProblems": [
+        "T433808",
+        "P2343",
+        "P4342"
+      ],
+      "trainingAction": {
+        "module": "math",
+        "tasks": [
+          "2 道 数学 基础题，要求写清模型含义。",
+          "2 道 数学 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "math_model_template_010",
+      "clusterDiagnosis": "数学 相关题目集中暴露出数学 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 19 道题，平均提交 1.95 次。",
+        "未解决 19 道，部分分题 0 道。",
+        "共同标签：UNKNOWN_PATTERN, MATH_OVERFLOW_RISK, T1_STABILITY, T3_PARTIAL_SCORE, RECURSION_STACK_RISK, NEVER_AC"
+      ],
+      "representativeProblems": [
+        "CF163A",
+        "UVA11572",
+        "T492859"
+      ],
+      "trainingAction": {
+        "module": "math",
+        "tasks": [
+          "2 道 数学 基础题，要求写清模型含义。",
+          "2 道 数学 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "implementation_implementation_risk_002",
+      "clusterDiagnosis": "implementation 相关题目集中暴露出implementation 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 11 道题，平均提交 1.82 次。",
+        "未解决 11 道，部分分题 0 道。",
+        "共同标签：ZERO_STUCK, T1_STABILITY, T3_PARTIAL_SCORE, NEVER_AC, OVERFLOW_RISK, ARRAY_INDEX_RISK"
+      ],
+      "representativeProblems": [
+        "U331327",
+        "P10156",
+        "U194704"
+      ],
+      "trainingAction": {
+        "module": "implementation",
+        "tasks": [
+          "2 道 implementation 基础题，要求写清模型含义。",
+          "2 道 implementation 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "implementation_implementation_risk_030",
+      "clusterDiagnosis": "implementation 相关题目集中暴露出implementation 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 19 道题，平均提交 2.21 次。",
+        "未解决 19 道，部分分题 0 道。",
+        "共同标签：UNKNOWN_PATTERN, T1_STABILITY, T3_PARTIAL_SCORE, RECURSION_STACK_RISK, NEVER_AC, UNSOLVED_HIGH_ATTEMPT"
+      ],
+      "representativeProblems": [
+        "P15785",
+        "P16180",
+        "CF1593A"
+      ],
+      "trainingAction": {
+        "module": "implementation",
+        "tasks": [
+          "2 道 implementation 基础题，要求写清模型含义。",
+          "2 道 implementation 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "binary_search_model_template_087",
+      "clusterDiagnosis": "二分答案 相关题目集中暴露出二分答案的 check 单调性和边界处理不稳定。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 2 道题，平均提交 2.5 次。",
+        "未解决 2 道，部分分题 0 道。",
+        "共同标签：ZERO_STUCK, BINARY_SEARCH_BOUNDARY_RISK, BINARY_SEARCH_CHECK_RISK, RECURSION_STACK_RISK, T2_MODELING, T3_PARTIAL_SCORE"
+      ],
+      "representativeProblems": [
+        "P1756",
+        "P11791"
+      ],
+      "trainingAction": {
+        "module": "binary_search",
+        "tasks": [
+          "2 道 二分答案 基础题，要求写清模型含义。",
+          "2 道 二分答案 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，能独立证明 check 单调性并说明边界收缩。"
+      },
+      "confidence": 0.9,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_093",
+      "clusterDiagnosis": "DFS/BFS 相关题目集中暴露出DFS/BFS 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 2 次。",
+        "未解决 1 道，部分分题 0 道。",
+        "共同标签：ZERO_STUCK, NEVER_AC, MATH_OVERFLOW_RISK, SEARCH_PRUNING_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK"
+      ],
+      "representativeProblems": [
+        "P1215"
+      ],
+      "trainingAction": {
+        "module": "dfs_bfs",
+        "tasks": [
+          "2 道 DFS/BFS 基础题，要求写清模型含义。",
+          "2 道 DFS/BFS 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "greedy_unknown_096",
+      "clusterDiagnosis": "贪心 相关题目集中暴露出贪心 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 5 道题，平均提交 2 次。",
+        "未解决 5 道，部分分题 0 道。",
+        "共同标签：UNKNOWN_PATTERN, T1_STABILITY, T3_PARTIAL_SCORE, NEVER_AC, UNSOLVED_HIGH_ATTEMPT, OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "CF545D"
+      ],
+      "trainingAction": {
+        "module": "greedy",
+        "tasks": [
+          "2 道 贪心 基础题，要求写清模型含义。",
+          "2 道 贪心 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dsu_model_template_085",
+      "clusterDiagnosis": "并查集 相关题目集中暴露出并查集的集合含义、合并条件或离散化细节不稳定。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 4 道题，平均提交 1.5 次。",
+        "未解决 4 道，部分分题 0 道。",
+        "共同标签：ZERO_STUCK, NEVER_AC, DSU_MODEL_RISK, DSU_DISCRETIZATION_RISK, GRAPH_MODEL_RISK, RECURSION_STACK_RISK"
+      ],
+      "representativeProblems": [
+        "P11855"
+      ],
+      "trainingAction": {
+        "module": "dsu",
+        "tasks": [
+          "2 道 并查集 基础题，要求写清模型含义。",
+          "2 道 并查集 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "能说明集合含义、合并条件和离散化方式，提交次数 <= 2。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "string_state_init_boundary_046",
+      "clusterDiagnosis": "字符串 相关题目集中暴露出字符串 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 5 道题，平均提交 1.4 次。",
+        "未解决 5 道，部分分题 0 道。",
+        "共同标签：ZERO_STUCK, STRING_BOUNDARY_RISK, T1_STABILITY, T3_PARTIAL_SCORE, RECURSION_STACK_RISK, NEVER_AC"
+      ],
+      "representativeProblems": [
+        "U656632"
+      ],
+      "trainingAction": {
+        "module": "string",
+        "tasks": [
+          "2 道 字符串 基础题，要求写清模型含义。",
+          "2 道 字符串 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "graph_model_template_031",
+      "clusterDiagnosis": "图论建模 相关题目集中暴露出图论建模 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 11 道题，平均提交 1.09 次。",
+        "未解决 11 道，部分分题 0 道。",
+        "共同标签：ZERO_STUCK, NEVER_AC, GRAPH_MODEL_RISK, RECURSION_STACK_RISK, T2_MODELING, T3_PARTIAL_SCORE"
+      ],
+      "representativeProblems": [
+        "T461430",
+        "P15945"
+      ],
+      "trainingAction": {
+        "module": "graph",
+        "tasks": [
+          "2 道 图论建模 基础题，要求写清模型含义。",
+          "2 道 图论建模 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_062",
+      "clusterDiagnosis": "最短路 相关题目集中暴露出最短路 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 1 次。",
+        "未解决 1 道，部分分题 0 道。",
+        "共同标签：ZERO_STUCK, NEVER_AC, GRAPH_MODEL_RISK, SHORTEST_PATH_INIT_RISK, SEARCH_PRUNING_RISK, ARRAY_INDEX_RISK"
+      ],
+      "representativeProblems": [
+        "P1144"
+      ],
+      "trainingAction": {
+        "module": "shortest_path",
+        "tasks": [
+          "2 道 最短路 基础题，要求写清模型含义。",
+          "2 道 最短路 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.8,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dp_state_init_boundary_091",
+      "clusterDiagnosis": "DP 相关题目集中暴露出DP 状态、转移和初始化需要进一步稳定。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 1 次。",
+        "未解决 1 道，部分分题 0 道。",
+        "共同标签：ZERO_STUCK, NEVER_AC, DP_STATE_RISK, DP_INIT_RISK, INTERVAL_DP_ORDER_RISK, MATH_OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "U257605"
+      ],
+      "trainingAction": {
+        "module": "dp",
+        "tasks": [
+          "2 道 DP 基础题，要求写清模型含义。",
+          "2 道 DP 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.8,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "fenwick_tree_index_boundary_036",
+      "clusterDiagnosis": "树状数组 相关题目集中暴露出树状数组下标和前缀关系不稳定。",
+      "commonErrorTypes": [
+        "BOUNDARY_ERROR",
+        "INDEX_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 3 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, SOLVED, FENWICK_INDEX_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK"
+      ],
+      "representativeProblems": [
+        "P3368"
+      ],
+      "trainingAction": {
+        "module": "fenwick_tree",
+        "tasks": [
+          "2 道 树状数组 基础题，要求写清模型含义。",
+          "2 道 树状数组 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.85,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "search_unknown_078",
+      "clusterDiagnosis": "搜索 相关题目集中暴露出搜索 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 2 道题，平均提交 4 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, MULTI_FAIL_THEN_AC, SEARCH_PRUNING_RISK, ARRAY_INDEX_RISK, RECURSION_STACK_RISK, T2_MODELING"
+      ],
+      "representativeProblems": [
+        "P1464"
+      ],
+      "trainingAction": {
+        "module": "search",
+        "tasks": [
+          "2 道 搜索 基础题，要求写清模型含义。",
+          "2 道 搜索 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.9,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "graph_model_template_016",
+      "clusterDiagnosis": "图论建模 相关题目集中暴露出图论建模 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 14 道题，平均提交 3.5 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, GRAPH_MODEL_RISK, T2_MODELING, RECURSION_STACK_RISK, MULTI_FAIL_THEN_AC, ARRAY_INDEX_RISK"
+      ],
+      "representativeProblems": [
+        "B3643",
+        "P3557",
+        "P4980"
+      ],
+      "trainingAction": {
+        "module": "graph",
+        "tasks": [
+          "2 道 图论建模 基础题，要求写清模型含义。",
+          "2 道 图论建模 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dp_state_init_boundary_042",
+      "clusterDiagnosis": "DP 相关题目集中暴露出DP 状态、转移和初始化需要进一步稳定。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 15 道题，平均提交 3.4 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, DP_STATE_RISK, DP_INIT_RISK, T2_MODELING, ARRAY_INDEX_RISK, RECURSION_STACK_RISK"
+      ],
+      "representativeProblems": [
+        "U328616",
+        "P3618",
+        "P1040"
+      ],
+      "trainingAction": {
+        "module": "dp",
+        "tasks": [
+          "2 道 DP 基础题，要求写清模型含义。",
+          "2 道 DP 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_033",
+      "clusterDiagnosis": "最短路 相关题目集中暴露出最短路 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 2 道题，平均提交 2 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, SHORTEST_PATH_INIT_RISK, ARRAY_INDEX_RISK, RECURSION_STACK_RISK, T2_MODELING, SOLVED"
+      ],
+      "representativeProblems": [
+        "P1119",
+        "P1027"
+      ],
+      "trainingAction": {
+        "module": "shortest_path",
+        "tasks": [
+          "2 道 最短路 基础题，要求写清模型含义。",
+          "2 道 最短路 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.89,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "greedy_unknown_025",
+      "clusterDiagnosis": "贪心 相关题目集中暴露出贪心 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 7 道题，平均提交 3.71 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, T1_STABILITY, MULTI_FAIL_THEN_AC, ARRAY_INDEX_RISK, SOLVED, OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "P7412",
+        "P1152"
+      ],
+      "trainingAction": {
+        "module": "greedy",
+        "tasks": [
+          "2 道 贪心 基础题，要求写清模型含义。",
+          "2 道 贪心 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dsu_model_template_045",
+      "clusterDiagnosis": "并查集 相关题目集中暴露出并查集的集合含义、合并条件或离散化细节不稳定。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 9 道题，平均提交 3.44 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, DSU_MODEL_RISK, DSU_DISCRETIZATION_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK"
+      ],
+      "representativeProblems": [
+        "P9709",
+        "P1352"
+      ],
+      "trainingAction": {
+        "module": "dsu",
+        "tasks": [
+          "2 道 并查集 基础题，要求写清模型含义。",
+          "2 道 并查集 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "能说明集合含义、合并条件和离散化方式，提交次数 <= 2。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "binary_search_model_template_052",
+      "clusterDiagnosis": "二分答案 相关题目集中暴露出二分答案的 check 单调性和边界处理不稳定。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 6 道题，平均提交 3.33 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, BINARY_SEARCH_BOUNDARY_RISK, BINARY_SEARCH_CHECK_RISK, T2_MODELING, MULTI_FAIL_THEN_AC, ARRAY_INDEX_RISK"
+      ],
+      "representativeProblems": [
+        "P2293",
+        "P1314",
+        "P13500"
+      ],
+      "trainingAction": {
+        "module": "binary_search",
+        "tasks": [
+          "2 道 二分答案 基础题，要求写清模型含义。",
+          "2 道 二分答案 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，能独立证明 check 单调性并说明边界收缩。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "string_state_init_boundary_018",
+      "clusterDiagnosis": "字符串 相关题目集中暴露出字符串 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 14 道题，平均提交 3.29 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, STRING_BOUNDARY_RISK, T1_STABILITY, ARRAY_INDEX_RISK, RECURSION_STACK_RISK, MULTI_FAIL_THEN_AC"
+      ],
+      "representativeProblems": [
+        "P8865",
+        "P3677",
+        "P1765"
+      ],
+      "trainingAction": {
+        "module": "string",
+        "tasks": [
+          "2 道 字符串 基础题，要求写清模型含义。",
+          "2 道 字符串 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "search_unknown_019",
+      "clusterDiagnosis": "搜索 相关题目集中暴露出搜索 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 3 道题，平均提交 2 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, SEARCH_PRUNING_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK, T2_MODELING, SOLVED"
+      ],
+      "representativeProblems": [
+        "P3524",
+        "P1154"
+      ],
+      "trainingAction": {
+        "module": "search",
+        "tasks": [
+          "2 道 搜索 基础题，要求写清模型含义。",
+          "2 道 搜索 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_073",
+      "clusterDiagnosis": "DFS/BFS 相关题目集中暴露出DFS/BFS 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 3 道题，平均提交 3.67 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, MATH_OVERFLOW_RISK, SEARCH_PRUNING_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK"
+      ],
+      "representativeProblems": [
+        "P13499"
+      ],
+      "trainingAction": {
+        "module": "dfs_bfs",
+        "tasks": [
+          "2 道 DFS/BFS 基础题，要求写清模型含义。",
+          "2 道 DFS/BFS 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_102",
+      "clusterDiagnosis": "最短路 相关题目集中暴露出最短路 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 3 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, SOLVED, SHORTEST_PATH_INIT_RISK, MATH_OVERFLOW_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "P9751"
+      ],
+      "trainingAction": {
+        "module": "shortest_path",
+        "tasks": [
+          "2 道 最短路 基础题，要求写清模型含义。",
+          "2 道 最短路 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.82,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "math_model_template_039",
+      "clusterDiagnosis": "数学 相关题目集中暴露出数学 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 21 道题，平均提交 3.48 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, MATH_OVERFLOW_RISK, T1_STABILITY, MULTI_FAIL_THEN_AC, RECURSION_STACK_RISK, OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "P2158",
+        "P7960",
+        "P1601"
+      ],
+      "trainingAction": {
+        "module": "math",
+        "tasks": [
+          "2 道 数学 基础题，要求写清模型含义。",
+          "2 道 数学 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "fenwick_tree_index_boundary_034",
+      "clusterDiagnosis": "树状数组 相关题目集中暴露出树状数组下标和前缀关系不稳定。",
+      "commonErrorTypes": [
+        "BOUNDARY_ERROR",
+        "INDEX_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 2 道题，平均提交 2 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, SOLVED, FENWICK_INDEX_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK"
+      ],
+      "representativeProblems": [
+        "P1908"
+      ],
+      "trainingAction": {
+        "module": "fenwick_tree",
+        "tasks": [
+          "2 道 树状数组 基础题，要求写清模型含义。",
+          "2 道 树状数组 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.87,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "implementation_implementation_risk_021",
+      "clusterDiagnosis": "implementation 相关题目集中暴露出implementation 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 19 道题，平均提交 3.37 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, T1_STABILITY, MULTI_FAIL_THEN_AC, RECURSION_STACK_RISK, OVERFLOW_RISK, ARRAY_INDEX_RISK"
+      ],
+      "representativeProblems": [
+        "U622366",
+        "P11139",
+        "P1422"
+      ],
+      "trainingAction": {
+        "module": "implementation",
+        "tasks": [
+          "2 道 implementation 基础题，要求写清模型含义。",
+          "2 道 implementation 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_032",
+      "clusterDiagnosis": "区间 DP 相关题目集中暴露出区间 DP 的状态设计、初始化和枚举顺序不稳定。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 22 道题，平均提交 2.73 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, INTERVAL_DP_ORDER_RISK, T2_MODELING, MULTI_FAIL_THEN_AC, ARRAY_INDEX_RISK, DP_STATE_RISK"
+      ],
+      "representativeProblems": [
+        "P1821",
+        "P1066",
+        "P2089"
+      ],
+      "trainingAction": {
+        "module": "interval_dp",
+        "tasks": [
+          "2 道 区间 DP 基础题，要求写清模型含义。",
+          "2 道 区间 DP 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "graph_model_template_015",
+      "clusterDiagnosis": "图论建模 相关题目集中暴露出图论建模 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 5 道题，平均提交 2 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, GRAPH_MODEL_RISK, RECURSION_STACK_RISK, T2_MODELING, SOLVED, STRING_BOUNDARY_RISK"
+      ],
+      "representativeProblems": [
+        "B2001"
+      ],
+      "trainingAction": {
+        "module": "graph",
+        "tasks": [
+          "2 道 图论建模 基础题，要求写清模型含义。",
+          "2 道 图论建模 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dsu_model_template_040",
+      "clusterDiagnosis": "并查集 相关题目集中暴露出并查集的集合含义、合并条件或离散化细节不稳定。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 5 道题，平均提交 2 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, DSU_MODEL_RISK, DSU_DISCRETIZATION_RISK, RECURSION_STACK_RISK, T2_MODELING, ARRAY_INDEX_RISK"
+      ],
+      "representativeProblems": [
+        "P14362",
+        "P1399"
+      ],
+      "trainingAction": {
+        "module": "dsu",
+        "tasks": [
+          "2 道 并查集 基础题，要求写清模型含义。",
+          "2 道 并查集 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "能说明集合含义、合并条件和离散化方式，提交次数 <= 2。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "binary_search_model_template_049",
+      "clusterDiagnosis": "二分答案 相关题目集中暴露出二分答案的 check 单调性和边界处理不稳定。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 3 道题，平均提交 2 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, BINARY_SEARCH_BOUNDARY_RISK, BINARY_SEARCH_CHECK_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK"
+      ],
+      "representativeProblems": [
+        "P15069",
+        "P9497"
+      ],
+      "trainingAction": {
+        "module": "binary_search",
+        "tasks": [
+          "2 道 二分答案 基础题，要求写清模型含义。",
+          "2 道 二分答案 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，能独立证明 check 单调性并说明边界收缩。"
+      },
+      "confidence": 0.89,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dp_state_init_boundary_064",
+      "clusterDiagnosis": "DP 相关题目集中暴露出DP 状态、转移和初始化需要进一步稳定。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 16 道题，平均提交 2 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, DP_STATE_RISK, DP_INIT_RISK, T2_MODELING, ARRAY_INDEX_RISK, SOLVED"
+      ],
+      "representativeProblems": [
+        "P1481",
+        "B4163"
+      ],
+      "trainingAction": {
+        "module": "dp",
+        "tasks": [
+          "2 道 DP 基础题，要求写清模型含义。",
+          "2 道 DP 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "string_state_init_boundary_003",
+      "clusterDiagnosis": "字符串 相关题目集中暴露出字符串 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 20 道题，平均提交 2 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, STRING_BOUNDARY_RISK, T1_STABILITY, MULTI_FAIL_THEN_AC, RECURSION_STACK_RISK, ARRAY_INDEX_RISK"
+      ],
+      "representativeProblems": [
+        "U688514",
+        "U615692"
+      ],
+      "trainingAction": {
+        "module": "string",
+        "tasks": [
+          "2 道 字符串 基础题，要求写清模型含义。",
+          "2 道 字符串 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "implementation_implementation_risk_017",
+      "clusterDiagnosis": "implementation 相关题目集中暴露出implementation 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 36 道题，平均提交 2 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, T1_STABILITY, MULTI_FAIL_THEN_AC, ARRAY_INDEX_RISK, SOLVED, OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "P1268",
+        "P1063"
+      ],
+      "trainingAction": {
+        "module": "implementation",
+        "tasks": [
+          "2 道 implementation 基础题，要求写清模型含义。",
+          "2 道 implementation 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "math_model_template_012",
+      "clusterDiagnosis": "数学 相关题目集中暴露出数学 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 39 道题，平均提交 2 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, MATH_OVERFLOW_RISK, T1_STABILITY, RECURSION_STACK_RISK, MULTI_FAIL_THEN_AC, OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "U683709",
+        "B2054"
+      ],
+      "trainingAction": {
+        "module": "math",
+        "tasks": [
+          "2 道 数学 基础题，要求写清模型含义。",
+          "2 道 数学 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "search_unknown_007",
+      "clusterDiagnosis": "搜索 相关题目集中暴露出搜索 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 7 道题，平均提交 1 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：ONE_SHOT_AC, SEARCH_PRUNING_RISK, T2_MODELING, RECURSION_STACK_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "U316801"
+      ],
+      "trainingAction": {
+        "module": "search",
+        "tasks": [
+          "2 道 搜索 基础题，要求写清模型含义。",
+          "2 道 搜索 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.88,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_043",
+      "clusterDiagnosis": "DFS/BFS 相关题目集中暴露出DFS/BFS 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 3 道题，平均提交 2 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, GRAPH_MODEL_RISK, SEARCH_PRUNING_RISK, ARRAY_INDEX_RISK, RECURSION_STACK_RISK, LONG_CODE_DEBUG_RISK"
+      ],
+      "representativeProblems": [
+        "P15268",
+        "P1189"
+      ],
+      "trainingAction": {
+        "module": "dfs_bfs",
+        "tasks": [
+          "2 道 DFS/BFS 基础题，要求写清模型含义。",
+          "2 道 DFS/BFS 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.87,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "greedy_unknown_080",
+      "clusterDiagnosis": "贪心 相关题目集中暴露出贪心 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 8 道题，平均提交 2 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：QUICK_FIX_AC, T1_STABILITY, MULTI_FAIL_THEN_AC, ARRAY_INDEX_RISK, OVERFLOW_RISK, SOLVED"
+      ],
+      "representativeProblems": [
+        "P2676"
+      ],
+      "trainingAction": {
+        "module": "greedy",
+        "tasks": [
+          "2 道 贪心 基础题，要求写清模型含义。",
+          "2 道 贪心 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.92,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_005",
+      "clusterDiagnosis": "区间 DP 相关题目集中暴露出区间 DP 的状态设计、初始化和枚举顺序不稳定。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 10 道题，平均提交 1 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：ONE_SHOT_AC, INTERVAL_DP_ORDER_RISK, T2_MODELING, STRING_BOUNDARY_RISK, RECURSION_STACK_RISK, ARRAY_INDEX_RISK"
+      ],
+      "representativeProblems": [
+        "T568349"
+      ],
+      "trainingAction": {
+        "module": "interval_dp",
+        "tasks": [
+          "2 道 区间 DP 基础题，要求写清模型含义。",
+          "2 道 区间 DP 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。"
+      },
+      "confidence": 0.87,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "graph_model_template_006",
+      "clusterDiagnosis": "图论建模 相关题目集中暴露出图论建模 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 23 道题，平均提交 1 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：ONE_SHOT_AC, GRAPH_MODEL_RISK, T2_MODELING, RECURSION_STACK_RISK, SEARCH_PRUNING_RISK, OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "U316802"
+      ],
+      "trainingAction": {
+        "module": "graph",
+        "tasks": [
+          "2 道 图论建模 基础题，要求写清模型含义。",
+          "2 道 图论建模 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.87,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dp_state_init_boundary_059",
+      "clusterDiagnosis": "DP 相关题目集中暴露出DP 状态、转移和初始化需要进一步稳定。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 8 道题，平均提交 1 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：ONE_SHOT_AC, DP_STATE_RISK, DP_INIT_RISK, T2_MODELING, ARRAY_INDEX_RISK, MATH_OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "P4933"
+      ],
+      "trainingAction": {
+        "module": "dp",
+        "tasks": [
+          "2 道 DP 基础题，要求写清模型含义。",
+          "2 道 DP 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.86,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dsu_model_template_060",
+      "clusterDiagnosis": "并查集 相关题目集中暴露出并查集的集合含义、合并条件或离散化细节不稳定。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 4 道题，平均提交 1 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：ONE_SHOT_AC, DSU_MODEL_RISK, DSU_DISCRETIZATION_RISK, RECURSION_STACK_RISK, T2_MODELING, SEARCH_PRUNING_RISK"
+      ],
+      "representativeProblems": [
+        "P2016"
+      ],
+      "trainingAction": {
+        "module": "dsu",
+        "tasks": [
+          "2 道 并查集 基础题，要求写清模型含义。",
+          "2 道 并查集 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "能说明集合含义、合并条件和离散化方式，提交次数 <= 2。"
+      },
+      "confidence": 0.86,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "binary_search_model_template_071",
+      "clusterDiagnosis": "二分答案 相关题目集中暴露出二分答案的 check 单调性和边界处理不稳定。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 13 道题，平均提交 1 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：ONE_SHOT_AC, BINARY_SEARCH_BOUNDARY_RISK, BINARY_SEARCH_CHECK_RISK, T2_MODELING, RECURSION_STACK_RISK, GRAPH_MODEL_RISK"
+      ],
+      "representativeProblems": [
+        "P1733"
+      ],
+      "trainingAction": {
+        "module": "binary_search",
+        "tasks": [
+          "2 道 二分答案 基础题，要求写清模型含义。",
+          "2 道 二分答案 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，能独立证明 check 单调性并说明边界收缩。"
+      },
+      "confidence": 0.86,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_103",
+      "clusterDiagnosis": "最短路 相关题目集中暴露出最短路 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 2 道题，平均提交 1 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：ONE_SHOT_AC, SHORTEST_PATH_INIT_RISK, ARRAY_INDEX_RISK, INIT_RISK, RECURSION_STACK_RISK, T2_MODELING"
+      ],
+      "representativeProblems": [
+        "P5663"
+      ],
+      "trainingAction": {
+        "module": "shortest_path",
+        "tasks": [
+          "2 道 最短路 基础题，要求写清模型含义。",
+          "2 道 最短路 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.76,
+      "confidenceLevel": "MEDIUM",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "implementation_implementation_risk_004",
+      "clusterDiagnosis": "implementation 相关题目集中暴露出implementation 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 92 道题，平均提交 1 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：ONE_SHOT_AC, T1_STABILITY, RECURSION_STACK_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK, RECENT_WEAKNESS"
+      ],
+      "representativeProblems": [
+        "U688515"
+      ],
+      "trainingAction": {
+        "module": "implementation",
+        "tasks": [
+          "2 道 implementation 基础题，要求写清模型含义。",
+          "2 道 implementation 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.84,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "math_model_template_008",
+      "clusterDiagnosis": "数学 相关题目集中暴露出数学 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 45 道题，平均提交 1 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：ONE_SHOT_AC, MATH_OVERFLOW_RISK, T1_STABILITY, RECURSION_STACK_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "U316800"
+      ],
+      "trainingAction": {
+        "module": "math",
+        "tasks": [
+          "2 道 数学 基础题，要求写清模型含义。",
+          "2 道 数学 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.84,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "string_state_init_boundary_061",
+      "clusterDiagnosis": "字符串 相关题目集中暴露出字符串 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 25 道题，平均提交 1 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：ONE_SHOT_AC, STRING_BOUNDARY_RISK, T1_STABILITY, RECURSION_STACK_RISK, OVERFLOW_RISK, MATH_OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "P5091"
+      ],
+      "trainingAction": {
+        "module": "string",
+        "tasks": [
+          "2 道 字符串 基础题，要求写清模型含义。",
+          "2 道 字符串 中档题，限时并记录提交次数。",
+          "每题提交前必须写边界和初始化检查清单。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.84,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_076",
+      "clusterDiagnosis": "DFS/BFS 相关题目集中暴露出DFS/BFS 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 1 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：ONE_SHOT_AC, STRING_BOUNDARY_RISK, MATH_OVERFLOW_RISK, SEARCH_PRUNING_RISK, RECURSION_STACK_RISK, LONG_CODE_DEBUG_RISK"
+      ],
+      "representativeProblems": [
+        "P1827"
+      ],
+      "trainingAction": {
+        "module": "dfs_bfs",
+        "tasks": [
+          "2 道 DFS/BFS 基础题，要求写清模型含义。",
+          "2 道 DFS/BFS 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.69,
+      "confidenceLevel": "MEDIUM",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "greedy_unknown_079",
+      "clusterDiagnosis": "贪心 相关题目集中暴露出贪心 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 13 道题，平均提交 1 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：ONE_SHOT_AC, T1_STABILITY, RECURSION_STACK_RISK, OVERFLOW_RISK, ARRAY_INDEX_RISK, LONG_CODE_DEBUG_RISK"
+      ],
+      "representativeProblems": [
+        "P5143"
+      ],
+      "trainingAction": {
+        "module": "greedy",
+        "tasks": [
+          "2 道 贪心 基础题，要求写清模型含义。",
+          "2 道 贪心 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.84,
+      "confidenceLevel": "HIGH",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "state_compression_dp_unknown_081",
+      "clusterDiagnosis": "状态压缩 DP 相关题目集中暴露出状态压缩 DP 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 2 道题，平均提交 1 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：ONE_SHOT_AC, OVERFLOW_RISK, STRING_BOUNDARY_RISK, SEARCH_PRUNING_RISK, ARRAY_INDEX_RISK, RECURSION_STACK_RISK"
+      ],
+      "representativeProblems": [
+        "P1244"
+      ],
+      "trainingAction": {
+        "module": "state_compression_dp",
+        "tasks": [
+          "2 道 状态压缩 DP 基础题，要求写清模型含义。",
+          "2 道 状态压缩 DP 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.74,
+      "confidenceLevel": "MEDIUM",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "segment_tree_model_template_083",
+      "clusterDiagnosis": "线段树 相关题目集中暴露出线段树模板、区间边界和懒标记细节不稳定。",
+      "commonErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 1 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：ONE_SHOT_AC, BINARY_SEARCH_BOUNDARY_RISK, BINARY_SEARCH_CHECK_RISK, GRAPH_MODEL_RISK, SEGMENT_TREE_TEMPLATE_RISK, OVERFLOW_RISK"
+      ],
+      "representativeProblems": [
+        "P8959"
+      ],
+      "trainingAction": {
+        "module": "segment_tree",
+        "tasks": [
+          "2 道 线段树 基础题，要求写清模型含义。",
+          "2 道 线段树 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.69,
+      "confidenceLevel": "MEDIUM",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    },
+    {
+      "clusterId": "tree_unknown_104",
+      "clusterDiagnosis": "tree 相关题目集中暴露出tree 相关建模或实现稳定性不足。",
+      "commonErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceSummary": [
+        "问题簇包含 1 道题，平均提交 1 次。",
+        "未解决 0 道，部分分题 0 道。",
+        "共同标签：ONE_SHOT_AC, ARRAY_INDEX_RISK, RECURSION_STACK_RISK"
+      ],
+      "representativeProblems": [
+        "P1090"
+      ],
+      "trainingAction": {
+        "module": "tree",
+        "tasks": [
+          "2 道 tree 基础题，要求写清模型含义。",
+          "2 道 tree 中档题，限时并记录提交次数。"
+        ],
+        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+      },
+      "confidence": 0.69,
+      "confidenceLevel": "MEDIUM",
+      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+    }
+  ]
+}

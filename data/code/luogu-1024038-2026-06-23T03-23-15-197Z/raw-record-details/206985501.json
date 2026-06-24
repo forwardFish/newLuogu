@@ -1,0 +1,245 @@
+{
+  "recordId": "206985501",
+  "url": "https://www.luogu.com.cn/record/206985501?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:48:52.108Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[{\"id\":0,\"score\":75,\"status\":14,\"testCases\":{\"0\":{\"id\":0,\"status\":12,\"time\":4,\"memory\":568,\"score\":25,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"3\":{\"id\":3,\"status\":12,\"time\":4,\"memory\":568,\"score\":25,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"2\":{\"id\":2,\"status\":12,\"time\":3,\"memory\":552,\"score\":25,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"1\":{\"id\":1,\"status\":6,\"time\":4,\"memory\":1260,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer On line 1 column 12, read 1, expected 4.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}},\"judger\":\"\",\"time\":15,\"memory\":1260,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}],\"finishedCaseCount\":4,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <iostream>\\n#include <vector>\\n#include <cmath>\\n#include <algorithm>\\n\\nusing namespace std;\\n\\ndouble a, b, c, d;\\n\\ndouble f(double x) {\\n    return a * x * x * x + b * x * x + c * x + d;\\n}\\n\\ndouble binary_search(double l, double r) {\\n    double mid;\\n    while (r - l > 1e-8) { \\/\\/ \\u63a7\\u5236\\u7cbe\\u5ea6\\u8db3\\u591f\\u9ad8\\uff0c\\u786e\\u4fdd\\u5c0f\\u6570\\u70b9\\u540e\\u4e24\\u4f4d\\u6b63\\u786e\\n        mid = (l + r) \\/ 2;\\n        double fm = f(mid);\\n        if (abs(fm) < 1e-8) {\\n            return mid;\\n        }\\n        if (f(l) * fm < 0) {\\n            r = mid;\\n        } else {\\n            l = mid;\\n        }\\n    }\\n    return (l + r) \\/ 2;\\n}\\n\\nint main() {\\n    cin >> a >> b >> c >> d;\\n    vector<double> roots;\\n\\n    for (int i = -100; i < 100; ++i) {\\n        double x = i;\\n        double y = f(x);\\n        if (abs(y) < 1e-8) { \\/\\/ \\u5224\\u65ad\\u662f\\u5426\\u4e3a\\u6839\\n            roots.push_back(x);\\n            continue;\\n        }\\n\\n        double x_next = i + 1;\\n        double y_next = f(x_next);\\n\\n        if (y * y_next < 0) { \\/\\/ \\u7b26\\u53f7\\u4e0d\\u540c\\uff0c\\u533a\\u95f4\\u5185\\u6709\\u6839\\n            double root = binary_search(x, x_next);\\n            roots.push_back(root);\\n        }\\n    }\\n\\n    \\/\\/ \\u68c0\\u67e5x=100\\u662f\\u5426\\u662f\\u6839\\n    double x = 100;\\n    double y = f(x);\\n    if (abs(y) < 1e-8) {\\n        roots.push_back(x);\\n    }\\n\\n    \\/\\/ \\u6392\\u5e8f\\u5e76\\u8f93\\u51fa\\n    sort(roots.begin(), roots.end());\\n    printf(\\\"%.2lf %.2lf %.2lf\\\\n\\\", roots[0], roots[1], roots[2]);\\n\\n    return 0;\\n}\",\"time\":15,\"memory\":1260,\"problem\":{\"pid\":\"P1024\",\"title\":\"[NOIP 2001 \\u63d0\\u9ad8\\u7ec4] \\u4e00\\u5143\\u4e09\\u6b21\\u65b9\\u7a0b\\u6c42\\u89e3\",\"difficulty\":2,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":1277,\"submitTime\":1741520439,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":206985501,\"status\":14,\"enableO2\":true,\"score\":75},\"testCaseGroup\":[[0,1,2,3]],\"showStatus\":true},\"currentTitle\":\"R206985501\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186532,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [
+              {
+                "id": 0,
+                "score": 75,
+                "status": 14,
+                "testCases": {
+                  "0": {
+                    "id": 0,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 568,
+                    "score": 25,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "1": {
+                    "id": 1,
+                    "status": 6,
+                    "time": 4,
+                    "memory": 1260,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer On line 1 column 12, read 1, expected 4.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "2": {
+                    "id": 2,
+                    "status": 12,
+                    "time": 3,
+                    "memory": 552,
+                    "score": 25,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "3": {
+                    "id": 3,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 568,
+                    "score": 25,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                },
+                "judger": "",
+                "time": 15,
+                "memory": 1260,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            ],
+            "finishedCaseCount": 4,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <iostream>\n#include <vector>\n#include <cmath>\n#include <algorithm>\n\nusing namespace std;\n\ndouble a, b, c, d;\n\ndouble f(double x) {\n    return a * x * x * x + b * x * x + c * x + d;\n}\n\ndouble binary_search(double l, double r) {\n    double mid;\n    while (r - l > 1e-8) { // 控制精度足够高，确保小数点后两位正确\n        mid = (l + r) / 2;\n        double fm = f(mid);\n        if (abs(fm) < 1e-8) {\n            return mid;\n        }\n        if (f(l) * fm < 0) {\n            r = mid;\n        } else {\n            l = mid;\n        }\n    }\n    return (l + r) / 2;\n}\n\nint main() {\n    cin >> a >> b >> c >> d;\n    vector<double> roots;\n\n    for (int i = -100; i < 100; ++i) {\n        double x = i;\n        double y = f(x);\n        if (abs(y) < 1e-8) { // 判断是否为根\n            roots.push_back(x);\n            continue;\n        }\n\n        double x_next = i + 1;\n        double y_next = f(x_next);\n\n        if (y * y_next < 0) { // 符号不同，区间内有根\n            double root = binary_search(x, x_next);\n            roots.push_back(root);\n        }\n    }\n\n    // 检查x=100是否是根\n    double x = 100;\n    double y = f(x);\n    if (abs(y) < 1e-8) {\n        roots.push_back(x);\n    }\n\n    // 排序并输出\n    sort(roots.begin(), roots.end());\n    printf(\"%.2lf %.2lf %.2lf\\n\", roots[0], roots[1], roots[2]);\n\n    return 0;\n}",
+        "time": 15,
+        "memory": 1260,
+        "problem": {
+          "pid": "P1024",
+          "title": "[NOIP 2001 提高组] 一元三次方程求解",
+          "difficulty": 2,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 1277,
+        "submitTime": 1741520439,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 206985501,
+        "status": 14,
+        "enableO2": true,
+        "score": 75
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R206985501",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186532,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

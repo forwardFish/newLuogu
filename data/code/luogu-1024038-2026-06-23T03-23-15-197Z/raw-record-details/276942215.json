@@ -1,0 +1,176 @@
+{
+  "recordId": "276942215",
+  "url": "https://www.luogu.com.cn/record/276942215?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:23:51.249Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":null,\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h>\\nusing ll=long long;\\nusing lld=unsigned long long;\\nusing namespace std;\\ninline int read()\\n{\\n    int x=0,f=1;char ch=getchar();\\n    while(!isdigit(ch)){if(ch=='-') f=-1;ch=getchar();}\\n    while(isdigit(ch)){x=x*10+ch-'0';ch=getchar();}\\n    return x*f;\\n}\\ninline void write(int x)\\n{\\n    if(x<0){putchar('-');x=-x;}\\n    if(x>9) write(x\\/10);\\n    putchar(x%10+'0');\\n}\\n#define int long long\\n#define endl \\\"\\\\n\\\"\\nconst int mod1=19650827;\\nconst int mod=1e9+7;\\nconst int maxn=1e6+5;\\nint a[maxn];\\n\\nsigned main()\\n{\\n\\tios::sync_with_stdio(false);\\n\\tcin.tie(0);\\n\\tcout.tie(0);\\n\\tint t;\\n\\tcin>>t;\\n\\twhile(t--)\\n\\t{\\n\\t\\tint n;\\n\\t\\tcin>>n;\\n\\t\\tfor(int i=1;i<=n;i++)\\n\\t\\t{\\n\\t\\t\\tcin>>a[i];\\n\\t\\t}\\n\\t\\tunordered_map<int,int> t;\\n\\t\\tint l=1,r=1;int ans=0;\\n\\t\\twhile(r<=n)\\n\\t\\t{\\n\\t\\t\\tt[a[r]]++;\\n\\n\\t\\t\\twhile(t[a[r]]>1)\\n\\t\\t\\t{\\n\\t\\t\\t\\tt[a[l]]--;\\n\\t\\t\\t\\tl++;\\n\\t\\t\\t}\\n\\t\\t\\tans=max(ans,r-l+1);\\n\\t\\t\\tr++;\\n\\t\\t}\\n\\t\\tcout<<ans<<endl;\\n\\t}\\n\\treturn 0;\\n}\\n\\n\\n\\n\\n\\n\\n\\n\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"UVA11572\",\"title\":\"\\u552f\\u4e00\\u7684\\u96ea\\u82b1 Unique Snowflakes\",\"difficulty\":3,\"fullScore\":100,\"type\":\"UVA\"},\"contest\":null,\"sourceCodeLength\":894,\"submitTime\":1778076355,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":276942215,\"status\":0,\"enableO2\":true},\"testCaseGroup\":[[0]],\"showStatus\":true},\"currentTitle\":\"R276942215\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782185031,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": null,
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h>\nusing ll=long long;\nusing lld=unsigned long long;\nusing namespace std;\ninline int read()\n{\n    int x=0,f=1;char ch=getchar();\n    while(!isdigit(ch)){if(ch=='-') f=-1;ch=getchar();}\n    while(isdigit(ch)){x=x*10+ch-'0';ch=getchar();}\n    return x*f;\n}\ninline void write(int x)\n{\n    if(x<0){putchar('-');x=-x;}\n    if(x>9) write(x/10);\n    putchar(x%10+'0');\n}\n#define int long long\n#define endl \"\\n\"\nconst int mod1=19650827;\nconst int mod=1e9+7;\nconst int maxn=1e6+5;\nint a[maxn];\n\nsigned main()\n{\n\tios::sync_with_stdio(false);\n\tcin.tie(0);\n\tcout.tie(0);\n\tint t;\n\tcin>>t;\n\twhile(t--)\n\t{\n\t\tint n;\n\t\tcin>>n;\n\t\tfor(int i=1;i<=n;i++)\n\t\t{\n\t\t\tcin>>a[i];\n\t\t}\n\t\tunordered_map<int,int> t;\n\t\tint l=1,r=1;int ans=0;\n\t\twhile(r<=n)\n\t\t{\n\t\t\tt[a[r]]++;\n\n\t\t\twhile(t[a[r]]>1)\n\t\t\t{\n\t\t\t\tt[a[l]]--;\n\t\t\t\tl++;\n\t\t\t}\n\t\t\tans=max(ans,r-l+1);\n\t\t\tr++;\n\t\t}\n\t\tcout<<ans<<endl;\n\t}\n\treturn 0;\n}\n\n\n\n\n\n\n\n",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "UVA11572",
+          "title": "唯一的雪花 Unique Snowflakes",
+          "difficulty": 3,
+          "fullScore": 100,
+          "type": "UVA"
+        },
+        "contest": null,
+        "sourceCodeLength": 894,
+        "submitTime": 1778076355,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 276942215,
+        "status": 0,
+        "enableO2": true
+      },
+      "testCaseGroup": [
+        [
+          0
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R276942215",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782185031,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

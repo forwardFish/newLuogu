@@ -1,0 +1,323 @@
+{
+  "recordId": "215150765",
+  "url": "https://www.luogu.com.cn/record/215150765?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:45:54.385Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[{\"id\":0,\"score\":100,\"status\":12,\"testCases\":{\"2\":{\"id\":2,\"status\":12,\"time\":5,\"memory\":564,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"8\":{\"id\":8,\"status\":12,\"time\":8,\"memory\":556,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"6\":{\"id\":6,\"status\":12,\"time\":11,\"memory\":556,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"3\":{\"id\":3,\"status\":12,\"time\":6,\"memory\":552,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"9\":{\"id\":9,\"status\":12,\"time\":13,\"memory\":556,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"5\":{\"id\":5,\"status\":12,\"time\":13,\"memory\":548,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"0\":{\"id\":0,\"status\":12,\"time\":5,\"memory\":560,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"1\":{\"id\":1,\"status\":12,\"time\":10,\"memory\":524,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"7\":{\"id\":7,\"status\":12,\"time\":8,\"memory\":556,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"4\":{\"id\":4,\"status\":12,\"time\":11,\"memory\":564,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}},\"judger\":\"\",\"time\":90,\"memory\":564,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}],\"finishedCaseCount\":10,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <bits\\/stdc++.h>\\nusing namespace std;\\nusing ll = long long;\\nconst ll MOD = 1000000007;\\n\\n\\/\\/ \\u5feb\\u901f\\u5e42\\u8ba1\\u7b97 a^e mod MOD\\nll modexp(ll a, ll e) {\\n    ll res = 1 % MOD;\\n    a %= MOD;\\n    while (e > 0) {\\n        if (e & 1) res = (__int128)res * a % MOD;\\n        a = (__int128)a * a % MOD;\\n        e >>= 1;\\n    }\\n    return res;\\n}\\n\\n\\/\\/ \\u9884\\u5904\\u7406\\u8d28\\u6570\\u8868\\uff08\\u57c3\\u62c9\\u6258\\u65af\\u7279\\u5c3c\\u7b5b\\u6cd5\\uff09\\uff0c\\u5f97\\u5230 upTo \\u4ee5\\u5185\\u7684\\u6240\\u6709\\u8d28\\u6570\\nvector<int> primes;\\nvoid sieve(int upTo) {\\n    vector<bool> isPrime(upTo+1, true);\\n    isPrime[0] = isPrime[1] = false;\\n    for (int i = 2; i * i <= upTo; i++) {\\n        if (isPrime[i]) {\\n            for (int j = i * i; j <= upTo; j += i) {\\n                isPrime[j] = false;\\n            }\\n        }\\n    }\\n    for (int i = 2; i <= upTo; i++) {\\n        if (isPrime[i]) primes.push_back(i);\\n    }\\n}\\n\\n\\/\\/ \\u5c06 n \\u5206\\u89e3\\u8d28\\u56e0\\u6570\\uff0c\\u7ed3\\u679c\\u4fdd\\u5b58\\u5728 factors: (\\u8d28\\u6570, \\u6307\\u6570) \\u6570\\u7ec4\\u4e2d\\nvoid factor(ll n, vector<pair<ll,int>>& factors) {\\n    for (int p: primes) {\\n        if ((ll)p * p > n) break;\\n        if (n % p == 0) {\\n            int cnt = 0;\\n            while (n % p == 0) {\\n                n \\/= p;\\n                cnt++;\\n            }\\n            factors.emplace_back(p, cnt);\\n        }\\n    }\\n    if (n > 1) {\\n        \\/\\/ n \\u672c\\u8eab\\u662f\\u8d28\\u6570\\n        factors.emplace_back(n, 1);\\n    }\\n}\\n\\n\\/\\/ \\u9012\\u5f52\\u751f\\u6210\\u6240\\u6709\\u7ea6\\u6570\\u53ca\\u5176\\u6b27\\u62c9\\u51fd\\u6570\\u503c phi(d)\\n\\/\\/ idx: \\u5f53\\u524d\\u8d28\\u56e0\\u6570\\u7d22\\u5f15; curDiv: \\u5df2\\u751f\\u6210\\u7684\\u7ea6\\u6570\\u503c; curPhi: \\u5df2\\u751f\\u6210\\u90e8\\u5206\\u7684 phi \\u503c\\nvoid genDivisors(int idx, ll curDiv, ll curPhi,\\n                 const vector<pair<ll,int>>& factors,\\n                 vector<pair<ll,ll>>& divPhi) {\\n    if (idx == factors.size()) {\\n        \\/\\/ \\u4fdd\\u5b58\\u4e00\\u4e2a\\u7ea6\\u6570 d = curDiv\\uff0c\\u4ee5\\u53ca\\u5b83\\u7684\\u6b27\\u62c9\\u51fd\\u6570\\u503c curPhi\\n        divPhi.emplace_back(curDiv, curPhi);\\n        return;\\n    }\\n    ll p = factors[idx].first;\\n    int e = factors[idx].second;\\n    \\/\\/ \\u4e0d\\u53d6\\u5f53\\u524d\\u8d28\\u56e0\\u6570 p\\uff08\\u6307\\u6570\\u4e3a 0\\uff09\\u7684\\u60c5\\u51b5\\n    genDivisors(idx+1, curDiv, curPhi, factors, divPhi);\\n\\n    \\/\\/ \\u4f9d\\u6b21\\u53d6\\u6307\\u6570 1 \\u5230 e \\u7684\\u60c5\\u51b5\\n    ll newDiv = curDiv;\\n    ll newPhi = curPhi;\\n    for (int k = 1; k <= e; k++) {\\n        newDiv *= p;\\n        if (k == 1) {\\n            \\/\\/ phi(p) = p - 1\\n            newPhi = curPhi * (p - 1);\\n        } else {\\n            \\/\\/ phi(p^k) = p^(k-1) * (p - 1)\\uff0c\\u5728\\u4e0a\\u4e00\\u6b65\\u57fa\\u7840\\u4e0a\\u4e58\\u4ee5 p\\n            newPhi *= p;\\n        }\\n        genDivisors(idx+1, newDiv, newPhi, factors, divPhi);\\n    }\\n}\\n\\n\\/\\/ \\u8ba1\\u7b97\\u73af\\u72b6\\u56fe n \\u4e2a\\u9876\\u70b9\\uff0c\\u4f7f\\u7528 n \\u79cd\\u989c\\u8272\\u67d3\\u8272\\u65f6\\u4e0d\\u8ba1\\u65cb\\u8f6c\\u5bf9\\u79f0\\u7684\\u67d3\\u8272\\u65b9\\u6848\\u6570\\nll solveOne(ll n) {\\n    if (n == 1) {\\n        \\/\\/ n=1 \\u65f6\\u53ea\\u6709\\u4e00\\u4e2a\\u9876\\u70b9\\uff0c\\u4e00\\u4e2a\\u989c\\u8272\\u65b9\\u6848\\n        return 1;\\n    }\\n    \\/\\/ \\u5206\\u89e3\\u8d28\\u56e0\\u6570\\n    vector<pair<ll,int>> factors;\\n    factor(n, factors);\\n\\n    \\/\\/ \\u679a\\u4e3e\\u6240\\u6709\\u7ea6\\u6570 d \\u53ca\\u5176 \\u03c6(d)\\n    vector<pair<ll,ll>> divPhi;\\n    genDivisors(0, 1, 1, factors, divPhi);\\n\\n    \\/\\/ \\u6839\\u636e Burnside \\u5f15\\u7406\\uff08P\\u00f3lya \\u5b9a\\u7406\\uff09\\uff1a\\u7b54\\u6848 = (1\\/n) * sum_{d|n} \\u03c6(d) * n^{n\\/d}\\n    ll sum = 0;\\n    for (auto &dp : divPhi) {\\n        ll d = dp.first;\\n        ll phi = dp.second;\\n        \\/\\/ \\u8ba1\\u7b97 n^{n\\/d} mod MOD\\n        ll term = modexp(n % MOD, n \\/ d);\\n        \\/\\/ \\u7d2f\\u52a0 \\u03c6(d) * n^{n\\/d}\\n        sum = (sum + (phi % MOD) * term) % MOD;\\n    }\\n    \\/\\/ \\u4e58\\u4ee5 n \\u7684\\u6a21\\u9006\\uff0c\\u5b8c\\u6210\\u9664\\u4ee5 n \\u7684\\u64cd\\u4f5c\\n    ll invN = modexp(n % MOD, MOD - 2);\\n    ll ans = sum * invN % MOD;\\n    return ans;\\n}\\n\\nint main() {\\n    ios::sync_with_stdio(false);\\n    cin.tie(NULL);\\n\\n    \\/\\/ \\u9884\\u5904\\u7406\\uff1a\\u751f\\u6210\\u8db3\\u591f\\u5927\\u7684\\u8d28\\u6570\\u8868\\u4ee5\\u4fbf\\u540e\\u7eed\\u56e0\\u6570\\u5206\\u89e3\\n    sieve(40000);\\n\\n    int t;\\n    if (!(cin >> t)) return 0;\\n    while (t--) {\\n        ll n;\\n        cin >> n;\\n        ll ans = solveOne(n);\\n        cout << ans << \\\"\\\\n\\\";\\n    }\\n    return 0;\\n}\\n\",\"time\":90,\"memory\":564,\"problem\":{\"pid\":\"P4980\",\"title\":\"\\u3010\\u6a21\\u677f\\u3011P\\u00f3lya \\u5b9a\\u7406\",\"difficulty\":6,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":3148,\"submitTime\":1745652178,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":215150765,\"status\":12,\"enableO2\":true,\"score\":100},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9]],\"showStatus\":true},\"currentTitle\":\"R215150765\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186354,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [
+              {
+                "id": 0,
+                "score": 100,
+                "status": 12,
+                "testCases": {
+                  "0": {
+                    "id": 0,
+                    "status": 12,
+                    "time": 5,
+                    "memory": 560,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "1": {
+                    "id": 1,
+                    "status": 12,
+                    "time": 10,
+                    "memory": 524,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "2": {
+                    "id": 2,
+                    "status": 12,
+                    "time": 5,
+                    "memory": 564,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "3": {
+                    "id": 3,
+                    "status": 12,
+                    "time": 6,
+                    "memory": 552,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "4": {
+                    "id": 4,
+                    "status": 12,
+                    "time": 11,
+                    "memory": 564,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "5": {
+                    "id": 5,
+                    "status": 12,
+                    "time": 13,
+                    "memory": 548,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "6": {
+                    "id": 6,
+                    "status": 12,
+                    "time": 11,
+                    "memory": 556,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "7": {
+                    "id": 7,
+                    "status": 12,
+                    "time": 8,
+                    "memory": 556,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "8": {
+                    "id": 8,
+                    "status": 12,
+                    "time": 8,
+                    "memory": 556,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "9": {
+                    "id": 9,
+                    "status": 12,
+                    "time": 13,
+                    "memory": 556,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                },
+                "judger": "",
+                "time": 90,
+                "memory": 564,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            ],
+            "finishedCaseCount": 10,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <bits/stdc++.h>\nusing namespace std;\nusing ll = long long;\nconst ll MOD = 1000000007;\n\n// 快速幂计算 a^e mod MOD\nll modexp(ll a, ll e) {\n    ll res = 1 % MOD;\n    a %= MOD;\n    while (e > 0) {\n        if (e & 1) res = (__int128)res * a % MOD;\n        a = (__int128)a * a % MOD;\n        e >>= 1;\n    }\n    return res;\n}\n\n// 预处理质数表（埃拉托斯特尼筛法），得到 upTo 以内的所有质数\nvector<int> primes;\nvoid sieve(int upTo) {\n    vector<bool> isPrime(upTo+1, true);\n    isPrime[0] = isPrime[1] = false;\n    for (int i = 2; i * i <= upTo; i++) {\n        if (isPrime[i]) {\n            for (int j = i * i; j <= upTo; j += i) {\n                isPrime[j] = false;\n            }\n        }\n    }\n    for (int i = 2; i <= upTo; i++) {\n        if (isPrime[i]) primes.push_back(i);\n    }\n}\n\n// 将 n 分解质因数，结果保存在 factors: (质数, 指数) 数组中\nvoid factor(ll n, vector<pair<ll,int>>& factors) {\n    for (int p: primes) {\n        if ((ll)p * p > n) break;\n        if (n % p == 0) {\n            int cnt = 0;\n            while (n % p == 0) {\n                n /= p;\n                cnt++;\n            }\n            factors.emplace_back(p, cnt);\n        }\n    }\n    if (n > 1) {\n        // n 本身是质数\n        factors.emplace_back(n, 1);\n    }\n}\n\n// 递归生成所有约数及其欧拉函数值 phi(d)\n// idx: 当前质因数索引; curDiv: 已生成的约数值; curPhi: 已生成部分的 phi 值\nvoid genDivisors(int idx, ll curDiv, ll curPhi,\n                 const vector<pair<ll,int>>& factors,\n                 vector<pair<ll,ll>>& divPhi) {\n    if (idx == factors.size()) {\n        // 保存一个约数 d = curDiv，以及它的欧拉函数值 curPhi\n        divPhi.emplace_back(curDiv, curPhi);\n        return;\n    }\n    ll p = factors[idx].first;\n    int e = factors[idx].second;\n    // 不取当前质因数 p（指数为 0）的情况\n    genDivisors(idx+1, curDiv, curPhi, factors, divPhi);\n\n    // 依次取指数 1 到 e 的情况\n    ll newDiv = curDiv;\n    ll newPhi = curPhi;\n    for (int k = 1; k <= e; k++) {\n        newDiv *= p;\n        if (k == 1) {\n            // phi(p) = p - 1\n            newPhi = curPhi * (p - 1);\n        } else {\n            // phi(p^k) = p^(k-1) * (p - 1)，在上一步基础上乘以 p\n            newPhi *= p;\n        }\n        genDivisors(idx+1, newDiv, newPhi, factors, divPhi);\n    }\n}\n\n// 计算环状图 n 个顶点，使用 n 种颜色染色时不计旋转对称的染色方案数\nll solveOne(ll n) {\n    if (n == 1) {\n        // n=1 时只有一个顶点，一个颜色方案\n        return 1;\n    }\n    // 分解质因数\n    vector<pair<ll,int>> factors;\n    factor(n, factors);\n\n    // 枚举所有约数 d 及其 φ(d)\n    vector<pair<ll,ll>> divPhi;\n    genDivisors(0, 1, 1, factors, divPhi);\n\n    // 根据 Burnside 引理（Pólya 定理）：答案 = (1/n) * sum_{d|n} φ(d) * n^{n/d}\n    ll sum = 0;\n    for (auto &dp : divPhi) {\n        ll d = dp.first;\n        ll phi = dp.second;\n        // 计算 n^{n/d} mod MOD\n        ll term = modexp(n % MOD, n / d);\n        // 累加 φ(d) * n^{n/d}\n        sum = (sum + (phi % MOD) * term) % MOD;\n    }\n    // 乘以 n 的模逆，完成除以 n 的操作\n    ll invN = modexp(n % MOD, MOD - 2);\n    ll ans = sum * invN % MOD;\n    return ans;\n}\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(NULL);\n\n    // 预处理：生成足够大的质数表以便后续因数分解\n    sieve(40000);\n\n    int t;\n    if (!(cin >> t)) return 0;\n    while (t--) {\n        ll n;\n        cin >> n;\n        ll ans = solveOne(n);\n        cout << ans << \"\\n\";\n    }\n    return 0;\n}\n",
+        "time": 90,
+        "memory": 564,
+        "problem": {
+          "pid": "P4980",
+          "title": "【模板】Pólya 定理",
+          "difficulty": 6,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 3148,
+        "submitTime": 1745652178,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 215150765,
+        "status": 12,
+        "enableO2": true,
+        "score": 100
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R215150765",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186354,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

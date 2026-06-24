@@ -1,0 +1,31 @@
+{
+  "generatedProblemId": "gen_math_001",
+  "weaknessId": "math_model_error_5",
+  "targetAbility": "T3_PARTIAL_SCORE",
+  "module": "math",
+  "difficulty": "提高+/省选-",
+  "goal": "诊断并训练：数学：难题部分分拆解和得分策略不足",
+  "problemPackage": {
+    "statementPath": "data\\generated-problems\\gen_math_001\\statement.md",
+    "solutionPath": "data\\generated-problems\\gen_math_001\\solution.md",
+    "bruteForcePath": "data\\generated-problems\\gen_math_001\\bruteforce.cpp",
+    "standardSolutionPath": "data\\generated-problems\\gen_math_001\\std.cpp",
+    "generatorPath": "data\\generated-problems\\gen_math_001\\generator.cpp",
+    "testsPath": "data\\generated-problems\\gen_math_001\\tests"
+  },
+  "subtasks": [
+    {
+      "score": 30,
+      "description": "小 n 暴力"
+    },
+    {
+      "score": 60,
+      "description": "特殊性质或基础模型"
+    },
+    {
+      "score": 100,
+      "description": "完整正解"
+    }
+  ],
+  "status": "DRAFT_NOT_FOR_FORMAL_TEST"
+}

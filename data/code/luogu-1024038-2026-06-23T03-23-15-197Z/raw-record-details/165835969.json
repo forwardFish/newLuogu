@@ -1,0 +1,191 @@
+{
+  "recordId": "165835969",
+  "url": "https://www.luogu.com.cn/record/165835969?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T04:03:34.397Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_7170kmqj\\/src:2:1: \\u9519\\u8bef\\uff1a\\u2018usinc\\u2019\\u4e0d\\u662f\\u4e00\\u4e2a\\u7c7b\\u578b\\u540d\\n    2 | usinc namespace std;\\n      | ^~~~~\\n\\/tmp\\/compiler_7170kmqj\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_7170kmqj\\/src:7:2: \\u9519\\u8bef\\uff1a\\u2018cin\\u2019 was not declared in this scope; did you mean \\u2018std::cin\\u2019?\\n    7 |  cin>>n;\\n      |  ^~~\\n      |  std::cin\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:75,\\n                 from \\/tmp\\/compiler_7170kmqj\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iostream:60:18: \\u9644\\u6ce8\\uff1a\\u2018std::cin\\u2019 declared here\\n   60 |   extern istream cin;  \\/\\/\\/ Linked to standard input\\n      |                  ^~~\\n\\/tmp\\/compiler_7170kmqj\\/src:15:8: \\u9519\\u8bef\\uff1a\\u2018int[int]\\u2019\\u7528\\u4f5c\\u6570\\u7ec4\\u4e0b\\u6807\\u7c7b\\u578b\\u65e0\\u6548\\n   15 |     a[j][z] = i;\\n      |        ^\\n\\/tmp\\/compiler_7170kmqj\\/src:21:2: \\u9519\\u8bef\\uff1a\\u2018cout\\u2019 was not declared in this scope; did you mean \\u2018std::cout\\u2019?\\n   21 |  cout<<a[x][y]<<endl;\\n      |  ^~~~\\n      |  std::cout\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:75,\\n                 from \\/tmp\\/compiler_7170kmqj\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iostream:61:18: \\u9644\\u6ce8\\uff1a\\u2018std::cout\\u2019 declared here\\n   61 |   extern ostream cout;  \\/\\/\\/ Linked to standard output\\n      |                  ^~~~\\n\\/tmp\\/compiler_7170kmqj\\/src:21:11: \\u9519\\u8bef\\uff1a\\u2018int[int]\\u2019\\u7528\\u4f5c\\u6570\\u7ec4\\u4e0b\\u6807\\u7c7b\\u578b\\u65e0\\u6548\\n   21 |  cout<<a[x][y]<<endl;\\n      |           ^\\n\\/tmp\\/compiler_7170kmqj\\/src:21:17: \\u9519\\u8bef\\uff1a\\u2018endl\\u2019 was not declared in this scope; did you mean \\u2018std::endl\\u2019?\\n   21 |  cout<<a[x][y]<<endl;\\n      |                 ^~~~\\n      |                 std::endl\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/istream:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/sstream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/complex:45,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ccomplex:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:54,\\n                 from \\/tmp\\/compiler_7170kmqj\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ostream:599:5: \\u9644\\u6ce8\\uff1a\\u2018std::endl\\u2019 declared here\\n  599 |     endl(basic_ostream<_CharT, _Traits>& __os)\\n      |     ^~~~\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h>\\r\\nusinc namespace std;\\r\\nint a[10005][10005];\\r\\nint main() {\\r\\n\\tmemset(a, -1, sizeof(a));\\r\\n\\tint n,a,b,c,d;\\r\\n\\tcin>>n;\\r\\n\\tfor(int i=0;i<n;i++)\\r\\n\\t{\\r\\n\\t\\tcin>>a>>b>>c>>d;\\r\\n\\t\\tfor(int j=a; j<=a+c;j++) \\r\\n\\t\\t{\\r\\n\\t\\t\\tfor(int z=b;z<=b+d;z++)\\r\\n\\t\\t\\t{\\r\\n\\t\\t\\t\\ta[j][z] = i;\\r\\n\\t\\t\\t}\\r\\n\\t\\t}\\r\\n\\t}\\r\\n\\tint x,y;\\r\\n\\tcin>>x>>y;\\r\\n\\tcout<<a[x][y]<<endl;\\r\\n\\treturn 0;\\r\\n}\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P1003\",\"title\":\"[NOIP 2011 \\u63d0\\u9ad8\\u7ec4] \\u94fa\\u5730\\u6bef\",\"difficulty\":2,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":346,\"submitTime\":1720919427,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":165835969,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9]],\"showStatus\":true},\"currentTitle\":\"R165835969\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782187414,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_7170kmqj/src:2:1: 错误：‘usinc’不是一个类型名\n    2 | usinc namespace std;\n      | ^~~~~\n/tmp/compiler_7170kmqj/src: 在函数‘int main()’中:\n/tmp/compiler_7170kmqj/src:7:2: 错误：‘cin’ was not declared in this scope; did you mean ‘std::cin’?\n    7 |  cin>>n;\n      |  ^~~\n      |  std::cin\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:75,\n                 from /tmp/compiler_7170kmqj/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iostream:60:18: 附注：‘std::cin’ declared here\n   60 |   extern istream cin;  /// Linked to standard input\n      |                  ^~~\n/tmp/compiler_7170kmqj/src:15:8: 错误：‘int[int]’用作数组下标类型无效\n   15 |     a[j][z] = i;\n      |        ^\n/tmp/compiler_7170kmqj/src:21:2: 错误：‘cout’ was not declared in this scope; did you mean ‘std::cout’?\n   21 |  cout<<a[x][y]<<endl;\n      |  ^~~~\n      |  std::cout\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:75,\n                 from /tmp/compiler_7170kmqj/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iostream:61:18: 附注：‘std::cout’ declared here\n   61 |   extern ostream cout;  /// Linked to standard output\n      |                  ^~~~\n/tmp/compiler_7170kmqj/src:21:11: 错误：‘int[int]’用作数组下标类型无效\n   21 |  cout<<a[x][y]<<endl;\n      |           ^\n/tmp/compiler_7170kmqj/src:21:17: 错误：‘endl’ was not declared in this scope; did you mean ‘std::endl’?\n   21 |  cout<<a[x][y]<<endl;\n      |                 ^~~~\n      |                 std::endl\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/istream:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/sstream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/complex:45,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ccomplex:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:54,\n                 from /tmp/compiler_7170kmqj/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ostream:599:5: 附注：‘std::endl’ declared here\n  599 |     endl(basic_ostream<_CharT, _Traits>& __os)\n      |     ^~~~\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h>\r\nusinc namespace std;\r\nint a[10005][10005];\r\nint main() {\r\n\tmemset(a, -1, sizeof(a));\r\n\tint n,a,b,c,d;\r\n\tcin>>n;\r\n\tfor(int i=0;i<n;i++)\r\n\t{\r\n\t\tcin>>a>>b>>c>>d;\r\n\t\tfor(int j=a; j<=a+c;j++) \r\n\t\t{\r\n\t\t\tfor(int z=b;z<=b+d;z++)\r\n\t\t\t{\r\n\t\t\t\ta[j][z] = i;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\tint x,y;\r\n\tcin>>x>>y;\r\n\tcout<<a[x][y]<<endl;\r\n\treturn 0;\r\n}",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P1003",
+          "title": "[NOIP 2011 提高组] 铺地毯",
+          "difficulty": 2,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 346,
+        "submitTime": 1720919427,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 165835969,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R165835969",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782187414,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

@@ -1,0 +1,323 @@
+{
+  "recordId": "228222149",
+  "url": "https://www.luogu.com.cn/record/228222149?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:39:49.192Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[{\"id\":0,\"score\":100,\"status\":12,\"testCases\":{\"2\":{\"id\":2,\"status\":12,\"time\":3,\"memory\":680,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"0\":{\"id\":0,\"status\":12,\"time\":5,\"memory\":612,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"4\":{\"id\":4,\"status\":12,\"time\":4,\"memory\":564,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"1\":{\"id\":1,\"status\":12,\"time\":4,\"memory\":624,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"3\":{\"id\":3,\"status\":12,\"time\":5,\"memory\":552,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"5\":{\"id\":5,\"status\":12,\"time\":4,\"memory\":572,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"7\":{\"id\":7,\"status\":12,\"time\":5,\"memory\":560,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"8\":{\"id\":8,\"status\":12,\"time\":4,\"memory\":556,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"6\":{\"id\":6,\"status\":12,\"time\":5,\"memory\":564,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"9\":{\"id\":9,\"status\":12,\"time\":4,\"memory\":556,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}},\"judger\":\"\",\"time\":43,\"memory\":680,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}],\"finishedCaseCount\":10,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <bits\\/stdc++.h>\\nusing namespace std;\\n\\n\\/\\/Start\\ntypedef long long ll;\\ntypedef double db;\\n#define mp(a,b) make_pair((a),(b))\\n#define x first\\n#define y second\\n#define be(a) (a).begin()\\n#define en(a) (a).end()\\n#define sz(a) int((a).size())\\n#define pb(a) push_back(a)\\n#define R(i,a,b) for(int i=(a),I=(b);i<I;i++)\\n#define L(i,a,b) for(int i=(b)-1,I=(a)-1;i>I;i--)\\nconst int iinf=0x3f3f3f3f;\\nconst ll linf=0x3f3f3f3f3f3f3f3f;\\n\\n\\/*\\n\\u6ce8\\u610f\\uff1a i \\u662f\\u7bad\\u5854\\uff0cj \\u662f\\u9776\\u5b50\\uff0cs \\u662f\\u533a\\u95f4\\n*\\/\\n\\n\\/\\/Data\\nconst int N=1e2;\\nint m,n,k;\\npair<int,int> a[N],b[N];\\nbitset<N> con[N];\\n#define f(x) ((x)*(x))\\n\\n\\/\\/Dfs\\nbitset<N> e[N],vis;\\nint nex[N][N+1],mn[N+1],mat[N],ans;\\nbool match(int s){ \\/\\/ \\u5308\\u7259\\u5229\\u5339\\u914d\\n\\tR(i,0,n)if(e[s][i]&&!vis[i]){\\n\\t\\tvis[i]=true;\\n\\t\\tif(!~mat[i]||match(mat[i]))\\t\\n\\t\\t\\treturn mat[i]=s,true;\\n\\t}\\n\\treturn false;\\n}\\nvoid dfs(int j,int s){\\n\\tif(ans<=s+mn[j]) return; \\/\\/A*\\n\\tif(j==m) return void(ans=s);\\n\\tint cmat[N]; copy(mat,mat+n,cmat); \\/\\/ \\u8fd9\\u91cc\\u7684 cmat \\u4f60\\u8981\\u662f\\u8bbe\\u4e3a\\u5168\\u5c40\\u53d8\\u91cf\\u5c31\\u6b7b\\u4e86\\uff0c\\u6211\\u5728\\u8fd9\\u91cc\\u6b7b\\u4e86 2 \\u4e2a\\u5c0f\\u65f6\\n\\tL(J,j+1,m+1){\\n\\t\\tR(i,0,n) con[i][j]&&nex[i][j]>=J&&(e[s][i]=true);\\n\\t\\tR(i,0,n) vis[i]=false; match(s)?dfs(J,s+1):void();\\n\\t\\tR(i,0,n) con[i][j]&&nex[i][j]>=J&&(e[s][i]=false); \\/\\/\\u83ab\\u5fd8\\u56de\\u6eaf\\n\\t\\tcopy(cmat,cmat+n,mat);\\n\\t}\\n}\\n\\n\\/\\/Main\\nint main(){\\n\\tios::sync_with_stdio(0);\\n\\tcin.tie(0),cout.tie(0);\\n\\tcin>>m>>n>>k;\\n\\tR(j,0,m) cin>>a[j].x>>a[j].y;\\n\\tR(i,0,n) cin>>b[i].x>>b[i].y;\\n\\tR(i,0,n)R(j,0,m) con[i][j]=(f(a[j].x-b[i].x)+f(a[j].y-b[i].y)<=f(k));\\n\\tR(i,0,n) fill(nex[i],nex[i]+m+1,-1);\\n\\tR(i,0,n)L(j,0,m) con[i][j]&&(nex[i][j]=max(j+1,nex[i][j+1]));\\n\\tR(j,0,m) mn[j]=iinf;\\n\\tL(j,0,m)R(i,0,n) con[i][j]&&(mn[j]=min(mn[j],mn[nex[i][j]]+1));\\n\\tfill(mat,mat+n,-1),ans=min(n,m),dfs(0,0);\\n\\t\\/\\/ \\u5939\\u6742\\u70b9\\u9a9a\\u64cd\\u4f5c\\uff08\\u6b63\\u786e\\u6027\\u4e0d\\u4fdd\\u8bc1\\uff0c\\u4ec5\\u7528\\u6765\\u62a2\\u6700\\u4f18\\u89e3\\uff1a\\u731c\\u6d4b\\u6700\\u7ec8 ans<=mn[0]+5\\uff09\\uff0c\\u628a ans \\u7684\\u521d\\u59cb\\u503c\\u548c mn[0]+5 \\u53d6 min\\n\\tcout<<ans<<'\\\\n';\\n\\treturn 0;\\n}\\n\",\"time\":43,\"memory\":680,\"problem\":{\"pid\":\"P1526\",\"title\":\"[NOI2003] \\u667a\\u7834\\u8fde\\u73af\\u9635\",\"difficulty\":7,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":1692,\"submitTime\":1754039436,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":228222149,\"status\":12,\"enableO2\":true,\"score\":100},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9]],\"showStatus\":true},\"currentTitle\":\"R228222149\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782185989,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [
+              {
+                "id": 0,
+                "score": 100,
+                "status": 12,
+                "testCases": {
+                  "0": {
+                    "id": 0,
+                    "status": 12,
+                    "time": 5,
+                    "memory": 612,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "1": {
+                    "id": 1,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 624,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "2": {
+                    "id": 2,
+                    "status": 12,
+                    "time": 3,
+                    "memory": 680,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "3": {
+                    "id": 3,
+                    "status": 12,
+                    "time": 5,
+                    "memory": 552,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "4": {
+                    "id": 4,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 564,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "5": {
+                    "id": 5,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 572,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "6": {
+                    "id": 6,
+                    "status": 12,
+                    "time": 5,
+                    "memory": 564,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "7": {
+                    "id": 7,
+                    "status": 12,
+                    "time": 5,
+                    "memory": 560,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "8": {
+                    "id": 8,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 556,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "9": {
+                    "id": 9,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 556,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                },
+                "judger": "",
+                "time": 43,
+                "memory": 680,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            ],
+            "finishedCaseCount": 10,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <bits/stdc++.h>\nusing namespace std;\n\n//Start\ntypedef long long ll;\ntypedef double db;\n#define mp(a,b) make_pair((a),(b))\n#define x first\n#define y second\n#define be(a) (a).begin()\n#define en(a) (a).end()\n#define sz(a) int((a).size())\n#define pb(a) push_back(a)\n#define R(i,a,b) for(int i=(a),I=(b);i<I;i++)\n#define L(i,a,b) for(int i=(b)-1,I=(a)-1;i>I;i--)\nconst int iinf=0x3f3f3f3f;\nconst ll linf=0x3f3f3f3f3f3f3f3f;\n\n/*\n注意： i 是箭塔，j 是靶子，s 是区间\n*/\n\n//Data\nconst int N=1e2;\nint m,n,k;\npair<int,int> a[N],b[N];\nbitset<N> con[N];\n#define f(x) ((x)*(x))\n\n//Dfs\nbitset<N> e[N],vis;\nint nex[N][N+1],mn[N+1],mat[N],ans;\nbool match(int s){ // 匈牙利匹配\n\tR(i,0,n)if(e[s][i]&&!vis[i]){\n\t\tvis[i]=true;\n\t\tif(!~mat[i]||match(mat[i]))\t\n\t\t\treturn mat[i]=s,true;\n\t}\n\treturn false;\n}\nvoid dfs(int j,int s){\n\tif(ans<=s+mn[j]) return; //A*\n\tif(j==m) return void(ans=s);\n\tint cmat[N]; copy(mat,mat+n,cmat); // 这里的 cmat 你要是设为全局变量就死了，我在这里死了 2 个小时\n\tL(J,j+1,m+1){\n\t\tR(i,0,n) con[i][j]&&nex[i][j]>=J&&(e[s][i]=true);\n\t\tR(i,0,n) vis[i]=false; match(s)?dfs(J,s+1):void();\n\t\tR(i,0,n) con[i][j]&&nex[i][j]>=J&&(e[s][i]=false); //莫忘回溯\n\t\tcopy(cmat,cmat+n,mat);\n\t}\n}\n\n//Main\nint main(){\n\tios::sync_with_stdio(0);\n\tcin.tie(0),cout.tie(0);\n\tcin>>m>>n>>k;\n\tR(j,0,m) cin>>a[j].x>>a[j].y;\n\tR(i,0,n) cin>>b[i].x>>b[i].y;\n\tR(i,0,n)R(j,0,m) con[i][j]=(f(a[j].x-b[i].x)+f(a[j].y-b[i].y)<=f(k));\n\tR(i,0,n) fill(nex[i],nex[i]+m+1,-1);\n\tR(i,0,n)L(j,0,m) con[i][j]&&(nex[i][j]=max(j+1,nex[i][j+1]));\n\tR(j,0,m) mn[j]=iinf;\n\tL(j,0,m)R(i,0,n) con[i][j]&&(mn[j]=min(mn[j],mn[nex[i][j]]+1));\n\tfill(mat,mat+n,-1),ans=min(n,m),dfs(0,0);\n\t// 夹杂点骚操作（正确性不保证，仅用来抢最优解：猜测最终 ans<=mn[0]+5），把 ans 的初始值和 mn[0]+5 取 min\n\tcout<<ans<<'\\n';\n\treturn 0;\n}\n",
+        "time": 43,
+        "memory": 680,
+        "problem": {
+          "pid": "P1526",
+          "title": "[NOI2003] 智破连环阵",
+          "difficulty": 7,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 1692,
+        "submitTime": 1754039436,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 228222149,
+        "status": 12,
+        "enableO2": true,
+        "score": 100
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R228222149",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782185989,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

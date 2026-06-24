@@ -1,0 +1,3916 @@
+{
+  "generatedAt": "2026-06-24T02:56:56.221Z",
+  "clusterCount": 104,
+  "clusters": [
+    {
+      "clusterId": "greedy_unknown_068",
+      "clusterKey": "greedy:UNKNOWN:PARTIAL_STUCK:提高+/省选-:T3",
+      "clusterName": "贪心：UNKNOWN",
+      "primaryModule": "greedy",
+      "cspRoles": [
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 10,
+      "solvedCount": 0,
+      "unsolvedCount": 1,
+      "partialScoreCount": 1,
+      "commonTags": [
+        "PARTIAL_STUCK",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemPids": [
+        "U619605"
+      ],
+      "weaknessScore": 89,
+      "hypothesis": "难题部分分拆解和得分策略不足"
+    },
+    {
+      "clusterId": "string_state_init_boundary_027",
+      "clusterKey": "string:STATE_INIT_BOUNDARY:PARTIAL_TO_AC:提高:T3",
+      "clusterName": "字符串：状态、初始化和边界问题",
+      "primaryModule": "string",
+      "cspRoles": [
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 2,
+      "avgAttempts": 10.5,
+      "solvedCount": 2,
+      "unsolvedCount": 0,
+      "partialScoreCount": 2,
+      "commonTags": [
+        "PARTIAL_TO_AC",
+        "MULTI_FAIL_THEN_AC",
+        "STRING_BOUNDARY_RISK",
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY",
+        "OVERFLOW_RISK",
+        "RECENT_WEAKNESS",
+        "MATH_OVERFLOW_RISK",
+        "RECURSION_STACK_RISK"
+      ],
+      "problemPids": [
+        "P9750",
+        "P5740"
+      ],
+      "weaknessScore": 74,
+      "hypothesis": "难题部分分拆解和得分策略不足"
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_013",
+      "clusterKey": "shortest_path:STATE_INIT_BOUNDARY:PARTIAL_STUCK:提高+/省选-:T3",
+      "clusterName": "最短路：状态、初始化和边界问题",
+      "primaryModule": "shortest_path",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 3,
+      "avgAttempts": 4.67,
+      "solvedCount": 0,
+      "unsolvedCount": 3,
+      "partialScoreCount": 3,
+      "commonTags": [
+        "PARTIAL_STUCK",
+        "SHORTEST_PATH_INIT_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "NEVER_AC",
+        "ARRAY_INDEX_RISK",
+        "GRAPH_MODEL_RISK",
+        "SEARCH_PRUNING_RISK",
+        "OVERFLOW_RISK"
+      ],
+      "problemPids": [
+        "P2452",
+        "P1713",
+        "P3685"
+      ],
+      "weaknessScore": 71.93,
+      "hypothesis": "难题部分分拆解和得分策略不足"
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_001",
+      "clusterKey": "interval_dp:STATE_INIT_BOUNDARY:PARTIAL_TO_AC:提高:T3",
+      "clusterName": "区间 DP：状态、初始化和边界问题",
+      "primaryModule": "interval_dp",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 8,
+      "avgAttempts": 9.63,
+      "solvedCount": 8,
+      "unsolvedCount": 0,
+      "partialScoreCount": 8,
+      "commonTags": [
+        "PARTIAL_TO_AC",
+        "INTERVAL_DP_ORDER_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY",
+        "MULTI_FAIL_THEN_AC",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "STRING_BOUNDARY_RISK"
+      ],
+      "problemPids": [
+        "P8699",
+        "U467266",
+        "U463446",
+        "P1004",
+        "P1022",
+        "P1480",
+        "P1577",
+        "B2110"
+      ],
+      "weaknessScore": 71.5,
+      "hypothesis": "区间 DP 的状态设计、初始化和枚举顺序不稳定"
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_037",
+      "clusterKey": "interval_dp:STATE_INIT_BOUNDARY:PARTIAL_STUCK:提高+/省选-:T3",
+      "clusterName": "区间 DP：状态、初始化和边界问题",
+      "primaryModule": "interval_dp",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 6,
+      "avgAttempts": 4.83,
+      "solvedCount": 0,
+      "unsolvedCount": 6,
+      "partialScoreCount": 6,
+      "commonTags": [
+        "PARTIAL_STUCK",
+        "INTERVAL_DP_ORDER_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "RECURSION_STACK_RISK",
+        "MATH_OVERFLOW_RISK",
+        "NEVER_AC",
+        "DP_STATE_RISK",
+        "DP_INIT_RISK",
+        "GRAPH_MODEL_RISK"
+      ],
+      "problemPids": [
+        "P11858",
+        "P3987",
+        "P1967",
+        "T699486",
+        "P15269",
+        "P4840"
+      ],
+      "weaknessScore": 70.76,
+      "hypothesis": "区间 DP 的状态设计、初始化和枚举顺序不稳定"
+    },
+    {
+      "clusterId": "math_model_template_011",
+      "clusterKey": "math:MODEL_TEMPLATE:PARTIAL_TO_AC:提高:T3",
+      "clusterName": "数学：建模和模板熟练度问题",
+      "primaryModule": "math",
+      "cspRoles": [
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 23,
+      "avgAttempts": 9.65,
+      "solvedCount": 23,
+      "unsolvedCount": 0,
+      "partialScoreCount": 23,
+      "commonTags": [
+        "PARTIAL_TO_AC",
+        "MATH_OVERFLOW_RISK",
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY",
+        "RECURSION_STACK_RISK",
+        "MULTI_FAIL_THEN_AC",
+        "OVERFLOW_RISK",
+        "ARRAY_INDEX_RISK",
+        "LONG_CODE_DEBUG_RISK"
+      ],
+      "problemPids": [
+        "P3585",
+        "P1075",
+        "P6691",
+        "P1435",
+        "P2852",
+        "P8926",
+        "P1029",
+        "P2285",
+        "P5461",
+        "P1229",
+        "P3205",
+        "P5836",
+        "P7870",
+        "P1865",
+        "P1226",
+        "P4017",
+        "P1036",
+        "P5002",
+        "P3915",
+        "U452713",
+        "P1115",
+        "P2420",
+        "B3634"
+      ],
+      "weaknessScore": 70.3,
+      "hypothesis": "难题部分分拆解和得分策略不足"
+    },
+    {
+      "clusterId": "search_unknown_024",
+      "clusterKey": "search:UNKNOWN:PARTIAL_TO_AC:提高:T3",
+      "clusterName": "搜索：UNKNOWN",
+      "primaryModule": "search",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 5,
+      "solvedCount": 1,
+      "unsolvedCount": 0,
+      "partialScoreCount": 1,
+      "commonTags": [
+        "PARTIAL_TO_AC",
+        "MULTI_FAIL_THEN_AC",
+        "SEARCH_PRUNING_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY",
+        "RECENT_WEAKNESS"
+      ],
+      "problemPids": [
+        "P7411"
+      ],
+      "weaknessScore": 69.63,
+      "hypothesis": "难题部分分拆解和得分策略不足"
+    },
+    {
+      "clusterId": "graph_model_template_044",
+      "clusterKey": "graph:MODEL_TEMPLATE:PARTIAL_TO_AC:提高:T3",
+      "clusterName": "图论建模：建模和模板熟练度问题",
+      "primaryModule": "graph",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 5,
+      "avgAttempts": 10.4,
+      "solvedCount": 5,
+      "unsolvedCount": 0,
+      "partialScoreCount": 5,
+      "commonTags": [
+        "PARTIAL_TO_AC",
+        "GRAPH_MODEL_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "MULTI_FAIL_THEN_AC",
+        "ARRAY_INDEX_RISK",
+        "MATH_OVERFLOW_RISK"
+      ],
+      "problemPids": [
+        "U465842",
+        "P2899",
+        "P15267",
+        "P1006",
+        "U460090"
+      ],
+      "weaknessScore": 69,
+      "hypothesis": "难题部分分拆解和得分策略不足"
+    },
+    {
+      "clusterId": "string_state_init_boundary_047",
+      "clusterKey": "string:STATE_INIT_BOUNDARY:ZERO_STUCK:提高+/省选-:T3",
+      "clusterName": "字符串：状态、初始化和边界问题",
+      "primaryModule": "string",
+      "cspRoles": [
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 2,
+      "avgAttempts": 16,
+      "solvedCount": 0,
+      "unsolvedCount": 2,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ZERO_STUCK",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "STRING_BOUNDARY_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY",
+        "MATH_OVERFLOW_RISK"
+      ],
+      "problemPids": [
+        "U519362",
+        "U615693"
+      ],
+      "weaknessScore": 69,
+      "hypothesis": "高难题部分分与取舍策略不足"
+    },
+    {
+      "clusterId": "dsu_model_template_054",
+      "clusterKey": "dsu:MODEL_TEMPLATE:PARTIAL_TO_AC:提高:T3",
+      "clusterName": "并查集：建模和模板熟练度问题",
+      "primaryModule": "dsu",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 4,
+      "avgAttempts": 8.5,
+      "solvedCount": 4,
+      "unsolvedCount": 0,
+      "partialScoreCount": 4,
+      "commonTags": [
+        "PARTIAL_TO_AC",
+        "DSU_MODEL_RISK",
+        "DSU_DISCRETIZATION_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY",
+        "MULTI_FAIL_THEN_AC"
+      ],
+      "problemPids": [
+        "P1955",
+        "P3958",
+        "P3366",
+        "P1551"
+      ],
+      "weaknessScore": 69,
+      "hypothesis": "并查集的集合含义、合并条件或离散化细节不稳定"
+    },
+    {
+      "clusterId": "graph_model_template_057",
+      "clusterKey": "graph:MODEL_TEMPLATE:UNKNOWN_PATTERN:提高+/省选-:T3",
+      "clusterName": "图论建模：建模和模板熟练度问题",
+      "primaryModule": "graph",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 10,
+      "solvedCount": 0,
+      "unsolvedCount": 1,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "UNKNOWN_PATTERN",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "GRAPH_MODEL_RISK",
+        "STRING_BOUNDARY_RISK",
+        "MATH_OVERFLOW_RISK",
+        "SEARCH_PRUNING_RISK",
+        "ARRAY_INDEX_RISK",
+        "RECURSION_STACK_RISK",
+        "LONG_CODE_DEBUG_RISK",
+        "T2_MODELING"
+      ],
+      "problemPids": [
+        "U643929"
+      ],
+      "weaknessScore": 69,
+      "hypothesis": "高难题部分分与取舍策略不足"
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_063",
+      "clusterKey": "shortest_path:STATE_INIT_BOUNDARY:PARTIAL_TO_AC:提高:T3",
+      "clusterName": "最短路：状态、初始化和边界问题",
+      "primaryModule": "shortest_path",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 2,
+      "avgAttempts": 8.5,
+      "solvedCount": 2,
+      "unsolvedCount": 0,
+      "partialScoreCount": 2,
+      "commonTags": [
+        "PARTIAL_TO_AC",
+        "MULTI_FAIL_THEN_AC",
+        "GRAPH_MODEL_RISK",
+        "SHORTEST_PATH_INIT_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemPids": [
+        "P3371",
+        "P4779"
+      ],
+      "weaknessScore": 69,
+      "hypothesis": "难题部分分拆解和得分策略不足"
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_066",
+      "clusterKey": "interval_dp:STATE_INIT_BOUNDARY:ZERO_STUCK:提高+/省选-:T3",
+      "clusterName": "区间 DP：状态、初始化和边界问题",
+      "primaryModule": "interval_dp",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 2,
+      "avgAttempts": 11.5,
+      "solvedCount": 0,
+      "unsolvedCount": 2,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ZERO_STUCK",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "INTERVAL_DP_ORDER_RISK",
+        "STRING_BOUNDARY_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY",
+        "MATH_OVERFLOW_RISK",
+        "ARRAY_INDEX_RISK"
+      ],
+      "problemPids": [
+        "P1919",
+        "P10571"
+      ],
+      "weaknessScore": 69,
+      "hypothesis": "区间 DP 的状态设计、初始化和枚举顺序不稳定"
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_075",
+      "clusterKey": "dfs_bfs:UNKNOWN:PARTIAL_TO_AC:提高:T3",
+      "clusterName": "DFS/BFS：UNKNOWN",
+      "primaryModule": "dfs_bfs",
+      "cspRoles": [
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 12,
+      "solvedCount": 1,
+      "unsolvedCount": 0,
+      "partialScoreCount": 1,
+      "commonTags": [
+        "PARTIAL_TO_AC",
+        "MULTI_FAIL_THEN_AC",
+        "STRING_BOUNDARY_RISK",
+        "MATH_OVERFLOW_RISK",
+        "SEARCH_PRUNING_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "LONG_CODE_DEBUG_RISK",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemPids": [
+        "P1030"
+      ],
+      "weaknessScore": 69,
+      "hypothesis": "难题部分分拆解和得分策略不足"
+    },
+    {
+      "clusterId": "math_model_template_090",
+      "clusterKey": "math:MODEL_TEMPLATE:UNKNOWN_PATTERN:提高+/省选-:T3",
+      "clusterName": "数学：建模和模板熟练度问题",
+      "primaryModule": "math",
+      "cspRoles": [
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 2,
+      "avgAttempts": 13,
+      "solvedCount": 0,
+      "unsolvedCount": 2,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "UNKNOWN_PATTERN",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "MATH_OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "LONG_CODE_DEBUG_RISK",
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY",
+        "OVERFLOW_RISK"
+      ],
+      "problemPids": [
+        "CF1914B",
+        "CF1996D"
+      ],
+      "weaknessScore": 69,
+      "hypothesis": "高难题部分分与取舍策略不足"
+    },
+    {
+      "clusterId": "dp_state_init_boundary_092",
+      "clusterKey": "dp:STATE_INIT_BOUNDARY:UNKNOWN_PATTERN:提高+/省选-:T3",
+      "clusterName": "DP：状态、初始化和边界问题",
+      "primaryModule": "dp",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 2,
+      "avgAttempts": 8.5,
+      "solvedCount": 0,
+      "unsolvedCount": 2,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "UNKNOWN_PATTERN",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "DP_STATE_RISK",
+        "DP_INIT_RISK",
+        "MATH_OVERFLOW_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "LONG_CODE_DEBUG_RISK",
+        "T2_MODELING"
+      ],
+      "problemPids": [
+        "AT_dp_a",
+        "CF1051D"
+      ],
+      "weaknessScore": 69,
+      "hypothesis": "DP 状态、转移和初始化需要进一步稳定"
+    },
+    {
+      "clusterId": "state_compression_dp_unknown_095",
+      "clusterKey": "state_compression_dp:UNKNOWN:UNKNOWN_PATTERN:提高+/省选-:T3",
+      "clusterName": "状态压缩 DP：UNKNOWN",
+      "primaryModule": "state_compression_dp",
+      "cspRoles": [
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 8,
+      "solvedCount": 0,
+      "unsolvedCount": 1,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "UNKNOWN_PATTERN",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "BINARY_SEARCH_BOUNDARY_RISK",
+        "BINARY_SEARCH_CHECK_RISK",
+        "GRAPH_MODEL_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemPids": [
+        "CF1927C"
+      ],
+      "weaknessScore": 69,
+      "hypothesis": "高难题部分分与取舍策略不足"
+    },
+    {
+      "clusterId": "implementation_implementation_risk_098",
+      "clusterKey": "implementation:IMPLEMENTATION_RISK:UNKNOWN_PATTERN:提高+/省选-:T3",
+      "clusterName": "implementation：IMPLEMENTATION_RISK",
+      "primaryModule": "implementation",
+      "cspRoles": [
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 8,
+      "solvedCount": 0,
+      "unsolvedCount": 1,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "UNKNOWN_PATTERN",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "ARRAY_INDEX_RISK",
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemPids": [
+        "CF18C"
+      ],
+      "weaknessScore": 69,
+      "hypothesis": "高难题部分分与取舍策略不足"
+    },
+    {
+      "clusterId": "dp_state_init_boundary_072",
+      "clusterKey": "dp:STATE_INIT_BOUNDARY:PARTIAL_TO_AC:提高:T3",
+      "clusterName": "DP：状态、初始化和边界问题",
+      "primaryModule": "dp",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 4,
+      "avgAttempts": 7.75,
+      "solvedCount": 4,
+      "unsolvedCount": 0,
+      "partialScoreCount": 4,
+      "commonTags": [
+        "PARTIAL_TO_AC",
+        "MULTI_FAIL_THEN_AC",
+        "DP_STATE_RISK",
+        "DP_INIT_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY",
+        "MATH_OVERFLOW_RISK",
+        "ARRAY_INDEX_RISK",
+        "RECURSION_STACK_RISK"
+      ],
+      "problemPids": [
+        "P12678",
+        "P3865",
+        "P1616",
+        "P2782"
+      ],
+      "weaknessScore": 68.22,
+      "hypothesis": "DP 状态、转移和初始化需要进一步稳定"
+    },
+    {
+      "clusterId": "math_model_template_069",
+      "clusterKey": "math:MODEL_TEMPLATE:PARTIAL_STUCK:提高+/省选-:T3",
+      "clusterName": "数学：建模和模板熟练度问题",
+      "primaryModule": "math",
+      "cspRoles": [
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 13,
+      "avgAttempts": 3.69,
+      "solvedCount": 0,
+      "unsolvedCount": 13,
+      "partialScoreCount": 13,
+      "commonTags": [
+        "PARTIAL_STUCK",
+        "MATH_OVERFLOW_RISK",
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "RECURSION_STACK_RISK",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "LONG_CODE_DEBUG_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "T4_STRATEGY"
+      ],
+      "problemPids": [
+        "U619606",
+        "P4085",
+        "P6033",
+        "P13426",
+        "P13498",
+        "P9325",
+        "P1516",
+        "P3128",
+        "U218402",
+        "P5686",
+        "B3672",
+        "P11861",
+        "P3912"
+      ],
+      "weaknessScore": 66.3,
+      "hypothesis": "难题部分分拆解和得分策略不足"
+    },
+    {
+      "clusterId": "partial_score_partial_score_022",
+      "clusterKey": "partial_score:PARTIAL_SCORE:PARTIAL_STUCK:提高+/省选-:T3",
+      "clusterName": "partial_score：部分分策略问题",
+      "primaryModule": "partial_score",
+      "cspRoles": [
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 18,
+      "avgAttempts": 3.61,
+      "solvedCount": 0,
+      "unsolvedCount": 18,
+      "partialScoreCount": 18,
+      "commonTags": [
+        "PARTIAL_STUCK",
+        "T3_PARTIAL_SCORE",
+        "NEVER_AC",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "OVERFLOW_RISK",
+        "T4_STRATEGY",
+        "RECURSION_STACK_RISK",
+        "ARRAY_INDEX_RISK",
+        "RECENT_WEAKNESS"
+      ],
+      "problemPids": [
+        "P10135",
+        "P1273",
+        "T23806",
+        "P7413",
+        "P1781",
+        "P1255",
+        "U615694",
+        "B3845",
+        "P2303",
+        "U465508",
+        "P2142",
+        "P2585",
+        "P3047",
+        "P4920",
+        "P11857",
+        "P5089",
+        "P2005",
+        "U314801"
+      ],
+      "weaknessScore": 65.84,
+      "hypothesis": "难题部分分拆解和得分策略不足"
+    },
+    {
+      "clusterId": "partial_score_partial_score_023",
+      "clusterKey": "partial_score:PARTIAL_SCORE:PARTIAL_TO_AC:提高:T3",
+      "clusterName": "partial_score：部分分策略问题",
+      "primaryModule": "partial_score",
+      "cspRoles": [
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 8,
+      "avgAttempts": 5.88,
+      "solvedCount": 8,
+      "unsolvedCount": 0,
+      "partialScoreCount": 8,
+      "commonTags": [
+        "PARTIAL_TO_AC",
+        "MULTI_FAIL_THEN_AC",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY",
+        "RECURSION_STACK_RISK",
+        "OVERFLOW_RISK",
+        "ARRAY_INDEX_RISK",
+        "RECENT_WEAKNESS"
+      ],
+      "problemPids": [
+        "P15018",
+        "P1102",
+        "P7410",
+        "P15131",
+        "P1031",
+        "P2367",
+        "P1567",
+        "B2004"
+      ],
+      "weaknessScore": 63.63,
+      "hypothesis": "难题部分分拆解和得分策略不足"
+    },
+    {
+      "clusterId": "state_compression_dp_unknown_048",
+      "clusterKey": "state_compression_dp:UNKNOWN:PARTIAL_STUCK:提高+/省选-:T3",
+      "clusterName": "状态压缩 DP：UNKNOWN",
+      "primaryModule": "state_compression_dp",
+      "cspRoles": [
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 3,
+      "avgAttempts": 2.67,
+      "solvedCount": 0,
+      "unsolvedCount": 3,
+      "partialScoreCount": 3,
+      "commonTags": [
+        "PARTIAL_STUCK",
+        "T3_PARTIAL_SCORE",
+        "NEVER_AC",
+        "RECURSION_STACK_RISK",
+        "GRAPH_MODEL_RISK",
+        "STRING_BOUNDARY_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "SHORTEST_PATH_INIT_RISK"
+      ],
+      "problemPids": [
+        "P11860",
+        "P7859",
+        "P11475"
+      ],
+      "weaknessScore": 62.34,
+      "hypothesis": "难题部分分拆解和得分策略不足"
+    },
+    {
+      "clusterId": "binary_search_model_template_038",
+      "clusterKey": "binary_search:MODEL_TEMPLATE:PARTIAL_STUCK:提高+/省选-:T3",
+      "clusterName": "二分答案：建模和模板熟练度问题",
+      "primaryModule": "binary_search",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemCount": 2,
+      "avgAttempts": 2.5,
+      "solvedCount": 0,
+      "unsolvedCount": 2,
+      "partialScoreCount": 2,
+      "commonTags": [
+        "PARTIAL_STUCK",
+        "BINARY_SEARCH_BOUNDARY_RISK",
+        "BINARY_SEARCH_CHECK_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "NEVER_AC",
+        "RECENT_WEAKNESS",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "MATH_OVERFLOW_RISK"
+      ],
+      "problemPids": [
+        "P11849",
+        "T717044"
+      ],
+      "weaknessScore": 61.81,
+      "hypothesis": "二分答案的 check 单调性和边界处理不稳定"
+    },
+    {
+      "clusterId": "binary_search_model_template_053",
+      "clusterKey": "binary_search:MODEL_TEMPLATE:PARTIAL_TO_AC:提高:T3",
+      "clusterName": "二分答案：建模和模板熟练度问题",
+      "primaryModule": "binary_search",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 6,
+      "avgAttempts": 5.5,
+      "solvedCount": 6,
+      "unsolvedCount": 0,
+      "partialScoreCount": 6,
+      "commonTags": [
+        "PARTIAL_TO_AC",
+        "MULTI_FAIL_THEN_AC",
+        "BINARY_SEARCH_BOUNDARY_RISK",
+        "BINARY_SEARCH_CHECK_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK"
+      ],
+      "problemPids": [
+        "P1439",
+        "P1024",
+        "P5815",
+        "P1579",
+        "B3799",
+        "U268985"
+      ],
+      "weaknessScore": 61.19,
+      "hypothesis": "二分答案的 check 单调性和边界处理不稳定"
+    },
+    {
+      "clusterId": "segment_tree_model_template_101",
+      "clusterKey": "segment_tree:MODEL_TEMPLATE:PARTIAL_TO_AC:提高:T3",
+      "clusterName": "线段树：建模和模板熟练度问题",
+      "primaryModule": "segment_tree",
+      "cspRoles": [
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 5,
+      "solvedCount": 1,
+      "unsolvedCount": 0,
+      "partialScoreCount": 1,
+      "commonTags": [
+        "PARTIAL_TO_AC",
+        "SOLVED",
+        "BINARY_SEARCH_BOUNDARY_RISK",
+        "BINARY_SEARCH_CHECK_RISK",
+        "GRAPH_MODEL_RISK",
+        "SEGMENT_TREE_TEMPLATE_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemPids": [
+        "P7072"
+      ],
+      "weaknessScore": 59.63,
+      "hypothesis": "线段树模板、区间边界和懒标记细节不稳定"
+    },
+    {
+      "clusterId": "fenwick_tree_index_boundary_035",
+      "clusterKey": "fenwick_tree:INDEX_BOUNDARY:MULTI_FAIL_THEN_AC:提高:T4_STRATEGY",
+      "clusterName": "树状数组：下标和边界问题",
+      "primaryModule": "fenwick_tree",
+      "cspRoles": [
+        "T4_STRATEGY"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 9,
+      "solvedCount": 1,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "MULTI_FAIL_THEN_AC",
+        "FENWICK_INDEX_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "T4_STRATEGY",
+        "RECENT_WEAKNESS"
+      ],
+      "problemPids": [
+        "P3374"
+      ],
+      "weaknessScore": 56,
+      "hypothesis": "树状数组下标和前缀关系不稳定"
+    },
+    {
+      "clusterId": "dp_state_init_boundary_067",
+      "clusterKey": "dp:STATE_INIT_BOUNDARY:PARTIAL_STUCK:提高+/省选-:T3",
+      "clusterName": "DP：状态、初始化和边界问题",
+      "primaryModule": "dp",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemCount": 2,
+      "avgAttempts": 2,
+      "solvedCount": 0,
+      "unsolvedCount": 2,
+      "partialScoreCount": 2,
+      "commonTags": [
+        "PARTIAL_STUCK",
+        "DP_STATE_RISK",
+        "DP_INIT_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "NEVER_AC",
+        "ARRAY_INDEX_RISK",
+        "UNSOLVED_HIGH_ATTEMPT"
+      ],
+      "problemPids": [
+        "B3873",
+        "U622367"
+      ],
+      "weaknessScore": 55.25,
+      "hypothesis": "DP 状态、转移和初始化需要进一步稳定"
+    },
+    {
+      "clusterId": "string_state_init_boundary_088",
+      "clusterKey": "string:STATE_INIT_BOUNDARY:PARTIAL_STUCK:提高+/省选-:T3",
+      "clusterName": "字符串：状态、初始化和边界问题",
+      "primaryModule": "string",
+      "cspRoles": [
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 2,
+      "solvedCount": 0,
+      "unsolvedCount": 1,
+      "partialScoreCount": 1,
+      "commonTags": [
+        "PARTIAL_STUCK",
+        "NEVER_AC",
+        "STRING_BOUNDARY_RISK",
+        "MATH_OVERFLOW_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemPids": [
+        "P10722"
+      ],
+      "weaknessScore": 55.25,
+      "hypothesis": "难题部分分拆解和得分策略不足"
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_099",
+      "clusterKey": "dfs_bfs:UNKNOWN:PARTIAL_STUCK:提高+/省选-:T3",
+      "clusterName": "DFS/BFS：UNKNOWN",
+      "primaryModule": "dfs_bfs",
+      "cspRoles": [
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 2,
+      "solvedCount": 0,
+      "unsolvedCount": 1,
+      "partialScoreCount": 1,
+      "commonTags": [
+        "PARTIAL_STUCK",
+        "NEVER_AC",
+        "ARRAY_INDEX_RISK",
+        "RECURSION_STACK_RISK",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemPids": [
+        "P1330"
+      ],
+      "weaknessScore": 55.25,
+      "hypothesis": "难题部分分拆解和得分策略不足"
+    },
+    {
+      "clusterId": "dsu_model_template_065",
+      "clusterKey": "dsu:MODEL_TEMPLATE:PARTIAL_STUCK:提高+/省选-:T3",
+      "clusterName": "并查集：建模和模板熟练度问题",
+      "primaryModule": "dsu",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemCount": 3,
+      "avgAttempts": 1.67,
+      "solvedCount": 0,
+      "unsolvedCount": 3,
+      "partialScoreCount": 3,
+      "commonTags": [
+        "PARTIAL_STUCK",
+        "DSU_MODEL_RISK",
+        "DSU_DISCRETIZATION_RISK",
+        "ARRAY_INDEX_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "NEVER_AC",
+        "OVERFLOW_RISK",
+        "STRING_BOUNDARY_RISK"
+      ],
+      "problemPids": [
+        "P3144",
+        "P5659",
+        "P6121"
+      ],
+      "weaknessScore": 54.22,
+      "hypothesis": "并查集的集合含义、合并条件或离散化细节不稳定"
+    },
+    {
+      "clusterId": "graph_model_template_084",
+      "clusterKey": "graph:MODEL_TEMPLATE:PARTIAL_STUCK:提高+/省选-:T3",
+      "clusterName": "图论建模：建模和模板熟练度问题",
+      "primaryModule": "graph",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemCount": 4,
+      "avgAttempts": 1.5,
+      "solvedCount": 0,
+      "unsolvedCount": 4,
+      "partialScoreCount": 4,
+      "commonTags": [
+        "PARTIAL_STUCK",
+        "GRAPH_MODEL_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "NEVER_AC",
+        "ARRAY_INDEX_RISK",
+        "SEARCH_PRUNING_RISK",
+        "OVERFLOW_RISK",
+        "STRING_BOUNDARY_RISK"
+      ],
+      "problemPids": [
+        "B3938",
+        "P1825",
+        "P10381",
+        "P1933"
+      ],
+      "weaknessScore": 53.69,
+      "hypothesis": "难题部分分拆解和得分策略不足"
+    },
+    {
+      "clusterId": "fenwick_tree_index_boundary_055",
+      "clusterKey": "fenwick_tree:INDEX_BOUNDARY:PARTIAL_STUCK:提高+/省选-:T3",
+      "clusterName": "树状数组：下标和边界问题",
+      "primaryModule": "fenwick_tree",
+      "cspRoles": [
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 1,
+      "solvedCount": 0,
+      "unsolvedCount": 1,
+      "partialScoreCount": 1,
+      "commonTags": [
+        "PARTIAL_STUCK",
+        "NEVER_AC",
+        "DP_STATE_RISK",
+        "DP_INIT_RISK",
+        "FENWICK_INDEX_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemPids": [
+        "P3431"
+      ],
+      "weaknessScore": 52.13,
+      "hypothesis": "树状数组下标和前缀关系不稳定"
+    },
+    {
+      "clusterId": "search_unknown_074",
+      "clusterKey": "search:UNKNOWN:PARTIAL_STUCK:提高+/省选-:T3",
+      "clusterName": "搜索：UNKNOWN",
+      "primaryModule": "search",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemCount": 2,
+      "avgAttempts": 1,
+      "solvedCount": 0,
+      "unsolvedCount": 2,
+      "partialScoreCount": 2,
+      "commonTags": [
+        "PARTIAL_STUCK",
+        "NEVER_AC",
+        "SEARCH_PRUNING_RISK",
+        "ARRAY_INDEX_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "OVERFLOW_RISK",
+        "INIT_RISK"
+      ],
+      "problemPids": [
+        "P13501",
+        "P2036"
+      ],
+      "weaknessScore": 52.13,
+      "hypothesis": "难题部分分拆解和得分策略不足"
+    },
+    {
+      "clusterId": "dsu_model_template_056",
+      "clusterKey": "dsu:MODEL_TEMPLATE:MULTI_FAIL_THEN_AC:提高:T2",
+      "clusterName": "并查集：建模和模板熟练度问题",
+      "primaryModule": "dsu",
+      "cspRoles": [
+        "T2_MODELING",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 3,
+      "avgAttempts": 8,
+      "solvedCount": 3,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "MULTI_FAIL_THEN_AC",
+        "DSU_MODEL_RISK",
+        "DSU_DISCRETIZATION_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T4_STRATEGY",
+        "DP_STATE_RISK",
+        "DP_INIT_RISK"
+      ],
+      "problemPids": [
+        "P3379",
+        "P2820",
+        "P2279"
+      ],
+      "weaknessScore": 48,
+      "hypothesis": "并查集的集合含义、合并条件或离散化细节不稳定"
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_094",
+      "clusterKey": "interval_dp:STATE_INIT_BOUNDARY:MULTI_FAIL_THEN_AC:提高:T2",
+      "clusterName": "区间 DP：状态、初始化和边界问题",
+      "primaryModule": "interval_dp",
+      "cspRoles": [
+        "T2_MODELING",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 2,
+      "avgAttempts": 7.5,
+      "solvedCount": 2,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "MULTI_FAIL_THEN_AC",
+        "INTERVAL_DP_ORDER_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T4_STRATEGY",
+        "MATH_OVERFLOW_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "LONG_CODE_DEBUG_RISK",
+        "STRING_BOUNDARY_RISK"
+      ],
+      "problemPids": [
+        "P3383",
+        "P1321"
+      ],
+      "weaknessScore": 46.44,
+      "hypothesis": "区间 DP 的状态设计、初始化和枚举顺序不稳定"
+    },
+    {
+      "clusterId": "binary_search_model_template_026",
+      "clusterKey": "binary_search:MODEL_TEMPLATE:UNKNOWN_PATTERN:提高:T3",
+      "clusterName": "二分答案：建模和模板熟练度问题",
+      "primaryModule": "binary_search",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 7,
+      "avgAttempts": 3.71,
+      "solvedCount": 0,
+      "unsolvedCount": 7,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "UNKNOWN_PATTERN",
+        "BINARY_SEARCH_BOUNDARY_RISK",
+        "BINARY_SEARCH_CHECK_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "GRAPH_MODEL_RISK"
+      ],
+      "problemPids": [
+        "CF279B",
+        "CF1873E",
+        "P14725",
+        "P1020",
+        "P16181",
+        "P11463",
+        "CF1791C"
+      ],
+      "weaknessScore": 46.31,
+      "hypothesis": "二分答案的 check 单调性和边界处理不稳定"
+    },
+    {
+      "clusterId": "segment_tree_model_template_051",
+      "clusterKey": "segment_tree:MODEL_TEMPLATE:MULTI_FAIL_THEN_AC:提高:T4_STRATEGY",
+      "clusterName": "线段树：建模和模板熟练度问题",
+      "primaryModule": "segment_tree",
+      "cspRoles": [
+        "T4_STRATEGY"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 10,
+      "solvedCount": 1,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "MULTI_FAIL_THEN_AC",
+        "BINARY_SEARCH_BOUNDARY_RISK",
+        "BINARY_SEARCH_CHECK_RISK",
+        "SEGMENT_TREE_TEMPLATE_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "T4_STRATEGY"
+      ],
+      "problemPids": [
+        "P1471"
+      ],
+      "weaknessScore": 46,
+      "hypothesis": "线段树模板、区间边界和懒标记细节不稳定"
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_089",
+      "clusterKey": "dfs_bfs:UNKNOWN:MULTI_FAIL_THEN_AC:提高:T4_STRATEGY",
+      "clusterName": "DFS/BFS：UNKNOWN",
+      "primaryModule": "dfs_bfs",
+      "cspRoles": [
+        "T4_STRATEGY"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 8,
+      "solvedCount": 1,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "MULTI_FAIL_THEN_AC",
+        "MATH_OVERFLOW_RISK",
+        "SEARCH_PRUNING_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "LONG_CODE_DEBUG_RISK",
+        "T4_STRATEGY"
+      ],
+      "problemPids": [
+        "P4913"
+      ],
+      "weaknessScore": 46,
+      "hypothesis": "DFS/BFS 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "greedy_unknown_097",
+      "clusterKey": "greedy:UNKNOWN:MULTI_FAIL_THEN_AC:提高:T1_STABILITY",
+      "clusterName": "贪心：UNKNOWN",
+      "primaryModule": "greedy",
+      "cspRoles": [
+        "T1_STABILITY",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 8,
+      "solvedCount": 1,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "MULTI_FAIL_THEN_AC",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "T1_STABILITY",
+        "T4_STRATEGY"
+      ],
+      "problemPids": [
+        "P3913"
+      ],
+      "weaknessScore": 46,
+      "hypothesis": "贪心 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "graph_model_template_020",
+      "clusterKey": "graph:MODEL_TEMPLATE:UNKNOWN_PATTERN:提高:T3",
+      "clusterName": "图论建模：建模和模板熟练度问题",
+      "primaryModule": "graph",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 9,
+      "avgAttempts": 2.78,
+      "solvedCount": 0,
+      "unsolvedCount": 9,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "UNKNOWN_PATTERN",
+        "GRAPH_MODEL_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "RECENT_WEAKNESS",
+        "NEVER_AC"
+      ],
+      "problemPids": [
+        "P16316",
+        "P14740",
+        "CF1729D",
+        "P15767",
+        "CF816B",
+        "P14785",
+        "P15766",
+        "P12374",
+        "P7425"
+      ],
+      "weaknessScore": 43.8,
+      "hypothesis": "图论建模 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "dp_state_init_boundary_028",
+      "clusterKey": "dp:STATE_INIT_BOUNDARY:UNKNOWN_PATTERN:提高:T3",
+      "clusterName": "DP：状态、初始化和边界问题",
+      "primaryModule": "dp",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 5,
+      "avgAttempts": 2.8,
+      "solvedCount": 0,
+      "unsolvedCount": 5,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "UNKNOWN_PATTERN",
+        "DP_STATE_RISK",
+        "DP_INIT_RISK",
+        "MATH_OVERFLOW_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "RECURSION_STACK_RISK",
+        "NEVER_AC"
+      ],
+      "problemPids": [
+        "AT_dp_b",
+        "CF191A",
+        "P16158",
+        "AT_abc129_c",
+        "AT_abc365_d"
+      ],
+      "weaknessScore": 42.75,
+      "hypothesis": "DP 状态、转移和初始化需要进一步稳定"
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_041",
+      "clusterKey": "interval_dp:STATE_INIT_BOUNDARY:UNKNOWN_PATTERN:提高:T3",
+      "clusterName": "区间 DP：状态、初始化和边界问题",
+      "primaryModule": "interval_dp",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemCount": 2,
+      "avgAttempts": 2.5,
+      "solvedCount": 0,
+      "unsolvedCount": 2,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "UNKNOWN_PATTERN",
+        "INTERVAL_DP_ORDER_RISK",
+        "ARRAY_INDEX_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "GRAPH_MODEL_RISK",
+        "OVERFLOW_RISK",
+        "INIT_RISK",
+        "RECURSION_STACK_RISK"
+      ],
+      "problemPids": [
+        "P15199",
+        "CF409H"
+      ],
+      "weaknessScore": 41.81,
+      "hypothesis": "区间 DP 的状态设计、初始化和枚举顺序不稳定"
+    },
+    {
+      "clusterId": "dp_state_init_boundary_077",
+      "clusterKey": "dp:STATE_INIT_BOUNDARY:MULTI_FAIL_THEN_AC:提高:T2",
+      "clusterName": "DP：状态、初始化和边界问题",
+      "primaryModule": "dp",
+      "cspRoles": [
+        "T2_MODELING",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 6,
+      "solvedCount": 1,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "MULTI_FAIL_THEN_AC",
+        "DP_STATE_RISK",
+        "DP_INIT_RISK",
+        "INTERVAL_DP_ORDER_RISK",
+        "BINARY_SEARCH_BOUNDARY_RISK",
+        "BINARY_SEARCH_CHECK_RISK",
+        "STRING_BOUNDARY_RISK",
+        "MATH_OVERFLOW_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK"
+      ],
+      "problemPids": [
+        "P9232"
+      ],
+      "weaknessScore": 41.75,
+      "hypothesis": "DP 状态、转移和初始化需要进一步稳定"
+    },
+    {
+      "clusterId": "implementation_implementation_risk_082",
+      "clusterKey": "implementation:IMPLEMENTATION_RISK:MULTI_FAIL_THEN_AC:提高:T1_STABILITY",
+      "clusterName": "implementation：IMPLEMENTATION_RISK",
+      "primaryModule": "implementation",
+      "cspRoles": [
+        "T1_STABILITY",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 5,
+      "avgAttempts": 6.6,
+      "solvedCount": 5,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "MULTI_FAIL_THEN_AC",
+        "T1_STABILITY",
+        "T4_STRATEGY",
+        "OVERFLOW_RISK",
+        "ARRAY_INDEX_RISK",
+        "SOLVED",
+        "INIT_RISK",
+        "RECURSION_STACK_RISK"
+      ],
+      "problemPids": [
+        "P1113",
+        "P1003",
+        "B2002",
+        "P1830",
+        "P5721"
+      ],
+      "weaknessScore": 41.63,
+      "hypothesis": "implementation 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "graph_model_template_014",
+      "clusterKey": "graph:MODEL_TEMPLATE:MULTI_FAIL_THEN_AC:提高:T2",
+      "clusterName": "图论建模：建模和模板熟练度问题",
+      "primaryModule": "graph",
+      "cspRoles": [
+        "T2_MODELING",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 5,
+      "avgAttempts": 5.2,
+      "solvedCount": 5,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "MULTI_FAIL_THEN_AC",
+        "GRAPH_MODEL_RISK",
+        "T2_MODELING",
+        "T4_STRATEGY",
+        "RECURSION_STACK_RISK",
+        "OVERFLOW_RISK",
+        "STRING_BOUNDARY_RISK",
+        "SEARCH_PRUNING_RISK",
+        "ARRAY_INDEX_RISK",
+        "SOLVED"
+      ],
+      "problemPids": [
+        "P4552",
+        "P1001",
+        "P3879",
+        "P1038",
+        "P5318"
+      ],
+      "weaknessScore": 41.25,
+      "hypothesis": "图论建模 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "string_state_init_boundary_029",
+      "clusterKey": "string:STATE_INIT_BOUNDARY:UNKNOWN_PATTERN:提高:T3",
+      "clusterName": "字符串：状态、初始化和边界问题",
+      "primaryModule": "string",
+      "cspRoles": [
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 20,
+      "avgAttempts": 2.6,
+      "solvedCount": 0,
+      "unsolvedCount": 20,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "UNKNOWN_PATTERN",
+        "STRING_BOUNDARY_RISK",
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "RECURSION_STACK_RISK",
+        "NEVER_AC",
+        "ARRAY_INDEX_RISK",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "OVERFLOW_RISK",
+        "MATH_OVERFLOW_RISK"
+      ],
+      "problemPids": [
+        "CF873B",
+        "P16173",
+        "P10468",
+        "U452718",
+        "CF33C",
+        "AT_codefestival_2016_qualC_a",
+        "P16151",
+        "CF1840A",
+        "UVA1330",
+        "AT_abc345_c",
+        "P1737",
+        "CF1772A",
+        "SP26073",
+        "SP277",
+        "T492858",
+        "CF1907A",
+        "CF1890B",
+        "CF1919B",
+        "CF1703A",
+        "CF1850C"
+      ],
+      "weaknessScore": 41.13,
+      "hypothesis": "字符串 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "math_model_template_009",
+      "clusterKey": "math:MODEL_TEMPLATE:MULTI_FAIL_THEN_AC:提高:T1_STABILITY",
+      "clusterName": "数学：建模和模板熟练度问题",
+      "primaryModule": "math",
+      "cspRoles": [
+        "T1_STABILITY",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 4,
+      "avgAttempts": 5.5,
+      "solvedCount": 4,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "MULTI_FAIL_THEN_AC",
+        "MATH_OVERFLOW_RISK",
+        "T1_STABILITY",
+        "T4_STRATEGY",
+        "RECURSION_STACK_RISK",
+        "ARRAY_INDEX_RISK",
+        "LONG_CODE_DEBUG_RISK",
+        "BINARY_SEARCH_BOUNDARY_RISK",
+        "BINARY_SEARCH_CHECK_RISK",
+        "SEGMENT_TREE_TEMPLATE_RISK"
+      ],
+      "problemPids": [
+        "P3372",
+        "P1014",
+        "B4016",
+        "P9749"
+      ],
+      "weaknessScore": 40.69,
+      "hypothesis": "数学 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_058",
+      "clusterKey": "interval_dp:STATE_INIT_BOUNDARY:ZERO_STUCK:提高:T3",
+      "clusterName": "区间 DP：状态、初始化和边界问题",
+      "primaryModule": "interval_dp",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 4,
+      "avgAttempts": 2.25,
+      "solvedCount": 0,
+      "unsolvedCount": 4,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ZERO_STUCK",
+        "INTERVAL_DP_ORDER_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "NEVER_AC",
+        "ARRAY_INDEX_RISK",
+        "DP_STATE_RISK",
+        "DP_INIT_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK"
+      ],
+      "problemPids": [
+        "P4118",
+        "P2379",
+        "P1342",
+        "P10511"
+      ],
+      "weaknessScore": 39.78,
+      "hypothesis": "区间 DP 的状态设计、初始化和枚举顺序不稳定"
+    },
+    {
+      "clusterId": "string_state_init_boundary_070",
+      "clusterKey": "string:STATE_INIT_BOUNDARY:MULTI_FAIL_THEN_AC:提高:T1_STABILITY",
+      "clusterName": "字符串：状态、初始化和边界问题",
+      "primaryModule": "string",
+      "cspRoles": [
+        "T1_STABILITY",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 6,
+      "solvedCount": 1,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "MULTI_FAIL_THEN_AC",
+        "STRING_BOUNDARY_RISK",
+        "MATH_OVERFLOW_RISK",
+        "T1_STABILITY",
+        "T4_STRATEGY"
+      ],
+      "problemPids": [
+        "P1055"
+      ],
+      "weaknessScore": 39.75,
+      "hypothesis": "字符串 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "search_unknown_100",
+      "clusterKey": "search:UNKNOWN:MULTI_FAIL_THEN_AC:提高:T2",
+      "clusterName": "搜索：UNKNOWN",
+      "primaryModule": "search",
+      "cspRoles": [
+        "T2_MODELING",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 5,
+      "solvedCount": 1,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "MULTI_FAIL_THEN_AC",
+        "SEARCH_PRUNING_RISK",
+        "ARRAY_INDEX_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T4_STRATEGY"
+      ],
+      "problemPids": [
+        "P8605"
+      ],
+      "weaknessScore": 38.63,
+      "hypothesis": "搜索 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "state_compression_dp_unknown_086",
+      "clusterKey": "state_compression_dp:UNKNOWN:ZERO_STUCK:提高:T3",
+      "clusterName": "状态压缩 DP：UNKNOWN",
+      "primaryModule": "state_compression_dp",
+      "cspRoles": [
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 3,
+      "solvedCount": 0,
+      "unsolvedCount": 1,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ZERO_STUCK",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "GRAPH_MODEL_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemPids": [
+        "P11827"
+      ],
+      "weaknessScore": 38.38,
+      "hypothesis": "状态压缩 DP 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "math_model_template_050",
+      "clusterKey": "math:MODEL_TEMPLATE:ZERO_STUCK:提高:T3",
+      "clusterName": "数学：建模和模板熟练度问题",
+      "primaryModule": "math",
+      "cspRoles": [
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 17,
+      "avgAttempts": 2.29,
+      "solvedCount": 0,
+      "unsolvedCount": 17,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ZERO_STUCK",
+        "MATH_OVERFLOW_RISK",
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "RECURSION_STACK_RISK",
+        "NEVER_AC",
+        "OVERFLOW_RISK",
+        "LONG_CODE_DEBUG_RISK",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "ARRAY_INDEX_RISK"
+      ],
+      "problemPids": [
+        "T433808",
+        "P4342",
+        "U452710",
+        "P2063",
+        "P1198",
+        "U408377",
+        "P5331",
+        "P2610",
+        "P12199",
+        "P2343",
+        "P7910",
+        "P11232",
+        "P2672",
+        "T568846",
+        "P12735",
+        "U415013",
+        "P10508"
+      ],
+      "weaknessScore": 37.92,
+      "hypothesis": "数学 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "math_model_template_010",
+      "clusterKey": "math:MODEL_TEMPLATE:UNKNOWN_PATTERN:提高:T3",
+      "clusterName": "数学：建模和模板熟练度问题",
+      "primaryModule": "math",
+      "cspRoles": [
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 19,
+      "avgAttempts": 1.95,
+      "solvedCount": 0,
+      "unsolvedCount": 19,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "UNKNOWN_PATTERN",
+        "MATH_OVERFLOW_RISK",
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "RECURSION_STACK_RISK",
+        "NEVER_AC",
+        "OVERFLOW_RISK",
+        "LONG_CODE_DEBUG_RISK",
+        "ARRAY_INDEX_RISK",
+        "UNSOLVED_HIGH_ATTEMPT"
+      ],
+      "problemPids": [
+        "CF163A",
+        "CF808D",
+        "CF740A",
+        "CF1249E",
+        "UVA11572",
+        "T492859",
+        "CF1560A",
+        "UVA11350",
+        "P9071",
+        "AT_abc084_d",
+        "T492861",
+        "T492862",
+        "CF637B",
+        "CF318A",
+        "CF1368A",
+        "CF340A",
+        "CF1542A",
+        "CF749A",
+        "CF1605A"
+      ],
+      "weaknessScore": 37.2,
+      "hypothesis": "数学 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "implementation_implementation_risk_002",
+      "clusterKey": "implementation:IMPLEMENTATION_RISK:ZERO_STUCK:提高:T3",
+      "clusterName": "implementation：IMPLEMENTATION_RISK",
+      "primaryModule": "implementation",
+      "cspRoles": [
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "T4_STRATEGY"
+      ],
+      "problemCount": 11,
+      "avgAttempts": 1.82,
+      "solvedCount": 0,
+      "unsolvedCount": 11,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ZERO_STUCK",
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "NEVER_AC",
+        "OVERFLOW_RISK",
+        "ARRAY_INDEX_RISK",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "RECENT_WEAKNESS",
+        "INIT_RISK",
+        "T4_STRATEGY"
+      ],
+      "problemPids": [
+        "U331327",
+        "P2000",
+        "U194704",
+        "P5657",
+        "P10156",
+        "P2886",
+        "P7518",
+        "P8596",
+        "P8562",
+        "T542577",
+        "P1894"
+      ],
+      "weaknessScore": 36.96,
+      "hypothesis": "implementation 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "implementation_implementation_risk_030",
+      "clusterKey": "implementation:IMPLEMENTATION_RISK:UNKNOWN_PATTERN:提高:T3",
+      "clusterName": "implementation：IMPLEMENTATION_RISK",
+      "primaryModule": "implementation",
+      "cspRoles": [
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemCount": 19,
+      "avgAttempts": 2.21,
+      "solvedCount": 0,
+      "unsolvedCount": 19,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "UNKNOWN_PATTERN",
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "RECURSION_STACK_RISK",
+        "NEVER_AC",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "RECENT_WEAKNESS"
+      ],
+      "problemPids": [
+        "P15785",
+        "CF1776H",
+        "CF1335C",
+        "CF1743A",
+        "P16180",
+        "CF750A",
+        "CF1736A",
+        "CF1593A",
+        "P14727",
+        "P1105",
+        "CF1793C",
+        "SP25067",
+        "AT_abc136_d",
+        "P11874",
+        "AT_abc399_c",
+        "CF44C",
+        "CF1772B",
+        "CF1709A",
+        "P9145"
+      ],
+      "weaknessScore": 36.96,
+      "hypothesis": "implementation 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "binary_search_model_template_087",
+      "clusterKey": "binary_search:MODEL_TEMPLATE:ZERO_STUCK:提高:T3",
+      "clusterName": "二分答案：建模和模板熟练度问题",
+      "primaryModule": "binary_search",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemCount": 2,
+      "avgAttempts": 2.5,
+      "solvedCount": 0,
+      "unsolvedCount": 2,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ZERO_STUCK",
+        "BINARY_SEARCH_BOUNDARY_RISK",
+        "BINARY_SEARCH_CHECK_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "NEVER_AC",
+        "GRAPH_MODEL_RISK",
+        "UNSOLVED_HIGH_ATTEMPT"
+      ],
+      "problemPids": [
+        "P1756",
+        "P11791"
+      ],
+      "weaknessScore": 36.81,
+      "hypothesis": "二分答案的 check 单调性和边界处理不稳定"
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_093",
+      "clusterKey": "dfs_bfs:UNKNOWN:ZERO_STUCK:提高:T3",
+      "clusterName": "DFS/BFS：UNKNOWN",
+      "primaryModule": "dfs_bfs",
+      "cspRoles": [
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 2,
+      "solvedCount": 0,
+      "unsolvedCount": 1,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ZERO_STUCK",
+        "NEVER_AC",
+        "MATH_OVERFLOW_RISK",
+        "SEARCH_PRUNING_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "LONG_CODE_DEBUG_RISK",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemPids": [
+        "P1215"
+      ],
+      "weaknessScore": 35.25,
+      "hypothesis": "DFS/BFS 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "greedy_unknown_096",
+      "clusterKey": "greedy:UNKNOWN:UNKNOWN_PATTERN:提高:T3",
+      "clusterName": "贪心：UNKNOWN",
+      "primaryModule": "greedy",
+      "cspRoles": [
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemCount": 5,
+      "avgAttempts": 2,
+      "solvedCount": 0,
+      "unsolvedCount": 5,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "UNKNOWN_PATTERN",
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "NEVER_AC",
+        "UNSOLVED_HIGH_ATTEMPT",
+        "OVERFLOW_RISK"
+      ],
+      "problemPids": [
+        "CF545D",
+        "CF1629A",
+        "CF1978A",
+        "CF1734A",
+        "CF1873B"
+      ],
+      "weaknessScore": 35.25,
+      "hypothesis": "贪心 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "dsu_model_template_085",
+      "clusterKey": "dsu:MODEL_TEMPLATE:ZERO_STUCK:提高:T3",
+      "clusterName": "并查集：建模和模板熟练度问题",
+      "primaryModule": "dsu",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemCount": 4,
+      "avgAttempts": 1.5,
+      "solvedCount": 0,
+      "unsolvedCount": 4,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ZERO_STUCK",
+        "NEVER_AC",
+        "DSU_MODEL_RISK",
+        "DSU_DISCRETIZATION_RISK",
+        "GRAPH_MODEL_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "MATH_OVERFLOW_RISK",
+        "SEARCH_PRUNING_RISK"
+      ],
+      "problemPids": [
+        "P11855",
+        "P10517",
+        "P10573",
+        "P10574"
+      ],
+      "weaknessScore": 33.69,
+      "hypothesis": "并查集的集合含义、合并条件或离散化细节不稳定"
+    },
+    {
+      "clusterId": "string_state_init_boundary_046",
+      "clusterKey": "string:STATE_INIT_BOUNDARY:ZERO_STUCK:提高:T3",
+      "clusterName": "字符串：状态、初始化和边界问题",
+      "primaryModule": "string",
+      "cspRoles": [
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemCount": 5,
+      "avgAttempts": 1.4,
+      "solvedCount": 0,
+      "unsolvedCount": 5,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ZERO_STUCK",
+        "STRING_BOUNDARY_RISK",
+        "T1_STABILITY",
+        "T3_PARTIAL_SCORE",
+        "RECURSION_STACK_RISK",
+        "NEVER_AC",
+        "MATH_OVERFLOW_RISK",
+        "OVERFLOW_RISK",
+        "ARRAY_INDEX_RISK",
+        "UNSOLVED_HIGH_ATTEMPT"
+      ],
+      "problemPids": [
+        "U656632",
+        "P1676",
+        "T24906",
+        "P1506",
+        "P4626"
+      ],
+      "weaknessScore": 33.38,
+      "hypothesis": "字符串 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "graph_model_template_031",
+      "clusterKey": "graph:MODEL_TEMPLATE:ZERO_STUCK:提高:T3",
+      "clusterName": "图论建模：建模和模板熟练度问题",
+      "primaryModule": "graph",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemCount": 11,
+      "avgAttempts": 1.09,
+      "solvedCount": 0,
+      "unsolvedCount": 11,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ZERO_STUCK",
+        "NEVER_AC",
+        "GRAPH_MODEL_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE",
+        "STRING_BOUNDARY_RISK",
+        "OVERFLOW_RISK",
+        "MATH_OVERFLOW_RISK",
+        "ARRAY_INDEX_RISK"
+      ],
+      "problemPids": [
+        "T461430",
+        "P15945",
+        "P12734",
+        "P11859",
+        "P11840",
+        "P11764",
+        "U244733",
+        "P10605",
+        "P10572",
+        "P10569",
+        "P6477"
+      ],
+      "weaknessScore": 33.32,
+      "hypothesis": "图论建模 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_062",
+      "clusterKey": "shortest_path:STATE_INIT_BOUNDARY:ZERO_STUCK:提高:T3",
+      "clusterName": "最短路：状态、初始化和边界问题",
+      "primaryModule": "shortest_path",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 1,
+      "solvedCount": 0,
+      "unsolvedCount": 1,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ZERO_STUCK",
+        "NEVER_AC",
+        "GRAPH_MODEL_RISK",
+        "SHORTEST_PATH_INIT_RISK",
+        "SEARCH_PRUNING_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemPids": [
+        "P1144"
+      ],
+      "weaknessScore": 32.13,
+      "hypothesis": "最短路 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "dp_state_init_boundary_091",
+      "clusterKey": "dp:STATE_INIT_BOUNDARY:ZERO_STUCK:提高:T3",
+      "clusterName": "DP：状态、初始化和边界问题",
+      "primaryModule": "dp",
+      "cspRoles": [
+        "T2_MODELING",
+        "T3_PARTIAL_SCORE"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 1,
+      "solvedCount": 0,
+      "unsolvedCount": 1,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ZERO_STUCK",
+        "NEVER_AC",
+        "DP_STATE_RISK",
+        "DP_INIT_RISK",
+        "INTERVAL_DP_ORDER_RISK",
+        "MATH_OVERFLOW_RISK",
+        "ARRAY_INDEX_RISK",
+        "RECURSION_STACK_RISK",
+        "LONG_CODE_DEBUG_RISK",
+        "T2_MODELING"
+      ],
+      "problemPids": [
+        "U257605"
+      ],
+      "weaknessScore": 32.13,
+      "hypothesis": "DP 状态、转移和初始化需要进一步稳定"
+    },
+    {
+      "clusterId": "fenwick_tree_index_boundary_036",
+      "clusterKey": "fenwick_tree:INDEX_BOUNDARY:QUICK_FIX_AC:提高:T1",
+      "clusterName": "树状数组：下标和边界问题",
+      "primaryModule": "fenwick_tree",
+      "cspRoles": [],
+      "problemCount": 1,
+      "avgAttempts": 3,
+      "solvedCount": 1,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "SOLVED",
+        "FENWICK_INDEX_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "RECENT_WEAKNESS"
+      ],
+      "problemPids": [
+        "P3368"
+      ],
+      "weaknessScore": 25.38,
+      "hypothesis": "树状数组下标和前缀关系不稳定"
+    },
+    {
+      "clusterId": "search_unknown_078",
+      "clusterKey": "search:UNKNOWN:QUICK_FIX_AC:提高:T2",
+      "clusterName": "搜索：UNKNOWN",
+      "primaryModule": "search",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 2,
+      "avgAttempts": 4,
+      "solvedCount": 2,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "MULTI_FAIL_THEN_AC",
+        "SEARCH_PRUNING_RISK",
+        "ARRAY_INDEX_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "OVERFLOW_RISK"
+      ],
+      "problemPids": [
+        "P1464",
+        "P1123"
+      ],
+      "weaknessScore": 20.5,
+      "hypothesis": "搜索 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "graph_model_template_016",
+      "clusterKey": "graph:MODEL_TEMPLATE:QUICK_FIX_AC:提高:T2",
+      "clusterName": "图论建模：建模和模板熟练度问题",
+      "primaryModule": "graph",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 14,
+      "avgAttempts": 3.5,
+      "solvedCount": 14,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "GRAPH_MODEL_RISK",
+        "T2_MODELING",
+        "RECURSION_STACK_RISK",
+        "MULTI_FAIL_THEN_AC",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "SOLVED",
+        "SEARCH_PRUNING_RISK",
+        "STRING_BOUNDARY_RISK"
+      ],
+      "problemPids": [
+        "B3643",
+        "U466962",
+        "P1009",
+        "P1019",
+        "P1897",
+        "P1173",
+        "B2105",
+        "P3557",
+        "P11738",
+        "P2996",
+        "P2014",
+        "P4980",
+        "P1042",
+        "P11825"
+      ],
+      "weaknessScore": 19.65,
+      "hypothesis": "图论建模 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "dp_state_init_boundary_042",
+      "clusterKey": "dp:STATE_INIT_BOUNDARY:QUICK_FIX_AC:提高:T2",
+      "clusterName": "DP：状态、初始化和边界问题",
+      "primaryModule": "dp",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 15,
+      "avgAttempts": 3.4,
+      "solvedCount": 15,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "DP_STATE_RISK",
+        "DP_INIT_RISK",
+        "T2_MODELING",
+        "ARRAY_INDEX_RISK",
+        "RECURSION_STACK_RISK",
+        "MATH_OVERFLOW_RISK",
+        "OVERFLOW_RISK",
+        "LONG_CODE_DEBUG_RISK",
+        "SOLVED"
+      ],
+      "problemPids": [
+        "U328616",
+        "P1040",
+        "P1833",
+        "P1048",
+        "P1064",
+        "P7995",
+        "P3618",
+        "P8687",
+        "P1853",
+        "P1060",
+        "P1816",
+        "P10250",
+        "P10376",
+        "P1192",
+        "P7074"
+      ],
+      "weaknessScore": 19.29,
+      "hypothesis": "DP 状态、转移和初始化需要进一步稳定"
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_033",
+      "clusterKey": "shortest_path:STATE_INIT_BOUNDARY:QUICK_FIX_AC:普及+/提高-:T2",
+      "clusterName": "最短路：状态、初始化和边界问题",
+      "primaryModule": "shortest_path",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 2,
+      "avgAttempts": 2,
+      "solvedCount": 2,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "SHORTEST_PATH_INIT_RISK",
+        "ARRAY_INDEX_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "SOLVED",
+        "INIT_RISK",
+        "DEEP_NESTING_RISK",
+        "RECENT_WEAKNESS",
+        "MULTI_FAIL_THEN_AC"
+      ],
+      "problemPids": [
+        "P1119",
+        "P1027"
+      ],
+      "weaknessScore": 19.25,
+      "hypothesis": "最短路 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "greedy_unknown_025",
+      "clusterKey": "greedy:UNKNOWN:QUICK_FIX_AC:提高:T1_STABILITY",
+      "clusterName": "贪心：UNKNOWN",
+      "primaryModule": "greedy",
+      "cspRoles": [
+        "T1_STABILITY"
+      ],
+      "problemCount": 7,
+      "avgAttempts": 3.71,
+      "solvedCount": 7,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "T1_STABILITY",
+        "MULTI_FAIL_THEN_AC",
+        "ARRAY_INDEX_RISK",
+        "SOLVED",
+        "OVERFLOW_RISK",
+        "RECENT_WEAKNESS",
+        "RECURSION_STACK_RISK"
+      ],
+      "problemPids": [
+        "P7412",
+        "P1923",
+        "P1138",
+        "P1223",
+        "P1152",
+        "P1803",
+        "P1271"
+      ],
+      "weaknessScore": 19.02,
+      "hypothesis": "贪心 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "dsu_model_template_045",
+      "clusterKey": "dsu:MODEL_TEMPLATE:QUICK_FIX_AC:提高:T2",
+      "clusterName": "并查集：建模和模板熟练度问题",
+      "primaryModule": "dsu",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 9,
+      "avgAttempts": 3.44,
+      "solvedCount": 9,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "DSU_MODEL_RISK",
+        "DSU_DISCRETIZATION_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "MULTI_FAIL_THEN_AC",
+        "SOLVED",
+        "SEARCH_PRUNING_RISK"
+      ],
+      "problemPids": [
+        "P9709",
+        "P1352",
+        "P1396",
+        "P3420",
+        "P1195",
+        "P3367",
+        "P1111",
+        "P8654",
+        "P1621"
+      ],
+      "weaknessScore": 18.75,
+      "hypothesis": "并查集的集合含义、合并条件或离散化细节不稳定"
+    },
+    {
+      "clusterId": "binary_search_model_template_052",
+      "clusterKey": "binary_search:MODEL_TEMPLATE:QUICK_FIX_AC:提高:T2",
+      "clusterName": "二分答案：建模和模板熟练度问题",
+      "primaryModule": "binary_search",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 6,
+      "avgAttempts": 3.33,
+      "solvedCount": 6,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "BINARY_SEARCH_BOUNDARY_RISK",
+        "BINARY_SEARCH_CHECK_RISK",
+        "T2_MODELING",
+        "MULTI_FAIL_THEN_AC",
+        "ARRAY_INDEX_RISK",
+        "RECURSION_STACK_RISK",
+        "OVERFLOW_RISK",
+        "DEEP_NESTING_RISK",
+        "MATH_OVERFLOW_RISK"
+      ],
+      "problemPids": [
+        "P2293",
+        "P13500",
+        "P1314",
+        "P1039",
+        "P2678",
+        "P1873"
+      ],
+      "weaknessScore": 18.41,
+      "hypothesis": "二分答案的 check 单调性和边界处理不稳定"
+    },
+    {
+      "clusterId": "string_state_init_boundary_018",
+      "clusterKey": "string:STATE_INIT_BOUNDARY:QUICK_FIX_AC:提高:T1_STABILITY",
+      "clusterName": "字符串：状态、初始化和边界问题",
+      "primaryModule": "string",
+      "cspRoles": [
+        "T1_STABILITY"
+      ],
+      "problemCount": 14,
+      "avgAttempts": 3.29,
+      "solvedCount": 14,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "STRING_BOUNDARY_RISK",
+        "T1_STABILITY",
+        "ARRAY_INDEX_RISK",
+        "RECURSION_STACK_RISK",
+        "MULTI_FAIL_THEN_AC",
+        "MATH_OVERFLOW_RISK",
+        "OVERFLOW_RISK",
+        "SOLVED",
+        "RECENT_WEAKNESS"
+      ],
+      "problemPids": [
+        "P8865",
+        "P2613",
+        "P1125",
+        "P1765",
+        "P3677",
+        "P3435",
+        "P3375",
+        "P1526",
+        "P2012",
+        "P1166",
+        "P1012",
+        "P11228",
+        "B2125",
+        "P1307"
+      ],
+      "weaknessScore": 17.71,
+      "hypothesis": "字符串 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "search_unknown_019",
+      "clusterKey": "search:UNKNOWN:QUICK_FIX_AC:普及+/提高-:T2",
+      "clusterName": "搜索：UNKNOWN",
+      "primaryModule": "search",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 3,
+      "avgAttempts": 2,
+      "solvedCount": 3,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "SEARCH_PRUNING_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "T2_MODELING",
+        "SOLVED",
+        "RECURSION_STACK_RISK",
+        "RECENT_WEAKNESS",
+        "MULTI_FAIL_THEN_AC"
+      ],
+      "problemPids": [
+        "P3524",
+        "P12593",
+        "P1154"
+      ],
+      "weaknessScore": 17.58,
+      "hypothesis": "搜索 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_073",
+      "clusterKey": "dfs_bfs:UNKNOWN:QUICK_FIX_AC:提高:T1",
+      "clusterName": "DFS/BFS：UNKNOWN",
+      "primaryModule": "dfs_bfs",
+      "cspRoles": [],
+      "problemCount": 3,
+      "avgAttempts": 3.67,
+      "solvedCount": 3,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "MATH_OVERFLOW_RISK",
+        "SEARCH_PRUNING_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "LONG_CODE_DEBUG_RISK",
+        "MULTI_FAIL_THEN_AC",
+        "SOLVED",
+        "GRAPH_MODEL_RISK"
+      ],
+      "problemPids": [
+        "P13499",
+        "P2080",
+        "P8681"
+      ],
+      "weaknessScore": 17.47,
+      "hypothesis": "DFS/BFS 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_102",
+      "clusterKey": "shortest_path:STATE_INIT_BOUNDARY:QUICK_FIX_AC:提高:T2",
+      "clusterName": "最短路：状态、初始化和边界问题",
+      "primaryModule": "shortest_path",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 1,
+      "avgAttempts": 3,
+      "solvedCount": 1,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "SOLVED",
+        "SHORTEST_PATH_INIT_RISK",
+        "MATH_OVERFLOW_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "INIT_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING"
+      ],
+      "problemPids": [
+        "P9751"
+      ],
+      "weaknessScore": 17.38,
+      "hypothesis": "最短路 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "math_model_template_039",
+      "clusterKey": "math:MODEL_TEMPLATE:QUICK_FIX_AC:提高:T1_STABILITY",
+      "clusterName": "数学：建模和模板熟练度问题",
+      "primaryModule": "math",
+      "cspRoles": [
+        "T1_STABILITY"
+      ],
+      "problemCount": 21,
+      "avgAttempts": 3.48,
+      "solvedCount": 21,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "MATH_OVERFLOW_RISK",
+        "T1_STABILITY",
+        "MULTI_FAIL_THEN_AC",
+        "RECURSION_STACK_RISK",
+        "OVERFLOW_RISK",
+        "ARRAY_INDEX_RISK",
+        "LONG_CODE_DEBUG_RISK",
+        "STRING_BOUNDARY_RISK",
+        "INTERVAL_DP_ORDER_RISK"
+      ],
+      "problemPids": [
+        "P2158",
+        "P1598",
+        "P1601",
+        "P1563",
+        "P1414",
+        "T431882",
+        "U465513",
+        "B3929",
+        "P1720",
+        "B2137",
+        "P7960",
+        "P2152",
+        "U233632",
+        "P1220",
+        "P1045",
+        "P10509",
+        "P1091",
+        "P10709",
+        "P5753",
+        "P7071",
+        "P1932"
+      ],
+      "weaknessScore": 17.35,
+      "hypothesis": "数学 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "fenwick_tree_index_boundary_034",
+      "clusterKey": "fenwick_tree:INDEX_BOUNDARY:QUICK_FIX_AC:普及+/提高-:T1",
+      "clusterName": "树状数组：下标和边界问题",
+      "primaryModule": "fenwick_tree",
+      "cspRoles": [],
+      "problemCount": 2,
+      "avgAttempts": 2,
+      "solvedCount": 2,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "SOLVED",
+        "FENWICK_INDEX_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "RECENT_WEAKNESS"
+      ],
+      "problemPids": [
+        "P1908",
+        "P9094"
+      ],
+      "weaknessScore": 17.25,
+      "hypothesis": "树状数组下标和前缀关系不稳定"
+    },
+    {
+      "clusterId": "implementation_implementation_risk_021",
+      "clusterKey": "implementation:IMPLEMENTATION_RISK:QUICK_FIX_AC:提高:T1_STABILITY",
+      "clusterName": "implementation：IMPLEMENTATION_RISK",
+      "primaryModule": "implementation",
+      "cspRoles": [
+        "T1_STABILITY"
+      ],
+      "problemCount": 19,
+      "avgAttempts": 3.37,
+      "solvedCount": 19,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "T1_STABILITY",
+        "MULTI_FAIL_THEN_AC",
+        "RECURSION_STACK_RISK",
+        "OVERFLOW_RISK",
+        "ARRAY_INDEX_RISK",
+        "RECENT_WEAKNESS",
+        "SOLVED",
+        "INIT_RISK"
+      ],
+      "problemPids": [
+        "U622366",
+        "P1634",
+        "P1422",
+        "P1000",
+        "P5735",
+        "B3836",
+        "B2021",
+        "P11139",
+        "P2141",
+        "P1033",
+        "U269021",
+        "P1534",
+        "P1427",
+        "P5661",
+        "P2895",
+        "B2034",
+        "B2040",
+        "B2035",
+        "B2033"
+      ],
+      "weaknessScore": 17.06,
+      "hypothesis": "implementation 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_032",
+      "clusterKey": "interval_dp:STATE_INIT_BOUNDARY:QUICK_FIX_AC:提高:T2",
+      "clusterName": "区间 DP：状态、初始化和边界问题",
+      "primaryModule": "interval_dp",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 22,
+      "avgAttempts": 2.73,
+      "solvedCount": 22,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "INTERVAL_DP_ORDER_RISK",
+        "T2_MODELING",
+        "MULTI_FAIL_THEN_AC",
+        "ARRAY_INDEX_RISK",
+        "DP_STATE_RISK",
+        "DP_INIT_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "STRING_BOUNDARY_RISK"
+      ],
+      "problemPids": [
+        "P1821",
+        "P1775",
+        "P1037",
+        "B3647",
+        "U465826",
+        "P1303",
+        "P1005",
+        "P1018",
+        "P1739",
+        "P1320",
+        "U218403",
+        "B2109",
+        "P2089",
+        "P1066",
+        "P1629",
+        "P10472",
+        "B3637",
+        "P1719",
+        "P1387",
+        "P1057",
+        "P3918",
+        "B2126"
+      ],
+      "weaknessScore": 16.99,
+      "hypothesis": "区间 DP 的状态设计、初始化和枚举顺序不稳定"
+    },
+    {
+      "clusterId": "graph_model_template_015",
+      "clusterKey": "graph:MODEL_TEMPLATE:QUICK_FIX_AC:普及+/提高-:T2",
+      "clusterName": "图论建模：建模和模板熟练度问题",
+      "primaryModule": "graph",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 5,
+      "avgAttempts": 2,
+      "solvedCount": 5,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "GRAPH_MODEL_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "SOLVED",
+        "STRING_BOUNDARY_RISK",
+        "MATH_OVERFLOW_RISK",
+        "MULTI_FAIL_THEN_AC",
+        "LONG_CODE_DEBUG_RISK",
+        "RECENT_WEAKNESS"
+      ],
+      "problemPids": [
+        "B2001",
+        "P15052",
+        "P1067",
+        "B3782",
+        "P1420"
+      ],
+      "weaknessScore": 16.25,
+      "hypothesis": "图论建模 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "dsu_model_template_040",
+      "clusterKey": "dsu:MODEL_TEMPLATE:QUICK_FIX_AC:普及+/提高-:T2",
+      "clusterName": "并查集：建模和模板熟练度问题",
+      "primaryModule": "dsu",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 5,
+      "avgAttempts": 2,
+      "solvedCount": 5,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "DSU_MODEL_RISK",
+        "DSU_DISCRETIZATION_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "SOLVED",
+        "STRING_BOUNDARY_RISK",
+        "MULTI_FAIL_THEN_AC"
+      ],
+      "problemPids": [
+        "P14362",
+        "P2330",
+        "P2814",
+        "P1399",
+        "P2256"
+      ],
+      "weaknessScore": 16.25,
+      "hypothesis": "并查集的集合含义、合并条件或离散化细节不稳定"
+    },
+    {
+      "clusterId": "binary_search_model_template_049",
+      "clusterKey": "binary_search:MODEL_TEMPLATE:QUICK_FIX_AC:普及+/提高-:T2",
+      "clusterName": "二分答案：建模和模板熟练度问题",
+      "primaryModule": "binary_search",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 3,
+      "avgAttempts": 2,
+      "solvedCount": 3,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "BINARY_SEARCH_BOUNDARY_RISK",
+        "BINARY_SEARCH_CHECK_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "SOLVED",
+        "MULTI_FAIL_THEN_AC"
+      ],
+      "problemPids": [
+        "P15069",
+        "P2390",
+        "P9497"
+      ],
+      "weaknessScore": 14.25,
+      "hypothesis": "二分答案的 check 单调性和边界处理不稳定"
+    },
+    {
+      "clusterId": "dp_state_init_boundary_064",
+      "clusterKey": "dp:STATE_INIT_BOUNDARY:QUICK_FIX_AC:普及+/提高-:T2",
+      "clusterName": "DP：状态、初始化和边界问题",
+      "primaryModule": "dp",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 16,
+      "avgAttempts": 2,
+      "solvedCount": 16,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "DP_STATE_RISK",
+        "DP_INIT_RISK",
+        "T2_MODELING",
+        "ARRAY_INDEX_RISK",
+        "SOLVED",
+        "OVERFLOW_RISK",
+        "MATH_OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "LONG_CODE_DEBUG_RISK"
+      ],
+      "problemPids": [
+        "P1481",
+        "P1541",
+        "P1890",
+        "P1077",
+        "P1049",
+        "P2858",
+        "P2760",
+        "P2871",
+        "P1002",
+        "P1216",
+        "P1359",
+        "B4163",
+        "U255600",
+        "P8707",
+        "P1721",
+        "P5662"
+      ],
+      "weaknessScore": 14.25,
+      "hypothesis": "DP 状态、转移和初始化需要进一步稳定"
+    },
+    {
+      "clusterId": "string_state_init_boundary_003",
+      "clusterKey": "string:STATE_INIT_BOUNDARY:QUICK_FIX_AC:普及+/提高-:T1_STABILITY",
+      "clusterName": "字符串：状态、初始化和边界问题",
+      "primaryModule": "string",
+      "cspRoles": [
+        "T1_STABILITY"
+      ],
+      "problemCount": 20,
+      "avgAttempts": 2,
+      "solvedCount": 20,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "STRING_BOUNDARY_RISK",
+        "T1_STABILITY",
+        "MULTI_FAIL_THEN_AC",
+        "RECURSION_STACK_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "SOLVED",
+        "MATH_OVERFLOW_RISK",
+        "RECENT_WEAKNESS"
+      ],
+      "problemPids": [
+        "U688514",
+        "P2161",
+        "P4391",
+        "P11276",
+        "T205934",
+        "P2580",
+        "P1381",
+        "P3370",
+        "P4147",
+        "U622364",
+        "U615692",
+        "P2019",
+        "P1159",
+        "P1058",
+        "P1143",
+        "P1596",
+        "P1114",
+        "B2124",
+        "P2084",
+        "P5015"
+      ],
+      "weaknessScore": 13.25,
+      "hypothesis": "字符串 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "implementation_implementation_risk_017",
+      "clusterKey": "implementation:IMPLEMENTATION_RISK:QUICK_FIX_AC:普及+/提高-:T1_STABILITY",
+      "clusterName": "implementation：IMPLEMENTATION_RISK",
+      "primaryModule": "implementation",
+      "cspRoles": [
+        "T1_STABILITY"
+      ],
+      "problemCount": 36,
+      "avgAttempts": 2,
+      "solvedCount": 36,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "T1_STABILITY",
+        "MULTI_FAIL_THEN_AC",
+        "ARRAY_INDEX_RISK",
+        "SOLVED",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "RECENT_WEAKNESS"
+      ],
+      "problemPids": [
+        "P1268",
+        "P15347",
+        "P2345",
+        "U657403",
+        "P3670",
+        "P1463",
+        "T690823",
+        "U619604",
+        "P1063",
+        "P2241",
+        "P1638",
+        "U515861",
+        "B2030",
+        "B2031",
+        "B3893",
+        "P1147",
+        "P1749",
+        "P1614",
+        "P1059",
+        "P1478",
+        "P1157",
+        "P1706",
+        "P3395",
+        "P1161",
+        "T219209",
+        "U260492",
+        "B3908",
+        "P1011",
+        "B2041",
+        "B2044",
+        "B2045",
+        "B2019",
+        "B2023",
+        "B2018",
+        "B2022",
+        "B2036"
+      ],
+      "weaknessScore": 13.08,
+      "hypothesis": "implementation 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "math_model_template_012",
+      "clusterKey": "math:MODEL_TEMPLATE:QUICK_FIX_AC:普及+/提高-:T1_STABILITY",
+      "clusterName": "数学：建模和模板熟练度问题",
+      "primaryModule": "math",
+      "cspRoles": [
+        "T1_STABILITY"
+      ],
+      "problemCount": 39,
+      "avgAttempts": 2,
+      "solvedCount": 39,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "MATH_OVERFLOW_RISK",
+        "T1_STABILITY",
+        "RECURSION_STACK_RISK",
+        "MULTI_FAIL_THEN_AC",
+        "OVERFLOW_RISK",
+        "SOLVED",
+        "ARRAY_INDEX_RISK",
+        "LONG_CODE_DEBUG_RISK",
+        "RECENT_WEAKNESS"
+      ],
+      "problemPids": [
+        "U683709",
+        "B4458",
+        "P15216",
+        "P15266",
+        "P12198",
+        "P14361",
+        "B3868",
+        "P11310",
+        "P3909",
+        "P2615",
+        "P1328",
+        "P1969",
+        "P3908",
+        "B3642",
+        "B2083",
+        "B2054",
+        "P12707",
+        "P6685",
+        "P1130",
+        "P1980",
+        "P1887",
+        "B2128",
+        "B2132",
+        "U248278",
+        "P1200",
+        "P3197",
+        "P1010",
+        "P1867",
+        "P1008",
+        "P4702",
+        "P5723",
+        "P5736",
+        "P1304",
+        "P5737",
+        "P1151",
+        "P2020",
+        "P1587",
+        "P9748",
+        "B2037"
+      ],
+      "weaknessScore": 13.02,
+      "hypothesis": "数学 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "search_unknown_007",
+      "clusterKey": "search:UNKNOWN:ONE_SHOT_AC:普及+/提高-:T2",
+      "clusterName": "搜索：UNKNOWN",
+      "primaryModule": "search",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 7,
+      "avgAttempts": 1,
+      "solvedCount": 7,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ONE_SHOT_AC",
+        "SEARCH_PRUNING_RISK",
+        "T2_MODELING",
+        "RECURSION_STACK_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "RECENT_WEAKNESS",
+        "INIT_RISK"
+      ],
+      "problemPids": [
+        "U316801",
+        "P1118",
+        "P1180",
+        "P1034",
+        "P1061",
+        "P1025",
+        "P1451"
+      ],
+      "weaknessScore": 12.55,
+      "hypothesis": "搜索 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_043",
+      "clusterKey": "dfs_bfs:UNKNOWN:QUICK_FIX_AC:普及+/提高-:T1",
+      "clusterName": "DFS/BFS：UNKNOWN",
+      "primaryModule": "dfs_bfs",
+      "cspRoles": [],
+      "problemCount": 3,
+      "avgAttempts": 2,
+      "solvedCount": 3,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "GRAPH_MODEL_RISK",
+        "SEARCH_PRUNING_RISK",
+        "ARRAY_INDEX_RISK",
+        "RECURSION_STACK_RISK",
+        "LONG_CODE_DEBUG_RISK",
+        "STRING_BOUNDARY_RISK",
+        "MULTI_FAIL_THEN_AC",
+        "MATH_OVERFLOW_RISK",
+        "SOLVED"
+      ],
+      "problemPids": [
+        "P15268",
+        "P1189",
+        "P5908"
+      ],
+      "weaknessScore": 12.25,
+      "hypothesis": "DFS/BFS 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "greedy_unknown_080",
+      "clusterKey": "greedy:UNKNOWN:QUICK_FIX_AC:普及+/提高-:T1_STABILITY",
+      "clusterName": "贪心：UNKNOWN",
+      "primaryModule": "greedy",
+      "cspRoles": [
+        "T1_STABILITY"
+      ],
+      "problemCount": 8,
+      "avgAttempts": 2,
+      "solvedCount": 8,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "QUICK_FIX_AC",
+        "T1_STABILITY",
+        "MULTI_FAIL_THEN_AC",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "SOLVED"
+      ],
+      "problemPids": [
+        "P2676",
+        "P1177",
+        "P2859",
+        "P2887",
+        "P11231",
+        "B3959",
+        "U262609",
+        "B2050"
+      ],
+      "weaknessScore": 12.25,
+      "hypothesis": "贪心 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_005",
+      "clusterKey": "interval_dp:STATE_INIT_BOUNDARY:ONE_SHOT_AC:提高:T2",
+      "clusterName": "区间 DP：状态、初始化和边界问题",
+      "primaryModule": "interval_dp",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 10,
+      "avgAttempts": 1,
+      "solvedCount": 10,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ONE_SHOT_AC",
+        "INTERVAL_DP_ORDER_RISK",
+        "T2_MODELING",
+        "STRING_BOUNDARY_RISK",
+        "RECURSION_STACK_RISK",
+        "ARRAY_INDEX_RISK",
+        "MATH_OVERFLOW_RISK",
+        "OVERFLOW_RISK",
+        "DP_STATE_RISK",
+        "DP_INIT_RISK"
+      ],
+      "problemPids": [
+        "T568349",
+        "P1050",
+        "P5555",
+        "P1140",
+        "P1188",
+        "P1026",
+        "P1112",
+        "U467361",
+        "P1838",
+        "P1117"
+      ],
+      "weaknessScore": 12.13,
+      "hypothesis": "区间 DP 的状态设计、初始化和枚举顺序不稳定"
+    },
+    {
+      "clusterId": "graph_model_template_006",
+      "clusterKey": "graph:MODEL_TEMPLATE:ONE_SHOT_AC:普及+/提高-:T2",
+      "clusterName": "图论建模：建模和模板熟练度问题",
+      "primaryModule": "graph",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 23,
+      "avgAttempts": 1,
+      "solvedCount": 23,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ONE_SHOT_AC",
+        "GRAPH_MODEL_RISK",
+        "T2_MODELING",
+        "RECURSION_STACK_RISK",
+        "SEARCH_PRUNING_RISK",
+        "OVERFLOW_RISK",
+        "MATH_OVERFLOW_RISK",
+        "STRING_BOUNDARY_RISK",
+        "DP_STATE_RISK",
+        "DP_INIT_RISK"
+      ],
+      "problemPids": [
+        "U316802",
+        "B3644",
+        "P1971",
+        "P1122",
+        "P1086",
+        "P1088",
+        "P1094",
+        "P1097",
+        "P1023",
+        "P1017",
+        "P1007",
+        "P1021",
+        "P1028",
+        "P1032",
+        "P11826",
+        "P11788",
+        "P11811",
+        "P2048",
+        "P10719",
+        "P1137",
+        "P1135",
+        "P1319",
+        "P10510"
+      ],
+      "weaknessScore": 11.56,
+      "hypothesis": "图论建模 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "dp_state_init_boundary_059",
+      "clusterKey": "dp:STATE_INIT_BOUNDARY:ONE_SHOT_AC:普及+/提高-:T2",
+      "clusterName": "DP：状态、初始化和边界问题",
+      "primaryModule": "dp",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 8,
+      "avgAttempts": 1,
+      "solvedCount": 8,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ONE_SHOT_AC",
+        "DP_STATE_RISK",
+        "DP_INIT_RISK",
+        "T2_MODELING",
+        "ARRAY_INDEX_RISK",
+        "MATH_OVERFLOW_RISK",
+        "RECURSION_STACK_RISK",
+        "OVERFLOW_RISK",
+        "LONG_CODE_DEBUG_RISK",
+        "STRING_BOUNDARY_RISK"
+      ],
+      "problemPids": [
+        "P4933",
+        "P10945",
+        "P3842",
+        "P1043",
+        "P1103",
+        "P1044",
+        "U319288",
+        "P1164"
+      ],
+      "weaknessScore": 11.13,
+      "hypothesis": "DP 状态、转移和初始化需要进一步稳定"
+    },
+    {
+      "clusterId": "dsu_model_template_060",
+      "clusterKey": "dsu:MODEL_TEMPLATE:ONE_SHOT_AC:普及+/提高-:T2",
+      "clusterName": "并查集：建模和模板熟练度问题",
+      "primaryModule": "dsu",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 4,
+      "avgAttempts": 1,
+      "solvedCount": 4,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ONE_SHOT_AC",
+        "DSU_MODEL_RISK",
+        "DSU_DISCRETIZATION_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "SEARCH_PRUNING_RISK",
+        "GRAPH_MODEL_RISK",
+        "ARRAY_INDEX_RISK",
+        "MATH_OVERFLOW_RISK",
+        "DP_STATE_RISK"
+      ],
+      "problemPids": [
+        "P2016",
+        "P4427",
+        "P1916",
+        "P1041"
+      ],
+      "weaknessScore": 11.13,
+      "hypothesis": "并查集的集合含义、合并条件或离散化细节不稳定"
+    },
+    {
+      "clusterId": "binary_search_model_template_071",
+      "clusterKey": "binary_search:MODEL_TEMPLATE:ONE_SHOT_AC:普及+/提高-:T2",
+      "clusterName": "二分答案：建模和模板熟练度问题",
+      "primaryModule": "binary_search",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 13,
+      "avgAttempts": 1,
+      "solvedCount": 13,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ONE_SHOT_AC",
+        "BINARY_SEARCH_BOUNDARY_RISK",
+        "BINARY_SEARCH_CHECK_RISK",
+        "T2_MODELING",
+        "RECURSION_STACK_RISK",
+        "GRAPH_MODEL_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "SEARCH_PRUNING_RISK",
+        "STRING_BOUNDARY_RISK"
+      ],
+      "problemPids": [
+        "P1733",
+        "P1099",
+        "P1182",
+        "P11412",
+        "P1083",
+        "U367126",
+        "U255571",
+        "U255583",
+        "P1902",
+        "B3628",
+        "P7911",
+        "P1224",
+        "P1084"
+      ],
+      "weaknessScore": 11.13,
+      "hypothesis": "二分答案的 check 单调性和边界处理不稳定"
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_103",
+      "clusterKey": "shortest_path:STATE_INIT_BOUNDARY:ONE_SHOT_AC:普及+/提高-:T2",
+      "clusterName": "最短路：状态、初始化和边界问题",
+      "primaryModule": "shortest_path",
+      "cspRoles": [
+        "T2_MODELING"
+      ],
+      "problemCount": 2,
+      "avgAttempts": 1,
+      "solvedCount": 2,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ONE_SHOT_AC",
+        "SHORTEST_PATH_INIT_RISK",
+        "ARRAY_INDEX_RISK",
+        "INIT_RISK",
+        "RECURSION_STACK_RISK",
+        "T2_MODELING",
+        "MATH_OVERFLOW_RISK",
+        "OVERFLOW_RISK",
+        "DP_STATE_RISK",
+        "DP_INIT_RISK"
+      ],
+      "problemPids": [
+        "P5663",
+        "P2304"
+      ],
+      "weaknessScore": 11.13,
+      "hypothesis": "最短路 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "implementation_implementation_risk_004",
+      "clusterKey": "implementation:IMPLEMENTATION_RISK:ONE_SHOT_AC:普及+/提高-:T1_STABILITY",
+      "clusterName": "implementation：IMPLEMENTATION_RISK",
+      "primaryModule": "implementation",
+      "cspRoles": [
+        "T1_STABILITY"
+      ],
+      "problemCount": 92,
+      "avgAttempts": 1,
+      "solvedCount": 92,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ONE_SHOT_AC",
+        "T1_STABILITY",
+        "RECURSION_STACK_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "RECENT_WEAKNESS"
+      ],
+      "problemPids": [
+        "U688515",
+        "U316795",
+        "T711698",
+        "P1618",
+        "P1700",
+        "P4708",
+        "P12120",
+        "P1160",
+        "P1142",
+        "P1095",
+        "P1183",
+        "P1065",
+        "P1100",
+        "P1109",
+        "P1116",
+        "P1145",
+        "P1146",
+        "B2053",
+        "B2052",
+        "B2051",
+        "B2047",
+        "B2046",
+        "P2006",
+        "P1909",
+        "B2006",
+        "B2013",
+        "B2014",
+        "B2015",
+        "B2024",
+        "B2025",
+        "B2026",
+        "B2027",
+        "B2029",
+        "P2280",
+        "B3894",
+        "B3792",
+        "U467357",
+        "U417008",
+        "P5514",
+        "U268976",
+        "B3932",
+        "P10708",
+        "P3152",
+        "P7354",
+        "P1876",
+        "P1789",
+        "P1697",
+        "P1639",
+        "P1615",
+        "P1597",
+        "P1548",
+        "P1482",
+        "P1428",
+        "P1426",
+        "P1424",
+        "P1423",
+        "P1421",
+        "P5019",
+        "P3078",
+        "B3952",
+        "P1401",
+        "P3156",
+        "B2087",
+        "B3913",
+        "B2129",
+        "B2106",
+        "B3709",
+        "B2107",
+        "B2049",
+        "B2016",
+        "P1364",
+        "P1317",
+        "P1150",
+        "P1085",
+        "B2005",
+        "B2003",
+        "P1232",
+        "P5713",
+        "B2012",
+        "B2142",
+        "B2011",
+        "B2010",
+        "B2009",
+        "B2008",
+        "B2032",
+        "B2007",
+        "B2017",
+        "B2039",
+        "P1035",
+        "P2240",
+        "P1046",
+        "P1047"
+      ],
+      "weaknessScore": 9.45,
+      "hypothesis": "implementation 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "math_model_template_008",
+      "clusterKey": "math:MODEL_TEMPLATE:ONE_SHOT_AC:普及+/提高-:T1_STABILITY",
+      "clusterName": "数学：建模和模板熟练度问题",
+      "primaryModule": "math",
+      "cspRoles": [
+        "T1_STABILITY"
+      ],
+      "problemCount": 45,
+      "avgAttempts": 1,
+      "solvedCount": 45,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ONE_SHOT_AC",
+        "MATH_OVERFLOW_RISK",
+        "T1_STABILITY",
+        "RECURSION_STACK_RISK",
+        "ARRAY_INDEX_RISK",
+        "OVERFLOW_RISK",
+        "LONG_CODE_DEBUG_RISK",
+        "RECENT_WEAKNESS",
+        "INIT_RISK",
+        "SEARCH_PRUNING_RISK"
+      ],
+      "problemPids": [
+        "U316800",
+        "P1965",
+        "P5682",
+        "P1443",
+        "T568868",
+        "B2081",
+        "B2082",
+        "P12833",
+        "P1082",
+        "P2032",
+        "P2866",
+        "P2671",
+        "P1052",
+        "P1158",
+        "P1167",
+        "P1076",
+        "B2048",
+        "P1062",
+        "P1013",
+        "B2020",
+        "P1134",
+        "U467360",
+        "U220881",
+        "U325753",
+        "U262854",
+        "P1449",
+        "B3715",
+        "P2043",
+        "B3934",
+        "P1851",
+        "P1554",
+        "P1425",
+        "P10570",
+        "P10567",
+        "B3953",
+        "P1179",
+        "P1149",
+        "B2134",
+        "B2136",
+        "B2127",
+        "B3736",
+        "P1089",
+        "B2043",
+        "B2038",
+        "B2042"
+      ],
+      "weaknessScore": 9.35,
+      "hypothesis": "数学 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "string_state_init_boundary_061",
+      "clusterKey": "string:STATE_INIT_BOUNDARY:ONE_SHOT_AC:普及+/提高-:T1_STABILITY",
+      "clusterName": "字符串：状态、初始化和边界问题",
+      "primaryModule": "string",
+      "cspRoles": [
+        "T1_STABILITY"
+      ],
+      "problemCount": 25,
+      "avgAttempts": 1,
+      "solvedCount": 25,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ONE_SHOT_AC",
+        "STRING_BOUNDARY_RISK",
+        "T1_STABILITY",
+        "RECURSION_STACK_RISK",
+        "OVERFLOW_RISK",
+        "MATH_OVERFLOW_RISK",
+        "ARRAY_INDEX_RISK",
+        "SEARCH_PRUNING_RISK",
+        "INIT_RISK"
+      ],
+      "problemPids": [
+        "P5091",
+        "U622365",
+        "U615691",
+        "P1727",
+        "P1092",
+        "P1098",
+        "P1148",
+        "P1141",
+        "P1096",
+        "P1106",
+        "P1101",
+        "P1914",
+        "P1071",
+        "P1051",
+        "P11227",
+        "P2199",
+        "P1079",
+        "P1104",
+        "P1015",
+        "P10566",
+        "U429356",
+        "T430465",
+        "P5730",
+        "P5660",
+        "B2028"
+      ],
+      "weaknessScore": 9.13,
+      "hypothesis": "字符串 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_076",
+      "clusterKey": "dfs_bfs:UNKNOWN:ONE_SHOT_AC:普及+/提高-:T1",
+      "clusterName": "DFS/BFS：UNKNOWN",
+      "primaryModule": "dfs_bfs",
+      "cspRoles": [],
+      "problemCount": 1,
+      "avgAttempts": 1,
+      "solvedCount": 1,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ONE_SHOT_AC",
+        "STRING_BOUNDARY_RISK",
+        "MATH_OVERFLOW_RISK",
+        "SEARCH_PRUNING_RISK",
+        "RECURSION_STACK_RISK",
+        "LONG_CODE_DEBUG_RISK"
+      ],
+      "problemPids": [
+        "P1827"
+      ],
+      "weaknessScore": 9.13,
+      "hypothesis": "DFS/BFS 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "greedy_unknown_079",
+      "clusterKey": "greedy:UNKNOWN:ONE_SHOT_AC:普及+/提高-:T1_STABILITY",
+      "clusterName": "贪心：UNKNOWN",
+      "primaryModule": "greedy",
+      "cspRoles": [
+        "T1_STABILITY"
+      ],
+      "problemCount": 13,
+      "avgAttempts": 1,
+      "solvedCount": 13,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ONE_SHOT_AC",
+        "T1_STABILITY",
+        "RECURSION_STACK_RISK",
+        "OVERFLOW_RISK",
+        "ARRAY_INDEX_RISK",
+        "LONG_CODE_DEBUG_RISK"
+      ],
+      "problemPids": [
+        "P5143",
+        "P1056",
+        "P1068",
+        "P1093",
+        "P1016",
+        "P1888",
+        "P1658",
+        "P8732",
+        "P2564",
+        "T247715",
+        "B2094",
+        "U262620",
+        "P1081"
+      ],
+      "weaknessScore": 9.13,
+      "hypothesis": "贪心 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "state_compression_dp_unknown_081",
+      "clusterKey": "state_compression_dp:UNKNOWN:ONE_SHOT_AC:提高:T1",
+      "clusterName": "状态压缩 DP：UNKNOWN",
+      "primaryModule": "state_compression_dp",
+      "cspRoles": [],
+      "problemCount": 2,
+      "avgAttempts": 1,
+      "solvedCount": 2,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ONE_SHOT_AC",
+        "OVERFLOW_RISK",
+        "STRING_BOUNDARY_RISK",
+        "SEARCH_PRUNING_RISK",
+        "ARRAY_INDEX_RISK",
+        "RECURSION_STACK_RISK"
+      ],
+      "problemPids": [
+        "P1244",
+        "P1087"
+      ],
+      "weaknessScore": 9.13,
+      "hypothesis": "状态压缩 DP 相关建模或实现稳定性不足"
+    },
+    {
+      "clusterId": "segment_tree_model_template_083",
+      "clusterKey": "segment_tree:MODEL_TEMPLATE:ONE_SHOT_AC:提高:T1",
+      "clusterName": "线段树：建模和模板熟练度问题",
+      "primaryModule": "segment_tree",
+      "cspRoles": [],
+      "problemCount": 1,
+      "avgAttempts": 1,
+      "solvedCount": 1,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ONE_SHOT_AC",
+        "BINARY_SEARCH_BOUNDARY_RISK",
+        "BINARY_SEARCH_CHECK_RISK",
+        "GRAPH_MODEL_RISK",
+        "SEGMENT_TREE_TEMPLATE_RISK",
+        "OVERFLOW_RISK",
+        "RECURSION_STACK_RISK"
+      ],
+      "problemPids": [
+        "P8959"
+      ],
+      "weaknessScore": 9.13,
+      "hypothesis": "线段树模板、区间边界和懒标记细节不稳定"
+    },
+    {
+      "clusterId": "tree_unknown_104",
+      "clusterKey": "tree:UNKNOWN:ONE_SHOT_AC:普及+/提高-:T1",
+      "clusterName": "tree：UNKNOWN",
+      "primaryModule": "tree",
+      "cspRoles": [],
+      "problemCount": 1,
+      "avgAttempts": 1,
+      "solvedCount": 1,
+      "unsolvedCount": 0,
+      "partialScoreCount": 0,
+      "commonTags": [
+        "ONE_SHOT_AC",
+        "ARRAY_INDEX_RISK",
+        "RECURSION_STACK_RISK"
+      ],
+      "problemPids": [
+        "P1090"
+      ],
+      "weaknessScore": 9.13,
+      "hypothesis": "tree 相关建模或实现稳定性不足"
+    }
+  ]
+}

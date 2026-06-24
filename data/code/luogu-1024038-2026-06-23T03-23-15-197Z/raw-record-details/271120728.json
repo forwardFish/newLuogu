@@ -1,0 +1,187 @@
+{
+  "recordId": "271120728",
+  "url": "https://www.luogu.com.cn/record/271120728?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:25:39.141Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_t3aqb95v\\/src:1:1: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018`\\u2019\\n    1 | ```cpp\\n      | ^\\n\\/tmp\\/compiler_t3aqb95v\\/src:1:2: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018`\\u2019\\n    1 | ```cpp\\n      |  ^\\n\\/tmp\\/compiler_t3aqb95v\\/src:1:3: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018`\\u2019\\n    1 | ```cpp\\n      |   ^\\n\\/tmp\\/compiler_t3aqb95v\\/src:86:1: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018`\\u2019\\n   86 | ```\\n      | ^\\n\\/tmp\\/compiler_t3aqb95v\\/src:86:2: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018`\\u2019\\n   86 | ```\\n      |  ^\\n\\/tmp\\/compiler_t3aqb95v\\/src:86:3: \\u9519\\u8bef\\uff1a\\u7a0b\\u5e8f\\u4e2d\\u6709\\u6e38\\u79bb\\u7684\\u2018`\\u2019\\n   86 | ```\\n      |   ^\\n\\/tmp\\/compiler_t3aqb95v\\/src:1:4: \\u9519\\u8bef\\uff1a\\u2018cpp\\u2019\\u4e0d\\u662f\\u4e00\\u4e2a\\u7c7b\\u578b\\u540d\\n    1 | ```cpp\\n      |    ^~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iosfwd:40,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ios:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ostream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iostream:39,\\n                 from \\/tmp\\/compiler_t3aqb95v\\/src:2:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/postypes.h:98:11: \\u9519\\u8bef\\uff1a\\u2018ptrdiff_t\\u2019\\u4e0d\\u662f\\u4e00\\u4e2a\\u7c7b\\u578b\\u540d\\n   98 |   typedef ptrdiff_t streamsize; \\/\\/ Signed integral type\\n      |           ^~~~~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/postypes.h:41:1: \\u9644\\u6ce8\\uff1a\\u2018ptrdiff_t\\u2019 is defined in header \\u2018<cstddef>\\u2019; did you forget to \\u2018#include <cstddef>\\u2019?\\n   40 | #include <cwchar> \\/\\/ For mbstate_t\\n  +++ |+#include <cstddef>\\n   41 | \\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/exception_ptr.h:40,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/exception:143,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ios:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ostream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iostream:39,\\n                 from \\/tmp\\/compiler_t3aqb95v\\/src:2:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/new:125:50: \\u9519\\u8bef\\uff1a\\u2018operator new\\u2019\\u6ca1\\u6709\\u58f0\\u660e\\u4e3a\\u4e00\\u4e2a\\u51fd\\u6570\\n  125 | _GLIBCXX_NODISCARD void* operator new(std::size_t) _GLIBCXX_THROW (std::bad_alloc)\\n      |                                                  ^\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/new:125:44: \\u9519\\u8bef\\uff1a\\u2018size_t\\u2019 is not a member of \\u2018std\\u2019; did you mean \\u2018size_t\\u2019?\\n  125 | _GLIBCXX_NODISCARD void* operator new(std::size_t) _GLIBCXX_THROW (std::bad_alloc)\\n      |                                            ^~~~~~\\nIn file included from \\/nix\\/store\\/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev\\/include\\/wchar.h:35,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/cwchar:44,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/postypes.h:40,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iosfwd:40,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ios:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ostream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iostream:39,\\n                 from \\/tmp\\/compiler_t3aqb95v\\/src:2:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/lib\\/gcc\\/x86_64-unknown-linux-gnu\\/9.3.0\\/include\\/stddef.h:209:23: \\u9644\\u6ce8\\uff1a\\u2018size_t\\u2019 declared here\\n  209 | typedef __SIZE_TYPE__ size_t;\\n      |                       ^~~~~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/exception_ptr.h:40,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/exception:143,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ios:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ostream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iostream:39,\\n                 from \\/tmp\\/compiler_t3aqb95v\\/src:2:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/new:126:41: \\u9519\\u8bef\\uff1a\\u62ec\\u8d77\\u7684\\u521d\\u59cb\\u503c\\u8bbe\\u5b9a\\u540e\\u51fa\\u73b0\\u7684\\u5c5e\\u6027\\u88ab\\u5ffd\\u7565 [-fpermissive]\\n  126 |   __attribute__((__externally_visible__));\\n      |                                         ^\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/new:127:52: \\u9519\\u8bef\\uff1a\\u2018operator new []\\u2019\\u6ca1\\u6709\\u58f0\\u660e\\u4e3a\\u4e00\\u4e2a\\u51fd\\u6570\\n  127 | _GLIBCXX_NODISCARD void* operator new[](std::size_t) _GLIBCXX_THROW (std::bad_alloc)\\n      |                                                    ^\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/new:127:46: \\u9519\\u8bef\\uff1a\\u2018size_t\\u2019 is not a member of \\u2018std\\u2019; did you mean \\u2018size_t\\u2019?\\n  127 | _GLIBCXX_NODISCARD void* operator new[](std::size_t) _GLIBCXX_THROW (std::bad_alloc)\\n      |                                              ^~~~~~\\nIn file included from \\/nix\\/store\\/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev\\/include\\/wchar.h:35,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/cwchar:44,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/postypes.h:40,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iosfwd:40,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ios:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ostream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iostream:39,\\n                 from \\/tmp\\/compiler_t3aqb95v\\/src:2:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/lib\\/gcc\\/x86_64-unknown-linux-gnu\\/9.3.0\\/include\\/stddef.h:209:23: \\u9644\\u6ce8\\uff1a\\u2018size_t\\u2019 declared here\\n  209 | typedef __SIZE_TYPE__ size_t;\\n      |                       ^~~~~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/exception_ptr.h:40,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/exception:143,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ios:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ostream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iostream:39,\\n                 from \\/tmp\\/compiler_t3aqb95v\\/src:2:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/new:128:41: \\u9519\\u8bef\\uff1a\\u62ec\\u8d77\\u7684\\u521d\\u59cb\\u503c\\u8bbe\\u5b9a\\u540e\\u51fa\\u73b0\\u7684\\u5c5e\\u6027\\u88ab\\u5ffd\\u7565 [-fpermissive]\\n  128 |   __attribute__((__externally_visible__));\\n      |                                         ^\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/new:134:34: \\u9519\\u8bef\\uff1a\\u2018std::size_t\\u2019\\u5c1a\\u672a\\u58f0\\u660e\\n  134 | void operator delete(void*, std::size_t) _GLIBCXX_USE_NOEXCEPT\\n      |                                  ^~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/new:136:36: \\u9519\\u8bef\\uff1a\\u2018std::size_t\\u2019\\u5c1a\\u672a\\u58f0\\u660e\\n  136 | void operator delete[](void*, std::size_t) _GLIBCXX_USE_NOEXCEPT\\n      |                                    ^~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/new:139:44: \\u9519\\u8bef\\uff1a\\u2018operator new\\u2019\\u6ca1\\u6709\\u58f0\\u660e\\u4e3a\\u4e00\\u4e2a\\u51fd\\u6570\\n  139 | _GLIBCXX_NODISCARD void* operator new(std::size_t, const std::nothrow_t&) _GLIBCXX_USE_NOEXCEPT\\n      |                                            ^~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/new:139:44: \\u9519\\u8bef\\uff1a\\u2018size_t\\u2019 is not a member of \\u2018std\\u2019; did you mean \\u2018size_t\\u2019?\\nIn file included from \\/nix\\/store\\/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev\\/include\\/wchar.h:35,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/cwchar:44,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/postypes.h:40,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iosfwd:40,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ios:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ostream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iostream:39,\\n                 from \\/tmp\\/compiler_t3aqb95v\\/src:2:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/lib\\/gcc\\/x86_64-unknown-linux-gnu\\/9.3.0\\/include\\/stddef.h:209:23: \\u9644\\u6ce8\\uff1a\\u2018size_t\\u2019 declared here\\n  209 | typedef __SIZE_TYPE__ size_t;\\n      |                       ^~~~~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/exception_ptr.h:40,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/exception:143,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ios:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ostream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iostream:39,\\n                 from \\/tmp\\/compiler_t3aqb95v\\/src:2:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/new:139:52: \\u9519\\u8bef\\uff1aexpected primary-expression before \\u2018const\\u2019\\n  139 | _GLIBCXX_NODISCARD void* operator new(std::size_t, const std::nothrow_t&) _GLIBCXX_USE_NOEXCEPT\\n      |                                                    ^~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/new:141:46: \\u9519\\u8bef\\uff1a\\u2018operator new []\\u2019\\u6ca1\\u6709\\u58f0\\u660e\\u4e3a\\u4e00\\u4e2a\\u51fd\\u6570\\n  141 | _GLIBCXX_NODISCARD void* operator new[](std::size_t, const std::nothrow_t&) _GLIBCXX_USE_NOEXCEPT\\n      |                                              ^~~~~~\\n\\/n\\n...\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"```cpp\\n#include <iostream>\\n#include <string>\\n#include <cstdio>\\n#include <cctype>\\n\\nusing namespace std;\\n\\nint main() {\\n    string s;\\n    \\/\\/ Read the equation string. Since there are no spaces in the equation, cin >> s works.\\n    if (!(cin >> s)) return 0;\\n    \\n    char var = 0;\\n    \\/\\/ Identify the variable (the lowercase letter in the equation)\\n    for (char c : s) {\\n        if (islower(c)) {\\n            var = c;\\n            break;\\n        }\\n    }\\n    \\n    double coeff = 0;   \\/\\/ Accumulates the coefficient of the variable\\n    double constant = 0; \\/\\/ Accumulates the constant terms\\n    \\n    int side = 1;       \\/\\/ 1 for Left Hand Side, -1 for Right Hand Side\\n    int sign = 1;       \\/\\/ 1 for positive term, -1 for negative term\\n    double num = 0;     \\/\\/ Current number being parsed from digits\\n    bool has_num = false; \\/\\/ Flag to indicate if we are currently parsing a number\\n    bool last_is_var = false; \\/\\/ Flag to indicate if the last processed term was a variable term\\n    \\n    \\/\\/ Iterate through the string. \\n    \\/\\/ We go up to s.length() to process the last term using a virtual delimiter (c = 0).\\n    for (size_t i = 0; i <= s.length(); ++i) {\\n        char c = (i < s.length()) ? s[i] : 0; \\n        \\n        if (isdigit(c)) {\\n            num = num * 10 + (c - '0');\\n            has_num = true;\\n            last_is_var = false;\\n        } else if (islower(c)) {\\n            last_is_var = true;\\n            \\/\\/ has_num remains as is: true if coefficient exists (e.g., 2x), false if implicit 1 (e.g., x)\\n        } else {\\n            \\/\\/ Delimiter encountered: +, -, =, or end of string.\\n            \\/\\/ Finalize the term that ended just before this delimiter.\\n            \\n            if (last_is_var) {\\n                \\/\\/ The term was a variable term\\n                double val = has_num ? num : 1;\\n                coeff += side * sign * val;\\n            } else {\\n                \\/\\/ The term was a constant term\\n                if (has_num) {\\n                    constant += side * sign * num;\\n                }\\n            }\\n            \\n            \\/\\/ Reset state for the next term\\n            num = 0;\\n            has_num = false;\\n            last_is_var = false;\\n            \\n            \\/\\/ Update parsing state based on the delimiter for the *next* term\\n            if (c == '=') {\\n                side = -1; \\/\\/ Switch to RHS. Terms on RHS are effectively subtracted when moved to LHS.\\n                sign = 1;  \\/\\/ Reset sign for the start of the new side\\n            } else if (c == '+') {\\n                sign = 1;\\n            } else if (c == '-') {\\n                sign = -1;\\n            }\\n            \\/\\/ If c == 0, the loop terminates\\n        }\\n    }\\n    \\n    \\/\\/ The equation is now reduced to the form: coeff * x + constant = 0\\n    \\/\\/ Solving for x: x = -constant \\/ coeff\\n    double result = -constant \\/ coeff;\\n    \\n    \\/\\/ Output the result formatted to 3 decimal places\\n    printf(\\\"%c=%.3f\\\\n\\\", var, result);\\n    \\n    return 0;\\n}\\n```\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P1022\",\"title\":\"[NOIP 2000 \\u666e\\u53ca\\u7ec4] \\u8ba1\\u7b97\\u5668\\u7684\\u6539\\u826f\",\"difficulty\":3,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":2950,\"submitTime\":1774916810,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":271120728,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1,2,3,4,5]],\"showStatus\":true},\"currentTitle\":\"R271120728\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782185139,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_t3aqb95v/src:1:1: 错误：程序中有游离的‘`’\n    1 | ```cpp\n      | ^\n/tmp/compiler_t3aqb95v/src:1:2: 错误：程序中有游离的‘`’\n    1 | ```cpp\n      |  ^\n/tmp/compiler_t3aqb95v/src:1:3: 错误：程序中有游离的‘`’\n    1 | ```cpp\n      |   ^\n/tmp/compiler_t3aqb95v/src:86:1: 错误：程序中有游离的‘`’\n   86 | ```\n      | ^\n/tmp/compiler_t3aqb95v/src:86:2: 错误：程序中有游离的‘`’\n   86 | ```\n      |  ^\n/tmp/compiler_t3aqb95v/src:86:3: 错误：程序中有游离的‘`’\n   86 | ```\n      |   ^\n/tmp/compiler_t3aqb95v/src:1:4: 错误：‘cpp’不是一个类型名\n    1 | ```cpp\n      |    ^~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iosfwd:40,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ios:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ostream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iostream:39,\n                 from /tmp/compiler_t3aqb95v/src:2:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/postypes.h:98:11: 错误：‘ptrdiff_t’不是一个类型名\n   98 |   typedef ptrdiff_t streamsize; // Signed integral type\n      |           ^~~~~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/postypes.h:41:1: 附注：‘ptrdiff_t’ is defined in header ‘<cstddef>’; did you forget to ‘#include <cstddef>’?\n   40 | #include <cwchar> // For mbstate_t\n  +++ |+#include <cstddef>\n   41 | \nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/exception_ptr.h:40,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/exception:143,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ios:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ostream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iostream:39,\n                 from /tmp/compiler_t3aqb95v/src:2:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/new:125:50: 错误：‘operator new’没有声明为一个函数\n  125 | _GLIBCXX_NODISCARD void* operator new(std::size_t) _GLIBCXX_THROW (std::bad_alloc)\n      |                                                  ^\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/new:125:44: 错误：‘size_t’ is not a member of ‘std’; did you mean ‘size_t’?\n  125 | _GLIBCXX_NODISCARD void* operator new(std::size_t) _GLIBCXX_THROW (std::bad_alloc)\n      |                                            ^~~~~~\nIn file included from /nix/store/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev/include/wchar.h:35,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/cwchar:44,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/postypes.h:40,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iosfwd:40,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ios:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ostream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iostream:39,\n                 from /tmp/compiler_t3aqb95v/src:2:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/lib/gcc/x86_64-unknown-linux-gnu/9.3.0/include/stddef.h:209:23: 附注：‘size_t’ declared here\n  209 | typedef __SIZE_TYPE__ size_t;\n      |                       ^~~~~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/exception_ptr.h:40,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/exception:143,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ios:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ostream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iostream:39,\n                 from /tmp/compiler_t3aqb95v/src:2:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/new:126:41: 错误：括起的初始值设定后出现的属性被忽略 [-fpermissive]\n  126 |   __attribute__((__externally_visible__));\n      |                                         ^\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/new:127:52: 错误：‘operator new []’没有声明为一个函数\n  127 | _GLIBCXX_NODISCARD void* operator new[](std::size_t) _GLIBCXX_THROW (std::bad_alloc)\n      |                                                    ^\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/new:127:46: 错误：‘size_t’ is not a member of ‘std’; did you mean ‘size_t’?\n  127 | _GLIBCXX_NODISCARD void* operator new[](std::size_t) _GLIBCXX_THROW (std::bad_alloc)\n      |                                              ^~~~~~\nIn file included from /nix/store/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev/include/wchar.h:35,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/cwchar:44,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/postypes.h:40,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iosfwd:40,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ios:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ostream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iostream:39,\n                 from /tmp/compiler_t3aqb95v/src:2:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/lib/gcc/x86_64-unknown-linux-gnu/9.3.0/include/stddef.h:209:23: 附注：‘size_t’ declared here\n  209 | typedef __SIZE_TYPE__ size_t;\n      |                       ^~~~~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/exception_ptr.h:40,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/exception:143,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ios:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ostream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iostream:39,\n                 from /tmp/compiler_t3aqb95v/src:2:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/new:128:41: 错误：括起的初始值设定后出现的属性被忽略 [-fpermissive]\n  128 |   __attribute__((__externally_visible__));\n      |                                         ^\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/new:134:34: 错误：‘std::size_t’尚未声明\n  134 | void operator delete(void*, std::size_t) _GLIBCXX_USE_NOEXCEPT\n      |                                  ^~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/new:136:36: 错误：‘std::size_t’尚未声明\n  136 | void operator delete[](void*, std::size_t) _GLIBCXX_USE_NOEXCEPT\n      |                                    ^~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/new:139:44: 错误：‘operator new’没有声明为一个函数\n  139 | _GLIBCXX_NODISCARD void* operator new(std::size_t, const std::nothrow_t&) _GLIBCXX_USE_NOEXCEPT\n      |                                            ^~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/new:139:44: 错误：‘size_t’ is not a member of ‘std’; did you mean ‘size_t’?\nIn file included from /nix/store/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev/include/wchar.h:35,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/cwchar:44,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/postypes.h:40,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iosfwd:40,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ios:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ostream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iostream:39,\n                 from /tmp/compiler_t3aqb95v/src:2:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/lib/gcc/x86_64-unknown-linux-gnu/9.3.0/include/stddef.h:209:23: 附注：‘size_t’ declared here\n  209 | typedef __SIZE_TYPE__ size_t;\n      |                       ^~~~~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/exception_ptr.h:40,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/exception:143,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ios:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ostream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iostream:39,\n                 from /tmp/compiler_t3aqb95v/src:2:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/new:139:52: 错误：expected primary-expression before ‘const’\n  139 | _GLIBCXX_NODISCARD void* operator new(std::size_t, const std::nothrow_t&) _GLIBCXX_USE_NOEXCEPT\n      |                                                    ^~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/new:141:46: 错误：‘operator new []’没有声明为一个函数\n  141 | _GLIBCXX_NODISCARD void* operator new[](std::size_t, const std::nothrow_t&) _GLIBCXX_USE_NOEXCEPT\n      |                                              ^~~~~~\n/n\n...",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "```cpp\n#include <iostream>\n#include <string>\n#include <cstdio>\n#include <cctype>\n\nusing namespace std;\n\nint main() {\n    string s;\n    // Read the equation string. Since there are no spaces in the equation, cin >> s works.\n    if (!(cin >> s)) return 0;\n    \n    char var = 0;\n    // Identify the variable (the lowercase letter in the equation)\n    for (char c : s) {\n        if (islower(c)) {\n            var = c;\n            break;\n        }\n    }\n    \n    double coeff = 0;   // Accumulates the coefficient of the variable\n    double constant = 0; // Accumulates the constant terms\n    \n    int side = 1;       // 1 for Left Hand Side, -1 for Right Hand Side\n    int sign = 1;       // 1 for positive term, -1 for negative term\n    double num = 0;     // Current number being parsed from digits\n    bool has_num = false; // Flag to indicate if we are currently parsing a number\n    bool last_is_var = false; // Flag to indicate if the last processed term was a variable term\n    \n    // Iterate through the string. \n    // We go up to s.length() to process the last term using a virtual delimiter (c = 0).\n    for (size_t i = 0; i <= s.length(); ++i) {\n        char c = (i < s.length()) ? s[i] : 0; \n        \n        if (isdigit(c)) {\n            num = num * 10 + (c - '0');\n            has_num = true;\n            last_is_var = false;\n        } else if (islower(c)) {\n            last_is_var = true;\n            // has_num remains as is: true if coefficient exists (e.g., 2x), false if implicit 1 (e.g., x)\n        } else {\n            // Delimiter encountered: +, -, =, or end of string.\n            // Finalize the term that ended just before this delimiter.\n            \n            if (last_is_var) {\n                // The term was a variable term\n                double val = has_num ? num : 1;\n                coeff += side * sign * val;\n            } else {\n                // The term was a constant term\n                if (has_num) {\n                    constant += side * sign * num;\n                }\n            }\n            \n            // Reset state for the next term\n            num = 0;\n            has_num = false;\n            last_is_var = false;\n            \n            // Update parsing state based on the delimiter for the *next* term\n            if (c == '=') {\n                side = -1; // Switch to RHS. Terms on RHS are effectively subtracted when moved to LHS.\n                sign = 1;  // Reset sign for the start of the new side\n            } else if (c == '+') {\n                sign = 1;\n            } else if (c == '-') {\n                sign = -1;\n            }\n            // If c == 0, the loop terminates\n        }\n    }\n    \n    // The equation is now reduced to the form: coeff * x + constant = 0\n    // Solving for x: x = -constant / coeff\n    double result = -constant / coeff;\n    \n    // Output the result formatted to 3 decimal places\n    printf(\"%c=%.3f\\n\", var, result);\n    \n    return 0;\n}\n```",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P1022",
+          "title": "[NOIP 2000 普及组] 计算器的改良",
+          "difficulty": 3,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 2950,
+        "submitTime": 1774916810,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 271120728,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R271120728",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782185139,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

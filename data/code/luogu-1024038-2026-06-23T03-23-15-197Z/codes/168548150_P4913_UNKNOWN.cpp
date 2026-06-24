@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int ans=-1;
+struct node 
+{
+	int l,r;
+}a[1000005]; 
+int dfs(int r,int s)
+{
+	if(r==0) return 0;
+	ans=max(ans,s);
+	dfs(a[r].l,s+1);
+	dfs(a[r].r,s+1);
+}
+int main()
+{
+	int b;
+	cin>>b;
+	for(int i=1;i<=b;i++)
+	{
+		cin>>a[i].l>>a[i].r;
+	}
+	dfs(1,1);
+	cout<<ans;
+	return 0;
+}

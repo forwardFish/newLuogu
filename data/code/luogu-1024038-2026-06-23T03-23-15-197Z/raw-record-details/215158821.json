@@ -1,0 +1,323 @@
+{
+  "recordId": "215158821",
+  "url": "https://www.luogu.com.cn/record/215158821?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:45:46.637Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[{\"id\":0,\"score\":100,\"status\":12,\"testCases\":{\"3\":{\"id\":3,\"status\":12,\"time\":6,\"memory\":564,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"4\":{\"id\":4,\"status\":12,\"time\":5,\"memory\":564,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"1\":{\"id\":1,\"status\":12,\"time\":4,\"memory\":568,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"2\":{\"id\":2,\"status\":12,\"time\":4,\"memory\":672,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"9\":{\"id\":9,\"status\":12,\"time\":57,\"memory\":556,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"8\":{\"id\":8,\"status\":12,\"time\":56,\"memory\":572,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"6\":{\"id\":6,\"status\":12,\"time\":75,\"memory\":564,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"0\":{\"id\":0,\"status\":12,\"time\":4,\"memory\":560,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"7\":{\"id\":7,\"status\":12,\"time\":69,\"memory\":556,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"5\":{\"id\":5,\"status\":12,\"time\":5,\"memory\":552,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}},\"judger\":\"\",\"time\":285,\"memory\":672,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}],\"finishedCaseCount\":10,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <bits\\/stdc++.h>\\nusing namespace std;\\nusing ull = unsigned long long;\\nusing ll = long long;\\nconst ll MOD = 1000000007;\\n\\n\\/\\/ \\u8ba1\\u7b97 a \\u548c b \\u7684\\u6700\\u5927\\u516c\\u7ea6\\u6570\\uff08\\u6b27\\u51e0\\u91cc\\u5f97\\u7b97\\u6cd5\\uff09\\null gcd_ull(ull a, ull b) {\\n    if (b == 0) return a;\\n    return gcd_ull(b, a % b);\\n}\\n\\n\\/\\/ \\u6a21\\u4e58: \\u8ba1\\u7b97 (a * b) mod m\\uff0c\\u4f7f\\u7528 __uint128_t \\u907f\\u514d\\u6ea2\\u51fa\\null modmul(ull a, ull b, ull m) {\\n    __uint128_t res = ( __uint128_t ) a * b;\\n    return (ull)(res % m);\\n}\\n\\/\\/ \\u5feb\\u901f\\u5e42: \\u8ba1\\u7b97 (base^exp) mod mod\\uff0c\\u4f7f\\u7528 128 \\u4f4d\\u4e2d\\u95f4\\u53d8\\u91cf\\null modpow(ull base, ull exp, ull mod) {\\n    __uint128_t result = 1;\\n    __uint128_t b = base % mod;\\n    while (exp > 0) {\\n        if (exp & 1) {\\n            result = (result * b) % mod;\\n        }\\n        b = (b * b) % mod;\\n        exp >>= 1;\\n    }\\n    return (ull)result;\\n}\\n\\n\\/\\/ Miller-Rabin \\u7d20\\u6027\\u6d4b\\u8bd5\\uff08\\u9002\\u7528\\u4e8e 64 \\u4f4d\\u6574\\u6570\\uff09\\nbool isPrime(ull n) {\\n    if (n < 2) return false;\\n    \\/\\/ \\u5148\\u9664\\u4ee5\\u4e00\\u4e9b\\u5c0f\\u7d20\\u6570\\n    static const ull testPrimes[] = {2ULL,3ULL,5ULL,7ULL,11ULL,13ULL,17ULL,19ULL,23ULL,0};\\n    for (int i = 0; testPrimes[i] != 0; ++i) {\\n        if (n % testPrimes[i] == 0)\\n            return n == testPrimes[i];\\n    }\\n    \\/\\/ \\u5c06 n-1 \\u5206\\u89e3\\u4e3a d*2^s \\u7684\\u5f62\\u5f0f\\n    ull d = n - 1;\\n    int s = 0;\\n    while ((d & 1) == 0) {\\n        d >>= 1;\\n        s++;\\n    }\\n    \\/\\/ \\u786e\\u5b9a\\u6027\\u57fa\\u6570\\u96c6\\uff0c\\u5bf9\\u4e8e 64 \\u4f4d\\u6574\\u6570\\u6709\\u6548\\n    static const ull bases[] = {2ULL, 325ULL, 9375ULL, 28178ULL, \\n                                450775ULL, 9780504ULL, 1795265022ULL, 0};\\n    for (int i = 0; bases[i] != 0; ++i) {\\n        ull a = bases[i] % n;\\n        if (a == 0) continue;\\n        ull x = modpow(a, d, n);\\n        if (x == 1 || x == n - 1) continue;\\n        bool composite = true;\\n        for (int r = 1; r < s; ++r) {\\n            x = modmul(x, x, n);\\n            if (x == n - 1) {\\n                composite = false;\\n                break;\\n            }\\n        }\\n        if (composite) return false;\\n    }\\n    return true;\\n}\\n\\n\\/\\/ Pollard-Rho \\u7b97\\u6cd5\\uff0c\\u5bfb\\u627e n \\u7684\\u4e00\\u4e2a\\u975e\\u5e73\\u51e1\\u56e0\\u5b50\\null pollardRho(ull n) {\\n    if (n % 2 == 0) return 2;\\n    static mt19937_64 rng((unsigned)chrono::steady_clock::now().time_since_epoch().count());\\n    uniform_int_distribution<ull> dist(2, n - 2);\\n    while (true) {\\n        ull x = dist(rng), y = x;\\n        ull c = dist(rng);\\n        if (c >= n) c %= n;\\n        if (c == 0) c = 1;\\n        \\/\\/ \\u4f2a\\u968f\\u673a\\u6620\\u5c04\\u51fd\\u6570 f(v) = (v*v + c) mod n\\n        auto f = [&](ull v) { return (modmul(v, v, n) + c) % n; };\\n        ull d = 1;\\n        while (d == 1) {\\n            x = f(x);\\n            y = f(f(y));\\n            ull diff = (x > y ? x - y : y - x);\\n            d = gcd_ull(diff, n);\\n            if (d == n) break;  \\/\\/ \\u5931\\u8d25\\uff0c\\u91cd\\u65b0\\u9009\\u62e9\\u968f\\u673a\\u53c2\\u6570\\n        }\\n        if (d > 1 && d < n) {\\n            return d; \\/\\/ \\u627e\\u5230\\u4e00\\u4e2a\\u975e\\u5e73\\u51e1\\u56e0\\u5b50\\n        }\\n        \\/\\/ \\u5982\\u679c d==n\\uff0c\\u7b97\\u6cd5\\u5931\\u8d25\\uff0c\\u91cd\\u8bd5\\n    }\\n}\\n\\n\\/\\/ \\u9012\\u5f52\\u5206\\u89e3\\u8d28\\u56e0\\u6570\\uff0c\\u5c06\\u7ed3\\u679c\\u5b58\\u5165 factors \\u6620\\u5c04\\uff08\\u8d28\\u56e0\\u6570 -> \\u6307\\u6570\\uff09\\nvoid factorize(ull n, map<ull,int> &factors) {\\n    if (n == 1) return;\\n    if (isPrime(n)) {\\n        factors[n]++;\\n    } else {\\n        ull d = pollardRho(n);\\n        factorize(d, factors);\\n        factorize(n \\/ d, factors);\\n    }\\n}\\n\\n\\/\\/ \\u8ba1\\u7b97 \\u03c3(n) = n \\u7684\\u6b63\\u56e0\\u5b50\\u548c\\uff08\\u7ed3\\u679c\\u5bf9 MOD \\u53d6\\u6a21\\uff09\\nll calcSigma(const map<ull,int> &factors) {\\n    ll result = 1;\\n    for (auto &p : factors) {\\n        ull prime = p.first;\\n        int exp = p.second;\\n        \\/\\/ \\u8ba1\\u7b97 (prime^(exp+1) - 1) \\/ (prime - 1) mod MOD\\n        ll prime_mod = prime % MOD;\\n        ll numerator = (modpow(prime_mod, exp + 1, MOD) + MOD - 1) % MOD;\\n        ll inv_denom = 1;\\n        if (prime_mod != 1) {\\n            ll denom = (prime_mod + MOD - 1) % MOD;  \\/\\/ prime-1 mod MOD\\n            \\/\\/ Fermat \\u5c0f\\u5b9a\\u7406\\u6c42\\u9006\\n            inv_denom = modpow(denom, MOD - 2, MOD);\\n        }\\n        ll term = (numerator * inv_denom) % MOD;\\n        result = (result * term) % MOD;\\n    }\\n    return result;\\n}\\n\\nint main() {\\n    ios::sync_with_stdio(false);\\n    cin.tie(nullptr);\\n\\n    int T;\\n    cin >> T;\\n    while (T--) {\\n        ull n;\\n        cin >> n;\\n\\n        \\/\\/ 1. \\u5206\\u89e3\\u8d28\\u56e0\\u6570\\n        map<ull,int> factors;\\n        factorize(n, factors);\\n\\n        \\/\\/ 2. \\u8ba1\\u7b97 \\u03c3(n)\\n        ll sigma_n = calcSigma(factors);\\n\\n        \\/\\/ 3. \\u8ba1\\u7b97 \\u03c3(n\\/4)\\uff0c\\u82e5 n \\u53ef\\u88ab 4 \\u6574\\u9664\\uff0c\\u5219\\u5c06\\u8d28\\u56e0\\u6570\\u4e2d 2 \\u7684\\u6307\\u6570\\u51cf 2\\n        ll sigma_n4 = 0;\\n        auto it = factors.find(2);\\n        if (it != factors.end() && it->second >= 2) {\\n            map<ull,int> factors_n4 = factors;\\n            factors_n4[2] -= 2;\\n            if (factors_n4[2] == 0) {\\n                factors_n4.erase(2);\\n            }\\n            sigma_n4 = calcSigma(factors_n4);\\n        }\\n\\n        \\/\\/ 4. \\u5e94\\u7528 Jacobi \\u56db\\u5e73\\u65b9\\u548c\\u5b9a\\u7406\\u5e76\\u53d6\\u6a21\\n        ll ans = ((8LL * sigma_n % MOD) - (32LL * sigma_n4 % MOD) + MOD) % MOD;\\n        cout << ans << \\\"\\\\n\\\";\\n    }\\n    return 0;\\n}\\n\",\"time\":285,\"memory\":672,\"problem\":{\"pid\":\"P2019\",\"title\":\"\\u56db\\u5e73\\u65b9\\u548c\\u5b9a\\u7406\",\"difficulty\":7,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":4398,\"submitTime\":1745653698,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":215158821,\"status\":12,\"enableO2\":true,\"score\":100},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9]],\"showStatus\":true},\"currentTitle\":\"R215158821\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186346,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [
+              {
+                "id": 0,
+                "score": 100,
+                "status": 12,
+                "testCases": {
+                  "0": {
+                    "id": 0,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 560,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "1": {
+                    "id": 1,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 568,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "2": {
+                    "id": 2,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 672,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "3": {
+                    "id": 3,
+                    "status": 12,
+                    "time": 6,
+                    "memory": 564,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "4": {
+                    "id": 4,
+                    "status": 12,
+                    "time": 5,
+                    "memory": 564,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "5": {
+                    "id": 5,
+                    "status": 12,
+                    "time": 5,
+                    "memory": 552,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "6": {
+                    "id": 6,
+                    "status": 12,
+                    "time": 75,
+                    "memory": 564,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "7": {
+                    "id": 7,
+                    "status": 12,
+                    "time": 69,
+                    "memory": 556,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "8": {
+                    "id": 8,
+                    "status": 12,
+                    "time": 56,
+                    "memory": 572,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "9": {
+                    "id": 9,
+                    "status": 12,
+                    "time": 57,
+                    "memory": 556,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                },
+                "judger": "",
+                "time": 285,
+                "memory": 672,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            ],
+            "finishedCaseCount": 10,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <bits/stdc++.h>\nusing namespace std;\nusing ull = unsigned long long;\nusing ll = long long;\nconst ll MOD = 1000000007;\n\n// 计算 a 和 b 的最大公约数（欧几里得算法）\null gcd_ull(ull a, ull b) {\n    if (b == 0) return a;\n    return gcd_ull(b, a % b);\n}\n\n// 模乘: 计算 (a * b) mod m，使用 __uint128_t 避免溢出\null modmul(ull a, ull b, ull m) {\n    __uint128_t res = ( __uint128_t ) a * b;\n    return (ull)(res % m);\n}\n// 快速幂: 计算 (base^exp) mod mod，使用 128 位中间变量\null modpow(ull base, ull exp, ull mod) {\n    __uint128_t result = 1;\n    __uint128_t b = base % mod;\n    while (exp > 0) {\n        if (exp & 1) {\n            result = (result * b) % mod;\n        }\n        b = (b * b) % mod;\n        exp >>= 1;\n    }\n    return (ull)result;\n}\n\n// Miller-Rabin 素性测试（适用于 64 位整数）\nbool isPrime(ull n) {\n    if (n < 2) return false;\n    // 先除以一些小素数\n    static const ull testPrimes[] = {2ULL,3ULL,5ULL,7ULL,11ULL,13ULL,17ULL,19ULL,23ULL,0};\n    for (int i = 0; testPrimes[i] != 0; ++i) {\n        if (n % testPrimes[i] == 0)\n            return n == testPrimes[i];\n    }\n    // 将 n-1 分解为 d*2^s 的形式\n    ull d = n - 1;\n    int s = 0;\n    while ((d & 1) == 0) {\n        d >>= 1;\n        s++;\n    }\n    // 确定性基数集，对于 64 位整数有效\n    static const ull bases[] = {2ULL, 325ULL, 9375ULL, 28178ULL, \n                                450775ULL, 9780504ULL, 1795265022ULL, 0};\n    for (int i = 0; bases[i] != 0; ++i) {\n        ull a = bases[i] % n;\n        if (a == 0) continue;\n        ull x = modpow(a, d, n);\n        if (x == 1 || x == n - 1) continue;\n        bool composite = true;\n        for (int r = 1; r < s; ++r) {\n            x = modmul(x, x, n);\n            if (x == n - 1) {\n                composite = false;\n                break;\n            }\n        }\n        if (composite) return false;\n    }\n    return true;\n}\n\n// Pollard-Rho 算法，寻找 n 的一个非平凡因子\null pollardRho(ull n) {\n    if (n % 2 == 0) return 2;\n    static mt19937_64 rng((unsigned)chrono::steady_clock::now().time_since_epoch().count());\n    uniform_int_distribution<ull> dist(2, n - 2);\n    while (true) {\n        ull x = dist(rng), y = x;\n        ull c = dist(rng);\n        if (c >= n) c %= n;\n        if (c == 0) c = 1;\n        // 伪随机映射函数 f(v) = (v*v + c) mod n\n        auto f = [&](ull v) { return (modmul(v, v, n) + c) % n; };\n        ull d = 1;\n        while (d == 1) {\n            x = f(x);\n            y = f(f(y));\n            ull diff = (x > y ? x - y : y - x);\n            d = gcd_ull(diff, n);\n            if (d == n) break;  // 失败，重新选择随机参数\n        }\n        if (d > 1 && d < n) {\n            return d; // 找到一个非平凡因子\n        }\n        // 如果 d==n，算法失败，重试\n    }\n}\n\n// 递归分解质因数，将结果存入 factors 映射（质因数 -> 指数）\nvoid factorize(ull n, map<ull,int> &factors) {\n    if (n == 1) return;\n    if (isPrime(n)) {\n        factors[n]++;\n    } else {\n        ull d = pollardRho(n);\n        factorize(d, factors);\n        factorize(n / d, factors);\n    }\n}\n\n// 计算 σ(n) = n 的正因子和（结果对 MOD 取模）\nll calcSigma(const map<ull,int> &factors) {\n    ll result = 1;\n    for (auto &p : factors) {\n        ull prime = p.first;\n        int exp = p.second;\n        // 计算 (prime^(exp+1) - 1) / (prime - 1) mod MOD\n        ll prime_mod = prime % MOD;\n        ll numerator = (modpow(prime_mod, exp + 1, MOD) + MOD - 1) % MOD;\n        ll inv_denom = 1;\n        if (prime_mod != 1) {\n            ll denom = (prime_mod + MOD - 1) % MOD;  // prime-1 mod MOD\n            // Fermat 小定理求逆\n            inv_denom = modpow(denom, MOD - 2, MOD);\n        }\n        ll term = (numerator * inv_denom) % MOD;\n        result = (result * term) % MOD;\n    }\n    return result;\n}\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int T;\n    cin >> T;\n    while (T--) {\n        ull n;\n        cin >> n;\n\n        // 1. 分解质因数\n        map<ull,int> factors;\n        factorize(n, factors);\n\n        // 2. 计算 σ(n)\n        ll sigma_n = calcSigma(factors);\n\n        // 3. 计算 σ(n/4)，若 n 可被 4 整除，则将质因数中 2 的指数减 2\n        ll sigma_n4 = 0;\n        auto it = factors.find(2);\n        if (it != factors.end() && it->second >= 2) {\n            map<ull,int> factors_n4 = factors;\n            factors_n4[2] -= 2;\n            if (factors_n4[2] == 0) {\n                factors_n4.erase(2);\n            }\n            sigma_n4 = calcSigma(factors_n4);\n        }\n\n        // 4. 应用 Jacobi 四平方和定理并取模\n        ll ans = ((8LL * sigma_n % MOD) - (32LL * sigma_n4 % MOD) + MOD) % MOD;\n        cout << ans << \"\\n\";\n    }\n    return 0;\n}\n",
+        "time": 285,
+        "memory": 672,
+        "problem": {
+          "pid": "P2019",
+          "title": "四平方和定理",
+          "difficulty": 7,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 4398,
+        "submitTime": 1745653698,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 215158821,
+        "status": 12,
+        "enableO2": true,
+        "score": 100
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R215158821",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186346,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "recordId": "147927882",
+  "url": "https://www.luogu.com.cn/record/147927882?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T04:12:42.884Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":\"SubmissionError: unable to fetch record id\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":11,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":401,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h>\\r\\nusing namespace std;\\r\\nconst int N=1e5+5;\\r\\nlong long t,n,a[N],b[N];\\r\\nint main()\\r\\n{\\r\\n\\tcin>>t;\\r\\n\\twhile(t--)\\r\\n\\t{\\r\\n\\t\\tlong long a1=0,b1=0,c=0;\\r\\n\\t\\tcin>>n;\\r\\n\\t\\tfor(long long i=1;i<=n;i++)\\r\\n\\t\\t{\\r\\n\\t\\t\\tcin>>a[i];\\r\\n\\t\\t\\ta1+=a[i];\\r\\n\\t\\t}\\r\\n\\t\\tfor(long long i=1;i<=n;i++)\\r\\n\\t\\t{\\r\\n\\t\\t\\tcin>>b[i];\\r\\n\\t\\t\\tb1+=b[i];\\r\\n\\t\\t\\tif(a[i]!=b[i])\\r\\n\\t\\t\\t{\\r\\n\\t\\t\\t\\tc++;\\r\\n\\t\\t\\t}\\r\\n\\t\\t}\\r\\n\\t\\tif(a1==b1)\\r\\n\\t\\t{\\r\\n\\t\\t\\tif(c)\\r\\n\\t\\t\\t{\\r\\n\\t\\t\\t\\tcout<<\\\"1\\\"<<endl;\\r\\n\\t\\t\\t}\\r\\n\\t\\t\\telse\\r\\n\\t\\t\\t{\\r\\n\\t\\t\\t\\tcout<<\\\"0\\\"<<endl;\\r\\n\\t\\t\\t}\\r\\n\\t\\t\\tcontinue;\\r\\n\\t\\t}\\r\\n\\t\\tcout<<min(c,abs(a1-b1)+1)<<endl;\\r\\n\\t}\\r\\n} \",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"CF1736A\",\"title\":\"Make A Equal to B\",\"difficulty\":2,\"fullScore\":100,\"type\":\"CF\"},\"contest\":null,\"sourceCodeLength\":522,\"submitTime\":1708568579,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":147927882,\"status\":11,\"enableO2\":false},\"testCaseGroup\":[[0]],\"showStatus\":true},\"currentTitle\":\"R147927882\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782187962,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": "SubmissionError: unable to fetch record id",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 11,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 401,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h>\r\nusing namespace std;\r\nconst int N=1e5+5;\r\nlong long t,n,a[N],b[N];\r\nint main()\r\n{\r\n\tcin>>t;\r\n\twhile(t--)\r\n\t{\r\n\t\tlong long a1=0,b1=0,c=0;\r\n\t\tcin>>n;\r\n\t\tfor(long long i=1;i<=n;i++)\r\n\t\t{\r\n\t\t\tcin>>a[i];\r\n\t\t\ta1+=a[i];\r\n\t\t}\r\n\t\tfor(long long i=1;i<=n;i++)\r\n\t\t{\r\n\t\t\tcin>>b[i];\r\n\t\t\tb1+=b[i];\r\n\t\t\tif(a[i]!=b[i])\r\n\t\t\t{\r\n\t\t\t\tc++;\r\n\t\t\t}\r\n\t\t}\r\n\t\tif(a1==b1)\r\n\t\t{\r\n\t\t\tif(c)\r\n\t\t\t{\r\n\t\t\t\tcout<<\"1\"<<endl;\r\n\t\t\t}\r\n\t\t\telse\r\n\t\t\t{\r\n\t\t\t\tcout<<\"0\"<<endl;\r\n\t\t\t}\r\n\t\t\tcontinue;\r\n\t\t}\r\n\t\tcout<<min(c,abs(a1-b1)+1)<<endl;\r\n\t}\r\n} ",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "CF1736A",
+          "title": "Make A Equal to B",
+          "difficulty": 2,
+          "fullScore": 100,
+          "type": "CF"
+        },
+        "contest": null,
+        "sourceCodeLength": 522,
+        "submitTime": 1708568579,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 147927882,
+        "status": 11,
+        "enableO2": false
+      },
+      "testCaseGroup": [
+        [
+          0
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R147927882",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782187962,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

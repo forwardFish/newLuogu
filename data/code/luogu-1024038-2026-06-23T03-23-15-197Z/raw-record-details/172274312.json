@@ -1,0 +1,191 @@
+{
+  "recordId": "172274312",
+  "url": "https://www.luogu.com.cn/record/172274312?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:54:44.109Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_ze9zkqqc\\/src:1:9: \\u81f4\\u547d\\u9519\\u8bef\\uff1abits\\/stdc++.H\\uff1aNo such file or directory\\n    1 | #include<bits\\/stdc++.H>\\n      |         ^~~~~~~~~~~~~~~\\n\\u7f16\\u8bd1\\u4e2d\\u65ad\\u3002\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.H>\\r\\nusing namespace std;\\r\\ntypedef unsigned long long ULL;\\r\\nconst int N=100010,P = 131;\\r\\nint n, k, hh;\\r\\nstring s[N] , t;\\r\\nULL p[N], h[N];\\r\\nULL a[N];\\r\\nset<ULL> w;\\r\\n \\r\\nULL get(int l, int r)\\r\\n{\\r\\n\\treturn h[r] - h[l - 1] * p[r - l + 1];\\r\\n}\\r\\n \\r\\nint main()\\r\\n{\\r\\n\\tcin >> n >> k;\\r\\n\\tfor(int i = 1; i <= n; i ++ )  cin >> s[i];\\r\\n\\tp[0] = 1;\\r\\n\\tfor(int i = 1; i <= 10; i ++ )  p[i] = p[i - 1] * P;\\r\\n\\tif(k == 3)\\r\\n\\t{\\r\\n\\t\\tfor(int i = 1; i <= n; i ++ )\\r\\n\\t\\t{\\r\\n\\t\\t\\tfor(int j = 1; j <= n; j ++ )\\r\\n\\t\\t\\t{\\r\\n\\t\\t\\t\\tif(i == j)  continue;\\r\\n\\t\\t\\t\\tfor(int o = 1; o <= n; o ++ )\\r\\n\\t\\t\\t\\t{\\r\\n\\t\\t\\t\\t\\tif(o == j || o == i)  continue;\\r\\n\\t\\t\\t\\t\\tt.clear();\\r\\n\\t\\t\\t\\t\\tt += s[i] + s[j] + s[o];\\r\\n\\t\\t\\t\\t\\tfor(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1]; \\r\\n\\t\\t\\t\\t\\tULL x = get(1, t.size());\\r\\n\\t\\t\\t\\t\\tw.insert(x);\\r\\n\\t\\t\\t\\t}\\r\\n\\t\\t\\t}\\r\\n\\t\\t}\\r\\n\\t\\tcout << w.size() << endl;\\r\\n\\t}\\r\\n\\telse if(k == 4)\\r\\n\\t{\\r\\n\\t\\tfor(int i = 1; i <= n; i ++ )\\r\\n\\t\\t{\\r\\n\\t\\t\\tfor(int j = 1; j <= n; j ++ )\\r\\n\\t\\t\\t{\\r\\n\\t\\t\\t\\tif(i == j)  continue;\\r\\n\\t\\t\\t\\tfor(int o = 1; o <= n; o ++ )\\r\\n\\t\\t\\t\\t{\\r\\n\\t\\t\\t\\t\\tif(o == i || o == j)  continue;\\r\\n\\t\\t\\t\\t\\tfor(int g = 1; g <= n; g ++ )\\r\\n\\t\\t\\t\\t\\t{\\r\\n\\t\\t\\t\\t\\t\\tif(g == o || g == j || g == i)  continue;\\r\\n\\t\\t\\t\\t\\t\\tt.clear();\\r\\n\\t\\t\\t\\t\\t\\tt += s[i] + s[j] + s[o] + s[g];\\r\\n\\t\\t\\t\\t\\t\\tfor(int q = 1; q <= t.size(); q ++ )\\th[q] = h[q - 1] * P + t[q - 1];\\r\\n\\t\\t\\t\\t\\t\\tULL x = get(1, t.size());\\r\\n\\t\\t\\t\\t\\t\\tw.insert(x);\\r\\n\\t\\t\\t\\t\\t}\\r\\n\\t\\t\\t\\t}\\r\\n\\t\\t\\t}\\r\\n\\t\\t}\\r\\n\\t\\tcout << w.size() << endl;\\r\\n\\t}\\r\\n\\telse if(k == 2)\\r\\n\\t{\\r\\n\\t\\tfor(int i = 1; i <= n; i ++ )\\r\\n\\t\\t{\\r\\n\\t\\t\\tfor(int j = 1; j <= n; j ++ )\\r\\n\\t\\t\\t{\\r\\n\\t\\t\\t\\tif(j == i)  continue;\\r\\n\\t\\t\\t\\tt.clear();\\r\\n\\t\\t\\t\\tt += s[i] + s[j];\\r\\n\\t\\t\\t\\tfor(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\\r\\n\\t\\t\\t\\tULL x = get(1, t.size());\\r\\n\\t\\t\\t\\tw.insert(x);\\r\\n\\t\\t\\t}\\r\\n\\t\\t}\\r\\n\\t\\tcout << w.size() << endl;\\r\\n\\t}\\r\\n\\telse if(k == 1)\\r\\n\\t{\\r\\n\\t\\tfor(int i = 1; i <= n; i ++ )\\r\\n\\t\\t{\\r\\n\\t\\t\\tt.clear();\\r\\n\\t\\t\\tt += s[i];\\r\\n\\t\\t\\tfor(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\\r\\n\\t\\t\\tULL x = get(1, t.size());\\r\\n\\t\\t\\tw.insert(x);\\r\\n\\t\\t}\\r\\n\\t\\tcout << w.size() << endl;\\r\\n\\t}\\r\\n}\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"U452718\",\"title\":\"\\u62fc\\u6570\",\"difficulty\":0,\"fullScore\":100,\"type\":\"U\"},\"contest\":null,\"sourceCodeLength\":1962,\"submitTime\":1723468045,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":172274312,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9]],\"showStatus\":true},\"currentTitle\":\"R172274312\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186884,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_ze9zkqqc/src:1:9: 致命错误：bits/stdc++.H：No such file or directory\n    1 | #include<bits/stdc++.H>\n      |         ^~~~~~~~~~~~~~~\n编译中断。\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.H>\r\nusing namespace std;\r\ntypedef unsigned long long ULL;\r\nconst int N=100010,P = 131;\r\nint n, k, hh;\r\nstring s[N] , t;\r\nULL p[N], h[N];\r\nULL a[N];\r\nset<ULL> w;\r\n \r\nULL get(int l, int r)\r\n{\r\n\treturn h[r] - h[l - 1] * p[r - l + 1];\r\n}\r\n \r\nint main()\r\n{\r\n\tcin >> n >> k;\r\n\tfor(int i = 1; i <= n; i ++ )  cin >> s[i];\r\n\tp[0] = 1;\r\n\tfor(int i = 1; i <= 10; i ++ )  p[i] = p[i - 1] * P;\r\n\tif(k == 3)\r\n\t{\r\n\t\tfor(int i = 1; i <= n; i ++ )\r\n\t\t{\r\n\t\t\tfor(int j = 1; j <= n; j ++ )\r\n\t\t\t{\r\n\t\t\t\tif(i == j)  continue;\r\n\t\t\t\tfor(int o = 1; o <= n; o ++ )\r\n\t\t\t\t{\r\n\t\t\t\t\tif(o == j || o == i)  continue;\r\n\t\t\t\t\tt.clear();\r\n\t\t\t\t\tt += s[i] + s[j] + s[o];\r\n\t\t\t\t\tfor(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1]; \r\n\t\t\t\t\tULL x = get(1, t.size());\r\n\t\t\t\t\tw.insert(x);\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t\tcout << w.size() << endl;\r\n\t}\r\n\telse if(k == 4)\r\n\t{\r\n\t\tfor(int i = 1; i <= n; i ++ )\r\n\t\t{\r\n\t\t\tfor(int j = 1; j <= n; j ++ )\r\n\t\t\t{\r\n\t\t\t\tif(i == j)  continue;\r\n\t\t\t\tfor(int o = 1; o <= n; o ++ )\r\n\t\t\t\t{\r\n\t\t\t\t\tif(o == i || o == j)  continue;\r\n\t\t\t\t\tfor(int g = 1; g <= n; g ++ )\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tif(g == o || g == j || g == i)  continue;\r\n\t\t\t\t\t\tt.clear();\r\n\t\t\t\t\t\tt += s[i] + s[j] + s[o] + s[g];\r\n\t\t\t\t\t\tfor(int q = 1; q <= t.size(); q ++ )\th[q] = h[q - 1] * P + t[q - 1];\r\n\t\t\t\t\t\tULL x = get(1, t.size());\r\n\t\t\t\t\t\tw.insert(x);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t\tcout << w.size() << endl;\r\n\t}\r\n\telse if(k == 2)\r\n\t{\r\n\t\tfor(int i = 1; i <= n; i ++ )\r\n\t\t{\r\n\t\t\tfor(int j = 1; j <= n; j ++ )\r\n\t\t\t{\r\n\t\t\t\tif(j == i)  continue;\r\n\t\t\t\tt.clear();\r\n\t\t\t\tt += s[i] + s[j];\r\n\t\t\t\tfor(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\r\n\t\t\t\tULL x = get(1, t.size());\r\n\t\t\t\tw.insert(x);\r\n\t\t\t}\r\n\t\t}\r\n\t\tcout << w.size() << endl;\r\n\t}\r\n\telse if(k == 1)\r\n\t{\r\n\t\tfor(int i = 1; i <= n; i ++ )\r\n\t\t{\r\n\t\t\tt.clear();\r\n\t\t\tt += s[i];\r\n\t\t\tfor(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\r\n\t\t\tULL x = get(1, t.size());\r\n\t\t\tw.insert(x);\r\n\t\t}\r\n\t\tcout << w.size() << endl;\r\n\t}\r\n}",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "U452718",
+          "title": "拼数",
+          "difficulty": 0,
+          "fullScore": 100,
+          "type": "U"
+        },
+        "contest": null,
+        "sourceCodeLength": 1962,
+        "submitTime": 1723468045,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 172274312,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R172274312",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186884,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

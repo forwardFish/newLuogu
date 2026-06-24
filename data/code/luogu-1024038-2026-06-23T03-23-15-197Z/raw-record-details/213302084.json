@@ -1,0 +1,362 @@
+{
+  "recordId": "213302084",
+  "url": "https://www.luogu.com.cn/record/213302084?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:46:31.628Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":{\"1\":{\"id\":1,\"score\":0,\"status\":12,\"testCases\":{\"10\":{\"id\":10,\"status\":12,\"time\":3,\"memory\":564,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"11\":{\"id\":11,\"status\":12,\"time\":3,\"memory\":556,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}},\"judger\":\"\",\"time\":3,\"memory\":564,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"},\"0\":{\"id\":0,\"score\":100,\"status\":12,\"testCases\":{\"0\":{\"id\":0,\"status\":12,\"time\":3,\"memory\":564,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"1\":{\"id\":1,\"status\":12,\"time\":4,\"memory\":564,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"2\":{\"id\":2,\"status\":12,\"time\":4,\"memory\":560,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"3\":{\"id\":3,\"status\":12,\"time\":4,\"memory\":564,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"4\":{\"id\":4,\"status\":12,\"time\":3,\"memory\":564,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"5\":{\"id\":5,\"status\":12,\"time\":4,\"memory\":680,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"6\":{\"id\":6,\"status\":12,\"time\":3,\"memory\":680,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"7\":{\"id\":7,\"status\":12,\"time\":3,\"memory\":564,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"9\":{\"id\":9,\"status\":12,\"time\":3,\"memory\":556,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"8\":{\"id\":8,\"status\":12,\"time\":4,\"memory\":564,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}},\"judger\":\"\",\"time\":35,\"memory\":680,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}},\"finishedCaseCount\":12,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h>\\nusing namespace std;\\nmap<string,int> name;\\nstring s,ss;\\nstring names[25];\\nstring testimony[25][105];\\nint num[25];\\nint n,m,p;\\nbool crap(string tmp)\\n{\\n    if(tmp==\\\" I am guilty.\\\") return 0;\\n    if(tmp==\\\" I am not guilty.\\\") return 0;\\n    if(tmp==\\\" Today is Monday.\\\") return 0;\\n    if(tmp==\\\" Today is Tuesday.\\\") return 0;\\n    if(tmp==\\\" Today is Wednesday.\\\") return 0;\\n    if(tmp==\\\" Today is Thursday.\\\") return 0;\\n    if(tmp==\\\" Today is Friday.\\\") return 0;\\n    if(tmp==\\\" Today is Saturday.\\\") return 0;\\n    if(tmp==\\\" Today is Sunday.\\\") return 0;\\n    for(int i=1;i<=m;i++)\\n        if(tmp==\\\" \\\"+names[i]+\\\" is guilty.\\\"||tmp==\\\" \\\"+names[i]+\\\" is not guilty.\\\") return 0;\\n    return 1;\\n}\\nbool judge(int guilty,int day)\\n{\\n    int ans;\\n    for(int i=1;i<=m;i++)\\n    {\\n        ans=0;\\n        for(int j=1;j<=num[i];j++)\\n        {\\n            if(testimony[i][j]==\\\" I am guilty.\\\"&&guilty!=i) {ans++;}\\n            if(testimony[i][j]==\\\" I am not guilty.\\\"&&guilty==i) {ans++;}\\n            if(testimony[i][j]==\\\" Today is Monday.\\\"&&day!=1) {ans++;}\\n            if(testimony[i][j]==\\\" Today is Tuesday.\\\"&&day!=2) {ans++;}\\n            if(testimony[i][j]==\\\" Today is Wednesday.\\\"&&day!=3) {ans++;}\\n            if(testimony[i][j]==\\\" Today is Thursday.\\\"&&day!=4) {ans++;}\\n            if(testimony[i][j]==\\\" Today is Friday.\\\"&&day!=5) {ans++;}\\n            if(testimony[i][j]==\\\" Today is Saturday.\\\"&&day!=6) {ans++;}\\n            if(testimony[i][j]==\\\" Today is Sunday.\\\"&&day!=7) {ans++;}\\n            for(int k=1;k<=m;k++)\\n            {\\n                if(testimony[i][j]==\\\" \\\"+names[k]+\\\" is guilty.\\\"&&guilty!=k) {ans++;}\\n                if(testimony[i][j]==\\\" \\\"+names[k]+\\\" is not guilty.\\\"&&guilty==k) {ans++;}\\n            }\\n        }\\n        if(ans!=num[i]&&ans!=0) return 0;\\n    }\\n    return 1;\\n}\\nint check(int guilty,int day)\\n{\\n    int ans=0;\\n    bool twice;\\n    for(int i=1;i<=m;i++)\\n        for(int j=1;j<=num[i];j++)\\n        {\\n            twice=0;\\n            if(testimony[i][j]==\\\" I am guilty.\\\"&&guilty!=i) {ans++;break;}\\n            if(testimony[i][j]==\\\" I am not guilty.\\\"&&guilty==i) {ans++;break;}\\n            if(testimony[i][j]==\\\" Today is Monday.\\\"&&day!=1) {ans++;break;}\\n            if(testimony[i][j]==\\\" Today is Tuesday.\\\"&&day!=2) {ans++;break;}\\n            if(testimony[i][j]==\\\" Today is Wednesday.\\\"&&day!=3) {ans++;break;}\\n            if(testimony[i][j]==\\\" Today is Thursday.\\\"&&day!=4) {ans++;break;}\\n            if(testimony[i][j]==\\\" Today is Friday.\\\"&&day!=5) {ans++;break;}\\n            if(testimony[i][j]==\\\" Today is Saturday.\\\"&&day!=6) {ans++;break;}\\n            if(testimony[i][j]==\\\" Today is Sunday.\\\"&&day!=7) {ans++;break;}\\n            for(int k=1;k<=m;k++)\\n            {\\n                if(testimony[i][j]==\\\" \\\"+names[k]+\\\" is guilty.\\\"&&guilty!=k) {ans++;twice=1;break;}\\n                if(testimony[i][j]==\\\" \\\"+names[k]+\\\" is not guilty.\\\"&&guilty==k) {ans++;twice=1;break;}\\n            }\\n            if(twice==1) break;\\n        }\\n    if(ans!=n)\\n        for(int i=1;i<=m;i++)\\n        {\\n            if(num[i]==0) ans++;\\n            if(ans==n) break;\\n        }\\n    return ans;\\n}\\nint read()\\n{\\n    char c=getchar();\\n    int ans=0;\\n    while(c<'0'||c>'9') c=getchar();\\n    while(c>='0'&&c<='9')\\n    {\\n        ans=ans*10+c-48;\\n        c=getchar();\\n    }\\n    return ans;\\n}\\nstring gl()\\n{\\n    string sss,c;\\n    do\\n    {\\n        cin>>c;\\n        sss=sss+\\\" \\\"+c;\\n    }\\n    while(c[c.size()-1]!='.'&&c[c.size()-1]!='?'&&c[c.size()-1]!='!'&&c[c.size()-1]!=',');\\n    return sss;\\n}\\nint main()\\n{\\n    m=read();n=read();p=read();\\n    for(int i=1;i<=m;i++)\\n    {\\n        cin>>s;\\n        name[s]=i;\\n        names[i]=s;\\n    }\\n    for(int i=1;i<=p;i++)\\n    {\\n        cin>>s;\\n        s=s.substr(0,s.size()-1);\\n        ss=gl();\\n        if(crap(ss)) continue;\\n        num[name[s]]++;\\n        testimony[name[s]][num[name[s]]]=ss;\\n    }\\n    int flag=0;\\n    for(int i=1;i<=m;i++)\\n        for(int j=1;j<=7;j++)\\n            if(check(i,j)==n&&judge(i,j))\\n            {\\n                if(flag!=0)\\n                {\\n                    cout<<\\\"Cannot Determine\\\"<<endl;\\n                    return 0;\\n                }\\n                else\\n                {\\n                    flag=i;\\n                    break;\\n                }\\n            }\\n    if(flag==0) cout<<\\\"Impossible\\\"<<endl; else cout<<names[flag]<<endl;\\n    return 0;\\n}\\n\",\"time\":38,\"memory\":680,\"problem\":{\"pid\":\"P1039\",\"title\":\"[NOIP 2003 \\u63d0\\u9ad8\\u7ec4] \\u4fa6\\u63a2\\u63a8\\u7406\",\"difficulty\":5,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":4301,\"submitTime\":1744433191,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":213302084,\"status\":12,\"enableO2\":true,\"score\":100},\"testCaseGroup\":{\"1\":[0,1],\"0\":[2,3,4,5,6,7,8,9,10,11]},\"showStatus\":true},\"currentTitle\":\"R213302084\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186391,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": {
+              "0": {
+                "id": 0,
+                "score": 100,
+                "status": 12,
+                "testCases": {
+                  "0": {
+                    "id": 0,
+                    "status": 12,
+                    "time": 3,
+                    "memory": 564,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "1": {
+                    "id": 1,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 564,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "2": {
+                    "id": 2,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 560,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "3": {
+                    "id": 3,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 564,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "4": {
+                    "id": 4,
+                    "status": 12,
+                    "time": 3,
+                    "memory": 564,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "5": {
+                    "id": 5,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 680,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "6": {
+                    "id": 6,
+                    "status": 12,
+                    "time": 3,
+                    "memory": 680,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "7": {
+                    "id": 7,
+                    "status": 12,
+                    "time": 3,
+                    "memory": 564,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "8": {
+                    "id": 8,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 564,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "9": {
+                    "id": 9,
+                    "status": 12,
+                    "time": 3,
+                    "memory": 556,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                },
+                "judger": "",
+                "time": 35,
+                "memory": 680,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              },
+              "1": {
+                "id": 1,
+                "score": 0,
+                "status": 12,
+                "testCases": {
+                  "10": {
+                    "id": 10,
+                    "status": 12,
+                    "time": 3,
+                    "memory": 564,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 1,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "11": {
+                    "id": 11,
+                    "status": 12,
+                    "time": 3,
+                    "memory": 556,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 1,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                },
+                "judger": "",
+                "time": 3,
+                "memory": 564,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            },
+            "finishedCaseCount": 12,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h>\nusing namespace std;\nmap<string,int> name;\nstring s,ss;\nstring names[25];\nstring testimony[25][105];\nint num[25];\nint n,m,p;\nbool crap(string tmp)\n{\n    if(tmp==\" I am guilty.\") return 0;\n    if(tmp==\" I am not guilty.\") return 0;\n    if(tmp==\" Today is Monday.\") return 0;\n    if(tmp==\" Today is Tuesday.\") return 0;\n    if(tmp==\" Today is Wednesday.\") return 0;\n    if(tmp==\" Today is Thursday.\") return 0;\n    if(tmp==\" Today is Friday.\") return 0;\n    if(tmp==\" Today is Saturday.\") return 0;\n    if(tmp==\" Today is Sunday.\") return 0;\n    for(int i=1;i<=m;i++)\n        if(tmp==\" \"+names[i]+\" is guilty.\"||tmp==\" \"+names[i]+\" is not guilty.\") return 0;\n    return 1;\n}\nbool judge(int guilty,int day)\n{\n    int ans;\n    for(int i=1;i<=m;i++)\n    {\n        ans=0;\n        for(int j=1;j<=num[i];j++)\n        {\n            if(testimony[i][j]==\" I am guilty.\"&&guilty!=i) {ans++;}\n            if(testimony[i][j]==\" I am not guilty.\"&&guilty==i) {ans++;}\n            if(testimony[i][j]==\" Today is Monday.\"&&day!=1) {ans++;}\n            if(testimony[i][j]==\" Today is Tuesday.\"&&day!=2) {ans++;}\n            if(testimony[i][j]==\" Today is Wednesday.\"&&day!=3) {ans++;}\n            if(testimony[i][j]==\" Today is Thursday.\"&&day!=4) {ans++;}\n            if(testimony[i][j]==\" Today is Friday.\"&&day!=5) {ans++;}\n            if(testimony[i][j]==\" Today is Saturday.\"&&day!=6) {ans++;}\n            if(testimony[i][j]==\" Today is Sunday.\"&&day!=7) {ans++;}\n            for(int k=1;k<=m;k++)\n            {\n                if(testimony[i][j]==\" \"+names[k]+\" is guilty.\"&&guilty!=k) {ans++;}\n                if(testimony[i][j]==\" \"+names[k]+\" is not guilty.\"&&guilty==k) {ans++;}\n            }\n        }\n        if(ans!=num[i]&&ans!=0) return 0;\n    }\n    return 1;\n}\nint check(int guilty,int day)\n{\n    int ans=0;\n    bool twice;\n    for(int i=1;i<=m;i++)\n        for(int j=1;j<=num[i];j++)\n        {\n            twice=0;\n            if(testimony[i][j]==\" I am guilty.\"&&guilty!=i) {ans++;break;}\n            if(testimony[i][j]==\" I am not guilty.\"&&guilty==i) {ans++;break;}\n            if(testimony[i][j]==\" Today is Monday.\"&&day!=1) {ans++;break;}\n            if(testimony[i][j]==\" Today is Tuesday.\"&&day!=2) {ans++;break;}\n            if(testimony[i][j]==\" Today is Wednesday.\"&&day!=3) {ans++;break;}\n            if(testimony[i][j]==\" Today is Thursday.\"&&day!=4) {ans++;break;}\n            if(testimony[i][j]==\" Today is Friday.\"&&day!=5) {ans++;break;}\n            if(testimony[i][j]==\" Today is Saturday.\"&&day!=6) {ans++;break;}\n            if(testimony[i][j]==\" Today is Sunday.\"&&day!=7) {ans++;break;}\n            for(int k=1;k<=m;k++)\n            {\n                if(testimony[i][j]==\" \"+names[k]+\" is guilty.\"&&guilty!=k) {ans++;twice=1;break;}\n                if(testimony[i][j]==\" \"+names[k]+\" is not guilty.\"&&guilty==k) {ans++;twice=1;break;}\n            }\n            if(twice==1) break;\n        }\n    if(ans!=n)\n        for(int i=1;i<=m;i++)\n        {\n            if(num[i]==0) ans++;\n            if(ans==n) break;\n        }\n    return ans;\n}\nint read()\n{\n    char c=getchar();\n    int ans=0;\n    while(c<'0'||c>'9') c=getchar();\n    while(c>='0'&&c<='9')\n    {\n        ans=ans*10+c-48;\n        c=getchar();\n    }\n    return ans;\n}\nstring gl()\n{\n    string sss,c;\n    do\n    {\n        cin>>c;\n        sss=sss+\" \"+c;\n    }\n    while(c[c.size()-1]!='.'&&c[c.size()-1]!='?'&&c[c.size()-1]!='!'&&c[c.size()-1]!=',');\n    return sss;\n}\nint main()\n{\n    m=read();n=read();p=read();\n    for(int i=1;i<=m;i++)\n    {\n        cin>>s;\n        name[s]=i;\n        names[i]=s;\n    }\n    for(int i=1;i<=p;i++)\n    {\n        cin>>s;\n        s=s.substr(0,s.size()-1);\n        ss=gl();\n        if(crap(ss)) continue;\n        num[name[s]]++;\n        testimony[name[s]][num[name[s]]]=ss;\n    }\n    int flag=0;\n    for(int i=1;i<=m;i++)\n        for(int j=1;j<=7;j++)\n            if(check(i,j)==n&&judge(i,j))\n            {\n                if(flag!=0)\n                {\n                    cout<<\"Cannot Determine\"<<endl;\n                    return 0;\n                }\n                else\n                {\n                    flag=i;\n                    break;\n                }\n            }\n    if(flag==0) cout<<\"Impossible\"<<endl; else cout<<names[flag]<<endl;\n    return 0;\n}\n",
+        "time": 38,
+        "memory": 680,
+        "problem": {
+          "pid": "P1039",
+          "title": "[NOIP 2003 提高组] 侦探推理",
+          "difficulty": 5,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 4301,
+        "submitTime": 1744433191,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 213302084,
+        "status": 12,
+        "enableO2": true,
+        "score": 100
+      },
+      "testCaseGroup": {
+        "0": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "1": [
+          0,
+          1
+        ]
+      },
+      "showStatus": true
+    },
+    "currentTitle": "R213302084",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186391,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "recordId": "222209234",
+  "url": "https://www.luogu.com.cn/record/222209234?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:44:27.136Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_xrvv5s2k\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_xrvv5s2k\\/src:33:9: \\u9519\\u8bef\\uff1ano match for \\u2018operator==\\u2019 (operand types are \\u2018std::string\\u2019 {aka \\u2018std::__cxx11::basic_string<char>\\u2019} and \\u2018char\\u2019)\\n   33 |     if(s=='1')\\n      |        ~^~~~~\\n      |        |  |\\n      |        |  char\\n      |        std::string {aka std::__cxx11::basic_string<char>}\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/regex:62,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:110,\\n                 from \\/tmp\\/compiler_xrvv5s2k\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/regex.h:1026:5: \\u9644\\u6ce8\\uff1acandidate: \\u2018template<class _BiIter> bool std::__cxx11::operator==(const std::__cxx11::sub_match<_BiIter>&, const std::__cxx11::sub_match<_BiIter>&)\\u2019\\n 1026 |     operator==(const sub_match<_BiIter>& __lhs, const sub_match<_BiIter>& __rhs)\\n      |     ^~~~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/regex.h:1026:5: \\u9644\\u6ce8\\uff1a  template argument deduction\\/substitution failed:\\n\\/tmp\\/compiler_xrvv5s2k\\/src:33:11: \\u9644\\u6ce8\\uff1a  \\u2018std::string\\u2019 {aka \\u2018std::__cxx11::basic_string<char>\\u2019} is not derived from \\u2018const std::__cxx11::sub_match<_BiIter>\\u2019\\n   33 |     if(s=='1')\\n      |           ^~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/regex:62,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:110,\\n                 from \\/tmp\\/compiler_xrvv5s2k\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/regex.h:1099:5: \\u9644\\u6ce8\\uff1acandidate: \\u2018template<class _Bi_iter, class _Ch_traits, class _Ch_alloc> bool std::__cxx11::operator==(std::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>&, const std::__cxx11::sub_match<_BiIter>&)\\u2019\\n 1099 |     operator==(const __sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>& __lhs,\\n      |     ^~~~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/regex.h:1099:5: \\u9644\\u6ce8\\uff1a  template argument deduction\\/substitution failed:\\n\\/tmp\\/compiler_xrvv5s2k\\/src:33:11: \\u9644\\u6ce8\\uff1a  mismatched types \\u2018const std::__cxx11::sub_match<_BiIter>\\u2019 and \\u2018char\\u2019\\n   33 |     if(s=='1')\\n      |           ^~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/regex:62,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:110,\\n                 from \\/tmp\\/compiler_xrvv5s2k\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/regex.h:1173:5: \\u9644\\u6ce8\\uff1acandidate: \\u2018template<class _Bi_iter, class _Ch_traits, class _Ch_alloc> bool std::__cxx11::operator==(const std::__cxx11::sub_match<_BiIter>&, std::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>&)\\u2019\\n 1173 |     operator==(const sub_match<_Bi_iter>& __lhs,\\n      |     ^~~~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/regex.h:1173:5: \\u9644\\u6ce8\\uff1a  template argument deduction\\/substitution failed:\\n\\/tmp\\/compiler_xrvv5s2k\\/src:33:11: \\u9644\\u6ce8\\uff1a  \\u2018std::string\\u2019 {aka \\u2018std::__cxx11::basic_string<char>\\u2019} is not derived from \\u2018const std::__cxx11::sub_match<_BiIter>\\u2019\\n   33 |     if(s=='1')\\n      |           ^~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/regex:62,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:110,\\n                 from \\/tmp\\/compiler_xrvv5s2k\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/regex.h:1247:5: \\u9644\\u6ce8\\uff1acandidate: \\u2018template<class _Bi_iter> bool std::__cxx11::operator==(const typename std::iterator_traits<_Iter>::value_type*, const std::__cxx11::sub_match<_BiIter>&)\\u2019\\n 1247 |     operator==(typename iterator_traits<_Bi_iter>::value_type const* __lhs,\\n      |     ^~~~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/regex.h:1247:5: \\u9644\\u6ce8\\uff1a  template argument deduction\\/substitution failed:\\n\\/tmp\\/compiler_xrvv5s2k\\/src:33:11: \\u9644\\u6ce8\\uff1a  mismatched types \\u2018const std::__cxx11::sub_match<_BiIter>\\u2019 and \\u2018char\\u2019\\n   33 |     if(s=='1')\\n      |           ^~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/regex:62,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:110,\\n                 from \\/tmp\\/compiler_xrvv5s2k\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/regex.h:1321:5: \\u9644\\u6ce8\\uff1acandidate: \\u2018template<class _Bi_iter> bool std::__cxx11::operator==(const std::__cxx11::sub_match<_BiIter>&, const typename std::iterator_traits<_Iter>::value_type*)\\u2019\\n 1321 |     operator==(const sub_match<_Bi_iter>& __lhs,\\n      |     ^~~~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/regex.h:1321:5: \\u9644\\u6ce8\\uff1a  template argument deduction\\/substitution failed:\\n\\/tmp\\/compiler_xrvv5s2k\\/src:33:11: \\u9644\\u6ce8\\uff1a  \\u2018std::string\\u2019 {aka \\u2018std::__cxx11::basic_string<char>\\u2019} is not derived from \\u2018const std::__cxx11::sub_match<_BiIter>\\u2019\\n   33 |     if(s=='1')\\n      |           ^~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/regex:62,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:110,\\n                 from \\/tmp\\/compiler_xrvv5s2k\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/regex.h:1395:5: \\u9644\\u6ce8\\uff1acandidate: \\u2018template<class _Bi_iter> bool std::__cxx11::operator==(const typename std::iterator_traits<_Iter>::value_type&, const std::__cxx11::sub_match<_BiIter>&)\\u2019\\n 1395 |     operator==(typename iterator_traits<_Bi_iter>::value_type const& __lhs,\\n      |     ^~~~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/regex.h:1395:5: \\u9644\\u6ce8\\uff1a  template argument deduction\\/substitution failed:\\n\\/tmp\\/compiler_xrvv5s2k\\/src:33:11: \\u9644\\u6ce8\\uff1a  mismatched types \\u2018const std::__cxx11::sub_match<_BiIter>\\u2019 and \\u2018char\\u2019\\n   33 |     if(s=='1')\\n      |           ^~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/regex:62,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:110,\\n                 from \\/tmp\\/compiler_xrvv5s2k\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/regex.h:1473:5: \\u9644\\u6ce8\\uff1acandidate: \\u2018template<class _Bi_iter> bool std::__cxx11::operator==(const std::__cxx11::sub_match<_BiIter>&, const typename std::iterator_traits<_Iter>::value_type&)\\u2019\\n 1473 |     operator==(const sub_match<_Bi_iter>& __lhs,\\n      |     ^~~~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/regex.h:1473:5: \\u9644\\u6ce8\\uff1a  template argument deduction\\/substitution failed:\\n\\/tmp\\/compiler_xrvv5s2k\\/src:33:11: \\u9644\\u6ce8\\uff1a  \\u2018std::string\\u2019 {aka \\u2018std::__cxx11::basic_string<char>\\u2019} is not derived from \\u2018const std::__cxx11::sub_match<_BiIter>\\u2019\\n   33 |     if(s=='1')\\n      |           ^~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/regex:62,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:110,\\n                 from \\/tmp\\/compiler_xrvv5s2k\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/regex.h:1991:5: \\u9644\\u6ce8\\uff1acandidate: \\u2018template<class _Bi_iter, class _Alloc> bool std::__cxx11::operator==(const std::__cxx11::match_results<_BiIter, _Alloc>&, const std::__cxx11::match_results<_BiIter, _Alloc>&)\\u2019\\n 1991 |     operator==(const match_results<_Bi_iter, _Alloc>& __m1,\\n      |     ^~~~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/regex.h:1991:5: \\u9644\\u6ce8\\uff1a  template argument deduction\\/substitution failed:\\n\\/tmp\\/compiler_xrvv5s2k\\/src:33:11: \\u9644\\u6ce8\\uff1a  \\u2018std::string\\u2019 {aka \\u2018std::__cxx11::basic_string<char>\\u2019} is not derived from \\u2018const std::__cxx11::match_results<_BiIter, _Alloc>\\u2019\\n   33 |     if(s=='1')\\n      |           ^~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iosfwd:40,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ios:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/istream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/sstream:38,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/complex:45,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/ccomplex:39,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:54,\\n                 from \\/tmp\\/compiler_xrvv5s2k\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/postypes.h:222:5: \\u9644\\u6ce8\\uff1acandidate: \\u2018template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)\\u2019\\n  222 |     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)\\n      |     ^~~~~~~~\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/postypes.h:222:5: \\u9644\\u6ce8\\uff1a  template argument deduction\\/substitution failed:\\n\\/tmp\\/compiler_xrvv5s2k\\/src:33:11: \\u9644\\u6ce8\\uff1a  \\u2018std::string\\u2019 {aka \\u2018std::__cxx11::basic_string<char>\\u2019} is not derived from \\u2018const std::fpos<_StateT>\\u2019\\n   33 |     if(s=='1')\\n      |           ^~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_algobase.h:64,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/char_t\\n...\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h>\\nusing namespace std;\\n#define int long long \\ninline int read()\\n{\\n    int x = 0, f = 1; char ch = getchar();\\n    while (!isdigit(ch)) {\\n        if (ch == '-') f = -1;\\n        ch = getchar();\\n    }\\n    while (isdigit(ch)) {\\n        x = x * 10 + ch - '0';\\n        ch = getchar();\\n    }\\n    return x * f;\\n}\\ninline void write(int x)\\n{\\n    if (x < 0) {\\n        putchar('-');\\n        x = -x;\\n    }\\n    if (x > 9) write(x \\/ 10);\\n    putchar(x % 10 + '0');\\n}\\nsigned main()\\n{\\n\\tios::sync_with_stdio(false);\\n\\tcin.tie(nullptr);\\n\\tcout.tie(nullptr);\\n\\tstring s,s1;\\n\\tcin>>s;\\n    if(s=='1')\\n    {\\n        cout<<110\\/0;\\n    }\\n\\tcout<<\\\"1\\\";\\n\\tfor(int i=1;i<s.size();i++)\\n\\t{\\n\\t\\tcout<<\\\"00\\\";\\n\\t}\\n\\treturn 0;\\n}\\n\\n\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"U519362\",\"title\":\"\\u51fd\\u6570\",\"difficulty\":7,\"fullScore\":12,\"type\":\"U\"},\"contest\":null,\"sourceCodeLength\":704,\"submitTime\":1751535303,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":222209234,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1,2,3,4,5,6,7]],\"showStatus\":true},\"currentTitle\":\"R222209234\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186267,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_xrvv5s2k/src: 在函数‘int main()’中:\n/tmp/compiler_xrvv5s2k/src:33:9: 错误：no match for ‘operator==’ (operand types are ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} and ‘char’)\n   33 |     if(s=='1')\n      |        ~^~~~~\n      |        |  |\n      |        |  char\n      |        std::string {aka std::__cxx11::basic_string<char>}\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/regex:62,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:110,\n                 from /tmp/compiler_xrvv5s2k/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/regex.h:1026:5: 附注：candidate: ‘template<class _BiIter> bool std::__cxx11::operator==(const std::__cxx11::sub_match<_BiIter>&, const std::__cxx11::sub_match<_BiIter>&)’\n 1026 |     operator==(const sub_match<_BiIter>& __lhs, const sub_match<_BiIter>& __rhs)\n      |     ^~~~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/regex.h:1026:5: 附注：  template argument deduction/substitution failed:\n/tmp/compiler_xrvv5s2k/src:33:11: 附注：  ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘const std::__cxx11::sub_match<_BiIter>’\n   33 |     if(s=='1')\n      |           ^~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/regex:62,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:110,\n                 from /tmp/compiler_xrvv5s2k/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/regex.h:1099:5: 附注：candidate: ‘template<class _Bi_iter, class _Ch_traits, class _Ch_alloc> bool std::__cxx11::operator==(std::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>&, const std::__cxx11::sub_match<_BiIter>&)’\n 1099 |     operator==(const __sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>& __lhs,\n      |     ^~~~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/regex.h:1099:5: 附注：  template argument deduction/substitution failed:\n/tmp/compiler_xrvv5s2k/src:33:11: 附注：  mismatched types ‘const std::__cxx11::sub_match<_BiIter>’ and ‘char’\n   33 |     if(s=='1')\n      |           ^~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/regex:62,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:110,\n                 from /tmp/compiler_xrvv5s2k/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/regex.h:1173:5: 附注：candidate: ‘template<class _Bi_iter, class _Ch_traits, class _Ch_alloc> bool std::__cxx11::operator==(const std::__cxx11::sub_match<_BiIter>&, std::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>&)’\n 1173 |     operator==(const sub_match<_Bi_iter>& __lhs,\n      |     ^~~~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/regex.h:1173:5: 附注：  template argument deduction/substitution failed:\n/tmp/compiler_xrvv5s2k/src:33:11: 附注：  ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘const std::__cxx11::sub_match<_BiIter>’\n   33 |     if(s=='1')\n      |           ^~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/regex:62,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:110,\n                 from /tmp/compiler_xrvv5s2k/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/regex.h:1247:5: 附注：candidate: ‘template<class _Bi_iter> bool std::__cxx11::operator==(const typename std::iterator_traits<_Iter>::value_type*, const std::__cxx11::sub_match<_BiIter>&)’\n 1247 |     operator==(typename iterator_traits<_Bi_iter>::value_type const* __lhs,\n      |     ^~~~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/regex.h:1247:5: 附注：  template argument deduction/substitution failed:\n/tmp/compiler_xrvv5s2k/src:33:11: 附注：  mismatched types ‘const std::__cxx11::sub_match<_BiIter>’ and ‘char’\n   33 |     if(s=='1')\n      |           ^~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/regex:62,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:110,\n                 from /tmp/compiler_xrvv5s2k/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/regex.h:1321:5: 附注：candidate: ‘template<class _Bi_iter> bool std::__cxx11::operator==(const std::__cxx11::sub_match<_BiIter>&, const typename std::iterator_traits<_Iter>::value_type*)’\n 1321 |     operator==(const sub_match<_Bi_iter>& __lhs,\n      |     ^~~~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/regex.h:1321:5: 附注：  template argument deduction/substitution failed:\n/tmp/compiler_xrvv5s2k/src:33:11: 附注：  ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘const std::__cxx11::sub_match<_BiIter>’\n   33 |     if(s=='1')\n      |           ^~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/regex:62,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:110,\n                 from /tmp/compiler_xrvv5s2k/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/regex.h:1395:5: 附注：candidate: ‘template<class _Bi_iter> bool std::__cxx11::operator==(const typename std::iterator_traits<_Iter>::value_type&, const std::__cxx11::sub_match<_BiIter>&)’\n 1395 |     operator==(typename iterator_traits<_Bi_iter>::value_type const& __lhs,\n      |     ^~~~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/regex.h:1395:5: 附注：  template argument deduction/substitution failed:\n/tmp/compiler_xrvv5s2k/src:33:11: 附注：  mismatched types ‘const std::__cxx11::sub_match<_BiIter>’ and ‘char’\n   33 |     if(s=='1')\n      |           ^~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/regex:62,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:110,\n                 from /tmp/compiler_xrvv5s2k/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/regex.h:1473:5: 附注：candidate: ‘template<class _Bi_iter> bool std::__cxx11::operator==(const std::__cxx11::sub_match<_BiIter>&, const typename std::iterator_traits<_Iter>::value_type&)’\n 1473 |     operator==(const sub_match<_Bi_iter>& __lhs,\n      |     ^~~~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/regex.h:1473:5: 附注：  template argument deduction/substitution failed:\n/tmp/compiler_xrvv5s2k/src:33:11: 附注：  ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘const std::__cxx11::sub_match<_BiIter>’\n   33 |     if(s=='1')\n      |           ^~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/regex:62,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:110,\n                 from /tmp/compiler_xrvv5s2k/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/regex.h:1991:5: 附注：candidate: ‘template<class _Bi_iter, class _Alloc> bool std::__cxx11::operator==(const std::__cxx11::match_results<_BiIter, _Alloc>&, const std::__cxx11::match_results<_BiIter, _Alloc>&)’\n 1991 |     operator==(const match_results<_Bi_iter, _Alloc>& __m1,\n      |     ^~~~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/regex.h:1991:5: 附注：  template argument deduction/substitution failed:\n/tmp/compiler_xrvv5s2k/src:33:11: 附注：  ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘const std::__cxx11::match_results<_BiIter, _Alloc>’\n   33 |     if(s=='1')\n      |           ^~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iosfwd:40,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ios:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/istream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/sstream:38,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/complex:45,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/ccomplex:39,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:54,\n                 from /tmp/compiler_xrvv5s2k/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/postypes.h:222:5: 附注：candidate: ‘template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)’\n  222 |     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)\n      |     ^~~~~~~~\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/postypes.h:222:5: 附注：  template argument deduction/substitution failed:\n/tmp/compiler_xrvv5s2k/src:33:11: 附注：  ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘const std::fpos<_StateT>’\n   33 |     if(s=='1')\n      |           ^~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_algobase.h:64,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/char_t\n...",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h>\nusing namespace std;\n#define int long long \ninline int read()\n{\n    int x = 0, f = 1; char ch = getchar();\n    while (!isdigit(ch)) {\n        if (ch == '-') f = -1;\n        ch = getchar();\n    }\n    while (isdigit(ch)) {\n        x = x * 10 + ch - '0';\n        ch = getchar();\n    }\n    return x * f;\n}\ninline void write(int x)\n{\n    if (x < 0) {\n        putchar('-');\n        x = -x;\n    }\n    if (x > 9) write(x / 10);\n    putchar(x % 10 + '0');\n}\nsigned main()\n{\n\tios::sync_with_stdio(false);\n\tcin.tie(nullptr);\n\tcout.tie(nullptr);\n\tstring s,s1;\n\tcin>>s;\n    if(s=='1')\n    {\n        cout<<110/0;\n    }\n\tcout<<\"1\";\n\tfor(int i=1;i<s.size();i++)\n\t{\n\t\tcout<<\"00\";\n\t}\n\treturn 0;\n}\n\n",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "U519362",
+          "title": "函数",
+          "difficulty": 7,
+          "fullScore": 12,
+          "type": "U"
+        },
+        "contest": null,
+        "sourceCodeLength": 704,
+        "submitTime": 1751535303,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 222209234,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R222209234",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186267,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

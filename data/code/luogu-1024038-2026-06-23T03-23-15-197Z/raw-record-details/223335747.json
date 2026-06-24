@@ -1,0 +1,191 @@
+{
+  "recordId": "223335747",
+  "url": "https://www.luogu.com.cn/record/223335747?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:43:59.842Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_vmg1vlo4\\/src:3:9: \\u9519\\u8bef\\uff1a\\u2018#pragma GCC optimize\\u2019 is not allowed in online judge mode\\n    3 | #pragma GCC optimize(2)\\n      |         ^~~\\n\\/tmp\\/compiler_vmg1vlo4\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_vmg1vlo4\\/src:23:6: \\u8b66\\u544a\\uff1aunused variable \\u2018ans1\\u2019 [-Wunused-variable]\\n   23 |  int ans1=0,ans2=0,ans3=0,ans4=0;\\n      |      ^~~~\\n\\/tmp\\/compiler_vmg1vlo4\\/src:23:13: \\u8b66\\u544a\\uff1aunused variable \\u2018ans2\\u2019 [-Wunused-variable]\\n   23 |  int ans1=0,ans2=0,ans3=0,ans4=0;\\n      |             ^~~~\\n\\/tmp\\/compiler_vmg1vlo4\\/src:23:20: \\u8b66\\u544a\\uff1aunused variable \\u2018ans3\\u2019 [-Wunused-variable]\\n   23 |  int ans1=0,ans2=0,ans3=0,ans4=0;\\n      |                    ^~~~\\n\\/tmp\\/compiler_vmg1vlo4\\/src:23:27: \\u8b66\\u544a\\uff1aunused variable \\u2018ans4\\u2019 [-Wunused-variable]\\n   23 |  int ans1=0,ans2=0,ans3=0,ans4=0;\\n      |                           ^~~~\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h>\\n#define int long long\\n#pragma GCC optimize(2)\\nusing namespace std;\\nconst int maxn=2e5+5;\\nint a[maxn],b[maxn];\\nint dp[maxn][2];\\nsigned main()\\n{\\n\\tios::sync_with_stdio(false);\\n\\tcin.tie(0);\\n\\tcout.tie(0);\\n\\tint n;\\n\\tcin>>n;\\n\\tfor(int i=1;i<=n;i++)\\n\\t{\\n\\t\\tcin>>a[i];\\n\\t}\\n\\tfor(int i=1;i<=n;i++)\\n\\t{\\n\\t\\tcin>>b[i];\\n\\t}\\n\\tint ans1=0,ans2=0,ans3=0,ans4=0;\\n\\tfor(int i=2;i<=n;i++)\\n\\t{\\n\\t\\tdp[i][0]=min(abs(a[i]-a[i-1])+dp[i-1][0],abs(a[i]-b[i-1])+dp[i-1][1]);\\n\\t\\tdp[i][1]=min(abs(b[i]-a[i-1])+dp[i-1][0],abs(b[i]-b[i-1])+dp[i-1][1]);\\n\\t}\\n\\tcout<<min(dp[n][0],dp[n][1]);\\n\\treturn 0;\\n}\\n\\n\\n\\n\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"B4163\",\"title\":\"[BCSP-X 2024 12 \\u6708\\u521d\\u4e2d\\u7ec4] \\u5e8f\\u5217\\u9009\\u62e9\",\"difficulty\":3,\"fullScore\":100,\"type\":\"B\"},\"contest\":null,\"sourceCodeLength\":581,\"submitTime\":1752107789,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":223335747,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9]],\"showStatus\":true},\"currentTitle\":\"R223335747\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186239,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_vmg1vlo4/src:3:9: 错误：‘#pragma GCC optimize’ is not allowed in online judge mode\n    3 | #pragma GCC optimize(2)\n      |         ^~~\n/tmp/compiler_vmg1vlo4/src: 在函数‘int main()’中:\n/tmp/compiler_vmg1vlo4/src:23:6: 警告：unused variable ‘ans1’ [-Wunused-variable]\n   23 |  int ans1=0,ans2=0,ans3=0,ans4=0;\n      |      ^~~~\n/tmp/compiler_vmg1vlo4/src:23:13: 警告：unused variable ‘ans2’ [-Wunused-variable]\n   23 |  int ans1=0,ans2=0,ans3=0,ans4=0;\n      |             ^~~~\n/tmp/compiler_vmg1vlo4/src:23:20: 警告：unused variable ‘ans3’ [-Wunused-variable]\n   23 |  int ans1=0,ans2=0,ans3=0,ans4=0;\n      |                    ^~~~\n/tmp/compiler_vmg1vlo4/src:23:27: 警告：unused variable ‘ans4’ [-Wunused-variable]\n   23 |  int ans1=0,ans2=0,ans3=0,ans4=0;\n      |                           ^~~~\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h>\n#define int long long\n#pragma GCC optimize(2)\nusing namespace std;\nconst int maxn=2e5+5;\nint a[maxn],b[maxn];\nint dp[maxn][2];\nsigned main()\n{\n\tios::sync_with_stdio(false);\n\tcin.tie(0);\n\tcout.tie(0);\n\tint n;\n\tcin>>n;\n\tfor(int i=1;i<=n;i++)\n\t{\n\t\tcin>>a[i];\n\t}\n\tfor(int i=1;i<=n;i++)\n\t{\n\t\tcin>>b[i];\n\t}\n\tint ans1=0,ans2=0,ans3=0,ans4=0;\n\tfor(int i=2;i<=n;i++)\n\t{\n\t\tdp[i][0]=min(abs(a[i]-a[i-1])+dp[i-1][0],abs(a[i]-b[i-1])+dp[i-1][1]);\n\t\tdp[i][1]=min(abs(b[i]-a[i-1])+dp[i-1][0],abs(b[i]-b[i-1])+dp[i-1][1]);\n\t}\n\tcout<<min(dp[n][0],dp[n][1]);\n\treturn 0;\n}\n\n\n\n",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "B4163",
+          "title": "[BCSP-X 2024 12 月初中组] 序列选择",
+          "difficulty": 3,
+          "fullScore": 100,
+          "type": "B"
+        },
+        "contest": null,
+        "sourceCodeLength": 581,
+        "submitTime": 1752107789,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 223335747,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R223335747",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186239,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

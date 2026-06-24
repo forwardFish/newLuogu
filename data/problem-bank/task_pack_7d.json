@@ -1,0 +1,173 @@
+{
+  "generatedAt": "2026-06-24T02:59:45.225Z",
+  "goal": "CSP-S_FIRST_PRIZE",
+  "basedOnWeaknesses": [
+    "math_model_error_5",
+    "partial_score_partial_score_missed_16",
+    "interval_dp_state_error_4",
+    "dp_state_error_13",
+    "graph_model_error_7",
+    "binary_search_model_error_18",
+    "greedy_partial_score_missed_1",
+    "shortest_path_state_error_3"
+  ],
+  "mixRatio": {
+    "selectExisting": 0.5,
+    "historicalReview": 0.2,
+    "mutateExisting": 0.2,
+    "generateDiagnostic": 0.1
+  },
+  "days": [
+    {
+      "day": 1,
+      "theme": "T1 稳定性 + 边界检查",
+      "tasks": [
+        {
+          "taskType": "SELECT_EXISTING",
+          "targetAbility": "T1_STABILITY",
+          "selectionRule": "选择 2 道模拟/前缀和/简单贪心题。",
+          "trainingGoal": "提高一次 AC，减少边界和初始化错误。",
+          "verifyMethod": "提交次数 <= 2，提交前完成检查清单。"
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "theme": "数学：难题部分分拆解和得分策略不足",
+      "tasks": [
+        {
+          "taskType": "SELECT_EXISTING",
+          "source": "luogu_history",
+          "problemPid": "P3585",
+          "problemUrl": "https://www.luogu.com.cn/problem/P3585",
+          "module": "math",
+          "difficulty": "提高",
+          "selectionReason": "用于验证薄弱点：数学：难题部分分拆解和得分策略不足",
+          "trainingGoal": "2 道 数学 基础题，要求写清模型含义。；2 道 数学 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "timeLimitMinutes": 60,
+          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        },
+        {
+          "taskType": "MUTATE_EXISTING",
+          "mutationId": "mut_math_001",
+          "module": "math",
+          "trainingGoal": "改变子任务数据范围，训练 30/50/70 分拆解。",
+          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "theme": "partial_score：难题部分分拆解和得分策略不足",
+      "tasks": [
+        {
+          "taskType": "SELECT_EXISTING",
+          "source": "luogu_history",
+          "problemPid": "P10135",
+          "problemUrl": "https://www.luogu.com.cn/problem/P10135",
+          "module": "partial_score",
+          "difficulty": "提高+/省选-",
+          "selectionReason": "用于验证薄弱点：partial_score：难题部分分拆解和得分策略不足",
+          "trainingGoal": "2 道 partial_score 基础题，要求写清模型含义。；2 道 partial_score 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "timeLimitMinutes": 80,
+          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        },
+        {
+          "taskType": "MUTATE_EXISTING",
+          "mutationId": "mut_partial_score_002",
+          "module": "partial_score",
+          "trainingGoal": "改变子任务数据范围，训练 30/50/70 分拆解。",
+          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "theme": "区间 DP：区间 DP 的状态设计、初始化和枚举顺序不稳定",
+      "tasks": [
+        {
+          "taskType": "SELECT_EXISTING",
+          "source": "luogu_history",
+          "problemPid": "P8699",
+          "problemUrl": "https://www.luogu.com.cn/problem/P8699",
+          "module": "interval_dp",
+          "difficulty": "提高",
+          "selectionReason": "用于验证薄弱点：区间 DP：区间 DP 的状态设计、初始化和枚举顺序不稳定",
+          "trainingGoal": "2 道 区间 DP 基础题，要求写清模型含义。；2 道 区间 DP 中档题，限时并记录提交次数。；每题提交前必须写边界和初始化检查清单。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "timeLimitMinutes": 60,
+          "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。"
+        },
+        {
+          "taskType": "MUTATE_EXISTING",
+          "mutationId": "mut_interval_dp_003",
+          "module": "interval_dp",
+          "trainingGoal": "改变输出目标或初始化条件，验证是否真正理解区间 DP 状态和 len 枚举。",
+          "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。"
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "theme": "DP：DP 状态、转移和初始化需要进一步稳定",
+      "tasks": [
+        {
+          "taskType": "SELECT_EXISTING",
+          "source": "luogu_history",
+          "problemPid": "P12678",
+          "problemUrl": "https://www.luogu.com.cn/problem/P12678",
+          "module": "dp",
+          "difficulty": "提高",
+          "selectionReason": "用于验证薄弱点：DP：DP 状态、转移和初始化需要进一步稳定",
+          "trainingGoal": "2 道 DP 基础题，要求写清模型含义。；2 道 DP 中档题，限时并记录提交次数。；每题提交前必须写边界和初始化检查清单。",
+          "timeLimitMinutes": 60,
+          "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+        },
+        {
+          "taskType": "MUTATE_EXISTING",
+          "mutationId": "mut_dp_004",
+          "module": "dp",
+          "trainingGoal": "改变子任务数据范围，训练 30/50/70 分拆解。",
+          "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "theme": "图论建模：难题部分分拆解和得分策略不足",
+      "tasks": [
+        {
+          "taskType": "SELECT_EXISTING",
+          "source": "luogu_history",
+          "problemPid": "U465842",
+          "problemUrl": "https://www.luogu.com.cn/problem/U465842",
+          "module": "graph",
+          "difficulty": "提高",
+          "selectionReason": "用于验证薄弱点：图论建模：难题部分分拆解和得分策略不足",
+          "trainingGoal": "2 道 图论建模 基础题，要求写清模型含义。；2 道 图论建模 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "timeLimitMinutes": 60,
+          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        },
+        {
+          "taskType": "MUTATE_EXISTING",
+          "mutationId": "mut_graph_005",
+          "module": "graph",
+          "trainingGoal": "改变子任务数据范围，训练 30/50/70 分拆解。",
+          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "theme": "综合验证 + 原创诊断题草案",
+      "tasks": [
+        {
+          "taskType": "GENERATE_DIAGNOSTIC_DRAFT",
+          "generatedProblemId": "gen_math_001",
+          "targetAbility": "T3_PARTIAL_SCORE",
+          "trainingGoal": "用草案题验证迁移能力；草案未补齐测试前不可作为正式比赛题。",
+          "verifyMethod": "必须写 30/50/70 分方案，并人工确认题包完整性。"
+        }
+      ]
+    }
+  ]
+}

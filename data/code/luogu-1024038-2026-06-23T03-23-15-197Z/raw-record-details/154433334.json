@@ -1,0 +1,191 @@
+{
+  "recordId": "154433334",
+  "url": "https://www.luogu.com.cn/record/154433334?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T04:08:47.208Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_xlue4y9u\\/src:1:2: \\u9519\\u8bef\\uff1ainvalid preprocessing directive #inblude; did you mean #include?\\n    1 | #inblude<bits\\/stdc++.h>\\n      |  ^~~~~~~\\n      |  include\\n\\/tmp\\/compiler_xlue4y9u\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_xlue4y9u\\/src:6:2: \\u9519\\u8bef\\uff1a\\u2018bin\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n    6 |  bin>>a>>b;\\n      |  ^~~\\n\\/tmp\\/compiler_xlue4y9u\\/src:9:3: \\u9519\\u8bef\\uff1a\\u2018cout\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n    9 |   cout<<0;\\n      |   ^~~~\\n\\/tmp\\/compiler_xlue4y9u\\/src:1:1: \\u9644\\u6ce8\\uff1a\\u2018std::cout\\u2019 is defined in header \\u2018<iostream>\\u2019; did you forget to \\u2018#include <iostream>\\u2019?\\n  +++ |+#include <iostream>\\n    1 | #inblude<bits\\/stdc++.h>\\n\\/tmp\\/compiler_xlue4y9u\\/src:15:3: \\u9519\\u8bef\\uff1a\\u2018cout\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   15 |   cout<<0;\\n      |   ^~~~\\n\\/tmp\\/compiler_xlue4y9u\\/src:15:3: \\u9644\\u6ce8\\uff1a\\u2018std::cout\\u2019 is defined in header \\u2018<iostream>\\u2019; did you forget to \\u2018#include <iostream>\\u2019?\\n\\/tmp\\/compiler_xlue4y9u\\/src:20:3: \\u9519\\u8bef\\uff1a\\u2018cout\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   20 |   cout<<a\\/(2*b);\\n      |   ^~~~\\n\\/tmp\\/compiler_xlue4y9u\\/src:20:3: \\u9644\\u6ce8\\uff1a\\u2018std::cout\\u2019 is defined in header \\u2018<iostream>\\u2019; did you forget to \\u2018#include <iostream>\\u2019?\\n\\/tmp\\/compiler_xlue4y9u\\/src:23:2: \\u9519\\u8bef\\uff1a\\u2018bout\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   23 |  bout<<int(a\\/(2*b)+0.5);\\n      |  ^~~~\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#inblude<bits\\/stdc++.h>\\r\\nusing namespace std;\\r\\ndouble a,b;\\r\\nint main()\\r\\n{\\r\\n\\tbin>>a>>b;     \\r\\n\\tif(b>=a)\\r\\n\\t{\\r\\n\\t\\tcout<<0;\\r\\n\\t\\treturn 0;\\r\\n\\t}\\r\\n\\tdouble map=a\\/b;\\r\\n\\tif(int(map)==map && int(map)%2!=0)\\r\\n\\t{\\r\\n\\t\\tcout<<0;\\r\\n\\t\\treturn 0;\\r\\n\\t}\\r\\n\\tif(b==1)\\r\\n\\t{\\r\\n\\t\\tcout<<a\\/(2*b);\\r\\n\\t\\treturn 0;\\r\\n\\t}\\r\\n\\tbout<<int(a\\/(2*b)+0.5);\\r\\n\\treturn 0;\\r\\n}\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P5753\",\"title\":\"[NOI2000] \\u74f7\\u7247\\u9879\\u94fe\",\"difficulty\":2,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":314,\"submitTime\":1712307763,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":154433334,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9]],\"showStatus\":true},\"currentTitle\":\"R154433334\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782187727,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_xlue4y9u/src:1:2: 错误：invalid preprocessing directive #inblude; did you mean #include?\n    1 | #inblude<bits/stdc++.h>\n      |  ^~~~~~~\n      |  include\n/tmp/compiler_xlue4y9u/src: 在函数‘int main()’中:\n/tmp/compiler_xlue4y9u/src:6:2: 错误：‘bin’在此作用域中尚未声明\n    6 |  bin>>a>>b;\n      |  ^~~\n/tmp/compiler_xlue4y9u/src:9:3: 错误：‘cout’在此作用域中尚未声明\n    9 |   cout<<0;\n      |   ^~~~\n/tmp/compiler_xlue4y9u/src:1:1: 附注：‘std::cout’ is defined in header ‘<iostream>’; did you forget to ‘#include <iostream>’?\n  +++ |+#include <iostream>\n    1 | #inblude<bits/stdc++.h>\n/tmp/compiler_xlue4y9u/src:15:3: 错误：‘cout’在此作用域中尚未声明\n   15 |   cout<<0;\n      |   ^~~~\n/tmp/compiler_xlue4y9u/src:15:3: 附注：‘std::cout’ is defined in header ‘<iostream>’; did you forget to ‘#include <iostream>’?\n/tmp/compiler_xlue4y9u/src:20:3: 错误：‘cout’在此作用域中尚未声明\n   20 |   cout<<a/(2*b);\n      |   ^~~~\n/tmp/compiler_xlue4y9u/src:20:3: 附注：‘std::cout’ is defined in header ‘<iostream>’; did you forget to ‘#include <iostream>’?\n/tmp/compiler_xlue4y9u/src:23:2: 错误：‘bout’在此作用域中尚未声明\n   23 |  bout<<int(a/(2*b)+0.5);\n      |  ^~~~\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#inblude<bits/stdc++.h>\r\nusing namespace std;\r\ndouble a,b;\r\nint main()\r\n{\r\n\tbin>>a>>b;     \r\n\tif(b>=a)\r\n\t{\r\n\t\tcout<<0;\r\n\t\treturn 0;\r\n\t}\r\n\tdouble map=a/b;\r\n\tif(int(map)==map && int(map)%2!=0)\r\n\t{\r\n\t\tcout<<0;\r\n\t\treturn 0;\r\n\t}\r\n\tif(b==1)\r\n\t{\r\n\t\tcout<<a/(2*b);\r\n\t\treturn 0;\r\n\t}\r\n\tbout<<int(a/(2*b)+0.5);\r\n\treturn 0;\r\n}",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P5753",
+          "title": "[NOI2000] 瓷片项链",
+          "difficulty": 2,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 314,
+        "submitTime": 1712307763,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 154433334,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R154433334",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782187727,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

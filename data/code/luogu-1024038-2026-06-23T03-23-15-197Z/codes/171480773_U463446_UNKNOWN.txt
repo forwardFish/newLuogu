@@ -1,0 +1,6 @@
+from decimal import Decimal, getcontext
+getcontext().prec = 10000005
+a = int(input())
+b = int(input())
+result_mul = a * b
+print(f": {result_mul}")

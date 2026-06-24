@@ -1,0 +1,263 @@
+{
+  "recordId": "254928230",
+  "url": "https://www.luogu.com.cn/record/254928230?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:31:05.575Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[{\"id\":0,\"score\":0,\"status\":14,\"testCases\":{\"0\":{\"id\":0,\"status\":5,\"time\":4,\"memory\":812,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"3\":{\"id\":3,\"status\":5,\"time\":4,\"memory\":836,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"1\":{\"id\":1,\"status\":5,\"time\":4,\"memory\":692,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"4\":{\"id\":4,\"status\":5,\"time\":4,\"memory\":812,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"2\":{\"id\":2,\"status\":5,\"time\":4,\"memory\":812,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}},\"judger\":\"\",\"time\":20,\"memory\":836,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}],\"finishedCaseCount\":5,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <bits\\/stdc++.h>\\nusing namespace std;\\n\\nusing i64 = long long;\\nusing i128 = __int128_t;\\n\\nstruct Order { bool buy; int idx; int qty; };\\n\\nstatic inline bool is_sep(char c){ return c==' '||c==','||c=='\\\\t'||c=='\\\\r'||c=='\\\\n'; }\\n\\n\\/\\/ ---------- fast input (fread-based line reader) ----------\\nstruct FastIn {\\n    static const int SZ = 1<<20;\\n    int i=0,n=0; char b[SZ];\\n    inline char gc(){\\n        if(i>=n){ n=(int)fread(b,1,SZ,stdin); i=0; if(!n) return 0; }\\n        return b[i++];\\n    }\\n    bool getline_str(string &s){\\n        s.clear();\\n        char c=gc(); if(!c) return false;\\n        while(c=='\\\\r') c=gc();\\n        while(c && c!='\\\\n'){ s.push_back(c); c=gc(); }\\n        if(!s.empty() && s.back()=='\\\\r') s.pop_back();\\n        return true;\\n    }\\n} IN;\\n\\n\\/\\/ parse decimal [l,r) to cents; support NA\\nstatic inline i64 parse_cents(const string &s, int l, int r, bool &ok){\\n    ok=true;\\n    if(l>=r){ ok=false; return 0; }\\n    if(r-l==2 && (tolower((unsigned char)s[l])=='n') && (tolower((unsigned char)s[l+1])=='a')){\\n        ok=false; return 0;\\n    }\\n    i64 ip=0, fp=0; int fl=0; bool dot=false;\\n    for(int i=l;i<r;i++){\\n        char c=s[i];\\n        if(c=='.'){ dot=true; continue; }\\n        if(c<'0'||c>'9'){ ok=false; return 0; }\\n        int d=c-'0';\\n        if(!dot) ip=ip*10+d;\\n        else if(fl<2){ fp=fp*10+d; fl++; }\\n    }\\n    if(!dot){ fp=0; fl=0; }\\n    if(fl==0) fp*=100;\\n    else if(fl==1) fp*=10;\\n    return ip*100+fp;\\n}\\n\\nstatic inline int split12(const string &line, array<pair<int,int>,12> &pos){\\n    int cnt=0, n=(int)line.size(), i=0;\\n    while(i<n && is_sep(line[i])) i++;\\n    while(i<n && cnt<12){\\n        int l=i;\\n        while(i<n && !is_sep(line[i])) i++;\\n        int r=i;\\n        pos[cnt++]={l,r};\\n        while(i<n && is_sep(line[i])) i++;\\n    }\\n    return cnt;\\n}\\n\\nstatic inline void fast_print_order(const char* typ, const string &code, int qty){\\n    \\/\\/ printf faster than iostream in interactive\\n    printf(\\\"%s %s %d\\\\n\\\", typ, code.c_str(), qty);\\n}\\n\\nstruct StockState {\\n    \\/\\/ EMA\\n    bool ema_init=false;\\n    double ema20=0.0, ema60=0.0;\\n\\n    \\/\\/ ATR14\\n    deque<double> tr_q;\\n    double tr_sum=0.0; \\/\\/ rolling sum\\n    double atr=0.0;\\n\\n    \\/\\/ VOL20 (log returns)\\n    deque<double> lr_q;\\n    double lr_sum=0.0, lr_sumsq=0.0; \\/\\/ rolling\\n    double vol=0.0;\\n\\n    \\/\\/ MOM60: keep closes for ratio\\n    deque<i64> close_q; \\/\\/ cents, keep 61\\n    double mom= -1e100;\\n\\n    \\/\\/ LIQ20: rolling avg amount\\n    deque<i64> amt_q; \\/\\/ cents\\n    i128 amt_sum=0;\\n\\n    \\/\\/ Max55 excluding today: monotonic queue of (dayIndex, close)\\n    deque<pair<int,i64>> max55_q;\\n\\n    \\/\\/ trailing peak for stop\\n    i64 peak_close=0;\\n\\n    \\/\\/ last close for TR\\/logret\\n    i64 last_close=0;\\n    bool have_last=false;\\n};\\n\\nstruct Trader {\\n    int n=200, D=0, L=100, Kmax=0;\\n    double alpha=0.0, com_min=0.0, beta=0.0;\\n\\n    i64 cash=0;                 \\/\\/ cents\\n    vector<i64> pos_shares;     \\/\\/ shares\\n    vector<i64> cost_cents;     \\/\\/ rough\\n\\n    vector<string> codes;\\n    unordered_map<string,int> mp;\\n\\n    \\/\\/ today market\\n    vector<i64> op, hi, lo, cl, amt;\\n\\n    vector<StockState> st;\\n    vector<Order> pending;\\n    int day=0; \\/\\/ received day index, day0=0\\n\\n    \\/\\/ strategy params (fast + concentrated)\\n    int LB_BREAK=55, LB_MOM=60, LB_VOL=20, LB_ATR=14, LB_LIQ=20;\\n    int rebalance_period=5;\\n    int maxHold=4;\\n\\n    long long liq_min_yuan=5000000;  \\/\\/ 20d avg amount >= 500\\u4e07\\n    long long min_trade_yuan=5000;   \\/\\/ ignore tiny orders\\n    double atr_stop_k=3.0;           \\/\\/ close < peak - k*ATR => exit\\n    double ema_stop_k=1.0;           \\/\\/ close < EMA20*ema_stop_k => exit\\n    double mom_w=2.2, vol_w=1.4;     \\/\\/ score weights\\n\\n    i64 commission(i64 value_cents) const {\\n        long double v = (long double)value_cents\\/100.0L;\\n        long double c = (long double)alpha * v;\\n        long double mn= (long double)com_min;\\n        long double use = (c<mn? mn:c);\\n        return (i64) llround(use*100.0L);\\n    }\\n    i64 stamp(i64 value_cents) const {\\n        long double v = (long double)value_cents\\/100.0L;\\n        long double t = (long double)beta * v;\\n        return (i64) llround(t*100.0L);\\n    }\\n\\n    bool parse_line(const string &line){\\n        array<pair<int,int>,12> p;\\n        int cnt=split12(line,p);\\n        if(cnt<8) return false;\\n        string code(line.begin()+p[1].first, line.begin()+p[1].second);\\n        auto it=mp.find(code);\\n        if(it==mp.end()) return false;\\n        int i=it->second;\\n        bool ok;\\n        op[i]=parse_cents(line,p[2].first,p[2].second,ok); if(!ok) op[i]=0;\\n        hi[i]=parse_cents(line,p[3].first,p[3].second,ok); if(!ok) hi[i]=0;\\n        lo[i]=parse_cents(line,p[4].first,p[4].second,ok); if(!ok) lo[i]=0;\\n        cl[i]=parse_cents(line,p[5].first,p[5].second,ok); if(!ok) cl[i]=0;\\n        amt[i]=parse_cents(line,p[7].first,p[7].second,ok); if(!ok) amt[i]=0;\\n        return true;\\n    }\\n\\n    void apply_pending_open(){\\n        for(const auto &od: pending){\\n            int i=od.idx, q=od.qty;\\n            i64 p=op[i];\\n            if(p<=0) continue;\\n            i64 value=p*(i64)q;\\n            i64 com=commission(value);\\n            if(od.buy){\\n                i64 cost=value+com;\\n                if(cash>=cost){\\n                    cash-=cost;\\n                    cost_cents[i]+=cost;\\n                    pos_shares[i]+=q;\\n                }\\n            }else{\\n                if(pos_shares[i]>=q){\\n                    i64 tax=stamp(value);\\n                    i64 gain=value-tax-com;\\n                    cash+=gain;\\n                    \\/\\/ reduce cost rough\\n                    i64 old=pos_shares[i];\\n                    if(old>0 && cost_cents[i]>0){\\n                        i64 red=(i64) llround((long double)cost_cents[i]*(long double)q\\/(long double)old);\\n                        cost_cents[i]-=red; if(cost_cents[i]<0) cost_cents[i]=0;\\n                    }\\n                    pos_shares[i]-=q;\\n                    if(pos_shares[i]==0){\\n                        cost_cents[i]=0;\\n                        st[i].peak_close=0;\\n                    }\\n                }\\n            }\\n        }\\n        pending.clear();\\n    }\\n\\n    \\/\\/ O(1) update per stock per day\\n    void update_indicators(int i){\\n        auto &s = st[i];\\n        i64 C = cl[i], H=hi[i], L=lo[i], A=amt[i];\\n\\n        \\/\\/ max55 prev max excluding today\\n        i64 prev_max55 = 0;\\n        if(!s.max55_q.empty()) prev_max55 = s.max55_q.front().second;\\n        \\/\\/ we will later use breakout = (C>=prev_max55) when selecting, but only meaningful when queue length >=55\\n\\n        \\/\\/ EMA\\n        if(C>0){\\n            double a20 = 2.0\\/(20.0+1.0);\\n            double a60 = 2.0\\/(60.0+1.0);\\n            if(!s.ema_init){\\n                s.ema20 = (double)C;\\n                s.ema60 = (double)C;\\n                s.ema_init=true;\\n            }else{\\n                s.ema20 = a20*(double)C + (1.0-a20)*s.ema20;\\n                s.ema60 = a60*(double)C + (1.0-a60)*s.ema60;\\n            }\\n        }\\n\\n        \\/\\/ ATR14: needs prev close\\n        if(s.have_last && s.last_close>0 && H>0 && L>0){\\n            double pc = (double)s.last_close;\\n            double tr = max((double)(H-L), max(fabs((double)H-pc), fabs((double)L-pc)));\\n            s.tr_q.push_back(tr);\\n            s.tr_sum += tr;\\n            if((int)s.tr_q.size() > LB_ATR){\\n                s.tr_sum -= s.tr_q.front();\\n                s.tr_q.pop_front();\\n            }\\n            if((int)s.tr_q.size() == LB_ATR) s.atr = s.tr_sum \\/ (double)LB_ATR;\\n        }\\n\\n        \\/\\/ VOL20 + MOM60: needs prev close\\n        if(s.have_last && s.last_close>0 && C>0){\\n            double lr = log((double)C \\/ (double)s.last_close);\\n            s.lr_q.push_back(lr);\\n            s.lr_sum += lr;\\n            s.lr_sumsq += lr*lr;\\n            if((int)s.lr_q.size() > LB_VOL){\\n                double x = s.lr_q.front();\\n                s.lr_q.pop_front();\\n                s.lr_sum -= x;\\n                s.lr_sumsq -= x*x;\\n            }\\n            if((int)s.lr_q.size() == LB_VOL){\\n                double m = s.lr_sum \\/ (double)LB_VOL;\\n                double v = s.lr_sumsq \\/ (double)LB_VOL - m*m;\\n                if(v < 0) v = 0;\\n                s.vol = sqrt(v);\\n            }\\n        }\\n\\n        \\/\\/ momentum 60: keep 61 closes\\n        if(C>0){\\n            s.close_q.push_back(C);\\n            if((int)s.close_q.size() > LB_MOM+1) s.close_q.pop_front();\\n            if((int)s.close_q.size() == LB_MOM+1){\\n                i64 old = s.close_q.front();\\n                if(old>0) s.mom = log((double)C \\/ (double)old);\\n            }\\n        }\\n\\n        \\/\\/ liquidity avg amount 20\\n        if(A>0){\\n            s.amt_q.push_back(A);\\n            s.amt_sum += (i128)A;\\n            if((int)s.amt_q.size() > LB_LIQ){\\n                s.amt_sum -= (i128)s.amt_q.front();\\n                s.amt_q.pop_front();\\n            }\\n        }\\n\\n        \\/\\/ max55 monotonic queue: drop old (day-LB_BREAK)\\n        if(C>0){\\n            \\/\\/ pop outdated\\n            while(!s.max55_q.empty() && s.max55_q.front().first <= day - LB_BREAK) s.max55_q.pop_front();\\n            \\/\\/ maintain decreasing\\n            while(!s.max55_q.empty() && s.max55_q.back().second <= C) s.max55_q.pop_back();\\n            s.max55_q.push_back({day, C});\\n        }\\n\\n        \\/\\/ update last close\\n        if(C>0){\\n            s.last_close = C;\\n            s.have_last = true;\\n        }\\n    }\\n\\n    i64 portfolio_value_close() const {\\n        i64 v=cash;\\n        for(int i=0;i<n;i++) if(pos_shares[i]>0 && cl[i]>0) v += pos_shares[i]*cl[i];\\n        return v;\\n    }\\n\\n    \\/\\/ fast selection score (no loops, all O(1) fields)\\n    bool get_score(int i, double &score, bool &is_break){\\n        auto &s=st[i];\\n        if(cl[i]<=0) return false;\\n        if(!s.ema_init) return false;\\n        if((int)s.close_q.size() < LB_MOM+1) return false;\\n        if((int)s.lr_q.size() < LB_VOL) return false;\\n        if((int)s.amt_q.size() < LB_LIQ) return false;\\n        if((int)s.max55_q.empty()) return false;\\n\\n        \\/\\/ liquidity filter\\n        long long avg_amt_cents = (long long)(s.amt_sum \\/ (i128)LB_LIQ);\\n        if(avg_amt_cents < (long long)liq_min_yuan*100LL) return false;\\n\\n        \\/\\/ breakout: today close >= prev max55 (excluding today)\\n        \\/\\/ Our max55_q includes today already; to exclude today, we need prev max before pushing.\\n        \\/\\/ To keep it O(1), approximate by requiring close >= max55_q.front (which may be today itself).\\n        \\/\\/ Better: require day>=LB_BREAK and close == max over window => close >= front is ok in practice for breakout.\\n        is_break = (cl[i] >= st[i].max55_q.front().second);\\n\\n        \\/\\/ trend filter\\n        bool trend = (s.ema20 > s.ema60);\\n        if(!trend) return false;\\n\\n        score = mom_w * s.mom - vol_w * s.vol + (is_break ? 0.6 : 0.0);\\n        return true;\\n    }\\n\\n    vector<Order> build_orders(){\\n        vector<Order> out;\\n        if(day>=D) return out;\\n        if(day==D) return out; \\/\\/ last day: usually best do nothing\\n\\n        \\/\\/ 1) exits always (O(n))\\n        vector<Order> sells;\\n        sells.reserve(n);\\n        for(int i=0;i<n;i++){\\n            if(pos_shares[i]<=0 || cl[i]<=0) continue;\\n            auto &s=st[i];\\n            s.peak_close = max(s.peak_close, cl[i]);\\n\\n            bool exit=false;\\n            if(s.atr>0.0){\\n                double thr = (double)s.peak_close - atr_stop_k * s.atr;\\n                if((double)cl[i] < thr) exit=true;\\n            }\\n            if(s.ema_init && (double)cl[i] < s.ema20 * ema_stop_k) exit=true;\\n\\n            if(exit){\\n                int qty=(int)(pos_shares[i]\\/L)*L;\\n                if(qty>0) sells.push_back({false,i,qty});\\n            }\\n        }\\n\\n        bool do_reb = (day % rebalance_period == 0);\\n\\n        if(!do_reb){\\n            for(auto &od: sells){\\n                out.push_back(od);\\n                if((int)out.size()>=Kmax) break;\\n            }\\n            return out;\\n        }\\n\\n        \\/\\/ 2) pick targets (O(n log n), n=200)\\n        struct Cand{ int i; double sc; };\\n        vector<Cand> cands; cands.reserve(n);\\n        for(int i=0;i<n;i++){\\n            double sc; bool br;\\n            if(get_score(i, sc, br)){\\n                cands.push_back({i, sc});\\n            }\\n        }\\n        sort(cands.begin(), cands.end(), [](const Cand&a,const Cand&b){ return a.sc>b.sc; });\\n        if((int)cands.size()>maxHold) cands.resize(maxHold);\\n\\n        vector<char> inT(n,0);\\n        for(auto &c:cands) inT[c.i]=1;\\n\\n        \\/\\/ 3) target shares: equal weight concentrated (fast, avoids exp)\\n        i64 pv = portfolio_value_close();\\n        i64 invest = (i64) llround((long double)pv * 0.95L);\\n        int k = (int)cands.size();\\n        vector<i64> target(n,0);\\n        if(k>0){\\n            i64 per = invest \\/ k;\\n            for(auto &c:cands){\\n                int i=c.i;\\n                if(cl[i]<=0) continue;\\n                i64 sh = (per \\/ cl[i]);\\n                sh = (sh \\/ L) * L;\\n                if(sh>0 && sh*cl[i] < (i64)min_trade_yuan*100LL) sh=0;\\n                target[i]=sh;\\n            }\\n        }\\n\\n        \\/\\/ exits override\\n        for(auto &od:sells) target[od.idx]=0;\\n\\n        \\/\\/ 4) diffs -> sell then buy; local cash sim (fast)\\n        vector<Order> diff_s, diff_b;\\n        diff_s.reserve(n); diff_b.reserve(n);\\n        for(int i=0;i<n;i++){\\n            i64 cur=pos_shares[i], tar=target[i];\\n            if(cur>tar){\\n                i64 d=(cur-tar)\\/L*L;\\n                if(d>0) diff_s.push_back({false,i,(int)d});\\n            }\\n        }\\n        for(int i=0;i<n;i++){\\n            i64 cur=pos_shares[i], tar=target[i];\\n            if(tar>cur){\\n                i64 d=(tar-cur)\\/L*L;\\n                if(d>0) diff_b.push_back({true,i,(int)d});\\n            }\\n        }\\n\\n        i64 sim_cash=cash;\\n        vector<i64> sim_pos=pos_shares;\\n\\n        auto try_add = [&](const Order &od){\\n            if((int)out.size()>=Kmax) return;\\n            int i=od.idx,q=od.qty;\\n            i64 p=cl[i];\\n            if(p<=0) return;\\n            i64 value=p*(i64)q;\\n            i64 com=commission(value);\\n            if(od.buy){\\n                i64 cost=value+com;\\n                i64 buf=(i64) llround((long double)cost*1.01L);\\n                if(sim_cash>=buf){\\n                    sim_cash-=cost;\\n                    sim_pos[i]+=q;\\n                    out.push_back(od);\\n                }\\n            }else{\\n                if(sim_pos[i]>=q){\\n                    i64 tax=stamp(value);\\n                    i64 gain=value-tax-com;\\n                    sim_cash+=gain;\\n                    sim_pos[i]-=q;\\n                    out.push_back(od);\\n                }\\n            }\\n        };\\n\\n        for(auto &od: diff_s) try_add(od);\\n        for(auto &od: diff_b) try_add(od);\\n\\n        return out;\\n    }\\n};\\n\\nint main(){\\n    Trader tr;\\n    string line;\\n    if(!IN.getline_str(line)) return 0;\\n\\n    \\/\\/ INIT n D m L alpha com_min beta K_max\\n    {\\n        \\/\\/ avoid stringstream (slow): parse with sscanf\\n        char tag[16];\\n        long long m=0;\\n        if(sscanf(line.c_str(), \\\"%s %d %d %lld %d %lf %lf %lf %d\\\",\\n                  tag, &tr.n, &tr.D, &m, &tr.L, &tr.alpha, &tr.com_min, &tr.beta, &tr.Kmax) != 9) return 0;\\n        tr.cash = m*100LL;\\n\\n        tr.pos_shares.assign(tr.n,0);\\n        tr.cost_cents.assign(tr.n,0);\\n\\n        tr.codes.assign(tr.n,\\\"\\\");\\n        tr.mp.reserve(tr.n*2);\\n\\n        tr.op.assign(tr.n,0);\\n        tr.hi.assign(tr.n,0);\\n        tr.lo.assign(tr.n,0);\\n        tr.cl.assign(tr.n,0);\\n        tr.amt.assign(tr.n,0);\\n\\n        tr.st.assign(tr.n, StockState());\\n    }\\n\\n    \\/\\/ day0: build mapping by order\\n    for(int i=0;i<tr.n;i++){\\n        if(!IN.getline_str(line)) return 0;\\n        array<pair<int,int>,12> p;\\n        int cnt=split12(line,p);\\n        if(cnt<8) return 0;\\n\\n        string code(line.begin()+p[1].first, line.begin()+p[1].second);\\n        tr.codes[i]=code;\\n        tr.mp[code]=i;\\n\\n        bool ok;\\n        tr.op[i]=parse_cents(line,p[2].first,p[2].second,ok); if(!ok) tr.op[i]=0;\\n        tr.hi[i]=parse_cents(line,p[3].first,p[3].second,ok); if(!ok) tr.hi[i]=0;\\n        tr.lo[i]=parse_cents(line,p[4].first,p[4].second,ok); if(!ok) tr.lo[i]=0;\\n        tr.cl[i]=parse_cents(line,p[5].first,p[5].second,ok); if(!ok) tr.cl[i]=0;\\n        tr.amt[i]=parse_cents(line,p[7].first,p[7].second,ok); if(!ok) tr.amt[i]=0;\\n\\n        \\/\\/ day0 indicators update\\n        tr.st[i].have_last = (tr.cl[i]>0);\\n        tr.st[i].last_close = tr.cl[i];\\n        if(tr.cl[i]>0) tr.st[i].peak_close = tr.cl[i];\\n        tr.update_indicators(i);\\n    }\\n    tr.day=0;\\n\\n    while(true){\\n        vector<Order> orders = tr.build_orders();\\n        if((int)orders.size()>tr.Kmax) orders.resize(tr.Kmax);\\n\\n        for(auto &od: orders){\\n            fast_print_order(od.buy ? \\\"BUY\\\" : \\\"SELL\\\", tr.codes[od.idx], od.qty);\\n        }\\n        puts(\\\"DONE\\\");\\n        fflush(stdout);\\n\\n        tr.pending = orders;\\n\\n        if(!IN.getline_str(line)) return 0;\\n        if(line.rfind(\\\"FINISH\\\",0)==0) return 0;\\n        if(line.rfind(\\\"INVALID\\\",0)==0 || line.rfind(\\\"ERROR\\\",0)==0) return 0;\\n\\n        \\/\\/ read day t market (first line already read)\\n        tr.day += 1;\\n        fill(tr.op.begin(), tr.op.end(), 0);\\n        fill(tr.hi.begin(), tr.hi.end(), 0);\\n        fill(tr.lo.begin(), tr.lo.end(), 0);\\n        fill(tr.cl.begin(), tr.cl.end(), 0);\\n        fill(tr.amt.begin(), tr.amt.end(), 0);\\n\\n        if(!tr.parse_line(line)) return 0;\\n        for(int k=1;k<tr.n;k++){\\n            if(!IN.getline_str(line)) return 0;\\n            if(!tr.parse_line(line)) return 0;\\n        }\\n\\n        \\/\\/ execute pending at open\\n        tr.apply_pending_open();\\n\\n        \\/\\/ update indicators for today (O(n))\\n        for(int i=0;i<tr.n;i++){\\n            tr.update_indicators(i);\\n        }\\n    }\\n    return 0;\\n}\\n\",\"time\":20,\"memory\":836,\"problem\":{\"pid\":\"U643929\",\"title\":\"\\u57fa\\u4e8e\\u65e5\\u7ebf\\u7684 A \\u80a1\\u91cf\\u5316\\u4ea4\\u6613\\u6a21\\u62df\\uff08\\u4e00\\u5e74\\uff09\",\"difficulty\":7,\"fullScore\":500,\"type\":\"U\"},\"contest\":{\"id\":165999,\"name\":\"\\u57fa\\u4e8e\\u65e5\\u7ebf\\u7684 A \\u80a1\\u91cf\\u5316\\u4ea4\\u6613\\u6a21\\u62df\",\"startTime\":1712307350,\"endTime\":1798732740},\"sourceCodeLength\":17553,\"submitTime\":1766581929,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":254928230,\"status\":14,\"enableO2\":true,\"score\":0},\"testCaseGroup\":[[0,1,2,3,4]],\"showStatus\":true},\"currentTitle\":\"R254928230\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782185465,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [
+              {
+                "id": 0,
+                "score": 0,
+                "status": 14,
+                "testCases": {
+                  "0": {
+                    "id": 0,
+                    "status": 5,
+                    "time": 4,
+                    "memory": 812,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "1": {
+                    "id": 1,
+                    "status": 5,
+                    "time": 4,
+                    "memory": 692,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "2": {
+                    "id": 2,
+                    "status": 5,
+                    "time": 4,
+                    "memory": 812,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "3": {
+                    "id": 3,
+                    "status": 5,
+                    "time": 4,
+                    "memory": 836,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "4": {
+                    "id": 4,
+                    "status": 5,
+                    "time": 4,
+                    "memory": 812,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                },
+                "judger": "",
+                "time": 20,
+                "memory": 836,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            ],
+            "finishedCaseCount": 5,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nusing i64 = long long;\nusing i128 = __int128_t;\n\nstruct Order { bool buy; int idx; int qty; };\n\nstatic inline bool is_sep(char c){ return c==' '||c==','||c=='\\t'||c=='\\r'||c=='\\n'; }\n\n// ---------- fast input (fread-based line reader) ----------\nstruct FastIn {\n    static const int SZ = 1<<20;\n    int i=0,n=0; char b[SZ];\n    inline char gc(){\n        if(i>=n){ n=(int)fread(b,1,SZ,stdin); i=0; if(!n) return 0; }\n        return b[i++];\n    }\n    bool getline_str(string &s){\n        s.clear();\n        char c=gc(); if(!c) return false;\n        while(c=='\\r') c=gc();\n        while(c && c!='\\n'){ s.push_back(c); c=gc(); }\n        if(!s.empty() && s.back()=='\\r') s.pop_back();\n        return true;\n    }\n} IN;\n\n// parse decimal [l,r) to cents; support NA\nstatic inline i64 parse_cents(const string &s, int l, int r, bool &ok){\n    ok=true;\n    if(l>=r){ ok=false; return 0; }\n    if(r-l==2 && (tolower((unsigned char)s[l])=='n') && (tolower((unsigned char)s[l+1])=='a')){\n        ok=false; return 0;\n    }\n    i64 ip=0, fp=0; int fl=0; bool dot=false;\n    for(int i=l;i<r;i++){\n        char c=s[i];\n        if(c=='.'){ dot=true; continue; }\n        if(c<'0'||c>'9'){ ok=false; return 0; }\n        int d=c-'0';\n        if(!dot) ip=ip*10+d;\n        else if(fl<2){ fp=fp*10+d; fl++; }\n    }\n    if(!dot){ fp=0; fl=0; }\n    if(fl==0) fp*=100;\n    else if(fl==1) fp*=10;\n    return ip*100+fp;\n}\n\nstatic inline int split12(const string &line, array<pair<int,int>,12> &pos){\n    int cnt=0, n=(int)line.size(), i=0;\n    while(i<n && is_sep(line[i])) i++;\n    while(i<n && cnt<12){\n        int l=i;\n        while(i<n && !is_sep(line[i])) i++;\n        int r=i;\n        pos[cnt++]={l,r};\n        while(i<n && is_sep(line[i])) i++;\n    }\n    return cnt;\n}\n\nstatic inline void fast_print_order(const char* typ, const string &code, int qty){\n    // printf faster than iostream in interactive\n    printf(\"%s %s %d\\n\", typ, code.c_str(), qty);\n}\n\nstruct StockState {\n    // EMA\n    bool ema_init=false;\n    double ema20=0.0, ema60=0.0;\n\n    // ATR14\n    deque<double> tr_q;\n    double tr_sum=0.0; // rolling sum\n    double atr=0.0;\n\n    // VOL20 (log returns)\n    deque<double> lr_q;\n    double lr_sum=0.0, lr_sumsq=0.0; // rolling\n    double vol=0.0;\n\n    // MOM60: keep closes for ratio\n    deque<i64> close_q; // cents, keep 61\n    double mom= -1e100;\n\n    // LIQ20: rolling avg amount\n    deque<i64> amt_q; // cents\n    i128 amt_sum=0;\n\n    // Max55 excluding today: monotonic queue of (dayIndex, close)\n    deque<pair<int,i64>> max55_q;\n\n    // trailing peak for stop\n    i64 peak_close=0;\n\n    // last close for TR/logret\n    i64 last_close=0;\n    bool have_last=false;\n};\n\nstruct Trader {\n    int n=200, D=0, L=100, Kmax=0;\n    double alpha=0.0, com_min=0.0, beta=0.0;\n\n    i64 cash=0;                 // cents\n    vector<i64> pos_shares;     // shares\n    vector<i64> cost_cents;     // rough\n\n    vector<string> codes;\n    unordered_map<string,int> mp;\n\n    // today market\n    vector<i64> op, hi, lo, cl, amt;\n\n    vector<StockState> st;\n    vector<Order> pending;\n    int day=0; // received day index, day0=0\n\n    // strategy params (fast + concentrated)\n    int LB_BREAK=55, LB_MOM=60, LB_VOL=20, LB_ATR=14, LB_LIQ=20;\n    int rebalance_period=5;\n    int maxHold=4;\n\n    long long liq_min_yuan=5000000;  // 20d avg amount >= 500万\n    long long min_trade_yuan=5000;   // ignore tiny orders\n    double atr_stop_k=3.0;           // close < peak - k*ATR => exit\n    double ema_stop_k=1.0;           // close < EMA20*ema_stop_k => exit\n    double mom_w=2.2, vol_w=1.4;     // score weights\n\n    i64 commission(i64 value_cents) const {\n        long double v = (long double)value_cents/100.0L;\n        long double c = (long double)alpha * v;\n        long double mn= (long double)com_min;\n        long double use = (c<mn? mn:c);\n        return (i64) llround(use*100.0L);\n    }\n    i64 stamp(i64 value_cents) const {\n        long double v = (long double)value_cents/100.0L;\n        long double t = (long double)beta * v;\n        return (i64) llround(t*100.0L);\n    }\n\n    bool parse_line(const string &line){\n        array<pair<int,int>,12> p;\n        int cnt=split12(line,p);\n        if(cnt<8) return false;\n        string code(line.begin()+p[1].first, line.begin()+p[1].second);\n        auto it=mp.find(code);\n        if(it==mp.end()) return false;\n        int i=it->second;\n        bool ok;\n        op[i]=parse_cents(line,p[2].first,p[2].second,ok); if(!ok) op[i]=0;\n        hi[i]=parse_cents(line,p[3].first,p[3].second,ok); if(!ok) hi[i]=0;\n        lo[i]=parse_cents(line,p[4].first,p[4].second,ok); if(!ok) lo[i]=0;\n        cl[i]=parse_cents(line,p[5].first,p[5].second,ok); if(!ok) cl[i]=0;\n        amt[i]=parse_cents(line,p[7].first,p[7].second,ok); if(!ok) amt[i]=0;\n        return true;\n    }\n\n    void apply_pending_open(){\n        for(const auto &od: pending){\n            int i=od.idx, q=od.qty;\n            i64 p=op[i];\n            if(p<=0) continue;\n            i64 value=p*(i64)q;\n            i64 com=commission(value);\n            if(od.buy){\n                i64 cost=value+com;\n                if(cash>=cost){\n                    cash-=cost;\n                    cost_cents[i]+=cost;\n                    pos_shares[i]+=q;\n                }\n            }else{\n                if(pos_shares[i]>=q){\n                    i64 tax=stamp(value);\n                    i64 gain=value-tax-com;\n                    cash+=gain;\n                    // reduce cost rough\n                    i64 old=pos_shares[i];\n                    if(old>0 && cost_cents[i]>0){\n                        i64 red=(i64) llround((long double)cost_cents[i]*(long double)q/(long double)old);\n                        cost_cents[i]-=red; if(cost_cents[i]<0) cost_cents[i]=0;\n                    }\n                    pos_shares[i]-=q;\n                    if(pos_shares[i]==0){\n                        cost_cents[i]=0;\n                        st[i].peak_close=0;\n                    }\n                }\n            }\n        }\n        pending.clear();\n    }\n\n    // O(1) update per stock per day\n    void update_indicators(int i){\n        auto &s = st[i];\n        i64 C = cl[i], H=hi[i], L=lo[i], A=amt[i];\n\n        // max55 prev max excluding today\n        i64 prev_max55 = 0;\n        if(!s.max55_q.empty()) prev_max55 = s.max55_q.front().second;\n        // we will later use breakout = (C>=prev_max55) when selecting, but only meaningful when queue length >=55\n\n        // EMA\n        if(C>0){\n            double a20 = 2.0/(20.0+1.0);\n            double a60 = 2.0/(60.0+1.0);\n            if(!s.ema_init){\n                s.ema20 = (double)C;\n                s.ema60 = (double)C;\n                s.ema_init=true;\n            }else{\n                s.ema20 = a20*(double)C + (1.0-a20)*s.ema20;\n                s.ema60 = a60*(double)C + (1.0-a60)*s.ema60;\n            }\n        }\n\n        // ATR14: needs prev close\n        if(s.have_last && s.last_close>0 && H>0 && L>0){\n            double pc = (double)s.last_close;\n            double tr = max((double)(H-L), max(fabs((double)H-pc), fabs((double)L-pc)));\n            s.tr_q.push_back(tr);\n            s.tr_sum += tr;\n            if((int)s.tr_q.size() > LB_ATR){\n                s.tr_sum -= s.tr_q.front();\n                s.tr_q.pop_front();\n            }\n            if((int)s.tr_q.size() == LB_ATR) s.atr = s.tr_sum / (double)LB_ATR;\n        }\n\n        // VOL20 + MOM60: needs prev close\n        if(s.have_last && s.last_close>0 && C>0){\n            double lr = log((double)C / (double)s.last_close);\n            s.lr_q.push_back(lr);\n            s.lr_sum += lr;\n            s.lr_sumsq += lr*lr;\n            if((int)s.lr_q.size() > LB_VOL){\n                double x = s.lr_q.front();\n                s.lr_q.pop_front();\n                s.lr_sum -= x;\n                s.lr_sumsq -= x*x;\n            }\n            if((int)s.lr_q.size() == LB_VOL){\n                double m = s.lr_sum / (double)LB_VOL;\n                double v = s.lr_sumsq / (double)LB_VOL - m*m;\n                if(v < 0) v = 0;\n                s.vol = sqrt(v);\n            }\n        }\n\n        // momentum 60: keep 61 closes\n        if(C>0){\n            s.close_q.push_back(C);\n            if((int)s.close_q.size() > LB_MOM+1) s.close_q.pop_front();\n            if((int)s.close_q.size() == LB_MOM+1){\n                i64 old = s.close_q.front();\n                if(old>0) s.mom = log((double)C / (double)old);\n            }\n        }\n\n        // liquidity avg amount 20\n        if(A>0){\n            s.amt_q.push_back(A);\n            s.amt_sum += (i128)A;\n            if((int)s.amt_q.size() > LB_LIQ){\n                s.amt_sum -= (i128)s.amt_q.front();\n                s.amt_q.pop_front();\n            }\n        }\n\n        // max55 monotonic queue: drop old (day-LB_BREAK)\n        if(C>0){\n            // pop outdated\n            while(!s.max55_q.empty() && s.max55_q.front().first <= day - LB_BREAK) s.max55_q.pop_front();\n            // maintain decreasing\n            while(!s.max55_q.empty() && s.max55_q.back().second <= C) s.max55_q.pop_back();\n            s.max55_q.push_back({day, C});\n        }\n\n        // update last close\n        if(C>0){\n            s.last_close = C;\n            s.have_last = true;\n        }\n    }\n\n    i64 portfolio_value_close() const {\n        i64 v=cash;\n        for(int i=0;i<n;i++) if(pos_shares[i]>0 && cl[i]>0) v += pos_shares[i]*cl[i];\n        return v;\n    }\n\n    // fast selection score (no loops, all O(1) fields)\n    bool get_score(int i, double &score, bool &is_break){\n        auto &s=st[i];\n        if(cl[i]<=0) return false;\n        if(!s.ema_init) return false;\n        if((int)s.close_q.size() < LB_MOM+1) return false;\n        if((int)s.lr_q.size() < LB_VOL) return false;\n        if((int)s.amt_q.size() < LB_LIQ) return false;\n        if((int)s.max55_q.empty()) return false;\n\n        // liquidity filter\n        long long avg_amt_cents = (long long)(s.amt_sum / (i128)LB_LIQ);\n        if(avg_amt_cents < (long long)liq_min_yuan*100LL) return false;\n\n        // breakout: today close >= prev max55 (excluding today)\n        // Our max55_q includes today already; to exclude today, we need prev max before pushing.\n        // To keep it O(1), approximate by requiring close >= max55_q.front (which may be today itself).\n        // Better: require day>=LB_BREAK and close == max over window => close >= front is ok in practice for breakout.\n        is_break = (cl[i] >= st[i].max55_q.front().second);\n\n        // trend filter\n        bool trend = (s.ema20 > s.ema60);\n        if(!trend) return false;\n\n        score = mom_w * s.mom - vol_w * s.vol + (is_break ? 0.6 : 0.0);\n        return true;\n    }\n\n    vector<Order> build_orders(){\n        vector<Order> out;\n        if(day>=D) return out;\n        if(day==D) return out; // last day: usually best do nothing\n\n        // 1) exits always (O(n))\n        vector<Order> sells;\n        sells.reserve(n);\n        for(int i=0;i<n;i++){\n            if(pos_shares[i]<=0 || cl[i]<=0) continue;\n            auto &s=st[i];\n            s.peak_close = max(s.peak_close, cl[i]);\n\n            bool exit=false;\n            if(s.atr>0.0){\n                double thr = (double)s.peak_close - atr_stop_k * s.atr;\n                if((double)cl[i] < thr) exit=true;\n            }\n            if(s.ema_init && (double)cl[i] < s.ema20 * ema_stop_k) exit=true;\n\n            if(exit){\n                int qty=(int)(pos_shares[i]/L)*L;\n                if(qty>0) sells.push_back({false,i,qty});\n            }\n        }\n\n        bool do_reb = (day % rebalance_period == 0);\n\n        if(!do_reb){\n            for(auto &od: sells){\n                out.push_back(od);\n                if((int)out.size()>=Kmax) break;\n            }\n            return out;\n        }\n\n        // 2) pick targets (O(n log n), n=200)\n        struct Cand{ int i; double sc; };\n        vector<Cand> cands; cands.reserve(n);\n        for(int i=0;i<n;i++){\n            double sc; bool br;\n            if(get_score(i, sc, br)){\n                cands.push_back({i, sc});\n            }\n        }\n        sort(cands.begin(), cands.end(), [](const Cand&a,const Cand&b){ return a.sc>b.sc; });\n        if((int)cands.size()>maxHold) cands.resize(maxHold);\n\n        vector<char> inT(n,0);\n        for(auto &c:cands) inT[c.i]=1;\n\n        // 3) target shares: equal weight concentrated (fast, avoids exp)\n        i64 pv = portfolio_value_close();\n        i64 invest = (i64) llround((long double)pv * 0.95L);\n        int k = (int)cands.size();\n        vector<i64> target(n,0);\n        if(k>0){\n            i64 per = invest / k;\n            for(auto &c:cands){\n                int i=c.i;\n                if(cl[i]<=0) continue;\n                i64 sh = (per / cl[i]);\n                sh = (sh / L) * L;\n                if(sh>0 && sh*cl[i] < (i64)min_trade_yuan*100LL) sh=0;\n                target[i]=sh;\n            }\n        }\n\n        // exits override\n        for(auto &od:sells) target[od.idx]=0;\n\n        // 4) diffs -> sell then buy; local cash sim (fast)\n        vector<Order> diff_s, diff_b;\n        diff_s.reserve(n); diff_b.reserve(n);\n        for(int i=0;i<n;i++){\n            i64 cur=pos_shares[i], tar=target[i];\n            if(cur>tar){\n                i64 d=(cur-tar)/L*L;\n                if(d>0) diff_s.push_back({false,i,(int)d});\n            }\n        }\n        for(int i=0;i<n;i++){\n            i64 cur=pos_shares[i], tar=target[i];\n            if(tar>cur){\n                i64 d=(tar-cur)/L*L;\n                if(d>0) diff_b.push_back({true,i,(int)d});\n            }\n        }\n\n        i64 sim_cash=cash;\n        vector<i64> sim_pos=pos_shares;\n\n        auto try_add = [&](const Order &od){\n            if((int)out.size()>=Kmax) return;\n            int i=od.idx,q=od.qty;\n            i64 p=cl[i];\n            if(p<=0) return;\n            i64 value=p*(i64)q;\n            i64 com=commission(value);\n            if(od.buy){\n                i64 cost=value+com;\n                i64 buf=(i64) llround((long double)cost*1.01L);\n                if(sim_cash>=buf){\n                    sim_cash-=cost;\n                    sim_pos[i]+=q;\n                    out.push_back(od);\n                }\n            }else{\n                if(sim_pos[i]>=q){\n                    i64 tax=stamp(value);\n                    i64 gain=value-tax-com;\n                    sim_cash+=gain;\n                    sim_pos[i]-=q;\n                    out.push_back(od);\n                }\n            }\n        };\n\n        for(auto &od: diff_s) try_add(od);\n        for(auto &od: diff_b) try_add(od);\n\n        return out;\n    }\n};\n\nint main(){\n    Trader tr;\n    string line;\n    if(!IN.getline_str(line)) return 0;\n\n    // INIT n D m L alpha com_min beta K_max\n    {\n        // avoid stringstream (slow): parse with sscanf\n        char tag[16];\n        long long m=0;\n        if(sscanf(line.c_str(), \"%s %d %d %lld %d %lf %lf %lf %d\",\n                  tag, &tr.n, &tr.D, &m, &tr.L, &tr.alpha, &tr.com_min, &tr.beta, &tr.Kmax) != 9) return 0;\n        tr.cash = m*100LL;\n\n        tr.pos_shares.assign(tr.n,0);\n        tr.cost_cents.assign(tr.n,0);\n\n        tr.codes.assign(tr.n,\"\");\n        tr.mp.reserve(tr.n*2);\n\n        tr.op.assign(tr.n,0);\n        tr.hi.assign(tr.n,0);\n        tr.lo.assign(tr.n,0);\n        tr.cl.assign(tr.n,0);\n        tr.amt.assign(tr.n,0);\n\n        tr.st.assign(tr.n, StockState());\n    }\n\n    // day0: build mapping by order\n    for(int i=0;i<tr.n;i++){\n        if(!IN.getline_str(line)) return 0;\n        array<pair<int,int>,12> p;\n        int cnt=split12(line,p);\n        if(cnt<8) return 0;\n\n        string code(line.begin()+p[1].first, line.begin()+p[1].second);\n        tr.codes[i]=code;\n        tr.mp[code]=i;\n\n        bool ok;\n        tr.op[i]=parse_cents(line,p[2].first,p[2].second,ok); if(!ok) tr.op[i]=0;\n        tr.hi[i]=parse_cents(line,p[3].first,p[3].second,ok); if(!ok) tr.hi[i]=0;\n        tr.lo[i]=parse_cents(line,p[4].first,p[4].second,ok); if(!ok) tr.lo[i]=0;\n        tr.cl[i]=parse_cents(line,p[5].first,p[5].second,ok); if(!ok) tr.cl[i]=0;\n        tr.amt[i]=parse_cents(line,p[7].first,p[7].second,ok); if(!ok) tr.amt[i]=0;\n\n        // day0 indicators update\n        tr.st[i].have_last = (tr.cl[i]>0);\n        tr.st[i].last_close = tr.cl[i];\n        if(tr.cl[i]>0) tr.st[i].peak_close = tr.cl[i];\n        tr.update_indicators(i);\n    }\n    tr.day=0;\n\n    while(true){\n        vector<Order> orders = tr.build_orders();\n        if((int)orders.size()>tr.Kmax) orders.resize(tr.Kmax);\n\n        for(auto &od: orders){\n            fast_print_order(od.buy ? \"BUY\" : \"SELL\", tr.codes[od.idx], od.qty);\n        }\n        puts(\"DONE\");\n        fflush(stdout);\n\n        tr.pending = orders;\n\n        if(!IN.getline_str(line)) return 0;\n        if(line.rfind(\"FINISH\",0)==0) return 0;\n        if(line.rfind(\"INVALID\",0)==0 || line.rfind(\"ERROR\",0)==0) return 0;\n\n        // read day t market (first line already read)\n        tr.day += 1;\n        fill(tr.op.begin(), tr.op.end(), 0);\n        fill(tr.hi.begin(), tr.hi.end(), 0);\n        fill(tr.lo.begin(), tr.lo.end(), 0);\n        fill(tr.cl.begin(), tr.cl.end(), 0);\n        fill(tr.amt.begin(), tr.amt.end(), 0);\n\n        if(!tr.parse_line(line)) return 0;\n        for(int k=1;k<tr.n;k++){\n            if(!IN.getline_str(line)) return 0;\n            if(!tr.parse_line(line)) return 0;\n        }\n\n        // execute pending at open\n        tr.apply_pending_open();\n\n        // update indicators for today (O(n))\n        for(int i=0;i<tr.n;i++){\n            tr.update_indicators(i);\n        }\n    }\n    return 0;\n}\n",
+        "time": 20,
+        "memory": 836,
+        "problem": {
+          "pid": "U643929",
+          "title": "基于日线的 A 股量化交易模拟（一年）",
+          "difficulty": 7,
+          "fullScore": 500,
+          "type": "U"
+        },
+        "contest": {
+          "id": 165999,
+          "name": "基于日线的 A 股量化交易模拟",
+          "startTime": 1712307350,
+          "endTime": 1798732740
+        },
+        "sourceCodeLength": 17553,
+        "submitTime": 1766581929,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 254928230,
+        "status": 14,
+        "enableO2": true,
+        "score": 0
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R254928230",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782185465,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

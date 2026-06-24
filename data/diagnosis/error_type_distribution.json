@@ -1,0 +1,178 @@
+{
+  "generatedAt": "2026-06-24T03:33:41.362Z",
+  "items": {
+    "MODEL_ERROR": {
+      "problemCount": 334,
+      "evidenceProblems": [
+        "U316802",
+        "U316800",
+        "P3372",
+        "UVA11572",
+        "P1115",
+        "U683709",
+        "P1001",
+        "B2001",
+        "P3557",
+        "P16316",
+        "P14785",
+        "B4458"
+      ],
+      "relatedModules": [
+        "graph",
+        "math",
+        "binary_search",
+        "dsu",
+        "segment_tree"
+      ],
+      "trainingAction": "训练题意到模型的转化，写清变量/集合/图含义。"
+    },
+    "IMPLEMENTATION_RISK": {
+      "problemCount": 244,
+      "evidenceProblems": [
+        "P10156",
+        "U688515",
+        "U316801",
+        "U316795",
+        "P1268",
+        "P3524",
+        "P15347",
+        "P11139",
+        "P2345",
+        "P7412",
+        "P16180",
+        "T711698"
+      ],
+      "relatedModules": [
+        "implementation",
+        "search",
+        "greedy",
+        "dfs_bfs",
+        "state_compression_dp",
+        "tree"
+      ],
+      "trainingAction": "安排同类题复盘和重做。"
+    },
+    "BOUNDARY_ERROR": {
+      "problemCount": 216,
+      "evidenceProblems": [
+        "P8699",
+        "U688514",
+        "T568349",
+        "P3685",
+        "P3677",
+        "P5740",
+        "P16158",
+        "P2161",
+        "P16173",
+        "P16151",
+        "P1066",
+        "P1119"
+      ],
+      "relatedModules": [
+        "interval_dp",
+        "string",
+        "shortest_path",
+        "dp",
+        "fenwick_tree"
+      ],
+      "trainingAction": "安排边界专项题，并强制提交前检查。"
+    },
+    "STATE_ERROR": {
+      "problemCount": 211,
+      "evidenceProblems": [
+        "P8699",
+        "U688514",
+        "T568349",
+        "P3685",
+        "P3677",
+        "P5740",
+        "P16158",
+        "P2161",
+        "P16173",
+        "P16151",
+        "P1066",
+        "P1119"
+      ],
+      "relatedModules": [
+        "interval_dp",
+        "string",
+        "shortest_path",
+        "dp"
+      ],
+      "trainingAction": "每道 DP 题先写状态定义和转移表。"
+    },
+    "INIT_ERROR": {
+      "problemCount": 211,
+      "evidenceProblems": [
+        "P8699",
+        "U688514",
+        "T568349",
+        "P3685",
+        "P3677",
+        "P5740",
+        "P16158",
+        "P2161",
+        "P16173",
+        "P16151",
+        "P1066",
+        "P1119"
+      ],
+      "relatedModules": [
+        "interval_dp",
+        "string",
+        "shortest_path",
+        "dp"
+      ],
+      "trainingAction": "训练初始化和多测清空，提交前列初始化清单。"
+    },
+    "PARTIAL_SCORE_MISSED": {
+      "problemCount": 125,
+      "evidenceProblems": [
+        "P8699",
+        "P1115",
+        "P3685",
+        "P7413",
+        "P7410",
+        "P7411",
+        "P5740",
+        "P1022",
+        "T699486",
+        "T717044",
+        "P2852",
+        "P1226"
+      ],
+      "relatedModules": [
+        "interval_dp",
+        "math",
+        "shortest_path",
+        "partial_score",
+        "search",
+        "string",
+        "binary_search",
+        "graph",
+        "state_compression_dp",
+        "dsu",
+        "fenwick_tree",
+        "dp",
+        "greedy",
+        "dfs_bfs",
+        "segment_tree"
+      ],
+      "trainingAction": "训练 30/50/70 分子任务拆解。"
+    },
+    "INDEX_ERROR": {
+      "problemCount": 5,
+      "evidenceProblems": [
+        "P1908",
+        "P3374",
+        "P3368",
+        "P3431",
+        "P9094"
+      ],
+      "relatedModules": [
+        "fenwick_tree"
+      ],
+      "trainingAction": "安排数组下标和区间边界专项。"
+    }
+  }
+}

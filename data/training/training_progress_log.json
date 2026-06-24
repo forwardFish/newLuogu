@@ -1,0 +1,56 @@
+{
+  "generatedAt": "2026-06-23T12:15:05.631Z",
+  "purpose": "手动填写训练记录；后续 train:review 和 train:verify 会读取这里的数据。",
+  "schemaVersion": 1,
+  "errorTypes": [
+    "READING_ERROR",
+    "MODEL_ERROR",
+    "ALGO_ERROR",
+    "STATE_ERROR",
+    "TRANSITION_ERROR",
+    "BOUNDARY_ERROR",
+    "INDEX_ERROR",
+    "OVERFLOW_ERROR",
+    "INIT_ERROR",
+    "MULTITEST_ERROR",
+    "COMPLEXITY_ERROR",
+    "DEBUG_TIMEOUT",
+    "STRATEGY_ERROR",
+    "PARTIAL_SCORE_MISSED",
+    "TEMPLATE_UNFAMILIAR",
+    "UNKNOWN"
+  ],
+  "solutionUsage": [
+    "none",
+    "hint_only",
+    "idea_only",
+    "full_solution",
+    "copied_code"
+  ],
+  "entries": [],
+  "templates": {
+    "normalProblem": {
+      "date": "2026-06-23",
+      "day": 1,
+      "problemId": "",
+      "problemTitle": "",
+      "source": "luogu",
+      "module": "",
+      "targetAbility": "T1",
+      "difficulty": "",
+      "startTime": "",
+      "endTime": "",
+      "durationMinutes": 0,
+      "attemptCount": 0,
+      "isOneShotAc": false,
+      "finalResult": "UNKNOWN",
+      "score": 0,
+      "errorTypes": [
+        "UNKNOWN"
+      ],
+      "solutionUsage": "none",
+      "needRedo": false,
+      "notes": ""
+    }
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "recordId": "142162147",
+  "url": "https://www.luogu.com.cn/record/142162147?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T04:14:22.240Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_0sqp0qo_\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_0sqp0qo_\\/src:7:2: \\u9519\\u8bef\\uff1a\\u5bf9\\u2018map\\u2019\\u7684\\u5f15\\u7528\\u6709\\u6b67\\u4e49\\n    7 |  map[2]=1,map[3]=2;\\n      |  ^~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/map:61,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:81,\\n                 from \\/tmp\\/compiler_0sqp0qo_\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_map.h:100:11: \\u9644\\u6ce8\\uff1a\\u5907\\u9009\\u4e3a\\uff1a \\u2018template<class _Key, class _Tp, class _Compare, class _Alloc> class std::map\\u2019\\n  100 |     class map\\n      |           ^~~\\n\\/tmp\\/compiler_0sqp0qo_\\/src:3:5: \\u9644\\u6ce8\\uff1a         \\u2018int map [25]\\u2019\\n    3 | int map[25],map1[25];\\n      |     ^~~\\n\\/tmp\\/compiler_0sqp0qo_\\/src:7:11: \\u9519\\u8bef\\uff1a\\u5bf9\\u2018map\\u2019\\u7684\\u5f15\\u7528\\u6709\\u6b67\\u4e49\\n    7 |  map[2]=1,map[3]=2;\\n      |           ^~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/map:61,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:81,\\n                 from \\/tmp\\/compiler_0sqp0qo_\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_map.h:100:11: \\u9644\\u6ce8\\uff1a\\u5907\\u9009\\u4e3a\\uff1a \\u2018template<class _Key, class _Tp, class _Compare, class _Alloc> class std::map\\u2019\\n  100 |     class map\\n      |           ^~~\\n\\/tmp\\/compiler_0sqp0qo_\\/src:3:5: \\u9644\\u6ce8\\uff1a         \\u2018int map [25]\\u2019\\n    3 | int map[25],map1[25];\\n      |     ^~~\\n\\/tmp\\/compiler_0sqp0qo_\\/src:10:3: \\u9519\\u8bef\\uff1a\\u5bf9\\u2018map\\u2019\\u7684\\u5f15\\u7528\\u6709\\u6b67\\u4e49\\n   10 |   map[i]=map[i-1]+map[i-2]-1;\\n      |   ^~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/map:61,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:81,\\n                 from \\/tmp\\/compiler_0sqp0qo_\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_map.h:100:11: \\u9644\\u6ce8\\uff1a\\u5907\\u9009\\u4e3a\\uff1a \\u2018template<class _Key, class _Tp, class _Compare, class _Alloc> class std::map\\u2019\\n  100 |     class map\\n      |           ^~~\\n\\/tmp\\/compiler_0sqp0qo_\\/src:3:5: \\u9644\\u6ce8\\uff1a         \\u2018int map [25]\\u2019\\n    3 | int map[25],map1[25];\\n      |     ^~~\\n\\/tmp\\/compiler_0sqp0qo_\\/src:10:10: \\u9519\\u8bef\\uff1a\\u5bf9\\u2018map\\u2019\\u7684\\u5f15\\u7528\\u6709\\u6b67\\u4e49\\n   10 |   map[i]=map[i-1]+map[i-2]-1;\\n      |          ^~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/map:61,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:81,\\n                 from \\/tmp\\/compiler_0sqp0qo_\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_map.h:100:11: \\u9644\\u6ce8\\uff1a\\u5907\\u9009\\u4e3a\\uff1a \\u2018template<class _Key, class _Tp, class _Compare, class _Alloc> class std::map\\u2019\\n  100 |     class map\\n      |           ^~~\\n\\/tmp\\/compiler_0sqp0qo_\\/src:3:5: \\u9644\\u6ce8\\uff1a         \\u2018int map [25]\\u2019\\n    3 | int map[25],map1[25];\\n      |     ^~~\\n\\/tmp\\/compiler_0sqp0qo_\\/src:10:19: \\u9519\\u8bef\\uff1a\\u5bf9\\u2018map\\u2019\\u7684\\u5f15\\u7528\\u6709\\u6b67\\u4e49\\n   10 |   map[i]=map[i-1]+map[i-2]-1;\\n      |                   ^~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/map:61,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:81,\\n                 from \\/tmp\\/compiler_0sqp0qo_\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_map.h:100:11: \\u9644\\u6ce8\\uff1a\\u5907\\u9009\\u4e3a\\uff1a \\u2018template<class _Key, class _Tp, class _Compare, class _Alloc> class std::map\\u2019\\n  100 |     class map\\n      |           ^~~\\n\\/tmp\\/compiler_0sqp0qo_\\/src:3:5: \\u9644\\u6ce8\\uff1a         \\u2018int map [25]\\u2019\\n    3 | int map[25],map1[25];\\n      |     ^~~\\n\\/tmp\\/compiler_0sqp0qo_\\/src:13:10: \\u9519\\u8bef\\uff1a\\u5bf9\\u2018map\\u2019\\u7684\\u5f15\\u7528\\u6709\\u6b67\\u4e49\\n   13 |  cout<<a*map[x]+(m-a*map[n-1])\\/map1[n-1]*map1[x];\\n      |          ^~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/map:61,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:81,\\n                 from \\/tmp\\/compiler_0sqp0qo_\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_map.h:100:11: \\u9644\\u6ce8\\uff1a\\u5907\\u9009\\u4e3a\\uff1a \\u2018template<class _Key, class _Tp, class _Compare, class _Alloc> class std::map\\u2019\\n  100 |     class map\\n      |           ^~~\\n\\/tmp\\/compiler_0sqp0qo_\\/src:3:5: \\u9644\\u6ce8\\uff1a         \\u2018int map [25]\\u2019\\n    3 | int map[25],map1[25];\\n      |     ^~~\\n\\/tmp\\/compiler_0sqp0qo_\\/src:13:22: \\u9519\\u8bef\\uff1a\\u5bf9\\u2018map\\u2019\\u7684\\u5f15\\u7528\\u6709\\u6b67\\u4e49\\n   13 |  cout<<a*map[x]+(m-a*map[n-1])\\/map1[n-1]*map1[x];\\n      |                      ^~~\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/map:61,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:81,\\n                 from \\/tmp\\/compiler_0sqp0qo_\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_map.h:100:11: \\u9644\\u6ce8\\uff1a\\u5907\\u9009\\u4e3a\\uff1a \\u2018template<class _Key, class _Tp, class _Compare, class _Alloc> class std::map\\u2019\\n  100 |     class map\\n      |           ^~~\\n\\/tmp\\/compiler_0sqp0qo_\\/src:3:5: \\u9644\\u6ce8\\uff1a         \\u2018int map [25]\\u2019\\n    3 | int map[25],map1[25];\\n      |     ^~~\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h>\\r\\nusing namespace std;\\r\\nint map[25],map1[25];\\r\\nint main(){\\r\\n\\tint a,n,m,x;\\r\\n\\tcin>>a>>n>>m>>x;\\r\\n\\tmap[2]=1,map[3]=2;\\r\\n\\tfor(int i=4;i<n;i++)\\r\\n\\t{\\r\\n\\t\\tmap[i]=map[i-1]+map[i-2]-1;\\r\\n\\t\\tmap1[i]=map1[i-1]+map1[i-2]+1;\\r\\n\\t}\\r\\n\\tcout<<a*map[x]+(m-a*map[n-1])\\/map1[n-1]*map1[x];\\r\\n\\treturn 0;\\r\\n}\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P1011\",\"title\":\"[NOIP 1998 \\u63d0\\u9ad8\\u7ec4] \\u8f66\\u7ad9\",\"difficulty\":2,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":298,\"submitTime\":1704590206,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":142162147,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1,2,3,4]],\"showStatus\":true},\"currentTitle\":\"R142162147\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782188062,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_0sqp0qo_/src: 在函数‘int main()’中:\n/tmp/compiler_0sqp0qo_/src:7:2: 错误：对‘map’的引用有歧义\n    7 |  map[2]=1,map[3]=2;\n      |  ^~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/map:61,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:81,\n                 from /tmp/compiler_0sqp0qo_/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_map.h:100:11: 附注：备选为： ‘template<class _Key, class _Tp, class _Compare, class _Alloc> class std::map’\n  100 |     class map\n      |           ^~~\n/tmp/compiler_0sqp0qo_/src:3:5: 附注：         ‘int map [25]’\n    3 | int map[25],map1[25];\n      |     ^~~\n/tmp/compiler_0sqp0qo_/src:7:11: 错误：对‘map’的引用有歧义\n    7 |  map[2]=1,map[3]=2;\n      |           ^~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/map:61,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:81,\n                 from /tmp/compiler_0sqp0qo_/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_map.h:100:11: 附注：备选为： ‘template<class _Key, class _Tp, class _Compare, class _Alloc> class std::map’\n  100 |     class map\n      |           ^~~\n/tmp/compiler_0sqp0qo_/src:3:5: 附注：         ‘int map [25]’\n    3 | int map[25],map1[25];\n      |     ^~~\n/tmp/compiler_0sqp0qo_/src:10:3: 错误：对‘map’的引用有歧义\n   10 |   map[i]=map[i-1]+map[i-2]-1;\n      |   ^~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/map:61,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:81,\n                 from /tmp/compiler_0sqp0qo_/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_map.h:100:11: 附注：备选为： ‘template<class _Key, class _Tp, class _Compare, class _Alloc> class std::map’\n  100 |     class map\n      |           ^~~\n/tmp/compiler_0sqp0qo_/src:3:5: 附注：         ‘int map [25]’\n    3 | int map[25],map1[25];\n      |     ^~~\n/tmp/compiler_0sqp0qo_/src:10:10: 错误：对‘map’的引用有歧义\n   10 |   map[i]=map[i-1]+map[i-2]-1;\n      |          ^~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/map:61,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:81,\n                 from /tmp/compiler_0sqp0qo_/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_map.h:100:11: 附注：备选为： ‘template<class _Key, class _Tp, class _Compare, class _Alloc> class std::map’\n  100 |     class map\n      |           ^~~\n/tmp/compiler_0sqp0qo_/src:3:5: 附注：         ‘int map [25]’\n    3 | int map[25],map1[25];\n      |     ^~~\n/tmp/compiler_0sqp0qo_/src:10:19: 错误：对‘map’的引用有歧义\n   10 |   map[i]=map[i-1]+map[i-2]-1;\n      |                   ^~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/map:61,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:81,\n                 from /tmp/compiler_0sqp0qo_/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_map.h:100:11: 附注：备选为： ‘template<class _Key, class _Tp, class _Compare, class _Alloc> class std::map’\n  100 |     class map\n      |           ^~~\n/tmp/compiler_0sqp0qo_/src:3:5: 附注：         ‘int map [25]’\n    3 | int map[25],map1[25];\n      |     ^~~\n/tmp/compiler_0sqp0qo_/src:13:10: 错误：对‘map’的引用有歧义\n   13 |  cout<<a*map[x]+(m-a*map[n-1])/map1[n-1]*map1[x];\n      |          ^~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/map:61,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:81,\n                 from /tmp/compiler_0sqp0qo_/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_map.h:100:11: 附注：备选为： ‘template<class _Key, class _Tp, class _Compare, class _Alloc> class std::map’\n  100 |     class map\n      |           ^~~\n/tmp/compiler_0sqp0qo_/src:3:5: 附注：         ‘int map [25]’\n    3 | int map[25],map1[25];\n      |     ^~~\n/tmp/compiler_0sqp0qo_/src:13:22: 错误：对‘map’的引用有歧义\n   13 |  cout<<a*map[x]+(m-a*map[n-1])/map1[n-1]*map1[x];\n      |                      ^~~\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/map:61,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:81,\n                 from /tmp/compiler_0sqp0qo_/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_map.h:100:11: 附注：备选为： ‘template<class _Key, class _Tp, class _Compare, class _Alloc> class std::map’\n  100 |     class map\n      |           ^~~\n/tmp/compiler_0sqp0qo_/src:3:5: 附注：         ‘int map [25]’\n    3 | int map[25],map1[25];\n      |     ^~~\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h>\r\nusing namespace std;\r\nint map[25],map1[25];\r\nint main(){\r\n\tint a,n,m,x;\r\n\tcin>>a>>n>>m>>x;\r\n\tmap[2]=1,map[3]=2;\r\n\tfor(int i=4;i<n;i++)\r\n\t{\r\n\t\tmap[i]=map[i-1]+map[i-2]-1;\r\n\t\tmap1[i]=map1[i-1]+map1[i-2]+1;\r\n\t}\r\n\tcout<<a*map[x]+(m-a*map[n-1])/map1[n-1]*map1[x];\r\n\treturn 0;\r\n}",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P1011",
+          "title": "[NOIP 1998 提高组] 车站",
+          "difficulty": 2,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 298,
+        "submitTime": 1704590206,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 142162147,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R142162147",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782188062,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

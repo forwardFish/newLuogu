@@ -1,0 +1,191 @@
+{
+  "recordId": "172273623",
+  "url": "https://www.luogu.com.cn/record/172273623?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:54:49.591Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_mifayhnv\\/src:3:13: \\u9519\\u8bef\\uff1a\\u2018unsiend\\u2019 does not name a type; did you mean \\u2018unsigned\\u2019?\\n    3 | #define ULL unsiend long long\\n      |             ^~~~~~~\\n\\/tmp\\/compiler_mifayhnv\\/src:7:1: \\u9644\\u6ce8\\uff1ain expansion of macro \\u2018ULL\\u2019\\n    7 | ULL p[N], h[N];\\n      | ^~~\\n\\/tmp\\/compiler_mifayhnv\\/src:3:13: \\u9519\\u8bef\\uff1a\\u2018unsiend\\u2019 does not name a type; did you mean \\u2018unsigned\\u2019?\\n    3 | #define ULL unsiend long long\\n      |             ^~~~~~~\\n\\/tmp\\/compiler_mifayhnv\\/src:8:1: \\u9644\\u6ce8\\uff1ain expansion of macro \\u2018ULL\\u2019\\n    8 | ULL a[N];\\n      | ^~~\\n\\/tmp\\/compiler_mifayhnv\\/src:3:13: \\u9519\\u8bef\\uff1a\\u2018unsiend\\u2019 was not declared in this scope; did you mean \\u2018unsigned\\u2019?\\n    3 | #define ULL unsiend long long\\n      |             ^~~~~~~\\n\\/tmp\\/compiler_mifayhnv\\/src:9:5: \\u9644\\u6ce8\\uff1ain expansion of macro \\u2018ULL\\u2019\\n    9 | set<ULL> w;\\n      |     ^~~\\n\\/tmp\\/compiler_mifayhnv\\/src:9:8: \\u9519\\u8bef\\uff1a\\u6a21\\u677f\\u7b2c 1 \\u4e2a\\u53c2\\u6570\\u65e0\\u6548\\n    9 | set<ULL> w;\\n      |        ^\\n\\/tmp\\/compiler_mifayhnv\\/src:9:8: \\u9519\\u8bef\\uff1a\\u6a21\\u677f\\u7b2c 2 \\u4e2a\\u53c2\\u6570\\u65e0\\u6548\\n\\/tmp\\/compiler_mifayhnv\\/src:9:8: \\u9519\\u8bef\\uff1a\\u6a21\\u677f\\u7b2c 3 \\u4e2a\\u53c2\\u6570\\u65e0\\u6548\\n\\/tmp\\/compiler_mifayhnv\\/src:3:13: \\u9519\\u8bef\\uff1a\\u2018unsiend\\u2019 does not name a type; did you mean \\u2018unsigned\\u2019?\\n    3 | #define ULL unsiend long long\\n      |             ^~~~~~~\\n\\/tmp\\/compiler_mifayhnv\\/src:10:1: \\u9644\\u6ce8\\uff1ain expansion of macro \\u2018ULL\\u2019\\n   10 | ULL get(int l, int r)\\n      | ^~~\\n\\/tmp\\/compiler_mifayhnv\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_mifayhnv\\/src:18:2: \\u9519\\u8bef\\uff1a\\u2018p\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   18 |  p[0] = 1;\\n      |  ^\\n\\/tmp\\/compiler_mifayhnv\\/src:26:9: \\u9519\\u8bef\\uff1aexpected primary-expression before \\u2018==\\u2019 token\\n   26 |     if( ==j)  continue;\\n      |         ^~\\n\\/tmp\\/compiler_mifayhnv\\/src:32:23: \\u8b66\\u544a\\uff1acomparison of integer expressions of different signedness: \\u2018int\\u2019 and \\u2018std::__cxx11::basic_string<char>::size_type\\u2019 {aka \\u2018long unsigned int\\u2019} [-Wsign-compare]\\n   32 |      for(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\\n      |                     ~~^~~~~~~~~~~\\n\\/tmp\\/compiler_mifayhnv\\/src:32:44: \\u9519\\u8bef\\uff1a\\u2018h\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   32 |      for(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\\n      |                                            ^\\n\\/tmp\\/compiler_mifayhnv\\/src:3:13: \\u9519\\u8bef\\uff1a\\u2018unsiend\\u2019 was not declared in this scope; did you mean \\u2018unsigned\\u2019?\\n    3 | #define ULL unsiend long long\\n      |             ^~~~~~~\\n\\/tmp\\/compiler_mifayhnv\\/src:33:6: \\u9644\\u6ce8\\uff1ain expansion of macro \\u2018ULL\\u2019\\n   33 |      ULL x = get(1, t.size());\\n      |      ^~~\\n\\/tmp\\/compiler_mifayhnv\\/src:34:8: \\u9519\\u8bef\\uff1a\\u5bf9\\u6210\\u5458\\u2018insert\\u2019\\u7684\\u8bf7\\u6c42\\u51fa\\u73b0\\u5728\\u2018w\\u2019\\u4e2d\\uff0c\\u800c\\u540e\\u8005\\u5177\\u6709\\u975e\\u7c7b\\u7c7b\\u578b\\u2018int\\u2019\\n   34 |      w.insert(x);\\n      |        ^~~~~~\\n\\/tmp\\/compiler_mifayhnv\\/src:34:15: \\u9519\\u8bef\\uff1a\\u2018x\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   34 |      w.insert(x);\\n      |               ^\\n\\/tmp\\/compiler_mifayhnv\\/src:38:13: \\u9519\\u8bef\\uff1a\\u5bf9\\u6210\\u5458\\u2018size\\u2019\\u7684\\u8bf7\\u6c42\\u51fa\\u73b0\\u5728\\u2018w\\u2019\\u4e2d\\uff0c\\u800c\\u540e\\u8005\\u5177\\u6709\\u975e\\u7c7b\\u7c7b\\u578b\\u2018int\\u2019\\n   38 |   cout << w.size() << endl;\\n      |             ^~~~\\n\\/tmp\\/compiler_mifayhnv\\/src:55:24: \\u8b66\\u544a\\uff1acomparison of integer expressions of different signedness: \\u2018int\\u2019 and \\u2018std::__cxx11::basic_string<char>::size_type\\u2019 {aka \\u2018long unsigned int\\u2019} [-Wsign-compare]\\n   55 |       for(int q = 1; q <= t.size(); q ++ ) h[q] = h[q - 1] * P + t[q - 1];\\n      |                      ~~^~~~~~~~~~~\\n\\/tmp\\/compiler_mifayhnv\\/src:55:44: \\u9519\\u8bef\\uff1a\\u2018h\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   55 |       for(int q = 1; q <= t.size(); q ++ ) h[q] = h[q - 1] * P + t[q - 1];\\n      |                                            ^\\n\\/tmp\\/compiler_mifayhnv\\/src:3:13: \\u9519\\u8bef\\uff1a\\u2018unsiend\\u2019 was not declared in this scope; did you mean \\u2018unsigned\\u2019?\\n    3 | #define ULL unsiend long long\\n      |             ^~~~~~~\\n\\/tmp\\/compiler_mifayhnv\\/src:56:7: \\u9644\\u6ce8\\uff1ain expansion of macro \\u2018ULL\\u2019\\n   56 |       ULL x = get(1, t.size());\\n      |       ^~~\\n\\/tmp\\/compiler_mifayhnv\\/src:57:9: \\u9519\\u8bef\\uff1a\\u5bf9\\u6210\\u5458\\u2018insert\\u2019\\u7684\\u8bf7\\u6c42\\u51fa\\u73b0\\u5728\\u2018w\\u2019\\u4e2d\\uff0c\\u800c\\u540e\\u8005\\u5177\\u6709\\u975e\\u7c7b\\u7c7b\\u578b\\u2018int\\u2019\\n   57 |       w.insert(x);\\n      |         ^~~~~~\\n\\/tmp\\/compiler_mifayhnv\\/src:57:16: \\u9519\\u8bef\\uff1a\\u2018x\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   57 |       w.insert(x);\\n      |                ^\\n\\/tmp\\/compiler_mifayhnv\\/src:62:13: \\u9519\\u8bef\\uff1a\\u5bf9\\u6210\\u5458\\u2018size\\u2019\\u7684\\u8bf7\\u6c42\\u51fa\\u73b0\\u5728\\u2018w\\u2019\\u4e2d\\uff0c\\u800c\\u540e\\u8005\\u5177\\u6709\\u975e\\u7c7b\\u7c7b\\u578b\\u2018int\\u2019\\n   62 |   cout << w.size() << endl;\\n      |             ^~~~\\n\\/tmp\\/compiler_mifayhnv\\/src:73:22: \\u8b66\\u544a\\uff1acomparison of integer expressions of different signedness: \\u2018int\\u2019 and \\u2018std::__cxx11::basic_string<char>::size_type\\u2019 {aka \\u2018long unsigned int\\u2019} [-Wsign-compare]\\n   73 |     for(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\\n      |                    ~~^~~~~~~~~~~\\n\\/tmp\\/compiler_mifayhnv\\/src:73:43: \\u9519\\u8bef\\uff1a\\u2018h\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   73 |     for(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\\n      |                                           ^\\n\\/tmp\\/compiler_mifayhnv\\/src:3:13: \\u9519\\u8bef\\uff1a\\u2018unsiend\\u2019 was not declared in this scope; did you mean \\u2018unsigned\\u2019?\\n    3 | #define ULL unsiend long long\\n      |             ^~~~~~~\\n\\/tmp\\/compiler_mifayhnv\\/src:74:5: \\u9644\\u6ce8\\uff1ain expansion of macro \\u2018ULL\\u2019\\n   74 |     ULL x = get(1, t.size());\\n      |     ^~~\\n\\/tmp\\/compiler_mifayhnv\\/src:75:7: \\u9519\\u8bef\\uff1a\\u5bf9\\u6210\\u5458\\u2018insert\\u2019\\u7684\\u8bf7\\u6c42\\u51fa\\u73b0\\u5728\\u2018w\\u2019\\u4e2d\\uff0c\\u800c\\u540e\\u8005\\u5177\\u6709\\u975e\\u7c7b\\u7c7b\\u578b\\u2018int\\u2019\\n   75 |     w.insert(x);\\n      |       ^~~~~~\\n\\/tmp\\/compiler_mifayhnv\\/src:75:14: \\u9519\\u8bef\\uff1a\\u2018x\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   75 |     w.insert(x);\\n      |              ^\\n\\/tmp\\/compiler_mifayhnv\\/src:78:13: \\u9519\\u8bef\\uff1a\\u5bf9\\u6210\\u5458\\u2018size\\u2019\\u7684\\u8bf7\\u6c42\\u51fa\\u73b0\\u5728\\u2018w\\u2019\\u4e2d\\uff0c\\u800c\\u540e\\u8005\\u5177\\u6709\\u975e\\u7c7b\\u7c7b\\u578b\\u2018int\\u2019\\n   78 |   cout << w.size() << endl;\\n      |             ^~~~\\n\\/tmp\\/compiler_mifayhnv\\/src:86:21: \\u8b66\\u544a\\uff1acomparison of integer expressions of different signedness: \\u2018int\\u2019 and \\u2018std::__cxx11::basic_string<char>::size_type\\u2019 {aka \\u2018long unsigned int\\u2019} [-Wsign-compare]\\n   86 |    for(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\\n      |                   ~~^~~~~~~~~~~\\n\\/tmp\\/compiler_mifayhnv\\/src:86:42: \\u9519\\u8bef\\uff1a\\u2018h\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   86 |    for(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\\n      |                                          ^\\n\\/tmp\\/compiler_mifayhnv\\/src:3:13: \\u9519\\u8bef\\uff1a\\u2018unsiend\\u2019 was not declared in this scope; did you mean \\u2018unsigned\\u2019?\\n    3 | #define ULL unsiend long long\\n      |             ^~~~~~~\\n\\/tmp\\/compiler_mifayhnv\\/src:87:4: \\u9644\\u6ce8\\uff1ain expansion of macro \\u2018ULL\\u2019\\n   87 |    ULL x = get(1, t.size());\\n      |    ^~~\\n\\/tmp\\/compiler_mifayhnv\\/src:88:6: \\u9519\\u8bef\\uff1a\\u5bf9\\u6210\\u5458\\u2018insert\\u2019\\u7684\\u8bf7\\u6c42\\u51fa\\u73b0\\u5728\\u2018w\\u2019\\u4e2d\\uff0c\\u800c\\u540e\\u8005\\u5177\\u6709\\u975e\\u7c7b\\u7c7b\\u578b\\u2018int\\u2019\\n   88 |    w.insert(x);\\n      |      ^~~~~~\\n\\/tmp\\/compiler_mifayhnv\\/src:88:13: \\u9519\\u8bef\\uff1a\\u2018x\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   88 |    w.insert(x);\\n      |             ^\\n\\/tmp\\/compiler_mifayhnv\\/src:90:13: \\u9519\\u8bef\\uff1a\\u5bf9\\u6210\\u5458\\u2018size\\u2019\\u7684\\u8bf7\\u6c42\\u51fa\\u73b0\\u5728\\u2018w\\u2019\\u4e2d\\uff0c\\u800c\\u540e\\u8005\\u5177\\u6709\\u975e\\u7c7b\\u7c7b\\u578b\\u2018int\\u2019\\n   90 |   cout << w.size() << endl;\\n      |             ^~~~\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h>\\r\\nusing namespace std;\\r\\n#define ULL unsiend long long \\r\\nconst int N=100010,P = 131;\\r\\nint n, k, hh;\\r\\nstring s[N] , t;\\r\\nULL p[N], h[N];\\r\\nULL a[N];\\r\\nset<ULL> w;\\r\\nULL get(int l, int r)\\r\\n{\\r\\n\\treturn h[r]-h[l-1]*p[r-l+1];\\r\\n}\\r\\nsigned main()\\r\\n{\\r\\n\\tcin>>n>>k;\\r\\n\\tfor(int i = 1; i <=n;i++)  cin>>s[i];\\r\\n\\tp[0] = 1;\\r\\n\\tfor(int i = 1; i <= 10; i ++ )  p[i] = p[i - 1] * P;\\r\\n\\tif(k == 3)\\r\\n\\t{\\r\\n\\t\\tfor(int i = 1; i <= n; i ++ )\\r\\n\\t\\t{\\r\\n\\t\\t\\tfor(int j = 1; j <= n; j ++ )\\r\\n\\t\\t\\t{\\r\\n\\t\\t\\t\\tif( ==j)  continue;\\r\\n\\t\\t\\t\\tfor(int o = 1; o <= n; o ++ )\\r\\n\\t\\t\\t\\t{\\r\\n\\t\\t\\t\\t\\tif(o == j || o == i)  continue;\\r\\n\\t\\t\\t\\t\\tt.clear();\\r\\n\\t\\t\\t\\t\\tt += s[i] + s[j] + s[o];\\r\\n\\t\\t\\t\\t\\tfor(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1]; \\r\\n\\t\\t\\t\\t\\tULL x = get(1, t.size());\\r\\n\\t\\t\\t\\t\\tw.insert(x);\\r\\n\\t\\t\\t\\t}\\r\\n\\t\\t\\t}\\r\\n\\t\\t}\\r\\n\\t\\tcout << w.size() << endl;\\r\\n\\t}\\r\\n\\telse if(k == 4)\\r\\n\\t{\\r\\n\\t\\tfor(int i = 1; i <= n; i ++ )\\r\\n\\t\\t{\\r\\n\\t\\t\\tfor(int j = 1; j <= n; j ++ )\\r\\n\\t\\t\\t{\\r\\n\\t\\t\\t\\tif(i == j)  continue;\\r\\n\\t\\t\\t\\tfor(int o = 1; o <= n; o ++ )\\r\\n\\t\\t\\t\\t{\\r\\n\\t\\t\\t\\t\\tif(o == i || o == j)  continue;\\r\\n\\t\\t\\t\\t\\tfor(int g = 1; g <= n; g ++ )\\r\\n\\t\\t\\t\\t\\t{\\r\\n\\t\\t\\t\\t\\t\\tif(g == o || g == j || g == i)  continue;\\r\\n\\t\\t\\t\\t\\t\\tt.clear();\\r\\n\\t\\t\\t\\t\\t\\tt += s[i] + s[j] + s[o] + s[g];\\r\\n\\t\\t\\t\\t\\t\\tfor(int q = 1; q <= t.size(); q ++ )\\th[q] = h[q - 1] * P + t[q - 1];\\r\\n\\t\\t\\t\\t\\t\\tULL x = get(1, t.size());\\r\\n\\t\\t\\t\\t\\t\\tw.insert(x);\\r\\n\\t\\t\\t\\t\\t}\\r\\n\\t\\t\\t\\t}\\r\\n\\t\\t\\t}\\r\\n\\t\\t}\\r\\n\\t\\tcout << w.size() << endl;\\r\\n\\t}\\r\\n\\telse if(k == 2)\\r\\n\\t{\\r\\n\\t\\tfor(int i = 1; i <= n; i ++ )\\r\\n\\t\\t{\\r\\n\\t\\t\\tfor(int j = 1; j <= n; j ++ )\\r\\n\\t\\t\\t{\\r\\n\\t\\t\\t\\tif(j == i)  continue;\\r\\n\\t\\t\\t\\tt.clear();\\r\\n\\t\\t\\t\\tt += s[i] + s[j];\\r\\n\\t\\t\\t\\tfor(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\\r\\n\\t\\t\\t\\tULL x = get(1, t.size());\\r\\n\\t\\t\\t\\tw.insert(x);\\r\\n\\t\\t\\t}\\r\\n\\t\\t}\\r\\n\\t\\tcout << w.size() << endl;\\r\\n\\t}\\r\\n\\telse if(k == 1)\\r\\n\\t{\\r\\n\\t\\tfor(int i = 1; i <= n; i ++ )\\r\\n\\t\\t{\\r\\n\\t\\t\\tt.clear();\\r\\n\\t\\t\\tt += s[i];\\r\\n\\t\\t\\tfor(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\\r\\n\\t\\t\\tULL x = get(1, t.size());\\r\\n\\t\\t\\tw.insert(x);\\r\\n\\t\\t}\\r\\n\\t\\tcout << w.size() << endl;\\r\\n\\t}\\r\\n}\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"U452718\",\"title\":\"\\u62fc\\u6570\",\"difficulty\":0,\"fullScore\":100,\"type\":\"U\"},\"contest\":null,\"sourceCodeLength\":1936,\"submitTime\":1723467854,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":172273623,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9]],\"showStatus\":true},\"currentTitle\":\"R172273623\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186889,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_mifayhnv/src:3:13: 错误：‘unsiend’ does not name a type; did you mean ‘unsigned’?\n    3 | #define ULL unsiend long long\n      |             ^~~~~~~\n/tmp/compiler_mifayhnv/src:7:1: 附注：in expansion of macro ‘ULL’\n    7 | ULL p[N], h[N];\n      | ^~~\n/tmp/compiler_mifayhnv/src:3:13: 错误：‘unsiend’ does not name a type; did you mean ‘unsigned’?\n    3 | #define ULL unsiend long long\n      |             ^~~~~~~\n/tmp/compiler_mifayhnv/src:8:1: 附注：in expansion of macro ‘ULL’\n    8 | ULL a[N];\n      | ^~~\n/tmp/compiler_mifayhnv/src:3:13: 错误：‘unsiend’ was not declared in this scope; did you mean ‘unsigned’?\n    3 | #define ULL unsiend long long\n      |             ^~~~~~~\n/tmp/compiler_mifayhnv/src:9:5: 附注：in expansion of macro ‘ULL’\n    9 | set<ULL> w;\n      |     ^~~\n/tmp/compiler_mifayhnv/src:9:8: 错误：模板第 1 个参数无效\n    9 | set<ULL> w;\n      |        ^\n/tmp/compiler_mifayhnv/src:9:8: 错误：模板第 2 个参数无效\n/tmp/compiler_mifayhnv/src:9:8: 错误：模板第 3 个参数无效\n/tmp/compiler_mifayhnv/src:3:13: 错误：‘unsiend’ does not name a type; did you mean ‘unsigned’?\n    3 | #define ULL unsiend long long\n      |             ^~~~~~~\n/tmp/compiler_mifayhnv/src:10:1: 附注：in expansion of macro ‘ULL’\n   10 | ULL get(int l, int r)\n      | ^~~\n/tmp/compiler_mifayhnv/src: 在函数‘int main()’中:\n/tmp/compiler_mifayhnv/src:18:2: 错误：‘p’在此作用域中尚未声明\n   18 |  p[0] = 1;\n      |  ^\n/tmp/compiler_mifayhnv/src:26:9: 错误：expected primary-expression before ‘==’ token\n   26 |     if( ==j)  continue;\n      |         ^~\n/tmp/compiler_mifayhnv/src:32:23: 警告：comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]\n   32 |      for(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\n      |                     ~~^~~~~~~~~~~\n/tmp/compiler_mifayhnv/src:32:44: 错误：‘h’在此作用域中尚未声明\n   32 |      for(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\n      |                                            ^\n/tmp/compiler_mifayhnv/src:3:13: 错误：‘unsiend’ was not declared in this scope; did you mean ‘unsigned’?\n    3 | #define ULL unsiend long long\n      |             ^~~~~~~\n/tmp/compiler_mifayhnv/src:33:6: 附注：in expansion of macro ‘ULL’\n   33 |      ULL x = get(1, t.size());\n      |      ^~~\n/tmp/compiler_mifayhnv/src:34:8: 错误：对成员‘insert’的请求出现在‘w’中，而后者具有非类类型‘int’\n   34 |      w.insert(x);\n      |        ^~~~~~\n/tmp/compiler_mifayhnv/src:34:15: 错误：‘x’在此作用域中尚未声明\n   34 |      w.insert(x);\n      |               ^\n/tmp/compiler_mifayhnv/src:38:13: 错误：对成员‘size’的请求出现在‘w’中，而后者具有非类类型‘int’\n   38 |   cout << w.size() << endl;\n      |             ^~~~\n/tmp/compiler_mifayhnv/src:55:24: 警告：comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]\n   55 |       for(int q = 1; q <= t.size(); q ++ ) h[q] = h[q - 1] * P + t[q - 1];\n      |                      ~~^~~~~~~~~~~\n/tmp/compiler_mifayhnv/src:55:44: 错误：‘h’在此作用域中尚未声明\n   55 |       for(int q = 1; q <= t.size(); q ++ ) h[q] = h[q - 1] * P + t[q - 1];\n      |                                            ^\n/tmp/compiler_mifayhnv/src:3:13: 错误：‘unsiend’ was not declared in this scope; did you mean ‘unsigned’?\n    3 | #define ULL unsiend long long\n      |             ^~~~~~~\n/tmp/compiler_mifayhnv/src:56:7: 附注：in expansion of macro ‘ULL’\n   56 |       ULL x = get(1, t.size());\n      |       ^~~\n/tmp/compiler_mifayhnv/src:57:9: 错误：对成员‘insert’的请求出现在‘w’中，而后者具有非类类型‘int’\n   57 |       w.insert(x);\n      |         ^~~~~~\n/tmp/compiler_mifayhnv/src:57:16: 错误：‘x’在此作用域中尚未声明\n   57 |       w.insert(x);\n      |                ^\n/tmp/compiler_mifayhnv/src:62:13: 错误：对成员‘size’的请求出现在‘w’中，而后者具有非类类型‘int’\n   62 |   cout << w.size() << endl;\n      |             ^~~~\n/tmp/compiler_mifayhnv/src:73:22: 警告：comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]\n   73 |     for(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\n      |                    ~~^~~~~~~~~~~\n/tmp/compiler_mifayhnv/src:73:43: 错误：‘h’在此作用域中尚未声明\n   73 |     for(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\n      |                                           ^\n/tmp/compiler_mifayhnv/src:3:13: 错误：‘unsiend’ was not declared in this scope; did you mean ‘unsigned’?\n    3 | #define ULL unsiend long long\n      |             ^~~~~~~\n/tmp/compiler_mifayhnv/src:74:5: 附注：in expansion of macro ‘ULL’\n   74 |     ULL x = get(1, t.size());\n      |     ^~~\n/tmp/compiler_mifayhnv/src:75:7: 错误：对成员‘insert’的请求出现在‘w’中，而后者具有非类类型‘int’\n   75 |     w.insert(x);\n      |       ^~~~~~\n/tmp/compiler_mifayhnv/src:75:14: 错误：‘x’在此作用域中尚未声明\n   75 |     w.insert(x);\n      |              ^\n/tmp/compiler_mifayhnv/src:78:13: 错误：对成员‘size’的请求出现在‘w’中，而后者具有非类类型‘int’\n   78 |   cout << w.size() << endl;\n      |             ^~~~\n/tmp/compiler_mifayhnv/src:86:21: 警告：comparison of integer expressions of different signedness: ‘int’ and ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]\n   86 |    for(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\n      |                   ~~^~~~~~~~~~~\n/tmp/compiler_mifayhnv/src:86:42: 错误：‘h’在此作用域中尚未声明\n   86 |    for(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\n      |                                          ^\n/tmp/compiler_mifayhnv/src:3:13: 错误：‘unsiend’ was not declared in this scope; did you mean ‘unsigned’?\n    3 | #define ULL unsiend long long\n      |             ^~~~~~~\n/tmp/compiler_mifayhnv/src:87:4: 附注：in expansion of macro ‘ULL’\n   87 |    ULL x = get(1, t.size());\n      |    ^~~\n/tmp/compiler_mifayhnv/src:88:6: 错误：对成员‘insert’的请求出现在‘w’中，而后者具有非类类型‘int’\n   88 |    w.insert(x);\n      |      ^~~~~~\n/tmp/compiler_mifayhnv/src:88:13: 错误：‘x’在此作用域中尚未声明\n   88 |    w.insert(x);\n      |             ^\n/tmp/compiler_mifayhnv/src:90:13: 错误：对成员‘size’的请求出现在‘w’中，而后者具有非类类型‘int’\n   90 |   cout << w.size() << endl;\n      |             ^~~~\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h>\r\nusing namespace std;\r\n#define ULL unsiend long long \r\nconst int N=100010,P = 131;\r\nint n, k, hh;\r\nstring s[N] , t;\r\nULL p[N], h[N];\r\nULL a[N];\r\nset<ULL> w;\r\nULL get(int l, int r)\r\n{\r\n\treturn h[r]-h[l-1]*p[r-l+1];\r\n}\r\nsigned main()\r\n{\r\n\tcin>>n>>k;\r\n\tfor(int i = 1; i <=n;i++)  cin>>s[i];\r\n\tp[0] = 1;\r\n\tfor(int i = 1; i <= 10; i ++ )  p[i] = p[i - 1] * P;\r\n\tif(k == 3)\r\n\t{\r\n\t\tfor(int i = 1; i <= n; i ++ )\r\n\t\t{\r\n\t\t\tfor(int j = 1; j <= n; j ++ )\r\n\t\t\t{\r\n\t\t\t\tif( ==j)  continue;\r\n\t\t\t\tfor(int o = 1; o <= n; o ++ )\r\n\t\t\t\t{\r\n\t\t\t\t\tif(o == j || o == i)  continue;\r\n\t\t\t\t\tt.clear();\r\n\t\t\t\t\tt += s[i] + s[j] + s[o];\r\n\t\t\t\t\tfor(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1]; \r\n\t\t\t\t\tULL x = get(1, t.size());\r\n\t\t\t\t\tw.insert(x);\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t\tcout << w.size() << endl;\r\n\t}\r\n\telse if(k == 4)\r\n\t{\r\n\t\tfor(int i = 1; i <= n; i ++ )\r\n\t\t{\r\n\t\t\tfor(int j = 1; j <= n; j ++ )\r\n\t\t\t{\r\n\t\t\t\tif(i == j)  continue;\r\n\t\t\t\tfor(int o = 1; o <= n; o ++ )\r\n\t\t\t\t{\r\n\t\t\t\t\tif(o == i || o == j)  continue;\r\n\t\t\t\t\tfor(int g = 1; g <= n; g ++ )\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tif(g == o || g == j || g == i)  continue;\r\n\t\t\t\t\t\tt.clear();\r\n\t\t\t\t\t\tt += s[i] + s[j] + s[o] + s[g];\r\n\t\t\t\t\t\tfor(int q = 1; q <= t.size(); q ++ )\th[q] = h[q - 1] * P + t[q - 1];\r\n\t\t\t\t\t\tULL x = get(1, t.size());\r\n\t\t\t\t\t\tw.insert(x);\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t\tcout << w.size() << endl;\r\n\t}\r\n\telse if(k == 2)\r\n\t{\r\n\t\tfor(int i = 1; i <= n; i ++ )\r\n\t\t{\r\n\t\t\tfor(int j = 1; j <= n; j ++ )\r\n\t\t\t{\r\n\t\t\t\tif(j == i)  continue;\r\n\t\t\t\tt.clear();\r\n\t\t\t\tt += s[i] + s[j];\r\n\t\t\t\tfor(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\r\n\t\t\t\tULL x = get(1, t.size());\r\n\t\t\t\tw.insert(x);\r\n\t\t\t}\r\n\t\t}\r\n\t\tcout << w.size() << endl;\r\n\t}\r\n\telse if(k == 1)\r\n\t{\r\n\t\tfor(int i = 1; i <= n; i ++ )\r\n\t\t{\r\n\t\t\tt.clear();\r\n\t\t\tt += s[i];\r\n\t\t\tfor(int q = 1; q <= t.size(); q ++ )  h[q] = h[q - 1] * P + t[q - 1];\r\n\t\t\tULL x = get(1, t.size());\r\n\t\t\tw.insert(x);\r\n\t\t}\r\n\t\tcout << w.size() << endl;\r\n\t}\r\n}",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "U452718",
+          "title": "拼数",
+          "difficulty": 0,
+          "fullScore": 100,
+          "type": "U"
+        },
+        "contest": null,
+        "sourceCodeLength": 1936,
+        "submitTime": 1723467854,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 172273623,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R172273623",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186889,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

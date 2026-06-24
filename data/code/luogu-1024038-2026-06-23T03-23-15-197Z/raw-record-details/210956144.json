@@ -1,0 +1,182 @@
+{
+  "recordId": "210956144",
+  "url": "https://www.luogu.com.cn/record/210956144?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:47:25.672Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_030ccmco\\/src:3:9: \\u9519\\u8bef\\uff1a\\u2018#pragma GCC optimize\\u2019 is not allowed in online judge mode\\n    3 | #pragma GCC optimize(2)\\n      |         ^~~\\n\\/tmp\\/compiler_030ccmco\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_030ccmco\\/src:23:8: \\u9519\\u8bef\\uff1a\\u5bf9\\u2018read(int&)\\u2019\\u7684\\u8c03\\u7528\\u6ca1\\u6709\\u5339\\u914d\\u7684\\u51fd\\u6570\\n   23 |  read(t);\\n      |        ^\\nIn file included from \\/nix\\/store\\/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev\\/include\\/bits\\/sigstksz.h:24,\\n                 from \\/nix\\/store\\/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev\\/include\\/signal.h:328,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/csignal:42,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:43,\\n                 from \\/tmp\\/compiler_030ccmco\\/src:1:\\n\\/nix\\/store\\/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev\\/include\\/unistd.h:371:16: \\u9644\\u6ce8\\uff1acandidate: \\u2018ssize_t read(int, void*, size_t)\\u2019\\n  371 | extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur\\n      |                ^~~~\\n\\/nix\\/store\\/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev\\/include\\/unistd.h:371:16: \\u9644\\u6ce8\\uff1a \\u5907\\u9009\\u9700\\u8981 3 \\u5b9e\\u53c2\\uff0c\\u4f46\\u63d0\\u4f9b\\u4e86 1 \\u4e2a\\n\\/tmp\\/compiler_030ccmco\\/src:4:12: \\u9644\\u6ce8\\uff1acandidate: \\u2018int read()\\u2019\\n    4 | inline int read()\\n      |            ^~~~\\n\\/tmp\\/compiler_030ccmco\\/src:4:12: \\u9644\\u6ce8\\uff1a \\u5907\\u9009\\u9700\\u8981 0 \\u5b9e\\u53c2\\uff0c\\u4f46\\u63d0\\u4f9b\\u4e86 1 \\u4e2a\\n\\/tmp\\/compiler_030ccmco\\/src:27:9: \\u9519\\u8bef\\uff1a\\u5bf9\\u2018read(int&)\\u2019\\u7684\\u8c03\\u7528\\u6ca1\\u6709\\u5339\\u914d\\u7684\\u51fd\\u6570\\n   27 |   read(a);read(b);\\n      |         ^\\nIn file included from \\/nix\\/store\\/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev\\/include\\/bits\\/sigstksz.h:24,\\n                 from \\/nix\\/store\\/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev\\/include\\/signal.h:328,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/csignal:42,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:43,\\n                 from \\/tmp\\/compiler_030ccmco\\/src:1:\\n\\/nix\\/store\\/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev\\/include\\/unistd.h:371:16: \\u9644\\u6ce8\\uff1acandidate: \\u2018ssize_t read(int, void*, size_t)\\u2019\\n  371 | extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur\\n      |                ^~~~\\n\\/nix\\/store\\/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev\\/include\\/unistd.h:371:16: \\u9644\\u6ce8\\uff1a \\u5907\\u9009\\u9700\\u8981 3 \\u5b9e\\u53c2\\uff0c\\u4f46\\u63d0\\u4f9b\\u4e86 1 \\u4e2a\\n\\/tmp\\/compiler_030ccmco\\/src:4:12: \\u9644\\u6ce8\\uff1acandidate: \\u2018int read()\\u2019\\n    4 | inline int read()\\n      |            ^~~~\\n\\/tmp\\/compiler_030ccmco\\/src:4:12: \\u9644\\u6ce8\\uff1a \\u5907\\u9009\\u9700\\u8981 0 \\u5b9e\\u53c2\\uff0c\\u4f46\\u63d0\\u4f9b\\u4e86 1 \\u4e2a\\n\\/tmp\\/compiler_030ccmco\\/src:27:17: \\u9519\\u8bef\\uff1a\\u5bf9\\u2018read(int&)\\u2019\\u7684\\u8c03\\u7528\\u6ca1\\u6709\\u5339\\u914d\\u7684\\u51fd\\u6570\\n   27 |   read(a);read(b);\\n      |                 ^\\nIn file included from \\/nix\\/store\\/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev\\/include\\/bits\\/sigstksz.h:24,\\n                 from \\/nix\\/store\\/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev\\/include\\/signal.h:328,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/csignal:42,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:43,\\n                 from \\/tmp\\/compiler_030ccmco\\/src:1:\\n\\/nix\\/store\\/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev\\/include\\/unistd.h:371:16: \\u9644\\u6ce8\\uff1acandidate: \\u2018ssize_t read(int, void*, size_t)\\u2019\\n  371 | extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur\\n      |                ^~~~\\n\\/nix\\/store\\/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev\\/include\\/unistd.h:371:16: \\u9644\\u6ce8\\uff1a \\u5907\\u9009\\u9700\\u8981 3 \\u5b9e\\u53c2\\uff0c\\u4f46\\u63d0\\u4f9b\\u4e86 1 \\u4e2a\\n\\/tmp\\/compiler_030ccmco\\/src:4:12: \\u9644\\u6ce8\\uff1acandidate: \\u2018int read()\\u2019\\n    4 | inline int read()\\n      |            ^~~~\\n\\/tmp\\/compiler_030ccmco\\/src:4:12: \\u9644\\u6ce8\\uff1a \\u5907\\u9009\\u9700\\u8981 0 \\u5b9e\\u53c2\\uff0c\\u4f46\\u63d0\\u4f9b\\u4e86 1 \\u4e2a\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h>\\nusing namespace std;\\n#pragma GCC optimize(2)\\ninline int read()\\n{\\n    int x=0,f=1;char ch=getchar();\\n    while(!isdigit(ch)){if(ch=='-') f=-1;ch=getchar();}\\n    while(isdigit(ch)){x=x*10+ch-'0';ch=getchar();}\\n    return x*f;\\n}\\ninline void write(int x)\\n{\\n    if(x<0){putchar('-');x=-x;}\\n    if(x>9) write(x\\/10);\\n    putchar(x%10+'0');\\n}\\nint main()\\n{\\n\\tios::sync_with_stdio(false);\\n\\tcin.tie(0);\\n\\tcout.tie(0);\\n\\tint t;\\n\\tread(t);\\n\\twhile(t--)\\n\\t{\\n\\t\\tint a,b;\\n\\t\\tread(a);read(b);\\n\\t\\tcout<<a+b<<endl;\\n\\t}\\n\\treturn 0;\\n}\\n\\n\\n\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"T431882\",\"title\":\"Always Accepted\",\"difficulty\":0,\"fullScore\":100,\"type\":\"T\"},\"contest\":null,\"sourceCodeLength\":529,\"submitTime\":1743307636,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":210956144,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0]],\"showStatus\":true},\"currentTitle\":\"R210956144\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186445,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_030ccmco/src:3:9: 错误：‘#pragma GCC optimize’ is not allowed in online judge mode\n    3 | #pragma GCC optimize(2)\n      |         ^~~\n/tmp/compiler_030ccmco/src: 在函数‘int main()’中:\n/tmp/compiler_030ccmco/src:23:8: 错误：对‘read(int&)’的调用没有匹配的函数\n   23 |  read(t);\n      |        ^\nIn file included from /nix/store/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev/include/bits/sigstksz.h:24,\n                 from /nix/store/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev/include/signal.h:328,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/csignal:42,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:43,\n                 from /tmp/compiler_030ccmco/src:1:\n/nix/store/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev/include/unistd.h:371:16: 附注：candidate: ‘ssize_t read(int, void*, size_t)’\n  371 | extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur\n      |                ^~~~\n/nix/store/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev/include/unistd.h:371:16: 附注： 备选需要 3 实参，但提供了 1 个\n/tmp/compiler_030ccmco/src:4:12: 附注：candidate: ‘int read()’\n    4 | inline int read()\n      |            ^~~~\n/tmp/compiler_030ccmco/src:4:12: 附注： 备选需要 0 实参，但提供了 1 个\n/tmp/compiler_030ccmco/src:27:9: 错误：对‘read(int&)’的调用没有匹配的函数\n   27 |   read(a);read(b);\n      |         ^\nIn file included from /nix/store/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev/include/bits/sigstksz.h:24,\n                 from /nix/store/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev/include/signal.h:328,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/csignal:42,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:43,\n                 from /tmp/compiler_030ccmco/src:1:\n/nix/store/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev/include/unistd.h:371:16: 附注：candidate: ‘ssize_t read(int, void*, size_t)’\n  371 | extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur\n      |                ^~~~\n/nix/store/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev/include/unistd.h:371:16: 附注： 备选需要 3 实参，但提供了 1 个\n/tmp/compiler_030ccmco/src:4:12: 附注：candidate: ‘int read()’\n    4 | inline int read()\n      |            ^~~~\n/tmp/compiler_030ccmco/src:4:12: 附注： 备选需要 0 实参，但提供了 1 个\n/tmp/compiler_030ccmco/src:27:17: 错误：对‘read(int&)’的调用没有匹配的函数\n   27 |   read(a);read(b);\n      |                 ^\nIn file included from /nix/store/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev/include/bits/sigstksz.h:24,\n                 from /nix/store/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev/include/signal.h:328,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/csignal:42,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:43,\n                 from /tmp/compiler_030ccmco/src:1:\n/nix/store/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev/include/unistd.h:371:16: 附注：candidate: ‘ssize_t read(int, void*, size_t)’\n  371 | extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur\n      |                ^~~~\n/nix/store/79624djlfdc0a6anji2rwqd9p9ycqi8h-glibc-2.34-210-dev/include/unistd.h:371:16: 附注： 备选需要 3 实参，但提供了 1 个\n/tmp/compiler_030ccmco/src:4:12: 附注：candidate: ‘int read()’\n    4 | inline int read()\n      |            ^~~~\n/tmp/compiler_030ccmco/src:4:12: 附注： 备选需要 0 实参，但提供了 1 个\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h>\nusing namespace std;\n#pragma GCC optimize(2)\ninline int read()\n{\n    int x=0,f=1;char ch=getchar();\n    while(!isdigit(ch)){if(ch=='-') f=-1;ch=getchar();}\n    while(isdigit(ch)){x=x*10+ch-'0';ch=getchar();}\n    return x*f;\n}\ninline void write(int x)\n{\n    if(x<0){putchar('-');x=-x;}\n    if(x>9) write(x/10);\n    putchar(x%10+'0');\n}\nint main()\n{\n\tios::sync_with_stdio(false);\n\tcin.tie(0);\n\tcout.tie(0);\n\tint t;\n\tread(t);\n\twhile(t--)\n\t{\n\t\tint a,b;\n\t\tread(a);read(b);\n\t\tcout<<a+b<<endl;\n\t}\n\treturn 0;\n}\n\n\n",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "T431882",
+          "title": "Always Accepted",
+          "difficulty": 0,
+          "fullScore": 100,
+          "type": "T"
+        },
+        "contest": null,
+        "sourceCodeLength": 529,
+        "submitTime": 1743307636,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 210956144,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R210956144",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186445,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

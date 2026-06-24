@@ -1,0 +1,323 @@
+{
+  "recordId": "255046616",
+  "url": "https://www.luogu.com.cn/record/255046616?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:30:58.306Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[{\"id\":0,\"score\":0,\"status\":14,\"testCases\":{\"0\":{\"id\":0,\"status\":6,\"time\":36,\"memory\":812,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer Too short on line 2.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"2\":{\"id\":2,\"status\":6,\"time\":10,\"memory\":788,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer Too short on line 2.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"8\":{\"id\":8,\"status\":6,\"time\":93,\"memory\":788,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer Too short on line 4.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"6\":{\"id\":6,\"status\":6,\"time\":94,\"memory\":788,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer Too short on line 2.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"5\":{\"id\":5,\"status\":6,\"time\":110,\"memory\":788,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer Too short on line 2.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"1\":{\"id\":1,\"status\":6,\"time\":85,\"memory\":852,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer Too short on line 4.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"7\":{\"id\":7,\"status\":6,\"time\":100,\"memory\":812,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer Too short on line 338.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"3\":{\"id\":3,\"status\":6,\"time\":9,\"memory\":820,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer Too short on line 2.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"9\":{\"id\":9,\"status\":6,\"time\":127,\"memory\":788,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer Too short on line 6.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"4\":{\"id\":4,\"status\":6,\"time\":117,\"memory\":664,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"wrong answer Too short on line 2.\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}},\"judger\":\"\",\"time\":781,\"memory\":852,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}],\"finishedCaseCount\":10,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <bits\\/stdc++.h>\\nusing namespace std;\\n\\nusing u64 = unsigned long long;\\nusing u128 = __uint128_t;\\nusing i128 = __int128_t;\\n\\nstatic inline u64 mul_mod(u64 a, u64 b, u64 mod) {\\n    return (u128)a * b % mod;\\n}\\nstatic inline u64 pow_mod(u64 a, u64 e, u64 mod) {\\n    u64 r = 1 % mod;\\n    while (e) {\\n        if (e & 1) r = mul_mod(r, a, mod);\\n        a = mul_mod(a, a, mod);\\n        e >>= 1;\\n    }\\n    return r;\\n}\\nstatic inline u64 gcd_u64(u64 a, u64 b) {\\n    while (b) { u64 t = a % b; a = b; b = t; }\\n    return a;\\n}\\n\\n\\/\\/ 64-bit deterministic Miller-Rabin\\nstatic bool is_prime(u64 n) {\\n    if (n < 2) return false;\\n    static u64 small[] = {2ULL,3ULL,5ULL,7ULL,11ULL,13ULL,17ULL,19ULL,23ULL,0ULL};\\n    for (int i = 0; small[i]; ++i) {\\n        if (n % small[i] == 0) return n == small[i];\\n    }\\n    u64 d = n - 1, s = 0;\\n    while ((d & 1) == 0) { d >>= 1; ++s; }\\n\\n    auto witness = [&](u64 a) -> bool {\\n        if (a % n == 0) return false;\\n        u64 x = pow_mod(a, d, n);\\n        if (x == 1 || x == n - 1) return false;\\n        for (u64 r = 1; r < s; ++r) {\\n            x = mul_mod(x, x, n);\\n            if (x == n - 1) return false;\\n        }\\n        return true;\\n    };\\n\\n    static u64 bases[] = {\\n        2ULL, 325ULL, 9375ULL, 28178ULL, 450775ULL, 9780504ULL, 1795265022ULL, 0ULL\\n    };\\n    for (int i = 0; bases[i]; ++i) {\\n        if (witness(bases[i])) return false;\\n    }\\n    return true;\\n}\\n\\nstatic mt19937_64 rng((u64)chrono::high_resolution_clock::now().time_since_epoch().count());\\n\\nstatic u64 pollard_rho(u64 n) {\\n    if ((n & 1ULL) == 0) return 2ULL;\\n    if (n % 3ULL == 0) return 3ULL;\\n\\n    u64 c = uniform_int_distribution<u64>(1, n - 1)(rng);\\n    u64 x = uniform_int_distribution<u64>(0, n - 1)(rng);\\n    u64 y = x, d = 1;\\n\\n    auto f = [&](u64 v) -> u64 {\\n        return (mul_mod(v, v, n) + c) % n;\\n    };\\n\\n    while (d == 1) {\\n        x = f(x);\\n        y = f(f(y));\\n        u64 diff = (x > y) ? (x - y) : (y - x);\\n        d = gcd_u64(diff, n);\\n    }\\n    if (d == n) return pollard_rho(n);\\n    return d;\\n}\\n\\nstatic void factor_rec(u64 n, map<u64,int> &fac) {\\n    if (n == 1) return;\\n    if (is_prime(n)) { fac[n]++; return; }\\n    u64 d = pollard_rho(n);\\n    factor_rec(d, fac);\\n    factor_rec(n \\/ d, fac);\\n}\\n\\nstatic u64 isqrt_u64(u64 x) {\\n    long double r = sqrt((long double)x);\\n    u64 y = (u64)r;\\n    while ((u128)(y + 1) * (y + 1) <= x) ++y;\\n    while ((u128)y * y > x) --y;\\n    return y;\\n}\\n\\nstruct G { long long a, b; }; \\/\\/ a + i b\\n\\nstatic inline G g_mul(const G &x, const G &y) {\\n    i128 ra = (i128)x.a * y.a - (i128)x.b * y.b;\\n    i128 rb = (i128)x.a * y.b + (i128)x.b * y.a;\\n    return G{(long long)ra, (long long)rb};\\n}\\n\\nstatic G g_pow(G base, int e) {\\n    G r{1, 0};\\n    while (e > 0) {\\n        if (e & 1) r = g_mul(r, base);\\n        base = g_mul(base, base);\\n        e >>= 1;\\n    }\\n    return r;\\n}\\n\\nstatic u64 pow_u64(u64 a, int e) {\\n    u128 r = 1, b = a;\\n    while (e > 0) {\\n        if (e & 1) r *= b;\\n        b *= b;\\n        e >>= 1;\\n    }\\n    return (u64)r;\\n}\\n\\n\\/\\/ find r^2 \\u2261 -1 (mod p), p prime, p \\u2261 1 (mod 4)\\nstatic u64 sqrt_minus_one_mod_prime(u64 p) {\\n    u64 a = 2;\\n    while (true) {\\n        u64 ls = pow_mod(a, (p - 1) \\/ 2, p);\\n        if (ls == p - 1) break;\\n        ++a;\\n    }\\n    return pow_mod(a, (p - 1) \\/ 4, p);\\n}\\n\\n\\/\\/ Cornacchia: returns (x,y) with x^2 + y^2 = p, p prime \\u2261 1 (mod 4) or p=2\\nstatic pair<u64,u64> sum_two_squares_prime(u64 p) {\\n    if (p == 2) return {1,1};\\n    u64 r = sqrt_minus_one_mod_prime(p);\\n    if (r > p - r) r = p - r;\\n\\n    u64 a = p, b = r;\\n    while ((u128)b * b > p) {\\n        u64 t = a % b;\\n        a = b;\\n        b = t;\\n    }\\n    u64 x = b;\\n    u64 y2 = p - x * x;\\n    u64 y = isqrt_u64(y2);\\n    return {x, y};\\n}\\n\\nstatic void uniq_vec(vector<G> &v) {\\n    sort(v.begin(), v.end(), [](const G& x, const G& y){\\n        if (x.a != y.a) return x.a < y.a;\\n        return x.b < y.b;\\n    });\\n    v.erase(unique(v.begin(), v.end(), [](const G& x, const G& y){\\n        return x.a == y.a && x.b == y.b;\\n    }), v.end());\\n}\\n\\nstatic void solve_one(u64 n) {\\n    map<u64,int> fac;\\n    factor_rec(n, fac);\\n\\n    \\/\\/ existence check: primes 3 mod 4 must have even exponent\\n    for (auto it = fac.begin(); it != fac.end(); ++it) {\\n        u64 p = it->first; int e = it->second;\\n        if ((p % 4ULL) == 3ULL && (e & 1)) {\\n            cout << 0 << \\\"\\\\n\\\";\\n            return;\\n        }\\n    }\\n\\n    \\/\\/ scale = product p^{e\\/2} for p \\u2261 3 (mod 4)\\n    u64 scale = 1;\\n    for (auto it = fac.begin(); it != fac.end(); ++it) {\\n        u64 p = it->first; int e = it->second;\\n        if ((p % 4ULL) == 3ULL) {\\n            scale = (u64)((u128)scale * (u128)pow_u64(p, e \\/ 2));\\n        }\\n    }\\n\\n    vector<G> cur;\\n    cur.push_back(G{1,0});\\n\\n    \\/\\/ handle 2^e via (1+i)^e\\n    auto it2 = fac.find(2ULL);\\n    if (it2 != fac.end()) {\\n        int e2 = it2->second;\\n        if (e2 > 0) {\\n            G g2 = g_pow(G{1,1}, e2);\\n            vector<G> nxt;\\n            nxt.reserve(cur.size());\\n            for (size_t i = 0; i < cur.size(); ++i) nxt.push_back(g_mul(cur[i], g2));\\n            cur.swap(nxt);\\n            uniq_vec(cur);\\n        }\\n    }\\n\\n    \\/\\/ handle primes p \\u2261 1 (mod 4)\\n    for (auto it = fac.begin(); it != fac.end(); ++it) {\\n        u64 p = it->first; int e = it->second;\\n        if (p == 2ULL) continue;\\n        if ((p % 4ULL) != 1ULL) continue;\\n\\n        auto ab = sum_two_squares_prime(p);\\n        u64 a = ab.first, b = ab.second;\\n\\n        vector<G> pos(e + 1), neg(e + 1);\\n        pos[0] = G{1,0};\\n        neg[0] = G{1,0};\\n        G gp{(long long)a, (long long)b};\\n        G gn{(long long)a, -(long long)b};\\n        for (int i = 1; i <= e; ++i) {\\n            pos[i] = g_mul(pos[i-1], gp);\\n            neg[i] = g_mul(neg[i-1], gn);\\n        }\\n\\n        vector<G> opt;\\n        opt.reserve(e + 1);\\n        for (int k = 0; k <= e; ++k) {\\n            opt.push_back(g_mul(pos[k], neg[e - k]));\\n        }\\n\\n        vector<G> nxt;\\n        nxt.reserve(cur.size() * opt.size());\\n        for (size_t i = 0; i < cur.size(); ++i) {\\n            for (size_t j = 0; j < opt.size(); ++j) {\\n                nxt.push_back(g_mul(cur[i], opt[j]));\\n            }\\n        }\\n        cur.swap(nxt);\\n        uniq_vec(cur);\\n    }\\n\\n    \\/\\/ ordered nonnegative solutions\\n    set<pair<u64,u64>> ans;\\n    for (size_t i = 0; i < cur.size(); ++i) {\\n        u64 x = (u64)llabs(cur[i].a);\\n        u64 y = (u64)llabs(cur[i].b);\\n        x = (u64)((u128)x * scale);\\n        y = (u64)((u128)y * scale);\\n        ans.insert({x, y});\\n        ans.insert({y, x});\\n    }\\n\\n    cout << ans.size() << \\\"\\\\n\\\";\\n    for (auto it = ans.begin(); it != ans.end(); ++it) {\\n        cout << it->first << \\\" \\\" << it->second << \\\"\\\\n\\\";\\n    }\\n}\\n\\nint main() {\\n    ios::sync_with_stdio(false);\\n    cin.tie(nullptr);\\n\\n    int T;\\n    cin >> T;\\n    for (int tc = 1; tc <= T; ++tc) {\\n        u64 n;\\n        cin >> n;\\n        solve_one(n);\\n        if (tc != T) cout << \\\"\\\\n\\\";\\n    }\\n    return 0;\\n}\\n\",\"time\":781,\"memory\":852,\"problem\":{\"pid\":\"P2063\",\"title\":\"\\u4e8c\\u5e73\\u65b9\\u548c\\u5b9a\\u7406\",\"difficulty\":7,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":6879,\"submitTime\":1766663542,\"language\":27,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":255046616,\"status\":14,\"enableO2\":true,\"score\":0},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9]],\"showStatus\":true},\"currentTitle\":\"R255046616\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782185458,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [
+              {
+                "id": 0,
+                "score": 0,
+                "status": 14,
+                "testCases": {
+                  "0": {
+                    "id": 0,
+                    "status": 6,
+                    "time": 36,
+                    "memory": 812,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer Too short on line 2.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "1": {
+                    "id": 1,
+                    "status": 6,
+                    "time": 85,
+                    "memory": 852,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer Too short on line 4.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "2": {
+                    "id": 2,
+                    "status": 6,
+                    "time": 10,
+                    "memory": 788,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer Too short on line 2.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "3": {
+                    "id": 3,
+                    "status": 6,
+                    "time": 9,
+                    "memory": 820,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer Too short on line 2.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "4": {
+                    "id": 4,
+                    "status": 6,
+                    "time": 117,
+                    "memory": 664,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer Too short on line 2.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "5": {
+                    "id": 5,
+                    "status": 6,
+                    "time": 110,
+                    "memory": 788,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer Too short on line 2.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "6": {
+                    "id": 6,
+                    "status": 6,
+                    "time": 94,
+                    "memory": 788,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer Too short on line 2.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "7": {
+                    "id": 7,
+                    "status": 6,
+                    "time": 100,
+                    "memory": 812,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer Too short on line 338.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "8": {
+                    "id": 8,
+                    "status": 6,
+                    "time": 93,
+                    "memory": 788,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer Too short on line 4.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "9": {
+                    "id": 9,
+                    "status": 6,
+                    "time": 127,
+                    "memory": 788,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "wrong answer Too short on line 6.",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                },
+                "judger": "",
+                "time": 781,
+                "memory": 852,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            ],
+            "finishedCaseCount": 10,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nusing u64 = unsigned long long;\nusing u128 = __uint128_t;\nusing i128 = __int128_t;\n\nstatic inline u64 mul_mod(u64 a, u64 b, u64 mod) {\n    return (u128)a * b % mod;\n}\nstatic inline u64 pow_mod(u64 a, u64 e, u64 mod) {\n    u64 r = 1 % mod;\n    while (e) {\n        if (e & 1) r = mul_mod(r, a, mod);\n        a = mul_mod(a, a, mod);\n        e >>= 1;\n    }\n    return r;\n}\nstatic inline u64 gcd_u64(u64 a, u64 b) {\n    while (b) { u64 t = a % b; a = b; b = t; }\n    return a;\n}\n\n// 64-bit deterministic Miller-Rabin\nstatic bool is_prime(u64 n) {\n    if (n < 2) return false;\n    static u64 small[] = {2ULL,3ULL,5ULL,7ULL,11ULL,13ULL,17ULL,19ULL,23ULL,0ULL};\n    for (int i = 0; small[i]; ++i) {\n        if (n % small[i] == 0) return n == small[i];\n    }\n    u64 d = n - 1, s = 0;\n    while ((d & 1) == 0) { d >>= 1; ++s; }\n\n    auto witness = [&](u64 a) -> bool {\n        if (a % n == 0) return false;\n        u64 x = pow_mod(a, d, n);\n        if (x == 1 || x == n - 1) return false;\n        for (u64 r = 1; r < s; ++r) {\n            x = mul_mod(x, x, n);\n            if (x == n - 1) return false;\n        }\n        return true;\n    };\n\n    static u64 bases[] = {\n        2ULL, 325ULL, 9375ULL, 28178ULL, 450775ULL, 9780504ULL, 1795265022ULL, 0ULL\n    };\n    for (int i = 0; bases[i]; ++i) {\n        if (witness(bases[i])) return false;\n    }\n    return true;\n}\n\nstatic mt19937_64 rng((u64)chrono::high_resolution_clock::now().time_since_epoch().count());\n\nstatic u64 pollard_rho(u64 n) {\n    if ((n & 1ULL) == 0) return 2ULL;\n    if (n % 3ULL == 0) return 3ULL;\n\n    u64 c = uniform_int_distribution<u64>(1, n - 1)(rng);\n    u64 x = uniform_int_distribution<u64>(0, n - 1)(rng);\n    u64 y = x, d = 1;\n\n    auto f = [&](u64 v) -> u64 {\n        return (mul_mod(v, v, n) + c) % n;\n    };\n\n    while (d == 1) {\n        x = f(x);\n        y = f(f(y));\n        u64 diff = (x > y) ? (x - y) : (y - x);\n        d = gcd_u64(diff, n);\n    }\n    if (d == n) return pollard_rho(n);\n    return d;\n}\n\nstatic void factor_rec(u64 n, map<u64,int> &fac) {\n    if (n == 1) return;\n    if (is_prime(n)) { fac[n]++; return; }\n    u64 d = pollard_rho(n);\n    factor_rec(d, fac);\n    factor_rec(n / d, fac);\n}\n\nstatic u64 isqrt_u64(u64 x) {\n    long double r = sqrt((long double)x);\n    u64 y = (u64)r;\n    while ((u128)(y + 1) * (y + 1) <= x) ++y;\n    while ((u128)y * y > x) --y;\n    return y;\n}\n\nstruct G { long long a, b; }; // a + i b\n\nstatic inline G g_mul(const G &x, const G &y) {\n    i128 ra = (i128)x.a * y.a - (i128)x.b * y.b;\n    i128 rb = (i128)x.a * y.b + (i128)x.b * y.a;\n    return G{(long long)ra, (long long)rb};\n}\n\nstatic G g_pow(G base, int e) {\n    G r{1, 0};\n    while (e > 0) {\n        if (e & 1) r = g_mul(r, base);\n        base = g_mul(base, base);\n        e >>= 1;\n    }\n    return r;\n}\n\nstatic u64 pow_u64(u64 a, int e) {\n    u128 r = 1, b = a;\n    while (e > 0) {\n        if (e & 1) r *= b;\n        b *= b;\n        e >>= 1;\n    }\n    return (u64)r;\n}\n\n// find r^2 ≡ -1 (mod p), p prime, p ≡ 1 (mod 4)\nstatic u64 sqrt_minus_one_mod_prime(u64 p) {\n    u64 a = 2;\n    while (true) {\n        u64 ls = pow_mod(a, (p - 1) / 2, p);\n        if (ls == p - 1) break;\n        ++a;\n    }\n    return pow_mod(a, (p - 1) / 4, p);\n}\n\n// Cornacchia: returns (x,y) with x^2 + y^2 = p, p prime ≡ 1 (mod 4) or p=2\nstatic pair<u64,u64> sum_two_squares_prime(u64 p) {\n    if (p == 2) return {1,1};\n    u64 r = sqrt_minus_one_mod_prime(p);\n    if (r > p - r) r = p - r;\n\n    u64 a = p, b = r;\n    while ((u128)b * b > p) {\n        u64 t = a % b;\n        a = b;\n        b = t;\n    }\n    u64 x = b;\n    u64 y2 = p - x * x;\n    u64 y = isqrt_u64(y2);\n    return {x, y};\n}\n\nstatic void uniq_vec(vector<G> &v) {\n    sort(v.begin(), v.end(), [](const G& x, const G& y){\n        if (x.a != y.a) return x.a < y.a;\n        return x.b < y.b;\n    });\n    v.erase(unique(v.begin(), v.end(), [](const G& x, const G& y){\n        return x.a == y.a && x.b == y.b;\n    }), v.end());\n}\n\nstatic void solve_one(u64 n) {\n    map<u64,int> fac;\n    factor_rec(n, fac);\n\n    // existence check: primes 3 mod 4 must have even exponent\n    for (auto it = fac.begin(); it != fac.end(); ++it) {\n        u64 p = it->first; int e = it->second;\n        if ((p % 4ULL) == 3ULL && (e & 1)) {\n            cout << 0 << \"\\n\";\n            return;\n        }\n    }\n\n    // scale = product p^{e/2} for p ≡ 3 (mod 4)\n    u64 scale = 1;\n    for (auto it = fac.begin(); it != fac.end(); ++it) {\n        u64 p = it->first; int e = it->second;\n        if ((p % 4ULL) == 3ULL) {\n            scale = (u64)((u128)scale * (u128)pow_u64(p, e / 2));\n        }\n    }\n\n    vector<G> cur;\n    cur.push_back(G{1,0});\n\n    // handle 2^e via (1+i)^e\n    auto it2 = fac.find(2ULL);\n    if (it2 != fac.end()) {\n        int e2 = it2->second;\n        if (e2 > 0) {\n            G g2 = g_pow(G{1,1}, e2);\n            vector<G> nxt;\n            nxt.reserve(cur.size());\n            for (size_t i = 0; i < cur.size(); ++i) nxt.push_back(g_mul(cur[i], g2));\n            cur.swap(nxt);\n            uniq_vec(cur);\n        }\n    }\n\n    // handle primes p ≡ 1 (mod 4)\n    for (auto it = fac.begin(); it != fac.end(); ++it) {\n        u64 p = it->first; int e = it->second;\n        if (p == 2ULL) continue;\n        if ((p % 4ULL) != 1ULL) continue;\n\n        auto ab = sum_two_squares_prime(p);\n        u64 a = ab.first, b = ab.second;\n\n        vector<G> pos(e + 1), neg(e + 1);\n        pos[0] = G{1,0};\n        neg[0] = G{1,0};\n        G gp{(long long)a, (long long)b};\n        G gn{(long long)a, -(long long)b};\n        for (int i = 1; i <= e; ++i) {\n            pos[i] = g_mul(pos[i-1], gp);\n            neg[i] = g_mul(neg[i-1], gn);\n        }\n\n        vector<G> opt;\n        opt.reserve(e + 1);\n        for (int k = 0; k <= e; ++k) {\n            opt.push_back(g_mul(pos[k], neg[e - k]));\n        }\n\n        vector<G> nxt;\n        nxt.reserve(cur.size() * opt.size());\n        for (size_t i = 0; i < cur.size(); ++i) {\n            for (size_t j = 0; j < opt.size(); ++j) {\n                nxt.push_back(g_mul(cur[i], opt[j]));\n            }\n        }\n        cur.swap(nxt);\n        uniq_vec(cur);\n    }\n\n    // ordered nonnegative solutions\n    set<pair<u64,u64>> ans;\n    for (size_t i = 0; i < cur.size(); ++i) {\n        u64 x = (u64)llabs(cur[i].a);\n        u64 y = (u64)llabs(cur[i].b);\n        x = (u64)((u128)x * scale);\n        y = (u64)((u128)y * scale);\n        ans.insert({x, y});\n        ans.insert({y, x});\n    }\n\n    cout << ans.size() << \"\\n\";\n    for (auto it = ans.begin(); it != ans.end(); ++it) {\n        cout << it->first << \" \" << it->second << \"\\n\";\n    }\n}\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int T;\n    cin >> T;\n    for (int tc = 1; tc <= T; ++tc) {\n        u64 n;\n        cin >> n;\n        solve_one(n);\n        if (tc != T) cout << \"\\n\";\n    }\n    return 0;\n}\n",
+        "time": 781,
+        "memory": 852,
+        "problem": {
+          "pid": "P2063",
+          "title": "二平方和定理",
+          "difficulty": 7,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 6879,
+        "submitTime": 1766663542,
+        "language": 27,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 255046616,
+        "status": 14,
+        "enableO2": true,
+        "score": 0
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R255046616",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782185458,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

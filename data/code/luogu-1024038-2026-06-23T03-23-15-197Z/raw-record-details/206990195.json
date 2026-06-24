@@ -1,0 +1,278 @@
+{
+  "recordId": "206990195",
+  "url": "https://www.luogu.com.cn/record/206990195?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:48:32.449Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":{\"1\":{\"id\":1,\"score\":0,\"status\":12,\"testCases\":[{\"id\":0,\"status\":12,\"time\":3,\"memory\":552,\"score\":0,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}],\"judger\":\"\",\"time\":3,\"memory\":552,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"},\"0\":{\"id\":0,\"score\":100,\"status\":12,\"testCases\":{\"1\":{\"id\":1,\"status\":12,\"time\":4,\"memory\":624,\"score\":25,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"3\":{\"id\":3,\"status\":12,\"time\":4,\"memory\":568,\"score\":25,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"4\":{\"id\":4,\"status\":12,\"time\":3,\"memory\":552,\"score\":25,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"2\":{\"id\":2,\"status\":12,\"time\":3,\"memory\":556,\"score\":25,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}},\"judger\":\"\",\"time\":14,\"memory\":624,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}},\"finishedCaseCount\":5,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include <iostream>\\n#include <vector>\\n#include <algorithm>\\n#include <iomanip>\\n#include <cmath>\\n\\nusing namespace std;\\n\\nstruct Station {\\n    double distance;\\n    double price;\\n    Station(double d, double p) : distance(d), price(p) {}\\n};\\n\\nbool compare(const Station &a, const Station &b) {\\n    return a.distance < b.distance;\\n}\\n\\nint main() {\\n    double D1, C, D2, P;\\n    int N;\\n    cin >> D1 >> C >> D2 >> P >> N;\\n    \\n    vector<Station> stations;\\n    stations.emplace_back(0.0, P); \\/\\/ \\u8d77\\u70b9\\n    \\n    for (int i = 0; i < N; ++i) {\\n        double Di, Pi;\\n        cin >> Di >> Pi;\\n        if (Di < D1) { \\/\\/ \\u53ea\\u6dfb\\u52a0\\u5728\\u7ec8\\u70b9\\u4e4b\\u524d\\u7684\\u52a0\\u6cb9\\u7ad9\\n            stations.emplace_back(Di, Pi);\\n        }\\n    }\\n    \\n    \\/\\/ \\u6309\\u8ddd\\u79bb\\u6392\\u5e8f\\n    sort(stations.begin(), stations.end(), compare);\\n    \\n    \\/\\/ \\u6dfb\\u52a0\\u7ec8\\u70b9\\n    stations.emplace_back(D1, 0.0);\\n    \\n    \\/\\/ \\u68c0\\u67e5\\u76f8\\u90bb\\u52a0\\u6cb9\\u7ad9\\u4e4b\\u95f4\\u7684\\u8ddd\\u79bb\\u662f\\u5426\\u53ef\\u884c\\n    bool possible = true;\\n    for (int i = 0; i < stations.size() - 1; ++i) {\\n        double dist = stations[i+1].distance - stations[i].distance;\\n        if (dist > C * D2 + 1e-8) { \\/\\/ \\u8003\\u8651\\u6d6e\\u70b9\\u7cbe\\u5ea6\\n            possible = false;\\n            break;\\n        }\\n    }\\n    if (!possible) {\\n        cout << \\\"No Solution\\\" << endl;\\n        return 0;\\n    }\\n    \\n    int current = 0; \\/\\/ \\u5f53\\u524d\\u6240\\u5728\\u7684\\u52a0\\u6cb9\\u7ad9\\u7d22\\u5f15\\n    double current_gas = 0.0;\\n    double total_cost = 0.0;\\n    const double eps = 1e-8;\\n    \\n    while (current < stations.size() - 1) {\\n        Station curr_station = stations[current];\\n        double max_reach = curr_station.distance + C * D2;\\n        \\n        \\/\\/ \\u5bfb\\u627e\\u6240\\u6709\\u53ef\\u8fbe\\u7684\\u52a0\\u6cb9\\u7ad9\\u4e2d\\u7684\\u7b2c\\u4e00\\u4e2a\\u66f4\\u4fbf\\u5b9c\\u7684\\uff0c\\u6216\\u8005\\u6700\\u4fbf\\u5b9c\\u7684\\n        bool found_cheaper = false;\\n        int best_cheap = -1;\\n        \\/\\/ \\u68c0\\u67e5\\u540e\\u7eed\\u52a0\\u6cb9\\u7ad9\\u662f\\u5426\\u6709\\u4ef7\\u683c\\u6bd4\\u5f53\\u524d\\u4f4e\\u7684\\uff0c\\u53d6\\u6700\\u8fd1\\u7684\\n        for (int i = current + 1; i < stations.size(); ++i) {\\n            if (stations[i].distance > max_reach + eps)\\n                break;\\n            if (stations[i].price < curr_station.price - eps) {\\n                best_cheap = i;\\n                found_cheaper = true;\\n                break; \\/\\/ \\u627e\\u5230\\u7b2c\\u4e00\\u4e2a\\u66f4\\u4fbf\\u5b9c\\u7684\\u5c31\\u505c\\u6b62\\n            }\\n        }\\n        \\n        if (found_cheaper) {\\n            int next_station = best_cheap;\\n            double distance_needed = stations[next_station].distance - curr_station.distance;\\n            double gas_needed = distance_needed \\/ D2;\\n            \\/\\/ \\u5f53\\u524d\\u6cb9\\u91cf\\u662f\\u5426\\u8db3\\u591f\\uff1f\\n            if (current_gas < gas_needed) {\\n                double add = gas_needed - current_gas;\\n                total_cost += add * curr_station.price;\\n                current_gas = gas_needed;\\n            }\\n            current_gas -= gas_needed;\\n            current = next_station;\\n        } else {\\n            \\/\\/ \\u6ca1\\u6709\\u66f4\\u4fbf\\u5b9c\\u7684\\uff0c\\u627e\\u53ef\\u8fbe\\u8303\\u56f4\\u5185\\u7684\\u6700\\u4fbf\\u5b9c\\u7684\\u4ef7\\u683c\\uff0c\\u5e76\\u4e14\\u6700\\u8fdc\\n            double min_price = 1e9;\\n            for (int i = current + 1; i < stations.size(); ++i) {\\n                if (stations[i].distance > max_reach + eps)\\n                    break;\\n                if (stations[i].price < min_price)\\n                    min_price = stations[i].price;\\n            }\\n            if (min_price == 1e9) { \\/\\/ \\u6ca1\\u6709\\u53ef\\u8fbe\\u7684\\u7ad9\\uff1f\\u7406\\u8bba\\u4e0a\\u4e0d\\u53ef\\u80fd\\uff0c\\u56e0\\u4e3a\\u5df2\\u7ecf\\u68c0\\u67e5\\u8fc7\\u76f8\\u90bb\\u8ddd\\u79bb\\n                cout << \\\"No Solution\\\" << endl;\\n                return 0;\\n            }\\n            \\/\\/ \\u627e\\u5230\\u6700\\u8fdc\\u7684\\u4ef7\\u683c\\u7b49\\u4e8emin_price\\u7684\\u7ad9\\n            int farthest = current + 1;\\n            for (int i = current + 1; i < stations.size(); ++i) {\\n                if (stations[i].distance > max_reach + eps)\\n                    break;\\n                if (abs(stations[i].price - min_price) < eps) {\\n                    farthest = i;\\n                }\\n            }\\n            int next_station = farthest;\\n            double distance_needed = stations[next_station].distance - curr_station.distance;\\n            double gas_needed = distance_needed \\/ D2;\\n            \\n            if (next_station == stations.size() - 1) {\\n                \\/\\/ \\u7ec8\\u70b9\\uff0c\\u52a0\\u5230\\u521a\\u597d\\u591f\\n                if (current_gas < gas_needed) {\\n                    double add = gas_needed - current_gas;\\n                    total_cost += add * curr_station.price;\\n                    current_gas = gas_needed;\\n                }\\n                current_gas -= gas_needed;\\n                current = next_station;\\n            } else {\\n                \\/\\/ \\u52a0\\u6ee1\\u6cb9\\n                double add_gas = C - current_gas;\\n                total_cost += add_gas * curr_station.price;\\n                current_gas = C;\\n                current_gas -= gas_needed;\\n                current = next_station;\\n            }\\n        }\\n    }\\n    \\n    \\/\\/ \\u5904\\u7406\\u8f93\\u51fa\\uff0c\\u56db\\u820d\\u4e94\\u5165\\u5230\\u4e24\\u4f4d\\u5c0f\\u6570\\n    cout << fixed << setprecision(2) << (total_cost + 1e-8) << endl;\\n    \\n    return 0;\\n}\",\"time\":17,\"memory\":624,\"problem\":{\"pid\":\"P1016\",\"title\":\"[NOIP 1999 \\u666e\\u53ca\\u7ec4\\/\\u63d0\\u9ad8\\u7ec4] \\u65c5\\u884c\\u5bb6\\u7684\\u9884\\u7b97\",\"difficulty\":3,\"fullScore\":200,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":4367,\"submitTime\":1741521360,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":206990195,\"status\":12,\"enableO2\":true,\"score\":100},\"testCaseGroup\":{\"1\":[0,1,2,3,4,5,6,7],\"0\":[8,9,10,11]},\"showStatus\":true},\"currentTitle\":\"R206990195\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186512,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": {
+              "0": {
+                "id": 0,
+                "score": 100,
+                "status": 12,
+                "testCases": {
+                  "1": {
+                    "id": 1,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 624,
+                    "score": 25,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "2": {
+                    "id": 2,
+                    "status": 12,
+                    "time": 3,
+                    "memory": 556,
+                    "score": 25,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "3": {
+                    "id": 3,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 568,
+                    "score": 25,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "4": {
+                    "id": 4,
+                    "status": 12,
+                    "time": 3,
+                    "memory": 552,
+                    "score": 25,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                },
+                "judger": "",
+                "time": 14,
+                "memory": 624,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              },
+              "1": {
+                "id": 1,
+                "score": 0,
+                "status": 12,
+                "testCases": [
+                  {
+                    "id": 0,
+                    "status": 12,
+                    "time": 3,
+                    "memory": 552,
+                    "score": 0,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 1,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                ],
+                "judger": "",
+                "time": 3,
+                "memory": 552,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            },
+            "finishedCaseCount": 5,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <iomanip>\n#include <cmath>\n\nusing namespace std;\n\nstruct Station {\n    double distance;\n    double price;\n    Station(double d, double p) : distance(d), price(p) {}\n};\n\nbool compare(const Station &a, const Station &b) {\n    return a.distance < b.distance;\n}\n\nint main() {\n    double D1, C, D2, P;\n    int N;\n    cin >> D1 >> C >> D2 >> P >> N;\n    \n    vector<Station> stations;\n    stations.emplace_back(0.0, P); // 起点\n    \n    for (int i = 0; i < N; ++i) {\n        double Di, Pi;\n        cin >> Di >> Pi;\n        if (Di < D1) { // 只添加在终点之前的加油站\n            stations.emplace_back(Di, Pi);\n        }\n    }\n    \n    // 按距离排序\n    sort(stations.begin(), stations.end(), compare);\n    \n    // 添加终点\n    stations.emplace_back(D1, 0.0);\n    \n    // 检查相邻加油站之间的距离是否可行\n    bool possible = true;\n    for (int i = 0; i < stations.size() - 1; ++i) {\n        double dist = stations[i+1].distance - stations[i].distance;\n        if (dist > C * D2 + 1e-8) { // 考虑浮点精度\n            possible = false;\n            break;\n        }\n    }\n    if (!possible) {\n        cout << \"No Solution\" << endl;\n        return 0;\n    }\n    \n    int current = 0; // 当前所在的加油站索引\n    double current_gas = 0.0;\n    double total_cost = 0.0;\n    const double eps = 1e-8;\n    \n    while (current < stations.size() - 1) {\n        Station curr_station = stations[current];\n        double max_reach = curr_station.distance + C * D2;\n        \n        // 寻找所有可达的加油站中的第一个更便宜的，或者最便宜的\n        bool found_cheaper = false;\n        int best_cheap = -1;\n        // 检查后续加油站是否有价格比当前低的，取最近的\n        for (int i = current + 1; i < stations.size(); ++i) {\n            if (stations[i].distance > max_reach + eps)\n                break;\n            if (stations[i].price < curr_station.price - eps) {\n                best_cheap = i;\n                found_cheaper = true;\n                break; // 找到第一个更便宜的就停止\n            }\n        }\n        \n        if (found_cheaper) {\n            int next_station = best_cheap;\n            double distance_needed = stations[next_station].distance - curr_station.distance;\n            double gas_needed = distance_needed / D2;\n            // 当前油量是否足够？\n            if (current_gas < gas_needed) {\n                double add = gas_needed - current_gas;\n                total_cost += add * curr_station.price;\n                current_gas = gas_needed;\n            }\n            current_gas -= gas_needed;\n            current = next_station;\n        } else {\n            // 没有更便宜的，找可达范围内的最便宜的价格，并且最远\n            double min_price = 1e9;\n            for (int i = current + 1; i < stations.size(); ++i) {\n                if (stations[i].distance > max_reach + eps)\n                    break;\n                if (stations[i].price < min_price)\n                    min_price = stations[i].price;\n            }\n            if (min_price == 1e9) { // 没有可达的站？理论上不可能，因为已经检查过相邻距离\n                cout << \"No Solution\" << endl;\n                return 0;\n            }\n            // 找到最远的价格等于min_price的站\n            int farthest = current + 1;\n            for (int i = current + 1; i < stations.size(); ++i) {\n                if (stations[i].distance > max_reach + eps)\n                    break;\n                if (abs(stations[i].price - min_price) < eps) {\n                    farthest = i;\n                }\n            }\n            int next_station = farthest;\n            double distance_needed = stations[next_station].distance - curr_station.distance;\n            double gas_needed = distance_needed / D2;\n            \n            if (next_station == stations.size() - 1) {\n                // 终点，加到刚好够\n                if (current_gas < gas_needed) {\n                    double add = gas_needed - current_gas;\n                    total_cost += add * curr_station.price;\n                    current_gas = gas_needed;\n                }\n                current_gas -= gas_needed;\n                current = next_station;\n            } else {\n                // 加满油\n                double add_gas = C - current_gas;\n                total_cost += add_gas * curr_station.price;\n                current_gas = C;\n                current_gas -= gas_needed;\n                current = next_station;\n            }\n        }\n    }\n    \n    // 处理输出，四舍五入到两位小数\n    cout << fixed << setprecision(2) << (total_cost + 1e-8) << endl;\n    \n    return 0;\n}",
+        "time": 17,
+        "memory": 624,
+        "problem": {
+          "pid": "P1016",
+          "title": "[NOIP 1999 普及组/提高组] 旅行家的预算",
+          "difficulty": 3,
+          "fullScore": 200,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 4367,
+        "submitTime": 1741521360,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 206990195,
+        "status": 12,
+        "enableO2": true,
+        "score": 100
+      },
+      "testCaseGroup": {
+        "0": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "1": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "showStatus": true
+    },
+    "currentTitle": "R206990195",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186512,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

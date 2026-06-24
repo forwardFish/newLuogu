@@ -1,0 +1,271 @@
+{
+  "recordId": "271120733",
+  "url": "https://www.luogu.com.cn/record/271120733?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:25:37.618Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[{\"id\":0,\"score\":100,\"status\":12,\"testCases\":{\"4\":{\"id\":4,\"status\":12,\"time\":4,\"memory\":1064,\"score\":16,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"1\":{\"id\":1,\"status\":12,\"time\":4,\"memory\":836,\"score\":16,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"2\":{\"id\":2,\"status\":12,\"time\":4,\"memory\":788,\"score\":16,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"5\":{\"id\":5,\"status\":12,\"time\":4,\"memory\":1064,\"score\":20,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"0\":{\"id\":0,\"status\":12,\"time\":4,\"memory\":788,\"score\":16,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"3\":{\"id\":3,\"status\":12,\"time\":4,\"memory\":816,\"score\":16,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}},\"judger\":\"\",\"time\":24,\"memory\":1064,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}],\"finishedCaseCount\":6,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"\\n#include <iostream>\\n#include <string>\\n#include <cstdio>\\n#include <cctype>\\n\\nusing namespace std;\\n\\nint main() {\\n    string s;\\n    \\/\\/ Read the equation string. Since there are no spaces in the equation, cin >> s works.\\n    if (!(cin >> s)) return 0;\\n    \\n    char var = 0;\\n    \\/\\/ Identify the variable (the lowercase letter in the equation)\\n    for (char c : s) {\\n        if (islower(c)) {\\n            var = c;\\n            break;\\n        }\\n    }\\n    \\n    double coeff = 0;   \\/\\/ Accumulates the coefficient of the variable\\n    double constant = 0; \\/\\/ Accumulates the constant terms\\n    \\n    int side = 1;       \\/\\/ 1 for Left Hand Side, -1 for Right Hand Side\\n    int sign = 1;       \\/\\/ 1 for positive term, -1 for negative term\\n    double num = 0;     \\/\\/ Current number being parsed from digits\\n    bool has_num = false; \\/\\/ Flag to indicate if we are currently parsing a number\\n    bool last_is_var = false; \\/\\/ Flag to indicate if the last processed term was a variable term\\n    \\n    \\/\\/ Iterate through the string. \\n    \\/\\/ We go up to s.length() to process the last term using a virtual delimiter (c = 0).\\n    for (size_t i = 0; i <= s.length(); ++i) {\\n        char c = (i < s.length()) ? s[i] : 0; \\n        \\n        if (isdigit(c)) {\\n            num = num * 10 + (c - '0');\\n            has_num = true;\\n            last_is_var = false;\\n        } else if (islower(c)) {\\n            last_is_var = true;\\n            \\/\\/ has_num remains as is: true if coefficient exists (e.g., 2x), false if implicit 1 (e.g., x)\\n        } else {\\n            \\/\\/ Delimiter encountered: +, -, =, or end of string.\\n            \\/\\/ Finalize the term that ended just before this delimiter.\\n            \\n            if (last_is_var) {\\n                \\/\\/ The term was a variable term\\n                double val = has_num ? num : 1;\\n                coeff += side * sign * val;\\n            } else {\\n                \\/\\/ The term was a constant term\\n                if (has_num) {\\n                    constant += side * sign * num;\\n                }\\n            }\\n            \\n            \\/\\/ Reset state for the next term\\n            num = 0;\\n            has_num = false;\\n            last_is_var = false;\\n            \\n            \\/\\/ Update parsing state based on the delimiter for the *next* term\\n            if (c == '=') {\\n                side = -1; \\/\\/ Switch to RHS. Terms on RHS are effectively subtracted when moved to LHS.\\n                sign = 1;  \\/\\/ Reset sign for the start of the new side\\n            } else if (c == '+') {\\n                sign = 1;\\n            } else if (c == '-') {\\n                sign = -1;\\n            }\\n            \\/\\/ If c == 0, the loop terminates\\n        }\\n    }\\n    \\n    \\/\\/ The equation is now reduced to the form: coeff * x + constant = 0\\n    \\/\\/ Solving for x: x = -constant \\/ coeff\\n    double result = -constant \\/ coeff;\\n    \\n    \\/\\/ Output the result formatted to 3 decimal places\\n    printf(\\\"%c=%.3f\\\\n\\\", var, result);\\n    \\n    return 0;\\n}\\n\",\"time\":24,\"memory\":1064,\"problem\":{\"pid\":\"P1022\",\"title\":\"[NOIP 2000 \\u666e\\u53ca\\u7ec4] \\u8ba1\\u7b97\\u5668\\u7684\\u6539\\u826f\",\"difficulty\":3,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":2941,\"submitTime\":1774916830,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":271120733,\"status\":12,\"enableO2\":true,\"score\":100},\"testCaseGroup\":[[0,1,2,3,4,5]],\"showStatus\":true},\"currentTitle\":\"R271120733\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782185137,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [
+              {
+                "id": 0,
+                "score": 100,
+                "status": 12,
+                "testCases": {
+                  "0": {
+                    "id": 0,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 788,
+                    "score": 16,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "1": {
+                    "id": 1,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 836,
+                    "score": 16,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "2": {
+                    "id": 2,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 788,
+                    "score": 16,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "3": {
+                    "id": 3,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 816,
+                    "score": 16,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "4": {
+                    "id": 4,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 1064,
+                    "score": 16,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "5": {
+                    "id": 5,
+                    "status": 12,
+                    "time": 4,
+                    "memory": 1064,
+                    "score": 20,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                },
+                "judger": "",
+                "time": 24,
+                "memory": 1064,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            ],
+            "finishedCaseCount": 6,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "\n#include <iostream>\n#include <string>\n#include <cstdio>\n#include <cctype>\n\nusing namespace std;\n\nint main() {\n    string s;\n    // Read the equation string. Since there are no spaces in the equation, cin >> s works.\n    if (!(cin >> s)) return 0;\n    \n    char var = 0;\n    // Identify the variable (the lowercase letter in the equation)\n    for (char c : s) {\n        if (islower(c)) {\n            var = c;\n            break;\n        }\n    }\n    \n    double coeff = 0;   // Accumulates the coefficient of the variable\n    double constant = 0; // Accumulates the constant terms\n    \n    int side = 1;       // 1 for Left Hand Side, -1 for Right Hand Side\n    int sign = 1;       // 1 for positive term, -1 for negative term\n    double num = 0;     // Current number being parsed from digits\n    bool has_num = false; // Flag to indicate if we are currently parsing a number\n    bool last_is_var = false; // Flag to indicate if the last processed term was a variable term\n    \n    // Iterate through the string. \n    // We go up to s.length() to process the last term using a virtual delimiter (c = 0).\n    for (size_t i = 0; i <= s.length(); ++i) {\n        char c = (i < s.length()) ? s[i] : 0; \n        \n        if (isdigit(c)) {\n            num = num * 10 + (c - '0');\n            has_num = true;\n            last_is_var = false;\n        } else if (islower(c)) {\n            last_is_var = true;\n            // has_num remains as is: true if coefficient exists (e.g., 2x), false if implicit 1 (e.g., x)\n        } else {\n            // Delimiter encountered: +, -, =, or end of string.\n            // Finalize the term that ended just before this delimiter.\n            \n            if (last_is_var) {\n                // The term was a variable term\n                double val = has_num ? num : 1;\n                coeff += side * sign * val;\n            } else {\n                // The term was a constant term\n                if (has_num) {\n                    constant += side * sign * num;\n                }\n            }\n            \n            // Reset state for the next term\n            num = 0;\n            has_num = false;\n            last_is_var = false;\n            \n            // Update parsing state based on the delimiter for the *next* term\n            if (c == '=') {\n                side = -1; // Switch to RHS. Terms on RHS are effectively subtracted when moved to LHS.\n                sign = 1;  // Reset sign for the start of the new side\n            } else if (c == '+') {\n                sign = 1;\n            } else if (c == '-') {\n                sign = -1;\n            }\n            // If c == 0, the loop terminates\n        }\n    }\n    \n    // The equation is now reduced to the form: coeff * x + constant = 0\n    // Solving for x: x = -constant / coeff\n    double result = -constant / coeff;\n    \n    // Output the result formatted to 3 decimal places\n    printf(\"%c=%.3f\\n\", var, result);\n    \n    return 0;\n}\n",
+        "time": 24,
+        "memory": 1064,
+        "problem": {
+          "pid": "P1022",
+          "title": "[NOIP 2000 普及组] 计算器的改良",
+          "difficulty": 3,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 2941,
+        "submitTime": 1774916830,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 271120733,
+        "status": 12,
+        "enableO2": true,
+        "score": 100
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R271120733",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782185137,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "recordId": "207008817",
+  "url": "https://www.luogu.com.cn/record/207008817?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:48:10.632Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"Free Pascal Compiler version 3.2.2 [2023\\/10\\/16] for x86_64\\nCopyright (c) 1993-2021 by Florian Klaempfl and others\\nTarget OS: Linux for x86-64\\nCompiling \\/tmp\\/compiler_6qmp_si4\\/src\\nsrc(1,2) Fatal: Syntax error, \\\"BEGIN\\\" expected but \\\"identifier N\\\" found\\nFatal: Compilation aborted\\nError: \\/nix\\/store\\/jypfrslmmhwmylbr3k2fzq8861pha5hr-fpc-3.2.2\\/bin\\/ppcx64 returned an error exitcode\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"n = int(input())\\ncoeffs = list(map(int, input().split()))\\nresult = []\\nis_first = True\\n\\nfor i in range(n + 1):\\n    coeff = coeffs[i]\\n    degree = n - i\\n    if coeff == 0:\\n        continue\\n    # \\u5904\\u7406\\u7b26\\u53f7\\n    if is_first:\\n        sign = '-' if coeff < 0 else ''\\n        is_first = False\\n    else:\\n        sign = '+' if coeff > 0 else '-'\\n    # \\u5904\\u7406\\u7cfb\\u6570\\u548c\\u6b21\\u6570\\u90e8\\u5206\\n    abs_coeff = abs(coeff)\\n    if degree == 0:\\n        term = str(abs_coeff)\\n    else:\\n        term = '' if abs_coeff == 1 else str(abs_coeff)\\n    # \\u6784\\u5efa\\u5f53\\u524d\\u9879\\u7684\\u90e8\\u5206\\n    if degree == 0:\\n        part = term\\n    elif degree == 1:\\n        part = term + 'x'\\n    else:\\n        part = term + 'x^' + str(degree)\\n    # \\u5408\\u5e76\\u7b26\\u53f7\\u548c\\u90e8\\u5206\\n    result.append(sign + part)\\n\\nprint(''.join(result))\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P1067\",\"title\":\"[NOIP 2009 \\u666e\\u53ca\\u7ec4] \\u591a\\u9879\\u5f0f\\u8f93\\u51fa\",\"difficulty\":2,\"fullScore\":200,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":712,\"submitTime\":1741525129,\"language\":1,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":207008817,\"status\":2,\"enableO2\":false,\"score\":null},\"testCaseGroup\":{\"1\":[0,1],\"0\":[2,3,4,5,6,7,8,9,10,11]},\"showStatus\":true},\"currentTitle\":\"R207008817\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186490,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "Free Pascal Compiler version 3.2.2 [2023/10/16] for x86_64\nCopyright (c) 1993-2021 by Florian Klaempfl and others\nTarget OS: Linux for x86-64\nCompiling /tmp/compiler_6qmp_si4/src\nsrc(1,2) Fatal: Syntax error, \"BEGIN\" expected but \"identifier N\" found\nFatal: Compilation aborted\nError: /nix/store/jypfrslmmhwmylbr3k2fzq8861pha5hr-fpc-3.2.2/bin/ppcx64 returned an error exitcode\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "n = int(input())\ncoeffs = list(map(int, input().split()))\nresult = []\nis_first = True\n\nfor i in range(n + 1):\n    coeff = coeffs[i]\n    degree = n - i\n    if coeff == 0:\n        continue\n    # 处理符号\n    if is_first:\n        sign = '-' if coeff < 0 else ''\n        is_first = False\n    else:\n        sign = '+' if coeff > 0 else '-'\n    # 处理系数和次数部分\n    abs_coeff = abs(coeff)\n    if degree == 0:\n        term = str(abs_coeff)\n    else:\n        term = '' if abs_coeff == 1 else str(abs_coeff)\n    # 构建当前项的部分\n    if degree == 0:\n        part = term\n    elif degree == 1:\n        part = term + 'x'\n    else:\n        part = term + 'x^' + str(degree)\n    # 合并符号和部分\n    result.append(sign + part)\n\nprint(''.join(result))",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P1067",
+          "title": "[NOIP 2009 普及组] 多项式输出",
+          "difficulty": 2,
+          "fullScore": 200,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 712,
+        "submitTime": 1741525129,
+        "language": 1,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 207008817,
+        "status": 2,
+        "enableO2": false,
+        "score": null
+      },
+      "testCaseGroup": {
+        "0": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "1": [
+          0,
+          1
+        ]
+      },
+      "showStatus": true
+    },
+    "currentTitle": "R207008817",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186490,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

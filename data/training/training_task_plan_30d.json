@@ -1,0 +1,2480 @@
+{
+  "generatedAt": "2026-06-23T12:17:44.162Z",
+  "goal": "CSP-S_FIRST_PRIZE",
+  "days": 30,
+  "sourceProfile": "training_profile.json",
+  "sourcePriority": "training_priority.json",
+  "noGuaranteeStatement": "系统不能承诺 100% 一定获得 CSP-S 一等奖；本计划用于把训练过程变成可执行、可记录、可复盘、可调整、可验证的闭环。",
+  "planPrinciples": [
+    "每个任务必须说明为什么现在该做。",
+    "每个任务必须绑定 T1/T2/T3/T4。",
+    "旧题复盘、新题训练、部分分训练、模拟赛验证必须同时存在。",
+    "训练记录将反馈到下一天和下一周调整。"
+  ],
+  "daysPlan": [
+    {
+      "day": 1,
+      "theme": "第 1 周：T1 稳定性",
+      "targetAbility": "T1",
+      "why": "T1 当前 72.97，实现风险较高，必须先降低会做但错细节的问题。 本日属于 30 天计划第 1 周。",
+      "tasks": [
+        {
+          "id": "D1-D1-1",
+          "type": "new_problem",
+          "module": "implementation",
+          "targetAbility": "T1",
+          "difficulty": "普及/提高-",
+          "selectionRule": "选择一道模拟、枚举、前缀和或简单贪心题，重点训练边界和实现稳定性。",
+          "trainingGoal": "提高一次 AC 率，减少边界错误。",
+          "timeLimitMinutes": 40,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D1-D1-2",
+          "type": "new_problem",
+          "module": "prefix_sum_or_greedy",
+          "targetAbility": "T1",
+          "difficulty": "普及+/提高-",
+          "selectionRule": "选择一道需要处理边界或排序细节的题，提交前必须完成检查清单。",
+          "trainingGoal": "训练数据范围、下标、初始化检查。",
+          "timeLimitMinutes": 45,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D1-D1-3",
+          "type": "old_problem_review",
+          "module": "implementation",
+          "targetAbility": "T1",
+          "difficulty": "历史旧题",
+          "selectionRule": "从高价值复盘池选 1 道带 ARRAY_INDEX_RISK 或 DEFINE_INT_LONG_LONG 的旧题重看。",
+          "trainingGoal": "找出历史低级错误模式。",
+          "timeLimitMinutes": 35,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "U465842",
+          "problemTitle": "cspj 2024模拟 1升级版",
+          "attemptCount": 27,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "U519362",
+          "problemTitle": "函数",
+          "attemptCount": 24,
+          "bestScore": 0,
+          "finalResult": "UNKNOWN",
+          "tags": [
+            "NEVER_AC",
+            "STUCK_PROBLEM"
+          ],
+          "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+        }
+      ],
+      "successCriteria": [
+        "新题提交次数 <= 2",
+        "提交前完成边界检查清单",
+        "记录错误类型"
+      ],
+      "failureAction": [
+        "若 WA >= 2，Day2 前加 1 道同类基础题重做。"
+      ]
+    },
+    {
+      "day": 2,
+      "theme": "第 1 周：DP / 区间 DP",
+      "targetAbility": "T2",
+      "why": "DP 覆盖较多但平均提交次数偏高；区间 DP 是高优先级模块，需要稳定状态设计。 本日属于 30 天计划第 1 周。",
+      "tasks": [
+        {
+          "id": "D2-D2-1",
+          "type": "new_problem",
+          "module": "linear_dp",
+          "targetAbility": "T2",
+          "difficulty": "提高-",
+          "selectionRule": "选择一道线性 DP，写清状态、转移、初始化、遍历顺序。",
+          "trainingGoal": "把题意稳定转为状态。",
+          "timeLimitMinutes": 50,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D2-D2-2",
+          "type": "new_problem",
+          "module": "knapsack_dp",
+          "targetAbility": "T2",
+          "difficulty": "提高-",
+          "selectionRule": "选择一道背包或计数 DP，重点检查容量循环方向和初始化。",
+          "trainingGoal": "减少 DP 边界与循环顺序错误。",
+          "timeLimitMinutes": 55,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D2-D2-3",
+          "type": "new_problem",
+          "module": "interval_dp",
+          "targetAbility": "T2",
+          "difficulty": "提高/提高+",
+          "selectionRule": "选择一道区间 DP 中档题，必须写 len 枚举与转移依据。",
+          "trainingGoal": "专项补强区间 DP。",
+          "timeLimitMinutes": 70,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "P8699",
+          "problemTitle": "[蓝桥杯 2019 国 B] 排列数",
+          "attemptCount": 16,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        }
+      ],
+      "successCriteria": [
+        "每题写状态定义",
+        "每题写复杂度",
+        "至少 1 题独立 AC"
+      ],
+      "failureAction": [
+        "若状态设计不清，Day4 复盘加入区间 DP 旧题。"
+      ]
+    },
+    {
+      "day": 3,
+      "theme": "第 1 周：图论 / 并查集 / 二分",
+      "targetAbility": "T2",
+      "why": "并查集和二分平均提交次数偏高，需要训练集合含义、check 单调性和图建模稳定性。 本日属于 30 天计划第 1 周。",
+      "tasks": [
+        {
+          "id": "D3-D3-1",
+          "type": "new_problem",
+          "module": "dsu",
+          "targetAbility": "T2",
+          "difficulty": "提高-",
+          "selectionRule": "选择一道并查集题，写清每个集合表示什么、合并条件是什么。",
+          "trainingGoal": "降低并查集建模和实现错误。",
+          "timeLimitMinutes": 45,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D3-D3-2",
+          "type": "new_problem",
+          "module": "binary_search",
+          "targetAbility": "T2",
+          "difficulty": "提高",
+          "selectionRule": "选择一道二分答案题，先证明 check 单调性再写代码。",
+          "trainingGoal": "稳定二分边界和答案定义。",
+          "timeLimitMinutes": 60,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D3-D3-3",
+          "type": "new_problem",
+          "module": "graph",
+          "targetAbility": "T2",
+          "difficulty": "提高",
+          "selectionRule": "选择一道图遍历/最短路建模题，写清点、边、权和复杂度。",
+          "trainingGoal": "提升图论建模转化。",
+          "timeLimitMinutes": 60,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "P1955",
+          "problemTitle": "[NOI2015] 程序自动分析",
+          "attemptCount": 19,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P6691",
+          "problemTitle": "选择题",
+          "attemptCount": 17,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "LONG_CODE_PROBLEM"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        }
+      ],
+      "successCriteria": [
+        "二分题 check 单调性写清楚",
+        "并查集题集合含义写清楚",
+        "图论题复杂度写清楚"
+      ],
+      "failureAction": [
+        "若 TLE 或复杂度错误，Day4 复盘必须加入复杂度分析。"
+      ]
+    },
+    {
+      "day": 4,
+      "theme": "第 1 周：高提交次数旧题复盘",
+      "targetAbility": "ALL",
+      "why": "高提交次数题最能暴露真实短板，必须比较早期错误版本和最终版本。 本日属于 30 天计划第 1 周。",
+      "tasks": [
+        {
+          "id": "D4-D4-1",
+          "type": "old_problem_review",
+          "module": "high_attempt",
+          "targetAbility": "ALL",
+          "difficulty": "历史旧题",
+          "selectionRule": "复盘提交次数最高的 2 道题，回答为什么提交这么多次。",
+          "trainingGoal": "抽取真实错误模式。",
+          "timeLimitMinutes": 80,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D4-D4-2",
+          "type": "redo_problem",
+          "module": "weakness",
+          "targetAbility": "T1",
+          "difficulty": "历史旧题",
+          "selectionRule": "重写 1 道已 AC 但曾多次失败的旧题，不看旧代码。",
+          "trainingGoal": "验证错误是否真正修复。",
+          "timeLimitMinutes": 60,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D4-D4-3",
+          "type": "old_problem_review",
+          "module": "partial_score",
+          "targetAbility": "T3",
+          "difficulty": "历史旧题",
+          "selectionRule": "选择 1 道部分分题，写出错过的可拿分子任务。",
+          "trainingGoal": "为 Day5 部分分训练做准备。",
+          "timeLimitMinutes": 45,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "U465842",
+          "problemTitle": "cspj 2024模拟 1升级版",
+          "attemptCount": 27,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "U519362",
+          "problemTitle": "函数",
+          "attemptCount": 24,
+          "bestScore": 0,
+          "finalResult": "UNKNOWN",
+          "tags": [
+            "NEVER_AC",
+            "STUCK_PROBLEM"
+          ],
+          "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+        },
+        {
+          "problemPid": "P3585",
+          "problemTitle": "[POI 2015 R1] 印章 Seal",
+          "attemptCount": 24,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC",
+            "LONG_CODE_PROBLEM"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P1955",
+          "problemTitle": "[NOI2015] 程序自动分析",
+          "attemptCount": 19,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P1075",
+          "problemTitle": "[NOIP 2012 普及组] 质因数分解",
+          "attemptCount": 17,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P6691",
+          "problemTitle": "选择题",
+          "attemptCount": 17,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "LONG_CODE_PROBLEM"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        }
+      ],
+      "successCriteria": [
+        "每题写第一版错因",
+        "至少提炼 3 个固定错误模式",
+        "至少 1 道旧题完成重写"
+      ],
+      "failureAction": [
+        "若无法定位错因，使用 deep_review_samples.json 选代码做深度复盘。"
+      ]
+    },
+    {
+      "day": 5,
+      "theme": "第 1 周：T3 部分分训练",
+      "targetAbility": "T3",
+      "why": "T3 当前 66.46，是明显短板；难题训练目标是建立部分分下限。 本日属于 30 天计划第 1 周。",
+      "tasks": [
+        {
+          "id": "D5-D5-1",
+          "type": "partial_score_training",
+          "module": "hard_problem_split",
+          "targetAbility": "T3",
+          "difficulty": "提高+/省选-",
+          "selectionRule": "选择一道难题，不急着 AC，先写 30/50/70 分方案。",
+          "trainingGoal": "训练不会正解时的拿分能力。",
+          "timeLimitMinutes": 90,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D5-D5-2",
+          "type": "partial_score_training",
+          "module": "special_cases",
+          "targetAbility": "T3",
+          "difficulty": "提高+/省选-",
+          "selectionRule": "选择一道有明显数据范围分层的题，写暴力和特殊性质做法。",
+          "trainingGoal": "建立子任务拆分意识。",
+          "timeLimitMinutes": 90,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "P10135",
+          "problemTitle": "[USACO24JAN] Potion Farming S",
+          "attemptCount": 16,
+          "bestScore": 36,
+          "finalResult": "PC",
+          "tags": [
+            "NEVER_AC",
+            "PARTIAL_SCORE",
+            "STUCK_PROBLEM"
+          ],
+          "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+        }
+      ],
+      "successCriteria": [
+        "每道难题写出 30 分方案",
+        "至少 1 道写出 50 分方案",
+        "记录错过的可拿分点"
+      ],
+      "failureAction": [
+        "若 30 分方案也写不出，下周降低难题难度，先练暴力和特殊性质。"
+      ]
+    },
+    {
+      "day": 6,
+      "theme": "第 1 周：四题模拟赛",
+      "targetAbility": "T4",
+      "why": "T4 必须靠模拟赛验证；没有模拟赛过程数据，不能判断是否接近一等奖稳定区间。 本日属于 30 天计划第 1 周。",
+      "tasks": [
+        {
+          "id": "D6-D6-1",
+          "type": "mock_exam",
+          "module": "csp_s_mock",
+          "targetAbility": "T4",
+          "difficulty": "CSP-S 模拟",
+          "selectionRule": "完成一套四题模拟赛，严格记录每题得分、用时、开题顺序、调试时间和部分分策略。",
+          "trainingGoal": "训练完整比赛节奏和止损。",
+          "timeLimitMinutes": 240,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [],
+      "successCriteria": [
+        "记录 T1/T2/T3/T4 得分",
+        "记录开题顺序",
+        "记录调试时间",
+        "记录是否错过部分分"
+      ],
+      "failureAction": [
+        "若 T1/T2 没保住，下周先回到稳定性训练；若 T3/T4 空白，下周增加部分分拆解。"
+      ]
+    },
+    {
+      "day": 7,
+      "theme": "第 1 周：周复盘与闭环验证",
+      "targetAbility": "ALL",
+      "why": "第一周目标是验证闭环是否成立：计划不是终点，记录、复盘、调整才是系统价值。 本日属于 30 天计划第 1 周。",
+      "tasks": [
+        {
+          "id": "D7-D7-1",
+          "type": "mock_review",
+          "module": "weekly_review",
+          "targetAbility": "ALL",
+          "difficulty": "复盘",
+          "selectionRule": "根据 training_progress_log.json 和 mock_exam_log.json 生成周复盘。",
+          "trainingGoal": "判断训练是否有效。",
+          "timeLimitMinutes": 60,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D7-D7-2",
+          "type": "diagnosis_review",
+          "module": "loop_verification",
+          "targetAbility": "ALL",
+          "difficulty": "验证",
+          "selectionRule": "运行 train:verify 和 train:readiness，查看是否有执行数据支撑。",
+          "trainingGoal": "判断是否进入下一周或需要修正规则。",
+          "timeLimitMinutes": 30,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "U465842",
+          "problemTitle": "cspj 2024模拟 1升级版",
+          "attemptCount": 27,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "U519362",
+          "problemTitle": "函数",
+          "attemptCount": 24,
+          "bestScore": 0,
+          "finalResult": "UNKNOWN",
+          "tags": [
+            "NEVER_AC",
+            "STUCK_PROBLEM"
+          ],
+          "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+        },
+        {
+          "problemPid": "P3585",
+          "problemTitle": "[POI 2015 R1] 印章 Seal",
+          "attemptCount": 24,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC",
+            "LONG_CODE_PROBLEM"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P1955",
+          "problemTitle": "[NOI2015] 程序自动分析",
+          "attemptCount": 19,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        }
+      ],
+      "successCriteria": [
+        "生成 training_review_report_week1.md",
+        "生成 training_loop_verification.json",
+        "明确下周调整建议"
+      ],
+      "failureAction": [
+        "若记录不完整，不扩展 30 天计划，先修正记录流程。"
+      ]
+    },
+    {
+      "day": 8,
+      "theme": "第 2 周：T1 稳定性",
+      "targetAbility": "T1",
+      "why": "T1 当前 72.97，实现风险较高，必须先降低会做但错细节的问题。 本日属于 30 天计划第 2 周。",
+      "tasks": [
+        {
+          "id": "D8-D1-1",
+          "type": "new_problem",
+          "module": "implementation",
+          "targetAbility": "T1",
+          "difficulty": "普及/提高-",
+          "selectionRule": "选择一道模拟、枚举、前缀和或简单贪心题，重点训练边界和实现稳定性。",
+          "trainingGoal": "提高一次 AC 率，减少边界错误。",
+          "timeLimitMinutes": 40,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D8-D1-2",
+          "type": "new_problem",
+          "module": "prefix_sum_or_greedy",
+          "targetAbility": "T1",
+          "difficulty": "普及+/提高-",
+          "selectionRule": "选择一道需要处理边界或排序细节的题，提交前必须完成检查清单。",
+          "trainingGoal": "训练数据范围、下标、初始化检查。",
+          "timeLimitMinutes": 45,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D8-D1-3",
+          "type": "old_problem_review",
+          "module": "implementation",
+          "targetAbility": "T1",
+          "difficulty": "历史旧题",
+          "selectionRule": "从高价值复盘池选 1 道带 ARRAY_INDEX_RISK 或 DEFINE_INT_LONG_LONG 的旧题重看。",
+          "trainingGoal": "找出历史低级错误模式。",
+          "timeLimitMinutes": 35,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "U465842",
+          "problemTitle": "cspj 2024模拟 1升级版",
+          "attemptCount": 27,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "U519362",
+          "problemTitle": "函数",
+          "attemptCount": 24,
+          "bestScore": 0,
+          "finalResult": "UNKNOWN",
+          "tags": [
+            "NEVER_AC",
+            "STUCK_PROBLEM"
+          ],
+          "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+        }
+      ],
+      "successCriteria": [
+        "新题提交次数 <= 2",
+        "提交前完成边界检查清单",
+        "记录错误类型"
+      ],
+      "failureAction": [
+        "若 WA >= 2，Day2 前加 1 道同类基础题重做。"
+      ]
+    },
+    {
+      "day": 9,
+      "theme": "第 2 周：DP / 区间 DP",
+      "targetAbility": "T2",
+      "why": "DP 覆盖较多但平均提交次数偏高；区间 DP 是高优先级模块，需要稳定状态设计。 本日属于 30 天计划第 2 周。",
+      "tasks": [
+        {
+          "id": "D9-D2-1",
+          "type": "new_problem",
+          "module": "linear_dp",
+          "targetAbility": "T2",
+          "difficulty": "提高-",
+          "selectionRule": "选择一道线性 DP，写清状态、转移、初始化、遍历顺序。",
+          "trainingGoal": "把题意稳定转为状态。",
+          "timeLimitMinutes": 50,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D9-D2-2",
+          "type": "new_problem",
+          "module": "knapsack_dp",
+          "targetAbility": "T2",
+          "difficulty": "提高-",
+          "selectionRule": "选择一道背包或计数 DP，重点检查容量循环方向和初始化。",
+          "trainingGoal": "减少 DP 边界与循环顺序错误。",
+          "timeLimitMinutes": 55,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D9-D2-3",
+          "type": "new_problem",
+          "module": "interval_dp",
+          "targetAbility": "T2",
+          "difficulty": "提高/提高+",
+          "selectionRule": "选择一道区间 DP 中档题，必须写 len 枚举与转移依据。",
+          "trainingGoal": "专项补强区间 DP。",
+          "timeLimitMinutes": 70,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "P8699",
+          "problemTitle": "[蓝桥杯 2019 国 B] 排列数",
+          "attemptCount": 16,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        }
+      ],
+      "successCriteria": [
+        "每题写状态定义",
+        "每题写复杂度",
+        "至少 1 题独立 AC"
+      ],
+      "failureAction": [
+        "若状态设计不清，Day4 复盘加入区间 DP 旧题。"
+      ]
+    },
+    {
+      "day": 10,
+      "theme": "第 2 周：图论 / 并查集 / 二分",
+      "targetAbility": "T2",
+      "why": "并查集和二分平均提交次数偏高，需要训练集合含义、check 单调性和图建模稳定性。 本日属于 30 天计划第 2 周。",
+      "tasks": [
+        {
+          "id": "D10-D3-1",
+          "type": "new_problem",
+          "module": "dsu",
+          "targetAbility": "T2",
+          "difficulty": "提高-",
+          "selectionRule": "选择一道并查集题，写清每个集合表示什么、合并条件是什么。",
+          "trainingGoal": "降低并查集建模和实现错误。",
+          "timeLimitMinutes": 45,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D10-D3-2",
+          "type": "new_problem",
+          "module": "binary_search",
+          "targetAbility": "T2",
+          "difficulty": "提高",
+          "selectionRule": "选择一道二分答案题，先证明 check 单调性再写代码。",
+          "trainingGoal": "稳定二分边界和答案定义。",
+          "timeLimitMinutes": 60,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D10-D3-3",
+          "type": "new_problem",
+          "module": "graph",
+          "targetAbility": "T2",
+          "difficulty": "提高",
+          "selectionRule": "选择一道图遍历/最短路建模题，写清点、边、权和复杂度。",
+          "trainingGoal": "提升图论建模转化。",
+          "timeLimitMinutes": 60,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "P1955",
+          "problemTitle": "[NOI2015] 程序自动分析",
+          "attemptCount": 19,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P6691",
+          "problemTitle": "选择题",
+          "attemptCount": 17,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "LONG_CODE_PROBLEM"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        }
+      ],
+      "successCriteria": [
+        "二分题 check 单调性写清楚",
+        "并查集题集合含义写清楚",
+        "图论题复杂度写清楚"
+      ],
+      "failureAction": [
+        "若 TLE 或复杂度错误，Day4 复盘必须加入复杂度分析。"
+      ]
+    },
+    {
+      "day": 11,
+      "theme": "第 2 周：高提交次数旧题复盘",
+      "targetAbility": "ALL",
+      "why": "高提交次数题最能暴露真实短板，必须比较早期错误版本和最终版本。 本日属于 30 天计划第 2 周。",
+      "tasks": [
+        {
+          "id": "D11-D4-1",
+          "type": "old_problem_review",
+          "module": "high_attempt",
+          "targetAbility": "ALL",
+          "difficulty": "历史旧题",
+          "selectionRule": "复盘提交次数最高的 2 道题，回答为什么提交这么多次。",
+          "trainingGoal": "抽取真实错误模式。",
+          "timeLimitMinutes": 80,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D11-D4-2",
+          "type": "redo_problem",
+          "module": "weakness",
+          "targetAbility": "T1",
+          "difficulty": "历史旧题",
+          "selectionRule": "重写 1 道已 AC 但曾多次失败的旧题，不看旧代码。",
+          "trainingGoal": "验证错误是否真正修复。",
+          "timeLimitMinutes": 60,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D11-D4-3",
+          "type": "old_problem_review",
+          "module": "partial_score",
+          "targetAbility": "T3",
+          "difficulty": "历史旧题",
+          "selectionRule": "选择 1 道部分分题，写出错过的可拿分子任务。",
+          "trainingGoal": "为 Day5 部分分训练做准备。",
+          "timeLimitMinutes": 45,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "U465842",
+          "problemTitle": "cspj 2024模拟 1升级版",
+          "attemptCount": 27,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "U519362",
+          "problemTitle": "函数",
+          "attemptCount": 24,
+          "bestScore": 0,
+          "finalResult": "UNKNOWN",
+          "tags": [
+            "NEVER_AC",
+            "STUCK_PROBLEM"
+          ],
+          "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+        },
+        {
+          "problemPid": "P3585",
+          "problemTitle": "[POI 2015 R1] 印章 Seal",
+          "attemptCount": 24,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC",
+            "LONG_CODE_PROBLEM"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P1955",
+          "problemTitle": "[NOI2015] 程序自动分析",
+          "attemptCount": 19,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P1075",
+          "problemTitle": "[NOIP 2012 普及组] 质因数分解",
+          "attemptCount": 17,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P6691",
+          "problemTitle": "选择题",
+          "attemptCount": 17,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "LONG_CODE_PROBLEM"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        }
+      ],
+      "successCriteria": [
+        "每题写第一版错因",
+        "至少提炼 3 个固定错误模式",
+        "至少 1 道旧题完成重写"
+      ],
+      "failureAction": [
+        "若无法定位错因，使用 deep_review_samples.json 选代码做深度复盘。"
+      ]
+    },
+    {
+      "day": 12,
+      "theme": "第 2 周：T3 部分分训练",
+      "targetAbility": "T3",
+      "why": "T3 当前 66.46，是明显短板；难题训练目标是建立部分分下限。 本日属于 30 天计划第 2 周。",
+      "tasks": [
+        {
+          "id": "D12-D5-1",
+          "type": "partial_score_training",
+          "module": "hard_problem_split",
+          "targetAbility": "T3",
+          "difficulty": "提高+/省选-",
+          "selectionRule": "选择一道难题，不急着 AC，先写 30/50/70 分方案。",
+          "trainingGoal": "训练不会正解时的拿分能力。",
+          "timeLimitMinutes": 90,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D12-D5-2",
+          "type": "partial_score_training",
+          "module": "special_cases",
+          "targetAbility": "T3",
+          "difficulty": "提高+/省选-",
+          "selectionRule": "选择一道有明显数据范围分层的题，写暴力和特殊性质做法。",
+          "trainingGoal": "建立子任务拆分意识。",
+          "timeLimitMinutes": 90,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "P10135",
+          "problemTitle": "[USACO24JAN] Potion Farming S",
+          "attemptCount": 16,
+          "bestScore": 36,
+          "finalResult": "PC",
+          "tags": [
+            "NEVER_AC",
+            "PARTIAL_SCORE",
+            "STUCK_PROBLEM"
+          ],
+          "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+        }
+      ],
+      "successCriteria": [
+        "每道难题写出 30 分方案",
+        "至少 1 道写出 50 分方案",
+        "记录错过的可拿分点"
+      ],
+      "failureAction": [
+        "若 30 分方案也写不出，下周降低难题难度，先练暴力和特殊性质。"
+      ]
+    },
+    {
+      "day": 13,
+      "theme": "第 2 周：四题模拟赛",
+      "targetAbility": "T4",
+      "why": "T4 必须靠模拟赛验证；没有模拟赛过程数据，不能判断是否接近一等奖稳定区间。 本日属于 30 天计划第 2 周。",
+      "tasks": [
+        {
+          "id": "D13-D6-1",
+          "type": "mock_exam",
+          "module": "csp_s_mock",
+          "targetAbility": "T4",
+          "difficulty": "CSP-S 模拟",
+          "selectionRule": "完成一套四题模拟赛，严格记录每题得分、用时、开题顺序、调试时间和部分分策略。",
+          "trainingGoal": "训练完整比赛节奏和止损。",
+          "timeLimitMinutes": 240,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [],
+      "successCriteria": [
+        "记录 T1/T2/T3/T4 得分",
+        "记录开题顺序",
+        "记录调试时间",
+        "记录是否错过部分分"
+      ],
+      "failureAction": [
+        "若 T1/T2 没保住，下周先回到稳定性训练；若 T3/T4 空白，下周增加部分分拆解。"
+      ]
+    },
+    {
+      "day": 14,
+      "theme": "第 2 周：周复盘与闭环验证",
+      "targetAbility": "ALL",
+      "why": "第一周目标是验证闭环是否成立：计划不是终点，记录、复盘、调整才是系统价值。 本日属于 30 天计划第 2 周。",
+      "tasks": [
+        {
+          "id": "D14-D7-1",
+          "type": "mock_review",
+          "module": "weekly_review",
+          "targetAbility": "ALL",
+          "difficulty": "复盘",
+          "selectionRule": "根据 training_progress_log.json 和 mock_exam_log.json 生成周复盘。",
+          "trainingGoal": "判断训练是否有效。",
+          "timeLimitMinutes": 60,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D14-D7-2",
+          "type": "diagnosis_review",
+          "module": "loop_verification",
+          "targetAbility": "ALL",
+          "difficulty": "验证",
+          "selectionRule": "运行 train:verify 和 train:readiness，查看是否有执行数据支撑。",
+          "trainingGoal": "判断是否进入下一周或需要修正规则。",
+          "timeLimitMinutes": 30,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "U465842",
+          "problemTitle": "cspj 2024模拟 1升级版",
+          "attemptCount": 27,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "U519362",
+          "problemTitle": "函数",
+          "attemptCount": 24,
+          "bestScore": 0,
+          "finalResult": "UNKNOWN",
+          "tags": [
+            "NEVER_AC",
+            "STUCK_PROBLEM"
+          ],
+          "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+        },
+        {
+          "problemPid": "P3585",
+          "problemTitle": "[POI 2015 R1] 印章 Seal",
+          "attemptCount": 24,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC",
+            "LONG_CODE_PROBLEM"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P1955",
+          "problemTitle": "[NOI2015] 程序自动分析",
+          "attemptCount": 19,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        }
+      ],
+      "successCriteria": [
+        "生成 training_review_report_week1.md",
+        "生成 training_loop_verification.json",
+        "明确下周调整建议"
+      ],
+      "failureAction": [
+        "若记录不完整，不扩展 30 天计划，先修正记录流程。"
+      ]
+    },
+    {
+      "day": 15,
+      "theme": "第 3 周：T1 稳定性",
+      "targetAbility": "T1",
+      "why": "T1 当前 72.97，实现风险较高，必须先降低会做但错细节的问题。 本日属于 30 天计划第 3 周。",
+      "tasks": [
+        {
+          "id": "D15-D1-1",
+          "type": "new_problem",
+          "module": "implementation",
+          "targetAbility": "T1",
+          "difficulty": "普及/提高-",
+          "selectionRule": "选择一道模拟、枚举、前缀和或简单贪心题，重点训练边界和实现稳定性。",
+          "trainingGoal": "提高一次 AC 率，减少边界错误。",
+          "timeLimitMinutes": 40,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D15-D1-2",
+          "type": "new_problem",
+          "module": "prefix_sum_or_greedy",
+          "targetAbility": "T1",
+          "difficulty": "普及+/提高-",
+          "selectionRule": "选择一道需要处理边界或排序细节的题，提交前必须完成检查清单。",
+          "trainingGoal": "训练数据范围、下标、初始化检查。",
+          "timeLimitMinutes": 45,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D15-D1-3",
+          "type": "old_problem_review",
+          "module": "implementation",
+          "targetAbility": "T1",
+          "difficulty": "历史旧题",
+          "selectionRule": "从高价值复盘池选 1 道带 ARRAY_INDEX_RISK 或 DEFINE_INT_LONG_LONG 的旧题重看。",
+          "trainingGoal": "找出历史低级错误模式。",
+          "timeLimitMinutes": 35,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "U465842",
+          "problemTitle": "cspj 2024模拟 1升级版",
+          "attemptCount": 27,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "U519362",
+          "problemTitle": "函数",
+          "attemptCount": 24,
+          "bestScore": 0,
+          "finalResult": "UNKNOWN",
+          "tags": [
+            "NEVER_AC",
+            "STUCK_PROBLEM"
+          ],
+          "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+        }
+      ],
+      "successCriteria": [
+        "新题提交次数 <= 2",
+        "提交前完成边界检查清单",
+        "记录错误类型"
+      ],
+      "failureAction": [
+        "若 WA >= 2，Day2 前加 1 道同类基础题重做。"
+      ]
+    },
+    {
+      "day": 16,
+      "theme": "第 3 周：DP / 区间 DP",
+      "targetAbility": "T2",
+      "why": "DP 覆盖较多但平均提交次数偏高；区间 DP 是高优先级模块，需要稳定状态设计。 本日属于 30 天计划第 3 周。",
+      "tasks": [
+        {
+          "id": "D16-D2-1",
+          "type": "new_problem",
+          "module": "linear_dp",
+          "targetAbility": "T2",
+          "difficulty": "提高-",
+          "selectionRule": "选择一道线性 DP，写清状态、转移、初始化、遍历顺序。",
+          "trainingGoal": "把题意稳定转为状态。",
+          "timeLimitMinutes": 50,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D16-D2-2",
+          "type": "new_problem",
+          "module": "knapsack_dp",
+          "targetAbility": "T2",
+          "difficulty": "提高-",
+          "selectionRule": "选择一道背包或计数 DP，重点检查容量循环方向和初始化。",
+          "trainingGoal": "减少 DP 边界与循环顺序错误。",
+          "timeLimitMinutes": 55,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D16-D2-3",
+          "type": "new_problem",
+          "module": "interval_dp",
+          "targetAbility": "T2",
+          "difficulty": "提高/提高+",
+          "selectionRule": "选择一道区间 DP 中档题，必须写 len 枚举与转移依据。",
+          "trainingGoal": "专项补强区间 DP。",
+          "timeLimitMinutes": 70,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "P8699",
+          "problemTitle": "[蓝桥杯 2019 国 B] 排列数",
+          "attemptCount": 16,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        }
+      ],
+      "successCriteria": [
+        "每题写状态定义",
+        "每题写复杂度",
+        "至少 1 题独立 AC"
+      ],
+      "failureAction": [
+        "若状态设计不清，Day4 复盘加入区间 DP 旧题。"
+      ]
+    },
+    {
+      "day": 17,
+      "theme": "第 3 周：图论 / 并查集 / 二分",
+      "targetAbility": "T2",
+      "why": "并查集和二分平均提交次数偏高，需要训练集合含义、check 单调性和图建模稳定性。 本日属于 30 天计划第 3 周。",
+      "tasks": [
+        {
+          "id": "D17-D3-1",
+          "type": "new_problem",
+          "module": "dsu",
+          "targetAbility": "T2",
+          "difficulty": "提高-",
+          "selectionRule": "选择一道并查集题，写清每个集合表示什么、合并条件是什么。",
+          "trainingGoal": "降低并查集建模和实现错误。",
+          "timeLimitMinutes": 45,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D17-D3-2",
+          "type": "new_problem",
+          "module": "binary_search",
+          "targetAbility": "T2",
+          "difficulty": "提高",
+          "selectionRule": "选择一道二分答案题，先证明 check 单调性再写代码。",
+          "trainingGoal": "稳定二分边界和答案定义。",
+          "timeLimitMinutes": 60,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D17-D3-3",
+          "type": "new_problem",
+          "module": "graph",
+          "targetAbility": "T2",
+          "difficulty": "提高",
+          "selectionRule": "选择一道图遍历/最短路建模题，写清点、边、权和复杂度。",
+          "trainingGoal": "提升图论建模转化。",
+          "timeLimitMinutes": 60,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "P1955",
+          "problemTitle": "[NOI2015] 程序自动分析",
+          "attemptCount": 19,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P6691",
+          "problemTitle": "选择题",
+          "attemptCount": 17,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "LONG_CODE_PROBLEM"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        }
+      ],
+      "successCriteria": [
+        "二分题 check 单调性写清楚",
+        "并查集题集合含义写清楚",
+        "图论题复杂度写清楚"
+      ],
+      "failureAction": [
+        "若 TLE 或复杂度错误，Day4 复盘必须加入复杂度分析。"
+      ]
+    },
+    {
+      "day": 18,
+      "theme": "第 3 周：高提交次数旧题复盘",
+      "targetAbility": "ALL",
+      "why": "高提交次数题最能暴露真实短板，必须比较早期错误版本和最终版本。 本日属于 30 天计划第 3 周。",
+      "tasks": [
+        {
+          "id": "D18-D4-1",
+          "type": "old_problem_review",
+          "module": "high_attempt",
+          "targetAbility": "ALL",
+          "difficulty": "历史旧题",
+          "selectionRule": "复盘提交次数最高的 2 道题，回答为什么提交这么多次。",
+          "trainingGoal": "抽取真实错误模式。",
+          "timeLimitMinutes": 80,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D18-D4-2",
+          "type": "redo_problem",
+          "module": "weakness",
+          "targetAbility": "T1",
+          "difficulty": "历史旧题",
+          "selectionRule": "重写 1 道已 AC 但曾多次失败的旧题，不看旧代码。",
+          "trainingGoal": "验证错误是否真正修复。",
+          "timeLimitMinutes": 60,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D18-D4-3",
+          "type": "old_problem_review",
+          "module": "partial_score",
+          "targetAbility": "T3",
+          "difficulty": "历史旧题",
+          "selectionRule": "选择 1 道部分分题，写出错过的可拿分子任务。",
+          "trainingGoal": "为 Day5 部分分训练做准备。",
+          "timeLimitMinutes": 45,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "U465842",
+          "problemTitle": "cspj 2024模拟 1升级版",
+          "attemptCount": 27,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "U519362",
+          "problemTitle": "函数",
+          "attemptCount": 24,
+          "bestScore": 0,
+          "finalResult": "UNKNOWN",
+          "tags": [
+            "NEVER_AC",
+            "STUCK_PROBLEM"
+          ],
+          "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+        },
+        {
+          "problemPid": "P3585",
+          "problemTitle": "[POI 2015 R1] 印章 Seal",
+          "attemptCount": 24,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC",
+            "LONG_CODE_PROBLEM"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P1955",
+          "problemTitle": "[NOI2015] 程序自动分析",
+          "attemptCount": 19,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P1075",
+          "problemTitle": "[NOIP 2012 普及组] 质因数分解",
+          "attemptCount": 17,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P6691",
+          "problemTitle": "选择题",
+          "attemptCount": 17,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "LONG_CODE_PROBLEM"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        }
+      ],
+      "successCriteria": [
+        "每题写第一版错因",
+        "至少提炼 3 个固定错误模式",
+        "至少 1 道旧题完成重写"
+      ],
+      "failureAction": [
+        "若无法定位错因，使用 deep_review_samples.json 选代码做深度复盘。"
+      ]
+    },
+    {
+      "day": 19,
+      "theme": "第 3 周：T3 部分分训练",
+      "targetAbility": "T3",
+      "why": "T3 当前 66.46，是明显短板；难题训练目标是建立部分分下限。 本日属于 30 天计划第 3 周。",
+      "tasks": [
+        {
+          "id": "D19-D5-1",
+          "type": "partial_score_training",
+          "module": "hard_problem_split",
+          "targetAbility": "T3",
+          "difficulty": "提高+/省选-",
+          "selectionRule": "选择一道难题，不急着 AC，先写 30/50/70 分方案。",
+          "trainingGoal": "训练不会正解时的拿分能力。",
+          "timeLimitMinutes": 90,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D19-D5-2",
+          "type": "partial_score_training",
+          "module": "special_cases",
+          "targetAbility": "T3",
+          "difficulty": "提高+/省选-",
+          "selectionRule": "选择一道有明显数据范围分层的题，写暴力和特殊性质做法。",
+          "trainingGoal": "建立子任务拆分意识。",
+          "timeLimitMinutes": 90,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "P10135",
+          "problemTitle": "[USACO24JAN] Potion Farming S",
+          "attemptCount": 16,
+          "bestScore": 36,
+          "finalResult": "PC",
+          "tags": [
+            "NEVER_AC",
+            "PARTIAL_SCORE",
+            "STUCK_PROBLEM"
+          ],
+          "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+        }
+      ],
+      "successCriteria": [
+        "每道难题写出 30 分方案",
+        "至少 1 道写出 50 分方案",
+        "记录错过的可拿分点"
+      ],
+      "failureAction": [
+        "若 30 分方案也写不出，下周降低难题难度，先练暴力和特殊性质。"
+      ]
+    },
+    {
+      "day": 20,
+      "theme": "第 3 周：四题模拟赛",
+      "targetAbility": "T4",
+      "why": "T4 必须靠模拟赛验证；没有模拟赛过程数据，不能判断是否接近一等奖稳定区间。 本日属于 30 天计划第 3 周。",
+      "tasks": [
+        {
+          "id": "D20-D6-1",
+          "type": "mock_exam",
+          "module": "csp_s_mock",
+          "targetAbility": "T4",
+          "difficulty": "CSP-S 模拟",
+          "selectionRule": "完成一套四题模拟赛，严格记录每题得分、用时、开题顺序、调试时间和部分分策略。",
+          "trainingGoal": "训练完整比赛节奏和止损。",
+          "timeLimitMinutes": 240,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [],
+      "successCriteria": [
+        "记录 T1/T2/T3/T4 得分",
+        "记录开题顺序",
+        "记录调试时间",
+        "记录是否错过部分分"
+      ],
+      "failureAction": [
+        "若 T1/T2 没保住，下周先回到稳定性训练；若 T3/T4 空白，下周增加部分分拆解。"
+      ]
+    },
+    {
+      "day": 21,
+      "theme": "第 3 周：周复盘与闭环验证",
+      "targetAbility": "ALL",
+      "why": "第一周目标是验证闭环是否成立：计划不是终点，记录、复盘、调整才是系统价值。 本日属于 30 天计划第 3 周。",
+      "tasks": [
+        {
+          "id": "D21-D7-1",
+          "type": "mock_review",
+          "module": "weekly_review",
+          "targetAbility": "ALL",
+          "difficulty": "复盘",
+          "selectionRule": "根据 training_progress_log.json 和 mock_exam_log.json 生成周复盘。",
+          "trainingGoal": "判断训练是否有效。",
+          "timeLimitMinutes": 60,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D21-D7-2",
+          "type": "diagnosis_review",
+          "module": "loop_verification",
+          "targetAbility": "ALL",
+          "difficulty": "验证",
+          "selectionRule": "运行 train:verify 和 train:readiness，查看是否有执行数据支撑。",
+          "trainingGoal": "判断是否进入下一周或需要修正规则。",
+          "timeLimitMinutes": 30,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "U465842",
+          "problemTitle": "cspj 2024模拟 1升级版",
+          "attemptCount": 27,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "U519362",
+          "problemTitle": "函数",
+          "attemptCount": 24,
+          "bestScore": 0,
+          "finalResult": "UNKNOWN",
+          "tags": [
+            "NEVER_AC",
+            "STUCK_PROBLEM"
+          ],
+          "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+        },
+        {
+          "problemPid": "P3585",
+          "problemTitle": "[POI 2015 R1] 印章 Seal",
+          "attemptCount": 24,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC",
+            "LONG_CODE_PROBLEM"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P1955",
+          "problemTitle": "[NOI2015] 程序自动分析",
+          "attemptCount": 19,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        }
+      ],
+      "successCriteria": [
+        "生成 training_review_report_week1.md",
+        "生成 training_loop_verification.json",
+        "明确下周调整建议"
+      ],
+      "failureAction": [
+        "若记录不完整，不扩展 30 天计划，先修正记录流程。"
+      ]
+    },
+    {
+      "day": 22,
+      "theme": "第 4 周：T1 稳定性",
+      "targetAbility": "T1",
+      "why": "T1 当前 72.97，实现风险较高，必须先降低会做但错细节的问题。 本日属于 30 天计划第 4 周。",
+      "tasks": [
+        {
+          "id": "D22-D1-1",
+          "type": "new_problem",
+          "module": "implementation",
+          "targetAbility": "T1",
+          "difficulty": "普及/提高-",
+          "selectionRule": "选择一道模拟、枚举、前缀和或简单贪心题，重点训练边界和实现稳定性。",
+          "trainingGoal": "提高一次 AC 率，减少边界错误。",
+          "timeLimitMinutes": 40,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D22-D1-2",
+          "type": "new_problem",
+          "module": "prefix_sum_or_greedy",
+          "targetAbility": "T1",
+          "difficulty": "普及+/提高-",
+          "selectionRule": "选择一道需要处理边界或排序细节的题，提交前必须完成检查清单。",
+          "trainingGoal": "训练数据范围、下标、初始化检查。",
+          "timeLimitMinutes": 45,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D22-D1-3",
+          "type": "old_problem_review",
+          "module": "implementation",
+          "targetAbility": "T1",
+          "difficulty": "历史旧题",
+          "selectionRule": "从高价值复盘池选 1 道带 ARRAY_INDEX_RISK 或 DEFINE_INT_LONG_LONG 的旧题重看。",
+          "trainingGoal": "找出历史低级错误模式。",
+          "timeLimitMinutes": 35,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "U465842",
+          "problemTitle": "cspj 2024模拟 1升级版",
+          "attemptCount": 27,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "U519362",
+          "problemTitle": "函数",
+          "attemptCount": 24,
+          "bestScore": 0,
+          "finalResult": "UNKNOWN",
+          "tags": [
+            "NEVER_AC",
+            "STUCK_PROBLEM"
+          ],
+          "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+        }
+      ],
+      "successCriteria": [
+        "新题提交次数 <= 2",
+        "提交前完成边界检查清单",
+        "记录错误类型"
+      ],
+      "failureAction": [
+        "若 WA >= 2，Day2 前加 1 道同类基础题重做。"
+      ]
+    },
+    {
+      "day": 23,
+      "theme": "第 4 周：DP / 区间 DP",
+      "targetAbility": "T2",
+      "why": "DP 覆盖较多但平均提交次数偏高；区间 DP 是高优先级模块，需要稳定状态设计。 本日属于 30 天计划第 4 周。",
+      "tasks": [
+        {
+          "id": "D23-D2-1",
+          "type": "new_problem",
+          "module": "linear_dp",
+          "targetAbility": "T2",
+          "difficulty": "提高-",
+          "selectionRule": "选择一道线性 DP，写清状态、转移、初始化、遍历顺序。",
+          "trainingGoal": "把题意稳定转为状态。",
+          "timeLimitMinutes": 50,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D23-D2-2",
+          "type": "new_problem",
+          "module": "knapsack_dp",
+          "targetAbility": "T2",
+          "difficulty": "提高-",
+          "selectionRule": "选择一道背包或计数 DP，重点检查容量循环方向和初始化。",
+          "trainingGoal": "减少 DP 边界与循环顺序错误。",
+          "timeLimitMinutes": 55,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D23-D2-3",
+          "type": "new_problem",
+          "module": "interval_dp",
+          "targetAbility": "T2",
+          "difficulty": "提高/提高+",
+          "selectionRule": "选择一道区间 DP 中档题，必须写 len 枚举与转移依据。",
+          "trainingGoal": "专项补强区间 DP。",
+          "timeLimitMinutes": 70,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "P8699",
+          "problemTitle": "[蓝桥杯 2019 国 B] 排列数",
+          "attemptCount": 16,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        }
+      ],
+      "successCriteria": [
+        "每题写状态定义",
+        "每题写复杂度",
+        "至少 1 题独立 AC"
+      ],
+      "failureAction": [
+        "若状态设计不清，Day4 复盘加入区间 DP 旧题。"
+      ]
+    },
+    {
+      "day": 24,
+      "theme": "第 4 周：图论 / 并查集 / 二分",
+      "targetAbility": "T2",
+      "why": "并查集和二分平均提交次数偏高，需要训练集合含义、check 单调性和图建模稳定性。 本日属于 30 天计划第 4 周。",
+      "tasks": [
+        {
+          "id": "D24-D3-1",
+          "type": "new_problem",
+          "module": "dsu",
+          "targetAbility": "T2",
+          "difficulty": "提高-",
+          "selectionRule": "选择一道并查集题，写清每个集合表示什么、合并条件是什么。",
+          "trainingGoal": "降低并查集建模和实现错误。",
+          "timeLimitMinutes": 45,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D24-D3-2",
+          "type": "new_problem",
+          "module": "binary_search",
+          "targetAbility": "T2",
+          "difficulty": "提高",
+          "selectionRule": "选择一道二分答案题，先证明 check 单调性再写代码。",
+          "trainingGoal": "稳定二分边界和答案定义。",
+          "timeLimitMinutes": 60,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D24-D3-3",
+          "type": "new_problem",
+          "module": "graph",
+          "targetAbility": "T2",
+          "difficulty": "提高",
+          "selectionRule": "选择一道图遍历/最短路建模题，写清点、边、权和复杂度。",
+          "trainingGoal": "提升图论建模转化。",
+          "timeLimitMinutes": 60,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "P1955",
+          "problemTitle": "[NOI2015] 程序自动分析",
+          "attemptCount": 19,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P6691",
+          "problemTitle": "选择题",
+          "attemptCount": 17,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "LONG_CODE_PROBLEM"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        }
+      ],
+      "successCriteria": [
+        "二分题 check 单调性写清楚",
+        "并查集题集合含义写清楚",
+        "图论题复杂度写清楚"
+      ],
+      "failureAction": [
+        "若 TLE 或复杂度错误，Day4 复盘必须加入复杂度分析。"
+      ]
+    },
+    {
+      "day": 25,
+      "theme": "第 4 周：高提交次数旧题复盘",
+      "targetAbility": "ALL",
+      "why": "高提交次数题最能暴露真实短板，必须比较早期错误版本和最终版本。 本日属于 30 天计划第 4 周。",
+      "tasks": [
+        {
+          "id": "D25-D4-1",
+          "type": "old_problem_review",
+          "module": "high_attempt",
+          "targetAbility": "ALL",
+          "difficulty": "历史旧题",
+          "selectionRule": "复盘提交次数最高的 2 道题，回答为什么提交这么多次。",
+          "trainingGoal": "抽取真实错误模式。",
+          "timeLimitMinutes": 80,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D25-D4-2",
+          "type": "redo_problem",
+          "module": "weakness",
+          "targetAbility": "T1",
+          "difficulty": "历史旧题",
+          "selectionRule": "重写 1 道已 AC 但曾多次失败的旧题，不看旧代码。",
+          "trainingGoal": "验证错误是否真正修复。",
+          "timeLimitMinutes": 60,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D25-D4-3",
+          "type": "old_problem_review",
+          "module": "partial_score",
+          "targetAbility": "T3",
+          "difficulty": "历史旧题",
+          "selectionRule": "选择 1 道部分分题，写出错过的可拿分子任务。",
+          "trainingGoal": "为 Day5 部分分训练做准备。",
+          "timeLimitMinutes": 45,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "U465842",
+          "problemTitle": "cspj 2024模拟 1升级版",
+          "attemptCount": 27,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "U519362",
+          "problemTitle": "函数",
+          "attemptCount": 24,
+          "bestScore": 0,
+          "finalResult": "UNKNOWN",
+          "tags": [
+            "NEVER_AC",
+            "STUCK_PROBLEM"
+          ],
+          "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+        },
+        {
+          "problemPid": "P3585",
+          "problemTitle": "[POI 2015 R1] 印章 Seal",
+          "attemptCount": 24,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC",
+            "LONG_CODE_PROBLEM"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P1955",
+          "problemTitle": "[NOI2015] 程序自动分析",
+          "attemptCount": 19,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P1075",
+          "problemTitle": "[NOIP 2012 普及组] 质因数分解",
+          "attemptCount": 17,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P6691",
+          "problemTitle": "选择题",
+          "attemptCount": 17,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "LONG_CODE_PROBLEM"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        }
+      ],
+      "successCriteria": [
+        "每题写第一版错因",
+        "至少提炼 3 个固定错误模式",
+        "至少 1 道旧题完成重写"
+      ],
+      "failureAction": [
+        "若无法定位错因，使用 deep_review_samples.json 选代码做深度复盘。"
+      ]
+    },
+    {
+      "day": 26,
+      "theme": "第 4 周：T3 部分分训练",
+      "targetAbility": "T3",
+      "why": "T3 当前 66.46，是明显短板；难题训练目标是建立部分分下限。 本日属于 30 天计划第 4 周。",
+      "tasks": [
+        {
+          "id": "D26-D5-1",
+          "type": "partial_score_training",
+          "module": "hard_problem_split",
+          "targetAbility": "T3",
+          "difficulty": "提高+/省选-",
+          "selectionRule": "选择一道难题，不急着 AC，先写 30/50/70 分方案。",
+          "trainingGoal": "训练不会正解时的拿分能力。",
+          "timeLimitMinutes": 90,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D26-D5-2",
+          "type": "partial_score_training",
+          "module": "special_cases",
+          "targetAbility": "T3",
+          "difficulty": "提高+/省选-",
+          "selectionRule": "选择一道有明显数据范围分层的题，写暴力和特殊性质做法。",
+          "trainingGoal": "建立子任务拆分意识。",
+          "timeLimitMinutes": 90,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "P10135",
+          "problemTitle": "[USACO24JAN] Potion Farming S",
+          "attemptCount": 16,
+          "bestScore": 36,
+          "finalResult": "PC",
+          "tags": [
+            "NEVER_AC",
+            "PARTIAL_SCORE",
+            "STUCK_PROBLEM"
+          ],
+          "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+        }
+      ],
+      "successCriteria": [
+        "每道难题写出 30 分方案",
+        "至少 1 道写出 50 分方案",
+        "记录错过的可拿分点"
+      ],
+      "failureAction": [
+        "若 30 分方案也写不出，下周降低难题难度，先练暴力和特殊性质。"
+      ]
+    },
+    {
+      "day": 27,
+      "theme": "第 4 周：四题模拟赛",
+      "targetAbility": "T4",
+      "why": "T4 必须靠模拟赛验证；没有模拟赛过程数据，不能判断是否接近一等奖稳定区间。 本日属于 30 天计划第 4 周。",
+      "tasks": [
+        {
+          "id": "D27-D6-1",
+          "type": "mock_exam",
+          "module": "csp_s_mock",
+          "targetAbility": "T4",
+          "difficulty": "CSP-S 模拟",
+          "selectionRule": "完成一套四题模拟赛，严格记录每题得分、用时、开题顺序、调试时间和部分分策略。",
+          "trainingGoal": "训练完整比赛节奏和止损。",
+          "timeLimitMinutes": 240,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [],
+      "successCriteria": [
+        "记录 T1/T2/T3/T4 得分",
+        "记录开题顺序",
+        "记录调试时间",
+        "记录是否错过部分分"
+      ],
+      "failureAction": [
+        "若 T1/T2 没保住，下周先回到稳定性训练；若 T3/T4 空白，下周增加部分分拆解。"
+      ]
+    },
+    {
+      "day": 28,
+      "theme": "第 4 周：周复盘与闭环验证",
+      "targetAbility": "ALL",
+      "why": "第一周目标是验证闭环是否成立：计划不是终点，记录、复盘、调整才是系统价值。 本日属于 30 天计划第 4 周。",
+      "tasks": [
+        {
+          "id": "D28-D7-1",
+          "type": "mock_review",
+          "module": "weekly_review",
+          "targetAbility": "ALL",
+          "difficulty": "复盘",
+          "selectionRule": "根据 training_progress_log.json 和 mock_exam_log.json 生成周复盘。",
+          "trainingGoal": "判断训练是否有效。",
+          "timeLimitMinutes": 60,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D28-D7-2",
+          "type": "diagnosis_review",
+          "module": "loop_verification",
+          "targetAbility": "ALL",
+          "difficulty": "验证",
+          "selectionRule": "运行 train:verify 和 train:readiness，查看是否有执行数据支撑。",
+          "trainingGoal": "判断是否进入下一周或需要修正规则。",
+          "timeLimitMinutes": 30,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "U465842",
+          "problemTitle": "cspj 2024模拟 1升级版",
+          "attemptCount": 27,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "U519362",
+          "problemTitle": "函数",
+          "attemptCount": 24,
+          "bestScore": 0,
+          "finalResult": "UNKNOWN",
+          "tags": [
+            "NEVER_AC",
+            "STUCK_PROBLEM"
+          ],
+          "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+        },
+        {
+          "problemPid": "P3585",
+          "problemTitle": "[POI 2015 R1] 印章 Seal",
+          "attemptCount": 24,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC",
+            "LONG_CODE_PROBLEM"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "P1955",
+          "problemTitle": "[NOI2015] 程序自动分析",
+          "attemptCount": 19,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        }
+      ],
+      "successCriteria": [
+        "生成 training_review_report_week1.md",
+        "生成 training_loop_verification.json",
+        "明确下周调整建议"
+      ],
+      "failureAction": [
+        "若记录不完整，不扩展 30 天计划，先修正记录流程。"
+      ]
+    },
+    {
+      "day": 29,
+      "theme": "第 5 周：T1 稳定性",
+      "targetAbility": "T1",
+      "why": "T1 当前 72.97，实现风险较高，必须先降低会做但错细节的问题。 本日属于 30 天计划第 5 周。",
+      "tasks": [
+        {
+          "id": "D29-D1-1",
+          "type": "new_problem",
+          "module": "implementation",
+          "targetAbility": "T1",
+          "difficulty": "普及/提高-",
+          "selectionRule": "选择一道模拟、枚举、前缀和或简单贪心题，重点训练边界和实现稳定性。",
+          "trainingGoal": "提高一次 AC 率，减少边界错误。",
+          "timeLimitMinutes": 40,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D29-D1-2",
+          "type": "new_problem",
+          "module": "prefix_sum_or_greedy",
+          "targetAbility": "T1",
+          "difficulty": "普及+/提高-",
+          "selectionRule": "选择一道需要处理边界或排序细节的题，提交前必须完成检查清单。",
+          "trainingGoal": "训练数据范围、下标、初始化检查。",
+          "timeLimitMinutes": 45,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D29-D1-3",
+          "type": "old_problem_review",
+          "module": "implementation",
+          "targetAbility": "T1",
+          "difficulty": "历史旧题",
+          "selectionRule": "从高价值复盘池选 1 道带 ARRAY_INDEX_RISK 或 DEFINE_INT_LONG_LONG 的旧题重看。",
+          "trainingGoal": "找出历史低级错误模式。",
+          "timeLimitMinutes": 35,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "U465842",
+          "problemTitle": "cspj 2024模拟 1升级版",
+          "attemptCount": 27,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        },
+        {
+          "problemPid": "U519362",
+          "problemTitle": "函数",
+          "attemptCount": 24,
+          "bestScore": 0,
+          "finalResult": "UNKNOWN",
+          "tags": [
+            "NEVER_AC",
+            "STUCK_PROBLEM"
+          ],
+          "reviewReason": "长期未 AC 或高提交次数，是卡题复盘优先样本。"
+        }
+      ],
+      "successCriteria": [
+        "新题提交次数 <= 2",
+        "提交前完成边界检查清单",
+        "记录错误类型"
+      ],
+      "failureAction": [
+        "若 WA >= 2，Day2 前加 1 道同类基础题重做。"
+      ]
+    },
+    {
+      "day": 30,
+      "theme": "第 5 周：DP / 区间 DP",
+      "targetAbility": "T2",
+      "why": "DP 覆盖较多但平均提交次数偏高；区间 DP 是高优先级模块，需要稳定状态设计。 本日属于 30 天计划第 5 周。",
+      "tasks": [
+        {
+          "id": "D30-D2-1",
+          "type": "new_problem",
+          "module": "linear_dp",
+          "targetAbility": "T2",
+          "difficulty": "提高-",
+          "selectionRule": "选择一道线性 DP，写清状态、转移、初始化、遍历顺序。",
+          "trainingGoal": "把题意稳定转为状态。",
+          "timeLimitMinutes": 50,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D30-D2-2",
+          "type": "new_problem",
+          "module": "knapsack_dp",
+          "targetAbility": "T2",
+          "difficulty": "提高-",
+          "selectionRule": "选择一道背包或计数 DP，重点检查容量循环方向和初始化。",
+          "trainingGoal": "减少 DP 边界与循环顺序错误。",
+          "timeLimitMinutes": 55,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        },
+        {
+          "id": "D30-D2-3",
+          "type": "new_problem",
+          "module": "interval_dp",
+          "targetAbility": "T2",
+          "difficulty": "提高/提高+",
+          "selectionRule": "选择一道区间 DP 中档题，必须写 len 枚举与转移依据。",
+          "trainingGoal": "专项补强区间 DP。",
+          "timeLimitMinutes": 70,
+          "reviewRequired": true,
+          "successCriteria": [
+            "记录实际用时和提交次数",
+            "记录错误类型",
+            "写出本题暴露的问题"
+          ]
+        }
+      ],
+      "oldProblemReview": [
+        {
+          "problemPid": "P8699",
+          "problemTitle": "[蓝桥杯 2019 国 B] 排列数",
+          "attemptCount": 16,
+          "bestScore": 100,
+          "finalResult": "AC",
+          "tags": [
+            "MULTI_FAIL_THEN_AC"
+          ],
+          "reviewReason": "提交次数高，适合比较早期版本与最终版本。"
+        }
+      ],
+      "successCriteria": [
+        "每题写状态定义",
+        "每题写复杂度",
+        "至少 1 题独立 AC"
+      ],
+      "failureAction": [
+        "若状态设计不清，Day4 复盘加入区间 DP 旧题。"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "generatedAt": "2026-06-23T12:15:05.885Z",
+  "goal": "CSP-S_FIRST_PRIZE",
+  "status": "STRUCTURE_READY_NEEDS_EXECUTION_DATA",
+  "closedLoopSteps": [
+    {
+      "step": "诊断",
+      "evidence": "training_profile.json",
+      "ready": true
+    },
+    {
+      "step": "出题",
+      "evidence": "training_task_plan_7d.json/md",
+      "ready": true
+    },
+    {
+      "step": "训练",
+      "evidence": "training_progress_log.json entries",
+      "ready": false
+    },
+    {
+      "step": "记录",
+      "evidence": "training_progress_log.json",
+      "ready": true
+    },
+    {
+      "step": "复盘",
+      "evidence": "training_review_report_week1.md",
+      "ready": true
+    },
+    {
+      "step": "调整",
+      "evidence": "training_priority.json dynamicAdjustmentRules",
+      "ready": true
+    },
+    {
+      "step": "模拟赛验证",
+      "evidence": "mock_exam_log.json exams",
+      "ready": false
+    },
+    {
+      "step": "重新诊断",
+      "evidence": "readiness_checklist.json",
+      "ready": true
+    }
+  ],
+  "fileChecks": [
+    {
+      "file": "training_profile.json",
+      "exists": true
+    },
+    {
+      "file": "training_priority.json",
+      "exists": true
+    },
+    {
+      "file": "training_task_plan_7d.json",
+      "exists": true
+    },
+    {
+      "file": "training_task_plan_7d.md",
+      "exists": true
+    },
+    {
+      "file": "training_progress_log.json",
+      "exists": true
+    },
+    {
+      "file": "mock_exam_log.json",
+      "exists": true
+    },
+    {
+      "file": "training_review_report_week1.md",
+      "exists": true
+    },
+    {
+      "file": "readiness_checklist.json",
+      "exists": true
+    },
+    {
+      "file": "readiness_report.md",
+      "exists": true
+    }
+  ],
+  "executionData": {
+    "progressEntryCount": 0,
+    "mockExamCount": 0
+  },
+  "firstWeekPassCriteria": [
+    {
+      "criterion": "每天任务不是随机生成，而是能解释为什么安排",
+      "passed": true
+    },
+    {
+      "criterion": "每道题都有记录",
+      "passed": false
+    },
+    {
+      "criterion": "错题能进入复盘池",
+      "passed": false
+    },
+    {
+      "criterion": "次日计划会根据错误调整",
+      "passed": true
+    },
+    {
+      "criterion": "周复盘能指出真实问题",
+      "passed": true
+    },
+    {
+      "criterion": "模拟赛复盘能影响下一周计划",
+      "passed": false
+    }
+  ],
+  "nextAction": "按 training_task_plan_7d.md 执行 Day 1，并把结果填入 training_progress_log.json。"
+}

@@ -1,0 +1,204 @@
+{
+  "recordId": "163415741",
+  "url": "https://www.luogu.com.cn/record/163415741?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T04:06:37.671Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_5d8y2x7q\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_5d8y2x7q\\/src:7:5: \\u9519\\u8bef\\uff1a\\u2018cin\\u2019 was not declared in this scope; did you mean \\u2018std::cin\\u2019?\\n    7 |     cin>>n>>m;\\n      |     ^~~\\n      |     std::cin\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:75,\\n                 from \\/tmp\\/compiler_5d8y2x7q\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iostream:60:18: \\u9644\\u6ce8\\uff1a\\u2018std::cin\\u2019 declared here\\n   60 |   extern istream cin;  \\/\\/\\/ Linked to standard input\\n      |                  ^~~\\n\\/tmp\\/compiler_5d8y2x7q\\/src:30:41: \\u9519\\u8bef\\uff1a\\u2018max\\u2019 was not declared in this scope; did you mean \\u2018std::max\\u2019?\\n   30 |             f[i][j][0]=max(f[i][j-1][1],max(f[i][j-1][0],f[i][j-1][2]))+a[i][j];\\n      |                                         ^~~\\n      |                                         std::max\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/algorithm:62,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:65,\\n                 from \\/tmp\\/compiler_5d8y2x7q\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_algo.h:3462:5: \\u9644\\u6ce8\\uff1a\\u2018std::max\\u2019 declared here\\n 3462 |     max(initializer_list<_Tp> __l, _Compare __comp)\\n      |     ^~~\\n\\/tmp\\/compiler_5d8y2x7q\\/src:30:24: \\u9519\\u8bef\\uff1a\\u2018max\\u2019 was not declared in this scope; did you mean \\u2018std::max\\u2019?\\n   30 |             f[i][j][0]=max(f[i][j-1][1],max(f[i][j-1][0],f[i][j-1][2]))+a[i][j];\\n      |                        ^~~\\n      |                        std::max\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/algorithm:62,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:65,\\n                 from \\/tmp\\/compiler_5d8y2x7q\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_algo.h:3462:5: \\u9644\\u6ce8\\uff1a\\u2018std::max\\u2019 declared here\\n 3462 |     max(initializer_list<_Tp> __l, _Compare __comp)\\n      |     ^~~\\n\\/tmp\\/compiler_5d8y2x7q\\/src:38:24: \\u9519\\u8bef\\uff1a\\u2018max\\u2019 was not declared in this scope; did you mean \\u2018std::max\\u2019?\\n   38 |             f[i][j][2]=max(f[i+1][j][0],f[i+1][j][2])+a[i][j];\\n      |                        ^~~\\n      |                        std::max\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/algorithm:62,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:65,\\n                 from \\/tmp\\/compiler_5d8y2x7q\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_algo.h:3462:5: \\u9644\\u6ce8\\uff1a\\u2018std::max\\u2019 declared here\\n 3462 |     max(initializer_list<_Tp> __l, _Compare __comp)\\n      |     ^~~\\n\\/tmp\\/compiler_5d8y2x7q\\/src:41:5: \\u9519\\u8bef\\uff1a\\u2018cout\\u2019 was not declared in this scope; did you mean \\u2018std::cout\\u2019?\\n   41 |     cout<<max(f[n][m][0],max(f[n][m][1],f[n][m][2]));\\n      |     ^~~~\\n      |     std::cout\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:75,\\n                 from \\/tmp\\/compiler_5d8y2x7q\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/iostream:61:18: \\u9644\\u6ce8\\uff1a\\u2018std::cout\\u2019 declared here\\n   61 |   extern ostream cout;  \\/\\/\\/ Linked to standard output\\n      |                  ^~~~\\n\\/tmp\\/compiler_5d8y2x7q\\/src:41:26: \\u9519\\u8bef\\uff1a\\u2018max\\u2019 was not declared in this scope; did you mean \\u2018std::max\\u2019?\\n   41 |     cout<<max(f[n][m][0],max(f[n][m][1],f[n][m][2]));\\n      |                          ^~~\\n      |                          std::max\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/algorithm:62,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:65,\\n                 from \\/tmp\\/compiler_5d8y2x7q\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_algo.h:3462:5: \\u9644\\u6ce8\\uff1a\\u2018std::max\\u2019 declared here\\n 3462 |     max(initializer_list<_Tp> __l, _Compare __comp)\\n      |     ^~~\\n\\/tmp\\/compiler_5d8y2x7q\\/src:41:11: \\u9519\\u8bef\\uff1a\\u2018max\\u2019 was not declared in this scope; did you mean \\u2018std::max\\u2019?\\n   41 |     cout<<max(f[n][m][0],max(f[n][m][1],f[n][m][2]));\\n      |           ^~~\\n      |           std::max\\nIn file included from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/algorithm:62,\\n                 from \\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/x86_64-unknown-linux-gnu\\/bits\\/stdc++.h:65,\\n                 from \\/tmp\\/compiler_5d8y2x7q\\/src:1:\\n\\/nix\\/store\\/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0\\/include\\/c++\\/9.3.0\\/bits\\/stl_algo.h:3462:5: \\u9644\\u6ce8\\uff1a\\u2018std::max\\u2019 declared here\\n 3462 |     max(initializer_list<_Tp> __l, _Compare __comp)\\n      |     ^~~\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h>\\r\\nlong long f[1005][1005][3];\\r\\nlong long a[1005][1005];\\r\\nint main()\\r\\n{\\r\\n\\tlong long n,m;\\r\\n    cin>>n>>m;\\r\\n    for(int i=1;i<=n;i++)\\r\\n    {\\r\\n        for(int j=1;j<=m;j++)\\r\\n        {\\r\\n            cin>>a[i][j];\\r\\n            f[i][j][0]=-0x7fffffff;\\r\\n            f[i][j][1]=-0x7fffffff;\\r\\n            f[i][j][2]=-0x7fffffff;\\r\\n\\r\\n        }\\r\\n    }\\r\\n    f[1][1][0]=a[1][1];\\r\\n    f[1][1][1]=a[1][1];\\r\\n    f[1][1][2]=a[1][1];\\r\\n    for(int i=2;i<=n;i++)\\r\\n    {\\r\\n        f[i][1][1]=f[i-1][1][1]+a[i][1];\\r\\n    }\\r\\n    for(int j=2;j<=m;j++)\\r\\n    {\\r\\n        for(int i=1;i<=n;i++)\\r\\n        {\\r\\n            f[i][j][0]=max(f[i][j-1][1],max(f[i][j-1][0],f[i][j-1][2]))+a[i][j];\\r\\n            if(i>=2)\\r\\n\\t\\t\\t{\\r\\n            \\tf[i][j][1]=max(f[i-1][j][0],f[i-1][j][1])+a[i][j]; \\r\\n\\t\\t\\t}\\r\\n        }\\r\\n        for(int i=n-1;i>=1;i--)\\r\\n        {\\r\\n            f[i][j][2]=max(f[i+1][j][0],f[i+1][j][2])+a[i][j];\\r\\n        }\\r\\n    }\\r\\n    cout<<max(f[n][m][0],max(f[n][m][1],f[n][m][2]));\\r\\n    return 0;\\r\\n}\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P7074\",\"title\":\"[CSP-J 2020] \\u65b9\\u683c\\u53d6\\u6570\",\"difficulty\":4,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":986,\"submitTime\":1719666098,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":163415741,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":{\"1\":[0],\"0\":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]},\"showStatus\":true},\"currentTitle\":\"R163415741\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782187597,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_5d8y2x7q/src: 在函数‘int main()’中:\n/tmp/compiler_5d8y2x7q/src:7:5: 错误：‘cin’ was not declared in this scope; did you mean ‘std::cin’?\n    7 |     cin>>n>>m;\n      |     ^~~\n      |     std::cin\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:75,\n                 from /tmp/compiler_5d8y2x7q/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iostream:60:18: 附注：‘std::cin’ declared here\n   60 |   extern istream cin;  /// Linked to standard input\n      |                  ^~~\n/tmp/compiler_5d8y2x7q/src:30:41: 错误：‘max’ was not declared in this scope; did you mean ‘std::max’?\n   30 |             f[i][j][0]=max(f[i][j-1][1],max(f[i][j-1][0],f[i][j-1][2]))+a[i][j];\n      |                                         ^~~\n      |                                         std::max\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/algorithm:62,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:65,\n                 from /tmp/compiler_5d8y2x7q/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_algo.h:3462:5: 附注：‘std::max’ declared here\n 3462 |     max(initializer_list<_Tp> __l, _Compare __comp)\n      |     ^~~\n/tmp/compiler_5d8y2x7q/src:30:24: 错误：‘max’ was not declared in this scope; did you mean ‘std::max’?\n   30 |             f[i][j][0]=max(f[i][j-1][1],max(f[i][j-1][0],f[i][j-1][2]))+a[i][j];\n      |                        ^~~\n      |                        std::max\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/algorithm:62,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:65,\n                 from /tmp/compiler_5d8y2x7q/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_algo.h:3462:5: 附注：‘std::max’ declared here\n 3462 |     max(initializer_list<_Tp> __l, _Compare __comp)\n      |     ^~~\n/tmp/compiler_5d8y2x7q/src:38:24: 错误：‘max’ was not declared in this scope; did you mean ‘std::max’?\n   38 |             f[i][j][2]=max(f[i+1][j][0],f[i+1][j][2])+a[i][j];\n      |                        ^~~\n      |                        std::max\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/algorithm:62,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:65,\n                 from /tmp/compiler_5d8y2x7q/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_algo.h:3462:5: 附注：‘std::max’ declared here\n 3462 |     max(initializer_list<_Tp> __l, _Compare __comp)\n      |     ^~~\n/tmp/compiler_5d8y2x7q/src:41:5: 错误：‘cout’ was not declared in this scope; did you mean ‘std::cout’?\n   41 |     cout<<max(f[n][m][0],max(f[n][m][1],f[n][m][2]));\n      |     ^~~~\n      |     std::cout\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:75,\n                 from /tmp/compiler_5d8y2x7q/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/iostream:61:18: 附注：‘std::cout’ declared here\n   61 |   extern ostream cout;  /// Linked to standard output\n      |                  ^~~~\n/tmp/compiler_5d8y2x7q/src:41:26: 错误：‘max’ was not declared in this scope; did you mean ‘std::max’?\n   41 |     cout<<max(f[n][m][0],max(f[n][m][1],f[n][m][2]));\n      |                          ^~~\n      |                          std::max\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/algorithm:62,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:65,\n                 from /tmp/compiler_5d8y2x7q/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_algo.h:3462:5: 附注：‘std::max’ declared here\n 3462 |     max(initializer_list<_Tp> __l, _Compare __comp)\n      |     ^~~\n/tmp/compiler_5d8y2x7q/src:41:11: 错误：‘max’ was not declared in this scope; did you mean ‘std::max’?\n   41 |     cout<<max(f[n][m][0],max(f[n][m][1],f[n][m][2]));\n      |           ^~~\n      |           std::max\nIn file included from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/algorithm:62,\n                 from /nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/x86_64-unknown-linux-gnu/bits/stdc++.h:65,\n                 from /tmp/compiler_5d8y2x7q/src:1:\n/nix/store/bbmwawbq7wjb54fa35wr72alcm083d1f-luogu-gcc-9.3.0/include/c++/9.3.0/bits/stl_algo.h:3462:5: 附注：‘std::max’ declared here\n 3462 |     max(initializer_list<_Tp> __l, _Compare __comp)\n      |     ^~~\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h>\r\nlong long f[1005][1005][3];\r\nlong long a[1005][1005];\r\nint main()\r\n{\r\n\tlong long n,m;\r\n    cin>>n>>m;\r\n    for(int i=1;i<=n;i++)\r\n    {\r\n        for(int j=1;j<=m;j++)\r\n        {\r\n            cin>>a[i][j];\r\n            f[i][j][0]=-0x7fffffff;\r\n            f[i][j][1]=-0x7fffffff;\r\n            f[i][j][2]=-0x7fffffff;\r\n\r\n        }\r\n    }\r\n    f[1][1][0]=a[1][1];\r\n    f[1][1][1]=a[1][1];\r\n    f[1][1][2]=a[1][1];\r\n    for(int i=2;i<=n;i++)\r\n    {\r\n        f[i][1][1]=f[i-1][1][1]+a[i][1];\r\n    }\r\n    for(int j=2;j<=m;j++)\r\n    {\r\n        for(int i=1;i<=n;i++)\r\n        {\r\n            f[i][j][0]=max(f[i][j-1][1],max(f[i][j-1][0],f[i][j-1][2]))+a[i][j];\r\n            if(i>=2)\r\n\t\t\t{\r\n            \tf[i][j][1]=max(f[i-1][j][0],f[i-1][j][1])+a[i][j]; \r\n\t\t\t}\r\n        }\r\n        for(int i=n-1;i>=1;i--)\r\n        {\r\n            f[i][j][2]=max(f[i+1][j][0],f[i+1][j][2])+a[i][j];\r\n        }\r\n    }\r\n    cout<<max(f[n][m][0],max(f[n][m][1],f[n][m][2]));\r\n    return 0;\r\n}",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P7074",
+          "title": "[CSP-J 2020] 方格取数",
+          "difficulty": 4,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 986,
+        "submitTime": 1719666098,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 163415741,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": {
+        "0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "1": [
+          0
+        ]
+      },
+      "showStatus": true
+    },
+    "currentTitle": "R163415741",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782187597,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

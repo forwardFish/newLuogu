@@ -1,0 +1,196 @@
+{
+  "recordId": "227190451",
+  "url": "https://www.luogu.com.cn/record/227190451?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:40:56.388Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_50ykr0u2\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_50ykr0u2\\/src:9:2: \\u9519\\u8bef\\uff1a\\u2018ll\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n    9 |  ll n,m;\\n      |  ^~\\n\\/tmp\\/compiler_50ykr0u2\\/src:10:7: \\u9519\\u8bef\\uff1a\\u2018n\\u2019 was not declared in this scope; did you mean \\u2018yn\\u2019?\\n   10 |  cin>>n>>m;\\n      |       ^\\n      |       yn\\n\\/tmp\\/compiler_50ykr0u2\\/src:10:10: \\u9519\\u8bef\\uff1a\\u2018m\\u2019 was not declared in this scope; did you mean \\u2018tm\\u2019?\\n   10 |  cin>>n>>m;\\n      |          ^\\n      |          tm\\n\\/tmp\\/compiler_50ykr0u2\\/src:16:5: \\u9519\\u8bef\\uff1aexpected \\u2018;\\u2019 before \\u2018sum\\u2019\\n   16 |   ll sum=1;\\n      |     ^~~~\\n      |     ;\\n\\/tmp\\/compiler_50ykr0u2\\/src:19:6: \\u9519\\u8bef\\uff1aexpected \\u2018;\\u2019 before \\u2018d\\u2019\\n   19 |    ll d=c-'0';\\n      |      ^~\\n      |      ;\\n\\/tmp\\/compiler_50ykr0u2\\/src:20:7: \\u9519\\u8bef\\uff1a\\u2018d\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   20 |    if(d==0)\\n      |       ^\\n\\/tmp\\/compiler_50ykr0u2\\/src:25:7: \\u9519\\u8bef\\uff1a\\u2018sum\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   25 |    if(sum>m\\/d)\\n      |       ^~~\\n\\/tmp\\/compiler_50ykr0u2\\/src:25:13: \\u9519\\u8bef\\uff1a\\u2018d\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   25 |    if(sum>m\\/d)\\n      |             ^\\n\\/tmp\\/compiler_50ykr0u2\\/src:30:4: \\u9519\\u8bef\\uff1a\\u2018sum\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   30 |    sum*=d;\\n      |    ^~~\\n\\/tmp\\/compiler_50ykr0u2\\/src:30:9: \\u9519\\u8bef\\uff1a\\u2018d\\u2019\\u5728\\u6b64\\u4f5c\\u7528\\u57df\\u4e2d\\u5c1a\\u672a\\u58f0\\u660e\\n   30 |    sum*=d;\\n      |         ^\\n\\/tmp\\/compiler_50ykr0u2\\/src:17:12: \\u8b66\\u544a\\uff1aunused variable \\u2018c\\u2019 [-Wunused-variable]\\n   17 |   for(char c:s)\\n      |            ^\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h>\\n#define int long long \\nusing namespace std;\\nsigned main()\\n{\\n\\tios::sync_with_stdio(false);\\n\\tcin.tie(0);\\n\\tcout.tie(0);\\n\\tll n,m;\\n\\tcin>>n>>m;\\n\\tfor(int i=1;i<=n;i++)\\n\\t{\\n\\t\\tstring s;\\n\\t\\tcin>>s;\\n\\t\\tbool pd=1;\\n\\t\\tll sum=1;\\n\\t\\tfor(char c:s)\\n\\t\\t{\\n\\t\\t\\tll d=c-'0';\\n\\t\\t\\tif(d==0)\\n\\t\\t\\t{\\n\\t\\t\\t\\tpd=1;\\n\\t\\t\\t\\tbreak;\\n\\t\\t\\t}\\n\\t\\t\\tif(sum>m\\/d)\\n\\t\\t\\t{\\n\\t\\t\\t\\tpd=0;\\n\\t\\t\\t\\tbreak;\\n\\t\\t\\t}\\n\\t\\t\\tsum*=d;\\n\\t\\t}\\n\\t\\tif(pd)\\n\\t\\t{\\n\\t\\t\\tcout<<\\\"kawaii\\\"<<endl;\\n\\t\\t}\\n\\t\\telse\\n\\t\\t{\\n\\t\\t\\tcout<<\\\"dame\\\"<<endl;\\n\\t\\t}\\n\\t } \\n\\treturn 0;\\n}\\n\\n\\n\\n\\n\\n\\n\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P13498\",\"title\":\"\\u300cCfz Round 6\\u300dYumemi\",\"difficulty\":2,\"fullScore\":100,\"type\":\"P\"},\"contest\":{\"id\":255793,\"name\":\"\\u3010LGR-234-Div.3\\u3011\\u6d1b\\u8c37\\u7f51\\u6821 7 \\u6708 CSP-J \\u6a21\\u62df\\u6708\\u8d5b & Cfz Round 6\",\"startTime\":1753596000,\"endTime\":1753608600},\"sourceCodeLength\":478,\"submitTime\":1753603270,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":227190451,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9]],\"showStatus\":true},\"currentTitle\":\"R227190451\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186056,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_50ykr0u2/src: 在函数‘int main()’中:\n/tmp/compiler_50ykr0u2/src:9:2: 错误：‘ll’在此作用域中尚未声明\n    9 |  ll n,m;\n      |  ^~\n/tmp/compiler_50ykr0u2/src:10:7: 错误：‘n’ was not declared in this scope; did you mean ‘yn’?\n   10 |  cin>>n>>m;\n      |       ^\n      |       yn\n/tmp/compiler_50ykr0u2/src:10:10: 错误：‘m’ was not declared in this scope; did you mean ‘tm’?\n   10 |  cin>>n>>m;\n      |          ^\n      |          tm\n/tmp/compiler_50ykr0u2/src:16:5: 错误：expected ‘;’ before ‘sum’\n   16 |   ll sum=1;\n      |     ^~~~\n      |     ;\n/tmp/compiler_50ykr0u2/src:19:6: 错误：expected ‘;’ before ‘d’\n   19 |    ll d=c-'0';\n      |      ^~\n      |      ;\n/tmp/compiler_50ykr0u2/src:20:7: 错误：‘d’在此作用域中尚未声明\n   20 |    if(d==0)\n      |       ^\n/tmp/compiler_50ykr0u2/src:25:7: 错误：‘sum’在此作用域中尚未声明\n   25 |    if(sum>m/d)\n      |       ^~~\n/tmp/compiler_50ykr0u2/src:25:13: 错误：‘d’在此作用域中尚未声明\n   25 |    if(sum>m/d)\n      |             ^\n/tmp/compiler_50ykr0u2/src:30:4: 错误：‘sum’在此作用域中尚未声明\n   30 |    sum*=d;\n      |    ^~~\n/tmp/compiler_50ykr0u2/src:30:9: 错误：‘d’在此作用域中尚未声明\n   30 |    sum*=d;\n      |         ^\n/tmp/compiler_50ykr0u2/src:17:12: 警告：unused variable ‘c’ [-Wunused-variable]\n   17 |   for(char c:s)\n      |            ^\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h>\n#define int long long \nusing namespace std;\nsigned main()\n{\n\tios::sync_with_stdio(false);\n\tcin.tie(0);\n\tcout.tie(0);\n\tll n,m;\n\tcin>>n>>m;\n\tfor(int i=1;i<=n;i++)\n\t{\n\t\tstring s;\n\t\tcin>>s;\n\t\tbool pd=1;\n\t\tll sum=1;\n\t\tfor(char c:s)\n\t\t{\n\t\t\tll d=c-'0';\n\t\t\tif(d==0)\n\t\t\t{\n\t\t\t\tpd=1;\n\t\t\t\tbreak;\n\t\t\t}\n\t\t\tif(sum>m/d)\n\t\t\t{\n\t\t\t\tpd=0;\n\t\t\t\tbreak;\n\t\t\t}\n\t\t\tsum*=d;\n\t\t}\n\t\tif(pd)\n\t\t{\n\t\t\tcout<<\"kawaii\"<<endl;\n\t\t}\n\t\telse\n\t\t{\n\t\t\tcout<<\"dame\"<<endl;\n\t\t}\n\t } \n\treturn 0;\n}\n\n\n\n\n\n\n",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P13498",
+          "title": "「Cfz Round 6」Yumemi",
+          "difficulty": 2,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": {
+          "id": 255793,
+          "name": "【LGR-234-Div.3】洛谷网校 7 月 CSP-J 模拟月赛 & Cfz Round 6",
+          "startTime": 1753596000,
+          "endTime": 1753608600
+        },
+        "sourceCodeLength": 478,
+        "submitTime": 1753603270,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 227190451,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R227190451",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186056,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

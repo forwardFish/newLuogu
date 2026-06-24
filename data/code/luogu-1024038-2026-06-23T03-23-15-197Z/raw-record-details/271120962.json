@@ -1,0 +1,323 @@
+{
+  "recordId": "271120962",
+  "url": "https://www.luogu.com.cn/record/271120962?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:25:33.962Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":true,\"message\":null,\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[{\"id\":0,\"score\":100,\"status\":12,\"testCases\":{\"0\":{\"id\":0,\"status\":12,\"time\":17,\"memory\":15284,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"6\":{\"id\":6,\"status\":12,\"time\":18,\"memory\":15380,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"1\":{\"id\":1,\"status\":12,\"time\":18,\"memory\":15300,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"4\":{\"id\":4,\"status\":12,\"time\":18,\"memory\":15384,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"3\":{\"id\":3,\"status\":12,\"time\":17,\"memory\":15384,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"8\":{\"id\":8,\"status\":12,\"time\":20,\"memory\":15616,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"9\":{\"id\":9,\"status\":12,\"time\":18,\"memory\":15376,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"7\":{\"id\":7,\"status\":12,\"time\":18,\"memory\":15292,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"5\":{\"id\":5,\"status\":12,\"time\":18,\"memory\":15356,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"},\"2\":{\"id\":2,\"status\":12,\"time\":18,\"memory\":15376,\"score\":10,\"signal\":0,\"exitCode\":0,\"description\":\"ok accepted\",\"subtaskID\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\TestCaseJudgeResult\"}},\"judger\":\"\",\"time\":180,\"memory\":15616,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\SubtaskJudgeResult\"}],\"finishedCaseCount\":10,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"\\n#include <iostream>\\n#include <vector>\\n#include <algorithm>\\n#include <iomanip>\\n\\nusing namespace std;\\n\\n\\/\\/ BigInt structure to handle large numbers up to 200 digits\\nstruct BigInt {\\n    vector<int> digits;\\n    static const int BASE = 1000000000;\\n\\n    BigInt(int v = 0) {\\n        if (v == 0) digits.push_back(0);\\n        while (v > 0) {\\n            digits.push_back(v % BASE);\\n            v \\/= BASE;\\n        }\\n    }\\n\\n    void trim() {\\n        while (digits.size() > 1 && digits.back() == 0) {\\n            digits.pop_back();\\n        }\\n    }\\n\\n    BigInt operator+(const BigInt& other) const {\\n        BigInt res;\\n        res.digits.clear();\\n        int carry = 0;\\n        size_t n = max(digits.size(), other.digits.size());\\n        res.digits.reserve(n + 1);\\n        for (size_t i = 0; i < n || carry; ++i) {\\n            int sum = carry + (i < digits.size() ? digits[i] : 0) + (i < other.digits.size() ? other.digits[i] : 0);\\n            res.digits.push_back(sum % BASE);\\n            carry = sum \\/ BASE;\\n        }\\n        if (res.digits.empty()) res.digits.push_back(0);\\n        return res;\\n    }\\n\\n    BigInt operator-(const BigInt& other) const {\\n        BigInt res;\\n        res.digits.clear();\\n        res.digits.reserve(digits.size());\\n        int borrow = 0;\\n        for (size_t i = 0; i < digits.size(); ++i) {\\n            int sub = digits[i] - borrow - (i < other.digits.size() ? other.digits[i] : 0);\\n            if (sub < 0) {\\n                sub += BASE;\\n                borrow = 1;\\n            } else {\\n                borrow = 0;\\n            }\\n            res.digits.push_back(sub);\\n        }\\n        res.trim();\\n        if (res.digits.empty()) res.digits.push_back(0);\\n        return res;\\n    }\\n\\n    void print() const {\\n        if (digits.empty()) {\\n            cout << 0;\\n            return;\\n        }\\n        cout << digits.back();\\n        for (int i = (int)digits.size() - 2; i >= 0; --i) {\\n            cout << setfill('0') << setw(9) << digits[i];\\n        }\\n        cout << endl;\\n    }\\n};\\n\\n\\/\\/ Pascal's triangle for combinations\\nBigInt C[520][520];\\n\\nvoid precomputeCombinations(int n_max) {\\n    for (int i = 0; i <= n_max; ++i) {\\n        C[i][0] = BigInt(1);\\n        for (int j = 1; j <= i; ++j) {\\n            if (j == i) {\\n                C[i][j] = BigInt(1);\\n            } else {\\n                C[i][j] = C[i-1][j-1] + C[i-1][j];\\n            }\\n        }\\n    }\\n}\\n\\nint main() {\\n    \\/\\/ Optimize I\\/O operations\\n    ios_base::sync_with_stdio(false);\\n    cin.tie(NULL);\\n\\n    int k, w;\\n    if (!(cin >> k >> w)) return 0;\\n\\n    \\/\\/ Maximum value for a digit in base 2^k\\n    int M = (1 << k) - 1;\\n    \\n    \\/\\/ Maximum number of digits n such that (n-1)*k < w\\n    \\/\\/ This ensures the first digit has at least 1 bit\\n    int max_n = (w - 1) \\/ k + 1;\\n    \\n    \\/\\/ We cannot have more digits than available distinct values (1 to M)\\n    if (max_n > M) max_n = M;\\n\\n    \\/\\/ Need at least 2 digits\\n    if (max_n < 2) {\\n        cout << 0 << endl;\\n        return 0;\\n    }\\n\\n    \\/\\/ Precompute combinations up to M\\n    precomputeCombinations(M);\\n\\n    BigInt total(0);\\n\\n    \\/\\/ Iterate over possible number of digits n\\n    for (int n = 2; n <= max_n; ++n) {\\n        \\/\\/ Calculate available bits for the first digit\\n        int bits_first = w - (n - 1) * k;\\n        \\n        int limit_val;\\n        if (bits_first >= k) {\\n            \\/\\/ First digit can be any value from 1 to M\\n            limit_val = M;\\n        } else {\\n            \\/\\/ First digit is limited by available bits\\n            limit_val = (1 << bits_first) - 1;\\n        }\\n        \\n        \\/\\/ We need to choose n distinct digits from {1, ..., M}\\n        \\/\\/ such that the smallest digit (first digit) is <= limit_val.\\n        \\/\\/ Total ways to choose n digits from M is C(M, n).\\n        \\/\\/ Invalid ways (all digits > limit_val) is C(M - limit_val, n).\\n        \\n        BigInt term1 = C[M][n];\\n        BigInt term2(0);\\n        int rem_M = M - limit_val;\\n        \\n        \\/\\/ Only subtract if we have enough elements to choose n from the remaining\\n        if (rem_M >= n) {\\n            term2 = C[rem_M][n];\\n        }\\n        \\n        BigInt term = term1 - term2;\\n        total = total + term;\\n    }\\n\\n    total.print();\\n\\n    return 0;\\n}\\n\",\"time\":180,\"memory\":15616,\"problem\":{\"pid\":\"P1066\",\"title\":\"[NOIP 2006 \\u63d0\\u9ad8\\u7ec4] 2^k \\u8fdb\\u5236\\u6570\",\"difficulty\":5,\"fullScore\":100,\"type\":\"P\"},\"contest\":null,\"sourceCodeLength\":4174,\"submitTime\":1774917266,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":271120962,\"status\":12,\"enableO2\":true,\"score\":100},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9]],\"showStatus\":true},\"currentTitle\":\"R271120962\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782185133,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": true,
+            "message": null,
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [
+              {
+                "id": 0,
+                "score": 100,
+                "status": 12,
+                "testCases": {
+                  "0": {
+                    "id": 0,
+                    "status": 12,
+                    "time": 17,
+                    "memory": 15284,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "1": {
+                    "id": 1,
+                    "status": 12,
+                    "time": 18,
+                    "memory": 15300,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "2": {
+                    "id": 2,
+                    "status": 12,
+                    "time": 18,
+                    "memory": 15376,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "3": {
+                    "id": 3,
+                    "status": 12,
+                    "time": 17,
+                    "memory": 15384,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "4": {
+                    "id": 4,
+                    "status": 12,
+                    "time": 18,
+                    "memory": 15384,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "5": {
+                    "id": 5,
+                    "status": 12,
+                    "time": 18,
+                    "memory": 15356,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "6": {
+                    "id": 6,
+                    "status": 12,
+                    "time": 18,
+                    "memory": 15380,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "7": {
+                    "id": 7,
+                    "status": 12,
+                    "time": 18,
+                    "memory": 15292,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "8": {
+                    "id": 8,
+                    "status": 12,
+                    "time": 20,
+                    "memory": 15616,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  },
+                  "9": {
+                    "id": 9,
+                    "status": 12,
+                    "time": 18,
+                    "memory": 15376,
+                    "score": 10,
+                    "signal": 0,
+                    "exitCode": 0,
+                    "description": "ok accepted",
+                    "subtaskID": 0,
+                    "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\TestCaseJudgeResult"
+                  }
+                },
+                "judger": "",
+                "time": 180,
+                "memory": 15616,
+                "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\SubtaskJudgeResult"
+              }
+            ],
+            "finishedCaseCount": 10,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "\n#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <iomanip>\n\nusing namespace std;\n\n// BigInt structure to handle large numbers up to 200 digits\nstruct BigInt {\n    vector<int> digits;\n    static const int BASE = 1000000000;\n\n    BigInt(int v = 0) {\n        if (v == 0) digits.push_back(0);\n        while (v > 0) {\n            digits.push_back(v % BASE);\n            v /= BASE;\n        }\n    }\n\n    void trim() {\n        while (digits.size() > 1 && digits.back() == 0) {\n            digits.pop_back();\n        }\n    }\n\n    BigInt operator+(const BigInt& other) const {\n        BigInt res;\n        res.digits.clear();\n        int carry = 0;\n        size_t n = max(digits.size(), other.digits.size());\n        res.digits.reserve(n + 1);\n        for (size_t i = 0; i < n || carry; ++i) {\n            int sum = carry + (i < digits.size() ? digits[i] : 0) + (i < other.digits.size() ? other.digits[i] : 0);\n            res.digits.push_back(sum % BASE);\n            carry = sum / BASE;\n        }\n        if (res.digits.empty()) res.digits.push_back(0);\n        return res;\n    }\n\n    BigInt operator-(const BigInt& other) const {\n        BigInt res;\n        res.digits.clear();\n        res.digits.reserve(digits.size());\n        int borrow = 0;\n        for (size_t i = 0; i < digits.size(); ++i) {\n            int sub = digits[i] - borrow - (i < other.digits.size() ? other.digits[i] : 0);\n            if (sub < 0) {\n                sub += BASE;\n                borrow = 1;\n            } else {\n                borrow = 0;\n            }\n            res.digits.push_back(sub);\n        }\n        res.trim();\n        if (res.digits.empty()) res.digits.push_back(0);\n        return res;\n    }\n\n    void print() const {\n        if (digits.empty()) {\n            cout << 0;\n            return;\n        }\n        cout << digits.back();\n        for (int i = (int)digits.size() - 2; i >= 0; --i) {\n            cout << setfill('0') << setw(9) << digits[i];\n        }\n        cout << endl;\n    }\n};\n\n// Pascal's triangle for combinations\nBigInt C[520][520];\n\nvoid precomputeCombinations(int n_max) {\n    for (int i = 0; i <= n_max; ++i) {\n        C[i][0] = BigInt(1);\n        for (int j = 1; j <= i; ++j) {\n            if (j == i) {\n                C[i][j] = BigInt(1);\n            } else {\n                C[i][j] = C[i-1][j-1] + C[i-1][j];\n            }\n        }\n    }\n}\n\nint main() {\n    // Optimize I/O operations\n    ios_base::sync_with_stdio(false);\n    cin.tie(NULL);\n\n    int k, w;\n    if (!(cin >> k >> w)) return 0;\n\n    // Maximum value for a digit in base 2^k\n    int M = (1 << k) - 1;\n    \n    // Maximum number of digits n such that (n-1)*k < w\n    // This ensures the first digit has at least 1 bit\n    int max_n = (w - 1) / k + 1;\n    \n    // We cannot have more digits than available distinct values (1 to M)\n    if (max_n > M) max_n = M;\n\n    // Need at least 2 digits\n    if (max_n < 2) {\n        cout << 0 << endl;\n        return 0;\n    }\n\n    // Precompute combinations up to M\n    precomputeCombinations(M);\n\n    BigInt total(0);\n\n    // Iterate over possible number of digits n\n    for (int n = 2; n <= max_n; ++n) {\n        // Calculate available bits for the first digit\n        int bits_first = w - (n - 1) * k;\n        \n        int limit_val;\n        if (bits_first >= k) {\n            // First digit can be any value from 1 to M\n            limit_val = M;\n        } else {\n            // First digit is limited by available bits\n            limit_val = (1 << bits_first) - 1;\n        }\n        \n        // We need to choose n distinct digits from {1, ..., M}\n        // such that the smallest digit (first digit) is <= limit_val.\n        // Total ways to choose n digits from M is C(M, n).\n        // Invalid ways (all digits > limit_val) is C(M - limit_val, n).\n        \n        BigInt term1 = C[M][n];\n        BigInt term2(0);\n        int rem_M = M - limit_val;\n        \n        // Only subtract if we have enough elements to choose n from the remaining\n        if (rem_M >= n) {\n            term2 = C[rem_M][n];\n        }\n        \n        BigInt term = term1 - term2;\n        total = total + term;\n    }\n\n    total.print();\n\n    return 0;\n}\n",
+        "time": 180,
+        "memory": 15616,
+        "problem": {
+          "pid": "P1066",
+          "title": "[NOIP 2006 提高组] 2^k 进制数",
+          "difficulty": 5,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": null,
+        "sourceCodeLength": 4174,
+        "submitTime": 1774917266,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 271120962,
+        "status": 12,
+        "enableO2": true,
+        "score": 100
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R271120962",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782185133,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}

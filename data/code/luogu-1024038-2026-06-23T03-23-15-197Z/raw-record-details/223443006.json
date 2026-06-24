@@ -1,0 +1,209 @@
+{
+  "recordId": "223443006",
+  "url": "https://www.luogu.com.cn/record/223443006?_contentOnly=1",
+  "status": 200,
+  "contentType": "application/json",
+  "fetchedAt": "2026-06-23T03:43:14.018Z",
+  "rawText": "{\"code\":200,\"currentTemplate\":\"RecordShow\",\"currentData\":{\"record\":{\"detail\":{\"compileResult\":{\"success\":false,\"message\":\"\\/tmp\\/compiler_13ewp8tv\\/src: \\u5728\\u51fd\\u6570\\u2018int main()\\u2019\\u4e2d:\\n\\/tmp\\/compiler_13ewp8tv\\/src:12:18: \\u9519\\u8bef\\uff1a\\u2018int[int]\\u2019\\u7528\\u4f5c\\u6570\\u7ec4\\u4e0b\\u6807\\u7c7b\\u578b\\u65e0\\u6548\\n   12 |     dp1[len1]=a[1];\\n      |                  ^\\n\\/tmp\\/compiler_13ewp8tv\\/src:15:15: \\u9519\\u8bef\\uff1a\\u2018int[int]\\u2019\\u7528\\u4f5c\\u6570\\u7ec4\\u4e0b\\u6807\\u7c7b\\u578b\\u65e0\\u6548\\n   15 |         if(a[i]<=dp1[len1])\\n      |               ^\\n\\/tmp\\/compiler_13ewp8tv\\/src:17:28: \\u9519\\u8bef\\uff1a\\u2018int[int]\\u2019\\u7528\\u4f5c\\u6570\\u7ec4\\u4e0b\\u6807\\u7c7b\\u578b\\u65e0\\u6548\\n   17 |             dp1[++len1]=a[i];\\n      |                            ^\\n\\/tmp\\/compiler_13ewp8tv\\/src:21:51: \\u9519\\u8bef\\uff1a\\u2018int[int]\\u2019\\u7528\\u4f5c\\u6570\\u7ec4\\u4e0b\\u6807\\u7c7b\\u578b\\u65e0\\u6548\\n   21 |             int p=upper_bound(dp1+1,dp1+1+len1,a[i],greater<int>())-dp1;\\n      |                                                   ^\\n\\/tmp\\/compiler_13ewp8tv\\/src:22:23: \\u9519\\u8bef\\uff1a\\u2018int[int]\\u2019\\u7528\\u4f5c\\u6570\\u7ec4\\u4e0b\\u6807\\u7c7b\\u578b\\u65e0\\u6548\\n   22 |             dp1[p]=a[i];\\n      |                       ^\\n\\/tmp\\/compiler_13ewp8tv\\/src:27:18: \\u9519\\u8bef\\uff1a\\u2018int[int]\\u2019\\u7528\\u4f5c\\u6570\\u7ec4\\u4e0b\\u6807\\u7c7b\\u578b\\u65e0\\u6548\\n   27 |     dp2[len2]=a[1];\\n      |                  ^\\n\\/tmp\\/compiler_13ewp8tv\\/src:30:15: \\u9519\\u8bef\\uff1a\\u2018int[int]\\u2019\\u7528\\u4f5c\\u6570\\u7ec4\\u4e0b\\u6807\\u7c7b\\u578b\\u65e0\\u6548\\n   30 |         if(a[i]>dp2[len2])\\n      |               ^\\n\\/tmp\\/compiler_13ewp8tv\\/src:32:28: \\u9519\\u8bef\\uff1a\\u2018int[int]\\u2019\\u7528\\u4f5c\\u6570\\u7ec4\\u4e0b\\u6807\\u7c7b\\u578b\\u65e0\\u6548\\n   32 |             dp2[++len2]=a[i];\\n      |                            ^\\n\\/tmp\\/compiler_13ewp8tv\\/src:36:51: \\u9519\\u8bef\\uff1a\\u2018int[int]\\u2019\\u7528\\u4f5c\\u6570\\u7ec4\\u4e0b\\u6807\\u7c7b\\u578b\\u65e0\\u6548\\n   36 |             int p=lower_bound(dp2+1,dp2+1+len2,a[i])-dp2;\\n      |                                                   ^\\n\\/tmp\\/compiler_13ewp8tv\\/src:37:23: \\u9519\\u8bef\\uff1a\\u2018int[int]\\u2019\\u7528\\u4f5c\\u6570\\u7ec4\\u4e0b\\u6807\\u7c7b\\u578b\\u65e0\\u6548\\n   37 |             dp2[p]=a[i];\\n      |                       ^\\n\",\"opt2\":false,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\CompileResult\"},\"judgeResult\":{\"subtasks\":[],\"finishedCaseCount\":0,\"status\":0,\"time\":0,\"memory\":0,\"score\":0,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\JudgeResult\\\\JudgeResult\"},\"version\":400,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\Record\\\\RecordDetail\"},\"sourceCode\":\"#include<bits\\/stdc++.h>\\nusing namespace std;\\nconst int maxn=1e5+10;\\nint a[maxn],n;\\nint dp1[maxn],dp2[maxn];\\nint main()\\n{\\n\\twhile(cin>>a[++n]);\\n    n--;\\n\\tint len1=1;\\n    int a=0;\\n    dp1[len1]=a[1];\\n    for(int i=2;i<=n;i++)\\n\\t{\\n        if(a[i]<=dp1[len1])\\n\\t\\t{\\n            dp1[++len1]=a[i];\\n        }\\n\\t\\telse\\n\\t\\t{\\n            int p=upper_bound(dp1+1,dp1+1+len1,a[i],greater<int>())-dp1;\\n            dp1[p]=a[i];\\n        }\\n    }\\n    cout<<len1<<endl;\\n    int len2=1;\\n    dp2[len2]=a[1];\\n    for(int i=2;i<=n;i++)\\n\\t{\\n        if(a[i]>dp2[len2])\\n\\t\\t{\\n            dp2[++len2]=a[i];\\n        }\\n\\t\\telse\\n\\t\\t{\\n            int p=lower_bound(dp2+1,dp2+1+len2,a[i])-dp2;\\n            dp2[p]=a[i];\\n        }\\n    }\\n    cout<<len2<<endl;\\n    return 0;\\n}\",\"time\":0,\"memory\":0,\"problem\":{\"pid\":\"P1020\",\"title\":\"[NOIP 1999 \\u63d0\\u9ad8\\u7ec4] \\u5bfc\\u5f39\\u62e6\\u622a\",\"difficulty\":4,\"fullScore\":100,\"type\":\"P\"},\"contest\":{\"id\":256687,\"name\":\"\\u52a8\\u6001\\u89c4\\u5212\\u5165\\u95e8\",\"startTime\":1752022800,\"endTime\":2147483647},\"sourceCodeLength\":728,\"submitTime\":1752130689,\"language\":28,\"user\":{\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\"},\"id\":223443006,\"status\":2,\"enableO2\":true,\"score\":null},\"testCaseGroup\":[[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],[20]],\"showStatus\":true},\"currentTitle\":\"R223443006\",\"currentTheme\":{\"id\":321387,\"header\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[94,114,228,1],[130,94,228,1]],\"blur\":0,\"brightness\":0,\"degree\":87,\"repeat\":0,\"position\":[100,1],\"size\":[-1,-1],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"},\"sideNav\":{\"logoBackgroundColor\":[94,114,228,1],\"color\":[94,114,228,1],\"invertColor\":true,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\SideNavConfig\"},\"footer\":{\"imagePath\":\"https:\\/\\/i.loli.net\\/2019\\/05\\/02\\/5cca6b2808d2a.jpg\",\"color\":[[119,149,248,1],[103,114,229,1],[85,90,191,1]],\"blur\":0,\"brightness\":0,\"degree\":150,\"repeat\":0,\"position\":[1,100],\"size\":[0,0],\"type\":1,\"__CLASS_NAME\":\"Luogu\\\\DataClass\\\\User\\\\ThemeConfig\\\\HeaderFooterConfig\"}},\"currentTime\":1782186194,\"currentUser\":{\"followingCount\":99,\"followerCount\":41,\"ranking\":11089,\"eloValue\":1304,\"blogAddress\":\"https:\\/\\/www.luogu.com.cn\\/blog\\/asos1324\\/\",\"unreadMessageCount\":0,\"unreadNoticeCount\":0,\"uid\":1024038,\"name\":\"lin_yna\",\"avatar\":\"https:\\/\\/cdn.luogu.com.cn\\/upload\\/usericon\\/1024038.png\",\"slogan\":\"rp++\",\"badge\":null,\"isAdmin\":false,\"isBanned\":false,\"color\":\"Green\",\"ccfLevel\":5,\"xcpcLevel\":0,\"background\":\"\",\"verified\":true}}",
+  "json": {
+    "code": 200,
+    "currentTemplate": "RecordShow",
+    "currentData": {
+      "record": {
+        "detail": {
+          "compileResult": {
+            "success": false,
+            "message": "/tmp/compiler_13ewp8tv/src: 在函数‘int main()’中:\n/tmp/compiler_13ewp8tv/src:12:18: 错误：‘int[int]’用作数组下标类型无效\n   12 |     dp1[len1]=a[1];\n      |                  ^\n/tmp/compiler_13ewp8tv/src:15:15: 错误：‘int[int]’用作数组下标类型无效\n   15 |         if(a[i]<=dp1[len1])\n      |               ^\n/tmp/compiler_13ewp8tv/src:17:28: 错误：‘int[int]’用作数组下标类型无效\n   17 |             dp1[++len1]=a[i];\n      |                            ^\n/tmp/compiler_13ewp8tv/src:21:51: 错误：‘int[int]’用作数组下标类型无效\n   21 |             int p=upper_bound(dp1+1,dp1+1+len1,a[i],greater<int>())-dp1;\n      |                                                   ^\n/tmp/compiler_13ewp8tv/src:22:23: 错误：‘int[int]’用作数组下标类型无效\n   22 |             dp1[p]=a[i];\n      |                       ^\n/tmp/compiler_13ewp8tv/src:27:18: 错误：‘int[int]’用作数组下标类型无效\n   27 |     dp2[len2]=a[1];\n      |                  ^\n/tmp/compiler_13ewp8tv/src:30:15: 错误：‘int[int]’用作数组下标类型无效\n   30 |         if(a[i]>dp2[len2])\n      |               ^\n/tmp/compiler_13ewp8tv/src:32:28: 错误：‘int[int]’用作数组下标类型无效\n   32 |             dp2[++len2]=a[i];\n      |                            ^\n/tmp/compiler_13ewp8tv/src:36:51: 错误：‘int[int]’用作数组下标类型无效\n   36 |             int p=lower_bound(dp2+1,dp2+1+len2,a[i])-dp2;\n      |                                                   ^\n/tmp/compiler_13ewp8tv/src:37:23: 错误：‘int[int]’用作数组下标类型无效\n   37 |             dp2[p]=a[i];\n      |                       ^\n",
+            "opt2": false,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\CompileResult"
+          },
+          "judgeResult": {
+            "subtasks": [],
+            "finishedCaseCount": 0,
+            "status": 0,
+            "time": 0,
+            "memory": 0,
+            "score": 0,
+            "__CLASS_NAME": "Luogu\\DataClass\\Record\\JudgeResult\\JudgeResult"
+          },
+          "version": 400,
+          "__CLASS_NAME": "Luogu\\DataClass\\Record\\RecordDetail"
+        },
+        "sourceCode": "#include<bits/stdc++.h>\nusing namespace std;\nconst int maxn=1e5+10;\nint a[maxn],n;\nint dp1[maxn],dp2[maxn];\nint main()\n{\n\twhile(cin>>a[++n]);\n    n--;\n\tint len1=1;\n    int a=0;\n    dp1[len1]=a[1];\n    for(int i=2;i<=n;i++)\n\t{\n        if(a[i]<=dp1[len1])\n\t\t{\n            dp1[++len1]=a[i];\n        }\n\t\telse\n\t\t{\n            int p=upper_bound(dp1+1,dp1+1+len1,a[i],greater<int>())-dp1;\n            dp1[p]=a[i];\n        }\n    }\n    cout<<len1<<endl;\n    int len2=1;\n    dp2[len2]=a[1];\n    for(int i=2;i<=n;i++)\n\t{\n        if(a[i]>dp2[len2])\n\t\t{\n            dp2[++len2]=a[i];\n        }\n\t\telse\n\t\t{\n            int p=lower_bound(dp2+1,dp2+1+len2,a[i])-dp2;\n            dp2[p]=a[i];\n        }\n    }\n    cout<<len2<<endl;\n    return 0;\n}",
+        "time": 0,
+        "memory": 0,
+        "problem": {
+          "pid": "P1020",
+          "title": "[NOIP 1999 提高组] 导弹拦截",
+          "difficulty": 4,
+          "fullScore": 100,
+          "type": "P"
+        },
+        "contest": {
+          "id": 256687,
+          "name": "动态规划入门",
+          "startTime": 1752022800,
+          "endTime": 2147483647
+        },
+        "sourceCodeLength": 728,
+        "submitTime": 1752130689,
+        "language": 28,
+        "user": {
+          "uid": 1024038,
+          "name": "lin_yna",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+          "slogan": "rp++",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 5,
+          "xcpcLevel": 0,
+          "background": ""
+        },
+        "id": 223443006,
+        "status": 2,
+        "enableO2": true,
+        "score": null
+      },
+      "testCaseGroup": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        [
+          20
+        ]
+      ],
+      "showStatus": true
+    },
+    "currentTitle": "R223443006",
+    "currentTheme": {
+      "id": 321387,
+      "header": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            94,
+            114,
+            228,
+            1
+          ],
+          [
+            130,
+            94,
+            228,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 87,
+        "repeat": 0,
+        "position": [
+          100,
+          1
+        ],
+        "size": [
+          -1,
+          -1
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      },
+      "sideNav": {
+        "logoBackgroundColor": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "color": [
+          94,
+          114,
+          228,
+          1
+        ],
+        "invertColor": true,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"
+      },
+      "footer": {
+        "imagePath": "https://i.loli.net/2019/05/02/5cca6b2808d2a.jpg",
+        "color": [
+          [
+            119,
+            149,
+            248,
+            1
+          ],
+          [
+            103,
+            114,
+            229,
+            1
+          ],
+          [
+            85,
+            90,
+            191,
+            1
+          ]
+        ],
+        "blur": 0,
+        "brightness": 0,
+        "degree": 150,
+        "repeat": 0,
+        "position": [
+          1,
+          100
+        ],
+        "size": [
+          0,
+          0
+        ],
+        "type": 1,
+        "__CLASS_NAME": "Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"
+      }
+    },
+    "currentTime": 1782186194,
+    "currentUser": {
+      "followingCount": 99,
+      "followerCount": 41,
+      "ranking": 11089,
+      "eloValue": 1304,
+      "blogAddress": "https://www.luogu.com.cn/blog/asos1324/",
+      "unreadMessageCount": 0,
+      "unreadNoticeCount": 0,
+      "uid": 1024038,
+      "name": "lin_yna",
+      "avatar": "https://cdn.luogu.com.cn/upload/usericon/1024038.png",
+      "slogan": "rp++",
+      "badge": null,
+      "isAdmin": false,
+      "isBanned": false,
+      "color": "Green",
+      "ccfLevel": 5,
+      "xcpcLevel": 0,
+      "background": "",
+      "verified": true
+    }
+  }
+}
