@@ -1,20 +1,52 @@
 {
-  "generatedAt": "2026-06-24T02:59:45.172Z",
+  "generatedAt": "2026-06-24T15:44:11.471Z",
   "items": [
     {
-      "generatedProblemId": "gen_math_001",
+      "generatedProblemId": "gen_partial_score_001",
+      "weaknessId": "partial_score_partial_score_missed_19",
+      "targetAbility": "T3_PARTIAL_SCORE",
+      "module": "partial_score",
+      "difficulty": "提高",
+      "goal": "诊断并训练：partial_score：难题部分分拆解和得分策略不足",
+      "problemPackage": {
+        "statementPath": "data\\generated-problems\\gen_partial_score_001\\statement.md",
+        "solutionPath": "data\\generated-problems\\gen_partial_score_001\\solution.md",
+        "bruteForcePath": "data\\generated-problems\\gen_partial_score_001\\bruteforce.cpp",
+        "standardSolutionPath": "data\\generated-problems\\gen_partial_score_001\\std.cpp",
+        "generatorPath": "data\\generated-problems\\gen_partial_score_001\\generator.cpp",
+        "testsPath": "data\\generated-problems\\gen_partial_score_001\\tests"
+      },
+      "subtasks": [
+        {
+          "score": 30,
+          "description": "小 n 暴力"
+        },
+        {
+          "score": 60,
+          "description": "特殊性质或基础模型"
+        },
+        {
+          "score": 100,
+          "description": "完整正解"
+        }
+      ],
+      "status": "LLM_GENERATED_NEEDS_REVIEW",
+      "generationSource": "LLM"
+    },
+    {
+      "generatedProblemId": "gen_math_002",
       "weaknessId": "math_model_error_5",
       "targetAbility": "T3_PARTIAL_SCORE",
       "module": "math",
-      "difficulty": "提高+/省选-",
+      "difficulty": "提高",
       "goal": "诊断并训练：数学：难题部分分拆解和得分策略不足",
       "problemPackage": {
-        "statementPath": "data\\generated-problems\\gen_math_001\\statement.md",
-        "solutionPath": "data\\generated-problems\\gen_math_001\\solution.md",
-        "bruteForcePath": "data\\generated-problems\\gen_math_001\\bruteforce.cpp",
-        "standardSolutionPath": "data\\generated-problems\\gen_math_001\\std.cpp",
-        "generatorPath": "data\\generated-problems\\gen_math_001\\generator.cpp",
-        "testsPath": "data\\generated-problems\\gen_math_001\\tests"
+        "statementPath": "data\\generated-problems\\gen_math_002\\statement.md",
+        "solutionPath": "data\\generated-problems\\gen_math_002\\solution.md",
+        "bruteForcePath": "data\\generated-problems\\gen_math_002\\bruteforce.cpp",
+        "standardSolutionPath": "data\\generated-problems\\gen_math_002\\std.cpp",
+        "generatorPath": "data\\generated-problems\\gen_math_002\\generator.cpp",
+        "testsPath": "data\\generated-problems\\gen_math_002\\tests"
       },
       "subtasks": [
         {
@@ -30,53 +62,23 @@
           "description": "完整正解"
         }
       ],
-      "status": "DRAFT_NOT_FOR_FORMAL_TEST"
+      "status": "RULE_GENERATED_NEEDS_REVIEW",
+      "generationSource": "LLM"
     },
     {
-      "generatedProblemId": "gen_partial_score_002",
-      "weaknessId": "partial_score_partial_score_missed_16",
+      "generatedProblemId": "gen_math_003",
+      "weaknessId": "math_partial_score_missed_18",
       "targetAbility": "T3_PARTIAL_SCORE",
-      "module": "partial_score",
-      "difficulty": "提高+/省选-",
-      "goal": "诊断并训练：partial_score：难题部分分拆解和得分策略不足",
-      "problemPackage": {
-        "statementPath": "data\\generated-problems\\gen_partial_score_002\\statement.md",
-        "solutionPath": "data\\generated-problems\\gen_partial_score_002\\solution.md",
-        "bruteForcePath": "data\\generated-problems\\gen_partial_score_002\\bruteforce.cpp",
-        "standardSolutionPath": "data\\generated-problems\\gen_partial_score_002\\std.cpp",
-        "generatorPath": "data\\generated-problems\\gen_partial_score_002\\generator.cpp",
-        "testsPath": "data\\generated-problems\\gen_partial_score_002\\tests"
-      },
-      "subtasks": [
-        {
-          "score": 30,
-          "description": "小 n 暴力"
-        },
-        {
-          "score": 60,
-          "description": "特殊性质或基础模型"
-        },
-        {
-          "score": 100,
-          "description": "完整正解"
-        }
-      ],
-      "status": "DRAFT_NOT_FOR_FORMAL_TEST"
-    },
-    {
-      "generatedProblemId": "gen_interval_dp_003",
-      "weaknessId": "interval_dp_state_error_4",
-      "targetAbility": "T3_PARTIAL_SCORE",
-      "module": "interval_dp",
+      "module": "math",
       "difficulty": "提高",
-      "goal": "诊断并训练：区间 DP：区间 DP 的状态设计、初始化和枚举顺序不稳定",
+      "goal": "诊断并训练：数学：难题部分分拆解和得分策略不足",
       "problemPackage": {
-        "statementPath": "data\\generated-problems\\gen_interval_dp_003\\statement.md",
-        "solutionPath": "data\\generated-problems\\gen_interval_dp_003\\solution.md",
-        "bruteForcePath": "data\\generated-problems\\gen_interval_dp_003\\bruteforce.cpp",
-        "standardSolutionPath": "data\\generated-problems\\gen_interval_dp_003\\std.cpp",
-        "generatorPath": "data\\generated-problems\\gen_interval_dp_003\\generator.cpp",
-        "testsPath": "data\\generated-problems\\gen_interval_dp_003\\tests"
+        "statementPath": "data\\generated-problems\\gen_math_003\\statement.md",
+        "solutionPath": "data\\generated-problems\\gen_math_003\\solution.md",
+        "bruteForcePath": "data\\generated-problems\\gen_math_003\\bruteforce.cpp",
+        "standardSolutionPath": "data\\generated-problems\\gen_math_003\\std.cpp",
+        "generatorPath": "data\\generated-problems\\gen_math_003\\generator.cpp",
+        "testsPath": "data\\generated-problems\\gen_math_003\\tests"
       },
       "subtasks": [
         {
@@ -92,7 +94,8 @@
           "description": "完整正解"
         }
       ],
-      "status": "DRAFT_NOT_FOR_FORMAL_TEST"
+      "status": "LLM_GENERATED_NEEDS_REVIEW",
+      "generationSource": "LLM"
     }
   ]
 }

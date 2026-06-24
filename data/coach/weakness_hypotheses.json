@@ -1,0 +1,776 @@
+{
+  "generatedAt": "2026-06-24T16:14:00.809Z",
+  "source": {
+    "weaknessSummary": "data\\diagnosis\\weakness_summary.json",
+    "clusterDiagnosis": "data\\diagnosis\\cluster_llm_diagnosis.json"
+  },
+  "items": [
+    {
+      "weaknessId": "partial_score_partial_score_missed_19",
+      "title": "partial_score：难题部分分拆解和得分策略不足",
+      "status": "HYPOTHESIS",
+      "confidence": 0.92,
+      "trainingPriority": 100,
+      "severity": 78.71,
+      "relatedModules": [
+        "partial_score"
+      ],
+      "relatedErrorTypes": [
+        "PARTIAL_SCORE_MISSED",
+        "IMPLEMENTATION_RISK",
+        "OVERFLOW_ERROR",
+        "INDEX_ERROR"
+      ],
+      "evidenceProblems": [
+        "P10135",
+        "P1273",
+        "T23806",
+        "P7413",
+        "P1781",
+        "P1255",
+        "U615694",
+        "B3845",
+        "P2303",
+        "U465508",
+        "P2142",
+        "P2585"
+      ],
+      "clusterIds": [
+        "partial_score_partial_score_022"
+      ],
+      "sourceCoverage": {
+        "deepSeekDiagnosedClusters": 1,
+        "ruleBasedClusters": 0
+      },
+      "validationTasks": [
+        {
+          "taskId": "partial_score_partial_score_missed_19::select",
+          "weaknessId": "partial_score_partial_score_missed_19",
+          "taskType": "SELECT",
+          "problemRef": "P10135",
+          "purpose": "Use a historical evidence problem to verify whether the diagnosed weakness still appears on a familiar pattern.",
+          "targetStage": "partialScorePlanning",
+          "successSignal": "Can write executable 30/50/70/100-point routes before coding.",
+          "failureSignal": "Cannot split 30/50/70 points or skips brute-force route.",
+          "timeLimitMinutes": 80
+        },
+        {
+          "taskId": "partial_score_partial_score_missed_19::mutate",
+          "weaknessId": "partial_score_partial_score_missed_19",
+          "taskType": "MUTATE",
+          "problemRef": "mut_partial_score_001",
+          "purpose": "Change constraints or output target to verify transfer, not memorization.",
+          "targetStage": "partialScorePlanning",
+          "successSignal": "Can write executable 30/50/70/100-point routes before coding.",
+          "failureSignal": "Cannot split 30/50/70 points or skips brute-force route.",
+          "timeLimitMinutes": 90
+        },
+        {
+          "taskId": "partial_score_partial_score_missed_19::generate",
+          "weaknessId": "partial_score_partial_score_missed_19",
+          "taskType": "GENERATE",
+          "problemRef": "gen_partial_score_001",
+          "purpose": "Use an original diagnostic draft to deliberately expose the suspected weak stage.",
+          "targetStage": "partialScorePlanning",
+          "successSignal": "Can write executable 30/50/70/100-point routes before coding.",
+          "failureSignal": "Cannot split 30/50/70 points or skips brute-force route.",
+          "timeLimitMinutes": 100
+        }
+      ],
+      "hitCount": 0,
+      "missCount": 0,
+      "lastValidatedAt": null
+    },
+    {
+      "weaknessId": "math_model_error_5",
+      "title": "数学：难题部分分拆解和得分策略不足",
+      "status": "HYPOTHESIS",
+      "confidence": 0.92,
+      "trainingPriority": 95.16,
+      "severity": 73.66,
+      "relatedModules": [
+        "math"
+      ],
+      "relatedErrorTypes": [
+        "MODEL_ERROR",
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceProblems": [
+        "P3585",
+        "P1075",
+        "P6691",
+        "P1435",
+        "P2852",
+        "P8926",
+        "P1029",
+        "P2285",
+        "P5461",
+        "P1229",
+        "P3205",
+        "P5836"
+      ],
+      "clusterIds": [
+        "math_model_template_011"
+      ],
+      "sourceCoverage": {
+        "deepSeekDiagnosedClusters": 1,
+        "ruleBasedClusters": 0
+      },
+      "validationTasks": [
+        {
+          "taskId": "math_model_error_5::select",
+          "weaknessId": "math_model_error_5",
+          "taskType": "SELECT",
+          "problemRef": "P3585",
+          "purpose": "Use a historical evidence problem to verify whether the diagnosed weakness still appears on a familiar pattern.",
+          "targetStage": "partialScorePlanning",
+          "successSignal": "Can write executable 30/50/70/100-point routes before coding.",
+          "failureSignal": "Cannot split 30/50/70 points or skips brute-force route.",
+          "timeLimitMinutes": 80
+        },
+        {
+          "taskId": "math_model_error_5::mutate",
+          "weaknessId": "math_model_error_5",
+          "taskType": "MUTATE",
+          "problemRef": "mut_math_002",
+          "purpose": "Change constraints or output target to verify transfer, not memorization.",
+          "targetStage": "partialScorePlanning",
+          "successSignal": "Can write executable 30/50/70/100-point routes before coding.",
+          "failureSignal": "Cannot split 30/50/70 points or skips brute-force route.",
+          "timeLimitMinutes": 90
+        },
+        {
+          "taskId": "math_model_error_5::generate",
+          "weaknessId": "math_model_error_5",
+          "taskType": "GENERATE",
+          "problemRef": "gen_math_002",
+          "purpose": "Use an original diagnostic draft to deliberately expose the suspected weak stage.",
+          "targetStage": "partialScorePlanning",
+          "successSignal": "Can write executable 30/50/70/100-point routes before coding.",
+          "failureSignal": "Cannot split 30/50/70 points or skips brute-force route.",
+          "timeLimitMinutes": 100
+        }
+      ],
+      "hitCount": 0,
+      "missCount": 0,
+      "lastValidatedAt": null
+    },
+    {
+      "weaknessId": "math_partial_score_missed_18",
+      "title": "数学：难题部分分拆解和得分策略不足",
+      "status": "HYPOTHESIS",
+      "confidence": 0.92,
+      "trainingPriority": 92.72,
+      "severity": 72.72,
+      "relatedModules": [
+        "math"
+      ],
+      "relatedErrorTypes": [
+        "PARTIAL_SCORE_MISSED",
+        "OVERFLOW_ERROR",
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceProblems": [
+        "U619606",
+        "P4085",
+        "P6033",
+        "P13426",
+        "P13498",
+        "P9325",
+        "P1516",
+        "P3128",
+        "U218402",
+        "P5686",
+        "B3672",
+        "P11861"
+      ],
+      "clusterIds": [
+        "math_model_template_069"
+      ],
+      "sourceCoverage": {
+        "deepSeekDiagnosedClusters": 1,
+        "ruleBasedClusters": 0
+      },
+      "validationTasks": [
+        {
+          "taskId": "math_partial_score_missed_18::select",
+          "weaknessId": "math_partial_score_missed_18",
+          "taskType": "SELECT",
+          "problemRef": "U619606",
+          "purpose": "Use a historical evidence problem to verify whether the diagnosed weakness still appears on a familiar pattern.",
+          "targetStage": "partialScorePlanning",
+          "successSignal": "Can write executable 30/50/70/100-point routes before coding.",
+          "failureSignal": "Cannot split 30/50/70 points or skips brute-force route.",
+          "timeLimitMinutes": 80
+        },
+        {
+          "taskId": "math_partial_score_missed_18::mutate",
+          "weaknessId": "math_partial_score_missed_18",
+          "taskType": "MUTATE",
+          "problemRef": "mut_math_003",
+          "purpose": "Change constraints or output target to verify transfer, not memorization.",
+          "targetStage": "partialScorePlanning",
+          "successSignal": "Can write executable 30/50/70/100-point routes before coding.",
+          "failureSignal": "Cannot split 30/50/70 points or skips brute-force route.",
+          "timeLimitMinutes": 90
+        },
+        {
+          "taskId": "math_partial_score_missed_18::generate",
+          "weaknessId": "math_partial_score_missed_18",
+          "taskType": "GENERATE",
+          "problemRef": "gen_math_003",
+          "purpose": "Use an original diagnostic draft to deliberately expose the suspected weak stage.",
+          "targetStage": "partialScorePlanning",
+          "successSignal": "Can write executable 30/50/70/100-point routes before coding.",
+          "failureSignal": "Cannot split 30/50/70 points or skips brute-force route.",
+          "timeLimitMinutes": 100
+        }
+      ],
+      "hitCount": 0,
+      "missCount": 0,
+      "lastValidatedAt": null
+    },
+    {
+      "weaknessId": "interval_dp_state_error_4",
+      "title": "区间 DP：区间 DP 的状态设计、初始化和枚举顺序不稳定",
+      "status": "HYPOTHESIS",
+      "confidence": 0.91,
+      "trainingPriority": 87.03,
+      "severity": 68.53,
+      "relatedModules": [
+        "interval_dp"
+      ],
+      "relatedErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceProblems": [
+        "P8699",
+        "U467266",
+        "U463446",
+        "P1004",
+        "P1022",
+        "P1480",
+        "P1577",
+        "B2110",
+        "P11858",
+        "P3987",
+        "P1967",
+        "T699486"
+      ],
+      "clusterIds": [
+        "interval_dp_state_init_boundary_001",
+        "interval_dp_state_init_boundary_037",
+        "interval_dp_state_init_boundary_094",
+        "interval_dp_state_init_boundary_041",
+        "interval_dp_state_init_boundary_058",
+        "interval_dp_state_init_boundary_032",
+        "interval_dp_state_init_boundary_005"
+      ],
+      "sourceCoverage": {
+        "deepSeekDiagnosedClusters": 2,
+        "ruleBasedClusters": 5
+      },
+      "validationTasks": [
+        {
+          "taskId": "interval_dp_state_error_4::select",
+          "weaknessId": "interval_dp_state_error_4",
+          "taskType": "SELECT",
+          "problemRef": "P8699",
+          "purpose": "Use a historical evidence problem to verify whether the diagnosed weakness still appears on a familiar pattern.",
+          "targetStage": "partialScorePlanning",
+          "successSignal": "Can write executable 30/50/70/100-point routes before coding.",
+          "failureSignal": "Cannot split 30/50/70 points or skips brute-force route.",
+          "timeLimitMinutes": 80
+        },
+        {
+          "taskId": "interval_dp_state_error_4::mutate",
+          "weaknessId": "interval_dp_state_error_4",
+          "taskType": "MUTATE",
+          "problemRef": "mut_interval_dp_004",
+          "purpose": "Change constraints or output target to verify transfer, not memorization.",
+          "targetStage": "partialScorePlanning",
+          "successSignal": "Can write executable 30/50/70/100-point routes before coding.",
+          "failureSignal": "Cannot split 30/50/70 points or skips brute-force route.",
+          "timeLimitMinutes": 90
+        },
+        {
+          "taskId": "interval_dp_state_error_4::generate",
+          "weaknessId": "interval_dp_state_error_4",
+          "taskType": "GENERATE",
+          "problemRef": "generate:interval_dp",
+          "purpose": "Use an original diagnostic draft to deliberately expose the suspected weak stage.",
+          "targetStage": "partialScorePlanning",
+          "successSignal": "Can write executable 30/50/70/100-point routes before coding.",
+          "failureSignal": "Cannot split 30/50/70 points or skips brute-force route.",
+          "timeLimitMinutes": 100
+        }
+      ],
+      "hitCount": 0,
+      "missCount": 0,
+      "lastValidatedAt": null
+    },
+    {
+      "weaknessId": "dp_state_error_15",
+      "title": "DP：DP 状态、转移和初始化需要进一步稳定",
+      "status": "HYPOTHESIS",
+      "confidence": 0.86,
+      "trainingPriority": 76.95,
+      "severity": 59.95,
+      "relatedModules": [
+        "dp"
+      ],
+      "relatedErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
+        "MODEL_ERROR",
+        "OVERFLOW_ERROR",
+        "INDEX_ERROR"
+      ],
+      "evidenceProblems": [
+        "AT_dp_a",
+        "CF1051D",
+        "P12678",
+        "P3865",
+        "P1616",
+        "P2782",
+        "B3873",
+        "U622367",
+        "AT_dp_b",
+        "CF191A",
+        "P16158",
+        "AT_abc129_c"
+      ],
+      "clusterIds": [
+        "dp_state_init_boundary_092",
+        "dp_state_init_boundary_072",
+        "dp_state_init_boundary_067",
+        "dp_state_init_boundary_028",
+        "dp_state_init_boundary_077",
+        "dp_state_init_boundary_091",
+        "dp_state_init_boundary_042",
+        "dp_state_init_boundary_064",
+        "dp_state_init_boundary_059"
+      ],
+      "sourceCoverage": {
+        "deepSeekDiagnosedClusters": 3,
+        "ruleBasedClusters": 6
+      },
+      "validationTasks": [
+        {
+          "taskId": "dp_state_error_15::select",
+          "weaknessId": "dp_state_error_15",
+          "taskType": "SELECT",
+          "problemRef": "AT_dp_a",
+          "purpose": "Use a historical evidence problem to verify whether the diagnosed weakness still appears on a familiar pattern.",
+          "targetStage": "modeling",
+          "successSignal": "Can name the model and justify why alternatives do not fit.",
+          "failureSignal": "Chooses model by pattern memory instead of proof.",
+          "timeLimitMinutes": 80
+        },
+        {
+          "taskId": "dp_state_error_15::mutate",
+          "weaknessId": "dp_state_error_15",
+          "taskType": "MUTATE",
+          "problemRef": "mut_dp_005",
+          "purpose": "Change constraints or output target to verify transfer, not memorization.",
+          "targetStage": "modeling",
+          "successSignal": "Can name the model and justify why alternatives do not fit.",
+          "failureSignal": "Chooses model by pattern memory instead of proof.",
+          "timeLimitMinutes": 90
+        },
+        {
+          "taskId": "dp_state_error_15::generate",
+          "weaknessId": "dp_state_error_15",
+          "taskType": "GENERATE",
+          "problemRef": "generate:dp",
+          "purpose": "Use an original diagnostic draft to deliberately expose the suspected weak stage.",
+          "targetStage": "modeling",
+          "successSignal": "Can name the model and justify why alternatives do not fit.",
+          "failureSignal": "Chooses model by pattern memory instead of proof.",
+          "timeLimitMinutes": 100
+        }
+      ],
+      "hitCount": 0,
+      "missCount": 0,
+      "lastValidatedAt": null
+    },
+    {
+      "weaknessId": "greedy_partial_score_missed_1",
+      "title": "贪心：难题部分分拆解和得分策略不足",
+      "status": "HYPOTHESIS",
+      "confidence": 0.82,
+      "trainingPriority": 67.37,
+      "severity": 51.87,
+      "relatedModules": [
+        "greedy"
+      ],
+      "relatedErrorTypes": [
+        "PARTIAL_SCORE_MISSED",
+        "IMPLEMENTATION_RISK",
+        "OVERFLOW_ERROR"
+      ],
+      "evidenceProblems": [
+        "U619605"
+      ],
+      "clusterIds": [
+        "greedy_unknown_068"
+      ],
+      "sourceCoverage": {
+        "deepSeekDiagnosedClusters": 1,
+        "ruleBasedClusters": 0
+      },
+      "validationTasks": [
+        {
+          "taskId": "greedy_partial_score_missed_1::select",
+          "weaknessId": "greedy_partial_score_missed_1",
+          "taskType": "SELECT",
+          "problemRef": "U619605",
+          "purpose": "Use a historical evidence problem to verify whether the diagnosed weakness still appears on a familiar pattern.",
+          "targetStage": "partialScorePlanning",
+          "successSignal": "Can write executable 30/50/70/100-point routes before coding.",
+          "failureSignal": "Cannot split 30/50/70 points or skips brute-force route.",
+          "timeLimitMinutes": 80
+        },
+        {
+          "taskId": "greedy_partial_score_missed_1::mutate",
+          "weaknessId": "greedy_partial_score_missed_1",
+          "taskType": "MUTATE",
+          "problemRef": "mut_greedy_006",
+          "purpose": "Change constraints or output target to verify transfer, not memorization.",
+          "targetStage": "partialScorePlanning",
+          "successSignal": "Can write executable 30/50/70/100-point routes before coding.",
+          "failureSignal": "Cannot split 30/50/70 points or skips brute-force route.",
+          "timeLimitMinutes": 90
+        },
+        {
+          "taskId": "greedy_partial_score_missed_1::generate",
+          "weaknessId": "greedy_partial_score_missed_1",
+          "taskType": "GENERATE",
+          "problemRef": "generate:greedy",
+          "purpose": "Use an original diagnostic draft to deliberately expose the suspected weak stage.",
+          "targetStage": "partialScorePlanning",
+          "successSignal": "Can write executable 30/50/70/100-point routes before coding.",
+          "failureSignal": "Cannot split 30/50/70 points or skips brute-force route.",
+          "timeLimitMinutes": 100
+        }
+      ],
+      "hitCount": 0,
+      "missCount": 0,
+      "lastValidatedAt": null
+    },
+    {
+      "weaknessId": "partial_score_model_error_20",
+      "title": "partial_score：难题部分分拆解和得分策略不足",
+      "status": "HYPOTHESIS",
+      "confidence": 0.82,
+      "trainingPriority": 65.66,
+      "severity": 51.66,
+      "relatedModules": [
+        "partial_score"
+      ],
+      "relatedErrorTypes": [
+        "MODEL_ERROR",
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceProblems": [
+        "P15018",
+        "P1102",
+        "P7410",
+        "P15131",
+        "P1031",
+        "P2367",
+        "P1567",
+        "B2004"
+      ],
+      "clusterIds": [
+        "partial_score_partial_score_023"
+      ],
+      "sourceCoverage": {
+        "deepSeekDiagnosedClusters": 1,
+        "ruleBasedClusters": 0
+      },
+      "validationTasks": [
+        {
+          "taskId": "partial_score_model_error_20::select",
+          "weaknessId": "partial_score_model_error_20",
+          "taskType": "SELECT",
+          "problemRef": "P15018",
+          "purpose": "Use a historical evidence problem to verify whether the diagnosed weakness still appears on a familiar pattern.",
+          "targetStage": "partialScorePlanning",
+          "successSignal": "Can write executable 30/50/70/100-point routes before coding.",
+          "failureSignal": "Cannot split 30/50/70 points or skips brute-force route.",
+          "timeLimitMinutes": 80
+        },
+        {
+          "taskId": "partial_score_model_error_20::mutate",
+          "weaknessId": "partial_score_model_error_20",
+          "taskType": "MUTATE",
+          "problemRef": "mut_partial_score_007",
+          "purpose": "Change constraints or output target to verify transfer, not memorization.",
+          "targetStage": "partialScorePlanning",
+          "successSignal": "Can write executable 30/50/70/100-point routes before coding.",
+          "failureSignal": "Cannot split 30/50/70 points or skips brute-force route.",
+          "timeLimitMinutes": 90
+        },
+        {
+          "taskId": "partial_score_model_error_20::generate",
+          "weaknessId": "partial_score_model_error_20",
+          "taskType": "GENERATE",
+          "problemRef": "gen_partial_score_001",
+          "purpose": "Use an original diagnostic draft to deliberately expose the suspected weak stage.",
+          "targetStage": "partialScorePlanning",
+          "successSignal": "Can write executable 30/50/70/100-point routes before coding.",
+          "failureSignal": "Cannot split 30/50/70 points or skips brute-force route.",
+          "timeLimitMinutes": 100
+        }
+      ],
+      "hitCount": 0,
+      "missCount": 0,
+      "lastValidatedAt": null
+    },
+    {
+      "weaknessId": "graph_model_error_37",
+      "title": "图论建模：图论建模 相关建模或实现稳定性不足",
+      "status": "HYPOTHESIS",
+      "confidence": 0.73,
+      "trainingPriority": 54.7,
+      "severity": 50.2,
+      "relatedModules": [
+        "graph"
+      ],
+      "relatedErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceProblems": [
+        "P16316",
+        "P14740",
+        "CF1729D",
+        "P15767",
+        "CF816B",
+        "P14785",
+        "P15766",
+        "P12374",
+        "P7425",
+        "P4552",
+        "P1001",
+        "P3879"
+      ],
+      "clusterIds": [
+        "graph_model_template_020",
+        "graph_model_template_014",
+        "graph_model_template_031",
+        "graph_model_template_016",
+        "graph_model_template_015",
+        "graph_model_template_006"
+      ],
+      "sourceCoverage": {
+        "deepSeekDiagnosedClusters": 0,
+        "ruleBasedClusters": 6
+      },
+      "validationTasks": [
+        {
+          "taskId": "graph_model_error_37::select",
+          "weaknessId": "graph_model_error_37",
+          "taskType": "SELECT",
+          "problemRef": "P16316",
+          "purpose": "Use a historical evidence problem to verify whether the diagnosed weakness still appears on a familiar pattern.",
+          "targetStage": "modeling",
+          "successSignal": "Can name the model and justify why alternatives do not fit.",
+          "failureSignal": "Chooses model by pattern memory instead of proof.",
+          "timeLimitMinutes": 80
+        },
+        {
+          "taskId": "graph_model_error_37::mutate",
+          "weaknessId": "graph_model_error_37",
+          "taskType": "MUTATE",
+          "problemRef": "mut_graph_008",
+          "purpose": "Change constraints or output target to verify transfer, not memorization.",
+          "targetStage": "modeling",
+          "successSignal": "Can name the model and justify why alternatives do not fit.",
+          "failureSignal": "Chooses model by pattern memory instead of proof.",
+          "timeLimitMinutes": 90
+        },
+        {
+          "taskId": "graph_model_error_37::generate",
+          "weaknessId": "graph_model_error_37",
+          "taskType": "GENERATE",
+          "problemRef": "generate:graph",
+          "purpose": "Use an original diagnostic draft to deliberately expose the suspected weak stage.",
+          "targetStage": "modeling",
+          "successSignal": "Can name the model and justify why alternatives do not fit.",
+          "failureSignal": "Chooses model by pattern memory instead of proof.",
+          "timeLimitMinutes": 100
+        }
+      ],
+      "hitCount": 0,
+      "missCount": 0,
+      "lastValidatedAt": null
+    },
+    {
+      "weaknessId": "math_model_error_40",
+      "title": "数学：数学 相关建模或实现稳定性不足",
+      "status": "HYPOTHESIS",
+      "confidence": 0.72,
+      "trainingPriority": 52.26,
+      "severity": 49.26,
+      "relatedModules": [
+        "math"
+      ],
+      "relatedErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "evidenceProblems": [
+        "P3372",
+        "P1014",
+        "B4016",
+        "P9749",
+        "T433808",
+        "P4342",
+        "U452710",
+        "P2063",
+        "P1198",
+        "U408377",
+        "P5331",
+        "P2610"
+      ],
+      "clusterIds": [
+        "math_model_template_009",
+        "math_model_template_050",
+        "math_model_template_010",
+        "math_model_template_039",
+        "math_model_template_012",
+        "math_model_template_008"
+      ],
+      "sourceCoverage": {
+        "deepSeekDiagnosedClusters": 0,
+        "ruleBasedClusters": 6
+      },
+      "validationTasks": [
+        {
+          "taskId": "math_model_error_40::select",
+          "weaknessId": "math_model_error_40",
+          "taskType": "SELECT",
+          "problemRef": "P3372",
+          "purpose": "Use a historical evidence problem to verify whether the diagnosed weakness still appears on a familiar pattern.",
+          "targetStage": "modeling",
+          "successSignal": "Can name the model and justify why alternatives do not fit.",
+          "failureSignal": "Chooses model by pattern memory instead of proof.",
+          "timeLimitMinutes": 80
+        },
+        {
+          "taskId": "math_model_error_40::mutate",
+          "weaknessId": "math_model_error_40",
+          "taskType": "MUTATE",
+          "problemRef": "mut_math_002",
+          "purpose": "Change constraints or output target to verify transfer, not memorization.",
+          "targetStage": "modeling",
+          "successSignal": "Can name the model and justify why alternatives do not fit.",
+          "failureSignal": "Chooses model by pattern memory instead of proof.",
+          "timeLimitMinutes": 90
+        },
+        {
+          "taskId": "math_model_error_40::generate",
+          "weaknessId": "math_model_error_40",
+          "taskType": "GENERATE",
+          "problemRef": "gen_math_002",
+          "purpose": "Use an original diagnostic draft to deliberately expose the suspected weak stage.",
+          "targetStage": "modeling",
+          "successSignal": "Can name the model and justify why alternatives do not fit.",
+          "failureSignal": "Chooses model by pattern memory instead of proof.",
+          "timeLimitMinutes": 100
+        }
+      ],
+      "hitCount": 0,
+      "missCount": 0,
+      "lastValidatedAt": null
+    },
+    {
+      "weaknessId": "implementation_implementation_risk_38",
+      "title": "implementation：implementation 相关建模或实现稳定性不足",
+      "status": "HYPOTHESIS",
+      "confidence": 0.72,
+      "trainingPriority": 50.72,
+      "severity": 49.22,
+      "relatedModules": [
+        "implementation"
+      ],
+      "relatedErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "evidenceProblems": [
+        "P1113",
+        "P1003",
+        "B2002",
+        "P1830",
+        "P5721",
+        "U331327",
+        "P2000",
+        "U194704",
+        "P5657",
+        "P10156",
+        "P2886",
+        "P7518"
+      ],
+      "clusterIds": [
+        "implementation_implementation_risk_082",
+        "implementation_implementation_risk_002",
+        "implementation_implementation_risk_030",
+        "implementation_implementation_risk_021",
+        "implementation_implementation_risk_017",
+        "implementation_implementation_risk_004"
+      ],
+      "sourceCoverage": {
+        "deepSeekDiagnosedClusters": 0,
+        "ruleBasedClusters": 6
+      },
+      "validationTasks": [
+        {
+          "taskId": "implementation_implementation_risk_38::select",
+          "weaknessId": "implementation_implementation_risk_38",
+          "taskType": "SELECT",
+          "problemRef": "P1113",
+          "purpose": "Use a historical evidence problem to verify whether the diagnosed weakness still appears on a familiar pattern.",
+          "targetStage": "review",
+          "successSignal": "Can summarize the reusable lesson and next trigger condition.",
+          "failureSignal": "Cannot extract a reusable rule from the attempt.",
+          "timeLimitMinutes": 80
+        },
+        {
+          "taskId": "implementation_implementation_risk_38::mutate",
+          "weaknessId": "implementation_implementation_risk_38",
+          "taskType": "MUTATE",
+          "problemRef": "mutate:implementation",
+          "purpose": "Change constraints or output target to verify transfer, not memorization.",
+          "targetStage": "review",
+          "successSignal": "Can summarize the reusable lesson and next trigger condition.",
+          "failureSignal": "Cannot extract a reusable rule from the attempt.",
+          "timeLimitMinutes": 90
+        },
+        {
+          "taskId": "implementation_implementation_risk_38::generate",
+          "weaknessId": "implementation_implementation_risk_38",
+          "taskType": "GENERATE",
+          "problemRef": "generate:implementation",
+          "purpose": "Use an original diagnostic draft to deliberately expose the suspected weak stage.",
+          "targetStage": "review",
+          "successSignal": "Can summarize the reusable lesson and next trigger condition.",
+          "failureSignal": "Cannot extract a reusable rule from the attempt.",
+          "timeLimitMinutes": 100
+        }
+      ],
+      "hitCount": 0,
+      "missCount": 0,
+      "lastValidatedAt": null
+    }
+  ]
+}

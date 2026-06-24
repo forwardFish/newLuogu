@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-24T03:33:41.362Z",
+  "generatedAt": "2026-06-24T14:58:14.945Z",
   "items": {
     "MODEL_ERROR": {
-      "problemCount": 334,
+      "problemCount": 342,
       "evidenceProblems": [
         "U316802",
         "U316800",
@@ -10,24 +10,33 @@
         "UVA11572",
         "P1115",
         "U683709",
+        "P3685",
         "P1001",
         "B2001",
         "P3557",
         "P16316",
-        "P14785",
-        "B4458"
+        "P14785"
       ],
       "relatedModules": [
         "graph",
         "math",
+        "shortest_path",
+        "partial_score",
+        "search",
         "binary_search",
+        "string",
         "dsu",
-        "segment_tree"
+        "segment_tree",
+        "interval_dp",
+        "dfs_bfs",
+        "dp",
+        "state_compression_dp",
+        "implementation"
       ],
       "trainingAction": "训练题意到模型的转化，写清变量/集合/图含义。"
     },
     "IMPLEMENTATION_RISK": {
-      "problemCount": 244,
+      "problemCount": 284,
       "evidenceProblems": [
         "P10156",
         "U688515",
@@ -38,141 +47,234 @@
         "P15347",
         "P11139",
         "P2345",
+        "P7413",
         "P7412",
-        "P16180",
-        "T711698"
+        "P16180"
       ],
       "relatedModules": [
         "implementation",
         "search",
+        "partial_score",
         "greedy",
         "dfs_bfs",
+        "string",
         "state_compression_dp",
+        "graph",
+        "math",
         "tree"
       ],
       "trainingAction": "安排同类题复盘和重做。"
     },
     "BOUNDARY_ERROR": {
-      "problemCount": 216,
+      "problemCount": 264,
       "evidenceProblems": [
         "P8699",
         "U688514",
         "T568349",
+        "P1115",
         "P3685",
         "P3677",
+        "P7410",
+        "P7411",
         "P5740",
         "P16158",
         "P2161",
-        "P16173",
-        "P16151",
-        "P1066",
-        "P1119"
+        "P16173"
       ],
       "relatedModules": [
         "interval_dp",
         "string",
+        "math",
         "shortest_path",
+        "partial_score",
+        "search",
         "dp",
-        "fenwick_tree"
+        "fenwick_tree",
+        "binary_search",
+        "graph",
+        "dsu",
+        "segment_tree"
       ],
       "trainingAction": "安排边界专项题，并强制提交前检查。"
     },
-    "STATE_ERROR": {
-      "problemCount": 211,
-      "evidenceProblems": [
-        "P8699",
-        "U688514",
-        "T568349",
-        "P3685",
-        "P3677",
-        "P5740",
-        "P16158",
-        "P2161",
-        "P16173",
-        "P16151",
-        "P1066",
-        "P1119"
-      ],
-      "relatedModules": [
-        "interval_dp",
-        "string",
-        "shortest_path",
-        "dp"
-      ],
-      "trainingAction": "每道 DP 题先写状态定义和转移表。"
-    },
     "INIT_ERROR": {
-      "problemCount": 211,
+      "problemCount": 242,
       "evidenceProblems": [
         "P8699",
         "U688514",
         "T568349",
+        "P1115",
         "P3685",
         "P3677",
-        "P5740",
+        "P7410",
         "P16158",
         "P2161",
         "P16173",
         "P16151",
-        "P1066",
-        "P1119"
+        "P1066"
       ],
       "relatedModules": [
         "interval_dp",
         "string",
+        "math",
         "shortest_path",
-        "dp"
+        "partial_score",
+        "dp",
+        "fenwick_tree",
+        "dsu"
       ],
       "trainingAction": "训练初始化和多测清空，提交前列初始化清单。"
     },
-    "PARTIAL_SCORE_MISSED": {
-      "problemCount": 125,
+    "STATE_ERROR": {
+      "problemCount": 237,
       "evidenceProblems": [
         "P8699",
+        "U688514",
+        "T568349",
+        "P1115",
+        "P3677",
+        "P7410",
+        "P16158",
+        "P2161",
+        "P16173",
+        "P16151",
+        "P1066",
+        "P1119"
+      ],
+      "relatedModules": [
+        "interval_dp",
+        "string",
+        "math",
+        "partial_score",
+        "dp",
+        "shortest_path",
+        "state_compression_dp",
+        "dfs_bfs",
+        "segment_tree"
+      ],
+      "trainingAction": "每道 DP 题先写状态定义和转移表。"
+    },
+    "PARTIAL_SCORE_MISSED": {
+      "problemCount": 113,
+      "evidenceProblems": [
         "P1115",
         "P3685",
         "P7413",
         "P7410",
         "P7411",
         "P5740",
-        "P1022",
         "T699486",
         "T717044",
         "P2852",
-        "P1226"
+        "P1226",
+        "P15267",
+        "P15269"
       ],
       "relatedModules": [
-        "interval_dp",
         "math",
         "shortest_path",
         "partial_score",
         "search",
         "string",
+        "interval_dp",
         "binary_search",
         "graph",
         "state_compression_dp",
-        "dsu",
         "fenwick_tree",
-        "dp",
+        "dsu",
         "greedy",
         "dfs_bfs",
-        "segment_tree"
+        "implementation"
       ],
       "trainingAction": "训练 30/50/70 分子任务拆解。"
     },
-    "INDEX_ERROR": {
-      "problemCount": 5,
+    "OVERFLOW_ERROR": {
+      "problemCount": 49,
       "evidenceProblems": [
+        "P7413",
+        "T717044",
+        "U519362",
+        "P1955",
+        "P10135",
+        "P2585",
+        "P1273",
+        "P3047",
+        "P2303",
+        "P3958",
+        "P3366",
+        "P1551"
+      ],
+      "relatedModules": [
+        "partial_score",
+        "binary_search",
+        "string",
+        "dsu",
+        "dp",
+        "greedy",
+        "math"
+      ],
+      "trainingAction": "训练数据范围估算和 long long 使用规范。"
+    },
+    "INDEX_ERROR": {
+      "problemCount": 36,
+      "evidenceProblems": [
+        "P7413",
         "P1908",
         "P3374",
         "P3368",
+        "P1955",
         "P3431",
-        "P9094"
+        "P10135",
+        "P2585",
+        "P1273",
+        "P3047",
+        "P2303",
+        "P3958"
       ],
       "relatedModules": [
-        "fenwick_tree"
+        "partial_score",
+        "fenwick_tree",
+        "dsu",
+        "dp",
+        "dfs_bfs"
       ],
       "trainingAction": "安排数组下标和区间边界专项。"
+    },
+    "COMPLEXITY_ERROR": {
+      "problemCount": 5,
+      "evidenceProblems": [
+        "U519362",
+        "U643929",
+        "U615693",
+        "CF1914B",
+        "CF1996D"
+      ],
+      "relatedModules": [
+        "string",
+        "graph",
+        "math"
+      ],
+      "trainingAction": "安排同类题复盘和重做。"
+    },
+    "DEBUG_TIMEOUT": {
+      "problemCount": 1,
+      "evidenceProblems": [
+        "U643929"
+      ],
+      "relatedModules": [
+        "graph"
+      ],
+      "trainingAction": "重做高提交次数题，限制调试时间并记录止损点。"
+    },
+    "TEMPLATE_UNFAMILIAR": {
+      "problemCount": 1,
+      "evidenceProblems": [
+        "P7072"
+      ],
+      "relatedModules": [
+        "segment_tree"
+      ],
+      "trainingAction": "安排同类题复盘和重做。"
     }
   }
 }

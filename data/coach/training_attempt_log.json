@@ -1,0 +1,1444 @@
+{
+  "generatedAt": "2026-06-24T16:14:00.815Z",
+  "note": "This is simulated student feedback. Replace it with real daily logs before using the coach decisions for production.",
+  "items": [
+    {
+      "cycle": 1,
+      "day": 1,
+      "dateLabel": "D01",
+      "taskId": "partial_score_partial_score_missed_19::select",
+      "problemRef": "P10135",
+      "weaknessId": "partial_score_partial_score_missed_19",
+      "taskType": "SELECT",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": false,
+          "issue": "30/50/70 分拆解明显复发，先追求 AC 而不是先设计可拿分路线。"
+        },
+        "algorithmDesign": {
+          "passed": false,
+          "issue": "Did not turn partial plan into staged algorithms."
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Review captured recurring weakness: partial_score：难题部分分拆解和得分策略不足"
+        }
+      },
+      "result": "PARTIAL",
+      "scoreTrajectory": [
+        20,
+        45,
+        70
+      ],
+      "submissionCount": 4,
+      "timeSpentMinutes": 91,
+      "oldWeaknessReappeared": true,
+      "coachObservation": "Hypothesis was hit at partialScorePlanning: Cannot split 30/50/70 points or skips brute-force route."
+    },
+    {
+      "cycle": 1,
+      "day": 2,
+      "dateLabel": "D02",
+      "taskId": "partial_score_partial_score_missed_19::mutate",
+      "problemRef": "mut_partial_score_001",
+      "weaknessId": "partial_score_partial_score_missed_19",
+      "taskType": "MUTATE",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": false,
+          "issue": "30/50/70 分拆解明显复发，先追求 AC 而不是先设计可拿分路线。"
+        },
+        "algorithmDesign": {
+          "passed": false,
+          "issue": "Did not turn partial plan into staged algorithms."
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Review captured recurring weakness: partial_score：难题部分分拆解和得分策略不足"
+        }
+      },
+      "result": "PARTIAL",
+      "scoreTrajectory": [
+        20,
+        45,
+        70
+      ],
+      "submissionCount": 4,
+      "timeSpentMinutes": 101,
+      "oldWeaknessReappeared": true,
+      "coachObservation": "Hypothesis was hit at partialScorePlanning: Cannot split 30/50/70 points or skips brute-force route."
+    },
+    {
+      "cycle": 1,
+      "day": 3,
+      "dateLabel": "D03",
+      "taskId": "math_model_error_5::select",
+      "problemRef": "P3585",
+      "weaknessId": "math_model_error_5",
+      "taskType": "SELECT",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": false,
+          "issue": "30/50/70 分拆解明显复发，先追求 AC 而不是先设计可拿分路线。"
+        },
+        "algorithmDesign": {
+          "passed": false,
+          "issue": "Did not turn partial plan into staged algorithms."
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Review captured recurring weakness: 数学：难题部分分拆解和得分策略不足"
+        }
+      },
+      "result": "PARTIAL",
+      "scoreTrajectory": [
+        20,
+        45,
+        70
+      ],
+      "submissionCount": 4,
+      "timeSpentMinutes": 91,
+      "oldWeaknessReappeared": true,
+      "coachObservation": "Hypothesis was hit at partialScorePlanning: Cannot split 30/50/70 points or skips brute-force route."
+    },
+    {
+      "cycle": 1,
+      "day": 4,
+      "dateLabel": "D04",
+      "taskId": "math_model_error_5::mutate",
+      "problemRef": "mut_math_002",
+      "weaknessId": "math_model_error_5",
+      "taskType": "MUTATE",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": false,
+          "issue": "30/50/70 分拆解明显复发，先追求 AC 而不是先设计可拿分路线。"
+        },
+        "algorithmDesign": {
+          "passed": false,
+          "issue": "Did not turn partial plan into staged algorithms."
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Review captured recurring weakness: 数学：难题部分分拆解和得分策略不足"
+        }
+      },
+      "result": "PARTIAL",
+      "scoreTrajectory": [
+        20,
+        45,
+        70
+      ],
+      "submissionCount": 4,
+      "timeSpentMinutes": 101,
+      "oldWeaknessReappeared": true,
+      "coachObservation": "Hypothesis was hit at partialScorePlanning: Cannot split 30/50/70 points or skips brute-force route."
+    },
+    {
+      "cycle": 1,
+      "day": 5,
+      "dateLabel": "D05",
+      "taskId": "math_partial_score_missed_18::select",
+      "problemRef": "U619606",
+      "weaknessId": "math_partial_score_missed_18",
+      "taskType": "SELECT",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": false,
+          "issue": "30/50/70 分拆解明显复发，先追求 AC 而不是先设计可拿分路线。"
+        },
+        "algorithmDesign": {
+          "passed": false,
+          "issue": "Did not turn partial plan into staged algorithms."
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Review captured recurring weakness: 数学：难题部分分拆解和得分策略不足"
+        }
+      },
+      "result": "PARTIAL",
+      "scoreTrajectory": [
+        20,
+        45,
+        70
+      ],
+      "submissionCount": 4,
+      "timeSpentMinutes": 91,
+      "oldWeaknessReappeared": true,
+      "coachObservation": "Hypothesis was hit at partialScorePlanning: Cannot split 30/50/70 points or skips brute-force route."
+    },
+    {
+      "cycle": 1,
+      "day": 6,
+      "dateLabel": "D06",
+      "taskId": "math_partial_score_missed_18::mutate",
+      "problemRef": "mut_math_003",
+      "weaknessId": "math_partial_score_missed_18",
+      "taskType": "MUTATE",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": false,
+          "issue": "30/50/70 分拆解明显复发，先追求 AC 而不是先设计可拿分路线。"
+        },
+        "algorithmDesign": {
+          "passed": false,
+          "issue": "Did not turn partial plan into staged algorithms."
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Review captured recurring weakness: 数学：难题部分分拆解和得分策略不足"
+        }
+      },
+      "result": "PARTIAL",
+      "scoreTrajectory": [
+        20,
+        45,
+        70
+      ],
+      "submissionCount": 4,
+      "timeSpentMinutes": 101,
+      "oldWeaknessReappeared": true,
+      "coachObservation": "Hypothesis was hit at partialScorePlanning: Cannot split 30/50/70 points or skips brute-force route."
+    },
+    {
+      "cycle": 2,
+      "day": 7,
+      "dateLabel": "D07",
+      "taskId": "partial_score_partial_score_missed_19::select",
+      "problemRef": "P10135",
+      "weaknessId": "partial_score_partial_score_missed_19",
+      "taskType": "SELECT",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": false,
+          "issue": "30/50/70 分拆解部分复发，先追求 AC 而不是先设计可拿分路线。"
+        },
+        "algorithmDesign": {
+          "passed": false,
+          "issue": "Did not turn partial plan into staged algorithms."
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Review captured recurring weakness: partial_score：难题部分分拆解和得分策略不足"
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        30,
+        70,
+        100
+      ],
+      "submissionCount": 3,
+      "timeSpentMinutes": 87,
+      "oldWeaknessReappeared": true,
+      "coachObservation": "Hypothesis was hit at partialScorePlanning: Cannot split 30/50/70 points or skips brute-force route."
+    },
+    {
+      "cycle": 2,
+      "day": 8,
+      "dateLabel": "D08",
+      "taskId": "partial_score_partial_score_missed_19::mutate",
+      "problemRef": "mut_partial_score_001",
+      "weaknessId": "partial_score_partial_score_missed_19",
+      "taskType": "MUTATE",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": false,
+          "issue": "30/50/70 分拆解部分复发，先追求 AC 而不是先设计可拿分路线。"
+        },
+        "algorithmDesign": {
+          "passed": false,
+          "issue": "Did not turn partial plan into staged algorithms."
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Review captured recurring weakness: partial_score：难题部分分拆解和得分策略不足"
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        30,
+        70,
+        100
+      ],
+      "submissionCount": 3,
+      "timeSpentMinutes": 97,
+      "oldWeaknessReappeared": true,
+      "coachObservation": "Hypothesis was hit at partialScorePlanning: Cannot split 30/50/70 points or skips brute-force route."
+    },
+    {
+      "cycle": 2,
+      "day": 9,
+      "dateLabel": "D09",
+      "taskId": "partial_score_partial_score_missed_19::generate",
+      "problemRef": "gen_partial_score_001",
+      "weaknessId": "partial_score_partial_score_missed_19",
+      "taskType": "GENERATE",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": false,
+          "issue": "30/50/70 分拆解部分复发，先追求 AC 而不是先设计可拿分路线。"
+        },
+        "algorithmDesign": {
+          "passed": false,
+          "issue": "Did not turn partial plan into staged algorithms."
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Review captured recurring weakness: partial_score：难题部分分拆解和得分策略不足"
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        30,
+        70,
+        100
+      ],
+      "submissionCount": 4,
+      "timeSpentMinutes": 107,
+      "oldWeaknessReappeared": true,
+      "coachObservation": "Hypothesis was hit at partialScorePlanning: Cannot split 30/50/70 points or skips brute-force route."
+    },
+    {
+      "cycle": 2,
+      "day": 10,
+      "dateLabel": "D10",
+      "taskId": "math_model_error_5::select",
+      "problemRef": "P3585",
+      "weaknessId": "math_model_error_5",
+      "taskType": "SELECT",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": false,
+          "issue": "30/50/70 分拆解部分复发，先追求 AC 而不是先设计可拿分路线。"
+        },
+        "algorithmDesign": {
+          "passed": false,
+          "issue": "Did not turn partial plan into staged algorithms."
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Review captured recurring weakness: 数学：难题部分分拆解和得分策略不足"
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        30,
+        70,
+        100
+      ],
+      "submissionCount": 3,
+      "timeSpentMinutes": 87,
+      "oldWeaknessReappeared": true,
+      "coachObservation": "Hypothesis was hit at partialScorePlanning: Cannot split 30/50/70 points or skips brute-force route."
+    },
+    {
+      "cycle": 2,
+      "day": 11,
+      "dateLabel": "D11",
+      "taskId": "math_model_error_5::mutate",
+      "problemRef": "mut_math_002",
+      "weaknessId": "math_model_error_5",
+      "taskType": "MUTATE",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": false,
+          "issue": "30/50/70 分拆解部分复发，先追求 AC 而不是先设计可拿分路线。"
+        },
+        "algorithmDesign": {
+          "passed": false,
+          "issue": "Did not turn partial plan into staged algorithms."
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Review captured recurring weakness: 数学：难题部分分拆解和得分策略不足"
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        30,
+        70,
+        100
+      ],
+      "submissionCount": 3,
+      "timeSpentMinutes": 97,
+      "oldWeaknessReappeared": true,
+      "coachObservation": "Hypothesis was hit at partialScorePlanning: Cannot split 30/50/70 points or skips brute-force route."
+    },
+    {
+      "cycle": 2,
+      "day": 12,
+      "dateLabel": "D12",
+      "taskId": "math_model_error_5::generate",
+      "problemRef": "gen_math_002",
+      "weaknessId": "math_model_error_5",
+      "taskType": "GENERATE",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": false,
+          "issue": "30/50/70 分拆解部分复发，先追求 AC 而不是先设计可拿分路线。"
+        },
+        "algorithmDesign": {
+          "passed": false,
+          "issue": "Did not turn partial plan into staged algorithms."
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Review captured recurring weakness: 数学：难题部分分拆解和得分策略不足"
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        30,
+        70,
+        100
+      ],
+      "submissionCount": 4,
+      "timeSpentMinutes": 107,
+      "oldWeaknessReappeared": true,
+      "coachObservation": "Hypothesis was hit at partialScorePlanning: Cannot split 30/50/70 points or skips brute-force route."
+    },
+    {
+      "cycle": 3,
+      "day": 13,
+      "dateLabel": "D13",
+      "taskId": "partial_score_partial_score_missed_19::select",
+      "problemRef": "P10135",
+      "weaknessId": "partial_score_partial_score_missed_19",
+      "taskType": "SELECT",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": true,
+          "issue": null
+        },
+        "algorithmDesign": {
+          "passed": true,
+          "issue": null
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Can explain model, partial score route, and one avoidable risk before coding."
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        100
+      ],
+      "submissionCount": 1,
+      "timeSpentMinutes": 56,
+      "oldWeaknessReappeared": false,
+      "coachObservation": "Hypothesis was not hit strongly: Can write executable 30/50/70/100-point routes before coding."
+    },
+    {
+      "cycle": 3,
+      "day": 14,
+      "dateLabel": "D14",
+      "taskId": "partial_score_partial_score_missed_19::mutate",
+      "problemRef": "mut_partial_score_001",
+      "weaknessId": "partial_score_partial_score_missed_19",
+      "taskType": "MUTATE",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": false,
+          "issue": "30/50/70 分拆解轻微复发，先追求 AC 而不是先设计可拿分路线。"
+        },
+        "algorithmDesign": {
+          "passed": false,
+          "issue": "Did not turn partial plan into staged algorithms."
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Review captured recurring weakness: partial_score：难题部分分拆解和得分策略不足"
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        50,
+        85,
+        100
+      ],
+      "submissionCount": 2,
+      "timeSpentMinutes": 93,
+      "oldWeaknessReappeared": true,
+      "coachObservation": "Hypothesis was hit at partialScorePlanning: Cannot split 30/50/70 points or skips brute-force route."
+    },
+    {
+      "cycle": 3,
+      "day": 15,
+      "dateLabel": "D15",
+      "taskId": "partial_score_partial_score_missed_19::generate",
+      "problemRef": "gen_partial_score_001",
+      "weaknessId": "partial_score_partial_score_missed_19",
+      "taskType": "GENERATE",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": false,
+          "issue": "30/50/70 分拆解轻微复发，先追求 AC 而不是先设计可拿分路线。"
+        },
+        "algorithmDesign": {
+          "passed": false,
+          "issue": "Did not turn partial plan into staged algorithms."
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Review captured recurring weakness: partial_score：难题部分分拆解和得分策略不足"
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        50,
+        85,
+        100
+      ],
+      "submissionCount": 3,
+      "timeSpentMinutes": 103,
+      "oldWeaknessReappeared": true,
+      "coachObservation": "Hypothesis was hit at partialScorePlanning: Cannot split 30/50/70 points or skips brute-force route."
+    },
+    {
+      "cycle": 3,
+      "day": 16,
+      "dateLabel": "D16",
+      "taskId": "math_partial_score_missed_18::select",
+      "problemRef": "U619606",
+      "weaknessId": "math_partial_score_missed_18",
+      "taskType": "SELECT",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": true,
+          "issue": null
+        },
+        "algorithmDesign": {
+          "passed": true,
+          "issue": null
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Can explain model, partial score route, and one avoidable risk before coding."
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        100
+      ],
+      "submissionCount": 1,
+      "timeSpentMinutes": 56,
+      "oldWeaknessReappeared": false,
+      "coachObservation": "Hypothesis was not hit strongly: Can write executable 30/50/70/100-point routes before coding."
+    },
+    {
+      "cycle": 3,
+      "day": 17,
+      "dateLabel": "D17",
+      "taskId": "math_partial_score_missed_18::mutate",
+      "problemRef": "mut_math_003",
+      "weaknessId": "math_partial_score_missed_18",
+      "taskType": "MUTATE",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": true,
+          "issue": null
+        },
+        "algorithmDesign": {
+          "passed": true,
+          "issue": null
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Can explain model, partial score route, and one avoidable risk before coding."
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        100
+      ],
+      "submissionCount": 1,
+      "timeSpentMinutes": 66,
+      "oldWeaknessReappeared": false,
+      "coachObservation": "Hypothesis was not hit strongly: Can write executable 30/50/70/100-point routes before coding."
+    },
+    {
+      "cycle": 3,
+      "day": 18,
+      "dateLabel": "D18",
+      "taskId": "math_partial_score_missed_18::generate",
+      "problemRef": "gen_math_003",
+      "weaknessId": "math_partial_score_missed_18",
+      "taskType": "GENERATE",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": true,
+          "issue": null
+        },
+        "algorithmDesign": {
+          "passed": true,
+          "issue": null
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Can explain model, partial score route, and one avoidable risk before coding."
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        100
+      ],
+      "submissionCount": 1,
+      "timeSpentMinutes": 76,
+      "oldWeaknessReappeared": false,
+      "coachObservation": "Hypothesis was not hit strongly: Can write executable 30/50/70/100-point routes before coding."
+    },
+    {
+      "cycle": 4,
+      "day": 19,
+      "dateLabel": "D19",
+      "taskId": "math_model_error_5::select",
+      "problemRef": "P3585",
+      "weaknessId": "math_model_error_5",
+      "taskType": "SELECT",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": true,
+          "issue": null
+        },
+        "algorithmDesign": {
+          "passed": true,
+          "issue": null
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Can explain model, partial score route, and one avoidable risk before coding."
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        100
+      ],
+      "submissionCount": 1,
+      "timeSpentMinutes": 53,
+      "oldWeaknessReappeared": false,
+      "coachObservation": "Hypothesis was not hit strongly: Can write executable 30/50/70/100-point routes before coding."
+    },
+    {
+      "cycle": 4,
+      "day": 20,
+      "dateLabel": "D20",
+      "taskId": "math_model_error_5::mutate",
+      "problemRef": "mut_math_002",
+      "weaknessId": "math_model_error_5",
+      "taskType": "MUTATE",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": true,
+          "issue": null
+        },
+        "algorithmDesign": {
+          "passed": true,
+          "issue": null
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Can explain model, partial score route, and one avoidable risk before coding."
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        100
+      ],
+      "submissionCount": 1,
+      "timeSpentMinutes": 63,
+      "oldWeaknessReappeared": false,
+      "coachObservation": "Hypothesis was not hit strongly: Can write executable 30/50/70/100-point routes before coding."
+    },
+    {
+      "cycle": 4,
+      "day": 21,
+      "dateLabel": "D21",
+      "taskId": "math_model_error_5::generate",
+      "problemRef": "gen_math_002",
+      "weaknessId": "math_model_error_5",
+      "taskType": "GENERATE",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": true,
+          "issue": null
+        },
+        "algorithmDesign": {
+          "passed": true,
+          "issue": null
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Can explain model, partial score route, and one avoidable risk before coding."
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        100
+      ],
+      "submissionCount": 1,
+      "timeSpentMinutes": 73,
+      "oldWeaknessReappeared": false,
+      "coachObservation": "Hypothesis was not hit strongly: Can write executable 30/50/70/100-point routes before coding."
+    },
+    {
+      "cycle": 4,
+      "day": 22,
+      "dateLabel": "D22",
+      "taskId": "partial_score_partial_score_missed_19::select",
+      "problemRef": "P10135",
+      "weaknessId": "partial_score_partial_score_missed_19",
+      "taskType": "SELECT",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": true,
+          "issue": null
+        },
+        "algorithmDesign": {
+          "passed": true,
+          "issue": null
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Can explain model, partial score route, and one avoidable risk before coding."
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        100
+      ],
+      "submissionCount": 1,
+      "timeSpentMinutes": 53,
+      "oldWeaknessReappeared": false,
+      "coachObservation": "Hypothesis was not hit strongly: Can write executable 30/50/70/100-point routes before coding."
+    },
+    {
+      "cycle": 4,
+      "day": 23,
+      "dateLabel": "D23",
+      "taskId": "partial_score_partial_score_missed_19::mutate",
+      "problemRef": "mut_partial_score_001",
+      "weaknessId": "partial_score_partial_score_missed_19",
+      "taskType": "MUTATE",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": true,
+          "issue": null
+        },
+        "algorithmDesign": {
+          "passed": true,
+          "issue": null
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Can explain model, partial score route, and one avoidable risk before coding."
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        100
+      ],
+      "submissionCount": 1,
+      "timeSpentMinutes": 63,
+      "oldWeaknessReappeared": false,
+      "coachObservation": "Hypothesis was not hit strongly: Can write executable 30/50/70/100-point routes before coding."
+    },
+    {
+      "cycle": 4,
+      "day": 24,
+      "dateLabel": "D24",
+      "taskId": "partial_score_partial_score_missed_19::generate",
+      "problemRef": "gen_partial_score_001",
+      "weaknessId": "partial_score_partial_score_missed_19",
+      "taskType": "GENERATE",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": true,
+          "issue": null
+        },
+        "algorithmDesign": {
+          "passed": true,
+          "issue": null
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Can explain model, partial score route, and one avoidable risk before coding."
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        100
+      ],
+      "submissionCount": 1,
+      "timeSpentMinutes": 73,
+      "oldWeaknessReappeared": false,
+      "coachObservation": "Hypothesis was not hit strongly: Can write executable 30/50/70/100-point routes before coding."
+    },
+    {
+      "cycle": 5,
+      "day": 25,
+      "dateLabel": "D25",
+      "taskId": "interval_dp_state_error_4::select",
+      "problemRef": "P8699",
+      "weaknessId": "interval_dp_state_error_4",
+      "taskType": "SELECT",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": true,
+          "issue": null
+        },
+        "algorithmDesign": {
+          "passed": true,
+          "issue": null
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Can explain model, partial score route, and one avoidable risk before coding."
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        100
+      ],
+      "submissionCount": 1,
+      "timeSpentMinutes": 50,
+      "oldWeaknessReappeared": false,
+      "coachObservation": "Hypothesis was not hit strongly: Can write executable 30/50/70/100-point routes before coding."
+    },
+    {
+      "cycle": 5,
+      "day": 26,
+      "dateLabel": "D26",
+      "taskId": "interval_dp_state_error_4::mutate",
+      "problemRef": "mut_interval_dp_004",
+      "weaknessId": "interval_dp_state_error_4",
+      "taskType": "MUTATE",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": true,
+          "issue": null
+        },
+        "algorithmDesign": {
+          "passed": true,
+          "issue": null
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Can explain model, partial score route, and one avoidable risk before coding."
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        100
+      ],
+      "submissionCount": 1,
+      "timeSpentMinutes": 60,
+      "oldWeaknessReappeared": false,
+      "coachObservation": "Hypothesis was not hit strongly: Can write executable 30/50/70/100-point routes before coding."
+    },
+    {
+      "cycle": 5,
+      "day": 27,
+      "dateLabel": "D27",
+      "taskId": "interval_dp_state_error_4::generate",
+      "problemRef": "generate:interval_dp",
+      "weaknessId": "interval_dp_state_error_4",
+      "taskType": "GENERATE",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": true,
+          "issue": null
+        },
+        "algorithmDesign": {
+          "passed": true,
+          "issue": null
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Can explain model, partial score route, and one avoidable risk before coding."
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        100
+      ],
+      "submissionCount": 1,
+      "timeSpentMinutes": 70,
+      "oldWeaknessReappeared": false,
+      "coachObservation": "Hypothesis was not hit strongly: Can write executable 30/50/70/100-point routes before coding."
+    },
+    {
+      "cycle": 5,
+      "day": 28,
+      "dateLabel": "D28",
+      "taskId": "math_partial_score_missed_18::select",
+      "problemRef": "U619606",
+      "weaknessId": "math_partial_score_missed_18",
+      "taskType": "SELECT",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": true,
+          "issue": null
+        },
+        "algorithmDesign": {
+          "passed": true,
+          "issue": null
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Can explain model, partial score route, and one avoidable risk before coding."
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        100
+      ],
+      "submissionCount": 1,
+      "timeSpentMinutes": 50,
+      "oldWeaknessReappeared": false,
+      "coachObservation": "Hypothesis was not hit strongly: Can write executable 30/50/70/100-point routes before coding."
+    },
+    {
+      "cycle": 5,
+      "day": 29,
+      "dateLabel": "D29",
+      "taskId": "math_partial_score_missed_18::mutate",
+      "problemRef": "mut_math_003",
+      "weaknessId": "math_partial_score_missed_18",
+      "taskType": "MUTATE",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": true,
+          "issue": null
+        },
+        "algorithmDesign": {
+          "passed": true,
+          "issue": null
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Can explain model, partial score route, and one avoidable risk before coding."
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        100
+      ],
+      "submissionCount": 1,
+      "timeSpentMinutes": 60,
+      "oldWeaknessReappeared": false,
+      "coachObservation": "Hypothesis was not hit strongly: Can write executable 30/50/70/100-point routes before coding."
+    },
+    {
+      "cycle": 5,
+      "day": 30,
+      "dateLabel": "D30",
+      "taskId": "math_partial_score_missed_18::generate",
+      "problemRef": "gen_math_003",
+      "weaknessId": "math_partial_score_missed_18",
+      "taskType": "GENERATE",
+      "stages": {
+        "reading": {
+          "passed": true,
+          "issue": null
+        },
+        "modeling": {
+          "passed": true,
+          "issue": null
+        },
+        "partialScorePlanning": {
+          "passed": true,
+          "issue": null
+        },
+        "algorithmDesign": {
+          "passed": true,
+          "issue": null
+        },
+        "implementation": {
+          "passed": true,
+          "issue": null
+        },
+        "debugging": {
+          "passed": true,
+          "issue": null
+        },
+        "review": {
+          "passed": true,
+          "issue": "Can explain model, partial score route, and one avoidable risk before coding."
+        }
+      },
+      "result": "AC",
+      "scoreTrajectory": [
+        100
+      ],
+      "submissionCount": 1,
+      "timeSpentMinutes": 70,
+      "oldWeaknessReappeared": false,
+      "coachObservation": "Hypothesis was not hit strongly: Can write executable 30/50/70/100-point routes before coding."
+    }
+  ]
+}

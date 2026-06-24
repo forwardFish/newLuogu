@@ -1,8 +1,58 @@
 {
-  "generatedAt": "2026-06-24T02:59:44.983Z",
+  "generatedAt": "2026-06-24T15:07:03.556Z",
   "items": [
     {
-      "mutationId": "mut_math_001",
+      "mutationId": "mut_partial_score_001",
+      "baseWeaknessId": "partial_score_partial_score_missed_19",
+      "baseProblemPids": [
+        "P10135",
+        "P1273",
+        "T23806"
+      ],
+      "mutationGoal": "改变子任务数据范围，训练 30/50/70 分拆解。",
+      "targetAbility": "T3_PARTIAL_SCORE",
+      "module": "partial_score",
+      "difficulty": "提高",
+      "problemArchetype": {
+        "coreAlgorithm": "partial_score",
+        "stateShape": "module-specific",
+        "keyChallenge": "PARTIAL_SCORE_MISSED, IMPLEMENTATION_RISK, OVERFLOW_ERROR, INDEX_ERROR",
+        "mustTest": [
+          "small case",
+          "boundary case",
+          "stress case"
+        ]
+      },
+      "newProblemSpec": {
+        "title": "部分分 迁移诊断题 1",
+        "storyBrief": "从 P10135、P1273、T23806 抽象能力点，改写为新的 部分分 训练情境。",
+        "inputSpec": "第一行给出 n 和若干约束参数；随后给出 部分分 所需的序列、区间、图关系或查询数据。输入设计必须包含小数据、特殊性质和完整数据三档。",
+        "outputSpec": "输出一个可唯一判定的数值或方案摘要；不得要求学生提交开放式证明。",
+        "constraints": "30 分：n <= 12，可暴力枚举；60 分：满足特殊性质或较小状态空间；100 分：需要完整模型和复杂度优化。",
+        "requiredSubtasks": [
+          "30 分暴力",
+          "60 分特殊性质或基础模型",
+          "100 分完整做法"
+        ],
+        "coreAlgorithm": "partial_score",
+        "keyChallenge": "PARTIAL_SCORE_MISSED, IMPLEMENTATION_RISK, OVERFLOW_ERROR, INDEX_ERROR",
+        "mustTest": [
+          "small case",
+          "boundary case",
+          "stress case"
+        ],
+        "authoringChecklist": [
+          "题面语境必须重写，不复制洛谷原题表达。",
+          "核心能力点必须保留，但约束或输出目标至少改变一项。",
+          "正式使用前必须补齐样例、标准解、暴力、生成器和测试点。"
+        ]
+      },
+      "verifyMethod": "同类难题提交次数降至2次以内，且能清晰写出至少两个分数段的解法（如30分暴力和70分优化），代码中无溢出、越界等风险标记。",
+      "status": "LLM_SPEC_READY_FOR_REVIEW",
+      "generationSource": "LLM"
+    },
+    {
+      "mutationId": "mut_math_002",
       "baseWeaknessId": "math_model_error_5",
       "baseProblemPids": [
         "P3585",
@@ -12,11 +62,11 @@
       "mutationGoal": "改变子任务数据范围，训练 30/50/70 分拆解。",
       "targetAbility": "T3_PARTIAL_SCORE",
       "module": "math",
-      "difficulty": "提高+/省选-",
+      "difficulty": "提高",
       "problemArchetype": {
         "coreAlgorithm": "math",
         "stateShape": "module-specific",
-        "keyChallenge": "MODEL_ERROR, PARTIAL_SCORE_MISSED",
+        "keyChallenge": "MODEL_ERROR, STATE_ERROR, INIT_ERROR, BOUNDARY_ERROR, PARTIAL_SCORE_MISSED",
         "mustTest": [
           "small case",
           "boundary case",
@@ -24,36 +74,56 @@
         ]
       },
       "newProblemSpec": {
-        "title": "数学 迁移诊断题 1",
-        "storyBrief": "全新语境，保留核心能力点，不复制原题题面。",
-        "inputSpec": "根据具体变式补充输入格式。",
-        "outputSpec": "根据具体变式补充输出格式。",
-        "constraints": "应包含小数据、特殊性质和完整数据范围。",
+        "title": "项目调度与收益最大化",
+        "storyBrief": "一位项目经理接手了一个由若干子任务构成的软件项目。每个任务有完成所需的耗时和成功后能带来的收益。任务之间存在依赖关系，必须先完成所有前置任务才能开始后续任务。项目经理希望在给定的总时间限制内，按依赖顺序选择并完成一部分任务，使得总收益最大化。请计算他最多能获得的收益。",
+        "inputSpec": "第一行三个整数 n, m, T，分别表示任务数量、依赖关系数量、总时间限制（单位：小时）。\n接下来 n 行，每行两个整数 ti, vi，表示任务 i 的耗时（小时）和收益（万元）。\n接下来 m 行，每行两个整数 u, v，表示任务 u 必须在任务 v 开始前完成（即 u 是 v 的前置任务）。\n任务编号从 1 到 n。",
+        "outputSpec": "输出一个整数，表示在总时间不超过 T 的情况下能获得的最大总收益。如果没有任务可完成，输出 0。",
+        "constraints": "- 对于 30% 的数据，1 ≤ n ≤ 15，1 ≤ m ≤ 50，1 ≤ T ≤ 100，1 ≤ ti, vi ≤ 100。\n- 对于 60% 的数据，依赖关系形成若干条互不相交的链（每个任务最多一个后继）或一棵有根树（每个任务只有一个前驱，且除根外无额外限制），1 ≤ n ≤ 1000，1 ≤ T ≤ 10000。\n- 对于 100% 的数据，1 ≤ n ≤ 1000，1 ≤ m ≤ 10000，1 ≤ T ≤ 10000，1 ≤ ti, vi ≤ 100。保证依赖关系无环，且不包含自环。",
         "requiredSubtasks": [
-          "30 分暴力",
-          "60 分基础模型",
-          "100 分完整做法"
+          "30 分暴力搜索或状态压缩 DP，枚举所有合法任务子集并验证耗时与依赖",
+          "60 分针对链或树结构的线性 DP（如链上的区间 DP 或树上的背包 DP）",
+          "100 分完整解法：先拓扑排序，再按拓扑序 DP，用 dp[j] 表示总耗时 j 时的最大收益，顺序遍历任务并更新"
+        ],
+        "coreAlgorithm": "对原图进行拓扑排序，得到任务的线性顺序满足所有依赖。定义 dp[c] 表示总时间 c 能获得的最大收益，初始为 0。按拓扑序处理每个任务，对于任务 i，考虑将其插入到时间计划中：dp[c + ti] = max(dp[c + ti], dp[c] + vi)，但需确保前置任务已全部完成。通过拓扑序保证处理到 i 时，其所有前置任务已经纳入考虑，因此可以直接做类似 0/1 背包的转移。最终答案为 max_{0≤c≤T} dp[c]。",
+        "keyChallenge": "在 DAG 依赖下结合总时间限制进行收益最大化，需要正确处理拓扑序与背包转移的顺序，避免遗漏依赖约束。同时需要合理设计 dp 维度与转移方向，防止使用未更新的状态。",
+        "mustTest": [
+          "n=1，无依赖，T 恰好等于该任务耗时的边界情况",
+          "多个独立任务，无依赖，验证退化到普通 0/1 背包",
+          "链状依赖且所有任务耗时之和刚好等于 T",
+          "存在任务耗时超出 T，但后续有高收益任务无法选择的情况",
+          "复杂 DAG 且 T 足够大，可以完成所有任务",
+          "T=0 或所有任务耗时均大于 T，应输出 0",
+          "大 n、大 m 随机 DAG，测试时间效率"
+        ],
+        "authoringChecklist": [
+          "输入确保依赖关系无环，且边的格式正确（u!=v, 无重复边）",
+          "测试数据覆盖每个子任务的数据范围与结构特征",
+          "标程正确性经过对拍验证（如与暴力搜索在小数据下对比）",
+          "样例包含至少两个不同场景，并配有解释",
+          "确认 DP 数组大小与类型能满足最大值，防止溢出",
+          "时空限制合理（例如 1s/256MB），保证正解能过而朴素暴力不能过满分"
         ]
       },
-      "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。",
-      "status": "SPEC_DRAFT_NEEDS_AUTHORING"
+      "verifyMethod": "同类数学建模题提交次数≤2次，能清晰写出状态定义、转移方程、初始化及边界，并实现至少两个部分分解法。",
+      "status": "LLM_SPEC_READY_FOR_REVIEW",
+      "generationSource": "LLM"
     },
     {
-      "mutationId": "mut_partial_score_002",
-      "baseWeaknessId": "partial_score_partial_score_missed_16",
+      "mutationId": "mut_math_003",
+      "baseWeaknessId": "math_partial_score_missed_18",
       "baseProblemPids": [
-        "P10135",
-        "P1273",
-        "T23806"
+        "U619606",
+        "P4085",
+        "P6033"
       ],
       "mutationGoal": "改变子任务数据范围，训练 30/50/70 分拆解。",
       "targetAbility": "T3_PARTIAL_SCORE",
-      "module": "partial_score",
-      "difficulty": "提高+/省选-",
+      "module": "math",
+      "difficulty": "提高",
       "problemArchetype": {
-        "coreAlgorithm": "partial_score",
+        "coreAlgorithm": "math",
         "stateShape": "module-specific",
-        "keyChallenge": "PARTIAL_SCORE_MISSED",
+        "keyChallenge": "PARTIAL_SCORE_MISSED, OVERFLOW_ERROR, IMPLEMENTATION_RISK",
         "mustTest": [
           "small case",
           "boundary case",
@@ -61,22 +131,35 @@
         ]
       },
       "newProblemSpec": {
-        "title": "部分分 迁移诊断题 2",
-        "storyBrief": "全新语境，保留核心能力点，不复制原题题面。",
-        "inputSpec": "根据具体变式补充输入格式。",
-        "outputSpec": "根据具体变式补充输出格式。",
-        "constraints": "应包含小数据、特殊性质和完整数据范围。",
+        "title": "数学 迁移诊断题 3",
+        "storyBrief": "从 U619606、P4085、P6033 抽象能力点，改写为新的 数学 训练情境。",
+        "inputSpec": "第一行给出 n 和若干约束参数；随后给出 数学 所需的序列、区间、图关系或查询数据。输入设计必须包含小数据、特殊性质和完整数据三档。",
+        "outputSpec": "输出一个可唯一判定的数值或方案摘要；不得要求学生提交开放式证明。",
+        "constraints": "30 分：n <= 12，可暴力枚举；60 分：满足特殊性质或较小状态空间；100 分：需要完整模型和复杂度优化。",
         "requiredSubtasks": [
           "30 分暴力",
-          "60 分基础模型",
+          "60 分特殊性质或基础模型",
           "100 分完整做法"
+        ],
+        "coreAlgorithm": "math",
+        "keyChallenge": "PARTIAL_SCORE_MISSED, OVERFLOW_ERROR, IMPLEMENTATION_RISK",
+        "mustTest": [
+          "small case",
+          "boundary case",
+          "stress case"
+        ],
+        "authoringChecklist": [
+          "题面语境必须重写，不复制洛谷原题表达。",
+          "核心能力点必须保留，但约束或输出目标至少改变一项。",
+          "正式使用前必须补齐样例、标准解、暴力、生成器和测试点。"
         ]
       },
-      "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。",
-      "status": "SPEC_DRAFT_NEEDS_AUTHORING"
+      "verifyMethod": "同类数学难题提交次数降至2次以内，且能清晰写出至少两个子任务的解法（如30分暴力、70分优化），代码中无溢出或递归栈风险，最终得分不低于70分。",
+      "status": "LLM_SPEC_READY_FOR_REVIEW",
+      "generationSource": "LLM"
     },
     {
-      "mutationId": "mut_interval_dp_003",
+      "mutationId": "mut_interval_dp_004",
       "baseWeaknessId": "interval_dp_state_error_4",
       "baseProblemPids": [
         "P8699",
@@ -99,36 +182,50 @@
         ]
       },
       "newProblemSpec": {
-        "title": "区间 DP 迁移诊断题 3",
-        "storyBrief": "全新语境，保留核心能力点，不复制原题题面。",
-        "inputSpec": "根据具体变式补充输入格式。",
-        "outputSpec": "根据具体变式补充输出格式。",
-        "constraints": "应包含小数据、特殊性质和完整数据范围。",
+        "title": "区间 DP 迁移诊断题 4",
+        "storyBrief": "从 P8699、U467266、U463446 抽象能力点，改写为新的 区间 DP 训练情境。",
+        "inputSpec": "第一行给出 n 和若干约束参数；随后给出 区间 DP 所需的序列、区间、图关系或查询数据。输入设计必须包含小数据、特殊性质和完整数据三档。",
+        "outputSpec": "输出一个可唯一判定的数值或方案摘要；不得要求学生提交开放式证明。",
+        "constraints": "30 分：n <= 12，可暴力枚举；60 分：满足特殊性质或较小状态空间；100 分：需要完整模型和复杂度优化。",
         "requiredSubtasks": [
           "30 分暴力",
-          "60 分基础模型",
+          "60 分特殊性质或基础模型",
           "100 分完整做法"
+        ],
+        "coreAlgorithm": "interval_dp",
+        "keyChallenge": "初始化与区间长度枚举",
+        "mustTest": [
+          "len=1",
+          "len=2",
+          "full interval",
+          "empty transition"
+        ],
+        "authoringChecklist": [
+          "题面语境必须重写，不复制洛谷原题表达。",
+          "核心能力点必须保留，但约束或输出目标至少改变一项。",
+          "正式使用前必须补齐样例、标准解、暴力、生成器和测试点。"
         ]
       },
-      "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。",
-      "status": "SPEC_DRAFT_NEEDS_AUTHORING"
+      "verifyMethod": "同类区间 DP 新题提交次数 ≤ 2 次，且能清晰写出状态定义、初始化逻辑和 30-50-70 分的部分分方案。",
+      "status": "LLM_SPEC_READY_FOR_REVIEW",
+      "generationSource": "LLM"
     },
     {
-      "mutationId": "mut_dp_004",
-      "baseWeaknessId": "dp_state_error_13",
+      "mutationId": "mut_dp_005",
+      "baseWeaknessId": "dp_state_error_15",
       "baseProblemPids": [
         "AT_dp_a",
         "CF1051D",
         "P12678"
       ],
-      "mutationGoal": "改变子任务数据范围，训练 30/50/70 分拆解。",
-      "targetAbility": "T3_PARTIAL_SCORE",
+      "mutationGoal": "改变约束和输出目标，验证同构迁移能力。",
+      "targetAbility": "T2_MODELING",
       "module": "dp",
       "difficulty": "普及+/提高-",
       "problemArchetype": {
         "coreAlgorithm": "dp",
         "stateShape": "module-specific",
-        "keyChallenge": "STATE_ERROR, INIT_ERROR, BOUNDARY_ERROR, PARTIAL_SCORE_MISSED",
+        "keyChallenge": "STATE_ERROR, INIT_ERROR, BOUNDARY_ERROR, MODEL_ERROR, OVERFLOW_ERROR, INDEX_ERROR",
         "mustTest": [
           "small case",
           "boundary case",
@@ -136,96 +233,42 @@
         ]
       },
       "newProblemSpec": {
-        "title": "DP 迁移诊断题 4",
-        "storyBrief": "全新语境，保留核心能力点，不复制原题题面。",
-        "inputSpec": "根据具体变式补充输入格式。",
-        "outputSpec": "根据具体变式补充输出格式。",
-        "constraints": "应包含小数据、特殊性质和完整数据范围。",
+        "title": "环形宝藏",
+        "storyBrief": "在一个环形岛屿上，有n个宝箱排成一圈，每个宝箱有一定数量的金币。探险家需要打开恰好k个宝箱，但由于宝箱之间有陷阱，不能打开相邻的两个宝箱。求能获得的最大金币总数，若无法选出则输出-1。本题为DP状态设计、初始化与边界处理的专项训练，与经典数字三角形等题型不同，需处理环形依赖和正好k个的限制。",
+        "inputSpec": "第一行两个整数 n, k，表示宝箱数量和需要打开的宝箱数。第二行 n 个整数 a_1, a_2, ..., a_n，依次表示顺时针方向每个宝箱的金币数。",
+        "outputSpec": "一个整数，表示能获得的最大金币总数。如果无法选出 k 个不相邻的宝箱，输出 -1。",
+        "constraints": "对于所有数据：1 ≤ n ≤ 200，0 ≤ k ≤ n，|a_i| ≤ 1000。\n- 子任务1（30%）：n ≤ 20，可以暴力枚举。\n- 子任务2（60%）：n ≤ 100，且保证存在一个最优方案不选取第1个宝箱（即破环为链后可直接线性DP）。\n- 子任务3（100%）：n ≤ 200，无特殊限制，需正确处理环形不相邻问题。\n注意：当k > floor(n/2) 时，无法选出k个不相邻宝箱，应输出-1。",
         "requiredSubtasks": [
-          "30 分暴力",
-          "60 分基础模型",
-          "100 分完整做法"
-        ]
-      },
-      "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。",
-      "status": "SPEC_DRAFT_NEEDS_AUTHORING"
-    },
-    {
-      "mutationId": "mut_graph_005",
-      "baseWeaknessId": "graph_model_error_7",
-      "baseProblemPids": [
-        "U465842",
-        "P2899",
-        "P15267"
-      ],
-      "mutationGoal": "改变子任务数据范围，训练 30/50/70 分拆解。",
-      "targetAbility": "T3_PARTIAL_SCORE",
-      "module": "graph",
-      "difficulty": "普及+/提高-",
-      "problemArchetype": {
-        "coreAlgorithm": "graph",
-        "stateShape": "module-specific",
-        "keyChallenge": "MODEL_ERROR, PARTIAL_SCORE_MISSED",
+          "30分暴力：n ≤ 20，可以枚举所有大小为k的子集并检查是否相邻，或使用简单的搜索/bitmask。",
+          "60分特殊性质：n ≤ 100，保证存在某个最优解中不选第1个宝箱。此时可以直接将环断开为链（去掉第1个宝箱），对剩下的线性序列进行二维DP（dp[i][j][0/1]表示前i个选j个且第i个选/未选的最大值），无需处理环形边界衔接。",
+          "100分完整算法：n ≤ 200，需要分别考虑两种情况：(1) 强制不选第1个宝箱，对第2到第n个宝箱做线性DP；(2) 强制选第1个宝箱，则第2个和第n个不能选，对第3到第n-1个宝箱做线性DP，最后加上a_1。取两种情况的最大值。"
+        ],
+        "coreAlgorithm": "动态规划。将环形问题拆分为两类线性DP：\n- 情况1（不选1号）：在区间[2, n]上做线性不相邻选择，DP为 dp[i][j][0/1] 表示前i个（相对顺序）选j个且第i个选或未选的最大值。\n- 情况2（选1号）：在区间[3, n-1]上做线性DP，最后加上a_1。\n最终答案取两种情况的较大值（若都没解则-1）。线性DP转移：\n  dp[i][j][0] = max(dp[i-1][j][0], dp[i-1][j][1])\n  dp[i][j][1] = dp[i-1][j-1][0] + a_i  （需存在前驱状态）\n初始化需根据区间起始元素处理好i=0（空区间）的状态。",
+        "keyChallenge": "对环形不相邻选择的状态建模，正确设置状态维度（前i个、已选j个、最后选/未选），处理环形导致的首尾互斥，并精细化初始化边界值（尤其区间长度不满足j时返回-INF）。",
         "mustTest": [
-          "small case",
-          "boundary case",
-          "stress case"
+          "n=1, k=0（应输出0）",
+          "n=1, k=1（输出a_1）",
+          "n=2, k=1（可能选一个，最多不相邻时两边不能同时选，应输出max(a_1, a_2)）",
+          "k > n/2 的情况，如 n=4, k=3（输出-1）",
+          "全部宝箱数值为负，需要选择尽量少或不选（k=0时输出0，k>0时输出负数中的最大值，但注意不能选相邻）",
+          "有正有负的混合数据，检验转移是否允许跳过负值",
+          "大n（如n=200, k=50）的压力测试，验证时间复杂度和数组索引正确"
+        ],
+        "authoringChecklist": [
+          "确认DP状态三要素（含义：「前i个宝箱中选j个，且第i个宝箱选/不选时的最大金币」，维度：i∈[0,n], j∈[0,k], 第三维0/1，存储结构：三维数组或滚动数组）。",
+          "核对初始化：情况1时，dp[0][0][0]=0，其他dp[0][0][1]=-INF等；情况2类似。务必用-INF表示不可行状态。",
+          "检查转移方程的正确性，注意j=0时的处理，以及溢出问题（使用足够小的负数如-1e9）。",
+          "处理边界：当区间长度小于所需选取数时，应返回无效值。",
+          "验证样例：包括自定义小数据与暴力结果比对。",
+          "确保代码在n=200时能在1s内运行（时间复杂度O(n*k)）。"
         ]
       },
-      "newProblemSpec": {
-        "title": "图论 迁移诊断题 5",
-        "storyBrief": "全新语境，保留核心能力点，不复制原题题面。",
-        "inputSpec": "根据具体变式补充输入格式。",
-        "outputSpec": "根据具体变式补充输出格式。",
-        "constraints": "应包含小数据、特殊性质和完整数据范围。",
-        "requiredSubtasks": [
-          "30 分暴力",
-          "60 分基础模型",
-          "100 分完整做法"
-        ]
-      },
-      "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。",
-      "status": "SPEC_DRAFT_NEEDS_AUTHORING"
+      "verifyMethod": "同类DP题（如AT_dp_b、CF1051D变体）提交次数≤2次，且首次提交至少获得30分部分分，能清晰写出状态定义、初始化、转移方程和边界处理。",
+      "status": "LLM_SPEC_READY_FOR_REVIEW",
+      "generationSource": "LLM"
     },
     {
-      "mutationId": "mut_binary_search_006",
-      "baseWeaknessId": "binary_search_model_error_18",
-      "baseProblemPids": [
-        "P11849",
-        "T717044",
-        "P1439"
-      ],
-      "mutationGoal": "改变判定函数含义，验证 check 单调性和边界。",
-      "targetAbility": "T3_PARTIAL_SCORE",
-      "module": "binary_search",
-      "difficulty": "普及+/提高-",
-      "problemArchetype": {
-        "coreAlgorithm": "binary_search_answer",
-        "stateShape": "check(x)",
-        "keyChallenge": "单调性与边界收缩",
-        "mustTest": [
-          "min answer",
-          "max answer",
-          "boundary false/true"
-        ]
-      },
-      "newProblemSpec": {
-        "title": "二分答案 迁移诊断题 6",
-        "storyBrief": "全新语境，保留核心能力点，不复制原题题面。",
-        "inputSpec": "根据具体变式补充输入格式。",
-        "outputSpec": "根据具体变式补充输出格式。",
-        "constraints": "应包含小数据、特殊性质和完整数据范围。",
-        "requiredSubtasks": [
-          "30 分暴力",
-          "60 分基础模型",
-          "100 分完整做法"
-        ]
-      },
-      "verifyMethod": "同类题提交次数 <= 2，能独立证明 check 单调性并说明边界收缩。",
-      "status": "SPEC_DRAFT_NEEDS_AUTHORING"
-    },
-    {
-      "mutationId": "mut_greedy_007",
+      "mutationId": "mut_greedy_006",
       "baseWeaknessId": "greedy_partial_score_missed_1",
       "baseProblemPids": [
         "U619605"
@@ -237,7 +280,7 @@
       "problemArchetype": {
         "coreAlgorithm": "greedy",
         "stateShape": "module-specific",
-        "keyChallenge": "PARTIAL_SCORE_MISSED",
+        "keyChallenge": "PARTIAL_SCORE_MISSED, IMPLEMENTATION_RISK, OVERFLOW_ERROR",
         "mustTest": [
           "small case",
           "boundary case",
@@ -245,36 +288,54 @@
         ]
       },
       "newProblemSpec": {
-        "title": "greedy 迁移诊断题 7",
-        "storyBrief": "全新语境，保留核心能力点，不复制原题题面。",
-        "inputSpec": "根据具体变式补充输入格式。",
-        "outputSpec": "根据具体变式补充输出格式。",
-        "constraints": "应包含小数据、特殊性质和完整数据范围。",
+        "title": "硬币找零的贪心策略研究",
+        "storyBrief": "在一个遥远的国度，货币面额系统设计奇特。作为金融顾问，你需要评估该国的硬币系统是否能够安全地使用贪心找零策略。给定硬币面额列表和支付总额，请判断贪心算法是否总能给出最少硬币数，并输出相应的硬币数量。注意，不要直接复制原题背景，故事全新。",
+        "inputSpec": "第一行两个整数n和X，表示硬币种类数和支付总额。第二行n个整数，表示每种硬币的面额，保证所有面额互不相同且不超过100000。",
+        "outputSpec": "如果硬币系统满足贪心最优的充分条件（即面额从小到大排序后，每个面额能被前一个面额整除），则第一行输出\"Greedy works!\"，第二行输出贪心算法得到的最少硬币数；否则第一行输出\"Greedy fails!\"，第二行输出动态规划求得的最少硬币数。",
+        "constraints": "对于100%数据，1 ≤ n ≤ 100, 1 ≤ X ≤ 100000, 1 ≤ 面额 ≤ 100000。对于30%数据，n ≤ 3, X ≤ 1000。对于60%数据，保证硬币系统满足贪心最优条件（排序后每个面额能被前一个整除）。",
         "requiredSubtasks": [
-          "30 分暴力",
-          "60 分基础模型",
-          "100 分完整做法"
+          "30分暴力枚举：n≤3, X≤1000，可直接枚举所有可能的硬币组合找最少硬币数，同时实现贪心算法，然后比较两者是否一致，输出相应结果。",
+          "60分特殊性质：保证硬币系统满足贪心最优条件，即排序后后一个面额是前一个的整数倍，因此可直接用贪心算法求解最少硬币数，并输出\"Greedy works!\"。",
+          "100分完整算法：一般情况，使用完全背包动态规划求解最少硬币数。同时实现贪心算法，根据条件判断硬币系统是否满足贪心最优（排序后检查整除性），若满足则输出贪心结果，否则输出DP结果。"
+        ],
+        "coreAlgorithm": "完全背包动态规划求最少硬币数，判断整除性质。",
+        "keyChallenge": "理解贪心算法在硬币找零问题中的适用条件，能够设计判断条件，并区分不同情况正确输出。主要考察动态规划和贪心适用性判断，以及部分分场景的拆解能力。",
+        "mustTest": [
+          "测试n=1的边界情况",
+          "测试面额不满足整除条件的情况，验证输出DP结果",
+          "测试面额满足整除条件的情况，验证贪心",
+          "测试大X和n=100，保证DP效率",
+          "测试零钱组合存在性和无解（题目已保证有解）"
+        ],
+        "authoringChecklist": [
+          "确保输入格式与约束一致",
+          "输出必须严格符合两行文字",
+          "检查30分数据是否确实可以暴力枚举通过",
+          "检查60分数据是否仅包含整除条件的硬币系统",
+          "测试DP大数组是否越界",
+          "确保贪心判断逻辑正确，不只是简单比较DP和贪心结果，而是预处理整除条件。"
         ]
       },
-      "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。",
-      "status": "SPEC_DRAFT_NEEDS_AUTHORING"
+      "verifyMethod": "同类难题提交次数降至2次以内，且能清晰写出至少两个不同得分档次的解法（如30分暴力、70分优化），代码中无OVERFLOW或RECURSION风险标记。",
+      "status": "LLM_SPEC_READY_FOR_REVIEW",
+      "generationSource": "LLM"
     },
     {
-      "mutationId": "mut_shortest_path_008",
-      "baseWeaknessId": "shortest_path_state_error_3",
+      "mutationId": "mut_partial_score_007",
+      "baseWeaknessId": "partial_score_model_error_20",
       "baseProblemPids": [
-        "P2452",
-        "P1713",
-        "P3685"
+        "P15018",
+        "P1102",
+        "P7410"
       ],
       "mutationGoal": "改变子任务数据范围，训练 30/50/70 分拆解。",
       "targetAbility": "T3_PARTIAL_SCORE",
-      "module": "shortest_path",
+      "module": "partial_score",
       "difficulty": "普及+/提高-",
       "problemArchetype": {
-        "coreAlgorithm": "shortest_path",
+        "coreAlgorithm": "partial_score",
         "stateShape": "module-specific",
-        "keyChallenge": "STATE_ERROR, INIT_ERROR, BOUNDARY_ERROR, PARTIAL_SCORE_MISSED",
+        "keyChallenge": "MODEL_ERROR, STATE_ERROR, INIT_ERROR, BOUNDARY_ERROR, PARTIAL_SCORE_MISSED",
         "mustTest": [
           "small case",
           "boundary case",
@@ -282,19 +343,82 @@
         ]
       },
       "newProblemSpec": {
-        "title": "shortest_path 迁移诊断题 8",
-        "storyBrief": "全新语境，保留核心能力点，不复制原题题面。",
-        "inputSpec": "根据具体变式补充输入格式。",
-        "outputSpec": "根据具体变式补充输出格式。",
-        "constraints": "应包含小数据、特殊性质和完整数据范围。",
+        "title": "部分分 迁移诊断题 7",
+        "storyBrief": "从 P15018、P1102、P7410 抽象能力点，改写为新的 部分分 训练情境。",
+        "inputSpec": "第一行给出 n 和若干约束参数；随后给出 部分分 所需的序列、区间、图关系或查询数据。输入设计必须包含小数据、特殊性质和完整数据三档。",
+        "outputSpec": "输出一个可唯一判定的数值或方案摘要；不得要求学生提交开放式证明。",
+        "constraints": "30 分：n <= 12，可暴力枚举；60 分：满足特殊性质或较小状态空间；100 分：需要完整模型和复杂度优化。",
         "requiredSubtasks": [
           "30 分暴力",
-          "60 分基础模型",
+          "60 分特殊性质或基础模型",
           "100 分完整做法"
+        ],
+        "coreAlgorithm": "partial_score",
+        "keyChallenge": "MODEL_ERROR, STATE_ERROR, INIT_ERROR, BOUNDARY_ERROR, PARTIAL_SCORE_MISSED",
+        "mustTest": [
+          "small case",
+          "boundary case",
+          "stress case"
+        ],
+        "authoringChecklist": [
+          "题面语境必须重写，不复制洛谷原题表达。",
+          "核心能力点必须保留，但约束或输出目标至少改变一项。",
+          "正式使用前必须补齐样例、标准解、暴力、生成器和测试点。"
         ]
       },
-      "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。",
-      "status": "SPEC_DRAFT_NEEDS_AUTHORING"
+      "verifyMethod": "同类难题提交次数降至2次以内，首次提交至少获得50%分数，且能清晰写出状态定义、边界处理及30-50-70分方案。",
+      "status": "LLM_SPEC_READY_FOR_REVIEW",
+      "generationSource": "LLM"
+    },
+    {
+      "mutationId": "mut_graph_008",
+      "baseWeaknessId": "graph_model_error_37",
+      "baseProblemPids": [
+        "P16316",
+        "P14740",
+        "CF1729D"
+      ],
+      "mutationGoal": "改变约束和输出目标，验证同构迁移能力。",
+      "targetAbility": "T2_MODELING",
+      "module": "graph",
+      "difficulty": "普及+/提高-",
+      "problemArchetype": {
+        "coreAlgorithm": "graph",
+        "stateShape": "module-specific",
+        "keyChallenge": "MODEL_ERROR",
+        "mustTest": [
+          "small case",
+          "boundary case",
+          "stress case"
+        ]
+      },
+      "newProblemSpec": {
+        "title": "图论 迁移诊断题 8",
+        "storyBrief": "从 P16316、P14740、CF1729D 抽象能力点，改写为新的 图论 训练情境。",
+        "inputSpec": "第一行给出 n 和若干约束参数；随后给出 图论 所需的序列、区间、图关系或查询数据。输入设计必须包含小数据、特殊性质和完整数据三档。",
+        "outputSpec": "输出一个可唯一判定的数值或方案摘要；不得要求学生提交开放式证明。",
+        "constraints": "30 分：n <= 12，可暴力枚举；60 分：满足特殊性质或较小状态空间；100 分：需要完整模型和复杂度优化。",
+        "requiredSubtasks": [
+          "30 分暴力",
+          "60 分特殊性质或基础模型",
+          "100 分完整做法"
+        ],
+        "coreAlgorithm": "graph",
+        "keyChallenge": "MODEL_ERROR",
+        "mustTest": [
+          "small case",
+          "boundary case",
+          "stress case"
+        ],
+        "authoringChecklist": [
+          "题面语境必须重写，不复制洛谷原题表达。",
+          "核心能力点必须保留，但约束或输出目标至少改变一项。",
+          "正式使用前必须补齐样例、标准解、暴力、生成器和测试点。"
+        ]
+      },
+      "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。",
+      "status": "LLM_SPEC_READY_FOR_REVIEW",
+      "generationSource": "LLM"
     }
   ]
 }

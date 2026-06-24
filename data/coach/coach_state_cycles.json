@@ -1,0 +1,458 @@
+{
+  "generatedAt": "2026-06-24T16:14:00.813Z",
+  "items": [
+    {
+      "cycle": 1,
+      "dayRange": "Day 1-6",
+      "hypothesisUpdates": [
+        {
+          "weaknessId": "partial_score_partial_score_missed_19",
+          "beforeConfidence": 0.92,
+          "afterConfidence": 0.96,
+          "beforePriority": 100,
+          "afterPriority": 100,
+          "testedProblems": 2,
+          "hitCount": 2,
+          "missCount": 0,
+          "hitRate": 1,
+          "decision": "诊断命中：保留高优先级，但下一轮改用迁移题验证是否改善。"
+        },
+        {
+          "weaknessId": "math_model_error_5",
+          "beforeConfidence": 0.92,
+          "afterConfidence": 0.96,
+          "beforePriority": 95.16,
+          "afterPriority": 95.16,
+          "testedProblems": 2,
+          "hitCount": 2,
+          "missCount": 0,
+          "hitRate": 1,
+          "decision": "诊断命中：保留高优先级，但下一轮改用迁移题验证是否改善。"
+        },
+        {
+          "weaknessId": "math_partial_score_missed_18",
+          "beforeConfidence": 0.92,
+          "afterConfidence": 0.96,
+          "beforePriority": 92.72,
+          "afterPriority": 92.72,
+          "testedProblems": 2,
+          "hitCount": 2,
+          "missCount": 0,
+          "hitRate": 1,
+          "decision": "诊断命中：保留高优先级，但下一轮改用迁移题验证是否改善。"
+        },
+        {
+          "weaknessId": "interval_dp_state_error_4",
+          "beforeConfidence": 0.91,
+          "afterConfidence": 0.91,
+          "beforePriority": 87.03,
+          "afterPriority": 87.03,
+          "testedProblems": 0,
+          "hitCount": 0,
+          "missCount": 0,
+          "hitRate": 0,
+          "decision": "本轮未测试：不修正置信度，也不降权；等待后续任务验证。"
+        }
+      ],
+      "nextDecision": {
+        "focusWeaknessIds": [
+          "partial_score_partial_score_missed_19",
+          "math_model_error_5",
+          "math_partial_score_missed_18",
+          "interval_dp_state_error_4",
+          "dp_state_error_15"
+        ],
+        "taskMix": {
+          "select": 0.45,
+          "mutate": 0.35,
+          "generate": 0.1,
+          "mockExam": 0.1
+        },
+        "reason": "First validation cycle confirmed 3 hypotheses. Next cycle should test transfer, not repeat familiar evidence problems."
+      },
+      "systemRevision": {
+        "revisionId": "REV-1",
+        "title": "把 weakness 从报告结论改成可验证假设",
+        "trigger": "第一轮训练显示多个 top weaknesses 在 SELECT/MUTATE 中复发，说明需要显式记录 hit/miss。",
+        "change": [
+          "新增 `weakness_hypotheses.json`，保存 confidence、hitCount、missCount、lastValidatedAt。",
+          "每个 weakness 自动绑定 SELECT/MUTATE/GENERATE 三类验证任务。",
+          "训练任务的目的从刷题改为验证某个训练阶段是否复发。"
+        ],
+        "expectedEffect": "系统能判断诊断是否命中，而不是只输出静态报告。"
+      }
+    },
+    {
+      "cycle": 2,
+      "dayRange": "Day 7-12",
+      "hypothesisUpdates": [
+        {
+          "weaknessId": "partial_score_partial_score_missed_19",
+          "beforeConfidence": 0.96,
+          "afterConfidence": 0.96,
+          "beforePriority": 100,
+          "afterPriority": 95,
+          "testedProblems": 3,
+          "hitCount": 3,
+          "missCount": 0,
+          "hitRate": 1,
+          "decision": "诊断命中：保留高优先级，但下一轮改用迁移题验证是否改善。"
+        },
+        {
+          "weaknessId": "math_model_error_5",
+          "beforeConfidence": 0.96,
+          "afterConfidence": 0.96,
+          "beforePriority": 95.16,
+          "afterPriority": 90.16,
+          "testedProblems": 3,
+          "hitCount": 3,
+          "missCount": 0,
+          "hitRate": 1,
+          "decision": "诊断命中：保留高优先级，但下一轮改用迁移题验证是否改善。"
+        },
+        {
+          "weaknessId": "math_partial_score_missed_18",
+          "beforeConfidence": 0.96,
+          "afterConfidence": 0.96,
+          "beforePriority": 92.72,
+          "afterPriority": 92.72,
+          "testedProblems": 0,
+          "hitCount": 0,
+          "missCount": 0,
+          "hitRate": 0,
+          "decision": "本轮未测试：不修正置信度，也不降权；等待后续任务验证。"
+        },
+        {
+          "weaknessId": "interval_dp_state_error_4",
+          "beforeConfidence": 0.91,
+          "afterConfidence": 0.91,
+          "beforePriority": 87.03,
+          "afterPriority": 87.03,
+          "testedProblems": 0,
+          "hitCount": 0,
+          "missCount": 0,
+          "hitRate": 0,
+          "decision": "本轮未测试：不修正置信度，也不降权；等待后续任务验证。"
+        },
+        {
+          "weaknessId": "dp_state_error_15",
+          "beforeConfidence": 0.86,
+          "afterConfidence": 0.86,
+          "beforePriority": 76.95,
+          "afterPriority": 76.95,
+          "testedProblems": 0,
+          "hitCount": 0,
+          "missCount": 0,
+          "hitRate": 0,
+          "decision": "本轮未测试：不修正置信度，也不降权；等待后续任务验证。"
+        }
+      ],
+      "nextDecision": {
+        "focusWeaknessIds": [
+          "partial_score_partial_score_missed_19",
+          "math_partial_score_missed_18",
+          "math_model_error_5",
+          "interval_dp_state_error_4",
+          "dp_state_error_15"
+        ],
+        "taskMix": {
+          "select": 0.25,
+          "mutate": 0.4,
+          "generate": 0.2,
+          "mockExam": 0.15
+        },
+        "reason": "Transfer cycle improved score to 241, but T3/T4 still decides first-prize readiness. Increase mock pressure and generated diagnostics."
+      },
+      "systemRevision": {
+        "revisionId": "REV-2",
+        "title": "把训练记录拆成 7 个可观察阶段",
+        "trigger": "第二轮模拟赛总分 241，但部分分和区间 DP 仍在迁移题中复发。",
+        "change": [
+          "新增 simulated_training_attempts 的 reading/modeling/partialScorePlanning/algorithmDesign/implementation/debugging/review 七阶段记录。",
+          "把“做错了”细化成具体阶段失败，支持后续精确修正。",
+          "下一轮任务混合提高 MUTATE 和 GENERATE 比例，减少只做熟悉原题。"
+        ],
+        "expectedEffect": "系统能区分不会算法、不会建模、不会拆分、会想但写不稳、调试太慢。"
+      }
+    },
+    {
+      "cycle": 3,
+      "dayRange": "Day 13-18",
+      "hypothesisUpdates": [
+        {
+          "weaknessId": "partial_score_partial_score_missed_19",
+          "beforeConfidence": 0.96,
+          "afterConfidence": 0.92,
+          "beforePriority": 95,
+          "afterPriority": 88,
+          "testedProblems": 3,
+          "hitCount": 2,
+          "missCount": 1,
+          "hitRate": 0.67,
+          "decision": "诊断部分命中：继续观察，任务从同类题切换到变式题。"
+        },
+        {
+          "weaknessId": "math_partial_score_missed_18",
+          "beforeConfidence": 0.96,
+          "afterConfidence": 0.88,
+          "beforePriority": 92.72,
+          "afterPriority": 78.72,
+          "testedProblems": 3,
+          "hitCount": 0,
+          "missCount": 3,
+          "hitRate": 0,
+          "decision": "诊断未命中：降低优先级或重新分类，避免浪费训练天数。"
+        },
+        {
+          "weaknessId": "math_model_error_5",
+          "beforeConfidence": 0.96,
+          "afterConfidence": 0.96,
+          "beforePriority": 90.16,
+          "afterPriority": 90.16,
+          "testedProblems": 0,
+          "hitCount": 0,
+          "missCount": 0,
+          "hitRate": 0,
+          "decision": "本轮未测试：不修正置信度，也不降权；等待后续任务验证。"
+        },
+        {
+          "weaknessId": "interval_dp_state_error_4",
+          "beforeConfidence": 0.91,
+          "afterConfidence": 0.91,
+          "beforePriority": 87.03,
+          "afterPriority": 87.03,
+          "testedProblems": 0,
+          "hitCount": 0,
+          "missCount": 0,
+          "hitRate": 0,
+          "decision": "本轮未测试：不修正置信度，也不降权；等待后续任务验证。"
+        },
+        {
+          "weaknessId": "dp_state_error_15",
+          "beforeConfidence": 0.86,
+          "afterConfidence": 0.86,
+          "beforePriority": 76.95,
+          "afterPriority": 76.95,
+          "testedProblems": 0,
+          "hitCount": 0,
+          "missCount": 0,
+          "hitRate": 0,
+          "decision": "本轮未测试：不修正置信度，也不降权；等待后续任务验证。"
+        }
+      ],
+      "nextDecision": {
+        "focusWeaknessIds": [
+          "math_model_error_5",
+          "partial_score_partial_score_missed_19",
+          "interval_dp_state_error_4",
+          "math_partial_score_missed_18",
+          "dp_state_error_15"
+        ],
+        "taskMix": {
+          "select": 0.15,
+          "mutate": 0.25,
+          "generate": 0.2,
+          "mockExam": 0.4
+        },
+        "reason": "Final simulation reached readiness 0.67. Continue real mock exams and only reduce priorities after real logs confirm fewer recurring hits."
+      },
+      "systemRevision": {
+        "revisionId": "REV-3",
+        "title": "用模拟赛验证是否接近目标，并回写下一轮决策",
+        "trigger": "第三轮模拟赛一等奖接近度 0.67，仍有 math_model_error_5, partial_score_partial_score_missed_19, interval_dp_state_error_4 阻塞。",
+        "change": [
+          "新增 mock_exam_validation.json，记录 T1/T2/T3/T4 和 total。",
+          "用模拟赛结果调整 taskMix：接近目标时提高模拟赛比例，否则继续补主弱点。",
+          "报告明确区分“接近目标”和“稳定达标”，避免训练任务完成后误判为一等奖稳了。"
+        ],
+        "expectedEffect": "系统能用考试表现校验训练是否有效，而不是只看任务完成数量。"
+      }
+    },
+    {
+      "cycle": 4,
+      "dayRange": "Day 19-24",
+      "hypothesisUpdates": [
+        {
+          "weaknessId": "math_model_error_5",
+          "beforeConfidence": 0.96,
+          "afterConfidence": 0.88,
+          "beforePriority": 90.16,
+          "afterPriority": 76.16,
+          "testedProblems": 3,
+          "hitCount": 0,
+          "missCount": 3,
+          "hitRate": 0,
+          "decision": "诊断未命中：降低优先级或重新分类，避免浪费训练天数。"
+        },
+        {
+          "weaknessId": "partial_score_partial_score_missed_19",
+          "beforeConfidence": 0.92,
+          "afterConfidence": 0.84,
+          "beforePriority": 88,
+          "afterPriority": 74,
+          "testedProblems": 3,
+          "hitCount": 0,
+          "missCount": 3,
+          "hitRate": 0,
+          "decision": "诊断未命中：降低优先级或重新分类，避免浪费训练天数。"
+        },
+        {
+          "weaknessId": "interval_dp_state_error_4",
+          "beforeConfidence": 0.91,
+          "afterConfidence": 0.91,
+          "beforePriority": 87.03,
+          "afterPriority": 87.03,
+          "testedProblems": 0,
+          "hitCount": 0,
+          "missCount": 0,
+          "hitRate": 0,
+          "decision": "本轮未测试：不修正置信度，也不降权；等待后续任务验证。"
+        },
+        {
+          "weaknessId": "math_partial_score_missed_18",
+          "beforeConfidence": 0.88,
+          "afterConfidence": 0.88,
+          "beforePriority": 78.72,
+          "afterPriority": 78.72,
+          "testedProblems": 0,
+          "hitCount": 0,
+          "missCount": 0,
+          "hitRate": 0,
+          "decision": "本轮未测试：不修正置信度，也不降权；等待后续任务验证。"
+        },
+        {
+          "weaknessId": "dp_state_error_15",
+          "beforeConfidence": 0.86,
+          "afterConfidence": 0.86,
+          "beforePriority": 76.95,
+          "afterPriority": 76.95,
+          "testedProblems": 0,
+          "hitCount": 0,
+          "missCount": 0,
+          "hitRate": 0,
+          "decision": "本轮未测试：不修正置信度，也不降权；等待后续任务验证。"
+        }
+      ],
+      "nextDecision": {
+        "focusWeaknessIds": [
+          "interval_dp_state_error_4",
+          "math_partial_score_missed_18",
+          "dp_state_error_15",
+          "math_model_error_5",
+          "partial_score_partial_score_missed_19"
+        ],
+        "taskMix": {
+          "select": 0.15,
+          "mutate": 0.25,
+          "generate": 0.2,
+          "mockExam": 0.4
+        },
+        "reason": "Final simulation reached readiness 0.77. Continue real mock exams and only reduce priorities after real logs confirm fewer recurring hits."
+      },
+      "systemRevision": {
+        "revisionId": "REV-4",
+        "title": "增加精度校准：区分未测试、命中、未命中",
+        "trigger": "第 4 轮模拟赛总分 288，一等奖接近度 0.77，需要避免把模拟改善误判成真实达标。",
+        "change": [
+          "未被本轮任务覆盖的 weakness 标记为 NOT_TESTED，不再自动降权。",
+          "模拟赛分数曲线改成按进度增长，避免轮数增加导致分数虚高。",
+          "增加精度边界说明：真实证据和模拟推断必须分开看。"
+        ],
+        "expectedEffect": "降低系统自我修正中的误伤，避免没有测试过的弱点被错误降权。"
+      }
+    },
+    {
+      "cycle": 5,
+      "dayRange": "Day 25-30",
+      "hypothesisUpdates": [
+        {
+          "weaknessId": "interval_dp_state_error_4",
+          "beforeConfidence": 0.91,
+          "afterConfidence": 0.83,
+          "beforePriority": 87.03,
+          "afterPriority": 73.03,
+          "testedProblems": 3,
+          "hitCount": 0,
+          "missCount": 3,
+          "hitRate": 0,
+          "decision": "诊断未命中：降低优先级或重新分类，避免浪费训练天数。"
+        },
+        {
+          "weaknessId": "math_partial_score_missed_18",
+          "beforeConfidence": 0.88,
+          "afterConfidence": 0.8,
+          "beforePriority": 78.72,
+          "afterPriority": 64.72,
+          "testedProblems": 3,
+          "hitCount": 0,
+          "missCount": 3,
+          "hitRate": 0,
+          "decision": "诊断未命中：降低优先级或重新分类，避免浪费训练天数。"
+        },
+        {
+          "weaknessId": "dp_state_error_15",
+          "beforeConfidence": 0.86,
+          "afterConfidence": 0.86,
+          "beforePriority": 76.95,
+          "afterPriority": 76.95,
+          "testedProblems": 0,
+          "hitCount": 0,
+          "missCount": 0,
+          "hitRate": 0,
+          "decision": "本轮未测试：不修正置信度，也不降权；等待后续任务验证。"
+        },
+        {
+          "weaknessId": "math_model_error_5",
+          "beforeConfidence": 0.88,
+          "afterConfidence": 0.88,
+          "beforePriority": 76.16,
+          "afterPriority": 76.16,
+          "testedProblems": 0,
+          "hitCount": 0,
+          "missCount": 0,
+          "hitRate": 0,
+          "decision": "本轮未测试：不修正置信度，也不降权；等待后续任务验证。"
+        },
+        {
+          "weaknessId": "partial_score_partial_score_missed_19",
+          "beforeConfidence": 0.84,
+          "afterConfidence": 0.84,
+          "beforePriority": 74,
+          "afterPriority": 74,
+          "testedProblems": 0,
+          "hitCount": 0,
+          "missCount": 0,
+          "hitRate": 0,
+          "decision": "本轮未测试：不修正置信度，也不降权；等待后续任务验证。"
+        }
+      ],
+      "nextDecision": {
+        "focusWeaknessIds": [
+          "dp_state_error_15",
+          "math_model_error_5",
+          "partial_score_partial_score_missed_19",
+          "interval_dp_state_error_4",
+          "greedy_partial_score_missed_1"
+        ],
+        "taskMix": {
+          "select": 0.15,
+          "mutate": 0.25,
+          "generate": 0.2,
+          "mockExam": 0.4
+        },
+        "reason": "Final simulation reached readiness 0.87. Continue real mock exams and only reduce priorities after real logs confirm fewer recurring hits."
+      },
+      "systemRevision": {
+        "revisionId": "REV-5",
+        "title": "增加真实落地校验：把模拟结果转成真实训练要求",
+        "trigger": "第 5 轮模拟赛总分 312，一等奖接近度 0.87，需要避免把模拟改善误判成真实达标。",
+        "change": [
+          "输出 5 轮精度报告，明确哪些结论仍需要真实训练日志验证。",
+          "最终结论限定为接近目标区间，不宣称稳定一等奖。",
+          "下一步强制要求真实模拟赛和真实 daily feedback 替换模拟数据。"
+        ],
+        "expectedEffect": "让系统从可复现实验进入真实训练闭环，减少模拟乐观偏差。"
+      }
+    }
+  ]
+}

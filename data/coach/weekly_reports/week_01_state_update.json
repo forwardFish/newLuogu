@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-06-24T16:14:00.897Z",
+  "week": 1,
+  "dayRange": "Day 1-6",
+  "diagnosisValidation": {
+    "validatedWeaknesses": [
+      "partial_score_partial_score_missed_19",
+      "math_model_error_5",
+      "math_partial_score_missed_18"
+    ],
+    "rejectedWeaknesses": [
+      "interval_dp_state_error_4"
+    ],
+    "watchWeaknesses": [],
+    "newWeaknessCandidates": [
+      "late_contest_t4_strategy_risk"
+    ]
+  },
+  "stageDecision": {
+    "canAdvance": false,
+    "reason": "Not first-prize ready yet; diagnosis and training focus are still being validated.",
+    "nextWeekFocus": [
+      "partial_score_partial_score_missed_19",
+      "math_model_error_5",
+      "math_partial_score_missed_18",
+      "interval_dp_state_error_4",
+      "dp_state_error_15"
+    ]
+  }
+}

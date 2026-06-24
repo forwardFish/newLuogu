@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-06-24T16:14:00.905Z",
+  "week": 5,
+  "dayRange": "Day 25-30",
+  "diagnosisValidation": {
+    "validatedWeaknesses": [],
+    "rejectedWeaknesses": [
+      "interval_dp_state_error_4",
+      "math_partial_score_missed_18",
+      "dp_state_error_15",
+      "math_model_error_5",
+      "partial_score_partial_score_missed_19"
+    ],
+    "watchWeaknesses": [],
+    "newWeaknessCandidates": [
+      "late_contest_t4_strategy_risk"
+    ]
+  },
+  "stageDecision": {
+    "canAdvance": true,
+    "reason": "Close to first-prize target in simulation, but still requires real contest validation.",
+    "nextWeekFocus": [
+      "dp_state_error_15",
+      "math_model_error_5",
+      "partial_score_partial_score_missed_19",
+      "interval_dp_state_error_4",
+      "greedy_partial_score_missed_1"
+    ]
+  }
+}

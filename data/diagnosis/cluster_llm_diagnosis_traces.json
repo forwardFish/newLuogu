@@ -1,8 +1,1445 @@
 {
-  "generatedAt": "2026-06-24T03:44:37.707Z",
+  "generatedAt": "2026-06-24T14:57:56.222Z",
   "provider": {
     "providerId": "deepseek",
-    "keyPresent": false
+    "providerLabel": "DeepSeek",
+    "baseUrl": "https://api.deepseek.com",
+    "model": "deepseek-v4-pro",
+    "keyPresent": true,
+    "envSources": [
+      "process.env",
+      "D:\\lyh\\agent\\agent-frame\\printersheet\\ai-exam-miniapp\\server\\.env"
+    ],
+    "limit": 30,
+    "concurrency": 1,
+    "requireReal": true
   },
-  "traces": []
+  "traces": [
+    {
+      "clusterId": "greedy_unknown_068",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "greedy_unknown_068",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1468
+      },
+      "status": "SUCCESS",
+      "latencyMs": 7758
+    },
+    {
+      "clusterId": "string_state_init_boundary_027",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "string_state_init_boundary_027",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2454
+      },
+      "status": "SUCCESS",
+      "latencyMs": 7413
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_013",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "shortest_path_state_init_boundary_013",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2273
+      },
+      "status": "SUCCESS",
+      "latencyMs": 10924
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_001",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "interval_dp_state_init_boundary_001",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2626
+      },
+      "status": "SUCCESS",
+      "latencyMs": 7413
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_037",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "interval_dp_state_init_boundary_037",
+        "representativeProblemCount": 3,
+        "payloadBytes": 3482
+      },
+      "status": "SUCCESS",
+      "latencyMs": 9410
+    },
+    {
+      "clusterId": "math_model_template_011",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "math_model_template_011",
+        "representativeProblemCount": 3,
+        "payloadBytes": 3727
+      },
+      "status": "SUCCESS",
+      "latencyMs": 8233
+    },
+    {
+      "clusterId": "search_unknown_024",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "search_unknown_024",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1598
+      },
+      "status": "SUCCESS",
+      "latencyMs": 6784
+    },
+    {
+      "clusterId": "graph_model_template_044",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "graph_model_template_044",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2657
+      },
+      "status": "SUCCESS",
+      "latencyMs": 7743
+    },
+    {
+      "clusterId": "string_state_init_boundary_047",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "string_state_init_boundary_047",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1512
+      },
+      "status": "SUCCESS",
+      "latencyMs": 8412
+    },
+    {
+      "clusterId": "dsu_model_template_054",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "dsu_model_template_054",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1696
+      },
+      "status": "SUCCESS",
+      "latencyMs": 8305
+    },
+    {
+      "clusterId": "graph_model_template_057",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "graph_model_template_057",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1673
+      },
+      "status": "SUCCESS",
+      "latencyMs": 8337
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_063",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "shortest_path_state_init_boundary_063",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2803
+      },
+      "status": "SUCCESS",
+      "latencyMs": 9480
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_066",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "interval_dp_state_init_boundary_066",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1514
+      },
+      "status": "SUCCESS",
+      "latencyMs": 8957
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_075",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "dfs_bfs_unknown_075",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1585
+      },
+      "status": "SUCCESS",
+      "latencyMs": 8891
+    },
+    {
+      "clusterId": "math_model_template_090",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "math_model_template_090",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2419
+      },
+      "status": "SUCCESS",
+      "latencyMs": 8927
+    },
+    {
+      "clusterId": "dp_state_init_boundary_092",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "dp_state_init_boundary_092",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2757
+      },
+      "status": "SUCCESS",
+      "latencyMs": 7760
+    },
+    {
+      "clusterId": "state_compression_dp_unknown_095",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "state_compression_dp_unknown_095",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1603
+      },
+      "status": "SUCCESS",
+      "latencyMs": 7001
+    },
+    {
+      "clusterId": "implementation_implementation_risk_098",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "implementation_implementation_risk_098",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1399
+      },
+      "status": "SUCCESS",
+      "latencyMs": 6784
+    },
+    {
+      "clusterId": "dp_state_init_boundary_072",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "dp_state_init_boundary_072",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2683
+      },
+      "status": "SUCCESS",
+      "latencyMs": 8384
+    },
+    {
+      "clusterId": "math_model_template_069",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "math_model_template_069",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2557
+      },
+      "status": "SUCCESS",
+      "latencyMs": 8781
+    },
+    {
+      "clusterId": "partial_score_partial_score_022",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "partial_score_partial_score_022",
+        "representativeProblemCount": 3,
+        "payloadBytes": 3518
+      },
+      "status": "SUCCESS",
+      "latencyMs": 8961
+    },
+    {
+      "clusterId": "partial_score_partial_score_023",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "partial_score_partial_score_023",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2584
+      },
+      "status": "SUCCESS",
+      "latencyMs": 9357
+    },
+    {
+      "clusterId": "state_compression_dp_unknown_048",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "state_compression_dp_unknown_048",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2667
+      },
+      "status": "SUCCESS",
+      "latencyMs": 9043
+    },
+    {
+      "clusterId": "binary_search_model_template_038",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "binary_search_model_template_038",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2106
+      },
+      "status": "SUCCESS",
+      "latencyMs": 8987
+    },
+    {
+      "clusterId": "binary_search_model_template_053",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "binary_search_model_template_053",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2709
+      },
+      "status": "SUCCESS",
+      "latencyMs": 8693
+    },
+    {
+      "clusterId": "segment_tree_model_template_101",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "segment_tree_model_template_101",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1592
+      },
+      "status": "SUCCESS",
+      "latencyMs": 8360
+    },
+    {
+      "clusterId": "fenwick_tree_index_boundary_035",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "fenwick_tree_index_boundary_035",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1603
+      },
+      "status": "SUCCESS",
+      "latencyMs": 7212
+    },
+    {
+      "clusterId": "dp_state_init_boundary_067",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "dp_state_init_boundary_067",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2130
+      },
+      "status": "SUCCESS",
+      "latencyMs": 7992
+    },
+    {
+      "clusterId": "string_state_init_boundary_088",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "string_state_init_boundary_088",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1511
+      },
+      "status": "SUCCESS",
+      "latencyMs": 8547
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_099",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "requestSummary": {
+        "clusterId": "dfs_bfs_unknown_099",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1442
+      },
+      "status": "SUCCESS",
+      "latencyMs": 7606
+    },
+    {
+      "clusterId": "dsu_model_template_065",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "dsu_model_template_065",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2259
+      }
+    },
+    {
+      "clusterId": "graph_model_template_084",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "graph_model_template_084",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2155
+      }
+    },
+    {
+      "clusterId": "fenwick_tree_index_boundary_055",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "fenwick_tree_index_boundary_055",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1190
+      }
+    },
+    {
+      "clusterId": "search_unknown_074",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "search_unknown_074",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1172
+      }
+    },
+    {
+      "clusterId": "dsu_model_template_056",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "dsu_model_template_056",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1728
+      }
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_094",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "interval_dp_state_init_boundary_094",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1728
+      }
+    },
+    {
+      "clusterId": "binary_search_model_template_026",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "binary_search_model_template_026",
+        "representativeProblemCount": 3,
+        "payloadBytes": 3615
+      }
+    },
+    {
+      "clusterId": "segment_tree_model_template_051",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "segment_tree_model_template_051",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1701
+      }
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_089",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "dfs_bfs_unknown_089",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1548
+      }
+    },
+    {
+      "clusterId": "greedy_unknown_097",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "greedy_unknown_097",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1496
+      }
+    },
+    {
+      "clusterId": "graph_model_template_020",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "graph_model_template_020",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2557
+      }
+    },
+    {
+      "clusterId": "dp_state_init_boundary_028",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "dp_state_init_boundary_028",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2691
+      }
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_041",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "interval_dp_state_init_boundary_041",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1624
+      }
+    },
+    {
+      "clusterId": "dp_state_init_boundary_077",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "dp_state_init_boundary_077",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1653
+      }
+    },
+    {
+      "clusterId": "implementation_implementation_risk_082",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "implementation_implementation_risk_082",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2386
+      }
+    },
+    {
+      "clusterId": "graph_model_template_014",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "graph_model_template_014",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2777
+      }
+    },
+    {
+      "clusterId": "string_state_init_boundary_029",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "string_state_init_boundary_029",
+        "representativeProblemCount": 3,
+        "payloadBytes": 3381
+      }
+    },
+    {
+      "clusterId": "math_model_template_009",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "math_model_template_009",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1685
+      }
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_058",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "interval_dp_state_init_boundary_058",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2663
+      }
+    },
+    {
+      "clusterId": "string_state_init_boundary_070",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "string_state_init_boundary_070",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1745
+      }
+    },
+    {
+      "clusterId": "search_unknown_100",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "search_unknown_100",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1444
+      }
+    },
+    {
+      "clusterId": "state_compression_dp_unknown_086",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "state_compression_dp_unknown_086",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1532
+      }
+    },
+    {
+      "clusterId": "math_model_template_050",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "math_model_template_050",
+        "representativeProblemCount": 3,
+        "payloadBytes": 3055
+      }
+    },
+    {
+      "clusterId": "math_model_template_010",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "math_model_template_010",
+        "representativeProblemCount": 3,
+        "payloadBytes": 3666
+      }
+    },
+    {
+      "clusterId": "implementation_implementation_risk_002",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "implementation_implementation_risk_002",
+        "representativeProblemCount": 3,
+        "payloadBytes": 2871
+      }
+    },
+    {
+      "clusterId": "implementation_implementation_risk_030",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "implementation_implementation_risk_030",
+        "representativeProblemCount": 3,
+        "payloadBytes": 3444
+      }
+    },
+    {
+      "clusterId": "binary_search_model_template_087",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "binary_search_model_template_087",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2077
+      }
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_093",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "dfs_bfs_unknown_093",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1546
+      }
+    },
+    {
+      "clusterId": "greedy_unknown_096",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "greedy_unknown_096",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1393
+      }
+    },
+    {
+      "clusterId": "dsu_model_template_085",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "dsu_model_template_085",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1626
+      }
+    },
+    {
+      "clusterId": "string_state_init_boundary_046",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "string_state_init_boundary_046",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1508
+      }
+    },
+    {
+      "clusterId": "graph_model_template_031",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "graph_model_template_031",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2053
+      }
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_062",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "shortest_path_state_init_boundary_062",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1237
+      }
+    },
+    {
+      "clusterId": "dp_state_init_boundary_091",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "dp_state_init_boundary_091",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1206
+      }
+    },
+    {
+      "clusterId": "fenwick_tree_index_boundary_036",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "fenwick_tree_index_boundary_036",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1567
+      }
+    },
+    {
+      "clusterId": "search_unknown_078",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "search_unknown_078",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1487
+      }
+    },
+    {
+      "clusterId": "graph_model_template_016",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "graph_model_template_016",
+        "representativeProblemCount": 3,
+        "payloadBytes": 3578
+      }
+    },
+    {
+      "clusterId": "dp_state_init_boundary_042",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "dp_state_init_boundary_042",
+        "representativeProblemCount": 3,
+        "payloadBytes": 3726
+      }
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_033",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "shortest_path_state_init_boundary_033",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2658
+      }
+    },
+    {
+      "clusterId": "greedy_unknown_025",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "greedy_unknown_025",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2490
+      }
+    },
+    {
+      "clusterId": "dsu_model_template_045",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "dsu_model_template_045",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2729
+      }
+    },
+    {
+      "clusterId": "binary_search_model_template_052",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "binary_search_model_template_052",
+        "representativeProblemCount": 3,
+        "payloadBytes": 3674
+      }
+    },
+    {
+      "clusterId": "string_state_init_boundary_018",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "string_state_init_boundary_018",
+        "representativeProblemCount": 3,
+        "payloadBytes": 3651
+      }
+    },
+    {
+      "clusterId": "search_unknown_019",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "search_unknown_019",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2630
+      }
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_073",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "dfs_bfs_unknown_073",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1639
+      }
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_102",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "shortest_path_state_init_boundary_102",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1683
+      }
+    },
+    {
+      "clusterId": "math_model_template_039",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "math_model_template_039",
+        "representativeProblemCount": 3,
+        "payloadBytes": 3670
+      }
+    },
+    {
+      "clusterId": "fenwick_tree_index_boundary_034",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "fenwick_tree_index_boundary_034",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1572
+      }
+    },
+    {
+      "clusterId": "implementation_implementation_risk_021",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "implementation_implementation_risk_021",
+        "representativeProblemCount": 3,
+        "payloadBytes": 3493
+      }
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_032",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "interval_dp_state_init_boundary_032",
+        "representativeProblemCount": 3,
+        "payloadBytes": 3558
+      }
+    },
+    {
+      "clusterId": "graph_model_template_015",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "graph_model_template_015",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1507
+      }
+    },
+    {
+      "clusterId": "dsu_model_template_040",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "dsu_model_template_040",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2772
+      }
+    },
+    {
+      "clusterId": "binary_search_model_template_049",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "binary_search_model_template_049",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2688
+      }
+    },
+    {
+      "clusterId": "dp_state_init_boundary_064",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "dp_state_init_boundary_064",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2604
+      }
+    },
+    {
+      "clusterId": "string_state_init_boundary_003",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "string_state_init_boundary_003",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2508
+      }
+    },
+    {
+      "clusterId": "implementation_implementation_risk_017",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "implementation_implementation_risk_017",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2403
+      }
+    },
+    {
+      "clusterId": "math_model_template_012",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "math_model_template_012",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2540
+      }
+    },
+    {
+      "clusterId": "search_unknown_007",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "search_unknown_007",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1102
+      }
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_043",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "dfs_bfs_unknown_043",
+        "representativeProblemCount": 2,
+        "payloadBytes": 2631
+      }
+    },
+    {
+      "clusterId": "greedy_unknown_080",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "greedy_unknown_080",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1478
+      }
+    },
+    {
+      "clusterId": "interval_dp_state_init_boundary_005",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "interval_dp_state_init_boundary_005",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1271
+      }
+    },
+    {
+      "clusterId": "graph_model_template_006",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "graph_model_template_006",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1192
+      }
+    },
+    {
+      "clusterId": "dp_state_init_boundary_059",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "dp_state_init_boundary_059",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1189
+      }
+    },
+    {
+      "clusterId": "dsu_model_template_060",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "dsu_model_template_060",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1240
+      }
+    },
+    {
+      "clusterId": "binary_search_model_template_071",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "binary_search_model_template_071",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1186
+      }
+    },
+    {
+      "clusterId": "shortest_path_state_init_boundary_103",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "shortest_path_state_init_boundary_103",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1250
+      }
+    },
+    {
+      "clusterId": "implementation_implementation_risk_004",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "implementation_implementation_risk_004",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1120
+      }
+    },
+    {
+      "clusterId": "math_model_template_008",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "math_model_template_008",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1130
+      }
+    },
+    {
+      "clusterId": "string_state_init_boundary_061",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "string_state_init_boundary_061",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1148
+      }
+    },
+    {
+      "clusterId": "dfs_bfs_unknown_076",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "dfs_bfs_unknown_076",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1121
+      }
+    },
+    {
+      "clusterId": "greedy_unknown_079",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "greedy_unknown_079",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1059
+      }
+    },
+    {
+      "clusterId": "state_compression_dp_unknown_081",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "state_compression_dp_unknown_081",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1132
+      }
+    },
+    {
+      "clusterId": "segment_tree_model_template_083",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "segment_tree_model_template_083",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1209
+      }
+    },
+    {
+      "clusterId": "tree_unknown_104",
+      "status": "SKIPPED",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 0,
+      "errorMessage": "Skipped by DIAGNOSIS_LLM_LIMIT=30",
+      "requestSummary": {
+        "clusterId": "tree_unknown_104",
+        "representativeProblemCount": 1,
+        "payloadBytes": 1041
+      }
+    }
+  ]
 }

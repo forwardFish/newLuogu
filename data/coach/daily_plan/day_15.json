@@ -1,0 +1,56 @@
+{
+  "generatedAt": "2026-06-24T16:14:00.857Z",
+  "day": 15,
+  "coachDecision": "Continue validating partial_score_partial_score_missed_19; do not advance to a new module because yesterday repeated an old weakness.",
+  "reason": [
+    "Highest active priority: partial_score_partial_score_missed_19.",
+    "Yesterday completed 1 simulated tasks.",
+    "Old weakness reappeared 1 time(s): partial_score_partial_score_missed_19."
+  ],
+  "tasks": [
+    {
+      "taskType": "SELECT",
+      "weaknessId": "partial_score_partial_score_missed_19",
+      "problemRef": "P10135",
+      "goal": "Use a historical evidence problem to verify whether the diagnosed weakness still appears on a familiar pattern.",
+      "timeLimitMinutes": 80,
+      "requiredPreSolveOutput": [
+        "Restate problem objective and constraints.",
+        "Name model and why it fits.",
+        "Write 30/50/70/100-point route before coding.",
+        "List boundary and initialization checks."
+      ]
+    },
+    {
+      "taskType": "MUTATE",
+      "weaknessId": "math_model_error_5",
+      "problemRef": "mut_math_002",
+      "goal": "Change constraints or output target to verify transfer, not memorization.",
+      "timeLimitMinutes": 90,
+      "requiredPreSolveOutput": [
+        "Restate problem objective and constraints.",
+        "Name model and why it fits.",
+        "Write 30/50/70/100-point route before coding.",
+        "List boundary and initialization checks."
+      ]
+    },
+    {
+      "taskType": "GENERATE",
+      "weaknessId": "math_partial_score_missed_18",
+      "problemRef": "gen_math_003",
+      "goal": "Use an original diagnostic draft to deliberately expose the suspected weak stage.",
+      "timeLimitMinutes": 100,
+      "requiredPreSolveOutput": [
+        "Restate problem objective and constraints.",
+        "Name model and why it fits.",
+        "Write 30/50/70/100-point route before coding.",
+        "List boundary and initialization checks."
+      ]
+    }
+  ],
+  "reviewFocus": [
+    "Did the predicted weakness reappear?",
+    "Which of the 7 stages failed first?",
+    "Should tomorrow lower difficulty, continue validation, or increase transfer pressure?"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "generatedProblemId": "gen_partial_score_001",
+  "weaknessId": "partial_score_partial_score_missed_19",
+  "targetAbility": "T3_PARTIAL_SCORE",
+  "module": "partial_score",
+  "difficulty": "提高",
+  "goal": "诊断并训练：partial_score：难题部分分拆解和得分策略不足",
+  "problemPackage": {
+    "statementPath": "data\\generated-problems\\gen_partial_score_001\\statement.md",
+    "solutionPath": "data\\generated-problems\\gen_partial_score_001\\solution.md",
+    "bruteForcePath": "data\\generated-problems\\gen_partial_score_001\\bruteforce.cpp",
+    "standardSolutionPath": "data\\generated-problems\\gen_partial_score_001\\std.cpp",
+    "generatorPath": "data\\generated-problems\\gen_partial_score_001\\generator.cpp",
+    "testsPath": "data\\generated-problems\\gen_partial_score_001\\tests"
+  },
+  "subtasks": [
+    {
+      "score": 30,
+      "description": "小 n 暴力"
+    },
+    {
+      "score": 60,
+      "description": "特殊性质或基础模型"
+    },
+    {
+      "score": 100,
+      "description": "完整正解"
+    }
+  ],
+  "status": "LLM_GENERATED_NEEDS_REVIEW",
+  "generationSource": "LLM"
+}

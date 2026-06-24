@@ -1,6 +1,60 @@
 {
-  "generatedAt": "2026-06-24T02:59:44.962Z",
+  "generatedAt": "2026-06-24T14:58:34.598Z",
   "items": [
+    {
+      "weaknessId": "partial_score_partial_score_missed_19",
+      "targetAbility": "T3_PARTIAL_SCORE",
+      "tasks": [
+        {
+          "taskType": "SELECT_EXISTING",
+          "source": "luogu_history",
+          "problemPid": "P10135",
+          "problemUrl": "https://www.luogu.com.cn/problem/P10135",
+          "module": "partial_score",
+          "difficulty": "提高+/省选-",
+          "selectionReason": "用于验证薄弱点：partial_score：难题部分分拆解和得分策略不足",
+          "trainingGoal": "针对难题，强制要求先写出暴力解法（如枚举、简单模拟）获取基础分，再分析数据范围设计优化（如预处理、剪枝、动态规划），形成30-50-70分阶梯方案。；专项训练部分分拆解：给出题目后，限时15分钟写出不同分数段的算法思路和复杂度分析，重点练习状态定义、边界条件和特殊情况的处理。；代码实现风险规避：针对溢出、递归栈、数组越界等常见错误，进行针对性代码审查和重构练习，要求每次提交前自检风险点。",
+          "timeLimitMinutes": 80,
+          "verifyMethod": "同类难题提交次数降至2次以内，且能清晰写出至少两个分数段的解法（如30分暴力和70分优化），代码中无溢出、越界等风险标记。"
+        },
+        {
+          "taskType": "SELECT_EXISTING",
+          "source": "luogu_history",
+          "problemPid": "P1273",
+          "problemUrl": "https://www.luogu.com.cn/problem/P1273",
+          "module": "partial_score",
+          "difficulty": "提高+/省选-",
+          "selectionReason": "用于验证薄弱点：partial_score：难题部分分拆解和得分策略不足",
+          "trainingGoal": "针对难题，强制要求先写出暴力解法（如枚举、简单模拟）获取基础分，再分析数据范围设计优化（如预处理、剪枝、动态规划），形成30-50-70分阶梯方案。；专项训练部分分拆解：给出题目后，限时15分钟写出不同分数段的算法思路和复杂度分析，重点练习状态定义、边界条件和特殊情况的处理。；代码实现风险规避：针对溢出、递归栈、数组越界等常见错误，进行针对性代码审查和重构练习，要求每次提交前自检风险点。",
+          "timeLimitMinutes": 80,
+          "verifyMethod": "同类难题提交次数降至2次以内，且能清晰写出至少两个分数段的解法（如30分暴力和70分优化），代码中无溢出、越界等风险标记。"
+        },
+        {
+          "taskType": "SELECT_EXISTING",
+          "source": "luogu_history",
+          "problemPid": "T23806",
+          "problemUrl": "https://www.luogu.com.cn/problem/T23806",
+          "module": "partial_score",
+          "difficulty": "提高+/省选-",
+          "selectionReason": "用于验证薄弱点：partial_score：难题部分分拆解和得分策略不足",
+          "trainingGoal": "针对难题，强制要求先写出暴力解法（如枚举、简单模拟）获取基础分，再分析数据范围设计优化（如预处理、剪枝、动态规划），形成30-50-70分阶梯方案。；专项训练部分分拆解：给出题目后，限时15分钟写出不同分数段的算法思路和复杂度分析，重点练习状态定义、边界条件和特殊情况的处理。；代码实现风险规避：针对溢出、递归栈、数组越界等常见错误，进行针对性代码审查和重构练习，要求每次提交前自检风险点。",
+          "timeLimitMinutes": 80,
+          "verifyMethod": "同类难题提交次数降至2次以内，且能清晰写出至少两个分数段的解法（如30分暴力和70分优化），代码中无溢出、越界等风险标记。"
+        },
+        {
+          "taskType": "SELECT_EXISTING",
+          "source": "luogu_history",
+          "problemPid": "P7413",
+          "problemUrl": "https://www.luogu.com.cn/problem/P7413",
+          "module": "partial_score",
+          "difficulty": "提高+/省选-",
+          "selectionReason": "用于验证薄弱点：partial_score：难题部分分拆解和得分策略不足",
+          "trainingGoal": "针对难题，强制要求先写出暴力解法（如枚举、简单模拟）获取基础分，再分析数据范围设计优化（如预处理、剪枝、动态规划），形成30-50-70分阶梯方案。；专项训练部分分拆解：给出题目后，限时15分钟写出不同分数段的算法思路和复杂度分析，重点练习状态定义、边界条件和特殊情况的处理。；代码实现风险规避：针对溢出、递归栈、数组越界等常见错误，进行针对性代码审查和重构练习，要求每次提交前自检风险点。",
+          "timeLimitMinutes": 80,
+          "verifyMethod": "同类难题提交次数降至2次以内，且能清晰写出至少两个分数段的解法（如30分暴力和70分优化），代码中无溢出、越界等风险标记。"
+        }
+      ]
+    },
     {
       "weaknessId": "math_model_error_5",
       "targetAbility": "T3_PARTIAL_SCORE",
@@ -13,9 +67,9 @@
           "module": "math",
           "difficulty": "提高",
           "selectionReason": "用于验证薄弱点：数学：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 数学 基础题，要求写清模型含义。；2 道 数学 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "trainingGoal": "针对数学建模题，强制要求先写出完整的状态定义、转移方程、初始化和边界条件，再编码。；练习拆解部分分：对每道题明确30-50-70分方案，并实现对应子任务，例如先暴力、再优化、最后处理边界。；专项训练递归转递推、数组索引防越界、long long防溢出，使用P4017同类拓扑排序DP题巩固。",
           "timeLimitMinutes": 60,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+          "verifyMethod": "同类数学建模题提交次数≤2次，能清晰写出状态定义、转移方程、初始化及边界，并实现至少两个部分分解法。"
         },
         {
           "taskType": "SELECT_EXISTING",
@@ -25,9 +79,9 @@
           "module": "math",
           "difficulty": "提高",
           "selectionReason": "用于验证薄弱点：数学：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 数学 基础题，要求写清模型含义。；2 道 数学 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "trainingGoal": "针对数学建模题，强制要求先写出完整的状态定义、转移方程、初始化和边界条件，再编码。；练习拆解部分分：对每道题明确30-50-70分方案，并实现对应子任务，例如先暴力、再优化、最后处理边界。；专项训练递归转递推、数组索引防越界、long long防溢出，使用P4017同类拓扑排序DP题巩固。",
           "timeLimitMinutes": 60,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+          "verifyMethod": "同类数学建模题提交次数≤2次，能清晰写出状态定义、转移方程、初始化及边界，并实现至少两个部分分解法。"
         },
         {
           "taskType": "SELECT_EXISTING",
@@ -37,9 +91,9 @@
           "module": "math",
           "difficulty": "提高",
           "selectionReason": "用于验证薄弱点：数学：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 数学 基础题，要求写清模型含义。；2 道 数学 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "trainingGoal": "针对数学建模题，强制要求先写出完整的状态定义、转移方程、初始化和边界条件，再编码。；练习拆解部分分：对每道题明确30-50-70分方案，并实现对应子任务，例如先暴力、再优化、最后处理边界。；专项训练递归转递推、数组索引防越界、long long防溢出，使用P4017同类拓扑排序DP题巩固。",
           "timeLimitMinutes": 60,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+          "verifyMethod": "同类数学建模题提交次数≤2次，能清晰写出状态定义、转移方程、初始化及边界，并实现至少两个部分分解法。"
         },
         {
           "taskType": "SELECT_EXISTING",
@@ -49,63 +103,63 @@
           "module": "math",
           "difficulty": "提高",
           "selectionReason": "用于验证薄弱点：数学：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 数学 基础题，要求写清模型含义。；2 道 数学 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "trainingGoal": "针对数学建模题，强制要求先写出完整的状态定义、转移方程、初始化和边界条件，再编码。；练习拆解部分分：对每道题明确30-50-70分方案，并实现对应子任务，例如先暴力、再优化、最后处理边界。；专项训练递归转递推、数组索引防越界、long long防溢出，使用P4017同类拓扑排序DP题巩固。",
           "timeLimitMinutes": 60,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+          "verifyMethod": "同类数学建模题提交次数≤2次，能清晰写出状态定义、转移方程、初始化及边界，并实现至少两个部分分解法。"
         }
       ]
     },
     {
-      "weaknessId": "partial_score_partial_score_missed_16",
+      "weaknessId": "math_partial_score_missed_18",
       "targetAbility": "T3_PARTIAL_SCORE",
       "tasks": [
         {
           "taskType": "SELECT_EXISTING",
           "source": "luogu_history",
-          "problemPid": "P10135",
-          "problemUrl": "https://www.luogu.com.cn/problem/P10135",
-          "module": "partial_score",
+          "problemPid": "U619606",
+          "problemUrl": "https://www.luogu.com.cn/problem/U619606",
+          "module": "math",
           "difficulty": "提高+/省选-",
-          "selectionReason": "用于验证薄弱点：partial_score：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 partial_score 基础题，要求写清模型含义。；2 道 partial_score 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "selectionReason": "用于验证薄弱点：数学：难题部分分拆解和得分策略不足",
+          "trainingGoal": "针对数学难题，训练学生拆分子任务的能力：要求每道题先写出30分、50分、70分、100分的不同解法思路，明确各子任务的数据范围、算法和边界条件。；强化溢出和递归风险意识：专项练习大数运算、模运算、递归转迭代等技巧，要求代码中显式处理溢出（如使用long long、取模前检查）并评估递归深度。；进行部分分冲刺训练：选取类似U619606和P13498的题目，限时要求学生从部分分代码出发，通过优化算法或修正边界条件达到更高分数，并复盘每次提交的改进点。",
           "timeLimitMinutes": 80,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+          "verifyMethod": "同类数学难题提交次数降至2次以内，且能清晰写出至少两个子任务的解法（如30分暴力、70分优化），代码中无溢出或递归栈风险，最终得分不低于70分。"
         },
         {
           "taskType": "SELECT_EXISTING",
           "source": "luogu_history",
-          "problemPid": "P1273",
-          "problemUrl": "https://www.luogu.com.cn/problem/P1273",
-          "module": "partial_score",
+          "problemPid": "P4085",
+          "problemUrl": "https://www.luogu.com.cn/problem/P4085",
+          "module": "math",
           "difficulty": "提高+/省选-",
-          "selectionReason": "用于验证薄弱点：partial_score：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 partial_score 基础题，要求写清模型含义。；2 道 partial_score 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "selectionReason": "用于验证薄弱点：数学：难题部分分拆解和得分策略不足",
+          "trainingGoal": "针对数学难题，训练学生拆分子任务的能力：要求每道题先写出30分、50分、70分、100分的不同解法思路，明确各子任务的数据范围、算法和边界条件。；强化溢出和递归风险意识：专项练习大数运算、模运算、递归转迭代等技巧，要求代码中显式处理溢出（如使用long long、取模前检查）并评估递归深度。；进行部分分冲刺训练：选取类似U619606和P13498的题目，限时要求学生从部分分代码出发，通过优化算法或修正边界条件达到更高分数，并复盘每次提交的改进点。",
           "timeLimitMinutes": 80,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+          "verifyMethod": "同类数学难题提交次数降至2次以内，且能清晰写出至少两个子任务的解法（如30分暴力、70分优化），代码中无溢出或递归栈风险，最终得分不低于70分。"
         },
         {
           "taskType": "SELECT_EXISTING",
           "source": "luogu_history",
-          "problemPid": "T23806",
-          "problemUrl": "https://www.luogu.com.cn/problem/T23806",
-          "module": "partial_score",
+          "problemPid": "P6033",
+          "problemUrl": "https://www.luogu.com.cn/problem/P6033",
+          "module": "math",
           "difficulty": "提高+/省选-",
-          "selectionReason": "用于验证薄弱点：partial_score：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 partial_score 基础题，要求写清模型含义。；2 道 partial_score 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "selectionReason": "用于验证薄弱点：数学：难题部分分拆解和得分策略不足",
+          "trainingGoal": "针对数学难题，训练学生拆分子任务的能力：要求每道题先写出30分、50分、70分、100分的不同解法思路，明确各子任务的数据范围、算法和边界条件。；强化溢出和递归风险意识：专项练习大数运算、模运算、递归转迭代等技巧，要求代码中显式处理溢出（如使用long long、取模前检查）并评估递归深度。；进行部分分冲刺训练：选取类似U619606和P13498的题目，限时要求学生从部分分代码出发，通过优化算法或修正边界条件达到更高分数，并复盘每次提交的改进点。",
           "timeLimitMinutes": 80,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+          "verifyMethod": "同类数学难题提交次数降至2次以内，且能清晰写出至少两个子任务的解法（如30分暴力、70分优化），代码中无溢出或递归栈风险，最终得分不低于70分。"
         },
         {
           "taskType": "SELECT_EXISTING",
           "source": "luogu_history",
-          "problemPid": "P7413",
-          "problemUrl": "https://www.luogu.com.cn/problem/P7413",
-          "module": "partial_score",
+          "problemPid": "P13426",
+          "problemUrl": "https://www.luogu.com.cn/problem/P13426",
+          "module": "math",
           "difficulty": "提高+/省选-",
-          "selectionReason": "用于验证薄弱点：partial_score：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 partial_score 基础题，要求写清模型含义。；2 道 partial_score 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "selectionReason": "用于验证薄弱点：数学：难题部分分拆解和得分策略不足",
+          "trainingGoal": "针对数学难题，训练学生拆分子任务的能力：要求每道题先写出30分、50分、70分、100分的不同解法思路，明确各子任务的数据范围、算法和边界条件。；强化溢出和递归风险意识：专项练习大数运算、模运算、递归转迭代等技巧，要求代码中显式处理溢出（如使用long long、取模前检查）并评估递归深度。；进行部分分冲刺训练：选取类似U619606和P13498的题目，限时要求学生从部分分代码出发，通过优化算法或修正边界条件达到更高分数，并复盘每次提交的改进点。",
           "timeLimitMinutes": 80,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+          "verifyMethod": "同类数学难题提交次数降至2次以内，且能清晰写出至少两个子任务的解法（如30分暴力、70分优化），代码中无溢出或递归栈风险，最终得分不低于70分。"
         }
       ]
     },
@@ -121,9 +175,9 @@
           "module": "interval_dp",
           "difficulty": "提高",
           "selectionReason": "用于验证薄弱点：区间 DP：区间 DP 的状态设计、初始化和枚举顺序不稳定",
-          "trainingGoal": "2 道 区间 DP 基础题，要求写清模型含义。；2 道 区间 DP 中档题，限时并记录提交次数。；每题提交前必须写边界和初始化检查清单。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "trainingGoal": "强制写出区间 DP 的状态定义、转移方程、初始化条件和边界枚举顺序的伪代码，对照标准模板逐行检查。；针对经典区间 DP 题目（如石子合并、括号匹配）进行限时专项训练，要求一次提交通过率 ≥ 80%，否则重做并记录错误原因。；设计变长区间、环形区间等变形题，训练在不同初始化策略（如 memset、手动赋值）和边界条件（如 len=1 或 i+len-1 越界）下的调试能力。",
           "timeLimitMinutes": 60,
-          "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。"
+          "verifyMethod": "同类区间 DP 新题提交次数 ≤ 2 次，且能清晰写出状态定义、初始化逻辑和 30-50-70 分的部分分方案。"
         },
         {
           "taskType": "SELECT_EXISTING",
@@ -133,9 +187,9 @@
           "module": "interval_dp",
           "difficulty": "提高",
           "selectionReason": "用于验证薄弱点：区间 DP：区间 DP 的状态设计、初始化和枚举顺序不稳定",
-          "trainingGoal": "2 道 区间 DP 基础题，要求写清模型含义。；2 道 区间 DP 中档题，限时并记录提交次数。；每题提交前必须写边界和初始化检查清单。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "trainingGoal": "强制写出区间 DP 的状态定义、转移方程、初始化条件和边界枚举顺序的伪代码，对照标准模板逐行检查。；针对经典区间 DP 题目（如石子合并、括号匹配）进行限时专项训练，要求一次提交通过率 ≥ 80%，否则重做并记录错误原因。；设计变长区间、环形区间等变形题，训练在不同初始化策略（如 memset、手动赋值）和边界条件（如 len=1 或 i+len-1 越界）下的调试能力。",
           "timeLimitMinutes": 60,
-          "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。"
+          "verifyMethod": "同类区间 DP 新题提交次数 ≤ 2 次，且能清晰写出状态定义、初始化逻辑和 30-50-70 分的部分分方案。"
         },
         {
           "taskType": "SELECT_EXISTING",
@@ -145,9 +199,9 @@
           "module": "interval_dp",
           "difficulty": "提高",
           "selectionReason": "用于验证薄弱点：区间 DP：区间 DP 的状态设计、初始化和枚举顺序不稳定",
-          "trainingGoal": "2 道 区间 DP 基础题，要求写清模型含义。；2 道 区间 DP 中档题，限时并记录提交次数。；每题提交前必须写边界和初始化检查清单。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "trainingGoal": "强制写出区间 DP 的状态定义、转移方程、初始化条件和边界枚举顺序的伪代码，对照标准模板逐行检查。；针对经典区间 DP 题目（如石子合并、括号匹配）进行限时专项训练，要求一次提交通过率 ≥ 80%，否则重做并记录错误原因。；设计变长区间、环形区间等变形题，训练在不同初始化策略（如 memset、手动赋值）和边界条件（如 len=1 或 i+len-1 越界）下的调试能力。",
           "timeLimitMinutes": 60,
-          "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。"
+          "verifyMethod": "同类区间 DP 新题提交次数 ≤ 2 次，且能清晰写出状态定义、初始化逻辑和 30-50-70 分的部分分方案。"
         },
         {
           "taskType": "SELECT_EXISTING",
@@ -157,15 +211,15 @@
           "module": "interval_dp",
           "difficulty": "提高",
           "selectionReason": "用于验证薄弱点：区间 DP：区间 DP 的状态设计、初始化和枚举顺序不稳定",
-          "trainingGoal": "2 道 区间 DP 基础题，要求写清模型含义。；2 道 区间 DP 中档题，限时并记录提交次数。；每题提交前必须写边界和初始化检查清单。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "trainingGoal": "强制写出区间 DP 的状态定义、转移方程、初始化条件和边界枚举顺序的伪代码，对照标准模板逐行检查。；针对经典区间 DP 题目（如石子合并、括号匹配）进行限时专项训练，要求一次提交通过率 ≥ 80%，否则重做并记录错误原因。；设计变长区间、环形区间等变形题，训练在不同初始化策略（如 memset、手动赋值）和边界条件（如 len=1 或 i+len-1 越界）下的调试能力。",
           "timeLimitMinutes": 60,
-          "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。"
+          "verifyMethod": "同类区间 DP 新题提交次数 ≤ 2 次，且能清晰写出状态定义、初始化逻辑和 30-50-70 分的部分分方案。"
         }
       ]
     },
     {
-      "weaknessId": "dp_state_error_13",
-      "targetAbility": "T3_PARTIAL_SCORE",
+      "weaknessId": "dp_state_error_15",
+      "targetAbility": "T2_MODELING",
       "tasks": [
         {
           "taskType": "SELECT_EXISTING",
@@ -175,9 +229,9 @@
           "module": "dp",
           "difficulty": "提高",
           "selectionReason": "用于验证薄弱点：DP：DP 状态、转移和初始化需要进一步稳定",
-          "trainingGoal": "2 道 DP 基础题，要求写清模型含义。；2 道 DP 中档题，限时并记录提交次数。；每题提交前必须写边界和初始化检查清单。",
+          "trainingGoal": "强制手写DP状态定义三要素（状态含义、维度、存储结构）并对照题解验证，针对AT_dp_a和CF1051D重写状态设计。；专项练习DP初始化与边界：完成5道经典线性DP和区间DP题，要求写出初始化代码和边界条件注释，提交前人工检查。；重构AT_dp_a和CF1051D代码，限制代码行数在100行以内，禁止使用递归和全局大数组，改用迭代和滚动数组，确保无溢出和索引错误。",
           "timeLimitMinutes": 60,
-          "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+          "verifyMethod": "同类DP题（如AT_dp_b、CF1051D变体）提交次数≤2次，且首次提交至少获得30分部分分，能清晰写出状态定义、初始化、转移方程和边界处理。"
         },
         {
           "taskType": "SELECT_EXISTING",
@@ -187,9 +241,9 @@
           "module": "dp",
           "difficulty": "提高",
           "selectionReason": "用于验证薄弱点：DP：DP 状态、转移和初始化需要进一步稳定",
-          "trainingGoal": "2 道 DP 基础题，要求写清模型含义。；2 道 DP 中档题，限时并记录提交次数。；每题提交前必须写边界和初始化检查清单。",
+          "trainingGoal": "强制手写DP状态定义三要素（状态含义、维度、存储结构）并对照题解验证，针对AT_dp_a和CF1051D重写状态设计。；专项练习DP初始化与边界：完成5道经典线性DP和区间DP题，要求写出初始化代码和边界条件注释，提交前人工检查。；重构AT_dp_a和CF1051D代码，限制代码行数在100行以内，禁止使用递归和全局大数组，改用迭代和滚动数组，确保无溢出和索引错误。",
           "timeLimitMinutes": 60,
-          "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+          "verifyMethod": "同类DP题（如AT_dp_b、CF1051D变体）提交次数≤2次，且首次提交至少获得30分部分分，能清晰写出状态定义、初始化、转移方程和边界处理。"
         },
         {
           "taskType": "SELECT_EXISTING",
@@ -199,9 +253,9 @@
           "module": "dp",
           "difficulty": "提高+/省选-",
           "selectionReason": "用于验证薄弱点：DP：DP 状态、转移和初始化需要进一步稳定",
-          "trainingGoal": "2 道 DP 基础题，要求写清模型含义。；2 道 DP 中档题，限时并记录提交次数。；每题提交前必须写边界和初始化检查清单。",
+          "trainingGoal": "强制手写DP状态定义三要素（状态含义、维度、存储结构）并对照题解验证，针对AT_dp_a和CF1051D重写状态设计。；专项练习DP初始化与边界：完成5道经典线性DP和区间DP题，要求写出初始化代码和边界条件注释，提交前人工检查。；重构AT_dp_a和CF1051D代码，限制代码行数在100行以内，禁止使用递归和全局大数组，改用迭代和滚动数组，确保无溢出和索引错误。",
           "timeLimitMinutes": 80,
-          "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+          "verifyMethod": "同类DP题（如AT_dp_b、CF1051D变体）提交次数≤2次，且首次提交至少获得30分部分分，能清晰写出状态定义、初始化、转移方程和边界处理。"
         },
         {
           "taskType": "SELECT_EXISTING",
@@ -211,117 +265,9 @@
           "module": "dp",
           "difficulty": "提高+/省选-",
           "selectionReason": "用于验证薄弱点：DP：DP 状态、转移和初始化需要进一步稳定",
-          "trainingGoal": "2 道 DP 基础题，要求写清模型含义。；2 道 DP 中档题，限时并记录提交次数。；每题提交前必须写边界和初始化检查清单。",
+          "trainingGoal": "强制手写DP状态定义三要素（状态含义、维度、存储结构）并对照题解验证，针对AT_dp_a和CF1051D重写状态设计。；专项练习DP初始化与边界：完成5道经典线性DP和区间DP题，要求写出初始化代码和边界条件注释，提交前人工检查。；重构AT_dp_a和CF1051D代码，限制代码行数在100行以内，禁止使用递归和全局大数组，改用迭代和滚动数组，确保无溢出和索引错误。",
           "timeLimitMinutes": 80,
-          "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
-        }
-      ]
-    },
-    {
-      "weaknessId": "graph_model_error_7",
-      "targetAbility": "T3_PARTIAL_SCORE",
-      "tasks": [
-        {
-          "taskType": "SELECT_EXISTING",
-          "source": "luogu_history",
-          "problemPid": "U465842",
-          "problemUrl": "https://www.luogu.com.cn/problem/U465842",
-          "module": "graph",
-          "difficulty": "提高",
-          "selectionReason": "用于验证薄弱点：图论建模：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 图论建模 基础题，要求写清模型含义。；2 道 图论建模 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-          "timeLimitMinutes": 60,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
-        },
-        {
-          "taskType": "SELECT_EXISTING",
-          "source": "luogu_history",
-          "problemPid": "P2899",
-          "problemUrl": "https://www.luogu.com.cn/problem/P2899",
-          "module": "graph",
-          "difficulty": "提高",
-          "selectionReason": "用于验证薄弱点：图论建模：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 图论建模 基础题，要求写清模型含义。；2 道 图论建模 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-          "timeLimitMinutes": 60,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
-        },
-        {
-          "taskType": "SELECT_EXISTING",
-          "source": "luogu_history",
-          "problemPid": "P15267",
-          "problemUrl": "https://www.luogu.com.cn/problem/P15267",
-          "module": "graph",
-          "difficulty": "提高",
-          "selectionReason": "用于验证薄弱点：图论建模：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 图论建模 基础题，要求写清模型含义。；2 道 图论建模 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-          "timeLimitMinutes": 60,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
-        },
-        {
-          "taskType": "SELECT_EXISTING",
-          "source": "luogu_history",
-          "problemPid": "P1006",
-          "problemUrl": "https://www.luogu.com.cn/problem/P1006",
-          "module": "graph",
-          "difficulty": "提高",
-          "selectionReason": "用于验证薄弱点：图论建模：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 图论建模 基础题，要求写清模型含义。；2 道 图论建模 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-          "timeLimitMinutes": 60,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
-        }
-      ]
-    },
-    {
-      "weaknessId": "binary_search_model_error_18",
-      "targetAbility": "T3_PARTIAL_SCORE",
-      "tasks": [
-        {
-          "taskType": "SELECT_EXISTING",
-          "source": "luogu_history",
-          "problemPid": "P1439",
-          "problemUrl": "https://www.luogu.com.cn/problem/P1439",
-          "module": "binary_search",
-          "difficulty": "提高",
-          "selectionReason": "用于验证薄弱点：二分答案：二分答案的 check 单调性和边界处理不稳定",
-          "trainingGoal": "2 道 二分答案 基础题，要求写清模型含义。；2 道 二分答案 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-          "timeLimitMinutes": 60,
-          "verifyMethod": "同类题提交次数 <= 2，能独立证明 check 单调性并说明边界收缩。"
-        },
-        {
-          "taskType": "SELECT_EXISTING",
-          "source": "luogu_history",
-          "problemPid": "P1024",
-          "problemUrl": "https://www.luogu.com.cn/problem/P1024",
-          "module": "binary_search",
-          "difficulty": "提高",
-          "selectionReason": "用于验证薄弱点：二分答案：二分答案的 check 单调性和边界处理不稳定",
-          "trainingGoal": "2 道 二分答案 基础题，要求写清模型含义。；2 道 二分答案 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-          "timeLimitMinutes": 60,
-          "verifyMethod": "同类题提交次数 <= 2，能独立证明 check 单调性并说明边界收缩。"
-        },
-        {
-          "taskType": "SELECT_EXISTING",
-          "source": "luogu_history",
-          "problemPid": "P5815",
-          "problemUrl": "https://www.luogu.com.cn/problem/P5815",
-          "module": "binary_search",
-          "difficulty": "提高",
-          "selectionReason": "用于验证薄弱点：二分答案：二分答案的 check 单调性和边界处理不稳定",
-          "trainingGoal": "2 道 二分答案 基础题，要求写清模型含义。；2 道 二分答案 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-          "timeLimitMinutes": 60,
-          "verifyMethod": "同类题提交次数 <= 2，能独立证明 check 单调性并说明边界收缩。"
-        },
-        {
-          "taskType": "SELECT_EXISTING",
-          "source": "luogu_history",
-          "problemPid": "P1579",
-          "problemUrl": "https://www.luogu.com.cn/problem/P1579",
-          "module": "binary_search",
-          "difficulty": "提高",
-          "selectionReason": "用于验证薄弱点：二分答案：二分答案的 check 单调性和边界处理不稳定",
-          "trainingGoal": "2 道 二分答案 基础题，要求写清模型含义。；2 道 二分答案 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-          "timeLimitMinutes": 60,
-          "verifyMethod": "同类题提交次数 <= 2，能独立证明 check 单调性并说明边界收缩。"
+          "verifyMethod": "同类DP题（如AT_dp_b、CF1051D变体）提交次数≤2次，且首次提交至少获得30分部分分，能清晰写出状态定义、初始化、转移方程和边界处理。"
         }
       ]
     },
@@ -337,9 +283,9 @@
           "module": "greedy",
           "difficulty": "提高+/省选-",
           "selectionReason": "用于验证薄弱点：贪心：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 贪心 基础题，要求写清模型含义。；2 道 贪心 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "trainingGoal": "针对难题，强制要求先写出30-50-70分方案，明确每个部分分的算法思路和边界条件，再开始编码。；练习将复杂问题拆解为独立子问题，例如先实现暴力枚举或简单贪心获得基础分，再优化。；学习识别并规避常见风险（如整数溢出、递归栈深度），在部分分代码中优先保证正确性而非完整解。",
           "timeLimitMinutes": 80,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+          "verifyMethod": "同类难题提交次数降至2次以内，且能清晰写出至少两个不同得分档次的解法（如30分暴力、70分优化），代码中无OVERFLOW或RECURSION风险标记。"
         },
         {
           "taskType": "SELECT_EXISTING",
@@ -349,9 +295,9 @@
           "module": "greedy",
           "difficulty": "提高+/省选-",
           "selectionReason": "用于验证薄弱点：贪心：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 贪心 基础题，要求写清模型含义。；2 道 贪心 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "trainingGoal": "针对难题，强制要求先写出30-50-70分方案，明确每个部分分的算法思路和边界条件，再开始编码。；练习将复杂问题拆解为独立子问题，例如先实现暴力枚举或简单贪心获得基础分，再优化。；学习识别并规避常见风险（如整数溢出、递归栈深度），在部分分代码中优先保证正确性而非完整解。",
           "timeLimitMinutes": 80,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+          "verifyMethod": "同类难题提交次数降至2次以内，且能清晰写出至少两个不同得分档次的解法（如30分暴力、70分优化），代码中无OVERFLOW或RECURSION风险标记。"
         },
         {
           "taskType": "SELECT_EXISTING",
@@ -361,9 +307,9 @@
           "module": "greedy",
           "difficulty": "提高+/省选-",
           "selectionReason": "用于验证薄弱点：贪心：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 贪心 基础题，要求写清模型含义。；2 道 贪心 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "trainingGoal": "针对难题，强制要求先写出30-50-70分方案，明确每个部分分的算法思路和边界条件，再开始编码。；练习将复杂问题拆解为独立子问题，例如先实现暴力枚举或简单贪心获得基础分，再优化。；学习识别并规避常见风险（如整数溢出、递归栈深度），在部分分代码中优先保证正确性而非完整解。",
           "timeLimitMinutes": 80,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+          "verifyMethod": "同类难题提交次数降至2次以内，且能清晰写出至少两个不同得分档次的解法（如30分暴力、70分优化），代码中无OVERFLOW或RECURSION风险标记。"
         },
         {
           "taskType": "SELECT_EXISTING",
@@ -373,122 +319,68 @@
           "module": "greedy",
           "difficulty": "提高+/省选-",
           "selectionReason": "用于验证薄弱点：贪心：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 贪心 基础题，要求写清模型含义。；2 道 贪心 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "trainingGoal": "针对难题，强制要求先写出30-50-70分方案，明确每个部分分的算法思路和边界条件，再开始编码。；练习将复杂问题拆解为独立子问题，例如先实现暴力枚举或简单贪心获得基础分，再优化。；学习识别并规避常见风险（如整数溢出、递归栈深度），在部分分代码中优先保证正确性而非完整解。",
           "timeLimitMinutes": 80,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+          "verifyMethod": "同类难题提交次数降至2次以内，且能清晰写出至少两个不同得分档次的解法（如30分暴力、70分优化），代码中无OVERFLOW或RECURSION风险标记。"
         }
       ]
     },
     {
-      "weaknessId": "shortest_path_state_error_3",
+      "weaknessId": "partial_score_model_error_20",
       "targetAbility": "T3_PARTIAL_SCORE",
       "tasks": [
         {
           "taskType": "SELECT_EXISTING",
           "source": "luogu_history",
-          "problemPid": "P2452",
-          "problemUrl": "https://www.luogu.com.cn/problem/P2452",
-          "module": "shortest_path",
-          "difficulty": "提高+/省选-",
-          "selectionReason": "用于验证薄弱点：最短路：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 最短路 基础题，要求写清模型含义。；2 道 最短路 中档题，限时并记录提交次数。；每题提交前必须写边界和初始化检查清单。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-          "timeLimitMinutes": 80,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
-        },
-        {
-          "taskType": "SELECT_EXISTING",
-          "source": "luogu_history",
-          "problemPid": "P3371",
-          "problemUrl": "https://www.luogu.com.cn/problem/P3371",
-          "module": "shortest_path",
+          "problemPid": "P15018",
+          "problemUrl": "https://www.luogu.com.cn/problem/P15018",
+          "module": "partial_score",
           "difficulty": "提高",
-          "selectionReason": "用于验证薄弱点：最短路：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 最短路 基础题，要求写清模型含义。；2 道 最短路 中档题，限时并记录提交次数。；每题提交前必须写边界和初始化检查清单。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "selectionReason": "用于验证薄弱点：partial_score：难题部分分拆解和得分策略不足",
+          "trainingGoal": "针对动态规划、搜索等常见难题类型，训练学生先写出30分、50分、70分的分档方案，明确每档对应的模型简化、状态定义和边界条件。；强化递归和数组操作的边界检查与初始化习惯，通过专项练习减少ARRAY_INDEX_RISK和RECURSION_STACK_RISK错误，确保基础部分分稳定获取。；进行限时部分分拆解模拟：给出难题，要求学生在15分钟内写出至少两档部分分的伪代码或关键实现，并说明复杂度，提升快速得分能力。",
           "timeLimitMinutes": 60,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+          "verifyMethod": "同类难题提交次数降至2次以内，首次提交至少获得50%分数，且能清晰写出状态定义、边界处理及30-50-70分方案。"
         },
         {
           "taskType": "SELECT_EXISTING",
           "source": "luogu_history",
-          "problemPid": "P4779",
-          "problemUrl": "https://www.luogu.com.cn/problem/P4779",
-          "module": "shortest_path",
+          "problemPid": "P1102",
+          "problemUrl": "https://www.luogu.com.cn/problem/P1102",
+          "module": "partial_score",
           "difficulty": "提高",
-          "selectionReason": "用于验证薄弱点：最短路：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 最短路 基础题，要求写清模型含义。；2 道 最短路 中档题，限时并记录提交次数。；每题提交前必须写边界和初始化检查清单。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
+          "selectionReason": "用于验证薄弱点：partial_score：难题部分分拆解和得分策略不足",
+          "trainingGoal": "针对动态规划、搜索等常见难题类型，训练学生先写出30分、50分、70分的分档方案，明确每档对应的模型简化、状态定义和边界条件。；强化递归和数组操作的边界检查与初始化习惯，通过专项练习减少ARRAY_INDEX_RISK和RECURSION_STACK_RISK错误，确保基础部分分稳定获取。；进行限时部分分拆解模拟：给出难题，要求学生在15分钟内写出至少两档部分分的伪代码或关键实现，并说明复杂度，提升快速得分能力。",
           "timeLimitMinutes": 60,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+          "verifyMethod": "同类难题提交次数降至2次以内，首次提交至少获得50%分数，且能清晰写出状态定义、边界处理及30-50-70分方案。"
         },
         {
           "taskType": "SELECT_EXISTING",
           "source": "luogu_history",
-          "problemPid": "P1713",
-          "problemUrl": "https://www.luogu.com.cn/problem/P1713",
-          "module": "shortest_path",
-          "difficulty": "提高+/省选-",
-          "selectionReason": "用于验证薄弱点：最短路：难题部分分拆解和得分策略不足",
-          "trainingGoal": "2 道 最短路 基础题，要求写清模型含义。；2 道 最短路 中档题，限时并记录提交次数。；每题提交前必须写边界和初始化检查清单。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-          "timeLimitMinutes": 80,
-          "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+          "problemPid": "P7410",
+          "problemUrl": "https://www.luogu.com.cn/problem/P7410",
+          "module": "partial_score",
+          "difficulty": "提高",
+          "selectionReason": "用于验证薄弱点：partial_score：难题部分分拆解和得分策略不足",
+          "trainingGoal": "针对动态规划、搜索等常见难题类型，训练学生先写出30分、50分、70分的分档方案，明确每档对应的模型简化、状态定义和边界条件。；强化递归和数组操作的边界检查与初始化习惯，通过专项练习减少ARRAY_INDEX_RISK和RECURSION_STACK_RISK错误，确保基础部分分稳定获取。；进行限时部分分拆解模拟：给出难题，要求学生在15分钟内写出至少两档部分分的伪代码或关键实现，并说明复杂度，提升快速得分能力。",
+          "timeLimitMinutes": 60,
+          "verifyMethod": "同类难题提交次数降至2次以内，首次提交至少获得50%分数，且能清晰写出状态定义、边界处理及30-50-70分方案。"
+        },
+        {
+          "taskType": "SELECT_EXISTING",
+          "source": "luogu_history",
+          "problemPid": "P15131",
+          "problemUrl": "https://www.luogu.com.cn/problem/P15131",
+          "module": "partial_score",
+          "difficulty": "提高",
+          "selectionReason": "用于验证薄弱点：partial_score：难题部分分拆解和得分策略不足",
+          "trainingGoal": "针对动态规划、搜索等常见难题类型，训练学生先写出30分、50分、70分的分档方案，明确每档对应的模型简化、状态定义和边界条件。；强化递归和数组操作的边界检查与初始化习惯，通过专项练习减少ARRAY_INDEX_RISK和RECURSION_STACK_RISK错误，确保基础部分分稳定获取。；进行限时部分分拆解模拟：给出难题，要求学生在15分钟内写出至少两档部分分的伪代码或关键实现，并说明复杂度，提升快速得分能力。",
+          "timeLimitMinutes": 60,
+          "verifyMethod": "同类难题提交次数降至2次以内，首次提交至少获得50%分数，且能清晰写出状态定义、边界处理及30-50-70分方案。"
         }
       ]
     },
     {
-      "weaknessId": "dsu_model_error_9",
-      "targetAbility": "T3_PARTIAL_SCORE",
-      "tasks": [
-        {
-          "taskType": "SELECT_EXISTING",
-          "source": "luogu_history",
-          "problemPid": "P1955",
-          "problemUrl": "https://www.luogu.com.cn/problem/P1955",
-          "module": "dsu",
-          "difficulty": "提高",
-          "selectionReason": "用于验证薄弱点：并查集：并查集的集合含义、合并条件或离散化细节不稳定",
-          "trainingGoal": "2 道 并查集 基础题，要求写清模型含义。；2 道 并查集 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-          "timeLimitMinutes": 60,
-          "verifyMethod": "能说明集合含义、合并条件和离散化方式，提交次数 <= 2。"
-        },
-        {
-          "taskType": "SELECT_EXISTING",
-          "source": "luogu_history",
-          "problemPid": "P3958",
-          "problemUrl": "https://www.luogu.com.cn/problem/P3958",
-          "module": "dsu",
-          "difficulty": "提高",
-          "selectionReason": "用于验证薄弱点：并查集：并查集的集合含义、合并条件或离散化细节不稳定",
-          "trainingGoal": "2 道 并查集 基础题，要求写清模型含义。；2 道 并查集 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-          "timeLimitMinutes": 60,
-          "verifyMethod": "能说明集合含义、合并条件和离散化方式，提交次数 <= 2。"
-        },
-        {
-          "taskType": "SELECT_EXISTING",
-          "source": "luogu_history",
-          "problemPid": "P3366",
-          "problemUrl": "https://www.luogu.com.cn/problem/P3366",
-          "module": "dsu",
-          "difficulty": "提高",
-          "selectionReason": "用于验证薄弱点：并查集：并查集的集合含义、合并条件或离散化细节不稳定",
-          "trainingGoal": "2 道 并查集 基础题，要求写清模型含义。；2 道 并查集 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-          "timeLimitMinutes": 60,
-          "verifyMethod": "能说明集合含义、合并条件和离散化方式，提交次数 <= 2。"
-        },
-        {
-          "taskType": "SELECT_EXISTING",
-          "source": "luogu_history",
-          "problemPid": "P1551",
-          "problemUrl": "https://www.luogu.com.cn/problem/P1551",
-          "module": "dsu",
-          "difficulty": "提高",
-          "selectionReason": "用于验证薄弱点：并查集：并查集的集合含义、合并条件或离散化细节不稳定",
-          "trainingGoal": "2 道 并查集 基础题，要求写清模型含义。；2 道 并查集 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-          "timeLimitMinutes": 60,
-          "verifyMethod": "能说明集合含义、合并条件和离散化方式，提交次数 <= 2。"
-        }
-      ]
-    },
-    {
-      "weaknessId": "graph_model_error_27",
+      "weaknessId": "graph_model_error_37",
       "targetAbility": "T2_MODELING",
       "tasks": [
         {
@@ -536,6 +428,114 @@
           "difficulty": "提高",
           "selectionReason": "用于验证薄弱点：图论建模：图论建模 相关建模或实现稳定性不足",
           "trainingGoal": "2 道 图论建模 基础题，要求写清模型含义。；2 道 图论建模 中档题，限时并记录提交次数。",
+          "timeLimitMinutes": 60,
+          "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+        }
+      ]
+    },
+    {
+      "weaknessId": "math_model_error_40",
+      "targetAbility": "T1_STABILITY",
+      "tasks": [
+        {
+          "taskType": "SELECT_EXISTING",
+          "source": "luogu_history",
+          "problemPid": "P3372",
+          "problemUrl": "https://www.luogu.com.cn/problem/P3372",
+          "module": "math",
+          "difficulty": "提高",
+          "selectionReason": "用于验证薄弱点：数学：数学 相关建模或实现稳定性不足",
+          "trainingGoal": "2 道 数学 基础题，要求写清模型含义。；2 道 数学 中档题，限时并记录提交次数。",
+          "timeLimitMinutes": 60,
+          "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+        },
+        {
+          "taskType": "SELECT_EXISTING",
+          "source": "luogu_history",
+          "problemPid": "T433808",
+          "problemUrl": "https://www.luogu.com.cn/problem/T433808",
+          "module": "math",
+          "difficulty": "提高",
+          "selectionReason": "用于验证薄弱点：数学：数学 相关建模或实现稳定性不足",
+          "trainingGoal": "2 道 数学 基础题，要求写清模型含义。；2 道 数学 中档题，限时并记录提交次数。",
+          "timeLimitMinutes": 60,
+          "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+        },
+        {
+          "taskType": "SELECT_EXISTING",
+          "source": "luogu_history",
+          "problemPid": "P1014",
+          "problemUrl": "https://www.luogu.com.cn/problem/P1014",
+          "module": "math",
+          "difficulty": "提高",
+          "selectionReason": "用于验证薄弱点：数学：数学 相关建模或实现稳定性不足",
+          "trainingGoal": "2 道 数学 基础题，要求写清模型含义。；2 道 数学 中档题，限时并记录提交次数。",
+          "timeLimitMinutes": 60,
+          "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+        },
+        {
+          "taskType": "SELECT_EXISTING",
+          "source": "luogu_history",
+          "problemPid": "P4342",
+          "problemUrl": "https://www.luogu.com.cn/problem/P4342",
+          "module": "math",
+          "difficulty": "提高",
+          "selectionReason": "用于验证薄弱点：数学：数学 相关建模或实现稳定性不足",
+          "trainingGoal": "2 道 数学 基础题，要求写清模型含义。；2 道 数学 中档题，限时并记录提交次数。",
+          "timeLimitMinutes": 60,
+          "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+        }
+      ]
+    },
+    {
+      "weaknessId": "implementation_implementation_risk_38",
+      "targetAbility": "T1_STABILITY",
+      "tasks": [
+        {
+          "taskType": "SELECT_EXISTING",
+          "source": "luogu_history",
+          "problemPid": "P1113",
+          "problemUrl": "https://www.luogu.com.cn/problem/P1113",
+          "module": "implementation",
+          "difficulty": "提高",
+          "selectionReason": "用于验证薄弱点：implementation：implementation 相关建模或实现稳定性不足",
+          "trainingGoal": "2 道 implementation 基础题，要求写清模型含义。；2 道 implementation 中档题，限时并记录提交次数。",
+          "timeLimitMinutes": 60,
+          "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+        },
+        {
+          "taskType": "SELECT_EXISTING",
+          "source": "luogu_history",
+          "problemPid": "P1003",
+          "problemUrl": "https://www.luogu.com.cn/problem/P1003",
+          "module": "implementation",
+          "difficulty": "提高",
+          "selectionReason": "用于验证薄弱点：implementation：implementation 相关建模或实现稳定性不足",
+          "trainingGoal": "2 道 implementation 基础题，要求写清模型含义。；2 道 implementation 中档题，限时并记录提交次数。",
+          "timeLimitMinutes": 60,
+          "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+        },
+        {
+          "taskType": "SELECT_EXISTING",
+          "source": "luogu_history",
+          "problemPid": "B2002",
+          "problemUrl": "https://www.luogu.com.cn/problem/B2002",
+          "module": "implementation",
+          "difficulty": "提高",
+          "selectionReason": "用于验证薄弱点：implementation：implementation 相关建模或实现稳定性不足",
+          "trainingGoal": "2 道 implementation 基础题，要求写清模型含义。；2 道 implementation 中档题，限时并记录提交次数。",
+          "timeLimitMinutes": 60,
+          "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+        },
+        {
+          "taskType": "SELECT_EXISTING",
+          "source": "luogu_history",
+          "problemPid": "P1830",
+          "problemUrl": "https://www.luogu.com.cn/problem/P1830",
+          "module": "implementation",
+          "difficulty": "提高",
+          "selectionReason": "用于验证薄弱点：implementation：implementation 相关建模或实现稳定性不足",
+          "trainingGoal": "2 道 implementation 基础题，要求写清模型含义。；2 道 implementation 中档题，限时并记录提交次数。",
           "timeLimitMinutes": 60,
           "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
         }

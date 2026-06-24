@@ -1,0 +1,31 @@
+{
+  "generatedAt": "2026-06-24T16:14:00.900Z",
+  "week": 3,
+  "dayRange": "Day 13-18",
+  "diagnosisValidation": {
+    "validatedWeaknesses": [],
+    "rejectedWeaknesses": [
+      "math_partial_score_missed_18",
+      "math_model_error_5",
+      "interval_dp_state_error_4",
+      "dp_state_error_15"
+    ],
+    "watchWeaknesses": [
+      "partial_score_partial_score_missed_19"
+    ],
+    "newWeaknessCandidates": [
+      "late_contest_t4_strategy_risk"
+    ]
+  },
+  "stageDecision": {
+    "canAdvance": false,
+    "reason": "Improving, near target zone, but T3/T4 partial-score reliability still decides first-prize probability.",
+    "nextWeekFocus": [
+      "math_model_error_5",
+      "partial_score_partial_score_missed_19",
+      "interval_dp_state_error_4",
+      "math_partial_score_missed_18",
+      "dp_state_error_15"
+    ]
+  }
+}

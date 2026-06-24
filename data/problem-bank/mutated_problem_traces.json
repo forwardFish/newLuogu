@@ -1,0 +1,80 @@
+{
+  "generatedAt": "2026-06-24T15:07:03.558Z",
+  "provider": {
+    "providerId": "deepseek",
+    "providerLabel": "DeepSeek",
+    "baseUrl": "https://api.deepseek.com",
+    "model": "deepseek-v4-pro",
+    "keyPresent": true,
+    "envSources": [
+      "process.env",
+      "D:\\lyh\\agent\\agent-frame\\printersheet\\ai-exam-miniapp\\server\\.env"
+    ]
+  },
+  "traces": [
+    {
+      "mutationId": "mut_partial_score_001",
+      "status": "SUCCESS",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 61889
+    },
+    {
+      "mutationId": "mut_math_002",
+      "status": "SUCCESS",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 36726
+    },
+    {
+      "mutationId": "mut_math_003",
+      "status": "SUCCESS",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 72568
+    },
+    {
+      "mutationId": "mut_interval_dp_004",
+      "status": "SUCCESS",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 82121
+    },
+    {
+      "mutationId": "mut_dp_005",
+      "status": "SUCCESS",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 61335
+    },
+    {
+      "mutationId": "mut_greedy_006",
+      "status": "SUCCESS",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 69111
+    },
+    {
+      "mutationId": "mut_partial_score_007",
+      "status": "SUCCESS",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 100933
+    },
+    {
+      "mutationId": "mut_graph_008",
+      "status": "SUCCESS",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 24269
+    }
+  ]
+}

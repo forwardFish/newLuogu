@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-06-24T15:44:11.477Z",
+  "provider": {
+    "providerId": "deepseek",
+    "providerLabel": "DeepSeek",
+    "baseUrl": "https://api.deepseek.com",
+    "model": "deepseek-v4-pro",
+    "keyPresent": true,
+    "envSources": [
+      "process.env",
+      "D:\\lyh\\agent\\agent-frame\\printersheet\\ai-exam-miniapp\\server\\.env"
+    ]
+  },
+  "traces": [
+    {
+      "generatedProblemId": "gen_partial_score_001",
+      "status": "SUCCESS",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 787201
+    },
+    {
+      "generatedProblemId": "gen_math_002",
+      "status": "SUCCESS",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 394848
+    },
+    {
+      "generatedProblemId": "gen_math_003",
+      "status": "SUCCESS",
+      "providerId": "deepseek",
+      "model": "deepseek-v4-pro",
+      "baseUrl": "https://api.deepseek.com",
+      "latencyMs": 309756
+    }
+  ]
+}

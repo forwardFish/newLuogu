@@ -1,0 +1,95 @@
+{
+  "generatedAt": "2026-06-24T16:14:00.814Z",
+  "items": [
+    {
+      "cycle": 1,
+      "day": 6,
+      "scores": {
+        "t1": 76,
+        "t2": 67,
+        "t3": 43,
+        "t4": 31,
+        "total": 217
+      },
+      "firstPrizeReadiness": 0.38,
+      "stillBlockingWeaknesses": [
+        "partial_score_partial_score_missed_19",
+        "math_model_error_5",
+        "math_partial_score_missed_18"
+      ],
+      "verdict": "Not first-prize ready yet; diagnosis and training focus are still being validated."
+    },
+    {
+      "cycle": 2,
+      "day": 12,
+      "scores": {
+        "t1": 80,
+        "t2": 72,
+        "t3": 51,
+        "t4": 38,
+        "total": 241
+      },
+      "firstPrizeReadiness": 0.48,
+      "stillBlockingWeaknesses": [
+        "partial_score_partial_score_missed_19",
+        "math_partial_score_missed_18",
+        "math_model_error_5"
+      ],
+      "verdict": "Improving, near target zone, but T3/T4 partial-score reliability still decides first-prize probability."
+    },
+    {
+      "cycle": 3,
+      "day": 18,
+      "scores": {
+        "t1": 85,
+        "t2": 76,
+        "t3": 58,
+        "t4": 45,
+        "total": 264
+      },
+      "firstPrizeReadiness": 0.67,
+      "stillBlockingWeaknesses": [
+        "math_model_error_5",
+        "partial_score_partial_score_missed_19",
+        "interval_dp_state_error_4"
+      ],
+      "verdict": "Improving, near target zone, but T3/T4 partial-score reliability still decides first-prize probability."
+    },
+    {
+      "cycle": 4,
+      "day": 24,
+      "scores": {
+        "t1": 89,
+        "t2": 81,
+        "t3": 66,
+        "t4": 52,
+        "total": 288
+      },
+      "firstPrizeReadiness": 0.77,
+      "stillBlockingWeaknesses": [
+        "interval_dp_state_error_4",
+        "math_partial_score_missed_18",
+        "dp_state_error_15"
+      ],
+      "verdict": "Close to first-prize target in simulation, but still requires real contest validation."
+    },
+    {
+      "cycle": 5,
+      "day": 30,
+      "scores": {
+        "t1": 93,
+        "t2": 86,
+        "t3": 74,
+        "t4": 59,
+        "total": 312
+      },
+      "firstPrizeReadiness": 0.87,
+      "stillBlockingWeaknesses": [
+        "dp_state_error_15",
+        "math_model_error_5",
+        "partial_score_partial_score_missed_19"
+      ],
+      "verdict": "Close to first-prize target in simulation, but still requires real contest validation."
+    }
+  ]
+}

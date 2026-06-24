@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-06-24T16:14:00.846Z",
+  "day": 11,
+  "coachDecision": "Continue validating math_model_error_5; do not advance to a new module because yesterday repeated an old weakness.",
+  "reason": [
+    "Highest active priority: math_model_error_5.",
+    "Yesterday completed 1 simulated tasks.",
+    "Old weakness reappeared 1 time(s): math_model_error_5."
+  ],
+  "tasks": [
+    {
+      "taskType": "SELECT",
+      "weaknessId": "math_model_error_5",
+      "problemRef": "P3585",
+      "goal": "Use a historical evidence problem to verify whether the diagnosed weakness still appears on a familiar pattern.",
+      "timeLimitMinutes": 80,
+      "requiredPreSolveOutput": [
+        "Restate problem objective and constraints.",
+        "Name model and why it fits.",
+        "Write 30/50/70/100-point route before coding.",
+        "List boundary and initialization checks."
+      ]
+    },
+    {
+      "taskType": "MUTATE",
+      "weaknessId": "partial_score_partial_score_missed_19",
+      "problemRef": "mut_partial_score_001",
+      "goal": "Change constraints or output target to verify transfer, not memorization.",
+      "timeLimitMinutes": 90,
+      "requiredPreSolveOutput": [
+        "Restate problem objective and constraints.",
+        "Name model and why it fits.",
+        "Write 30/50/70/100-point route before coding.",
+        "List boundary and initialization checks."
+      ]
+    }
+  ],
+  "reviewFocus": [
+    "Did the predicted weakness reappear?",
+    "Which of the 7 stages failed first?",
+    "Should tomorrow lower difficulty, continue validation, or increase transfer pressure?"
+  ]
+}

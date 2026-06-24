@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-06-24T16:14:00.844Z",
+  "day": 10,
+  "summary": {
+    "completedTasks": 1,
+    "acCount": 1,
+    "avgSubmissionCount": 3,
+    "oldWeaknessReappearedCount": 1
+  },
+  "detectedIssues": [
+    {
+      "weaknessId": "math_model_error_5",
+      "issue": "partialScorePlanning",
+      "evidence": "P3585: Hypothesis was hit at partialScorePlanning: Cannot split 30/50/70 points or skips brute-force route."
+    }
+  ],
+  "coachInterpretation": {
+    "todayResult": "PARTIAL_IMPROVEMENT",
+    "mainProblem": "Hypothesis was hit at partialScorePlanning: Cannot split 30/50/70 points or skips brute-force route.",
+    "tomorrowRecommendation": "Continue this weakness with SELECT/MUTATE validation before increasing difficulty."
+  }
+}

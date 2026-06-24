@@ -1,0 +1,188 @@
+{
+  "generatedAt": "2026-06-24T16:14:00.817Z",
+  "principle": "The system's predicted weakness is validated only when the same error appears during training feedback.",
+  "items": [
+    {
+      "weaknessId": "partial_score_partial_score_missed_19",
+      "predictedErrorTypes": [
+        "PARTIAL_SCORE_MISSED",
+        "IMPLEMENTATION_RISK",
+        "OVERFLOW_ERROR",
+        "INDEX_ERROR"
+      ],
+      "observedErrorStages": [
+        "partialScorePlanning",
+        "algorithmDesign"
+      ],
+      "testedProblems": 11,
+      "hitCount": 7,
+      "missCount": 4,
+      "hitRate": 0.64,
+      "hit": true,
+      "confidenceAfter": 0.84,
+      "priorityAfter": 74,
+      "decision": "诊断部分命中：继续观察，任务从同类题切换到变式题。"
+    },
+    {
+      "weaknessId": "math_model_error_5",
+      "predictedErrorTypes": [
+        "MODEL_ERROR",
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "observedErrorStages": [
+        "partialScorePlanning",
+        "algorithmDesign"
+      ],
+      "testedProblems": 8,
+      "hitCount": 5,
+      "missCount": 3,
+      "hitRate": 0.63,
+      "hit": true,
+      "confidenceAfter": 0.88,
+      "priorityAfter": 76.16,
+      "decision": "诊断部分命中：继续观察，任务从同类题切换到变式题。"
+    },
+    {
+      "weaknessId": "math_partial_score_missed_18",
+      "predictedErrorTypes": [
+        "PARTIAL_SCORE_MISSED",
+        "OVERFLOW_ERROR",
+        "IMPLEMENTATION_RISK"
+      ],
+      "observedErrorStages": [
+        "partialScorePlanning",
+        "algorithmDesign"
+      ],
+      "testedProblems": 8,
+      "hitCount": 2,
+      "missCount": 6,
+      "hitRate": 0.25,
+      "hit": false,
+      "confidenceAfter": 0.8,
+      "priorityAfter": 64.72,
+      "decision": "诊断未命中：降低优先级或重新分类，避免浪费训练天数。"
+    },
+    {
+      "weaknessId": "interval_dp_state_error_4",
+      "predictedErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "observedErrorStages": [],
+      "testedProblems": 3,
+      "hitCount": 0,
+      "missCount": 3,
+      "hitRate": 0,
+      "hit": false,
+      "confidenceAfter": 0.83,
+      "priorityAfter": 73.03,
+      "decision": "诊断未命中：降低优先级或重新分类，避免浪费训练天数。"
+    },
+    {
+      "weaknessId": "dp_state_error_15",
+      "predictedErrorTypes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
+        "MODEL_ERROR",
+        "OVERFLOW_ERROR",
+        "INDEX_ERROR"
+      ],
+      "observedErrorStages": [],
+      "testedProblems": 0,
+      "hitCount": 0,
+      "missCount": 0,
+      "hitRate": 0,
+      "hit": false,
+      "confidenceAfter": 0.86,
+      "priorityAfter": 76.95,
+      "decision": "尚未测试：不能判断诊断是否命中。"
+    },
+    {
+      "weaknessId": "greedy_partial_score_missed_1",
+      "predictedErrorTypes": [
+        "PARTIAL_SCORE_MISSED",
+        "IMPLEMENTATION_RISK",
+        "OVERFLOW_ERROR"
+      ],
+      "observedErrorStages": [],
+      "testedProblems": 0,
+      "hitCount": 0,
+      "missCount": 0,
+      "hitRate": 0,
+      "hit": false,
+      "confidenceAfter": 0.82,
+      "priorityAfter": 67.37,
+      "decision": "尚未测试：不能判断诊断是否命中。"
+    },
+    {
+      "weaknessId": "partial_score_model_error_20",
+      "predictedErrorTypes": [
+        "MODEL_ERROR",
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "observedErrorStages": [],
+      "testedProblems": 0,
+      "hitCount": 0,
+      "missCount": 0,
+      "hitRate": 0,
+      "hit": false,
+      "confidenceAfter": 0.82,
+      "priorityAfter": 65.66,
+      "decision": "尚未测试：不能判断诊断是否命中。"
+    },
+    {
+      "weaknessId": "graph_model_error_37",
+      "predictedErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "observedErrorStages": [],
+      "testedProblems": 0,
+      "hitCount": 0,
+      "missCount": 0,
+      "hitRate": 0,
+      "hit": false,
+      "confidenceAfter": 0.73,
+      "priorityAfter": 54.7,
+      "decision": "尚未测试：不能判断诊断是否命中。"
+    },
+    {
+      "weaknessId": "math_model_error_40",
+      "predictedErrorTypes": [
+        "MODEL_ERROR"
+      ],
+      "observedErrorStages": [],
+      "testedProblems": 0,
+      "hitCount": 0,
+      "missCount": 0,
+      "hitRate": 0,
+      "hit": false,
+      "confidenceAfter": 0.72,
+      "priorityAfter": 52.26,
+      "decision": "尚未测试：不能判断诊断是否命中。"
+    },
+    {
+      "weaknessId": "implementation_implementation_risk_38",
+      "predictedErrorTypes": [
+        "IMPLEMENTATION_RISK"
+      ],
+      "observedErrorStages": [],
+      "testedProblems": 0,
+      "hitCount": 0,
+      "missCount": 0,
+      "hitRate": 0,
+      "hit": false,
+      "confidenceAfter": 0.72,
+      "priorityAfter": 50.72,
+      "decision": "尚未测试：不能判断诊断是否命中。"
+    }
+  ]
+}

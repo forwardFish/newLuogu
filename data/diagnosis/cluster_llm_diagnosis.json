@@ -1,21 +1,32 @@
 {
-  "generatedAt": "2026-06-24T03:44:37.735Z",
-  "note": "DeepSeek key was not found. Deterministic rule-based cluster diagnosis was used as offline fallback.",
+  "generatedAt": "2026-06-24T14:57:56.233Z",
+  "note": "Cluster diagnosis is generated from DeepSeek evidence-pack calls with rule fallback on provider failures.",
   "provider": {
     "providerId": "deepseek",
-    "keyPresent": false
+    "providerLabel": "DeepSeek",
+    "baseUrl": "https://api.deepseek.com",
+    "model": "deepseek-v4-pro",
+    "keyPresent": true,
+    "envSources": [
+      "process.env",
+      "D:\\lyh\\agent\\agent-frame\\printersheet\\ai-exam-miniapp\\server\\.env"
+    ],
+    "limit": 30,
+    "requireReal": true
   },
   "items": [
     {
       "clusterId": "greedy_unknown_068",
-      "clusterDiagnosis": "贪心 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "clusterDiagnosis": "难题部分分拆解和得分策略不足，表现为反复提交但始终卡在10分，未能识别可独立解决的部分分步骤或暴力子问题，导致大量无效尝试。",
       "commonErrorTypes": [
-        "PARTIAL_SCORE_MISSED"
+        "PARTIAL_SCORE_MISSED",
+        "IMPLEMENTATION_RISK",
+        "OVERFLOW_ERROR"
       ],
       "evidenceSummary": [
-        "问题簇包含 1 道题，平均提交 10 次。",
-        "未解决 1 道，部分分题 1 道。",
-        "共同标签：PARTIAL_STUCK, UNSOLVED_HIGH_ATTEMPT, OVERFLOW_RISK, RECURSION_STACK_RISK, T1_STABILITY, T3_PARTIAL_SCORE"
+        "代表题U619605共提交10次，分数轨迹始终为10分，无任何提升，表明学生未针对部分分进行有效拆解。",
+        "最终版本代码标记为PARTIAL_SCORE_CODE，且存在POSSIBLE_INT_OVERFLOW和RECURSION风险，说明实现存在隐患且未利用部分分策略。",
+        "题目簇平均尝试次数高达10次，部分分比例100%，但所有提交均停留在低分，反映缺乏从题目中提取可得分步骤的能力。"
       ],
       "representativeProblems": [
         "U619605"
@@ -23,29 +34,28 @@
       "trainingAction": {
         "module": "greedy",
         "tasks": [
-          "2 道 贪心 基础题，要求写清模型含义。",
-          "2 道 贪心 中档题，限时并记录提交次数。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "针对难题，强制要求先写出30-50-70分方案，明确每个部分分的算法思路和边界条件，再开始编码。",
+          "练习将复杂问题拆解为独立子问题，例如先实现暴力枚举或简单贪心获得基础分，再优化。",
+          "学习识别并规避常见风险（如整数溢出、递归栈深度），在部分分代码中优先保证正确性而非完整解。"
         ],
-        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        "verifyMethod": "同类难题提交次数降至2次以内，且能清晰写出至少两个不同得分档次的解法（如30分暴力、70分优化），代码中无OVERFLOW或RECURSION风险标记。"
       },
       "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "string_state_init_boundary_027",
-      "clusterDiagnosis": "字符串 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "clusterDiagnosis": "学生缺乏将难题拆解为部分分的能力，常因模型定义不清、边界处理不当导致反复提交，未能有效利用部分分策略逐步逼近正解。",
       "commonErrorTypes": [
-        "STATE_ERROR",
-        "INIT_ERROR",
+        "MODEL_ERROR",
         "BOUNDARY_ERROR",
         "PARTIAL_SCORE_MISSED"
       ],
       "evidenceSummary": [
-        "问题簇包含 2 道题，平均提交 10.5 次。",
-        "未解决 0 道，部分分题 2 道。",
-        "共同标签：PARTIAL_TO_AC, MULTI_FAIL_THEN_AC, STRING_BOUNDARY_RISK, T1_STABILITY, T3_PARTIAL_SCORE, T4_STRATEGY"
+        "P9750 提交13次，分数轨迹为 10→60(连续9次)→100，表明长时间卡在60分部分分，最终才突破至AC，存在明显的部分分瓶颈。",
+        "P5740 提交8次，分数轨迹波动剧烈（0→90→100→100→0→20→100），多次回退到低分，反映模型或边界修正不稳定。",
+        "两个代表题均标记了 STRING_BOUNDARY_RISK 和 OVERFLOW_RISK，且 P9750 的初版代码有 PARTIAL_SCORE_CODE 标记，说明边界和部分分实现是共性问题。"
       ],
       "representativeProblems": [
         "P9750",
@@ -54,30 +64,29 @@
       "trainingAction": {
         "module": "string",
         "tasks": [
-          "2 道 字符串 基础题，要求写清模型含义。",
-          "2 道 字符串 中档题，限时并记录提交次数。",
-          "每题提交前必须写边界和初始化检查清单。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "针对字符串/数学类难题，强制要求先写出30分、50分、70分的部分分方案（包括状态定义、边界条件），再编码实现。",
+          "限时训练：给出题目后，15分钟内必须提交一个部分分解，然后迭代优化，每次提交需记录修改点（如边界调整、模型修正）。",
+          "专项练习边界条件：设计包含空串、单字符、极长串、数值溢出等边界测试用例，要求代码通过所有边界测试后才能提交。"
         ],
-        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        "verifyMethod": "同类难题（如字符串+数学组合）提交次数降至≤3次，且能清晰描述部分分策略和边界处理方案，最终AC率≥80%。"
       },
-      "confidence": 0.9,
+      "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "shortest_path_state_init_boundary_013",
-      "clusterDiagnosis": "最短路 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "clusterDiagnosis": "学生缺乏对难题部分分拆解和得分策略的系统训练，导致在最短路径相关难题上反复提交但无法突破部分分瓶颈，根因在于未掌握如何根据题目约束和数据范围设计分层得分方案（如暴力、特殊性质、正解），且对状态初始化、边界条件和图建模的细节处理不扎实。",
       "commonErrorTypes": [
-        "STATE_ERROR",
+        "MODEL_ERROR",
         "INIT_ERROR",
         "BOUNDARY_ERROR",
         "PARTIAL_SCORE_MISSED"
       ],
       "evidenceSummary": [
-        "问题簇包含 3 道题，平均提交 4.67 次。",
-        "未解决 3 道，部分分题 3 道。",
-        "共同标签：PARTIAL_STUCK, SHORTEST_PATH_INIT_RISK, RECURSION_STACK_RISK, T2_MODELING, T3_PARTIAL_SCORE, NEVER_AC"
+        "代表题P2452提交11次，分数轨迹从0分到长期卡在70分，最后降至20分，显示学生无法稳定获取部分分，且多次提交未改变核心算法结构，符合PARTIAL_STUCK模式。",
+        "P2452和P3685均涉及shortest_path模块，且风险标记中反复出现SHORTEST_PATH_INIT_RISK、GRAPH_MODEL_RISK、ARRAY_INDEX_RISK，表明图建模、初始化和边界处理是常见错误。",
+        "P3685仅提交1次得10分，代码存在DEEP_BRACE_NESTING、LARGE_GLOBAL_ARRAY、MEMSET_SENTINEL等风险，说明学生可能使用了不恰当的模板或复杂度过高的方法，缺乏部分分意识。"
       ],
       "representativeProblems": [
         "P2452",
@@ -86,30 +95,28 @@
       "trainingAction": {
         "module": "shortest_path",
         "tasks": [
-          "2 道 最短路 基础题，要求写清模型含义。",
-          "2 道 最短路 中档题，限时并记录提交次数。",
-          "每题提交前必须写边界和初始化检查清单。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "针对最短路径难题，训练学生根据数据范围设计多档部分分方案：先写暴力（如DFS全排列）拿10-20分，再针对特殊性质（如边权为1、DAG）写简化算法拿30-50分，最后尝试正解优化。",
+          "强化图建模和状态初始化专项练习：给出若干需要转化图模型的最短路问题（如P2452），要求学生明确写出状态定义、初始化值（如dist数组、inf边界）、转移方程，并人工检查边界条件（如起点、终点、不可达状态）。",
+          "限时重构训练：选取P2452类似题目，要求学生在30分钟内写出能稳定获得70分的代码，重点检查初始化、数组索引和递归/迭代边界，避免因实现细节丢分。"
         ],
-        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        "verifyMethod": "同类最短路径难题（如P2452级别）提交次数≤2次，且能清晰写出30-50-70分方案，代码中无SHORTEST_PATH_INIT_RISK、ARRAY_INDEX_RISK等标记，部分分得分率≥70%。"
       },
-      "confidence": 0.92,
+      "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "interval_dp_state_init_boundary_001",
-      "clusterDiagnosis": "区间 DP 相关题目集中暴露出区间 DP 的状态设计、初始化和枚举顺序不稳定。",
+      "clusterDiagnosis": "区间 DP 的状态设计不稳定，初始化与边界处理反复出错，导致多次提交才从部分分修正到 AC。",
       "commonErrorTypes": [
         "STATE_ERROR",
         "INIT_ERROR",
-        "BOUNDARY_ERROR",
-        "PARTIAL_SCORE_MISSED"
+        "BOUNDARY_ERROR"
       ],
       "evidenceSummary": [
-        "问题簇包含 8 道题，平均提交 9.63 次。",
-        "未解决 0 道，部分分题 8 道。",
-        "共同标签：PARTIAL_TO_AC, INTERVAL_DP_ORDER_RISK, RECURSION_STACK_RISK, T2_MODELING, T3_PARTIAL_SCORE, T4_STRATEGY"
+        "代表题 P8699 提交 16 次，分数轨迹从 0 分反复在 30-40 分波动，最终才达到 100 分，说明状态或初始化多次调整。",
+        "代表题 U463446 提交 11 次，前两次 0 分，之后 66 分，再修正到 100 分，符合边界或初始化逐步修正的模式。",
+        "两个代表题均标记了 INTERVAL_DP_ORDER_RISK 和 ARRAY_INDEX_RISK 等风险，且平均提交次数高达 9.63，表明区间 DP 的枚举顺序和下标控制是常见卡点。"
       ],
       "representativeProblems": [
         "P8699",
@@ -118,20 +125,19 @@
       "trainingAction": {
         "module": "interval_dp",
         "tasks": [
-          "2 道 区间 DP 基础题，要求写清模型含义。",
-          "2 道 区间 DP 中档题，限时并记录提交次数。",
-          "每题提交前必须写边界和初始化检查清单。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "强制写出区间 DP 的状态定义、转移方程、初始化条件和边界枚举顺序的伪代码，对照标准模板逐行检查。",
+          "针对经典区间 DP 题目（如石子合并、括号匹配）进行限时专项训练，要求一次提交通过率 ≥ 80%，否则重做并记录错误原因。",
+          "设计变长区间、环形区间等变形题，训练在不同初始化策略（如 memset、手动赋值）和边界条件（如 len=1 或 i+len-1 越界）下的调试能力。"
         ],
-        "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。"
+        "verifyMethod": "同类区间 DP 新题提交次数 ≤ 2 次，且能清晰写出状态定义、初始化逻辑和 30-50-70 分的部分分方案。"
       },
-      "confidence": 0.92,
+      "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "interval_dp_state_init_boundary_037",
-      "clusterDiagnosis": "区间 DP 相关题目集中暴露出区间 DP 的状态设计、初始化和枚举顺序不稳定。",
+      "clusterDiagnosis": "区间 DP 的状态设计、初始化和枚举顺序不稳定，导致反复提交且卡在部分分，根因是未能正确划分区间、初始化边界值以及处理环状/树形结构的 DP 顺序。",
       "commonErrorTypes": [
         "STATE_ERROR",
         "INIT_ERROR",
@@ -139,9 +145,10 @@
         "PARTIAL_SCORE_MISSED"
       ],
       "evidenceSummary": [
-        "问题簇包含 6 道题，平均提交 4.83 次。",
-        "未解决 6 道，部分分题 6 道。",
-        "共同标签：PARTIAL_STUCK, INTERVAL_DP_ORDER_RISK, T2_MODELING, T3_PARTIAL_SCORE, RECURSION_STACK_RISK, MATH_OVERFLOW_RISK"
+        "P11858 提交 10 次，分数长期卡在 6 分，最终仅提升至 15 分，风险标记含 RECURSION，表明区间 DP 状态或递归实现有误。",
+        "T699486 提交 2 次，分数从 50 跌至 0，风险标记含 RECURSION 和 PARTIAL_SCORE_CODE，说明初始化或边界处理不当导致后续版本完全失败。",
+        "P1967 提交 4 次，分数从 0 逐步升至 30 但停滞，最终版本含 LARGE_GLOBAL_ARRAY 和 ARRAY_INDEX_RISK，提示状态定义或索引计算存在缺陷。",
+        "所有代表题均涉及 interval_dp 模块，且 commonRiskFlags 包含 DP_STATE_RISK、DP_INIT_RISK、INTERVAL_DP_ORDER_RISK，与诊断一致。"
       ],
       "representativeProblems": [
         "P11858",
@@ -151,28 +158,31 @@
       "trainingAction": {
         "module": "interval_dp",
         "tasks": [
-          "2 道 区间 DP 基础题，要求写清模型含义。",
-          "2 道 区间 DP 中档题，限时并记录提交次数。",
-          "每题提交前必须写边界和初始化检查清单。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "专项练习区间 DP 的状态定义：针对线性区间、环状区间、树形区间分别设计 dp[l][r] 或 dp[l][r][k] 的含义，并写出状态转移方程。",
+          "强化初始化和边界处理：手动模拟小规模数据（如 n=3,4），验证 dp 表的初始值（如长度为 1 的区间、非法状态设为 -inf），并检查循环枚举顺序（长度、起点、分割点）。",
+          "限时完成 3 道经典区间 DP 题（如石子合并、能量项链、括号匹配），要求写出 30-50-70 分的部分分方案，并对比满分做法，总结初始化与边界差异。"
         ],
-        "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。"
+        "verifyMethod": "同类区间 DP 题提交次数 ≤ 2 次，且能清晰写出状态定义、初始化规则、枚举顺序，并在 30 分钟内获得至少 70% 分数。"
       },
-      "confidence": 0.92,
+      "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "math_model_template_011",
-      "clusterDiagnosis": "数学 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "clusterDiagnosis": "难题部分分拆解和得分策略不足，表现为模型定义不完整、状态转移遗漏、边界初始化错误，导致反复提交和卡部分分。",
       "commonErrorTypes": [
         "MODEL_ERROR",
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
         "PARTIAL_SCORE_MISSED"
       ],
       "evidenceSummary": [
-        "问题簇包含 23 道题，平均提交 9.65 次。",
-        "未解决 0 道，部分分题 23 道。",
-        "共同标签：PARTIAL_TO_AC, MATH_OVERFLOW_RISK, T1_STABILITY, T3_PARTIAL_SCORE, T4_STRATEGY, RECURSION_STACK_RISK"
+        "P3585 提交24次，分数轨迹从0分反复到21分部分分，最终AC，风险标记含LONG_CODE、RECURSION、ARRAY_INDEX_RISK，说明模型和边界修正耗时极长。",
+        "P1115 提交5次，首次80分部分分，后续AC，风险标记含PARTIAL_SCORE_CODE，表明初始模型或边界未覆盖全部分。",
+        "P4017 提交6次，分数轨迹出现100→0→100→20→100的波动，风险标记含RECURSION、ARRAY_INDEX_RISK，反映状态转移或初始化不稳定。",
+        "所有代表题均出现PARTIAL_TO_AC模式，平均尝试9.65次，部分分比例100%，共同风险标记含MATH_OVERFLOW_RISK、RECURSION_STACK_RISK等，指向数学建模和实现细节薄弱。"
       ],
       "representativeProblems": [
         "P3585",
@@ -182,26 +192,28 @@
       "trainingAction": {
         "module": "math",
         "tasks": [
-          "2 道 数学 基础题，要求写清模型含义。",
-          "2 道 数学 中档题，限时并记录提交次数。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "针对数学建模题，强制要求先写出完整的状态定义、转移方程、初始化和边界条件，再编码。",
+          "练习拆解部分分：对每道题明确30-50-70分方案，并实现对应子任务，例如先暴力、再优化、最后处理边界。",
+          "专项训练递归转递推、数组索引防越界、long long防溢出，使用P4017同类拓扑排序DP题巩固。"
         ],
-        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        "verifyMethod": "同类数学建模题提交次数≤2次，能清晰写出状态定义、转移方程、初始化及边界，并实现至少两个部分分解法。"
       },
-      "confidence": 0.92,
+      "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "search_unknown_024",
-      "clusterDiagnosis": "搜索 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "clusterDiagnosis": "难题部分分拆解能力不足，未能针对不同数据范围设计分层算法，导致多次提交才从低分逐步修正到满分。",
       "commonErrorTypes": [
-        "PARTIAL_SCORE_MISSED"
+        "PARTIAL_SCORE_MISSED",
+        "MODEL_ERROR",
+        "BOUNDARY_ERROR"
       ],
       "evidenceSummary": [
-        "问题簇包含 1 道题，平均提交 5 次。",
-        "未解决 0 道，部分分题 1 道。",
-        "共同标签：PARTIAL_TO_AC, MULTI_FAIL_THEN_AC, SEARCH_PRUNING_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK"
+        "代表题 P7411 提交 5 次，分数轨迹为 10→10→10→100→100，呈现典型的部分分到 AC 模式。",
+        "首次提交仅得 10 分，风险标记包含 PARTIAL_SCORE_CODE，说明初始代码仅针对小数据或特殊情况。",
+        "最终 AC 版本仍存在 ARRAY_INDEX_RISK 和 RECURSION 风险，但通过修正模型或边界达到了满分。"
       ],
       "representativeProblems": [
         "P7411"
@@ -209,27 +221,28 @@
       "trainingAction": {
         "module": "search",
         "tasks": [
-          "2 道 搜索 基础题，要求写清模型含义。",
-          "2 道 搜索 中档题，限时并记录提交次数。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "针对搜索类难题，训练根据数据范围拆解部分分的能力：例如 n≤10 用暴力搜索，n≤1000 用剪枝或记忆化，n≤1e5 用更高效算法。",
+          "强化边界条件处理：练习在 DFS/BFS 中正确初始化数组、处理递归栈溢出风险，并针对不同数据范围设计不同的状态表示。",
+          "模拟赛训练：限时完成 2-3 道有部分分的搜索题，要求先写出 30-50-70 分的分段方案，再逐步优化到满分。"
         ],
-        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        "verifyMethod": "同类搜索难题提交次数 ≤ 2 次，且能清晰写出不同数据范围下的算法思路和部分分方案。"
       },
       "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "graph_model_template_044",
-      "clusterDiagnosis": "图论建模 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "clusterDiagnosis": "学生缺乏针对难题的分步拆解与部分分策略，反复在模型构建和边界处理上出错，导致多次提交才从部分分到达AC。",
       "commonErrorTypes": [
         "MODEL_ERROR",
+        "BOUNDARY_ERROR",
         "PARTIAL_SCORE_MISSED"
       ],
       "evidenceSummary": [
-        "问题簇包含 5 道题，平均提交 10.4 次。",
-        "未解决 0 道，部分分题 5 道。",
-        "共同标签：PARTIAL_TO_AC, GRAPH_MODEL_RISK, T2_MODELING, T3_PARTIAL_SCORE, T4_STRATEGY, OVERFLOW_RISK"
+        "代表题U465842提交27次，分数轨迹在100、96、82、46、43、21、0、4之间反复，呈现典型的从部分分到AC的波动，且多次出现非满分后回退，说明模型修正和边界处理不稳定。",
+        "代表题P15267提交6次，分数轨迹从0到20再到100，存在明显的部分分阶段，但初始版本得0分，表明初始模型或实现有严重缺陷。",
+        "两题均涉及graph模块，且风险标记包含GRAPH_MODEL_RISK、ARRAY_INDEX_RISK、RECURSION_STACK_RISK等，平均尝试次数10.4，部分分比例100%，说明学生习惯通过多次提交试探部分分，而非预先设计得分策略。"
       ],
       "representativeProblems": [
         "U465842",
@@ -238,28 +251,29 @@
       "trainingAction": {
         "module": "graph",
         "tasks": [
-          "2 道 图论建模 基础题，要求写清模型含义。",
-          "2 道 图论建模 中档题，限时并记录提交次数。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "针对图论难题，训练学生先写出30-50-70分部分分方案（如暴力、特判、简化模型），再逐步优化到满分。",
+          "强化图模型构建的规范性：要求学生在纸上明确状态定义、转移方程、边界条件，并检查数组索引、递归深度等常见风险。",
+          "限时完成同类题（如最短路径变种、连通性难题），要求提交次数≤2次，且第一次提交必须包含至少30分的部分分解法。"
         ],
-        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        "verifyMethod": "同类图论难题提交次数≤2次，且能清晰写出状态定义、边界条件和30-50-70分拆解方案。"
       },
-      "confidence": 0.92,
+      "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "string_state_init_boundary_047",
-      "clusterDiagnosis": "字符串 相关题目集中暴露出高难题部分分与取舍策略不足。",
+      "clusterDiagnosis": "学生面对高难字符串/数学题时缺乏部分分策略，长期陷入0分，未根据数据范围设计分段解法或暴力，且存在递归栈溢出、整数溢出等实现风险，导致完全无法得分。",
       "commonErrorTypes": [
-        "STATE_ERROR",
-        "INIT_ERROR",
-        "BOUNDARY_ERROR"
+        "PARTIAL_SCORE_MISSED",
+        "OVERFLOW_ERROR",
+        "COMPLEXITY_ERROR",
+        "IMPLEMENTATION_RISK"
       ],
       "evidenceSummary": [
-        "问题簇包含 2 道题，平均提交 16 次。",
-        "未解决 2 道，部分分题 0 道。",
-        "共同标签：ZERO_STUCK, UNSOLVED_HIGH_ATTEMPT, STRING_BOUNDARY_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK, T1_STABILITY"
+        "代表题U519362共24次提交，分数轨迹全为0，长期0分，说明学生未针对部分分设计解法，可能直接尝试正解但失败。",
+        "最终版本代码存在DEFINE_INT_LONG_LONG和RECURSION风险标记，结合avgAttempts=16和ZERO_STUCK模式，表明学生可能因递归栈溢出或整数溢出导致运行错误，且未采用迭代或分段处理。",
+        "题目涉及string和math模块，commonRiskFlags包含STRING_BOUNDARY_RISK、OVERFLOW_RISK、RECURSION_STACK_RISK、MATH_OVERFLOW_RISK，说明学生在边界处理、数值溢出和递归深度控制上存在普遍问题。"
       ],
       "representativeProblems": [
         "U519362"
@@ -267,27 +281,31 @@
       "trainingAction": {
         "module": "string",
         "tasks": [
-          "2 道 字符串 基础题，要求写清模型含义。",
-          "2 道 字符串 中档题，限时并记录提交次数。",
-          "每题提交前必须写边界和初始化检查清单。"
+          "针对字符串/数学高难题，训练根据数据范围设计30-50-70分部分分解法：先写暴力保证小数据正确，再逐步优化。",
+          "专项练习递归转迭代、手动栈模拟，避免递归栈溢出；强化long long使用场景和模运算防溢出。",
+          "限时完成同类题（如洛谷P3375、P3808），要求提交次数≤2次，且必须包含至少两个不同数据范围的解法版本。"
         ],
-        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+        "verifyMethod": "同类题提交≤2次，能写出状态定义/边界/30-50-70分方案，且代码无RECURSION_STACK_RISK或OVERFLOW_RISK标记。"
       },
-      "confidence": 0.9,
+      "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "dsu_model_template_054",
-      "clusterDiagnosis": "并查集 相关题目集中暴露出并查集的集合含义、合并条件或离散化细节不稳定。",
+      "clusterDiagnosis": "并查集模型定义不稳定，合并条件与离散化细节反复出错，导致多次提交才从部分分修正到 AC。",
       "commonErrorTypes": [
         "MODEL_ERROR",
-        "PARTIAL_SCORE_MISSED"
+        "BOUNDARY_ERROR",
+        "INIT_ERROR",
+        "INDEX_ERROR",
+        "OVERFLOW_ERROR"
       ],
       "evidenceSummary": [
-        "问题簇包含 4 道题，平均提交 8.5 次。",
-        "未解决 0 道，部分分题 4 道。",
-        "共同标签：PARTIAL_TO_AC, DSU_MODEL_RISK, DSU_DISCRETIZATION_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK"
+        "代表题 P1955 提交 19 次，分数轨迹从 10 分逐步提升到 100 分，呈现典型的 PARTIAL_TO_AC 模式，说明模型或边界问题逐步修正。",
+        "首次提交仅得 10 分，代码存在 LARGE_GLOBAL_ARRAY、RECURSION、POSSIBLE_INT_OVERFLOW、ARRAY_INDEX_RISK 等风险标记，暗示初始化或索引处理不当。",
+        "最终 AC 版本代码行数从 50 行增加到 75 行，仍保留 LARGE_GLOBAL_ARRAY、RECURSION、POSSIBLE_INT_OVERFLOW、ARRAY_INDEX_RISK 标记，表明核心逻辑修正但底层风险未完全消除。",
+        "题目涉及 dsu、greedy、binary_search 模块，但风险集中在 DSU_MODEL_RISK 和 DSU_DISCRETIZATION_RISK，说明并查集集合含义与离散化映射是主要障碍。"
       ],
       "representativeProblems": [
         "P1955"
@@ -295,26 +313,30 @@
       "trainingAction": {
         "module": "dsu",
         "tasks": [
-          "2 道 并查集 基础题，要求写清模型含义。",
-          "2 道 并查集 中档题，限时并记录提交次数。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "手写并查集模板，明确 father 数组初始化、路径压缩与按秩合并的标准写法，并解释集合代表元的含义。",
+          "针对离散化场景，练习将大范围数据映射到连续下标，并验证合并条件（如相等/不等关系）在离散化后的正确性。",
+          "完成 3 道带离散化的并查集变种题（如 P1955 同类），要求先写出状态定义、合并规则和边界处理伪代码，再编码，目标提交次数 ≤ 2 次。"
         ],
-        "verifyMethod": "能说明集合含义、合并条件和离散化方式，提交次数 <= 2。"
+        "verifyMethod": "同类题（如 P1955 变种）提交 ≤ 2 次，能清晰写出并查集模型定义、离散化映射逻辑和初始化边界，且代码无 INDEX_ERROR 或 OVERFLOW_ERROR 风险。"
       },
-      "confidence": 0.92,
+      "confidence": 0.9,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "graph_model_template_057",
-      "clusterDiagnosis": "图论建模 相关题目集中暴露出高难题部分分与取舍策略不足。",
+      "clusterDiagnosis": "学生面对高难图论题时缺乏部分分策略，盲目堆砌复杂模型导致代码膨胀、调试困难，最终无法获得任何分数，暴露出从暴力到正解的渐进式优化能力不足。",
       "commonErrorTypes": [
-        "MODEL_ERROR"
+        "MODEL_ERROR",
+        "COMPLEXITY_ERROR",
+        "PARTIAL_SCORE_MISSED",
+        "IMPLEMENTATION_RISK",
+        "DEBUG_TIMEOUT"
       ],
       "evidenceSummary": [
-        "问题簇包含 1 道题，平均提交 10 次。",
-        "未解决 1 道，部分分题 0 道。",
-        "共同标签：UNKNOWN_PATTERN, UNSOLVED_HIGH_ATTEMPT, GRAPH_MODEL_RISK, STRING_BOUNDARY_RISK, MATH_OVERFLOW_RISK, SEARCH_PRUNING_RISK"
+        "代表题 U643929 共提交 10 次，分数轨迹从 397096、407279 骤降至连续 0 分，表明早期版本可能获得部分分，但后续修改完全失败。",
+        "代码规模从初版 355 行膨胀至终版 559 行，最大嵌套深度从 5 增至 6，风险标记新增 LARGE_GLOBAL_ARRAY 和 ARRAY_INDEX_RISK，显示模型复杂化引入更多实现风险。",
+        "题目涉及 graph、string、greedy、knapsack_dp、math、dfs_bfs、search 等多模块，但学生未设计分层部分分方案，导致在复杂实现中迷失。"
       ],
       "representativeProblems": [
         "U643929"
@@ -322,28 +344,29 @@
       "trainingAction": {
         "module": "graph",
         "tasks": [
-          "2 道 图论建模 基础题，要求写清模型含义。",
-          "2 道 图论建模 中档题，限时并记录提交次数。"
+          "强制训练部分分设计：对每道高难题，先写出 30 分暴力、50 分优化、70 分特殊性质、100 分正解的方案，并分别实现验证。",
+          "针对图论建模，练习将复杂问题拆解为已知模板（如最短路、生成树、网络流）的组合，避免从零构建巨型模型。",
+          "限时重构训练：给定一个已有部分分的代码，要求在 30 分钟内优化至下一档分数，重点练习增量改进而非重写。"
         ],
-        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+        "verifyMethod": "同类高难图论题提交次数 ≤ 3 次，且至少获得 30 分部分分；能清晰写出状态定义、边界条件及 30-50-70 分方案。"
       },
       "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "shortest_path_state_init_boundary_063",
-      "clusterDiagnosis": "最短路 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "clusterDiagnosis": "学生能写出最短路基本框架，但多次提交卡在部分分，根因是初始化、边界条件和图建模细节反复出错，缺乏‘先拆部分分再优化到满分’的稳定得分策略。",
       "commonErrorTypes": [
-        "STATE_ERROR",
         "INIT_ERROR",
         "BOUNDARY_ERROR",
+        "MODEL_ERROR",
         "PARTIAL_SCORE_MISSED"
       ],
       "evidenceSummary": [
-        "问题簇包含 2 道题，平均提交 8.5 次。",
-        "未解决 0 道，部分分题 2 道。",
-        "共同标签：PARTIAL_TO_AC, MULTI_FAIL_THEN_AC, GRAPH_MODEL_RISK, SHORTEST_PATH_INIT_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK"
+        "P3371 提交 9 次，分数轨迹 60→60→60→60→60→0→70→100→100，长期卡在 60 分，中间出现 0 分，最终 AC，说明初始化或边界反复出错。",
+        "P4779 提交 8 次，分数轨迹 14→14→0→14→14→14→100→100，长期卡在 14 分，中间出现 0 分，最终 AC，说明图建模或算法选择（如未用堆优化）导致大量部分分丢失。",
+        "两题均标记了 ARRAY_INDEX_RISK、RECURSION、PARTIAL_SCORE_CODE 等风险，且 firstVersion 均为 PC，firstAcOrBestVersion 才消除部分风险，表明学生缺乏对部分分原因的快速定位能力。"
       ],
       "representativeProblems": [
         "P3371",
@@ -352,29 +375,28 @@
       "trainingAction": {
         "module": "shortest_path",
         "tasks": [
-          "2 道 最短路 基础题，要求写清模型含义。",
-          "2 道 最短路 中档题，限时并记录提交次数。",
-          "每题提交前必须写边界和初始化检查清单。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "强制写‘部分分拆解文档’：对每道最短路题，先列出 30/50/70 分对应的算法版本（如 Floyd、Bellman-Ford、Dijkstra 无堆优化）及其适用数据范围，再动手实现。",
+          "专项练习初始化与边界：设计 5 道初始化易错题（如源点距离 0 还是 INF、多源、负权边），要求一次 AC 且代码注释写明每个数组的初始值。",
+          "对比训练：同一题用不同建图方式（邻接矩阵、邻接表、链式前向星）实现，并分析数组越界风险，提交至 AC 为止。"
         ],
-        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        "verifyMethod": "同类最短路难题（如 P4779 加强版）提交 ≤ 2 次即 AC，且能口头说清 30-50-70 分方案及初始化边界。"
       },
-      "confidence": 0.9,
+      "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "interval_dp_state_init_boundary_066",
-      "clusterDiagnosis": "区间 DP 相关题目集中暴露出区间 DP 的状态设计、初始化和枚举顺序不稳定。",
+      "clusterDiagnosis": "区间 DP 状态设计错误（未正确定义 dp[i][j] 含义）且初始化与边界处理缺失，导致所有提交均为 0 分，属于模型理解层面的根本性错误。",
       "commonErrorTypes": [
-        "STATE_ERROR",
+        "MODEL_ERROR",
         "INIT_ERROR",
         "BOUNDARY_ERROR"
       ],
       "evidenceSummary": [
-        "问题簇包含 2 道题，平均提交 11.5 次。",
-        "未解决 2 道，部分分题 0 道。",
-        "共同标签：ZERO_STUCK, UNSOLVED_HIGH_ATTEMPT, INTERVAL_DP_ORDER_RISK, STRING_BOUNDARY_RISK, RECURSION_STACK_RISK, T2_MODELING"
+        "代表题 P1919 共提交 14 次，分数轨迹全部为 0 分，无任何部分分，表明不是细节错误而是整体模型错误。",
+        "commonRiskFlags 包含 INTERVAL_DP_ORDER_RISK、STRING_BOUNDARY_RISK、ARRAY_INDEX_RISK，指向区间 DP 顺序、字符串边界和数组索引问题。",
+        "commonScorePatterns 为 ZERO_STUCK，且 avgAttempts 高达 11.5，说明学生反复尝试但始终无法突破零分，缺乏正确的状态定义和初始化。"
       ],
       "representativeProblems": [
         "P1919"
@@ -382,26 +404,28 @@
       "trainingAction": {
         "module": "interval_dp",
         "tasks": [
-          "2 道 区间 DP 基础题，要求写清模型含义。",
-          "2 道 区间 DP 中档题，限时并记录提交次数。",
-          "每题提交前必须写边界和初始化检查清单。"
+          "重做区间 DP 模板题（如石子合并），强制写出 dp[i][j] 状态定义、初始化（dp[i][i] 或长度为 1 的区间）、转移方程和枚举顺序（区间长度从小到大）。",
+          "针对 P1919 同类字符串区间 DP 问题，设计专项练习：先手动模拟小区间合并过程，再编写代码，重点检查字符串下标从 0 还是 1 开始、边界条件（如 i>j 的处理）。",
+          "限时完成 3 道区间 DP 变种题（如括号匹配、回文串分割），要求提交前必须通过自拟的小样例（包括边界如空串、单字符）和中等规模随机测试，且首次提交得分不低于 30 分。"
         ],
-        "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。"
+        "verifyMethod": "同类区间 DP 题提交次数 ≤ 2 次，且能清晰写出状态定义、初始化、转移方程和边界处理，首次提交至少获得 30 分（部分分），最终 AC。"
       },
       "confidence": 0.9,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "dfs_bfs_unknown_075",
-      "clusterDiagnosis": "DFS/BFS 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "clusterDiagnosis": "难题部分分拆解能力不足，缺乏从暴力到正解的渐进式建模与剪枝策略，导致多次提交才从0分突破到部分分并最终AC。",
       "commonErrorTypes": [
+        "MODEL_ERROR",
+        "STATE_ERROR",
         "PARTIAL_SCORE_MISSED"
       ],
       "evidenceSummary": [
-        "问题簇包含 1 道题，平均提交 12 次。",
-        "未解决 0 道，部分分题 1 道。",
-        "共同标签：PARTIAL_TO_AC, MULTI_FAIL_THEN_AC, STRING_BOUNDARY_RISK, MATH_OVERFLOW_RISK, SEARCH_PRUNING_RISK, OVERFLOW_RISK"
+        "代表题P1030共提交12次，分数轨迹为连续7次0分后出现20分部分分，再经2次达到100分，呈现典型的从零分到部分分再到AC的突破模式。",
+        "题目涉及dfs_bfs、math、string、search多模块交叉，风险标记包括STRING_BOUNDARY_RISK、MATH_OVERFLOW_RISK、SEARCH_PRUNING_RISK等，表明边界处理、数值溢出和搜索剪枝是主要障碍。",
+        "首次AC版本代码量达599行（非空行），深度3层括号，标记为LONG_CODE和RECURSION，说明最终方案复杂度高，可能缺乏简洁的状态定义和剪枝优化。"
       ],
       "representativeProblems": [
         "P1030"
@@ -409,26 +433,28 @@
       "trainingAction": {
         "module": "dfs_bfs",
         "tasks": [
-          "2 道 DFS/BFS 基础题，要求写清模型含义。",
-          "2 道 DFS/BFS 中档题，限时并记录提交次数。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "针对难题，强制要求先写出30分暴力解（如枚举/简单DFS），再分析瓶颈设计50分优化（如记忆化/剪枝），最后推导70-100分正解，形成分层得分方案。",
+          "专项训练搜索剪枝技巧：可行性剪枝、最优性剪枝、顺序剪枝，结合数学边界（如溢出处理）和字符串边界（如空串、超长串）的防御性编程。",
+          "重构长代码：要求将DFS/BFS状态定义明确为注释，提取关键函数，控制单函数长度，并通过同类题（如P1030变种）限时重构练习。"
         ],
-        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        "verifyMethod": "同类难题（如搜索+数学+字符串综合）提交次数≤3次，且能清晰写出状态定义、剪枝条件和30-50-70分方案。"
       },
       "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "math_model_template_090",
-      "clusterDiagnosis": "数学 相关题目集中暴露出高难题部分分与取舍策略不足。",
+      "clusterDiagnosis": "学生长期在数学类高难题上得0分，反复提交但未改进，根因是缺乏部分分策略与复杂度控制意识，导致代码冗长、递归风险高，且未针对题目设计可得分方案。",
       "commonErrorTypes": [
-        "MODEL_ERROR"
+        "PARTIAL_SCORE_MISSED",
+        "COMPLEXITY_ERROR",
+        "IMPLEMENTATION_RISK"
       ],
       "evidenceSummary": [
-        "问题簇包含 2 道题，平均提交 13 次。",
-        "未解决 2 道，部分分题 0 道。",
-        "共同标签：UNKNOWN_PATTERN, UNSOLVED_HIGH_ATTEMPT, MATH_OVERFLOW_RISK, RECURSION_STACK_RISK, LONG_CODE_DEBUG_RISK, T1_STABILITY"
+        "代表题CF1914B和CF1996D均属于数学模块，学生分别提交16次和10次，但分数轨迹为空，长期0分，表明未获得任何部分分。",
+        "两题的首末版本代码均超过280行，且风险标记包含LONG_CODE和RECURSION，存在实现复杂度和递归栈溢出风险，可能因算法设计不当导致超时或崩溃。",
+        "commonRiskFlags包含MATH_OVERFLOW_RISK、RECURSION_STACK_RISK等，提示学生未考虑数值溢出和递归深度，且commonScorePatterns为UNKNOWN_PATTERN，说明缺乏有效的得分模式。"
       ],
       "representativeProblems": [
         "CF1914B",
@@ -437,27 +463,31 @@
       "trainingAction": {
         "module": "math",
         "tasks": [
-          "2 道 数学 基础题，要求写清模型含义。",
-          "2 道 数学 中档题，限时并记录提交次数。"
+          "针对数学类高难题，训练部分分策略：要求学生在解题前先分析数据范围，设计至少两个不同复杂度的解法（如暴力30分、优化70分），并明确写出每个方案的得分边界。",
+          "强化复杂度估算与代码精简：限时重构现有冗长代码（如将300行代码压缩至150行以内），消除不必要的递归，改用迭代或记忆化搜索，并添加溢出检查。",
+          "专项练习数学建模与溢出处理：选取3-5道类似CF1914B的题目，重点训练模运算、大数处理、组合数计算中的溢出避免，要求提交前通过自定义边界测试。"
         ],
-        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+        "verifyMethod": "同类数学高难题提交次数≤2次，且至少获得30%部分分；能清晰写出状态定义、复杂度分析和30-50-70分方案；代码行数控制在200行以内，无递归栈风险标记。"
       },
-      "confidence": 0.9,
+      "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "dp_state_init_boundary_092",
-      "clusterDiagnosis": "DP 相关题目集中暴露出DP 状态、转移和初始化需要进一步稳定。",
+      "clusterDiagnosis": "DP状态定义模糊、初始化遗漏和边界处理不完整，导致长期0分且反复提交无进展。",
       "commonErrorTypes": [
         "STATE_ERROR",
         "INIT_ERROR",
-        "BOUNDARY_ERROR"
+        "BOUNDARY_ERROR",
+        "MODEL_ERROR",
+        "OVERFLOW_ERROR",
+        "INDEX_ERROR"
       ],
       "evidenceSummary": [
-        "问题簇包含 2 道题，平均提交 8.5 次。",
-        "未解决 2 道，部分分题 0 道。",
-        "共同标签：UNKNOWN_PATTERN, UNSOLVED_HIGH_ATTEMPT, DP_STATE_RISK, DP_INIT_RISK, MATH_OVERFLOW_RISK, ARRAY_INDEX_RISK"
+        "代表题AT_dp_a和CF1051D均提交8-9次，分数轨迹全为0分，无部分分记录，表明从初始版本到最终版本均未通过任何测试点。",
+        "所有代码版本均标记LONG_CODE、DEFINE_INT_LONG_LONG、LARGE_GLOBAL_ARRAY、RECURSION和ARRAY_INDEX_RISK，暗示可能存在状态数组越界、递归栈溢出或大数溢出问题。",
+        "versionDiffSummary指出'长期0分，优先检查模型、复杂度或读题理解'，结合commonRiskFlags中的DP_STATE_RISK和DP_INIT_RISK，说明DP模型选择、状态初始化和转移方程存在根本性错误。"
       ],
       "representativeProblems": [
         "AT_dp_a",
@@ -466,26 +496,28 @@
       "trainingAction": {
         "module": "dp",
         "tasks": [
-          "2 道 DP 基础题，要求写清模型含义。",
-          "2 道 DP 中档题，限时并记录提交次数。",
-          "每题提交前必须写边界和初始化检查清单。"
+          "强制手写DP状态定义三要素（状态含义、维度、存储结构）并对照题解验证，针对AT_dp_a和CF1051D重写状态设计。",
+          "专项练习DP初始化与边界：完成5道经典线性DP和区间DP题，要求写出初始化代码和边界条件注释，提交前人工检查。",
+          "重构AT_dp_a和CF1051D代码，限制代码行数在100行以内，禁止使用递归和全局大数组，改用迭代和滚动数组，确保无溢出和索引错误。"
         ],
-        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+        "verifyMethod": "同类DP题（如AT_dp_b、CF1051D变体）提交次数≤2次，且首次提交至少获得30分部分分，能清晰写出状态定义、初始化、转移方程和边界处理。"
       },
-      "confidence": 0.9,
+      "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "state_compression_dp_unknown_095",
-      "clusterDiagnosis": "状态压缩 DP 相关题目集中暴露出高难题部分分与取舍策略不足。",
+      "clusterDiagnosis": "学生无法将问题建模为状态压缩DP，且缺乏部分分策略，导致长期0分，根因是模型抽象能力不足与取舍意识缺失。",
       "commonErrorTypes": [
-        "IMPLEMENTATION_RISK"
+        "MODEL_ERROR",
+        "STATE_ERROR",
+        "PARTIAL_SCORE_MISSED"
       ],
       "evidenceSummary": [
-        "问题簇包含 1 道题，平均提交 8 次。",
-        "未解决 1 道，部分分题 0 道。",
-        "共同标签：UNKNOWN_PATTERN, UNSOLVED_HIGH_ATTEMPT, BINARY_SEARCH_BOUNDARY_RISK, BINARY_SEARCH_CHECK_RISK, GRAPH_MODEL_RISK, ARRAY_INDEX_RISK"
+        "代表题CF1927C提交8次，分数轨迹全0分，无任何部分分，表明学生未尝试或无法构造可行解。",
+        "最终版本代码76行，含递归、大数组、数组索引风险，但结果仍为UNKNOWN，暗示模型或实现存在根本错误。",
+        "风险标记包含GRAPH_MODEL_RISK、BINARY_SEARCH_BOUNDARY_RISK等，说明学生可能误用图论或二分，未抓住状态压缩DP本质。"
       ],
       "representativeProblems": [
         "CF1927C"
@@ -493,25 +525,28 @@
       "trainingAction": {
         "module": "state_compression_dp",
         "tasks": [
-          "2 道 状态压缩 DP 基础题，要求写清模型含义。",
-          "2 道 状态压缩 DP 中档题，限时并记录提交次数。"
+          "用经典题（如TSP、棋盘覆盖）训练状态定义：明确状态维度、转移方程、初始化与边界。",
+          "强制要求每道题先写30分暴力（如全排列/回溯），再优化到70分（剪枝/记忆化），最后实现100分状态压缩DP，培养部分分习惯。",
+          "针对CF1927C同类题，设计专项练习：先读题后写模型伪代码，经教练审核再编码，避免直接套用图论或二分模板。"
         ],
-        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+        "verifyMethod": "同类高难题提交≤2次，能独立写出状态定义、转移方程、边界处理，并至少获得30分部分分。"
       },
-      "confidence": 0.85,
+      "confidence": 0.8,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "implementation_implementation_risk_098",
-      "clusterDiagnosis": "implementation 相关题目集中暴露出高难题部分分与取舍策略不足。",
+      "clusterDiagnosis": "学生在高难题上缺乏部分分策略，面对复杂实现时无法构建正确模型，反复提交但始终0分，暴露了从读题到代码实现的系统性断裂。",
       "commonErrorTypes": [
+        "MODEL_ERROR",
+        "PARTIAL_SCORE_MISSED",
         "IMPLEMENTATION_RISK"
       ],
       "evidenceSummary": [
-        "问题簇包含 1 道题，平均提交 8 次。",
-        "未解决 1 道，部分分题 0 道。",
-        "共同标签：UNKNOWN_PATTERN, UNSOLVED_HIGH_ATTEMPT, ARRAY_INDEX_RISK, T1_STABILITY, T3_PARTIAL_SCORE, T4_STRATEGY"
+        "代表题CF18C共提交8次，分数轨迹始终为0分，无任何部分分获得，表明学生未采用分步拿分策略。",
+        "首次和最终版本代码均标记ARRAY_INDEX_RISK，且非空行数、嵌套深度相同，说明核心实现未变，反复提交无效修改。",
+        "题目模块标记为空，但风险标记和0分轨迹指向实现层面的根本性错误，可能源于模型理解错误或复杂度估计不足。"
       ],
       "representativeProblems": [
         "CF18C"
@@ -519,28 +554,30 @@
       "trainingAction": {
         "module": "implementation",
         "tasks": [
-          "2 道 implementation 基础题，要求写清模型含义。",
-          "2 道 implementation 中档题，限时并记录提交次数。"
+          "强制训练部分分策略：对每道高难题，先写出30分、50分、70分的分步方案，再编码实现。",
+          "针对ARRAY_INDEX_RISK，专项练习数组边界处理，包括下标计算、循环条件、越界测试用例设计。",
+          "重构CF18C或同类题，要求先手写状态定义、转移方程和边界条件，经教练审核后再编码，限制提交次数≤2。"
         ],
-        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+        "verifyMethod": "同类高难题提交≤2次，且至少获得30%部分分；能清晰写出状态定义、边界条件和分步拿分方案。"
       },
-      "confidence": 0.85,
+      "confidence": 0.8,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "dp_state_init_boundary_072",
-      "clusterDiagnosis": "DP 相关题目集中暴露出DP 状态、转移和初始化需要进一步稳定。",
+      "clusterDiagnosis": "DP 状态定义与初始化不稳定，导致反复提交和部分分，尤其在区间 DP 和数学结合场景中，边界条件和状态转移方程修正缓慢。",
       "commonErrorTypes": [
         "STATE_ERROR",
         "INIT_ERROR",
         "BOUNDARY_ERROR",
-        "PARTIAL_SCORE_MISSED"
+        "OVERFLOW_ERROR",
+        "INDEX_ERROR"
       ],
       "evidenceSummary": [
-        "问题簇包含 4 道题，平均提交 7.75 次。",
-        "未解决 0 道，部分分题 4 道。",
-        "共同标签：PARTIAL_TO_AC, MULTI_FAIL_THEN_AC, DP_STATE_RISK, DP_INIT_RISK, T2_MODELING, T3_PARTIAL_SCORE"
+        "P12678 提交 12 次，分数轨迹 90→90→0→90→90→90→100→90→90→100→100，多次在 90 分和 100 分间波动，表明状态或边界修正不彻底。",
+        "P3865 提交 9 次，分数轨迹 63→0→70→70→63→70→100→100→100，从部分分到 AC 耗时较长，且代码行数超 600 行，存在递归和数组索引风险。",
+        "两个代表题均标记 DP_STATE_RISK、DP_INIT_RISK、ARRAY_INDEX_RISK，且 P3865 额外涉及 MATH_OVERFLOW_RISK 和 RECURSION_STACK_RISK，说明状态初始化、边界处理和溢出是共性问题。"
       ],
       "representativeProblems": [
         "P12678",
@@ -549,28 +586,28 @@
       "trainingAction": {
         "module": "dp",
         "tasks": [
-          "2 道 DP 基础题，要求写清模型含义。",
-          "2 道 DP 中档题，限时并记录提交次数。",
-          "每题提交前必须写边界和初始化检查清单。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "强制手写 DP 状态定义和转移方程，要求用注释标注 dp[i][j] 含义、初始值和边界条件，并画出状态转移图。",
+          "针对区间 DP 和数学结合题，专项练习初始化技巧（如 memset 负无穷、边界特判），并实现 30-50-70 分渐进方案，逐步验证正确性。",
+          "重构 P3865 等长代码题，要求将递归改为递推或显式栈，消除递归栈风险，并添加数组越界检查宏，确保索引安全。"
         ],
-        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        "verifyMethod": "同类 DP 题提交次数 ≤ 2 次，能清晰写出状态定义、初始化逻辑和边界处理，且 30 分钟内完成 70 分以上方案。"
       },
-      "confidence": 0.92,
+      "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "math_model_template_069",
-      "clusterDiagnosis": "数学 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "clusterDiagnosis": "学生缺乏针对难题的部分分拆解策略，无法有效识别子任务并设计对应算法，导致反复提交仍卡在部分分，且代码中常见溢出、递归栈等实现风险。",
       "commonErrorTypes": [
-        "MODEL_ERROR",
-        "PARTIAL_SCORE_MISSED"
+        "PARTIAL_SCORE_MISSED",
+        "OVERFLOW_ERROR",
+        "IMPLEMENTATION_RISK"
       ],
       "evidenceSummary": [
-        "问题簇包含 13 道题，平均提交 3.69 次。",
-        "未解决 13 道，部分分题 13 道。",
-        "共同标签：PARTIAL_STUCK, MATH_OVERFLOW_RISK, T1_STABILITY, T3_PARTIAL_SCORE, RECURSION_STACK_RISK, UNSOLVED_HIGH_ATTEMPT"
+        "代表题U619606提交7次，分数轨迹为0,0,0,50,50,50,50，最终版本仍为部分分(50)，风险标记包含RECURSION和PARTIAL_SCORE_CODE，表明学生未能突破部分分瓶颈。",
+        "代表题P13498提交5次，分数轨迹始终为70，代码从619行缩减至42行但分数未变，风险标记包含LONG_CODE、RECURSION和PARTIAL_SCORE_CODE，显示学生尝试重构但未找到满分方法。",
+        "整个题目簇平均提交3.69次，部分分比例100%，共同风险标记包括MATH_OVERFLOW_RISK、RECURSION_STACK_RISK等，共同得分模式为PARTIAL_STUCK，说明学生普遍在数学类难题中陷入部分分困境。"
       ],
       "representativeProblems": [
         "U619606",
@@ -579,26 +616,30 @@
       "trainingAction": {
         "module": "math",
         "tasks": [
-          "2 道 数学 基础题，要求写清模型含义。",
-          "2 道 数学 中档题，限时并记录提交次数。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "针对数学难题，训练学生拆分子任务的能力：要求每道题先写出30分、50分、70分、100分的不同解法思路，明确各子任务的数据范围、算法和边界条件。",
+          "强化溢出和递归风险意识：专项练习大数运算、模运算、递归转迭代等技巧，要求代码中显式处理溢出（如使用long long、取模前检查）并评估递归深度。",
+          "进行部分分冲刺训练：选取类似U619606和P13498的题目，限时要求学生从部分分代码出发，通过优化算法或修正边界条件达到更高分数，并复盘每次提交的改进点。"
         ],
-        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        "verifyMethod": "同类数学难题提交次数降至2次以内，且能清晰写出至少两个子任务的解法（如30分暴力、70分优化），代码中无溢出或递归栈风险，最终得分不低于70分。"
       },
-      "confidence": 0.92,
+      "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "partial_score_partial_score_022",
-      "clusterDiagnosis": "partial_score 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "clusterDiagnosis": "学生缺乏系统化拆解难题部分分的能力，未形成“先暴力保底、再逐步优化”的得分策略，导致多次提交卡在低分区间，无法稳定获取更高部分分。",
       "commonErrorTypes": [
-        "PARTIAL_SCORE_MISSED"
+        "PARTIAL_SCORE_MISSED",
+        "IMPLEMENTATION_RISK",
+        "OVERFLOW_ERROR",
+        "INDEX_ERROR"
       ],
       "evidenceSummary": [
-        "问题簇包含 18 道题，平均提交 3.61 次。",
-        "未解决 18 道，部分分题 18 道。",
-        "共同标签：PARTIAL_STUCK, T3_PARTIAL_SCORE, NEVER_AC, UNSOLVED_HIGH_ATTEMPT, OVERFLOW_RISK, T4_STRATEGY"
+        "P10135 提交16次，分数轨迹从6分缓慢提升至36分，中间出现0分回退，最终版本仍为部分分代码，且存在递归和溢出风险，说明未设计出完整的分层得分方案。",
+        "P7413 提交5次，分数从5分提升至25分，但多次卡在10分，最终版本仍有数组索引风险，表明边界处理和部分分优化不足。",
+        "U615694 提交4次，分数从20分提升至40分，最终版本含递归和部分分代码，未达到满分，显示复杂问题拆解和部分分策略缺失。",
+        "所有代表题均标记为PARTIAL_SCORE_CODE，且平均提交次数3.61次，部分分比率100%，常见风险包括溢出、递归栈和数组索引，反映实现细节和边界处理薄弱。"
       ],
       "representativeProblems": [
         "P10135",
@@ -608,26 +649,31 @@
       "trainingAction": {
         "module": "partial_score",
         "tasks": [
-          "2 道 partial_score 基础题，要求写清模型含义。",
-          "2 道 partial_score 中档题，限时并记录提交次数。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "针对难题，强制要求先写出暴力解法（如枚举、简单模拟）获取基础分，再分析数据范围设计优化（如预处理、剪枝、动态规划），形成30-50-70分阶梯方案。",
+          "专项训练部分分拆解：给出题目后，限时15分钟写出不同分数段的算法思路和复杂度分析，重点练习状态定义、边界条件和特殊情况的处理。",
+          "代码实现风险规避：针对溢出、递归栈、数组越界等常见错误，进行针对性代码审查和重构练习，要求每次提交前自检风险点。"
         ],
-        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        "verifyMethod": "同类难题提交次数降至2次以内，且能清晰写出至少两个分数段的解法（如30分暴力和70分优化），代码中无溢出、越界等风险标记。"
       },
-      "confidence": 0.92,
+      "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "partial_score_partial_score_023",
-      "clusterDiagnosis": "partial_score 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "clusterDiagnosis": "难题部分分拆解能力不足，表现为无法稳定获取基础部分分（如30-50分），常因模型设计错误或状态定义不清导致低分，需通过多次提交逐步修正才能达到AC。",
       "commonErrorTypes": [
+        "MODEL_ERROR",
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
         "PARTIAL_SCORE_MISSED"
       ],
       "evidenceSummary": [
-        "问题簇包含 8 道题，平均提交 5.88 次。",
-        "未解决 0 道，部分分题 8 道。",
-        "共同标签：PARTIAL_TO_AC, MULTI_FAIL_THEN_AC, T3_PARTIAL_SCORE, T4_STRATEGY, RECURSION_STACK_RISK, OVERFLOW_RISK"
+        "代表题P15018提交7次，分数轨迹为9→54→78→3→3→100→100，首次仅得9分，中间出现分数倒退至3分，最终AC，表明初期模型或状态设计有严重缺陷，且部分分获取不稳定。",
+        "代表题P7410提交6次，分数轨迹为10→0→80→100→100，首次仅10分，第二次0分，第三次跳至80分，显示对部分分设计理解不足，可能因边界或初始化错误导致低分。",
+        "两题均标记有RECURSION_STACK_RISK、OVERFLOW_RISK、ARRAY_INDEX_RISK，且首次版本均为PARTIAL_SCORE_CODE，说明学生在实现递归或数组操作时易出现栈溢出、索引越界等问题，影响部分分获取。",
+        "平均提交次数5.88次，部分分比例100%，但分数轨迹常出现低分或倒退，表明学生缺乏预先规划部分分策略的能力，依赖多次试错。"
       ],
       "representativeProblems": [
         "P15018",
@@ -636,26 +682,28 @@
       "trainingAction": {
         "module": "partial_score",
         "tasks": [
-          "2 道 partial_score 基础题，要求写清模型含义。",
-          "2 道 partial_score 中档题，限时并记录提交次数。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "针对动态规划、搜索等常见难题类型，训练学生先写出30分、50分、70分的分档方案，明确每档对应的模型简化、状态定义和边界条件。",
+          "强化递归和数组操作的边界检查与初始化习惯，通过专项练习减少ARRAY_INDEX_RISK和RECURSION_STACK_RISK错误，确保基础部分分稳定获取。",
+          "进行限时部分分拆解模拟：给出难题，要求学生在15分钟内写出至少两档部分分的伪代码或关键实现，并说明复杂度，提升快速得分能力。"
         ],
-        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        "verifyMethod": "同类难题提交次数降至2次以内，首次提交至少获得50%分数，且能清晰写出状态定义、边界处理及30-50-70分方案。"
       },
-      "confidence": 0.92,
+      "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "state_compression_dp_unknown_048",
-      "clusterDiagnosis": "状态压缩 DP 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "clusterDiagnosis": "学生缺乏针对难题的部分分拆解能力，面对复杂状态压缩DP题目时无法设计出有效的分段得分策略，导致在P11860上反复提交仅得8分，且P7859也卡在80分无法突破。",
       "commonErrorTypes": [
-        "PARTIAL_SCORE_MISSED"
+        "PARTIAL_SCORE_MISSED",
+        "STATE_ERROR",
+        "IMPLEMENTATION_RISK"
       ],
       "evidenceSummary": [
-        "问题簇包含 3 道题，平均提交 2.67 次。",
-        "未解决 3 道，部分分题 3 道。",
-        "共同标签：PARTIAL_STUCK, T3_PARTIAL_SCORE, NEVER_AC, RECURSION_STACK_RISK, GRAPH_MODEL_RISK, STRING_BOUNDARY_RISK"
+        "P11860提交5次，分数轨迹均为8分，版本变化不明显，代码中存在RECURSION和PARTIAL_SCORE_CODE风险标记，表明学生未针对不同数据范围设计部分分解法。",
+        "P7859提交2次，分数轨迹均为80分，代码中存在ARRAY_INDEX_RISK和PARTIAL_SCORE_CODE标记，说明学生可能因数组越界或状态定义错误导致无法满分。",
+        "两个代表题均涉及state_compression_dp模块，且commonRiskFlags中包含RECURSION_STACK_RISK、GRAPH_MODEL_RISK等，提示学生在状态压缩DP的递归实现和模型转化上存在困难。"
       ],
       "representativeProblems": [
         "P11860",
@@ -664,27 +712,30 @@
       "trainingAction": {
         "module": "state_compression_dp",
         "tasks": [
-          "2 道 状态压缩 DP 基础题，要求写清模型含义。",
-          "2 道 状态压缩 DP 中档题，限时并记录提交次数。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "专项训练状态压缩DP的部分分设计：针对一道题，要求写出30分（暴力）、50分（优化状态）、70分（剪枝或特定子问题）和满分（完整状态压缩）的代码框架。",
+          "强化状态定义与转移的规范性：练习将问题转化为图模型时的状态压缩技巧，避免递归栈溢出，改用迭代或显式栈实现。",
+          "复盘P11860和P7859：人工分析代码，找出8分和80分的具体瓶颈，重写代码并提交至AC，总结边界条件和数组索引错误。"
         ],
-        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        "verifyMethod": "同类难题提交次数≤2次，能清晰写出状态定义、转移方程和不同数据范围下的部分分方案，且代码中无RECURSION_STACK_RISK、ARRAY_INDEX_RISK等风险标记。"
       },
-      "confidence": 0.92,
+      "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "binary_search_model_template_038",
-      "clusterDiagnosis": "二分答案 相关题目集中暴露出二分答案的 check 单调性和边界处理不稳定。",
+      "clusterDiagnosis": "二分答案的 check 函数单调性验证缺失，导致边界收缩错误，且递归实现引入栈溢出风险，使得部分分反复卡在低分段。",
       "commonErrorTypes": [
         "MODEL_ERROR",
+        "BOUNDARY_ERROR",
+        "OVERFLOW_ERROR",
         "PARTIAL_SCORE_MISSED"
       ],
       "evidenceSummary": [
-        "问题簇包含 2 道题，平均提交 2.5 次。",
-        "未解决 2 道，部分分题 2 道。",
-        "共同标签：PARTIAL_STUCK, BINARY_SEARCH_BOUNDARY_RISK, BINARY_SEARCH_CHECK_RISK, RECURSION_STACK_RISK, T2_MODELING, T3_PARTIAL_SCORE"
+        "代表题 P11849 提交 4 次，分数轨迹 [15, 15, 55, 55]，始终未达满分，且两次版本均标记为 PARTIAL_SCORE_CODE 和 RECURSION，表明递归实现和部分分逻辑未根本改进。",
+        "代表题 T717044 仅提交 1 次，得分 2，同样标记 RECURSION 和 PARTIAL_SCORE_CODE，说明递归和部分分问题在另一题中复现。",
+        "题目簇共同风险标记包含 BINARY_SEARCH_BOUNDARY_RISK、BINARY_SEARCH_CHECK_RISK、RECURSION_STACK_RISK、MATH_OVERFLOW_RISK，与诊断的边界、单调性、递归栈溢出问题一致。",
+        "平均提交次数 2.5，部分分比例 1，共同得分模式 PARTIAL_STUCK，表明学生反复提交但无法突破部分分瓶颈。"
       ],
       "representativeProblems": [
         "P11849",
@@ -693,27 +744,28 @@
       "trainingAction": {
         "module": "binary_search",
         "tasks": [
-          "2 道 二分答案 基础题，要求写清模型含义。",
-          "2 道 二分答案 中档题，限时并记录提交次数。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "用迭代模板重写 P11849 的二分答案，消除递归，并明确 check 函数的单调性证明（例如，若 mid 可行则左/右边界如何移动）。",
+          "针对边界溢出风险，练习设计 mid = left + (right - left) / 2 的防溢出写法，并在 check 中处理大数运算（如使用 long long）。",
+          "完成 3 道同类二分答案题（如 P2678、P1314），要求每道题先写出单调性分析、边界初始值、check 逻辑，再编码，目标一次提交 AC 或 70 分以上。"
         ],
-        "verifyMethod": "同类题提交次数 <= 2，能独立证明 check 单调性并说明边界收缩。"
+        "verifyMethod": "同类二分答案题提交次数 ≤ 2 次，且能清晰写出 check 单调性、边界初始值、防溢出措施，得分不低于 70 分。"
       },
-      "confidence": 0.9,
+      "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "binary_search_model_template_053",
-      "clusterDiagnosis": "二分答案 相关题目集中暴露出二分答案的 check 单调性和边界处理不稳定。",
+      "clusterDiagnosis": "二分答案的 check 函数单调性建模错误，导致边界收缩不稳定，反复在部分分和零分间震荡，最终通过重构模型和边界处理才 AC。",
       "commonErrorTypes": [
         "MODEL_ERROR",
+        "BOUNDARY_ERROR",
         "PARTIAL_SCORE_MISSED"
       ],
       "evidenceSummary": [
-        "问题簇包含 6 道题，平均提交 5.5 次。",
-        "未解决 0 道，部分分题 6 道。",
-        "共同标签：PARTIAL_TO_AC, MULTI_FAIL_THEN_AC, BINARY_SEARCH_BOUNDARY_RISK, BINARY_SEARCH_CHECK_RISK, RECURSION_STACK_RISK, T2_MODELING"
+        "P1439 提交 7 次，分数轨迹 90→90→0→0→100→100，存在从部分分到零分的反复，表明 check 逻辑或边界条件有根本性错误，最终版本代码量激增至 372 行，暗示模型重构。",
+        "P5815 提交 5 次，分数轨迹 20→20→10→100→100，部分分阶段得分低且不稳定，首次 AC 版本仍带有 RECURSION 和 ARRAY_INDEX_RISK 标记，说明边界处理是薄弱点。",
+        "两题均出现 BINARY_SEARCH_BOUNDARY_RISK 和 BINARY_SEARCH_CHECK_RISK 风险标记，且平均提交次数 5.5，部分分比例 100%，符合二分答案模板不熟练的典型特征。"
       ],
       "representativeProblems": [
         "P1439",
@@ -722,27 +774,29 @@
       "trainingAction": {
         "module": "binary_search",
         "tasks": [
-          "2 道 二分答案 基础题，要求写清模型含义。",
-          "2 道 二分答案 中档题，限时并记录提交次数。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "强制写出 check 函数的单调性证明（文字或数学表达式），并画出 mid 与目标值的关系图，确保理解为什么可以二分。",
+          "针对边界条件进行专项训练：手写三种常见二分模板（左闭右闭、左闭右开、实数二分）的终止条件和 mid 计算，并完成 5 道仅需调整边界的变式题。",
+          "设计 30-50-70 分阶梯训练：先实现暴力 check 得部分分，再优化为二分，最后处理边界细节，要求每阶段提交次数 ≤2 次。"
         ],
-        "verifyMethod": "同类题提交次数 <= 2，能独立证明 check 单调性并说明边界收缩。"
+        "verifyMethod": "同类二分答案题（如 P2678、P1314）提交 ≤2 次即 AC，且能清晰解释 check 单调性和边界选择理由。"
       },
-      "confidence": 0.92,
+      "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "segment_tree_model_template_101",
-      "clusterDiagnosis": "线段树 相关题目集中暴露出线段树模板、区间边界和懒标记细节不稳定。",
+      "clusterDiagnosis": "线段树模板细节不稳定，尤其在区间边界处理、懒标记下传和模型转化时反复出错，导致多次提交和部分分波动。",
       "commonErrorTypes": [
+        "BOUNDARY_ERROR",
+        "TEMPLATE_UNFAMILIAR",
         "MODEL_ERROR",
-        "PARTIAL_SCORE_MISSED"
+        "STATE_ERROR"
       ],
       "evidenceSummary": [
-        "问题簇包含 1 道题，平均提交 5 次。",
-        "未解决 0 道，部分分题 1 道。",
-        "共同标签：PARTIAL_TO_AC, SOLVED, BINARY_SEARCH_BOUNDARY_RISK, BINARY_SEARCH_CHECK_RISK, GRAPH_MODEL_RISK, SEGMENT_TREE_TEMPLATE_RISK"
+        "代表题 P7072 共提交 5 次，分数轨迹为 100→100→70→0→100，呈现 PARTIAL_TO_AC 模式，说明在修正过程中曾引入新错误。",
+        "commonRiskFlags 包含 SEGMENT_TREE_TEMPLATE_RISK、BINARY_SEARCH_BOUNDARY_RISK 等，指向线段树模板和二分边界不稳定。",
+        "firstVersion 代码有 RECURSION 和 POSSIBLE_INT_OVERFLOW 风险，而 firstAcOrBestVersion 无风险标记且代码行数减少，表明最终版本简化了实现并消除了隐患。"
       ],
       "representativeProblems": [
         "P7072"
@@ -750,27 +804,28 @@
       "trainingAction": {
         "module": "segment_tree",
         "tasks": [
-          "2 道 线段树 基础题，要求写清模型含义。",
-          "2 道 线段树 中档题，限时并记录提交次数。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "手写线段树模板（区间修改、区间查询、懒标记），强制使用闭区间 [l,r] 并统一 mid 计算方式，限时 10 分钟完成并通过对拍。",
+          "完成 3 道线段树+二分/贪心综合题（如 P7072 同类），要求先写出状态定义和边界条件伪代码，再编码，目标一次 AC。",
+          "针对懒标记下传顺序和溢出问题，设计 5 组边界测试用例（包括大范围修改、空区间、单点修改），用自造数据验证模板正确性。"
         ],
-        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        "verifyMethod": "同类线段树模板题（如 P3372、P3373）提交次数 ≤ 2 次，且能清晰口述区间划分、懒标记含义及下传时机，30 分钟内完成一道中等难度线段树+模型转化题并 AC。"
       },
       "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "fenwick_tree_index_boundary_035",
-      "clusterDiagnosis": "树状数组 相关题目集中暴露出树状数组下标和前缀关系不稳定。",
+      "clusterDiagnosis": "树状数组下标从1开始与输入数据索引从0开始的转换不一致，导致前缀和查询边界错误，反复出现0分和100分交替。",
       "commonErrorTypes": [
+        "INDEX_ERROR",
         "BOUNDARY_ERROR",
-        "INDEX_ERROR"
+        "INIT_ERROR"
       ],
       "evidenceSummary": [
-        "问题簇包含 1 道题，平均提交 9 次。",
-        "未解决 0 道，部分分题 0 道。",
-        "共同标签：MULTI_FAIL_THEN_AC, FENWICK_INDEX_RISK, ARRAY_INDEX_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK, T4_STRATEGY"
+        "代表题P3374提交9次，分数轨迹为0→100→0→0→100→100→100→100→100，呈现典型的多失败后AC模式，说明边界问题未一次性解决。",
+        "首次AC版本与最终AC版本均存在ARRAY_INDEX_RISK风险标记，且代码中使用了全局大数组和递归，暗示下标处理是反复出错的核心。",
+        "版本差异摘要指出后续版本新增global_array，可能是关键修正点，结合风险标记推断学生通过调整数组大小或起始索引修复了边界问题。"
       ],
       "representativeProblems": [
         "P3374"
@@ -778,29 +833,30 @@
       "trainingAction": {
         "module": "fenwick_tree",
         "tasks": [
-          "2 道 树状数组 基础题，要求写清模型含义。",
-          "2 道 树状数组 中档题，限时并记录提交次数。",
-          "每题提交前必须写边界和初始化检查清单。"
+          "手写树状数组模板，明确下标从1开始，并练习将输入数据偏移1位存储。",
+          "针对P3374同类问题，设计3个变体：单点更新+区间查询、区间更新+单点查询、区间更新+区间查询，要求写出add和query函数的边界条件注释。",
+          "限时完成5道树状数组基础题，每道题提交前必须用纸笔验证下标转换逻辑，目标是一次AC。"
         ],
-        "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。"
+        "verifyMethod": "同类树状数组题目提交次数≤2次，且能清晰解释为什么下标从1开始以及如何处理0索引输入。"
       },
-      "confidence": 0.85,
+      "confidence": 0.9,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "dp_state_init_boundary_067",
-      "clusterDiagnosis": "DP 相关题目集中暴露出DP 状态、转移和初始化需要进一步稳定。",
+      "clusterDiagnosis": "DP 状态定义不清晰，初始化与边界处理存在系统性缺陷，导致多次提交仍卡在部分分，无法突破至满分。",
       "commonErrorTypes": [
         "STATE_ERROR",
         "INIT_ERROR",
         "BOUNDARY_ERROR",
-        "PARTIAL_SCORE_MISSED"
+        "OVERFLOW_ERROR",
+        "INDEX_ERROR"
       ],
       "evidenceSummary": [
-        "问题簇包含 2 道题，平均提交 2 次。",
-        "未解决 2 道，部分分题 2 道。",
-        "共同标签：PARTIAL_STUCK, DP_STATE_RISK, DP_INIT_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK, T2_MODELING"
+        "代表题 B3873 提交 3 次，分数轨迹均为 30 分，版本变化不明显，风险标记含 RECURSION 和 PARTIAL_SCORE_CODE，表明 DP 状态或初始化问题未解决。",
+        "代表题 U622367 提交 1 次，得分 50 分，风险标记含 POSSIBLE_INT_OVERFLOW、ARRAY_INDEX_RISK 和 PARTIAL_SCORE_CODE，提示边界和溢出处理不当。",
+        "整个簇平均提交 2 次，部分分比例 100%，常见风险标记包括 DP_STATE_RISK、DP_INIT_RISK、OVERFLOW_RISK、RECURSION_STACK_RISK、ARRAY_INDEX_RISK，说明状态定义、初始化、边界和溢出是共性问题。"
       ],
       "representativeProblems": [
         "B3873",
@@ -809,30 +865,29 @@
       "trainingAction": {
         "module": "dp",
         "tasks": [
-          "2 道 DP 基础题，要求写清模型含义。",
-          "2 道 DP 中档题，限时并记录提交次数。",
-          "每题提交前必须写边界和初始化检查清单。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "专项练习 DP 状态定义：针对背包、区间 DP 等经典模型，强制写出状态表示、转移方程和初始化条件，并对比标准题解修正。",
+          "边界与溢出强化训练：完成 5 道带部分分的 DP 题（如洛谷 P1048、P1616），要求先写出 30 分、50 分、70 分的分步方案，重点检查数组下标、初始值和 long long 使用。",
+          "递归转递推与栈风险消除：将现有递归 DP 代码改写为非递归形式，并测试边界数据（如 n=0、大值），确保无栈溢出和数组越界。"
         ],
-        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        "verifyMethod": "同类 DP 题（如背包、线性 DP）提交次数 ≤ 2 次，且能清晰写出状态定义、初始化、边界处理，并至少获得 70 分以上。"
       },
-      "confidence": 0.9,
+      "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "string_state_init_boundary_088",
-      "clusterDiagnosis": "字符串 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "clusterDiagnosis": "难题部分分拆解和得分策略不足，具体表现为面对复杂题目时无法从暴力/部分分逐步优化到高分，缺乏状态定义、边界处理和溢出防范的工程化拆解能力。",
       "commonErrorTypes": [
-        "STATE_ERROR",
-        "INIT_ERROR",
+        "PARTIAL_SCORE_MISSED",
         "BOUNDARY_ERROR",
-        "PARTIAL_SCORE_MISSED"
+        "OVERFLOW_ERROR",
+        "STATE_ERROR"
       ],
       "evidenceSummary": [
-        "问题簇包含 1 道题，平均提交 2 次。",
-        "未解决 1 道，部分分题 1 道。",
-        "共同标签：PARTIAL_STUCK, NEVER_AC, STRING_BOUNDARY_RISK, MATH_OVERFLOW_RISK, OVERFLOW_RISK, RECURSION_STACK_RISK"
+        "代表题 P10722 提交 2 次，分数轨迹为 0→40，最终仅获部分分，符合 PARTIAL_STUCK 模式。",
+        "两版代码均存在 RECURSION 和 POSSIBLE_INT_OVERFLOW 风险标记，最终版新增 PARTIAL_SCORE_CODE 标记，表明部分分实现但未突破。",
+        "题目涉及 math、string、tree 多模块交叉，avgAttempts=2 且 partialScoreRatio=1，说明学生习惯一次提交后小幅修补，缺乏分步得分规划。"
       ],
       "representativeProblems": [
         "P10722"
@@ -840,27 +895,28 @@
       "trainingAction": {
         "module": "string",
         "tasks": [
-          "2 道 字符串 基础题，要求写清模型含义。",
-          "2 道 字符串 中档题，限时并记录提交次数。",
-          "每题提交前必须写边界和初始化检查清单。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "针对 P10722 同类字符串+树+数学综合题，训练先写 30 分暴力（如枚举子串+简单统计），再写 60 分优化（如哈希/前缀和），最后尝试满分。",
+          "专项练习状态定义与边界处理：要求对每个部分分解法明确写出状态含义、初始化、转移方程和边界条件，并用小数据手算验证。",
+          "强化溢出防范：在涉及计数、求和、乘法时强制使用 long long 并添加取模或溢出检查，提交前用极端数据测试。"
         ],
-        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        "verifyMethod": "同类综合题（如字符串+树+数学）提交次数 ≤ 2 次，且能清晰写出 30-50-70 分拆解方案，代码中无溢出风险标记。"
       },
       "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "dfs_bfs_unknown_099",
-      "clusterDiagnosis": "DFS/BFS 相关题目集中暴露出难题部分分拆解和得分策略不足。",
+      "clusterDiagnosis": "难题部分分拆解能力不足，无法从暴力解法过渡到更优的部分分模型，导致在部分分上停滞（40分），且代码复杂度增加后引入递归和数组越界风险。",
       "commonErrorTypes": [
-        "PARTIAL_SCORE_MISSED"
+        "PARTIAL_SCORE_MISSED",
+        "IMPLEMENTATION_RISK",
+        "INDEX_ERROR"
       ],
       "evidenceSummary": [
-        "问题簇包含 1 道题，平均提交 2 次。",
-        "未解决 1 道，部分分题 1 道。",
-        "共同标签：PARTIAL_STUCK, NEVER_AC, ARRAY_INDEX_RISK, RECURSION_STACK_RISK, T3_PARTIAL_SCORE"
+        "代表题P1330提交2次，分数轨迹均为40分，未突破部分分，符合PARTIAL_STUCK模式。",
+        "最终版本代码规模从7行增至90行，嵌套深度从1增至4，引入递归和数组越界风险，但得分未提升，表明复杂化未命中得分点。",
+        "风险标记包括ARRAY_INDEX_RISK和RECURSION_STACK_RISK，说明实现中存在索引错误和递归栈溢出隐患，导致部分分无法提高。"
       ],
       "representativeProblems": [
         "P1330"
@@ -868,15 +924,15 @@
       "trainingAction": {
         "module": "dfs_bfs",
         "tasks": [
-          "2 道 DFS/BFS 基础题，要求写清模型含义。",
-          "2 道 DFS/BFS 中档题，限时并记录提交次数。",
-          "至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。"
+          "针对P1330，先写出30分暴力解法（如简单DFS/BFS），再分析50分优化点（如剪枝或状态压缩），最后设计70分方案（如双向BFS或启发式搜索），并实现验证。",
+          "练习将递归DFS改写为迭代栈版本，避免递归栈溢出，并添加数组边界检查，消除INDEX_ERROR。",
+          "完成3道类似部分分拆解题（如P1443、P1605），要求每道题先规划30-50-70分方案，再编码，提交次数不超过2次。"
         ],
-        "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。"
+        "verifyMethod": "同类题提交≤2次，能清晰写出状态定义、边界条件和30-50-70分方案，且最终得分≥70分。"
       },
       "confidence": 0.85,
       "confidenceLevel": "HIGH",
-      "source": "RULE_BASED_CLUSTER_DIAGNOSIS"
+      "source": "DEEPSEEK_CLUSTER_DIAGNOSIS"
     },
     {
       "clusterId": "dsu_model_template_065",

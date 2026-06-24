@@ -1,15 +1,52 @@
 {
-  "generatedAt": "2026-06-24T03:33:41.170Z",
+  "generatedAt": "2026-06-24T14:58:14.914Z",
   "topWeaknesses": [
+    {
+      "weaknessId": "partial_score_partial_score_missed_19",
+      "title": "partial_score：难题部分分拆解和得分策略不足",
+      "severity": 78.71,
+      "relatedModules": [
+        "partial_score"
+      ],
+      "relatedErrorTypes": [
+        "PARTIAL_SCORE_MISSED",
+        "IMPLEMENTATION_RISK",
+        "OVERFLOW_ERROR",
+        "INDEX_ERROR"
+      ],
+      "evidenceProblems": [
+        "P10135",
+        "P1273",
+        "T23806",
+        "P7413",
+        "P1781",
+        "P1255",
+        "U615694",
+        "B3845",
+        "P2303",
+        "U465508",
+        "P2142",
+        "P2585"
+      ],
+      "problemCount": 18,
+      "trainingAction": "针对难题，强制要求先写出暴力解法（如枚举、简单模拟）获取基础分，再分析数据范围设计优化（如预处理、剪枝、动态规划），形成30-50-70分阶梯方案。；专项训练部分分拆解：给出题目后，限时15分钟写出不同分数段的算法思路和复杂度分析，重点练习状态定义、边界条件和特殊情况的处理。；代码实现风险规避：针对溢出、递归栈、数组越界等常见错误，进行针对性代码审查和重构练习，要求每次提交前自检风险点。",
+      "verifyMethod": "同类难题提交次数降至2次以内，且能清晰写出至少两个分数段的解法（如30分暴力和70分优化），代码中无溢出、越界等风险标记。",
+      "clusterIds": [
+        "partial_score_partial_score_022"
+      ]
+    },
     {
       "weaknessId": "math_model_error_5",
       "title": "数学：难题部分分拆解和得分策略不足",
-      "severity": 82.57,
+      "severity": 73.66,
       "relatedModules": [
         "math"
       ],
       "relatedErrorTypes": [
         "MODEL_ERROR",
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
         "PARTIAL_SCORE_MISSED"
       ],
       "evidenceProblems": [
@@ -26,50 +63,50 @@
         "P3205",
         "P5836"
       ],
-      "problemCount": 36,
-      "trainingAction": "2 道 数学 基础题，要求写清模型含义。；2 道 数学 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-      "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。",
+      "problemCount": 23,
+      "trainingAction": "针对数学建模题，强制要求先写出完整的状态定义、转移方程、初始化和边界条件，再编码。；练习拆解部分分：对每道题明确30-50-70分方案，并实现对应子任务，例如先暴力、再优化、最后处理边界。；专项训练递归转递推、数组索引防越界、long long防溢出，使用P4017同类拓扑排序DP题巩固。",
+      "verifyMethod": "同类数学建模题提交次数≤2次，能清晰写出状态定义、转移方程、初始化及边界，并实现至少两个部分分解法。",
       "clusterIds": [
-        "math_model_template_011",
-        "math_model_template_069"
+        "math_model_template_011"
       ]
     },
     {
-      "weaknessId": "partial_score_partial_score_missed_16",
-      "title": "partial_score：难题部分分拆解和得分策略不足",
-      "severity": 80.6,
+      "weaknessId": "math_partial_score_missed_18",
+      "title": "数学：难题部分分拆解和得分策略不足",
+      "severity": 72.72,
       "relatedModules": [
-        "partial_score"
+        "math"
       ],
       "relatedErrorTypes": [
-        "PARTIAL_SCORE_MISSED"
+        "PARTIAL_SCORE_MISSED",
+        "OVERFLOW_ERROR",
+        "IMPLEMENTATION_RISK"
       ],
       "evidenceProblems": [
-        "P10135",
-        "P1273",
-        "T23806",
-        "P7413",
-        "P1781",
-        "P1255",
-        "U615694",
-        "B3845",
-        "P2303",
-        "U465508",
-        "P2142",
-        "P2585"
+        "U619606",
+        "P4085",
+        "P6033",
+        "P13426",
+        "P13498",
+        "P9325",
+        "P1516",
+        "P3128",
+        "U218402",
+        "P5686",
+        "B3672",
+        "P11861"
       ],
-      "problemCount": 26,
-      "trainingAction": "2 道 partial_score 基础题，要求写清模型含义。；2 道 partial_score 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-      "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。",
+      "problemCount": 13,
+      "trainingAction": "针对数学难题，训练学生拆分子任务的能力：要求每道题先写出30分、50分、70分、100分的不同解法思路，明确各子任务的数据范围、算法和边界条件。；强化溢出和递归风险意识：专项练习大数运算、模运算、递归转迭代等技巧，要求代码中显式处理溢出（如使用long long、取模前检查）并评估递归深度。；进行部分分冲刺训练：选取类似U619606和P13498的题目，限时要求学生从部分分代码出发，通过优化算法或修正边界条件达到更高分数，并复盘每次提交的改进点。",
+      "verifyMethod": "同类数学难题提交次数降至2次以内，且能清晰写出至少两个子任务的解法（如30分暴力、70分优化），代码中无溢出或递归栈风险，最终得分不低于70分。",
       "clusterIds": [
-        "partial_score_partial_score_022",
-        "partial_score_partial_score_023"
+        "math_model_template_069"
       ]
     },
     {
       "weaknessId": "interval_dp_state_error_4",
       "title": "区间 DP：区间 DP 的状态设计、初始化和枚举顺序不稳定",
-      "severity": 70.33,
+      "severity": 68.53,
       "relatedModules": [
         "interval_dp"
       ],
@@ -93,13 +130,12 @@
         "P1967",
         "T699486"
       ],
-      "problemCount": 56,
-      "trainingAction": "2 道 区间 DP 基础题，要求写清模型含义。；2 道 区间 DP 中档题，限时并记录提交次数。；每题提交前必须写边界和初始化检查清单。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-      "verifyMethod": "同类题提交次数 <= 2，能独立说明状态定义、初始化和 len 枚举顺序。",
+      "problemCount": 54,
+      "trainingAction": "强制写出区间 DP 的状态定义、转移方程、初始化条件和边界枚举顺序的伪代码，对照标准模板逐行检查。；针对经典区间 DP 题目（如石子合并、括号匹配）进行限时专项训练，要求一次提交通过率 ≥ 80%，否则重做并记录错误原因。；设计变长区间、环形区间等变形题，训练在不同初始化策略（如 memset、手动赋值）和边界条件（如 len=1 或 i+len-1 越界）下的调试能力。",
+      "verifyMethod": "同类区间 DP 新题提交次数 ≤ 2 次，且能清晰写出状态定义、初始化逻辑和 30-50-70 分的部分分方案。",
       "clusterIds": [
         "interval_dp_state_init_boundary_001",
         "interval_dp_state_init_boundary_037",
-        "interval_dp_state_init_boundary_066",
         "interval_dp_state_init_boundary_094",
         "interval_dp_state_init_boundary_041",
         "interval_dp_state_init_boundary_058",
@@ -108,7 +144,7 @@
       ]
     },
     {
-      "weaknessId": "dp_state_error_13",
+      "weaknessId": "dp_state_error_15",
       "title": "DP：DP 状态、转移和初始化需要进一步稳定",
       "severity": 59.95,
       "relatedModules": [
@@ -118,7 +154,9 @@
         "STATE_ERROR",
         "INIT_ERROR",
         "BOUNDARY_ERROR",
-        "PARTIAL_SCORE_MISSED"
+        "MODEL_ERROR",
+        "OVERFLOW_ERROR",
+        "INDEX_ERROR"
       ],
       "evidenceProblems": [
         "AT_dp_a",
@@ -135,8 +173,8 @@
         "AT_abc129_c"
       ],
       "problemCount": 54,
-      "trainingAction": "2 道 DP 基础题，要求写清模型含义。；2 道 DP 中档题，限时并记录提交次数。；每题提交前必须写边界和初始化检查清单。",
-      "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。",
+      "trainingAction": "强制手写DP状态定义三要素（状态含义、维度、存储结构）并对照题解验证，针对AT_dp_a和CF1051D重写状态设计。；专项练习DP初始化与边界：完成5道经典线性DP和区间DP题，要求写出初始化代码和边界条件注释，提交前人工检查。；重构AT_dp_a和CF1051D代码，限制代码行数在100行以内，禁止使用递归和全局大数组，改用迭代和滚动数组，确保无溢出和索引错误。",
+      "verifyMethod": "同类DP题（如AT_dp_b、CF1051D变体）提交次数≤2次，且首次提交至少获得30分部分分，能清晰写出状态定义、初始化、转移方程和边界处理。",
       "clusterIds": [
         "dp_state_init_boundary_092",
         "dp_state_init_boundary_072",
@@ -150,65 +188,6 @@
       ]
     },
     {
-      "weaknessId": "graph_model_error_7",
-      "title": "图论建模：难题部分分拆解和得分策略不足",
-      "severity": 55.82,
-      "relatedModules": [
-        "graph"
-      ],
-      "relatedErrorTypes": [
-        "MODEL_ERROR",
-        "PARTIAL_SCORE_MISSED"
-      ],
-      "evidenceProblems": [
-        "U465842",
-        "P2899",
-        "P15267",
-        "P1006",
-        "U460090",
-        "B3938",
-        "P1825",
-        "P10381",
-        "P1933"
-      ],
-      "problemCount": 9,
-      "trainingAction": "2 道 图论建模 基础题，要求写清模型含义。；2 道 图论建模 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-      "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。",
-      "clusterIds": [
-        "graph_model_template_044",
-        "graph_model_template_084"
-      ]
-    },
-    {
-      "weaknessId": "binary_search_model_error_18",
-      "title": "二分答案：二分答案的 check 单调性和边界处理不稳定",
-      "severity": 52.16,
-      "relatedModules": [
-        "binary_search"
-      ],
-      "relatedErrorTypes": [
-        "MODEL_ERROR",
-        "PARTIAL_SCORE_MISSED"
-      ],
-      "evidenceProblems": [
-        "P11849",
-        "T717044",
-        "P1439",
-        "P1024",
-        "P5815",
-        "P1579",
-        "B3799",
-        "U268985"
-      ],
-      "problemCount": 8,
-      "trainingAction": "2 道 二分答案 基础题，要求写清模型含义。；2 道 二分答案 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-      "verifyMethod": "同类题提交次数 <= 2，能独立证明 check 单调性并说明边界收缩。",
-      "clusterIds": [
-        "binary_search_model_template_038",
-        "binary_search_model_template_053"
-      ]
-    },
-    {
       "weaknessId": "greedy_partial_score_missed_1",
       "title": "贪心：难题部分分拆解和得分策略不足",
       "severity": 51.87,
@@ -216,76 +195,53 @@
         "greedy"
       ],
       "relatedErrorTypes": [
-        "PARTIAL_SCORE_MISSED"
+        "PARTIAL_SCORE_MISSED",
+        "IMPLEMENTATION_RISK",
+        "OVERFLOW_ERROR"
       ],
       "evidenceProblems": [
         "U619605"
       ],
       "problemCount": 1,
-      "trainingAction": "2 道 贪心 基础题，要求写清模型含义。；2 道 贪心 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-      "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。",
+      "trainingAction": "针对难题，强制要求先写出30-50-70分方案，明确每个部分分的算法思路和边界条件，再开始编码。；练习将复杂问题拆解为独立子问题，例如先实现暴力枚举或简单贪心获得基础分，再优化。；学习识别并规避常见风险（如整数溢出、递归栈深度），在部分分代码中优先保证正确性而非完整解。",
+      "verifyMethod": "同类难题提交次数降至2次以内，且能清晰写出至少两个不同得分档次的解法（如30分暴力、70分优化），代码中无OVERFLOW或RECURSION风险标记。",
       "clusterIds": [
         "greedy_unknown_068"
       ]
     },
     {
-      "weaknessId": "shortest_path_state_error_3",
-      "title": "最短路：难题部分分拆解和得分策略不足",
-      "severity": 51.67,
+      "weaknessId": "partial_score_model_error_20",
+      "title": "partial_score：难题部分分拆解和得分策略不足",
+      "severity": 51.66,
       "relatedModules": [
-        "shortest_path"
+        "partial_score"
       ],
       "relatedErrorTypes": [
+        "MODEL_ERROR",
         "STATE_ERROR",
         "INIT_ERROR",
         "BOUNDARY_ERROR",
         "PARTIAL_SCORE_MISSED"
       ],
       "evidenceProblems": [
-        "P2452",
-        "P1713",
-        "P3685",
-        "P3371",
-        "P4779"
+        "P15018",
+        "P1102",
+        "P7410",
+        "P15131",
+        "P1031",
+        "P2367",
+        "P1567",
+        "B2004"
       ],
-      "problemCount": 5,
-      "trainingAction": "2 道 最短路 基础题，要求写清模型含义。；2 道 最短路 中档题，限时并记录提交次数。；每题提交前必须写边界和初始化检查清单。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-      "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。",
+      "problemCount": 8,
+      "trainingAction": "针对动态规划、搜索等常见难题类型，训练学生先写出30分、50分、70分的分档方案，明确每档对应的模型简化、状态定义和边界条件。；强化递归和数组操作的边界检查与初始化习惯，通过专项练习减少ARRAY_INDEX_RISK和RECURSION_STACK_RISK错误，确保基础部分分稳定获取。；进行限时部分分拆解模拟：给出难题，要求学生在15分钟内写出至少两档部分分的伪代码或关键实现，并说明复杂度，提升快速得分能力。",
+      "verifyMethod": "同类难题提交次数降至2次以内，首次提交至少获得50%分数，且能清晰写出状态定义、边界处理及30-50-70分方案。",
       "clusterIds": [
-        "shortest_path_state_init_boundary_013",
-        "shortest_path_state_init_boundary_063"
+        "partial_score_partial_score_023"
       ]
     },
     {
-      "weaknessId": "dsu_model_error_9",
-      "title": "并查集：并查集的集合含义、合并条件或离散化细节不稳定",
-      "severity": 50.97,
-      "relatedModules": [
-        "dsu"
-      ],
-      "relatedErrorTypes": [
-        "MODEL_ERROR",
-        "PARTIAL_SCORE_MISSED"
-      ],
-      "evidenceProblems": [
-        "P1955",
-        "P3958",
-        "P3366",
-        "P1551",
-        "P3144",
-        "P5659",
-        "P6121"
-      ],
-      "problemCount": 7,
-      "trainingAction": "2 道 并查集 基础题，要求写清模型含义。；2 道 并查集 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-      "verifyMethod": "能说明集合含义、合并条件和离散化方式，提交次数 <= 2。",
-      "clusterIds": [
-        "dsu_model_template_054",
-        "dsu_model_template_065"
-      ]
-    },
-    {
-      "weaknessId": "graph_model_error_27",
+      "weaknessId": "graph_model_error_37",
       "title": "图论建模：图论建模 相关建模或实现稳定性不足",
       "severity": 50.2,
       "relatedModules": [
@@ -321,7 +277,7 @@
       ]
     },
     {
-      "weaknessId": "math_model_error_30",
+      "weaknessId": "math_model_error_40",
       "title": "数学：数学 相关建模或实现稳定性不足",
       "severity": 49.26,
       "relatedModules": [
@@ -357,7 +313,7 @@
       ]
     },
     {
-      "weaknessId": "implementation_implementation_risk_28",
+      "weaknessId": "implementation_implementation_risk_38",
       "title": "implementation：implementation 相关建模或实现稳定性不足",
       "severity": 49.22,
       "relatedModules": [
@@ -393,7 +349,7 @@
       ]
     },
     {
-      "weaknessId": "string_state_error_29",
+      "weaknessId": "string_state_error_39",
       "title": "字符串：字符串 相关建模或实现稳定性不足",
       "severity": 49.15,
       "relatedModules": [
@@ -431,7 +387,58 @@
       ]
     },
     {
-      "weaknessId": "binary_search_model_error_23",
+      "weaknessId": "graph_model_error_7",
+      "title": "图论建模：难题部分分拆解和得分策略不足",
+      "severity": 48.37,
+      "relatedModules": [
+        "graph"
+      ],
+      "relatedErrorTypes": [
+        "MODEL_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceProblems": [
+        "U465842",
+        "P2899",
+        "P15267",
+        "P1006",
+        "U460090"
+      ],
+      "problemCount": 5,
+      "trainingAction": "针对图论难题，训练学生先写出30-50-70分部分分方案（如暴力、特判、简化模型），再逐步优化到满分。；强化图模型构建的规范性：要求学生在纸上明确状态定义、转移方程、边界条件，并检查数组索引、递归深度等常见风险。；限时完成同类题（如最短路径变种、连通性难题），要求提交次数≤2次，且第一次提交必须包含至少30分的部分分解法。",
+      "verifyMethod": "同类图论难题提交次数≤2次，且能清晰写出状态定义、边界条件和30-50-70分拆解方案。",
+      "clusterIds": [
+        "graph_model_template_044"
+      ]
+    },
+    {
+      "weaknessId": "shortest_path_model_error_3",
+      "title": "最短路：难题部分分拆解和得分策略不足",
+      "severity": 48.31,
+      "relatedModules": [
+        "shortest_path"
+      ],
+      "relatedErrorTypes": [
+        "MODEL_ERROR",
+        "INIT_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceProblems": [
+        "P2452",
+        "P1713",
+        "P3685"
+      ],
+      "problemCount": 3,
+      "trainingAction": "针对最短路径难题，训练学生根据数据范围设计多档部分分方案：先写暴力（如DFS全排列）拿10-20分，再针对特殊性质（如边权为1、DAG）写简化算法拿30-50分，最后尝试正解优化。；强化图建模和状态初始化专项练习：给出若干需要转化图模型的最短路问题（如P2452），要求学生明确写出状态定义、初始化值（如dist数组、inf边界）、转移方程，并人工检查边界条件（如起点、终点、不可达状态）。；限时重构训练：选取P2452类似题目，要求学生在30分钟内写出能稳定获得70分的代码，重点检查初始化、数组索引和递归/迭代边界，避免因实现细节丢分。",
+      "verifyMethod": "同类最短路径难题（如P2452级别）提交次数≤2次，且能清晰写出30-50-70分方案，代码中无SHORTEST_PATH_INIT_RISK、ARRAY_INDEX_RISK等标记，部分分得分率≥70%。",
+      "clusterIds": [
+        "shortest_path_state_init_boundary_013"
+      ]
+    },
+    {
+      "weaknessId": "binary_search_model_error_33",
       "title": "二分答案：二分答案的 check 单调性和边界处理不稳定",
       "severity": 46.46,
       "relatedModules": [
@@ -466,14 +473,93 @@
       ]
     },
     {
-      "weaknessId": "state_compression_dp_partial_score_missed_17",
+      "weaknessId": "dsu_model_error_9",
+      "title": "并查集：并查集的集合含义、合并条件或离散化细节不稳定",
+      "severity": 46.28,
+      "relatedModules": [
+        "dsu"
+      ],
+      "relatedErrorTypes": [
+        "MODEL_ERROR",
+        "BOUNDARY_ERROR",
+        "INIT_ERROR",
+        "INDEX_ERROR",
+        "OVERFLOW_ERROR"
+      ],
+      "evidenceProblems": [
+        "P1955",
+        "P3958",
+        "P3366",
+        "P1551"
+      ],
+      "problemCount": 4,
+      "trainingAction": "手写并查集模板，明确 father 数组初始化、路径压缩与按秩合并的标准写法，并解释集合代表元的含义。；针对离散化场景，练习将大范围数据映射到连续下标，并验证合并条件（如相等/不等关系）在离散化后的正确性。；完成 3 道带离散化的并查集变种题（如 P1955 同类），要求先写出状态定义、合并规则和边界处理伪代码，再编码，目标提交次数 ≤ 2 次。",
+      "verifyMethod": "同类题（如 P1955 变种）提交 ≤ 2 次，能清晰写出并查集模型定义、离散化映射逻辑和初始化边界，且代码无 INDEX_ERROR 或 OVERFLOW_ERROR 风险。",
+      "clusterIds": [
+        "dsu_model_template_054"
+      ]
+    },
+    {
+      "weaknessId": "binary_search_model_error_23",
+      "title": "二分答案：二分答案的 check 单调性和边界处理不稳定",
+      "severity": 46.15,
+      "relatedModules": [
+        "binary_search"
+      ],
+      "relatedErrorTypes": [
+        "MODEL_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceProblems": [
+        "P1439",
+        "P1024",
+        "P5815",
+        "P1579",
+        "B3799",
+        "U268985"
+      ],
+      "problemCount": 6,
+      "trainingAction": "强制写出 check 函数的单调性证明（文字或数学表达式），并画出 mid 与目标值的关系图，确保理解为什么可以二分。；针对边界条件进行专项训练：手写三种常见二分模板（左闭右闭、左闭右开、实数二分）的终止条件和 mid 计算，并完成 5 道仅需调整边界的变式题。；设计 30-50-70 分阶梯训练：先实现暴力 check 得部分分，再优化为二分，最后处理边界细节，要求每阶段提交次数 ≤2 次。",
+      "verifyMethod": "同类二分答案题（如 P2678、P1314）提交 ≤2 次即 AC，且能清晰解释 check 单调性和边界选择理由。",
+      "clusterIds": [
+        "binary_search_model_template_053"
+      ]
+    },
+    {
+      "weaknessId": "string_model_error_2",
+      "title": "字符串：难题部分分拆解和得分策略不足",
+      "severity": 44.87,
+      "relatedModules": [
+        "string"
+      ],
+      "relatedErrorTypes": [
+        "MODEL_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED"
+      ],
+      "evidenceProblems": [
+        "P9750",
+        "P5740"
+      ],
+      "problemCount": 2,
+      "trainingAction": "针对字符串/数学类难题，强制要求先写出30分、50分、70分的部分分方案（包括状态定义、边界条件），再编码实现。；限时训练：给出题目后，15分钟内必须提交一个部分分解，然后迭代优化，每次提交需记录修改点（如边界调整、模型修正）。；专项练习边界条件：设计包含空串、单字符、极长串、数值溢出等边界测试用例，要求代码通过所有边界测试后才能提交。",
+      "verifyMethod": "同类难题（如字符串+数学组合）提交次数降至≤3次，且能清晰描述部分分策略和边界处理方案，最终AC率≥80%。",
+      "clusterIds": [
+        "string_state_init_boundary_027"
+      ]
+    },
+    {
+      "weaknessId": "state_compression_dp_partial_score_missed_21",
       "title": "状态压缩 DP：难题部分分拆解和得分策略不足",
       "severity": 43.04,
       "relatedModules": [
         "state_compression_dp"
       ],
       "relatedErrorTypes": [
-        "PARTIAL_SCORE_MISSED"
+        "PARTIAL_SCORE_MISSED",
+        "STATE_ERROR",
+        "IMPLEMENTATION_RISK"
       ],
       "evidenceProblems": [
         "P11860",
@@ -481,40 +567,14 @@
         "P11475"
       ],
       "problemCount": 3,
-      "trainingAction": "2 道 状态压缩 DP 基础题，要求写清模型含义。；2 道 状态压缩 DP 中档题，限时并记录提交次数。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-      "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。",
+      "trainingAction": "专项训练状态压缩DP的部分分设计：针对一道题，要求写出30分（暴力）、50分（优化状态）、70分（剪枝或特定子问题）和满分（完整状态压缩）的代码框架。；强化状态定义与转移的规范性：练习将问题转化为图模型时的状态压缩技巧，避免递归栈溢出，改用迭代或显式栈实现。；复盘P11860和P7859：人工分析代码，找出8分和80分的具体瓶颈，重写代码并提交至AC，总结边界条件和数组索引错误。",
+      "verifyMethod": "同类难题提交次数≤2次，能清晰写出状态定义、转移方程和不同数据范围下的部分分方案，且代码中无RECURSION_STACK_RISK、ARRAY_INDEX_RISK等风险标记。",
       "clusterIds": [
         "state_compression_dp_unknown_048"
       ]
     },
     {
-      "weaknessId": "string_state_error_2",
-      "title": "字符串：难题部分分拆解和得分策略不足",
-      "severity": 42.63,
-      "relatedModules": [
-        "string"
-      ],
-      "relatedErrorTypes": [
-        "STATE_ERROR",
-        "INIT_ERROR",
-        "BOUNDARY_ERROR",
-        "PARTIAL_SCORE_MISSED"
-      ],
-      "evidenceProblems": [
-        "P9750",
-        "P5740",
-        "P10722"
-      ],
-      "problemCount": 3,
-      "trainingAction": "2 道 字符串 基础题，要求写清模型含义。；2 道 字符串 中档题，限时并记录提交次数。；每题提交前必须写边界和初始化检查清单。；至少 1 道难题拆 30/50/70 分方案，不要求直接 AC。",
-      "verifyMethod": "能写出 30/50/70 分方案，并至少实现 30 分暴力。",
-      "clusterIds": [
-        "string_state_init_boundary_027",
-        "string_state_init_boundary_088"
-      ]
-    },
-    {
-      "weaknessId": "greedy_implementation_risk_26",
+      "weaknessId": "greedy_implementation_risk_36",
       "title": "贪心：贪心 相关建模或实现稳定性不足",
       "severity": 42.55,
       "relatedModules": [
@@ -549,7 +609,7 @@
       ]
     },
     {
-      "weaknessId": "dsu_model_error_22",
+      "weaknessId": "dsu_model_error_32",
       "title": "并查集：并查集的集合含义、合并条件或离散化细节不稳定",
       "severity": 42.39,
       "relatedModules": [
@@ -581,50 +641,6 @@
         "dsu_model_template_045",
         "dsu_model_template_040",
         "dsu_model_template_060"
-      ]
-    },
-    {
-      "weaknessId": "string_state_error_8",
-      "title": "字符串：高难题部分分与取舍策略不足",
-      "severity": 42.12,
-      "relatedModules": [
-        "string"
-      ],
-      "relatedErrorTypes": [
-        "STATE_ERROR",
-        "INIT_ERROR",
-        "BOUNDARY_ERROR"
-      ],
-      "evidenceProblems": [
-        "U519362",
-        "U615693"
-      ],
-      "problemCount": 2,
-      "trainingAction": "2 道 字符串 基础题，要求写清模型含义。；2 道 字符串 中档题，限时并记录提交次数。；每题提交前必须写边界和初始化检查清单。",
-      "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。",
-      "clusterIds": [
-        "string_state_init_boundary_047"
-      ]
-    },
-    {
-      "weaknessId": "math_model_error_12",
-      "title": "数学：高难题部分分与取舍策略不足",
-      "severity": 42.12,
-      "relatedModules": [
-        "math"
-      ],
-      "relatedErrorTypes": [
-        "MODEL_ERROR"
-      ],
-      "evidenceProblems": [
-        "CF1914B",
-        "CF1996D"
-      ],
-      "problemCount": 2,
-      "trainingAction": "2 道 数学 基础题，要求写清模型含义。；2 道 数学 中档题，限时并记录提交次数。",
-      "verifyMethod": "同类题提交次数 <= 2，复盘中能说明模型、复杂度和边界。",
-      "clusterIds": [
-        "math_model_template_090"
       ]
     }
   ]

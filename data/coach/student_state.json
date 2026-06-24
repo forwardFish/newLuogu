@@ -1,0 +1,111 @@
+{
+  "updatedAt": "2026-06-24T16:14:00.816Z",
+  "goal": "CSP-S_FIRST_PRIZE_IN_30_DAYS",
+  "scores": {
+    "t1": 93,
+    "t2": 86,
+    "t3": 74,
+    "t4": 59,
+    "total": 312
+  },
+  "firstPrizeReadiness": 0.87,
+  "weaknessStates": {
+    "partial_score_partial_score_missed_19": {
+      "confidence": 0.84,
+      "severity": 78.71,
+      "priority": 74,
+      "status": "WATCH",
+      "recentHitRate": 0.33,
+      "trend": "IMPROVING",
+      "lastTestedAt": "D24"
+    },
+    "math_model_error_5": {
+      "confidence": 0.88,
+      "severity": 73.66,
+      "priority": 76.16,
+      "status": "WATCH",
+      "recentHitRate": 0.5,
+      "trend": "MIXED",
+      "lastTestedAt": "D21"
+    },
+    "math_partial_score_missed_18": {
+      "confidence": 0.8,
+      "severity": 72.72,
+      "priority": 64.72,
+      "status": "WATCH",
+      "recentHitRate": 0,
+      "trend": "IMPROVING",
+      "lastTestedAt": "D30"
+    },
+    "interval_dp_state_error_4": {
+      "confidence": 0.83,
+      "severity": 68.53,
+      "priority": 73.03,
+      "status": "WATCH",
+      "recentHitRate": 0,
+      "trend": "IMPROVING",
+      "lastTestedAt": "D27"
+    },
+    "dp_state_error_15": {
+      "confidence": 0.86,
+      "severity": 59.95,
+      "priority": 76.95,
+      "status": "ACTIVE",
+      "recentHitRate": 0,
+      "trend": "IMPROVING",
+      "lastTestedAt": null
+    },
+    "greedy_partial_score_missed_1": {
+      "confidence": 0.82,
+      "severity": 51.87,
+      "priority": 67.37,
+      "status": "ACTIVE",
+      "recentHitRate": 0,
+      "trend": "IMPROVING",
+      "lastTestedAt": null
+    },
+    "partial_score_model_error_20": {
+      "confidence": 0.82,
+      "severity": 51.66,
+      "priority": 65.66,
+      "status": "ACTIVE",
+      "recentHitRate": 0,
+      "trend": "IMPROVING",
+      "lastTestedAt": null
+    },
+    "graph_model_error_37": {
+      "confidence": 0.73,
+      "severity": 50.2,
+      "priority": 54.7,
+      "status": "ACTIVE",
+      "recentHitRate": 0,
+      "trend": "IMPROVING",
+      "lastTestedAt": null
+    },
+    "math_model_error_40": {
+      "confidence": 0.72,
+      "severity": 49.26,
+      "priority": 52.26,
+      "status": "ACTIVE",
+      "recentHitRate": 0,
+      "trend": "IMPROVING",
+      "lastTestedAt": null
+    },
+    "implementation_implementation_risk_38": {
+      "confidence": 0.72,
+      "severity": 49.22,
+      "priority": 50.72,
+      "status": "ACTIVE",
+      "recentHitRate": 0,
+      "trend": "IMPROVING",
+      "lastTestedAt": null
+    }
+  },
+  "recentPerformance": {
+    "oneShotAcRate7d": 1,
+    "avgSubmissions7d": 1,
+    "avgTimeMinutes7d": 61.86,
+    "partialScorePlanRate7d": 1,
+    "oldWeaknessReappeared7d": 0
+  }
+}
