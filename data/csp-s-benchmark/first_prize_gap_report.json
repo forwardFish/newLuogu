@@ -1,0 +1,1846 @@
+{
+  "generatedAt": "2026-06-25T06:50:23.581Z",
+  "target": {
+    "year": 2026,
+    "province": "UNKNOWN",
+    "explicitTargetScore": 260,
+    "weeklyHours": 20,
+    "safetyMargin": 35,
+    "safeTargetScore": 260,
+    "lineConfidence": 0.95,
+    "lineNote": "Explicit target score from --targetScore. Use this when the goal is a concrete score rather than a province-line estimate."
+  },
+  "dataReliability": {
+    "pastProblemCount": 28,
+    "confirmedPastProblems": 0,
+    "needsManualConfirmation": 28,
+    "cspPastProblemsWithStudentRecord": 6,
+    "masteryAbilities": 37,
+    "noEvidenceAbilities": 10,
+    "warning": "The system can enforce a diagnostic and training loop, but no program can mathematically guarantee a first prize without real contest evidence."
+  },
+  "cspStructure": {
+    "bySlot": {
+      "T1": 7,
+      "T2": 7,
+      "T3": 7,
+      "T4": 7
+    },
+    "byPrimary": {
+      "MATH": 8,
+      "IMPLEMENTATION": 6,
+      "DATA_STRUCTURE": 7,
+      "STRING": 5,
+      "GRAPH": 6,
+      "GREEDY": 11,
+      "PARTIAL_SCORE": 14,
+      "DP": 9,
+      "BASIC_ALGORITHM": 6,
+      "SEARCH": 1,
+      "PROGRAMMING_BASICS": 1
+    },
+    "byAbility": {
+      "MATH.RECURRENCE.CORE": 1,
+      "IMPLEMENTATION.INTEGER_OVERFLOW": 2,
+      "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY": 6,
+      "STRING.PATTERN.BOUNDARY": 5,
+      "GRAPH.MODELING.GRAPH_ABSTRACTION": 6,
+      "GREEDY.PROOF.EXCHANGE_ARGUMENT": 11,
+      "PARTIAL_SCORE.SUBTASK_ANALYSIS": 14,
+      "DP.GENERAL.STATE_TRANSITION": 7,
+      "MATH.COMBINATORICS.CORE": 2,
+      "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY": 3,
+      "MATH.PERIODICITY.CORE": 1,
+      "IMPLEMENTATION.INDEX_BOUNDARY": 4,
+      "MATH.OVERFLOW_RANGE.CORE": 1,
+      "BASIC_ALGORITHM.SIMULATION_ENUMERATION.CASE_SPLIT": 3,
+      "DP.INTERVAL.RECOGNIZE_STRUCTURE": 2,
+      "DP.INTERVAL.INIT_AND_ORDER": 1,
+      "SEARCH.DFS_BFS.PRUNING_AND_STATE": 1,
+      "MATH.INVARIANT.CORE": 2,
+      "PROGRAMMING_BASICS.READING.CONSTRAINT_EXTRACTION": 1,
+      "MATH.FORMULA_DERIVATION.CORE": 1,
+      "DATA_STRUCTURE.DSU.SET_MEANING": 1
+    }
+  },
+  "topLosses": [
+    {
+      "abilityId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+      "name": "Subtask and partial-score decomposition",
+      "status": "NEEDS_BLIND_VALIDATION",
+      "historicalEvidenceCount": 59,
+      "pastProblemEvidenceCount": 1,
+      "blindTestCount": 0,
+      "masteryLevel": "EXPOSED",
+      "expectedLoss": {
+        "value": 14.53,
+        "confidenceInterval": [
+          7.99,
+          22.52
+        ],
+        "confidence": 0.54
+      },
+      "firstPrizeImpact": "CRITICAL",
+      "recommendedAction": "先用 T3/T4 真题盲测验证 PARTIAL_SCORE.SUBTASK_ANALYSIS，候选：2019T3P5659, 2019T4P5664, 2020T3P7077。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2019,
+          "slot": "T3",
+          "luoguPid": "P5659",
+          "title": "树上的数"
+        },
+        {
+          "year": 2019,
+          "slot": "T4",
+          "luoguPid": "P5664",
+          "title": "Emiya 家今天的饭"
+        },
+        {
+          "year": 2020,
+          "slot": "T3",
+          "luoguPid": "P7077",
+          "title": "函数调用"
+        },
+        {
+          "year": 2020,
+          "slot": "T4",
+          "luoguPid": "P7078",
+          "title": "贪吃蛇"
+        },
+        {
+          "year": 2021,
+          "slot": "T3",
+          "luoguPid": "P7915",
+          "title": "回文"
+        },
+        {
+          "year": 2021,
+          "slot": "T4",
+          "luoguPid": "P7916",
+          "title": "交通规划"
+        },
+        {
+          "year": 2022,
+          "slot": "T3",
+          "luoguPid": "P8819",
+          "title": "星战"
+        },
+        {
+          "year": 2022,
+          "slot": "T4",
+          "luoguPid": "P8820",
+          "title": "数据传输"
+        },
+        {
+          "year": 2023,
+          "slot": "T3",
+          "luoguPid": "P9754",
+          "title": "结构体"
+        },
+        {
+          "year": 2023,
+          "slot": "T4",
+          "luoguPid": "P9755",
+          "title": "种树"
+        },
+        {
+          "year": 2024,
+          "slot": "T3",
+          "luoguPid": "P11233",
+          "title": "染色"
+        },
+        {
+          "year": 2024,
+          "slot": "T4",
+          "luoguPid": "P11234",
+          "title": "擂台游戏"
+        },
+        {
+          "year": 2025,
+          "slot": "T3",
+          "luoguPid": "P14363",
+          "title": "谐音替换"
+        },
+        {
+          "year": 2025,
+          "slot": "T4",
+          "luoguPid": "P14364",
+          "title": "员工招聘"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.5,
+        "slotImpact": 1.3,
+        "scoreWeight": 0.45,
+        "failureProbability": 0.88,
+        "unrecoveredScoreRatio": 0.95,
+        "firstPrizeSensitivity": 1.1,
+        "confidence": 0.54
+      }
+    },
+    {
+      "abilityId": "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+      "name": "Exchange argument and counterexample search",
+      "status": "NEEDS_BLIND_VALIDATION",
+      "historicalEvidenceCount": 98,
+      "pastProblemEvidenceCount": 4,
+      "blindTestCount": 0,
+      "masteryLevel": "TRANSFERABLE",
+      "expectedLoss": {
+        "value": 7.34,
+        "confidenceInterval": [
+          4.04,
+          11.38
+        ],
+        "confidence": 0.54
+      },
+      "firstPrizeImpact": "HIGH",
+      "recommendedAction": "先用 T3/T2/T4/T1 真题盲测验证 GREEDY.PROOF.EXCHANGE_ARGUMENT，候选：2019T3P5659, 2020T2P7076, 2020T4P7078。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2019,
+          "slot": "T3",
+          "luoguPid": "P5659",
+          "title": "树上的数"
+        },
+        {
+          "year": 2020,
+          "slot": "T2",
+          "luoguPid": "P7076",
+          "title": "动物园"
+        },
+        {
+          "year": 2020,
+          "slot": "T4",
+          "luoguPid": "P7078",
+          "title": "贪吃蛇"
+        },
+        {
+          "year": 2021,
+          "slot": "T1",
+          "luoguPid": "P7913",
+          "title": "廊桥分配"
+        },
+        {
+          "year": 2021,
+          "slot": "T3",
+          "luoguPid": "P7915",
+          "title": "回文"
+        },
+        {
+          "year": 2022,
+          "slot": "T2",
+          "luoguPid": "P8818",
+          "title": "策略游戏"
+        },
+        {
+          "year": 2023,
+          "slot": "T4",
+          "luoguPid": "P9755",
+          "title": "种树"
+        },
+        {
+          "year": 2024,
+          "slot": "T1",
+          "luoguPid": "P11231",
+          "title": "决斗"
+        },
+        {
+          "year": 2024,
+          "slot": "T4",
+          "luoguPid": "P11234",
+          "title": "擂台游戏"
+        },
+        {
+          "year": 2025,
+          "slot": "T1",
+          "luoguPid": "P14361",
+          "title": "社团招新"
+        },
+        {
+          "year": 2025,
+          "slot": "T2",
+          "luoguPid": "P14362",
+          "title": "道路修复"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.39,
+        "slotImpact": 1.13,
+        "scoreWeight": 0.67,
+        "failureProbability": 0.4,
+        "unrecoveredScoreRatio": 0.95,
+        "firstPrizeSensitivity": 1.2,
+        "confidence": 0.54
+      }
+    },
+    {
+      "abilityId": "IMPLEMENTATION.INDEX_BOUNDARY",
+      "name": "Index and boundary safety",
+      "status": "NEEDS_BLIND_VALIDATION",
+      "historicalEvidenceCount": 650,
+      "pastProblemEvidenceCount": 1,
+      "blindTestCount": 0,
+      "masteryLevel": "UNSTABLE",
+      "expectedLoss": {
+        "value": 4.96,
+        "confidenceInterval": [
+          2.73,
+          7.69
+        ],
+        "confidence": 0.59
+      },
+      "firstPrizeImpact": "MEDIUM",
+      "recommendedAction": "先用 T1/T3/T2 真题盲测验证 IMPLEMENTATION.INDEX_BOUNDARY，候选：2020T1P7075, 2023T1P9752, 2023T3P9754。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2020,
+          "slot": "T1",
+          "luoguPid": "P7075",
+          "title": "儒略日"
+        },
+        {
+          "year": 2023,
+          "slot": "T1",
+          "luoguPid": "P9752",
+          "title": "密码锁"
+        },
+        {
+          "year": 2023,
+          "slot": "T3",
+          "luoguPid": "P9754",
+          "title": "结构体"
+        },
+        {
+          "year": 2024,
+          "slot": "T2",
+          "luoguPid": "P11232",
+          "title": "超速检测"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.14,
+        "slotImpact": 1.02,
+        "scoreWeight": 0.81,
+        "failureProbability": 0.62,
+        "unrecoveredScoreRatio": 0.95,
+        "firstPrizeSensitivity": 1.2,
+        "confidence": 0.59
+      }
+    },
+    {
+      "abilityId": "GRAPH.MODELING.GRAPH_ABSTRACTION",
+      "name": "Turn problem relation into graph states and edges",
+      "status": "NEEDS_BLIND_VALIDATION",
+      "historicalEvidenceCount": 138,
+      "pastProblemEvidenceCount": 2,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 4.46,
+        "confidenceInterval": [
+          2.45,
+          6.91
+        ],
+        "confidence": 0.54
+      },
+      "firstPrizeImpact": "MEDIUM",
+      "recommendedAction": "先用 T3/T4/T1/T2 真题盲测验证 GRAPH.MODELING.GRAPH_ABSTRACTION，候选：2019T3P5659, 2020T3P7077, 2021T4P7916。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2019,
+          "slot": "T3",
+          "luoguPid": "P5659",
+          "title": "树上的数"
+        },
+        {
+          "year": 2020,
+          "slot": "T3",
+          "luoguPid": "P7077",
+          "title": "函数调用"
+        },
+        {
+          "year": 2021,
+          "slot": "T4",
+          "luoguPid": "P7916",
+          "title": "交通规划"
+        },
+        {
+          "year": 2022,
+          "slot": "T1",
+          "luoguPid": "P8817",
+          "title": "假期计划"
+        },
+        {
+          "year": 2022,
+          "slot": "T3",
+          "luoguPid": "P8819",
+          "title": "星战"
+        },
+        {
+          "year": 2025,
+          "slot": "T2",
+          "luoguPid": "P14362",
+          "title": "道路修复"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.21,
+        "slotImpact": 1.18,
+        "scoreWeight": 0.63,
+        "failureProbability": 0.46,
+        "unrecoveredScoreRatio": 0.95,
+        "firstPrizeSensitivity": 1.2,
+        "confidence": 0.54
+      }
+    },
+    {
+      "abilityId": "DP.GENERAL.STATE_TRANSITION",
+      "name": "State, transition, init and order",
+      "status": "WATCH",
+      "historicalEvidenceCount": 108,
+      "pastProblemEvidenceCount": 0,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 3.82,
+        "confidenceInterval": [
+          2.1,
+          5.92
+        ],
+        "confidence": 0.54
+      },
+      "firstPrizeImpact": "MEDIUM",
+      "recommendedAction": "先用 T4/T3/T2 真题盲测验证 DP.GENERAL.STATE_TRANSITION，候选：2019T4P5664, 2020T3P7077, 2022T4P8820。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2019,
+          "slot": "T4",
+          "luoguPid": "P5664",
+          "title": "Emiya 家今天的饭"
+        },
+        {
+          "year": 2020,
+          "slot": "T3",
+          "luoguPid": "P7077",
+          "title": "函数调用"
+        },
+        {
+          "year": 2022,
+          "slot": "T4",
+          "luoguPid": "P8820",
+          "title": "数据传输"
+        },
+        {
+          "year": 2023,
+          "slot": "T2",
+          "luoguPid": "P9753",
+          "title": "消消乐"
+        },
+        {
+          "year": 2024,
+          "slot": "T3",
+          "luoguPid": "P11233",
+          "title": "染色"
+        },
+        {
+          "year": 2024,
+          "slot": "T4",
+          "luoguPid": "P11234",
+          "title": "擂台游戏"
+        },
+        {
+          "year": 2025,
+          "slot": "T4",
+          "luoguPid": "P14364",
+          "title": "员工招聘"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.25,
+        "slotImpact": 1.28,
+        "scoreWeight": 0.47,
+        "failureProbability": 0.43,
+        "unrecoveredScoreRatio": 0.95,
+        "firstPrizeSensitivity": 1.15,
+        "confidence": 0.54
+      }
+    },
+    {
+      "abilityId": "STRING.PATTERN.BOUNDARY",
+      "name": "String boundary and pattern model",
+      "status": "WATCH",
+      "historicalEvidenceCount": 187,
+      "pastProblemEvidenceCount": 0,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 3.53,
+        "confidenceInterval": [
+          1.94,
+          5.47
+        ],
+        "confidence": 0.52
+      },
+      "firstPrizeImpact": "MEDIUM",
+      "recommendedAction": "先用 T2/T3 真题盲测验证 STRING.PATTERN.BOUNDARY，候选：2019T2P5658, 2021T2P7914, 2021T3P7915。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2019,
+          "slot": "T2",
+          "luoguPid": "P5658",
+          "title": "括号树"
+        },
+        {
+          "year": 2021,
+          "slot": "T2",
+          "luoguPid": "P7914",
+          "title": "括号序列"
+        },
+        {
+          "year": 2021,
+          "slot": "T3",
+          "luoguPid": "P7915",
+          "title": "回文"
+        },
+        {
+          "year": 2023,
+          "slot": "T2",
+          "luoguPid": "P9753",
+          "title": "消消乐"
+        },
+        {
+          "year": 2025,
+          "slot": "T3",
+          "luoguPid": "P14363",
+          "title": "谐音替换"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.18,
+        "slotImpact": 1.13,
+        "scoreWeight": 0.7,
+        "failureProbability": 0.44,
+        "unrecoveredScoreRatio": 0.95,
+        "firstPrizeSensitivity": 1.15,
+        "confidence": 0.52
+      }
+    },
+    {
+      "abilityId": "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+      "name": "Range data-structure template and boundary",
+      "status": "WATCH",
+      "historicalEvidenceCount": 14,
+      "pastProblemEvidenceCount": 0,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 3.45,
+        "confidenceInterval": [
+          1.9,
+          5.35
+        ],
+        "confidence": 0.54
+      },
+      "firstPrizeImpact": "MEDIUM",
+      "recommendedAction": "先用 T2/T4/T3 真题盲测验证 DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY，候选：2019T2P5658, 2020T4P7078, 2022T2P8818。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2019,
+          "slot": "T2",
+          "luoguPid": "P5658",
+          "title": "括号树"
+        },
+        {
+          "year": 2020,
+          "slot": "T4",
+          "luoguPid": "P7078",
+          "title": "贪吃蛇"
+        },
+        {
+          "year": 2022,
+          "slot": "T2",
+          "luoguPid": "P8818",
+          "title": "策略游戏"
+        },
+        {
+          "year": 2022,
+          "slot": "T4",
+          "luoguPid": "P8820",
+          "title": "数据传输"
+        },
+        {
+          "year": 2024,
+          "slot": "T3",
+          "luoguPid": "P11233",
+          "title": "染色"
+        },
+        {
+          "year": 2025,
+          "slot": "T3",
+          "luoguPid": "P14363",
+          "title": "谐音替换"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.21,
+        "slotImpact": 1.22,
+        "scoreWeight": 0.57,
+        "failureProbability": 0.47,
+        "unrecoveredScoreRatio": 0.8,
+        "firstPrizeSensitivity": 1.15,
+        "confidence": 0.54
+      }
+    },
+    {
+      "abilityId": "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY",
+      "name": "Prove check monotonicity and boundary",
+      "status": "WATCH",
+      "historicalEvidenceCount": 57,
+      "pastProblemEvidenceCount": 1,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 2.39,
+        "confidenceInterval": [
+          1.31,
+          3.7
+        ],
+        "confidence": 0.59
+      },
+      "firstPrizeImpact": "LOW",
+      "recommendedAction": "先用 T1/T4/T2 真题盲测验证 BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY，候选：2020T1P7075, 2023T4P9755, 2024T2P11232。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2020,
+          "slot": "T1",
+          "luoguPid": "P7075",
+          "title": "儒略日"
+        },
+        {
+          "year": 2023,
+          "slot": "T4",
+          "luoguPid": "P9755",
+          "title": "种树"
+        },
+        {
+          "year": 2024,
+          "slot": "T2",
+          "luoguPid": "P11232",
+          "title": "超速检测"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.11,
+        "slotImpact": 1.1,
+        "scoreWeight": 0.7,
+        "failureProbability": 0.46,
+        "unrecoveredScoreRatio": 0.89,
+        "firstPrizeSensitivity": 1.2,
+        "confidence": 0.59
+      }
+    },
+    {
+      "abilityId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+      "name": "Integer overflow and range estimate",
+      "status": "WATCH",
+      "historicalEvidenceCount": 452,
+      "pastProblemEvidenceCount": 1,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 1.77,
+        "confidenceInterval": [
+          0.97,
+          2.74
+        ],
+        "confidence": 0.51
+      },
+      "firstPrizeImpact": "LOW",
+      "recommendedAction": "先用 T1/T2 真题盲测验证 IMPLEMENTATION.INTEGER_OVERFLOW，候选：2019T1P5657, 2020T2P7076。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2019,
+          "slot": "T1",
+          "luoguPid": "P5657",
+          "title": "格雷码"
+        },
+        {
+          "year": 2020,
+          "slot": "T2",
+          "luoguPid": "P7076",
+          "title": "动物园"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.07,
+        "slotImpact": 0.98,
+        "scoreWeight": 0.88,
+        "failureProbability": 0.5,
+        "unrecoveredScoreRatio": 0.95,
+        "firstPrizeSensitivity": 1.2,
+        "confidence": 0.51
+      }
+    },
+    {
+      "abilityId": "DP.INTERVAL.RECOGNIZE_STRUCTURE",
+      "name": "Recognize interval substructure",
+      "status": "WATCH",
+      "historicalEvidenceCount": 79,
+      "pastProblemEvidenceCount": 0,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 1.38,
+        "confidenceInterval": [
+          0.76,
+          2.14
+        ],
+        "confidence": 0.59
+      },
+      "firstPrizeImpact": "LOW",
+      "recommendedAction": "先用 T2/T4 真题盲测验证 DP.INTERVAL.RECOGNIZE_STRUCTURE，候选：2021T2P7914, 2021T4P7916。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2021,
+          "slot": "T2",
+          "luoguPid": "P7914",
+          "title": "括号序列"
+        },
+        {
+          "year": 2021,
+          "slot": "T4",
+          "luoguPid": "P7916",
+          "title": "交通规划"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.07,
+        "slotImpact": 1.2,
+        "scoreWeight": 0.57,
+        "failureProbability": 0.45,
+        "unrecoveredScoreRatio": 0.92,
+        "firstPrizeSensitivity": 1.15,
+        "confidence": 0.59
+      }
+    },
+    {
+      "abilityId": "MATH.FORMULA_DERIVATION.CORE",
+      "name": "Formula derivation core ability",
+      "status": "WATCH",
+      "historicalEvidenceCount": 59,
+      "pastProblemEvidenceCount": 1,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 0.84,
+        "confidenceInterval": [
+          0.46,
+          1.3
+        ],
+        "confidence": 0.59
+      },
+      "firstPrizeImpact": "LOW",
+      "recommendedAction": "先用 T2 真题盲测验证 MATH.FORMULA_DERIVATION.CORE，候选：2024T2P11232。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2024,
+          "slot": "T2",
+          "luoguPid": "P11232",
+          "title": "超速检测"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.04,
+        "slotImpact": 1.05,
+        "scoreWeight": 0.8,
+        "failureProbability": 0.46,
+        "unrecoveredScoreRatio": 0.9,
+        "firstPrizeSensitivity": 1.15,
+        "confidence": 0.59
+      }
+    },
+    {
+      "abilityId": "MATH.OVERFLOW_RANGE.CORE",
+      "name": "Overflow and range core ability",
+      "status": "WATCH",
+      "historicalEvidenceCount": 253,
+      "pastProblemEvidenceCount": 0,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 0.83,
+        "confidenceInterval": [
+          0.46,
+          1.29
+        ],
+        "confidence": 0.59
+      },
+      "firstPrizeImpact": "LOW",
+      "recommendedAction": "先用 T2 真题盲测验证 MATH.OVERFLOW_RANGE.CORE，候选：2020T2P7076。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2020,
+          "slot": "T2",
+          "luoguPid": "P7076",
+          "title": "动物园"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.04,
+        "slotImpact": 1.05,
+        "scoreWeight": 0.8,
+        "failureProbability": 0.43,
+        "unrecoveredScoreRatio": 0.95,
+        "firstPrizeSensitivity": 1.15,
+        "confidence": 0.59
+      }
+    },
+    {
+      "abilityId": "DP.INTERVAL.INIT_AND_ORDER",
+      "name": "Initialization and length-order enumeration",
+      "status": "WATCH",
+      "historicalEvidenceCount": 79,
+      "pastProblemEvidenceCount": 0,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 0.83,
+        "confidenceInterval": [
+          0.46,
+          1.29
+        ],
+        "confidence": 0.59
+      },
+      "firstPrizeImpact": "LOW",
+      "recommendedAction": "先用 T2 真题盲测验证 DP.INTERVAL.INIT_AND_ORDER，候选：2021T2P7914。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2021,
+          "slot": "T2",
+          "luoguPid": "P7914",
+          "title": "括号序列"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.04,
+        "slotImpact": 1.05,
+        "scoreWeight": 0.8,
+        "failureProbability": 0.45,
+        "unrecoveredScoreRatio": 0.91,
+        "firstPrizeSensitivity": 1.15,
+        "confidence": 0.59
+      }
+    },
+    {
+      "abilityId": "SEARCH.DFS_BFS.PRUNING_AND_STATE",
+      "name": "Search state and pruning",
+      "status": "WATCH",
+      "historicalEvidenceCount": 94,
+      "pastProblemEvidenceCount": 0,
+      "blindTestCount": 0,
+      "masteryLevel": "TRANSFERABLE",
+      "expectedLoss": {
+        "value": 0.76,
+        "confidenceInterval": [
+          0.42,
+          1.18
+        ],
+        "confidence": 0.59
+      },
+      "firstPrizeImpact": "LOW",
+      "recommendedAction": "先用 T1 真题盲测验证 SEARCH.DFS_BFS.PRUNING_AND_STATE，候选：2022T1P8817。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2022,
+          "slot": "T1",
+          "luoguPid": "P8817",
+          "title": "假期计划"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.04,
+        "slotImpact": 0.9,
+        "scoreWeight": 0.95,
+        "failureProbability": 0.38,
+        "unrecoveredScoreRatio": 0.93,
+        "firstPrizeSensitivity": 1.2,
+        "confidence": 0.59
+      }
+    },
+    {
+      "abilityId": "MATH.RECURRENCE.CORE",
+      "name": "Recurrence core ability",
+      "status": "WATCH",
+      "historicalEvidenceCount": 0,
+      "pastProblemEvidenceCount": 1,
+      "blindTestCount": 0,
+      "masteryLevel": "EXPOSED",
+      "expectedLoss": {
+        "value": 0.52,
+        "confidenceInterval": [
+          0.29,
+          0.81
+        ],
+        "confidence": 0.2
+      },
+      "firstPrizeImpact": "LOW",
+      "recommendedAction": "先用 T1 真题盲测验证 MATH.RECURRENCE.CORE，候选：2019T1P5657。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2019,
+          "slot": "T1",
+          "luoguPid": "P5657",
+          "title": "格雷码"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.04,
+        "slotImpact": 0.9,
+        "scoreWeight": 0.95,
+        "failureProbability": 1,
+        "unrecoveredScoreRatio": 0.71,
+        "firstPrizeSensitivity": 1.2,
+        "confidence": 0.2
+      }
+    }
+  ],
+  "confirmedWeaknesses": [],
+  "pendingWeaknesses": [
+    {
+      "abilityId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+      "name": "Subtask and partial-score decomposition",
+      "status": "NEEDS_BLIND_VALIDATION",
+      "historicalEvidenceCount": 59,
+      "pastProblemEvidenceCount": 1,
+      "blindTestCount": 0,
+      "masteryLevel": "EXPOSED",
+      "expectedLoss": {
+        "value": 14.53,
+        "confidenceInterval": [
+          7.99,
+          22.52
+        ],
+        "confidence": 0.54
+      },
+      "firstPrizeImpact": "CRITICAL",
+      "recommendedAction": "先用 T3/T4 真题盲测验证 PARTIAL_SCORE.SUBTASK_ANALYSIS，候选：2019T3P5659, 2019T4P5664, 2020T3P7077。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2019,
+          "slot": "T3",
+          "luoguPid": "P5659",
+          "title": "树上的数"
+        },
+        {
+          "year": 2019,
+          "slot": "T4",
+          "luoguPid": "P5664",
+          "title": "Emiya 家今天的饭"
+        },
+        {
+          "year": 2020,
+          "slot": "T3",
+          "luoguPid": "P7077",
+          "title": "函数调用"
+        },
+        {
+          "year": 2020,
+          "slot": "T4",
+          "luoguPid": "P7078",
+          "title": "贪吃蛇"
+        },
+        {
+          "year": 2021,
+          "slot": "T3",
+          "luoguPid": "P7915",
+          "title": "回文"
+        },
+        {
+          "year": 2021,
+          "slot": "T4",
+          "luoguPid": "P7916",
+          "title": "交通规划"
+        },
+        {
+          "year": 2022,
+          "slot": "T3",
+          "luoguPid": "P8819",
+          "title": "星战"
+        },
+        {
+          "year": 2022,
+          "slot": "T4",
+          "luoguPid": "P8820",
+          "title": "数据传输"
+        },
+        {
+          "year": 2023,
+          "slot": "T3",
+          "luoguPid": "P9754",
+          "title": "结构体"
+        },
+        {
+          "year": 2023,
+          "slot": "T4",
+          "luoguPid": "P9755",
+          "title": "种树"
+        },
+        {
+          "year": 2024,
+          "slot": "T3",
+          "luoguPid": "P11233",
+          "title": "染色"
+        },
+        {
+          "year": 2024,
+          "slot": "T4",
+          "luoguPid": "P11234",
+          "title": "擂台游戏"
+        },
+        {
+          "year": 2025,
+          "slot": "T3",
+          "luoguPid": "P14363",
+          "title": "谐音替换"
+        },
+        {
+          "year": 2025,
+          "slot": "T4",
+          "luoguPid": "P14364",
+          "title": "员工招聘"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.5,
+        "slotImpact": 1.3,
+        "scoreWeight": 0.45,
+        "failureProbability": 0.88,
+        "unrecoveredScoreRatio": 0.95,
+        "firstPrizeSensitivity": 1.1,
+        "confidence": 0.54
+      }
+    },
+    {
+      "abilityId": "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+      "name": "Exchange argument and counterexample search",
+      "status": "NEEDS_BLIND_VALIDATION",
+      "historicalEvidenceCount": 98,
+      "pastProblemEvidenceCount": 4,
+      "blindTestCount": 0,
+      "masteryLevel": "TRANSFERABLE",
+      "expectedLoss": {
+        "value": 7.34,
+        "confidenceInterval": [
+          4.04,
+          11.38
+        ],
+        "confidence": 0.54
+      },
+      "firstPrizeImpact": "HIGH",
+      "recommendedAction": "先用 T3/T2/T4/T1 真题盲测验证 GREEDY.PROOF.EXCHANGE_ARGUMENT，候选：2019T3P5659, 2020T2P7076, 2020T4P7078。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2019,
+          "slot": "T3",
+          "luoguPid": "P5659",
+          "title": "树上的数"
+        },
+        {
+          "year": 2020,
+          "slot": "T2",
+          "luoguPid": "P7076",
+          "title": "动物园"
+        },
+        {
+          "year": 2020,
+          "slot": "T4",
+          "luoguPid": "P7078",
+          "title": "贪吃蛇"
+        },
+        {
+          "year": 2021,
+          "slot": "T1",
+          "luoguPid": "P7913",
+          "title": "廊桥分配"
+        },
+        {
+          "year": 2021,
+          "slot": "T3",
+          "luoguPid": "P7915",
+          "title": "回文"
+        },
+        {
+          "year": 2022,
+          "slot": "T2",
+          "luoguPid": "P8818",
+          "title": "策略游戏"
+        },
+        {
+          "year": 2023,
+          "slot": "T4",
+          "luoguPid": "P9755",
+          "title": "种树"
+        },
+        {
+          "year": 2024,
+          "slot": "T1",
+          "luoguPid": "P11231",
+          "title": "决斗"
+        },
+        {
+          "year": 2024,
+          "slot": "T4",
+          "luoguPid": "P11234",
+          "title": "擂台游戏"
+        },
+        {
+          "year": 2025,
+          "slot": "T1",
+          "luoguPid": "P14361",
+          "title": "社团招新"
+        },
+        {
+          "year": 2025,
+          "slot": "T2",
+          "luoguPid": "P14362",
+          "title": "道路修复"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.39,
+        "slotImpact": 1.13,
+        "scoreWeight": 0.67,
+        "failureProbability": 0.4,
+        "unrecoveredScoreRatio": 0.95,
+        "firstPrizeSensitivity": 1.2,
+        "confidence": 0.54
+      }
+    },
+    {
+      "abilityId": "IMPLEMENTATION.INDEX_BOUNDARY",
+      "name": "Index and boundary safety",
+      "status": "NEEDS_BLIND_VALIDATION",
+      "historicalEvidenceCount": 650,
+      "pastProblemEvidenceCount": 1,
+      "blindTestCount": 0,
+      "masteryLevel": "UNSTABLE",
+      "expectedLoss": {
+        "value": 4.96,
+        "confidenceInterval": [
+          2.73,
+          7.69
+        ],
+        "confidence": 0.59
+      },
+      "firstPrizeImpact": "MEDIUM",
+      "recommendedAction": "先用 T1/T3/T2 真题盲测验证 IMPLEMENTATION.INDEX_BOUNDARY，候选：2020T1P7075, 2023T1P9752, 2023T3P9754。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2020,
+          "slot": "T1",
+          "luoguPid": "P7075",
+          "title": "儒略日"
+        },
+        {
+          "year": 2023,
+          "slot": "T1",
+          "luoguPid": "P9752",
+          "title": "密码锁"
+        },
+        {
+          "year": 2023,
+          "slot": "T3",
+          "luoguPid": "P9754",
+          "title": "结构体"
+        },
+        {
+          "year": 2024,
+          "slot": "T2",
+          "luoguPid": "P11232",
+          "title": "超速检测"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.14,
+        "slotImpact": 1.02,
+        "scoreWeight": 0.81,
+        "failureProbability": 0.62,
+        "unrecoveredScoreRatio": 0.95,
+        "firstPrizeSensitivity": 1.2,
+        "confidence": 0.59
+      }
+    },
+    {
+      "abilityId": "GRAPH.MODELING.GRAPH_ABSTRACTION",
+      "name": "Turn problem relation into graph states and edges",
+      "status": "NEEDS_BLIND_VALIDATION",
+      "historicalEvidenceCount": 138,
+      "pastProblemEvidenceCount": 2,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 4.46,
+        "confidenceInterval": [
+          2.45,
+          6.91
+        ],
+        "confidence": 0.54
+      },
+      "firstPrizeImpact": "MEDIUM",
+      "recommendedAction": "先用 T3/T4/T1/T2 真题盲测验证 GRAPH.MODELING.GRAPH_ABSTRACTION，候选：2019T3P5659, 2020T3P7077, 2021T4P7916。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2019,
+          "slot": "T3",
+          "luoguPid": "P5659",
+          "title": "树上的数"
+        },
+        {
+          "year": 2020,
+          "slot": "T3",
+          "luoguPid": "P7077",
+          "title": "函数调用"
+        },
+        {
+          "year": 2021,
+          "slot": "T4",
+          "luoguPid": "P7916",
+          "title": "交通规划"
+        },
+        {
+          "year": 2022,
+          "slot": "T1",
+          "luoguPid": "P8817",
+          "title": "假期计划"
+        },
+        {
+          "year": 2022,
+          "slot": "T3",
+          "luoguPid": "P8819",
+          "title": "星战"
+        },
+        {
+          "year": 2025,
+          "slot": "T2",
+          "luoguPid": "P14362",
+          "title": "道路修复"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.21,
+        "slotImpact": 1.18,
+        "scoreWeight": 0.63,
+        "failureProbability": 0.46,
+        "unrecoveredScoreRatio": 0.95,
+        "firstPrizeSensitivity": 1.2,
+        "confidence": 0.54
+      }
+    }
+  ],
+  "downgradedOrWatch": [
+    {
+      "abilityId": "DP.GENERAL.STATE_TRANSITION",
+      "name": "State, transition, init and order",
+      "status": "WATCH",
+      "historicalEvidenceCount": 108,
+      "pastProblemEvidenceCount": 0,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 3.82,
+        "confidenceInterval": [
+          2.1,
+          5.92
+        ],
+        "confidence": 0.54
+      },
+      "firstPrizeImpact": "MEDIUM",
+      "recommendedAction": "先用 T4/T3/T2 真题盲测验证 DP.GENERAL.STATE_TRANSITION，候选：2019T4P5664, 2020T3P7077, 2022T4P8820。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2019,
+          "slot": "T4",
+          "luoguPid": "P5664",
+          "title": "Emiya 家今天的饭"
+        },
+        {
+          "year": 2020,
+          "slot": "T3",
+          "luoguPid": "P7077",
+          "title": "函数调用"
+        },
+        {
+          "year": 2022,
+          "slot": "T4",
+          "luoguPid": "P8820",
+          "title": "数据传输"
+        },
+        {
+          "year": 2023,
+          "slot": "T2",
+          "luoguPid": "P9753",
+          "title": "消消乐"
+        },
+        {
+          "year": 2024,
+          "slot": "T3",
+          "luoguPid": "P11233",
+          "title": "染色"
+        },
+        {
+          "year": 2024,
+          "slot": "T4",
+          "luoguPid": "P11234",
+          "title": "擂台游戏"
+        },
+        {
+          "year": 2025,
+          "slot": "T4",
+          "luoguPid": "P14364",
+          "title": "员工招聘"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.25,
+        "slotImpact": 1.28,
+        "scoreWeight": 0.47,
+        "failureProbability": 0.43,
+        "unrecoveredScoreRatio": 0.95,
+        "firstPrizeSensitivity": 1.15,
+        "confidence": 0.54
+      }
+    },
+    {
+      "abilityId": "STRING.PATTERN.BOUNDARY",
+      "name": "String boundary and pattern model",
+      "status": "WATCH",
+      "historicalEvidenceCount": 187,
+      "pastProblemEvidenceCount": 0,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 3.53,
+        "confidenceInterval": [
+          1.94,
+          5.47
+        ],
+        "confidence": 0.52
+      },
+      "firstPrizeImpact": "MEDIUM",
+      "recommendedAction": "先用 T2/T3 真题盲测验证 STRING.PATTERN.BOUNDARY，候选：2019T2P5658, 2021T2P7914, 2021T3P7915。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2019,
+          "slot": "T2",
+          "luoguPid": "P5658",
+          "title": "括号树"
+        },
+        {
+          "year": 2021,
+          "slot": "T2",
+          "luoguPid": "P7914",
+          "title": "括号序列"
+        },
+        {
+          "year": 2021,
+          "slot": "T3",
+          "luoguPid": "P7915",
+          "title": "回文"
+        },
+        {
+          "year": 2023,
+          "slot": "T2",
+          "luoguPid": "P9753",
+          "title": "消消乐"
+        },
+        {
+          "year": 2025,
+          "slot": "T3",
+          "luoguPid": "P14363",
+          "title": "谐音替换"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.18,
+        "slotImpact": 1.13,
+        "scoreWeight": 0.7,
+        "failureProbability": 0.44,
+        "unrecoveredScoreRatio": 0.95,
+        "firstPrizeSensitivity": 1.15,
+        "confidence": 0.52
+      }
+    },
+    {
+      "abilityId": "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+      "name": "Range data-structure template and boundary",
+      "status": "WATCH",
+      "historicalEvidenceCount": 14,
+      "pastProblemEvidenceCount": 0,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 3.45,
+        "confidenceInterval": [
+          1.9,
+          5.35
+        ],
+        "confidence": 0.54
+      },
+      "firstPrizeImpact": "MEDIUM",
+      "recommendedAction": "先用 T2/T4/T3 真题盲测验证 DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY，候选：2019T2P5658, 2020T4P7078, 2022T2P8818。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2019,
+          "slot": "T2",
+          "luoguPid": "P5658",
+          "title": "括号树"
+        },
+        {
+          "year": 2020,
+          "slot": "T4",
+          "luoguPid": "P7078",
+          "title": "贪吃蛇"
+        },
+        {
+          "year": 2022,
+          "slot": "T2",
+          "luoguPid": "P8818",
+          "title": "策略游戏"
+        },
+        {
+          "year": 2022,
+          "slot": "T4",
+          "luoguPid": "P8820",
+          "title": "数据传输"
+        },
+        {
+          "year": 2024,
+          "slot": "T3",
+          "luoguPid": "P11233",
+          "title": "染色"
+        },
+        {
+          "year": 2025,
+          "slot": "T3",
+          "luoguPid": "P14363",
+          "title": "谐音替换"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.21,
+        "slotImpact": 1.22,
+        "scoreWeight": 0.57,
+        "failureProbability": 0.47,
+        "unrecoveredScoreRatio": 0.8,
+        "firstPrizeSensitivity": 1.15,
+        "confidence": 0.54
+      }
+    },
+    {
+      "abilityId": "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY",
+      "name": "Prove check monotonicity and boundary",
+      "status": "WATCH",
+      "historicalEvidenceCount": 57,
+      "pastProblemEvidenceCount": 1,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 2.39,
+        "confidenceInterval": [
+          1.31,
+          3.7
+        ],
+        "confidence": 0.59
+      },
+      "firstPrizeImpact": "LOW",
+      "recommendedAction": "先用 T1/T4/T2 真题盲测验证 BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY，候选：2020T1P7075, 2023T4P9755, 2024T2P11232。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2020,
+          "slot": "T1",
+          "luoguPid": "P7075",
+          "title": "儒略日"
+        },
+        {
+          "year": 2023,
+          "slot": "T4",
+          "luoguPid": "P9755",
+          "title": "种树"
+        },
+        {
+          "year": 2024,
+          "slot": "T2",
+          "luoguPid": "P11232",
+          "title": "超速检测"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.11,
+        "slotImpact": 1.1,
+        "scoreWeight": 0.7,
+        "failureProbability": 0.46,
+        "unrecoveredScoreRatio": 0.89,
+        "firstPrizeSensitivity": 1.2,
+        "confidence": 0.59
+      }
+    },
+    {
+      "abilityId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+      "name": "Integer overflow and range estimate",
+      "status": "WATCH",
+      "historicalEvidenceCount": 452,
+      "pastProblemEvidenceCount": 1,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 1.77,
+        "confidenceInterval": [
+          0.97,
+          2.74
+        ],
+        "confidence": 0.51
+      },
+      "firstPrizeImpact": "LOW",
+      "recommendedAction": "先用 T1/T2 真题盲测验证 IMPLEMENTATION.INTEGER_OVERFLOW，候选：2019T1P5657, 2020T2P7076。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2019,
+          "slot": "T1",
+          "luoguPid": "P5657",
+          "title": "格雷码"
+        },
+        {
+          "year": 2020,
+          "slot": "T2",
+          "luoguPid": "P7076",
+          "title": "动物园"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.07,
+        "slotImpact": 0.98,
+        "scoreWeight": 0.88,
+        "failureProbability": 0.5,
+        "unrecoveredScoreRatio": 0.95,
+        "firstPrizeSensitivity": 1.2,
+        "confidence": 0.51
+      }
+    },
+    {
+      "abilityId": "DP.INTERVAL.RECOGNIZE_STRUCTURE",
+      "name": "Recognize interval substructure",
+      "status": "WATCH",
+      "historicalEvidenceCount": 79,
+      "pastProblemEvidenceCount": 0,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 1.38,
+        "confidenceInterval": [
+          0.76,
+          2.14
+        ],
+        "confidence": 0.59
+      },
+      "firstPrizeImpact": "LOW",
+      "recommendedAction": "先用 T2/T4 真题盲测验证 DP.INTERVAL.RECOGNIZE_STRUCTURE，候选：2021T2P7914, 2021T4P7916。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2021,
+          "slot": "T2",
+          "luoguPid": "P7914",
+          "title": "括号序列"
+        },
+        {
+          "year": 2021,
+          "slot": "T4",
+          "luoguPid": "P7916",
+          "title": "交通规划"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.07,
+        "slotImpact": 1.2,
+        "scoreWeight": 0.57,
+        "failureProbability": 0.45,
+        "unrecoveredScoreRatio": 0.92,
+        "firstPrizeSensitivity": 1.15,
+        "confidence": 0.59
+      }
+    },
+    {
+      "abilityId": "MATH.FORMULA_DERIVATION.CORE",
+      "name": "Formula derivation core ability",
+      "status": "WATCH",
+      "historicalEvidenceCount": 59,
+      "pastProblemEvidenceCount": 1,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 0.84,
+        "confidenceInterval": [
+          0.46,
+          1.3
+        ],
+        "confidence": 0.59
+      },
+      "firstPrizeImpact": "LOW",
+      "recommendedAction": "先用 T2 真题盲测验证 MATH.FORMULA_DERIVATION.CORE，候选：2024T2P11232。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2024,
+          "slot": "T2",
+          "luoguPid": "P11232",
+          "title": "超速检测"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.04,
+        "slotImpact": 1.05,
+        "scoreWeight": 0.8,
+        "failureProbability": 0.46,
+        "unrecoveredScoreRatio": 0.9,
+        "firstPrizeSensitivity": 1.15,
+        "confidence": 0.59
+      }
+    },
+    {
+      "abilityId": "MATH.OVERFLOW_RANGE.CORE",
+      "name": "Overflow and range core ability",
+      "status": "WATCH",
+      "historicalEvidenceCount": 253,
+      "pastProblemEvidenceCount": 0,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 0.83,
+        "confidenceInterval": [
+          0.46,
+          1.29
+        ],
+        "confidence": 0.59
+      },
+      "firstPrizeImpact": "LOW",
+      "recommendedAction": "先用 T2 真题盲测验证 MATH.OVERFLOW_RANGE.CORE，候选：2020T2P7076。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2020,
+          "slot": "T2",
+          "luoguPid": "P7076",
+          "title": "动物园"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.04,
+        "slotImpact": 1.05,
+        "scoreWeight": 0.8,
+        "failureProbability": 0.43,
+        "unrecoveredScoreRatio": 0.95,
+        "firstPrizeSensitivity": 1.15,
+        "confidence": 0.59
+      }
+    },
+    {
+      "abilityId": "DP.INTERVAL.INIT_AND_ORDER",
+      "name": "Initialization and length-order enumeration",
+      "status": "WATCH",
+      "historicalEvidenceCount": 79,
+      "pastProblemEvidenceCount": 0,
+      "blindTestCount": 0,
+      "masteryLevel": "BASIC",
+      "expectedLoss": {
+        "value": 0.83,
+        "confidenceInterval": [
+          0.46,
+          1.29
+        ],
+        "confidence": 0.59
+      },
+      "firstPrizeImpact": "LOW",
+      "recommendedAction": "先用 T2 真题盲测验证 DP.INTERVAL.INIT_AND_ORDER，候选：2021T2P7914。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2021,
+          "slot": "T2",
+          "luoguPid": "P7914",
+          "title": "括号序列"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.04,
+        "slotImpact": 1.05,
+        "scoreWeight": 0.8,
+        "failureProbability": 0.45,
+        "unrecoveredScoreRatio": 0.91,
+        "firstPrizeSensitivity": 1.15,
+        "confidence": 0.59
+      }
+    },
+    {
+      "abilityId": "SEARCH.DFS_BFS.PRUNING_AND_STATE",
+      "name": "Search state and pruning",
+      "status": "WATCH",
+      "historicalEvidenceCount": 94,
+      "pastProblemEvidenceCount": 0,
+      "blindTestCount": 0,
+      "masteryLevel": "TRANSFERABLE",
+      "expectedLoss": {
+        "value": 0.76,
+        "confidenceInterval": [
+          0.42,
+          1.18
+        ],
+        "confidence": 0.59
+      },
+      "firstPrizeImpact": "LOW",
+      "recommendedAction": "先用 T1 真题盲测验证 SEARCH.DFS_BFS.PRUNING_AND_STATE，候选：2022T1P8817。未盲测前不要把它当成已确认短板。",
+      "relatedPastProblems": [
+        {
+          "year": 2022,
+          "slot": "T1",
+          "luoguPid": "P8817",
+          "title": "假期计划"
+        }
+      ],
+      "formulaFactors": {
+        "cspFrequency": 0.04,
+        "slotImpact": 0.9,
+        "scoreWeight": 0.95,
+        "failureProbability": 0.38,
+        "unrecoveredScoreRatio": 0.93,
+        "firstPrizeSensitivity": 1.2,
+        "confidence": 0.59
+      }
+    }
+  ],
+  "scoreGap": {
+    "criticalExpectedLoss": 21.87,
+    "targetScore": 260,
+    "riskReductionTarget": 11.47,
+    "readiness": 0.92,
+    "verdict": "Close to target, but still requires real blind CSP-S past-paper validation."
+  },
+  "diagnosticProblems": [
+    {
+      "problemId": "CSP-S-2025-T4",
+      "year": 2025,
+      "slot": "T4",
+      "luoguPid": "P14364",
+      "title": "员工招聘",
+      "targetAbilityId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+      "expectedLoss": 14.53,
+      "timeLimitMinutes": 110,
+      "expectedOutput": [
+        "Before coding: write model, constraints, partial-score routes, and implementation risks.",
+        "After attempt: record score, time, submissions, whether it was blind, and exact failure stage."
+      ],
+      "reason": "先用 T3/T4 真题盲测验证 PARTIAL_SCORE.SUBTASK_ANALYSIS，候选：2019T3P5659, 2019T4P5664, 2020T3P7077。未盲测前不要把它当成已确认短板。"
+    },
+    {
+      "problemId": "CSP-S-2024-T4",
+      "year": 2024,
+      "slot": "T4",
+      "luoguPid": "P11234",
+      "title": "擂台游戏",
+      "targetAbilityId": "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+      "expectedLoss": 7.34,
+      "timeLimitMinutes": 110,
+      "expectedOutput": [
+        "Before coding: write model, constraints, partial-score routes, and implementation risks.",
+        "After attempt: record score, time, submissions, whether it was blind, and exact failure stage."
+      ],
+      "reason": "先用 T3/T2/T4/T1 真题盲测验证 GREEDY.PROOF.EXCHANGE_ARGUMENT，候选：2019T3P5659, 2020T2P7076, 2020T4P7078。未盲测前不要把它当成已确认短板。"
+    },
+    {
+      "problemId": "CSP-S-2023-T3",
+      "year": 2023,
+      "slot": "T3",
+      "luoguPid": "P9754",
+      "title": "结构体",
+      "targetAbilityId": "IMPLEMENTATION.INDEX_BOUNDARY",
+      "expectedLoss": 4.96,
+      "timeLimitMinutes": 110,
+      "expectedOutput": [
+        "Before coding: write model, constraints, partial-score routes, and implementation risks.",
+        "After attempt: record score, time, submissions, whether it was blind, and exact failure stage."
+      ],
+      "reason": "先用 T1/T3/T2 真题盲测验证 IMPLEMENTATION.INDEX_BOUNDARY，候选：2020T1P7075, 2023T1P9752, 2023T3P9754。未盲测前不要把它当成已确认短板。"
+    },
+    {
+      "problemId": "CSP-S-2021-T4",
+      "year": 2021,
+      "slot": "T4",
+      "luoguPid": "P7916",
+      "title": "交通规划",
+      "targetAbilityId": "GRAPH.MODELING.GRAPH_ABSTRACTION",
+      "expectedLoss": 4.46,
+      "timeLimitMinutes": 110,
+      "expectedOutput": [
+        "Before coding: write model, constraints, partial-score routes, and implementation risks.",
+        "After attempt: record score, time, submissions, whether it was blind, and exact failure stage."
+      ],
+      "reason": "先用 T3/T4/T1/T2 真题盲测验证 GRAPH.MODELING.GRAPH_ABSTRACTION，候选：2019T3P5659, 2020T3P7077, 2021T4P7916。未盲测前不要把它当成已确认短板。"
+    },
+    {
+      "problemId": "CSP-S-2022-T4",
+      "year": 2022,
+      "slot": "T4",
+      "luoguPid": "P8820",
+      "title": "数据传输",
+      "targetAbilityId": "DP.GENERAL.STATE_TRANSITION",
+      "expectedLoss": 3.82,
+      "timeLimitMinutes": 110,
+      "expectedOutput": [
+        "Before coding: write model, constraints, partial-score routes, and implementation risks.",
+        "After attempt: record score, time, submissions, whether it was blind, and exact failure stage."
+      ],
+      "reason": "先用 T4/T3/T2 真题盲测验证 DP.GENERAL.STATE_TRANSITION，候选：2019T4P5664, 2020T3P7077, 2022T4P8820。未盲测前不要把它当成已确认短板。"
+    },
+    {
+      "problemId": "CSP-S-2025-T3",
+      "year": 2025,
+      "slot": "T3",
+      "luoguPid": "P14363",
+      "title": "谐音替换",
+      "targetAbilityId": "STRING.PATTERN.BOUNDARY",
+      "expectedLoss": 3.53,
+      "timeLimitMinutes": 110,
+      "expectedOutput": [
+        "Before coding: write model, constraints, partial-score routes, and implementation risks.",
+        "After attempt: record score, time, submissions, whether it was blind, and exact failure stage."
+      ],
+      "reason": "先用 T2/T3 真题盲测验证 STRING.PATTERN.BOUNDARY，候选：2019T2P5658, 2021T2P7914, 2021T3P7915。未盲测前不要把它当成已确认短板。"
+    },
+    {
+      "problemId": "CSP-S-2020-T4",
+      "year": 2020,
+      "slot": "T4",
+      "luoguPid": "P7078",
+      "title": "贪吃蛇",
+      "targetAbilityId": "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+      "expectedLoss": 3.45,
+      "timeLimitMinutes": 110,
+      "expectedOutput": [
+        "Before coding: write model, constraints, partial-score routes, and implementation risks.",
+        "After attempt: record score, time, submissions, whether it was blind, and exact failure stage."
+      ],
+      "reason": "先用 T2/T4/T3 真题盲测验证 DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY，候选：2019T2P5658, 2020T4P7078, 2022T2P8818。未盲测前不要把它当成已确认短板。"
+    },
+    {
+      "problemId": "CSP-S-2023-T4",
+      "year": 2023,
+      "slot": "T4",
+      "luoguPid": "P9755",
+      "title": "种树",
+      "targetAbilityId": "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY",
+      "expectedLoss": 2.39,
+      "timeLimitMinutes": 110,
+      "expectedOutput": [
+        "Before coding: write model, constraints, partial-score routes, and implementation risks.",
+        "After attempt: record score, time, submissions, whether it was blind, and exact failure stage."
+      ],
+      "reason": "先用 T1/T4/T2 真题盲测验证 BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY，候选：2020T1P7075, 2023T4P9755, 2024T2P11232。未盲测前不要把它当成已确认短板。"
+    }
+  ]
+}

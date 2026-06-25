@@ -1,0 +1,66 @@
+{
+  "generatedAt": "2026-06-25T13:28:10.636Z",
+  "targetScore": 200,
+  "weeklyHours": 20,
+  "scoreBreakdown": {
+    "t1": {
+      "targetRange": [
+        80,
+        100
+      ],
+      "targetScore": 90,
+      "role": "Bottom-line score. T1 must be stable.",
+      "trainingPriority": "P0",
+      "currentEstimate": 82,
+      "gap": 8
+    },
+    "t2": {
+      "targetRange": [
+        60,
+        90
+      ],
+      "targetScore": 70,
+      "role": "Main scoring zone. T2 modeling decides whether 200 is realistic.",
+      "trainingPriority": "P0",
+      "currentEstimate": 56,
+      "gap": 14
+    },
+    "t3": {
+      "targetRange": [
+        30,
+        60
+      ],
+      "targetScore": 36,
+      "role": "Partial-score zone. Train 30/50/70 routes.",
+      "trainingPriority": "P1",
+      "currentEstimate": 20,
+      "gap": 16
+    },
+    "t4": {
+      "targetRange": [
+        0,
+        30
+      ],
+      "targetScore": 4,
+      "role": "Strategy score. Take brute force and special properties without hurting T1/T2.",
+      "trainingPriority": "P2",
+      "currentEstimate": 0,
+      "gap": 4
+    }
+  },
+  "trainingStrategy": {
+    "t1Ratio": 0.25,
+    "t2Ratio": 0.4,
+    "t3Ratio": 0.25,
+    "t4Ratio": 0.03,
+    "mockRatio": 0.1,
+    "explanationRatio": 0.2,
+    "reviewRatio": 0.2
+  },
+  "route": [
+    "First protect T1 and T2. A 200-point route cannot tolerate unstable low-level mistakes.",
+    "Then train T3 partial-score decomposition. The goal is executable 30/50/70 routes, not immediate full marks.",
+    "Use T4 only as strategy training unless T1/T2 are already stable.",
+    "Every week must include one CSP-S-style set to verify transfer from single-problem practice to exam scoring."
+  ]
+}

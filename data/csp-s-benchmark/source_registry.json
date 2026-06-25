@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "generatedAt": "2026-06-25T06:50:23.048Z",
+  "priorityRule": [
+    "manual_csv",
+    "noi_official",
+    "luogu_problem_list",
+    "llm_review",
+    "rule_inference"
+  ],
+  "sources": [
+    {
+      "id": "noi_syllabus_2025",
+      "name": "NOI syllabus 2025 revision",
+      "type": "official",
+      "url": "https://www.noi.cn/xw/2025-04-18/841584.shtml",
+      "usage": "Upper-level knowledge reference. The system converts it into trainable CSP-S skills."
+    },
+    {
+      "id": "luogu_csp_s_list",
+      "name": "Luogu CSP-S problem list",
+      "type": "problem_index",
+      "url": "https://www.luogu.com.cn/problem/list?tag=342",
+      "usage": "Problem ids, titles, public tags, and candidate historical problem references."
+    },
+    {
+      "id": "manual_past_problem_index",
+      "name": "Manual CSP-S past problem index",
+      "type": "manual_csv",
+      "url": "C:\\LYH\\Code\\newLuogu\\data\\csp-s-benchmark\\manual_past_problem_index.csv",
+      "usage": "Highest-priority truth source for year, slot, title and official/national status."
+    },
+    {
+      "id": "manual_knowledge_review",
+      "name": "Manual or LLM-reviewed knowledge mapping",
+      "type": "manual_csv",
+      "url": "C:\\LYH\\Code\\newLuogu\\data\\csp-s-benchmark\\manual_knowledge_review.csv",
+      "usage": "Highest-priority truth source for ability mapping and partial-score structure."
+    }
+  ]
+}

@@ -1,0 +1,2463 @@
+{
+  "version": "1.0",
+  "generatedAt": "2026-06-25T06:50:23.190Z",
+  "range": {
+    "from": 2019,
+    "to": 2025
+  },
+  "sourcePriority": [
+    "manual_csv",
+    "luogu_seed",
+    "history_inference",
+    "rule_inference"
+  ],
+  "problems": [
+    {
+      "year": 2019,
+      "slot": "T1",
+      "problemId": "CSP-S-2019-T1",
+      "luoguPid": "P5657",
+      "title": "格雷码",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P5657",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T1",
+        "role": "STABLE_SCORE",
+        "firstPrizeTargetScore": {
+          "conservative": 85,
+          "normal": 95,
+          "strong": 100
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "MATH",
+          "IMPLEMENTATION"
+        ],
+        "secondary": [
+          "MATH.RECURRENCE",
+          "IMPLEMENTATION.INTEGER_OVERFLOW"
+        ],
+        "thirdLevelAbilities": [
+          "MATH.RECURRENCE.CORE",
+          "IMPLEMENTATION.INTEGER_OVERFLOW"
+        ],
+        "nonKnowledgeSkills": []
+      },
+      "modelType": [
+        "math_model",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "small cases -> formula/invariant -> algorithm"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "stable implementation"
+        }
+      ],
+      "commonFailureModes": [
+        "FORMULA_ERROR",
+        "OVERFLOW_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_MANUAL_CONFIRMATION",
+        "confidence": 0.45,
+        "reviewedBy": null,
+        "reviewNote": "2019 had more public CSP-S tasks; keep manual confirmation for the exact four-task benchmark."
+      },
+      "studentRecord": {
+        "year": 2019,
+        "slot": "T1",
+        "luoguPid": "P5657",
+        "hasDone": true,
+        "doneDate": "",
+        "isBlindTest": false,
+        "hasSeenSolution": false,
+        "result": "UNKNOWN",
+        "score": 0,
+        "timeMinutes": null,
+        "submissionCount": 2,
+        "errorTypes": [
+          "IMPLEMENTATION_RISK",
+          "BOUNDARY_ERROR"
+        ],
+        "reviewNote": "Inferred from Luogu historical submissions. This is not blind CSP-S proof.",
+        "source": "history_inference"
+      }
+    },
+    {
+      "year": 2019,
+      "slot": "T2",
+      "problemId": "CSP-S-2019-T2",
+      "luoguPid": "P5658",
+      "title": "括号树",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P5658",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T2",
+        "role": "MODELING_TRANSFER",
+        "firstPrizeTargetScore": {
+          "conservative": 65,
+          "normal": 80,
+          "strong": 95
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "DATA_STRUCTURE",
+          "STRING"
+        ],
+        "secondary": [
+          "DATA_STRUCTURE.RANGE_QUERY",
+          "STRING.PATTERN"
+        ],
+        "thirdLevelAbilities": [
+          "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+          "STRING.PATTERN.BOUNDARY"
+        ],
+        "nonKnowledgeSkills": []
+      },
+      "modelType": [
+        "implementation_or_strategy",
+        "string_model"
+      ],
+      "requiredTransformations": [
+        "statement -> algorithm -> implementation"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 30,
+          "condition": "small or special data",
+          "expectedMethod": "brute force / simulation"
+        },
+        {
+          "score": 70,
+          "condition": "main model without hardest optimization",
+          "expectedMethod": "core model"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "BOUNDARY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_MANUAL_CONFIRMATION",
+        "confidence": 0.45,
+        "reviewedBy": null,
+        "reviewNote": "2019 exact slot policy needs manual confirmation."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2019,
+      "slot": "T3",
+      "problemId": "CSP-S-2019-T3",
+      "luoguPid": "P5659",
+      "title": "树上的数",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P5659",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T3",
+        "role": "PARTIAL_SCORE_AND_CORE_ALGORITHM",
+        "firstPrizeTargetScore": {
+          "conservative": 35,
+          "normal": 55,
+          "strong": 80
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "GRAPH",
+          "GREEDY",
+          "PARTIAL_SCORE"
+        ],
+        "secondary": [
+          "GRAPH.MODELING",
+          "GREEDY.PROOF",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "thirdLevelAbilities": [
+          "GRAPH.MODELING.GRAPH_ABSTRACTION",
+          "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "nonKnowledgeSkills": [
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ]
+      },
+      "modelType": [
+        "graph_model",
+        "greedy",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "entities/relations -> nodes/edges/weights",
+        "constraints -> 30/50/70/100 routes"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW",
+        "IMPLEMENTATION.RECURSION_STACK"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 20,
+          "condition": "small data",
+          "expectedMethod": "brute force"
+        },
+        {
+          "score": 50,
+          "condition": "special property",
+          "expectedMethod": "simplified model"
+        },
+        {
+          "score": 70,
+          "condition": "main subtask",
+          "expectedMethod": "near-correct algorithm with limited optimization"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "MODEL_ERROR",
+        "COMPLEXITY_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED",
+        "STRATEGY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_MANUAL_CONFIRMATION",
+        "confidence": 0.45,
+        "reviewedBy": null,
+        "reviewNote": "2019 exact slot policy needs manual confirmation."
+      },
+      "studentRecord": {
+        "year": 2019,
+        "slot": "T3",
+        "luoguPid": "P5659",
+        "hasDone": true,
+        "doneDate": "",
+        "isBlindTest": false,
+        "hasSeenSolution": false,
+        "result": "PC",
+        "score": 25,
+        "timeMinutes": null,
+        "submissionCount": 1,
+        "errorTypes": [
+          "MODEL_ERROR",
+          "TEMPLATE_UNFAMILIAR",
+          "INDEX_ERROR",
+          "RECURSION_STACK_RISK",
+          "PARTIAL_SCORE_MISSED"
+        ],
+        "reviewNote": "Inferred from Luogu historical submissions. This is not blind CSP-S proof.",
+        "source": "history_inference"
+      }
+    },
+    {
+      "year": 2019,
+      "slot": "T4",
+      "problemId": "CSP-S-2019-T4",
+      "luoguPid": "P5664",
+      "title": "Emiya 家今天的饭",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P5664",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T4",
+        "role": "STRATEGY_AND_ADVANCED_PARTIAL_SCORE",
+        "firstPrizeTargetScore": {
+          "conservative": 15,
+          "normal": 35,
+          "strong": 60
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "DP",
+          "MATH",
+          "PARTIAL_SCORE"
+        ],
+        "secondary": [
+          "DP.GENERAL",
+          "MATH.COMBINATORICS",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "thirdLevelAbilities": [
+          "DP.GENERAL.STATE_TRANSITION",
+          "MATH.COMBINATORICS.CORE",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "nonKnowledgeSkills": [
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ]
+      },
+      "modelType": [
+        "dynamic_programming",
+        "math_model",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "problem statement -> state definition -> transition order",
+        "small cases -> formula/invariant -> algorithm",
+        "constraints -> 30/50/70/100 routes"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW",
+        "IMPLEMENTATION.INITIALIZATION"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 20,
+          "condition": "small data",
+          "expectedMethod": "brute force"
+        },
+        {
+          "score": 50,
+          "condition": "special property",
+          "expectedMethod": "simplified model"
+        },
+        {
+          "score": 70,
+          "condition": "main subtask",
+          "expectedMethod": "near-correct algorithm with limited optimization"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "ENUMERATION_ORDER_ERROR",
+        "FORMULA_ERROR",
+        "OVERFLOW_ERROR",
+        "PARTIAL_SCORE_MISSED",
+        "STRATEGY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_MANUAL_CONFIRMATION",
+        "confidence": 0.45,
+        "reviewedBy": null,
+        "reviewNote": "2019 exact slot policy needs manual confirmation."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2020,
+      "slot": "T1",
+      "problemId": "CSP-S-2020-T1",
+      "luoguPid": "P7075",
+      "title": "儒略日",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P7075",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T1",
+        "role": "STABLE_SCORE",
+        "firstPrizeTargetScore": {
+          "conservative": 85,
+          "normal": 95,
+          "strong": 100
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "BASIC_ALGORITHM",
+          "MATH",
+          "IMPLEMENTATION"
+        ],
+        "secondary": [
+          "BASIC_ALGORITHM.BINARY_SEARCH",
+          "MATH.PERIODICITY",
+          "IMPLEMENTATION.INDEX_BOUNDARY"
+        ],
+        "thirdLevelAbilities": [
+          "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY",
+          "MATH.PERIODICITY.CORE",
+          "IMPLEMENTATION.INDEX_BOUNDARY"
+        ],
+        "nonKnowledgeSkills": []
+      },
+      "modelType": [
+        "implementation_or_strategy",
+        "math_model"
+      ],
+      "requiredTransformations": [
+        "small cases -> formula/invariant -> algorithm"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "stable implementation"
+        }
+      ],
+      "commonFailureModes": [
+        "BOUNDARY_ERROR",
+        "FORMULA_ERROR",
+        "OVERFLOW_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2020 public list seed."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2020,
+      "slot": "T2",
+      "problemId": "CSP-S-2020-T2",
+      "luoguPid": "P7076",
+      "title": "动物园",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P7076",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T2",
+        "role": "MODELING_TRANSFER",
+        "firstPrizeTargetScore": {
+          "conservative": 65,
+          "normal": 80,
+          "strong": 95
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "MATH",
+          "GREEDY",
+          "IMPLEMENTATION"
+        ],
+        "secondary": [
+          "MATH.OVERFLOW_RANGE",
+          "GREEDY.PROOF",
+          "IMPLEMENTATION.INTEGER_OVERFLOW"
+        ],
+        "thirdLevelAbilities": [
+          "MATH.OVERFLOW_RANGE.CORE",
+          "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+          "IMPLEMENTATION.INTEGER_OVERFLOW"
+        ],
+        "nonKnowledgeSkills": []
+      },
+      "modelType": [
+        "math_model",
+        "greedy",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "small cases -> formula/invariant -> algorithm"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 30,
+          "condition": "small or special data",
+          "expectedMethod": "brute force / simulation"
+        },
+        {
+          "score": 70,
+          "condition": "main model without hardest optimization",
+          "expectedMethod": "core model"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "FORMULA_ERROR",
+        "OVERFLOW_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2020 public list seed."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2020,
+      "slot": "T3",
+      "problemId": "CSP-S-2020-T3",
+      "luoguPid": "P7077",
+      "title": "函数调用",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P7077",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T3",
+        "role": "PARTIAL_SCORE_AND_CORE_ALGORITHM",
+        "firstPrizeTargetScore": {
+          "conservative": 35,
+          "normal": 55,
+          "strong": 80
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "DP",
+          "GRAPH",
+          "PARTIAL_SCORE"
+        ],
+        "secondary": [
+          "DP.GENERAL",
+          "GRAPH.MODELING",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "thirdLevelAbilities": [
+          "DP.GENERAL.STATE_TRANSITION",
+          "GRAPH.MODELING.GRAPH_ABSTRACTION",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "nonKnowledgeSkills": [
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ]
+      },
+      "modelType": [
+        "dynamic_programming",
+        "graph_model",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "problem statement -> state definition -> transition order",
+        "entities/relations -> nodes/edges/weights",
+        "constraints -> 30/50/70/100 routes"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW",
+        "IMPLEMENTATION.INITIALIZATION",
+        "IMPLEMENTATION.RECURSION_STACK"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 20,
+          "condition": "small data",
+          "expectedMethod": "brute force"
+        },
+        {
+          "score": 50,
+          "condition": "special property",
+          "expectedMethod": "simplified model"
+        },
+        {
+          "score": 70,
+          "condition": "main subtask",
+          "expectedMethod": "near-correct algorithm with limited optimization"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "ENUMERATION_ORDER_ERROR",
+        "MODEL_ERROR",
+        "COMPLEXITY_ERROR",
+        "PARTIAL_SCORE_MISSED",
+        "STRATEGY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2020 public list seed."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2020,
+      "slot": "T4",
+      "problemId": "CSP-S-2020-T4",
+      "luoguPid": "P7078",
+      "title": "贪吃蛇",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P7078",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T4",
+        "role": "STRATEGY_AND_ADVANCED_PARTIAL_SCORE",
+        "firstPrizeTargetScore": {
+          "conservative": 15,
+          "normal": 35,
+          "strong": 60
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "GREEDY",
+          "DATA_STRUCTURE",
+          "PARTIAL_SCORE"
+        ],
+        "secondary": [
+          "GREEDY.PROOF",
+          "DATA_STRUCTURE.RANGE_QUERY",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "thirdLevelAbilities": [
+          "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+          "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "nonKnowledgeSkills": [
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ]
+      },
+      "modelType": [
+        "greedy",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "constraints -> 30/50/70/100 routes"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 20,
+          "condition": "small data",
+          "expectedMethod": "brute force"
+        },
+        {
+          "score": 50,
+          "condition": "special property",
+          "expectedMethod": "simplified model"
+        },
+        {
+          "score": 70,
+          "condition": "main subtask",
+          "expectedMethod": "near-correct algorithm with limited optimization"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED",
+        "STRATEGY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2020 public list seed."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2021,
+      "slot": "T1",
+      "problemId": "CSP-S-2021-T1",
+      "luoguPid": "P7913",
+      "title": "廊桥分配",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P7913",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T1",
+        "role": "STABLE_SCORE",
+        "firstPrizeTargetScore": {
+          "conservative": 85,
+          "normal": 95,
+          "strong": 100
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "GREEDY",
+          "BASIC_ALGORITHM"
+        ],
+        "secondary": [
+          "GREEDY.PROOF",
+          "BASIC_ALGORITHM.SIMULATION_ENUMERATION"
+        ],
+        "thirdLevelAbilities": [
+          "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+          "BASIC_ALGORITHM.SIMULATION_ENUMERATION.CASE_SPLIT"
+        ],
+        "nonKnowledgeSkills": []
+      },
+      "modelType": [
+        "greedy",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "statement -> algorithm -> implementation"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "stable implementation"
+        }
+      ],
+      "commonFailureModes": [
+        "BOUNDARY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2021 public list seed."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2021,
+      "slot": "T2",
+      "problemId": "CSP-S-2021-T2",
+      "luoguPid": "P7914",
+      "title": "括号序列",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P7914",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T2",
+        "role": "MODELING_TRANSFER",
+        "firstPrizeTargetScore": {
+          "conservative": 65,
+          "normal": 80,
+          "strong": 95
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "DP",
+          "STRING"
+        ],
+        "secondary": [
+          "DP.INTERVAL",
+          "STRING.PATTERN"
+        ],
+        "thirdLevelAbilities": [
+          "DP.INTERVAL.RECOGNIZE_STRUCTURE",
+          "DP.INTERVAL.INIT_AND_ORDER",
+          "STRING.PATTERN.BOUNDARY"
+        ],
+        "nonKnowledgeSkills": []
+      },
+      "modelType": [
+        "dynamic_programming",
+        "string_model"
+      ],
+      "requiredTransformations": [
+        "problem statement -> state definition -> transition order"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW",
+        "IMPLEMENTATION.INITIALIZATION"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 30,
+          "condition": "small or special data",
+          "expectedMethod": "brute force / simulation"
+        },
+        {
+          "score": 70,
+          "condition": "main model without hardest optimization",
+          "expectedMethod": "core model"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "ENUMERATION_ORDER_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2021 public list seed."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2021,
+      "slot": "T3",
+      "problemId": "CSP-S-2021-T3",
+      "luoguPid": "P7915",
+      "title": "回文",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P7915",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T3",
+        "role": "PARTIAL_SCORE_AND_CORE_ALGORITHM",
+        "firstPrizeTargetScore": {
+          "conservative": 35,
+          "normal": 55,
+          "strong": 80
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "STRING",
+          "GREEDY",
+          "PARTIAL_SCORE"
+        ],
+        "secondary": [
+          "STRING.PATTERN",
+          "GREEDY.PROOF",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "thirdLevelAbilities": [
+          "STRING.PATTERN.BOUNDARY",
+          "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "nonKnowledgeSkills": [
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ]
+      },
+      "modelType": [
+        "string_model",
+        "greedy",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "constraints -> 30/50/70/100 routes"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 20,
+          "condition": "small data",
+          "expectedMethod": "brute force"
+        },
+        {
+          "score": 50,
+          "condition": "special property",
+          "expectedMethod": "simplified model"
+        },
+        {
+          "score": 70,
+          "condition": "main subtask",
+          "expectedMethod": "near-correct algorithm with limited optimization"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED",
+        "STRATEGY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2021 public list seed."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2021,
+      "slot": "T4",
+      "problemId": "CSP-S-2021-T4",
+      "luoguPid": "P7916",
+      "title": "交通规划",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P7916",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T4",
+        "role": "STRATEGY_AND_ADVANCED_PARTIAL_SCORE",
+        "firstPrizeTargetScore": {
+          "conservative": 15,
+          "normal": 35,
+          "strong": 60
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "GRAPH",
+          "DP",
+          "PARTIAL_SCORE"
+        ],
+        "secondary": [
+          "GRAPH.MODELING",
+          "DP.INTERVAL",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "thirdLevelAbilities": [
+          "GRAPH.MODELING.GRAPH_ABSTRACTION",
+          "DP.INTERVAL.RECOGNIZE_STRUCTURE",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "nonKnowledgeSkills": [
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ]
+      },
+      "modelType": [
+        "graph_model",
+        "dynamic_programming",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "problem statement -> state definition -> transition order",
+        "entities/relations -> nodes/edges/weights",
+        "constraints -> 30/50/70/100 routes"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW",
+        "IMPLEMENTATION.INITIALIZATION",
+        "IMPLEMENTATION.RECURSION_STACK"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 20,
+          "condition": "small data",
+          "expectedMethod": "brute force"
+        },
+        {
+          "score": 50,
+          "condition": "special property",
+          "expectedMethod": "simplified model"
+        },
+        {
+          "score": 70,
+          "condition": "main subtask",
+          "expectedMethod": "near-correct algorithm with limited optimization"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "MODEL_ERROR",
+        "COMPLEXITY_ERROR",
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "ENUMERATION_ORDER_ERROR",
+        "PARTIAL_SCORE_MISSED",
+        "STRATEGY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2021 public list seed."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2022,
+      "slot": "T1",
+      "problemId": "CSP-S-2022-T1",
+      "luoguPid": "P8817",
+      "title": "假期计划",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P8817",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T1",
+        "role": "STABLE_SCORE",
+        "firstPrizeTargetScore": {
+          "conservative": 85,
+          "normal": 95,
+          "strong": 100
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "GRAPH",
+          "SEARCH"
+        ],
+        "secondary": [
+          "GRAPH.MODELING",
+          "SEARCH.DFS_BFS"
+        ],
+        "thirdLevelAbilities": [
+          "GRAPH.MODELING.GRAPH_ABSTRACTION",
+          "SEARCH.DFS_BFS.PRUNING_AND_STATE"
+        ],
+        "nonKnowledgeSkills": []
+      },
+      "modelType": [
+        "graph_model",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "entities/relations -> nodes/edges/weights"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW",
+        "IMPLEMENTATION.RECURSION_STACK"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "stable implementation"
+        }
+      ],
+      "commonFailureModes": [
+        "MODEL_ERROR",
+        "COMPLEXITY_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2022 public list seed."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2022,
+      "slot": "T2",
+      "problemId": "CSP-S-2022-T2",
+      "luoguPid": "P8818",
+      "title": "策略游戏",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P8818",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T2",
+        "role": "MODELING_TRANSFER",
+        "firstPrizeTargetScore": {
+          "conservative": 65,
+          "normal": 80,
+          "strong": 95
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "GREEDY",
+          "DATA_STRUCTURE"
+        ],
+        "secondary": [
+          "GREEDY.PROOF",
+          "DATA_STRUCTURE.RANGE_QUERY"
+        ],
+        "thirdLevelAbilities": [
+          "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+          "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY"
+        ],
+        "nonKnowledgeSkills": []
+      },
+      "modelType": [
+        "greedy",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "statement -> algorithm -> implementation"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 30,
+          "condition": "small or special data",
+          "expectedMethod": "brute force / simulation"
+        },
+        {
+          "score": 70,
+          "condition": "main model without hardest optimization",
+          "expectedMethod": "core model"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "BOUNDARY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2022 public list seed."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2022,
+      "slot": "T3",
+      "problemId": "CSP-S-2022-T3",
+      "luoguPid": "P8819",
+      "title": "星战",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P8819",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T3",
+        "role": "PARTIAL_SCORE_AND_CORE_ALGORITHM",
+        "firstPrizeTargetScore": {
+          "conservative": 35,
+          "normal": 55,
+          "strong": 80
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "GRAPH",
+          "MATH",
+          "PARTIAL_SCORE"
+        ],
+        "secondary": [
+          "GRAPH.MODELING",
+          "MATH.INVARIANT",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "thirdLevelAbilities": [
+          "GRAPH.MODELING.GRAPH_ABSTRACTION",
+          "MATH.INVARIANT.CORE",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "nonKnowledgeSkills": [
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ]
+      },
+      "modelType": [
+        "graph_model",
+        "math_model",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "entities/relations -> nodes/edges/weights",
+        "small cases -> formula/invariant -> algorithm",
+        "constraints -> 30/50/70/100 routes"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW",
+        "IMPLEMENTATION.RECURSION_STACK"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 20,
+          "condition": "small data",
+          "expectedMethod": "brute force"
+        },
+        {
+          "score": 50,
+          "condition": "special property",
+          "expectedMethod": "simplified model"
+        },
+        {
+          "score": 70,
+          "condition": "main subtask",
+          "expectedMethod": "near-correct algorithm with limited optimization"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "MODEL_ERROR",
+        "COMPLEXITY_ERROR",
+        "FORMULA_ERROR",
+        "OVERFLOW_ERROR",
+        "PARTIAL_SCORE_MISSED",
+        "STRATEGY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2022 public list seed."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2022,
+      "slot": "T4",
+      "problemId": "CSP-S-2022-T4",
+      "luoguPid": "P8820",
+      "title": "数据传输",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P8820",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T4",
+        "role": "STRATEGY_AND_ADVANCED_PARTIAL_SCORE",
+        "firstPrizeTargetScore": {
+          "conservative": 15,
+          "normal": 35,
+          "strong": 60
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "DP",
+          "DATA_STRUCTURE",
+          "PARTIAL_SCORE"
+        ],
+        "secondary": [
+          "DP.GENERAL",
+          "DATA_STRUCTURE.RANGE_QUERY",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "thirdLevelAbilities": [
+          "DP.GENERAL.STATE_TRANSITION",
+          "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "nonKnowledgeSkills": [
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ]
+      },
+      "modelType": [
+        "dynamic_programming",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "problem statement -> state definition -> transition order",
+        "constraints -> 30/50/70/100 routes"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW",
+        "IMPLEMENTATION.INITIALIZATION"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 20,
+          "condition": "small data",
+          "expectedMethod": "brute force"
+        },
+        {
+          "score": 50,
+          "condition": "special property",
+          "expectedMethod": "simplified model"
+        },
+        {
+          "score": 70,
+          "condition": "main subtask",
+          "expectedMethod": "near-correct algorithm with limited optimization"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "ENUMERATION_ORDER_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED",
+        "STRATEGY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2022 public list seed."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2023,
+      "slot": "T1",
+      "problemId": "CSP-S-2023-T1",
+      "luoguPid": "P9752",
+      "title": "密码锁",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P9752",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T1",
+        "role": "STABLE_SCORE",
+        "firstPrizeTargetScore": {
+          "conservative": 85,
+          "normal": 95,
+          "strong": 100
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "BASIC_ALGORITHM",
+          "IMPLEMENTATION"
+        ],
+        "secondary": [
+          "BASIC_ALGORITHM.SIMULATION_ENUMERATION",
+          "IMPLEMENTATION.INDEX_BOUNDARY"
+        ],
+        "thirdLevelAbilities": [
+          "BASIC_ALGORITHM.SIMULATION_ENUMERATION.CASE_SPLIT",
+          "IMPLEMENTATION.INDEX_BOUNDARY"
+        ],
+        "nonKnowledgeSkills": []
+      },
+      "modelType": [
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "statement -> algorithm -> implementation"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "stable implementation"
+        }
+      ],
+      "commonFailureModes": [
+        "BOUNDARY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2023 public list seed."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2023,
+      "slot": "T2",
+      "problemId": "CSP-S-2023-T2",
+      "luoguPid": "P9753",
+      "title": "消消乐",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P9753",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T2",
+        "role": "MODELING_TRANSFER",
+        "firstPrizeTargetScore": {
+          "conservative": 65,
+          "normal": 80,
+          "strong": 95
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "DP",
+          "STRING"
+        ],
+        "secondary": [
+          "DP.GENERAL",
+          "STRING.PATTERN"
+        ],
+        "thirdLevelAbilities": [
+          "DP.GENERAL.STATE_TRANSITION",
+          "STRING.PATTERN.BOUNDARY"
+        ],
+        "nonKnowledgeSkills": []
+      },
+      "modelType": [
+        "dynamic_programming",
+        "string_model"
+      ],
+      "requiredTransformations": [
+        "problem statement -> state definition -> transition order"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW",
+        "IMPLEMENTATION.INITIALIZATION"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 30,
+          "condition": "small or special data",
+          "expectedMethod": "brute force / simulation"
+        },
+        {
+          "score": 70,
+          "condition": "main model without hardest optimization",
+          "expectedMethod": "core model"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "ENUMERATION_ORDER_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2023 public list seed."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2023,
+      "slot": "T3",
+      "problemId": "CSP-S-2023-T3",
+      "luoguPid": "P9754",
+      "title": "结构体",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P9754",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T3",
+        "role": "PARTIAL_SCORE_AND_CORE_ALGORITHM",
+        "firstPrizeTargetScore": {
+          "conservative": 35,
+          "normal": 55,
+          "strong": 80
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "PROGRAMMING_BASICS",
+          "IMPLEMENTATION",
+          "PARTIAL_SCORE"
+        ],
+        "secondary": [
+          "PROGRAMMING_BASICS.READING",
+          "IMPLEMENTATION.INDEX_BOUNDARY",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "thirdLevelAbilities": [
+          "PROGRAMMING_BASICS.READING.CONSTRAINT_EXTRACTION",
+          "IMPLEMENTATION.INDEX_BOUNDARY",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "nonKnowledgeSkills": [
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ]
+      },
+      "modelType": [
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "constraints -> 30/50/70/100 routes"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 20,
+          "condition": "small data",
+          "expectedMethod": "brute force"
+        },
+        {
+          "score": 50,
+          "condition": "special property",
+          "expectedMethod": "simplified model"
+        },
+        {
+          "score": 70,
+          "condition": "main subtask",
+          "expectedMethod": "near-correct algorithm with limited optimization"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED",
+        "STRATEGY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2023 public list seed."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2023,
+      "slot": "T4",
+      "problemId": "CSP-S-2023-T4",
+      "luoguPid": "P9755",
+      "title": "种树",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P9755",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T4",
+        "role": "STRATEGY_AND_ADVANCED_PARTIAL_SCORE",
+        "firstPrizeTargetScore": {
+          "conservative": 15,
+          "normal": 35,
+          "strong": 60
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "GREEDY",
+          "BASIC_ALGORITHM",
+          "PARTIAL_SCORE"
+        ],
+        "secondary": [
+          "GREEDY.PROOF",
+          "BASIC_ALGORITHM.BINARY_SEARCH",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "thirdLevelAbilities": [
+          "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+          "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "nonKnowledgeSkills": [
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ]
+      },
+      "modelType": [
+        "greedy",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "constraints -> 30/50/70/100 routes"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 20,
+          "condition": "small data",
+          "expectedMethod": "brute force"
+        },
+        {
+          "score": 50,
+          "condition": "special property",
+          "expectedMethod": "simplified model"
+        },
+        {
+          "score": 70,
+          "condition": "main subtask",
+          "expectedMethod": "near-correct algorithm with limited optimization"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED",
+        "STRATEGY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2023 public list seed."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2024,
+      "slot": "T1",
+      "problemId": "CSP-S-2024-T1",
+      "luoguPid": "P11231",
+      "title": "决斗",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P11231",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T1",
+        "role": "STABLE_SCORE",
+        "firstPrizeTargetScore": {
+          "conservative": 85,
+          "normal": 95,
+          "strong": 100
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "GREEDY",
+          "MATH"
+        ],
+        "secondary": [
+          "GREEDY.PROOF",
+          "MATH.INVARIANT"
+        ],
+        "thirdLevelAbilities": [
+          "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+          "MATH.INVARIANT.CORE"
+        ],
+        "nonKnowledgeSkills": []
+      },
+      "modelType": [
+        "greedy",
+        "math_model"
+      ],
+      "requiredTransformations": [
+        "small cases -> formula/invariant -> algorithm"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "stable implementation"
+        }
+      ],
+      "commonFailureModes": [
+        "BOUNDARY_ERROR",
+        "FORMULA_ERROR",
+        "OVERFLOW_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2024 public list seed."
+      },
+      "studentRecord": {
+        "year": 2024,
+        "slot": "T1",
+        "luoguPid": "P11231",
+        "hasDone": true,
+        "doneDate": "",
+        "isBlindTest": false,
+        "hasSeenSolution": false,
+        "result": "AC",
+        "score": 100,
+        "timeMinutes": null,
+        "submissionCount": 2,
+        "errorTypes": [
+          "UNKNOWN",
+          "INDEX_ERROR",
+          "OVERFLOW_ERROR"
+        ],
+        "reviewNote": "Inferred from Luogu historical submissions. This is not blind CSP-S proof.",
+        "source": "history_inference"
+      }
+    },
+    {
+      "year": 2024,
+      "slot": "T2",
+      "problemId": "CSP-S-2024-T2",
+      "luoguPid": "P11232",
+      "title": "超速检测",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P11232",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T2",
+        "role": "MODELING_TRANSFER",
+        "firstPrizeTargetScore": {
+          "conservative": 65,
+          "normal": 80,
+          "strong": 95
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "BASIC_ALGORITHM",
+          "MATH",
+          "IMPLEMENTATION"
+        ],
+        "secondary": [
+          "BASIC_ALGORITHM.BINARY_SEARCH",
+          "MATH.FORMULA_DERIVATION",
+          "IMPLEMENTATION.INDEX_BOUNDARY"
+        ],
+        "thirdLevelAbilities": [
+          "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY",
+          "MATH.FORMULA_DERIVATION.CORE",
+          "IMPLEMENTATION.INDEX_BOUNDARY"
+        ],
+        "nonKnowledgeSkills": []
+      },
+      "modelType": [
+        "implementation_or_strategy",
+        "math_model"
+      ],
+      "requiredTransformations": [
+        "small cases -> formula/invariant -> algorithm"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 30,
+          "condition": "small or special data",
+          "expectedMethod": "brute force / simulation"
+        },
+        {
+          "score": 70,
+          "condition": "main model without hardest optimization",
+          "expectedMethod": "core model"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "BOUNDARY_ERROR",
+        "FORMULA_ERROR",
+        "OVERFLOW_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2024 public list seed."
+      },
+      "studentRecord": {
+        "year": 2024,
+        "slot": "T2",
+        "luoguPid": "P11232",
+        "hasDone": true,
+        "doneDate": "",
+        "isBlindTest": false,
+        "hasSeenSolution": false,
+        "result": "UNKNOWN",
+        "score": 0,
+        "timeMinutes": null,
+        "submissionCount": 1,
+        "errorTypes": [
+          "MODEL_ERROR",
+          "OVERFLOW_ERROR",
+          "READING_ERROR",
+          "RECURSION_STACK_RISK",
+          "DEBUG_TIMEOUT"
+        ],
+        "reviewNote": "Inferred from Luogu historical submissions. This is not blind CSP-S proof.",
+        "source": "history_inference"
+      }
+    },
+    {
+      "year": 2024,
+      "slot": "T3",
+      "problemId": "CSP-S-2024-T3",
+      "luoguPid": "P11233",
+      "title": "染色",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P11233",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T3",
+        "role": "PARTIAL_SCORE_AND_CORE_ALGORITHM",
+        "firstPrizeTargetScore": {
+          "conservative": 35,
+          "normal": 55,
+          "strong": 80
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "DP",
+          "DATA_STRUCTURE",
+          "PARTIAL_SCORE"
+        ],
+        "secondary": [
+          "DP.GENERAL",
+          "DATA_STRUCTURE.RANGE_QUERY",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "thirdLevelAbilities": [
+          "DP.GENERAL.STATE_TRANSITION",
+          "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "nonKnowledgeSkills": [
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ]
+      },
+      "modelType": [
+        "dynamic_programming",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "problem statement -> state definition -> transition order",
+        "constraints -> 30/50/70/100 routes"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW",
+        "IMPLEMENTATION.INITIALIZATION"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 20,
+          "condition": "small data",
+          "expectedMethod": "brute force"
+        },
+        {
+          "score": 50,
+          "condition": "special property",
+          "expectedMethod": "simplified model"
+        },
+        {
+          "score": 70,
+          "condition": "main subtask",
+          "expectedMethod": "near-correct algorithm with limited optimization"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "ENUMERATION_ORDER_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED",
+        "STRATEGY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2024 public list seed."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2024,
+      "slot": "T4",
+      "problemId": "CSP-S-2024-T4",
+      "luoguPid": "P11234",
+      "title": "擂台游戏",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P11234",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T4",
+        "role": "STRATEGY_AND_ADVANCED_PARTIAL_SCORE",
+        "firstPrizeTargetScore": {
+          "conservative": 15,
+          "normal": 35,
+          "strong": 60
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "DP",
+          "GREEDY",
+          "PARTIAL_SCORE"
+        ],
+        "secondary": [
+          "DP.GENERAL",
+          "GREEDY.PROOF",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "thirdLevelAbilities": [
+          "DP.GENERAL.STATE_TRANSITION",
+          "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "nonKnowledgeSkills": [
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ]
+      },
+      "modelType": [
+        "dynamic_programming",
+        "greedy",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "problem statement -> state definition -> transition order",
+        "constraints -> 30/50/70/100 routes"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW",
+        "IMPLEMENTATION.INITIALIZATION"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 20,
+          "condition": "small data",
+          "expectedMethod": "brute force"
+        },
+        {
+          "score": 50,
+          "condition": "special property",
+          "expectedMethod": "simplified model"
+        },
+        {
+          "score": 70,
+          "condition": "main subtask",
+          "expectedMethod": "near-correct algorithm with limited optimization"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "ENUMERATION_ORDER_ERROR",
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED",
+        "STRATEGY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_REVIEW",
+        "confidence": 0.62,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2024 public list seed."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2025,
+      "slot": "T1",
+      "problemId": "CSP-S-2025-T1",
+      "luoguPid": "P14361",
+      "title": "社团招新",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P14361",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T1",
+        "role": "STABLE_SCORE",
+        "firstPrizeTargetScore": {
+          "conservative": 85,
+          "normal": 95,
+          "strong": 100
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "GREEDY",
+          "BASIC_ALGORITHM"
+        ],
+        "secondary": [
+          "GREEDY.PROOF",
+          "BASIC_ALGORITHM.SIMULATION_ENUMERATION"
+        ],
+        "thirdLevelAbilities": [
+          "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+          "BASIC_ALGORITHM.SIMULATION_ENUMERATION.CASE_SPLIT"
+        ],
+        "nonKnowledgeSkills": []
+      },
+      "modelType": [
+        "greedy",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "statement -> algorithm -> implementation"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "stable implementation"
+        }
+      ],
+      "commonFailureModes": [
+        "BOUNDARY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_MANUAL_CONFIRMATION",
+        "confidence": 0.45,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2025 public list seed; please confirm official order."
+      },
+      "studentRecord": {
+        "year": 2025,
+        "slot": "T1",
+        "luoguPid": "P14361",
+        "hasDone": true,
+        "doneDate": "",
+        "isBlindTest": false,
+        "hasSeenSolution": false,
+        "result": "AC",
+        "score": 100,
+        "timeMinutes": null,
+        "submissionCount": 2,
+        "errorTypes": [
+          "MODEL_ERROR",
+          "OVERFLOW_ERROR",
+          "READING_ERROR",
+          "INDEX_ERROR",
+          "RECURSION_STACK_RISK"
+        ],
+        "reviewNote": "Inferred from Luogu historical submissions. This is not blind CSP-S proof.",
+        "source": "history_inference"
+      }
+    },
+    {
+      "year": 2025,
+      "slot": "T2",
+      "problemId": "CSP-S-2025-T2",
+      "luoguPid": "P14362",
+      "title": "道路修复",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P14362",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T2",
+        "role": "MODELING_TRANSFER",
+        "firstPrizeTargetScore": {
+          "conservative": 65,
+          "normal": 80,
+          "strong": 95
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "GRAPH",
+          "GREEDY",
+          "DATA_STRUCTURE"
+        ],
+        "secondary": [
+          "GRAPH.MODELING",
+          "GREEDY.PROOF",
+          "DATA_STRUCTURE.DSU"
+        ],
+        "thirdLevelAbilities": [
+          "GRAPH.MODELING.GRAPH_ABSTRACTION",
+          "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+          "DATA_STRUCTURE.DSU.SET_MEANING"
+        ],
+        "nonKnowledgeSkills": []
+      },
+      "modelType": [
+        "graph_model",
+        "greedy",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "entities/relations -> nodes/edges/weights"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW",
+        "IMPLEMENTATION.RECURSION_STACK"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 30,
+          "condition": "small or special data",
+          "expectedMethod": "brute force / simulation"
+        },
+        {
+          "score": 70,
+          "condition": "main model without hardest optimization",
+          "expectedMethod": "core model"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "MODEL_ERROR",
+        "COMPLEXITY_ERROR",
+        "BOUNDARY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_MANUAL_CONFIRMATION",
+        "confidence": 0.45,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2025 public list seed; please confirm official order."
+      },
+      "studentRecord": {
+        "year": 2025,
+        "slot": "T2",
+        "luoguPid": "P14362",
+        "hasDone": true,
+        "doneDate": "",
+        "isBlindTest": false,
+        "hasSeenSolution": false,
+        "result": "AC",
+        "score": 100,
+        "timeMinutes": null,
+        "submissionCount": 2,
+        "errorTypes": [
+          "MODEL_ERROR",
+          "TEMPLATE_UNFAMILIAR",
+          "INDEX_ERROR",
+          "OVERFLOW_ERROR",
+          "RECURSION_STACK_RISK"
+        ],
+        "reviewNote": "Inferred from Luogu historical submissions. This is not blind CSP-S proof.",
+        "source": "history_inference"
+      }
+    },
+    {
+      "year": 2025,
+      "slot": "T3",
+      "problemId": "CSP-S-2025-T3",
+      "luoguPid": "P14363",
+      "title": "谐音替换",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P14363",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T3",
+        "role": "PARTIAL_SCORE_AND_CORE_ALGORITHM",
+        "firstPrizeTargetScore": {
+          "conservative": 35,
+          "normal": 55,
+          "strong": 80
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "STRING",
+          "DATA_STRUCTURE",
+          "PARTIAL_SCORE"
+        ],
+        "secondary": [
+          "STRING.PATTERN",
+          "DATA_STRUCTURE.RANGE_QUERY",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "thirdLevelAbilities": [
+          "STRING.PATTERN.BOUNDARY",
+          "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "nonKnowledgeSkills": [
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ]
+      },
+      "modelType": [
+        "string_model",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "constraints -> 30/50/70/100 routes"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 20,
+          "condition": "small data",
+          "expectedMethod": "brute force"
+        },
+        {
+          "score": 50,
+          "condition": "special property",
+          "expectedMethod": "simplified model"
+        },
+        {
+          "score": 70,
+          "condition": "main subtask",
+          "expectedMethod": "near-correct algorithm with limited optimization"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "BOUNDARY_ERROR",
+        "PARTIAL_SCORE_MISSED",
+        "STRATEGY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_MANUAL_CONFIRMATION",
+        "confidence": 0.45,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2025 public list seed; please confirm problem id/order."
+      },
+      "studentRecord": null
+    },
+    {
+      "year": 2025,
+      "slot": "T4",
+      "problemId": "CSP-S-2025-T4",
+      "luoguPid": "P14364",
+      "title": "员工招聘",
+      "isNationalOfficial": true,
+      "sourceUrls": {
+        "noi": "",
+        "luogu": "https://www.luogu.com.cn/problem/P14364",
+        "analysis": ""
+      },
+      "fullScore": 100,
+      "slotRole": {
+        "position": "T4",
+        "role": "STRATEGY_AND_ADVANCED_PARTIAL_SCORE",
+        "firstPrizeTargetScore": {
+          "conservative": 15,
+          "normal": 35,
+          "strong": 60
+        }
+      },
+      "knowledgeMapping": {
+        "primary": [
+          "DP",
+          "MATH",
+          "PARTIAL_SCORE"
+        ],
+        "secondary": [
+          "DP.GENERAL",
+          "MATH.COMBINATORICS",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "thirdLevelAbilities": [
+          "DP.GENERAL.STATE_TRANSITION",
+          "MATH.COMBINATORICS.CORE",
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ],
+        "nonKnowledgeSkills": [
+          "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+        ]
+      },
+      "modelType": [
+        "dynamic_programming",
+        "math_model",
+        "implementation_or_strategy"
+      ],
+      "requiredTransformations": [
+        "problem statement -> state definition -> transition order",
+        "small cases -> formula/invariant -> algorithm",
+        "constraints -> 30/50/70/100 routes"
+      ],
+      "implementationRisks": [
+        "IMPLEMENTATION.INDEX_BOUNDARY",
+        "IMPLEMENTATION.INTEGER_OVERFLOW",
+        "IMPLEMENTATION.INITIALIZATION"
+      ],
+      "partialScoreStructure": [
+        {
+          "score": 20,
+          "condition": "small data",
+          "expectedMethod": "brute force"
+        },
+        {
+          "score": 50,
+          "condition": "special property",
+          "expectedMethod": "simplified model"
+        },
+        {
+          "score": 70,
+          "condition": "main subtask",
+          "expectedMethod": "near-correct algorithm with limited optimization"
+        },
+        {
+          "score": 100,
+          "condition": "full data",
+          "expectedMethod": "complete solution"
+        }
+      ],
+      "commonFailureModes": [
+        "STATE_ERROR",
+        "INIT_ERROR",
+        "ENUMERATION_ORDER_ERROR",
+        "FORMULA_ERROR",
+        "OVERFLOW_ERROR",
+        "PARTIAL_SCORE_MISSED",
+        "STRATEGY_ERROR"
+      ],
+      "classification": {
+        "status": "NEEDS_MANUAL_CONFIRMATION",
+        "confidence": 0.45,
+        "reviewedBy": null,
+        "reviewNote": "Luogu CSP-S 2025 public list seed; please confirm problem id/order."
+      },
+      "studentRecord": null
+    }
+  ]
+}

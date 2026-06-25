@@ -1,0 +1,653 @@
+{
+  "generatedAt": "2026-06-25T13:28:10.721Z",
+  "targetScore": 200,
+  "items": [
+    {
+      "unitId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+      "title": "Partial-score subtask decomposition",
+      "sourceAbilityId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+      "targetScoreRole": [
+        "T3",
+        "T4"
+      ],
+      "priority": "P0",
+      "goal": "Write executable 30/50/70/100-point routes before chasing the full solution.",
+      "prerequisites": [
+        "constraint extraction",
+        "brute force",
+        "special-property recognition"
+      ],
+      "conceptExplanation": {
+        "short": "Partial-score training starts from data ranges: brute force for small data, special properties for middle score, full solution last.",
+        "keyQuestions": [
+          "What are the constraints?",
+          "What brute force gets 20-30 points?",
+          "What special property gets 50-70?",
+          "Can I code the partial route now?",
+          "When should I stop chasing full marks?"
+        ]
+      },
+      "commonMistakes": [
+        "skip brute force",
+        "no 30/50/70 route",
+        "spend too long on full solution",
+        "ignore special properties"
+      ],
+      "passCriteria": [
+        "For 5 T3/T4 tasks, write 30/50/70 routes before coding.",
+        "At least 3 routes are executable.",
+        "Do not use full solution before attempt.",
+        "Record actual score vs predicted route."
+      ],
+      "estimatedLoss": 14.53,
+      "masteryLevel": "EXPOSED"
+    },
+    {
+      "unitId": "GREEDY.PROOF_EXCHANGE",
+      "title": "Greedy proof and counterexample",
+      "sourceAbilityId": "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+      "targetScoreRole": [
+        "T2",
+        "T3",
+        "T4"
+      ],
+      "priority": "P0",
+      "goal": "Prove the local choice or find a counterexample before coding.",
+      "prerequisites": [
+        "reading constraints",
+        "implementation stability"
+      ],
+      "conceptExplanation": {
+        "short": "Greedy is only valid after an exchange argument or invariant excludes counterexamples.",
+        "keyQuestions": [
+          "What does this unit train?",
+          "What can go wrong?",
+          "How do I verify it before submission?"
+        ]
+      },
+      "commonMistakes": [
+        "unclear model",
+        "boundary not checked",
+        "no small-case verification"
+      ],
+      "passCriteria": [
+        "Finish 2 basic tasks and 1 transfer task.",
+        "submissionCount <= 2.",
+        "Can explain model and complexity.",
+        "No repeated core mistake."
+      ],
+      "estimatedLoss": 7.34,
+      "masteryLevel": "TRANSFERABLE"
+    },
+    {
+      "unitId": "IMPLEMENTATION.INDEX_BOUNDARY",
+      "title": "Index and boundary stability",
+      "sourceAbilityId": "IMPLEMENTATION.INDEX_BOUNDARY",
+      "targetScoreRole": [
+        "T1",
+        "T2"
+      ],
+      "priority": "P0",
+      "goal": "Avoid low-level score loss from boundary, initialization, overflow and repeated submissions.",
+      "prerequisites": [
+        "reading constraints",
+        "implementation stability"
+      ],
+      "conceptExplanation": {
+        "short": "This unit trains a single observable ability with a pass criterion.",
+        "keyQuestions": [
+          "What does this unit train?",
+          "What can go wrong?",
+          "How do I verify it before submission?"
+        ]
+      },
+      "commonMistakes": [
+        "off-by-one",
+        "uninitialized array",
+        "overflow",
+        "multi-test not cleared"
+      ],
+      "passCriteria": [
+        "Pass boundary checklist before submission.",
+        "No overflow/index/init error in 3 consecutive tasks.",
+        "submissionCount <= 2."
+      ],
+      "estimatedLoss": 4.96,
+      "masteryLevel": "UNSTABLE"
+    },
+    {
+      "unitId": "GRAPH.BASIC_MODELING",
+      "title": "Graph modeling",
+      "sourceAbilityId": "GRAPH.MODELING.GRAPH_ABSTRACTION",
+      "targetScoreRole": [
+        "T2",
+        "T3"
+      ],
+      "priority": "P0",
+      "goal": "Translate entities and relations into graph nodes, edges, weights and states.",
+      "prerequisites": [
+        "DFS/BFS",
+        "adjacency list",
+        "complexity estimate"
+      ],
+      "conceptExplanation": {
+        "short": "Graph modeling is defining what a node, edge, weight and reachable state mean.",
+        "keyQuestions": [
+          "What is a node?",
+          "What is an edge?",
+          "What does distance/connectivity mean?",
+          "What is the start/end state?",
+          "What is the complexity?"
+        ]
+      },
+      "commonMistakes": [
+        "wrong node meaning",
+        "missing edge condition",
+        "INF/init bug",
+        "complexity too high"
+      ],
+      "passCriteria": [
+        "Finish 2 basic tasks and 1 transfer task.",
+        "submissionCount <= 2.",
+        "Can explain model and complexity.",
+        "No repeated core mistake."
+      ],
+      "estimatedLoss": 4.46,
+      "masteryLevel": "BASIC"
+    },
+    {
+      "unitId": "DP.LINEAR.STATE_TRANSITION",
+      "title": "DP state and transition",
+      "sourceAbilityId": "DP.GENERAL.STATE_TRANSITION",
+      "targetScoreRole": [
+        "T2",
+        "T3"
+      ],
+      "priority": "P0",
+      "goal": "Define state, transition, initialization, enumeration order and complexity before coding.",
+      "prerequisites": [
+        "array/vector basics",
+        "state meaning",
+        "loop order"
+      ],
+      "conceptExplanation": {
+        "short": "DP training starts from state meaning, not from memorizing a template.",
+        "keyQuestions": [
+          "What does dp state mean?",
+          "Where does the transition come from?",
+          "What is initialized?",
+          "What is the iteration order?",
+          "What is the complexity?"
+        ]
+      },
+      "commonMistakes": [
+        "state not defined",
+        "wrong transition source",
+        "bad initialization",
+        "wrong enumeration order"
+      ],
+      "passCriteria": [
+        "Finish 2 basic tasks and 1 transfer task.",
+        "submissionCount <= 2.",
+        "Can explain model and complexity.",
+        "No repeated core mistake."
+      ],
+      "estimatedLoss": 3.82,
+      "masteryLevel": "BASIC"
+    },
+    {
+      "unitId": "BINARY_SEARCH.ANSWER_CHECK",
+      "title": "Binary answer check monotonicity",
+      "sourceAbilityId": "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY",
+      "targetScoreRole": [
+        "T2",
+        "T3"
+      ],
+      "priority": "P0",
+      "goal": "Recognize answer monotonicity, write a correct check function, and handle l/r/mid boundaries.",
+      "prerequisites": [
+        "basic binary search",
+        "greedy scanning",
+        "complexity estimate"
+      ],
+      "conceptExplanation": {
+        "short": "Binary answer search means binary searching a possible answer and using check(x) to decide feasibility.",
+        "keyQuestions": [
+          "What is the answer?",
+          "What does check(x) mean?",
+          "Which direction is monotonic?",
+          "What are l/r boundaries?",
+          "What is the complexity?"
+        ]
+      },
+      "commonMistakes": [
+        "check meaning reversed",
+        "wrong monotonic direction",
+        "l/r boundary error",
+        "mid update infinite loop",
+        "wrong answer range"
+      ],
+      "passCriteria": [
+        "Finish 2 binary-answer tasks with submissionCount <= 2.",
+        "Write natural-language check meaning.",
+        "Explain monotonicity.",
+        "No boundary convergence error."
+      ],
+      "estimatedLoss": 2.39,
+      "masteryLevel": "BASIC"
+    },
+    {
+      "unitId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+      "title": "Integer range and overflow",
+      "sourceAbilityId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+      "targetScoreRole": [
+        "T1",
+        "T2"
+      ],
+      "priority": "P0",
+      "goal": "Avoid low-level score loss from boundary, initialization, overflow and repeated submissions.",
+      "prerequisites": [
+        "reading constraints",
+        "implementation stability"
+      ],
+      "conceptExplanation": {
+        "short": "This unit trains a single observable ability with a pass criterion.",
+        "keyQuestions": [
+          "What does this unit train?",
+          "What can go wrong?",
+          "How do I verify it before submission?"
+        ]
+      },
+      "commonMistakes": [
+        "off-by-one",
+        "uninitialized array",
+        "overflow",
+        "multi-test not cleared"
+      ],
+      "passCriteria": [
+        "Pass boundary checklist before submission.",
+        "No overflow/index/init error in 3 consecutive tasks.",
+        "submissionCount <= 2."
+      ],
+      "estimatedLoss": 1.77,
+      "masteryLevel": "BASIC"
+    },
+    {
+      "unitId": "T1.SIMULATION",
+      "title": "T1 simulation and reading stability",
+      "sourceAbilityId": "PROGRAMMING_BASICS.READING.CONSTRAINT_EXTRACTION",
+      "targetScoreRole": [
+        "T1"
+      ],
+      "priority": "P0",
+      "goal": "Pass the trainable ability PROGRAMMING_BASICS.READING.CONSTRAINT_EXTRACTION.",
+      "prerequisites": [
+        "reading constraints",
+        "implementation stability"
+      ],
+      "conceptExplanation": {
+        "short": "This unit trains a single observable ability with a pass criterion.",
+        "keyQuestions": [
+          "What does this unit train?",
+          "What can go wrong?",
+          "How do I verify it before submission?"
+        ]
+      },
+      "commonMistakes": [
+        "unclear model",
+        "boundary not checked",
+        "no small-case verification"
+      ],
+      "passCriteria": [
+        "Finish 2 basic tasks and 1 transfer task.",
+        "submissionCount <= 2.",
+        "Can explain model and complexity.",
+        "No repeated core mistake."
+      ],
+      "estimatedLoss": 0.25,
+      "masteryLevel": "UNSTABLE"
+    },
+    {
+      "unitId": "PARTIAL_SCORE.BRUTE_FORCE",
+      "title": "Executable brute-force route",
+      "sourceAbilityId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+      "targetScoreRole": [
+        "T3",
+        "T4"
+      ],
+      "priority": "P1",
+      "goal": "Write executable 30/50/70/100-point routes before chasing the full solution.",
+      "prerequisites": [
+        "constraint extraction",
+        "brute force",
+        "special-property recognition"
+      ],
+      "conceptExplanation": {
+        "short": "Partial-score training starts from data ranges: brute force for small data, special properties for middle score, full solution last.",
+        "keyQuestions": [
+          "What are the constraints?",
+          "What brute force gets 20-30 points?",
+          "What special property gets 50-70?",
+          "Can I code the partial route now?",
+          "When should I stop chasing full marks?"
+        ]
+      },
+      "commonMistakes": [
+        "skip brute force",
+        "no 30/50/70 route",
+        "spend too long on full solution",
+        "ignore special properties"
+      ],
+      "passCriteria": [
+        "For 5 T3/T4 tasks, write 30/50/70 routes before coding.",
+        "At least 3 routes are executable.",
+        "Do not use full solution before attempt.",
+        "Record actual score vs predicted route."
+      ],
+      "estimatedLoss": 14.53,
+      "masteryLevel": "EXPOSED"
+    },
+    {
+      "unitId": "STRING_PATTERN_BOUNDARY",
+      "title": "String Pattern Boundary",
+      "sourceAbilityId": "STRING.PATTERN.BOUNDARY",
+      "targetScoreRole": [
+        "T2",
+        "T3",
+        "T4"
+      ],
+      "priority": "P1",
+      "goal": "Pass the trainable ability STRING.PATTERN.BOUNDARY.",
+      "prerequisites": [
+        "reading constraints",
+        "implementation stability"
+      ],
+      "conceptExplanation": {
+        "short": "This unit trains a single observable ability with a pass criterion.",
+        "keyQuestions": [
+          "What does this unit train?",
+          "What can go wrong?",
+          "How do I verify it before submission?"
+        ]
+      },
+      "commonMistakes": [
+        "unclear model",
+        "boundary not checked",
+        "no small-case verification"
+      ],
+      "passCriteria": [
+        "Finish 2 basic tasks and 1 transfer task.",
+        "submissionCount <= 2.",
+        "Can explain model and complexity.",
+        "No repeated core mistake."
+      ],
+      "estimatedLoss": 3.53,
+      "masteryLevel": "BASIC"
+    },
+    {
+      "unitId": "RANGE_QUERY_TEMPLATE_BOUNDARY",
+      "title": "Data Structure Range Query Template Boundary",
+      "sourceAbilityId": "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+      "targetScoreRole": [
+        "T2",
+        "T3",
+        "T4"
+      ],
+      "priority": "P1",
+      "goal": "Pass the trainable ability DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY.",
+      "prerequisites": [
+        "reading constraints",
+        "implementation stability"
+      ],
+      "conceptExplanation": {
+        "short": "This unit trains a single observable ability with a pass criterion.",
+        "keyQuestions": [
+          "What does this unit train?",
+          "What can go wrong?",
+          "How do I verify it before submission?"
+        ]
+      },
+      "commonMistakes": [
+        "unclear model",
+        "boundary not checked",
+        "no small-case verification"
+      ],
+      "passCriteria": [
+        "Finish 2 basic tasks and 1 transfer task.",
+        "submissionCount <= 2.",
+        "Can explain model and complexity.",
+        "No repeated core mistake."
+      ],
+      "estimatedLoss": 3.45,
+      "masteryLevel": "BASIC"
+    },
+    {
+      "unitId": "DP_INTERVAL_RECOGNIZE_STRUCTURE",
+      "title": "Dp Interval Recognize Structure",
+      "sourceAbilityId": "DP.INTERVAL.RECOGNIZE_STRUCTURE",
+      "targetScoreRole": [
+        "T2",
+        "T3"
+      ],
+      "priority": "P1",
+      "goal": "Define state, transition, initialization, enumeration order and complexity before coding.",
+      "prerequisites": [
+        "array/vector basics",
+        "state meaning",
+        "loop order"
+      ],
+      "conceptExplanation": {
+        "short": "DP training starts from state meaning, not from memorizing a template.",
+        "keyQuestions": [
+          "What does dp state mean?",
+          "Where does the transition come from?",
+          "What is initialized?",
+          "What is the iteration order?",
+          "What is the complexity?"
+        ]
+      },
+      "commonMistakes": [
+        "state not defined",
+        "wrong transition source",
+        "bad initialization",
+        "wrong enumeration order"
+      ],
+      "passCriteria": [
+        "Finish 2 basic tasks and 1 transfer task.",
+        "submissionCount <= 2.",
+        "Can explain model and complexity.",
+        "No repeated core mistake."
+      ],
+      "estimatedLoss": 1.38,
+      "masteryLevel": "BASIC"
+    },
+    {
+      "unitId": "MATH_FORMULA_DERIVATION_CORE",
+      "title": "Math Formula Derivation Core",
+      "sourceAbilityId": "MATH.FORMULA_DERIVATION.CORE",
+      "targetScoreRole": [
+        "T2",
+        "T3",
+        "T4"
+      ],
+      "priority": "P1",
+      "goal": "Pass the trainable ability MATH.FORMULA_DERIVATION.CORE.",
+      "prerequisites": [
+        "reading constraints",
+        "implementation stability"
+      ],
+      "conceptExplanation": {
+        "short": "This unit trains a single observable ability with a pass criterion.",
+        "keyQuestions": [
+          "What does this unit train?",
+          "What can go wrong?",
+          "How do I verify it before submission?"
+        ]
+      },
+      "commonMistakes": [
+        "unclear model",
+        "boundary not checked",
+        "no small-case verification"
+      ],
+      "passCriteria": [
+        "Finish 2 basic tasks and 1 transfer task.",
+        "submissionCount <= 2.",
+        "Can explain model and complexity.",
+        "No repeated core mistake."
+      ],
+      "estimatedLoss": 0.84,
+      "masteryLevel": "BASIC"
+    },
+    {
+      "unitId": "DP.INTERVAL.INIT_AND_ORDER",
+      "title": "Interval DP init and order",
+      "sourceAbilityId": "DP.INTERVAL.INIT_AND_ORDER",
+      "targetScoreRole": [
+        "T2",
+        "T3"
+      ],
+      "priority": "P1",
+      "goal": "Define state, transition, initialization, enumeration order and complexity before coding.",
+      "prerequisites": [
+        "array/vector basics",
+        "state meaning",
+        "loop order"
+      ],
+      "conceptExplanation": {
+        "short": "DP training starts from state meaning, not from memorizing a template.",
+        "keyQuestions": [
+          "What does dp state mean?",
+          "Where does the transition come from?",
+          "What is initialized?",
+          "What is the iteration order?",
+          "What is the complexity?"
+        ]
+      },
+      "commonMistakes": [
+        "state not defined",
+        "wrong transition source",
+        "bad initialization",
+        "wrong enumeration order"
+      ],
+      "passCriteria": [
+        "Finish 2 basic tasks and 1 transfer task.",
+        "submissionCount <= 2.",
+        "Can explain model and complexity.",
+        "No repeated core mistake."
+      ],
+      "estimatedLoss": 0.83,
+      "masteryLevel": "BASIC"
+    },
+    {
+      "unitId": "MATH_OVERFLOW_RANGE_CORE",
+      "title": "Math Overflow Range Core",
+      "sourceAbilityId": "MATH.OVERFLOW_RANGE.CORE",
+      "targetScoreRole": [
+        "T2",
+        "T3",
+        "T4"
+      ],
+      "priority": "P1",
+      "goal": "Pass the trainable ability MATH.OVERFLOW_RANGE.CORE.",
+      "prerequisites": [
+        "reading constraints",
+        "implementation stability"
+      ],
+      "conceptExplanation": {
+        "short": "This unit trains a single observable ability with a pass criterion.",
+        "keyQuestions": [
+          "What does this unit train?",
+          "What can go wrong?",
+          "How do I verify it before submission?"
+        ]
+      },
+      "commonMistakes": [
+        "unclear model",
+        "boundary not checked",
+        "no small-case verification"
+      ],
+      "passCriteria": [
+        "Finish 2 basic tasks and 1 transfer task.",
+        "submissionCount <= 2.",
+        "Can explain model and complexity.",
+        "No repeated core mistake."
+      ],
+      "estimatedLoss": 0.83,
+      "masteryLevel": "BASIC"
+    },
+    {
+      "unitId": "DSU.SET_MEANING",
+      "title": "DSU set meaning",
+      "sourceAbilityId": "DATA_STRUCTURE.DSU.SET_MEANING",
+      "targetScoreRole": [
+        "T2",
+        "T3"
+      ],
+      "priority": "P1",
+      "goal": "Pass the trainable ability DATA_STRUCTURE.DSU.SET_MEANING.",
+      "prerequisites": [
+        "reading constraints",
+        "implementation stability"
+      ],
+      "conceptExplanation": {
+        "short": "This unit trains a single observable ability with a pass criterion.",
+        "keyQuestions": [
+          "What does this unit train?",
+          "What can go wrong?",
+          "How do I verify it before submission?"
+        ]
+      },
+      "commonMistakes": [
+        "unclear model",
+        "boundary not checked",
+        "no small-case verification"
+      ],
+      "passCriteria": [
+        "Finish 2 basic tasks and 1 transfer task.",
+        "submissionCount <= 2.",
+        "Can explain model and complexity.",
+        "No repeated core mistake."
+      ],
+      "estimatedLoss": 0.51,
+      "masteryLevel": "BASIC"
+    },
+    {
+      "unitId": "CONTEST.TIME_ALLOCATION",
+      "title": "Contest time allocation",
+      "sourceAbilityId": "COMPREHENSIVE.EXAM_STRATEGY.TIME_ALLOCATION",
+      "targetScoreRole": [
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ],
+      "priority": "P1",
+      "goal": "Pass the trainable ability COMPREHENSIVE.EXAM_STRATEGY.TIME_ALLOCATION.",
+      "prerequisites": [
+        "reading constraints",
+        "implementation stability"
+      ],
+      "conceptExplanation": {
+        "short": "This unit trains a single observable ability with a pass criterion.",
+        "keyQuestions": [
+          "What does this unit train?",
+          "What can go wrong?",
+          "How do I verify it before submission?"
+        ]
+      },
+      "commonMistakes": [
+        "unclear model",
+        "boundary not checked",
+        "no small-case verification"
+      ],
+      "passCriteria": [
+        "Finish 2 basic tasks and 1 transfer task.",
+        "submissionCount <= 2.",
+        "Can explain model and complexity.",
+        "No repeated core mistake."
+      ],
+      "estimatedLoss": 0,
+      "masteryLevel": "NO_EVIDENCE"
+    }
+  ]
+}

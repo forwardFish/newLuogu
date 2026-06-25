@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-06-25T07:35:35.137Z",
+  "items": [],
+  "schema": {
+    "requiredFields": [
+      "date",
+      "unitId",
+      "problemPid",
+      "taskType",
+      "result",
+      "score",
+      "timeMinutes",
+      "submissionCount",
+      "hintLevelUsed",
+      "hasSeenSolution",
+      "errorTypes",
+      "failedStage",
+      "studentSummary",
+      "needRedo"
+    ],
+    "exampleCommand": "pnpm train:log -- --unitId BINARY_SEARCH.ANSWER_CHECK --problemPid P2678 --taskType PRACTICE_STANDARD --result AC --score 100 --timeMinutes 45 --submissionCount 2 --hintLevelUsed 1 --hasSeenSolution false"
+  },
+  "note": "No --problemPid provided. This file is initialized and ready for real training logs."
+}

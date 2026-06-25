@@ -1,107 +1,165 @@
 import { promises as fs } from "fs";
 import path from "path";
-import type { CSSProperties } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 export const dynamic = "force-dynamic";
 
-type Scores = {
-  t1Stability: number;
-  t2Modeling: number;
-  t3PartialScore: number;
-  t4Strategy: number;
-  overall: number;
+type ScorePart = {
+  targetScore: number;
+  currentEstimate: number;
+  gap: number;
+  role: string;
+  trainingPriority?: string;
 };
 
-type TrainingProfile = {
-  currentScores: Scores;
-  currentDiagnosis: {
-    summary: string;
-    weaknesses: string[];
+type GoalScorePlan = {
+  targetScore: number;
+  weeklyHours: number;
+  scoreBreakdown: Record<string, ScorePart>;
+};
+
+type DailyTask = {
+  order: number;
+  type: string;
+  problemPid?: string;
+  problemId?: string;
+  contentId?: string;
+  durationMinutes: number;
+  goal: string;
+  passSignal?: string;
+};
+
+type DailyTrainingPlan = {
+  date: string;
+  targetScore: number;
+  todayGoal: string;
+  whyToday: string[];
+  tasks: DailyTask[];
+  passCriteria: string[];
+};
+
+type TrainingSettlement = {
+  date: string;
+  targetScore: number;
+  today: {
+    completedTasks: number;
+    xpGained: number;
+    riskReduced: number;
+    scoreProxyBefore: number;
+    scoreProxyAfter: number;
+    distanceBefore: number;
+    distanceAfter: number;
+    distanceDelta: number;
   };
-  highValueReviewProblems: Array<{
-    problemPid: string;
-    attemptCount: number;
-    bestScore: number | null;
-    finalResult: string;
-    reviewReason: string;
+  level: {
+    before: number;
+    after: number;
+    title: string;
+    upgraded: boolean;
+    xpBefore: number;
+    xpAfter: number;
+    nextLevelXp: number;
+  };
+  abilityChanges: Array<{
+    unitId: string;
+    title: string;
+    beforeStatus: string;
+    afterStatus: string;
+    todayScoreAverage: number;
+    todayProblems: string[];
+    riskReduced: number;
+    message: string;
+  }>;
+  evidence: string[];
+  nextAdjustment: {
+    action: string;
+    reason: string;
+    nextUnitId: string;
+    nextUnitTitle: string;
+  };
+};
+
+type MasteryReport = {
+  items: Array<{
+    unitId: string;
+    title: string;
+    status: string;
+    estimatedLoss: number;
+    completedTasks: number;
+    averageScore: number;
+    nextAction: string;
   }>;
 };
 
-type TrainingPriority = {
-  priorityWeights: Record<string, number>;
-  oldProblemReviewWeight: number;
-  newProblemWeight: number;
-  moduleWeights: Record<string, number>;
-};
-
-type TrainingTask = {
-  id: string;
-  module: string;
-  difficulty: string;
-  selectionRule: string;
-  trainingGoal: string;
-  timeLimitMinutes: number;
-};
-
-type TrainingPlan = {
-  daysPlan: Array<{
-    day: number;
-    theme: string;
-    targetAbility: string;
-    why: string;
-    tasks: TrainingTask[];
-  }>;
-};
-
-type Readiness = {
-  overallReadiness: string;
-  criteria: Record<string, { target: unknown; actual: unknown; passed: boolean }>;
-  explanation: string;
-};
-
-async function readJson<T>(fileName: string): Promise<T | null> {
+async function readData<T>(relativePath: string): Promise<T | null> {
   try {
-    const filePath = path.join(process.cwd(), "data", "training", fileName);
+    const filePath = path.join(process.cwd(), "data", ...relativePath.split("/"));
     return JSON.parse(await fs.readFile(filePath, "utf8")) as T;
   } catch {
     return null;
   }
 }
 
-function percent(value: number | undefined) {
-  return `${Math.round((value ?? 0) * 100)}%`;
+function formatNumber(value: number | undefined, digits = 1) {
+  return Number.isFinite(value) ? Number(value).toFixed(digits).replace(/\.0$/, "") : "0";
 }
 
-function scoreLevel(score: number) {
-  if (score >= 85) return "强";
-  if (score >= 75) return "可用";
-  if (score >= 70) return "需补强";
-  return "短板";
+function percent(value: number, max: number) {
+  if (max <= 0) return 0;
+  return Math.max(0, Math.min(100, (value / max) * 100));
 }
 
-function formatValue(value: unknown) {
-  if (value === null || value === undefined) return "暂无";
-  if (typeof value === "object") return JSON.stringify(value);
-  return String(value);
+function statusLabel(status: string) {
+  const labels: Record<string, string> = {
+    NOT_STARTED: "未开始",
+    LEARNING: "学习中",
+    PRACTICING: "练习中",
+    UNSTABLE: "不稳定",
+    PASSED_BASIC: "基础通过",
+    PASSED_TRANSFER: "迁移通过",
+    CONTEST_READY: "考场可用",
+  };
+  return labels[status] ?? status;
+}
+
+function taskLabel(type: string) {
+  const labels: Record<string, string> = {
+    CONCEPT_EXPLANATION: "理解模型",
+    PRACTICE_BASIC: "基础题",
+    PRACTICE_STANDARD: "标准题",
+    MUTATION: "变式迁移",
+    GENERATE_DIAGNOSTIC: "诊断题",
+    CSP_STYLE_PROBLEM: "真题验证",
+    REVIEW: "复盘结算",
+  };
+  return labels[type] ?? type;
+}
+
+function actionLabel(action: string) {
+  const labels: Record<string, string> = {
+    ADVANCE_OR_TRANSFER: "继续推进 / 进入迁移",
+    REDO_AND_REVIEW: "重做复盘",
+  };
+  return labels[action] ?? action;
 }
 
 const page: CSSProperties = {
   minHeight: "100vh",
-  background: "#f6f7f9",
-  color: "#172033",
+  background: "#f4f6fa",
+  color: "#142033",
   padding: "24px",
 };
 
 const shell: CSSProperties = {
-  maxWidth: 1180,
+  maxWidth: 1220,
   margin: "0 auto",
   display: "grid",
   gap: 18,
 };
 
-const section: CSSProperties = {
+const panel: CSSProperties = {
   background: "#ffffff",
-  border: "1px solid #d8dee8",
+  border: "1px solid #d9e2ee",
   borderRadius: 8,
   padding: 18,
 };
@@ -112,42 +170,69 @@ const grid: CSSProperties = {
   gap: 12,
 };
 
-const metricCard: CSSProperties = {
-  background: "#ffffff",
-  border: "1px solid #d8dee8",
+const card: CSSProperties = {
+  border: "1px solid #d9e2ee",
   borderRadius: 8,
   padding: 14,
+  background: "#ffffff",
   display: "grid",
   gap: 8,
 };
 
-const badge: CSSProperties = {
-  display: "inline-flex",
-  alignItems: "center",
-  border: "1px solid #c8d2e1",
-  borderRadius: 999,
-  padding: "3px 8px",
-  fontSize: 12,
-  background: "#eef3f8",
+const muted: CSSProperties = {
+  color: "#5b687a",
 };
 
+const badge: CSSProperties = {
+  width: "fit-content",
+  display: "inline-flex",
+  alignItems: "center",
+  border: "1px solid #bfd0e4",
+  borderRadius: 999,
+  padding: "3px 9px",
+  fontSize: 12,
+  background: "#eef4fa",
+};
+
+function Title({ children }: { children: ReactNode }) {
+  return <h2 style={{ margin: "0 0 12px", fontSize: 20 }}>{children}</h2>;
+}
+
+function Bar({ value, max, color = "#1d4ed8" }: { value: number; max: number; color?: string }) {
+  return (
+    <div style={{ height: 9, borderRadius: 999, background: "#e7edf5", overflow: "hidden" }}>
+      <div style={{ width: `${percent(value, max)}%`, height: "100%", background: color }} />
+    </div>
+  );
+}
+
+function Stat({ label, value, note }: { label: string; value: string; note?: string }) {
+  return (
+    <div style={card}>
+      <span style={muted}>{label}</span>
+      <strong style={{ fontSize: 28, lineHeight: 1.1 }}>{value}</strong>
+      {note ? <span style={muted}>{note}</span> : null}
+    </div>
+  );
+}
+
 export default async function TrainingPage() {
-  const [profile, priority, plan, readiness] = await Promise.all([
-    readJson<TrainingProfile>("training_profile.json"),
-    readJson<TrainingPriority>("training_priority.json"),
-    readJson<TrainingPlan>("training_task_plan_7d.json"),
-    readJson<Readiness>("readiness_checklist.json"),
+  const [goal, daily, settlement, mastery] = await Promise.all([
+    readData<GoalScorePlan>("training-goal/goal_score_plan.json"),
+    readData<DailyTrainingPlan>("training/daily_training_plan.json"),
+    readData<TrainingSettlement>("training/training_settlement.json"),
+    readData<MasteryReport>("mastery/ability_mastery.json"),
   ]);
 
-  if (!profile || !priority || !plan || !readiness) {
+  if (!goal || !daily) {
     return (
       <main style={page}>
         <div style={shell}>
-          <section style={section}>
-            <h1>训练闭环结果</h1>
-            <p>还没有找到完整的训练结果文件。</p>
-            <pre style={{ background: "#101828", color: "#f9fafb", padding: 16, overflow: "auto" }}>
-              pnpm train:all
+          <section style={panel}>
+            <h1 style={{ marginTop: 0 }}>CSP-S 目标分训练驾驶舱</h1>
+            <p style={muted}>还没有训练画面数据。先生成训练系统，然后刷新本页。</p>
+            <pre style={{ background: "#101828", color: "#f9fafb", padding: 16, borderRadius: 8, overflow: "auto" }}>
+              pnpm train:all -- --targetScore 200 --weeklyHours 20
             </pre>
           </section>
         </div>
@@ -155,177 +240,224 @@ export default async function TrainingPage() {
     );
   }
 
-  const scores = [
-    ["T1 稳定拿分", profile.currentScores.t1Stability, "基础题和中等偏简单题的稳定 AC 能力"],
-    ["T2 建模转化", profile.currentScores.t2Modeling, "中档题建模、算法选择和转化能力"],
-    ["T3 部分分策略", profile.currentScores.t3PartialScore, "难题中拆子任务、拿 30/50/70 分的能力"],
-    ["T4 综合策略", profile.currentScores.t4Strategy, "模拟赛时间分配、止损和取舍能力"],
-  ] as const;
-
-  const moduleWeights = Object.entries(priority.moduleWeights).slice(0, 10);
+  const scoreItems = Object.entries(goal.scoreBreakdown);
+  const currentScore = scoreItems.reduce((sum, [, item]) => sum + item.currentEstimate, 0);
+  const totalGap = Math.max(0, goal.targetScore - currentScore);
+  const currentAfterSettlement = settlement?.today.scoreProxyAfter ?? currentScore;
+  const xpAfter = settlement?.level.xpAfter ?? 0;
+  const nextLevelXp = settlement?.level.nextLevelXp ?? 300;
+  const doneCount = settlement?.today.completedTasks ?? 0;
+  const topMastery = (mastery?.items ?? [])
+    .slice()
+    .sort((a, b) => b.estimatedLoss - a.estimatedLoss)
+    .slice(0, 6);
 
   return (
     <main style={page}>
       <div style={shell}>
-        <header style={{ display: "grid", gap: 8 }}>
-          <div style={{ display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
-            <div>
-              <h1 style={{ margin: 0, fontSize: 30 }}>CSP-S 一等奖训练闭环</h1>
-              <p style={{ margin: "8px 0 0", color: "#526071" }}>{profile.currentDiagnosis.summary}</p>
+        <section
+          style={{
+            ...panel,
+            background: "linear-gradient(135deg, #0f3b57 0%, #176b65 58%, #f2f7fb 58%, #ffffff 100%)",
+            color: "#ffffff",
+            overflow: "hidden",
+          }}
+        >
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))", gap: 18 }}>
+            <div style={{ display: "grid", gap: 14 }}>
+              <span style={{ ...badge, background: "rgba(255,255,255,0.16)", borderColor: "rgba(255,255,255,0.34)", color: "#ffffff" }}>
+                {daily.date} 今日主线
+              </span>
+              <h1 style={{ margin: 0, fontSize: 34, lineHeight: 1.14 }}>CSP-S 目标分训练驾驶舱</h1>
+              <p style={{ margin: 0, maxWidth: 620, color: "#dcecf0", fontSize: 16 }}>
+                今天围绕「{daily.todayGoal}」训练。做完题后，系统会把得分、用时、提示、提交次数转换成成长结算，而不是只看 AC。
+              </p>
+              <div style={{ display: "grid", gap: 8, maxWidth: 620 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", gap: 12 }}>
+                  <strong>目标进度</strong>
+                  <span>
+                    {formatNumber(currentAfterSettlement)} / {goal.targetScore}
+                  </span>
+                </div>
+                <Bar value={currentAfterSettlement} max={goal.targetScore} color="#f5c84b" />
+                <span style={{ color: "#dcecf0" }}>当前还差 {formatNumber(settlement?.today.distanceAfter ?? totalGap)} 分进入目标分路线。</span>
+              </div>
             </div>
-            <div style={{ ...metricCard, minWidth: 190 }}>
-              <span style={{ color: "#526071", fontSize: 13 }}>Readiness</span>
-              <strong style={{ fontSize: 24 }}>{readiness.overallReadiness}</strong>
-              <span style={{ color: "#526071", fontSize: 13 }}>综合分 {profile.currentScores.overall}</span>
+
+            <div style={{ display: "grid", gap: 12, color: "#142033" }}>
+              <div style={{ ...card, background: "#ffffff" }}>
+                <span style={muted}>训练等级</span>
+                <strong style={{ fontSize: 30 }}>
+                  Lv.{settlement?.level.after ?? 1} {settlement?.level.upgraded ? "升级" : ""}
+                </strong>
+                <span style={badge}>{settlement?.level.title ?? "Training starter"}</span>
+                <Bar value={xpAfter} max={nextLevelXp} color="#176b65" />
+                <span style={muted}>XP {xpAfter} / {nextLevelXp}</span>
+              </div>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+                <Stat label="今日完成" value={`${doneCount} 题`} note={`计划 ${daily.tasks.filter((item) => item.type !== "CONCEPT_EXPLANATION" && item.type !== "REVIEW").length} 题`} />
+                <Stat label="今日缩小" value={`${formatNumber(settlement?.today.distanceDelta ?? 0)} 分`} note="按训练质量折算" />
+              </div>
             </div>
           </div>
-        </header>
+        </section>
 
         <section style={grid}>
-          {scores.map(([name, value, note]) => (
-            <div key={name} style={metricCard}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8 }}>
-                <span style={{ color: "#526071" }}>{name}</span>
-                <span style={badge}>{scoreLevel(value)}</span>
-              </div>
-              <strong style={{ fontSize: 32 }}>{value}</strong>
-              <div style={{ height: 8, background: "#e6ebf2", borderRadius: 999, overflow: "hidden" }}>
-                <div
+          <Stat label="目标分" value={`${goal.targetScore}`} note={`每周 ${goal.weeklyHours} 小时`} />
+          <Stat label="当前代理分" value={`${formatNumber(currentAfterSettlement)}`} note="不是正式模拟赛分，只是训练进度" />
+          <Stat label="目标缺口" value={`${formatNumber(settlement?.today.distanceAfter ?? totalGap)} 分`} note="越小越接近目标" />
+          <Stat label="预计风险下降" value={`${formatNumber(settlement?.today.riskReduced ?? 0, 2)} 分`} note="做完题后自动更新" />
+        </section>
+
+        <section style={panel}>
+          <Title>今日闯关路线</Title>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(185px, 1fr))", gap: 12 }}>
+            {daily.tasks.map((task, index) => {
+              const isDone = index < doneCount;
+              const ref = task.problemPid ?? task.problemId ?? task.contentId ?? "复盘";
+              return (
+                <article
+                  key={`${task.order}-${task.type}`}
                   style={{
-                    width: `${Math.max(0, Math.min(100, value))}%`,
-                    height: "100%",
-                    background: value >= 80 ? "#0f766e" : value >= 70 ? "#b7791f" : "#b42318",
+                    ...card,
+                    borderColor: isDone ? "#7bc7a4" : "#d9e2ee",
+                    background: isDone ? "#f0fbf5" : "#ffffff",
+                    minHeight: 158,
                   }}
-                />
-              </div>
-              <span style={{ color: "#526071", fontSize: 13 }}>{note}</span>
-            </div>
-          ))}
-        </section>
-
-        <section style={section}>
-          <h2 style={{ marginTop: 0 }}>当前短板</h2>
-          <div style={grid}>
-            {profile.currentDiagnosis.weaknesses.map((item) => (
-              <div key={item} style={{ ...metricCard, background: "#fffdf7" }}>
-                {item}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section style={section}>
-          <h2 style={{ marginTop: 0 }}>训练比例</h2>
-          <div style={grid}>
-            <div style={metricCard}>
-              <span>T1 稳定性</span>
-              <strong>{percent(priority.priorityWeights.t1Stability)}</strong>
-            </div>
-            <div style={metricCard}>
-              <span>T2 建模转化</span>
-              <strong>{percent(priority.priorityWeights.t2Modeling)}</strong>
-            </div>
-            <div style={metricCard}>
-              <span>T3 部分分</span>
-              <strong>{percent(priority.priorityWeights.t3PartialScore)}</strong>
-            </div>
-            <div style={metricCard}>
-              <span>T4 模拟赛</span>
-              <strong>{percent(priority.priorityWeights.t4Strategy)}</strong>
-            </div>
-            <div style={metricCard}>
-              <span>旧题复盘</span>
-              <strong>{percent(priority.oldProblemReviewWeight)}</strong>
-            </div>
-            <div style={metricCard}>
-              <span>新题训练</span>
-              <strong>{percent(priority.newProblemWeight)}</strong>
-            </div>
-          </div>
-        </section>
-
-        <section style={section}>
-          <h2 style={{ marginTop: 0 }}>优先模块</h2>
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-            {moduleWeights.map(([name, weight]) => (
-              <span key={name} style={badge}>
-                {name} · {weight}
-              </span>
-            ))}
-          </div>
-        </section>
-
-        <section style={section}>
-          <h2 style={{ marginTop: 0 }}>下一步 7 天计划</h2>
-          <div style={{ display: "grid", gap: 12 }}>
-            {plan.daysPlan.map((day) => (
-              <article key={day.day} style={metricCard}>
-                <div style={{ display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
-                  <div>
-                    <h3 style={{ margin: 0 }}>
-                      Day {day.day}：{day.theme}
-                    </h3>
-                    <p style={{ color: "#526071", marginBottom: 0 }}>{day.why}</p>
+                >
+                  <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}>
+                    <span style={badge}>第 {task.order} 关</span>
+                    <span style={{ ...badge, background: isDone ? "#dff7e9" : "#eef4fa" }}>{isDone ? "已结算" : "待完成"}</span>
                   </div>
-                  <span style={badge}>{day.targetAbility}</span>
-                </div>
-                <div style={{ display: "grid", gap: 8 }}>
-                  {day.tasks.map((task) => (
-                    <div key={task.id} style={{ borderTop: "1px solid #edf1f5", paddingTop: 10 }}>
-                      <strong>
-                        {task.id} · {task.module} · {task.difficulty}
-                      </strong>
-                      <div style={{ color: "#526071", marginTop: 4 }}>选题标准：{task.selectionRule}</div>
-                      <div style={{ color: "#526071", marginTop: 4 }}>训练目标：{task.trainingGoal}</div>
-                      <div style={{ color: "#526071", marginTop: 4 }}>限时：{task.timeLimitMinutes} 分钟</div>
+                  <strong style={{ fontSize: 18 }}>{taskLabel(task.type)}</strong>
+                  <span style={muted}>{ref}</span>
+                  <span>{task.goal}</span>
+                  <span style={muted}>限时 {task.durationMinutes} 分钟</span>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 18 }}>
+          <div style={panel}>
+            <Title>做完后的结算</Title>
+            <div style={{ display: "grid", gap: 12 }}>
+              <div style={card}>
+                <span style={muted}>经验值</span>
+                <strong style={{ fontSize: 28 }}>+{settlement?.today.xpGained ?? 0} XP</strong>
+                <Bar value={xpAfter} max={nextLevelXp} color="#176b65" />
+              </div>
+              <div style={card}>
+                <span style={muted}>目标分推进</span>
+                <strong style={{ fontSize: 26 }}>
+                  {formatNumber(settlement?.today.scoreProxyBefore ?? currentScore)} {"->"} {formatNumber(settlement?.today.scoreProxyAfter ?? currentScore)}
+                </strong>
+                <span style={muted}>如果题目还没录入，这里会保持不变。</span>
+              </div>
+              <div style={card}>
+                <span style={muted}>下一步纠偏</span>
+                <strong>{actionLabel(settlement?.nextAdjustment.action ?? "ADVANCE_OR_TRANSFER")}</strong>
+                <span>{settlement?.nextAdjustment.nextUnitTitle ?? daily.todayGoal}</span>
+              </div>
+            </div>
+          </div>
+
+          <div style={panel}>
+            <Title>能力变化证据</Title>
+            {settlement && settlement.abilityChanges.length > 0 ? (
+              <div style={{ display: "grid", gap: 12 }}>
+                {settlement.abilityChanges.map((item) => (
+                  <article key={item.unitId} style={card}>
+                    <div style={{ display: "flex", justifyContent: "space-between", gap: 10, flexWrap: "wrap" }}>
+                      <strong>{item.title}</strong>
+                      <span style={badge}>{statusLabel(item.beforeStatus)} {"->"} {statusLabel(item.afterStatus)}</span>
                     </div>
-                  ))}
+                    <span>均分 {formatNumber(item.todayScoreAverage)}，风险下降 {formatNumber(item.riskReduced, 2)} 分</span>
+                    <span style={muted}>题目：{item.todayProblems.join(", ")}</span>
+                    <span>{item.message}</span>
+                  </article>
+                ))}
+              </div>
+            ) : (
+              <div style={{ ...card, background: "#fffaf0" }}>
+                <strong>还没有今日做题证据</strong>
+                <span>你做完题并录入后，这里会显示能力是否升级、哪道题证明了升级、还有哪些问题没有解决。</span>
+                <span style={muted}>目前不会假装你已经进步，必须等真实做题结果进来。</span>
+              </div>
+            )}
+          </div>
+        </section>
+
+        <section style={panel}>
+          <Title>目标分拆解</Title>
+          <div style={grid}>
+            {scoreItems.map(([slot, item]) => (
+              <article key={slot} style={card}>
+                <div style={{ display: "flex", justifyContent: "space-between", gap: 10 }}>
+                  <strong style={{ fontSize: 18 }}>{slot.toUpperCase()}</strong>
+                  <span style={badge}>{item.trainingPriority ?? "P?"}</span>
                 </div>
+                <strong style={{ fontSize: 28 }}>{item.currentEstimate} / {item.targetScore}</strong>
+                <Bar value={item.currentEstimate} max={item.targetScore} color={item.gap <= 5 ? "#176b65" : "#b45309"} />
+                <span style={muted}>缺口 {item.gap} 分</span>
+                <span>{item.role}</span>
               </article>
             ))}
           </div>
         </section>
 
-        <section style={section}>
-          <h2 style={{ marginTop: 0 }}>优先复盘旧题</h2>
-          <div style={grid}>
-            {profile.highValueReviewProblems.slice(0, 8).map((problem) => (
-              <div key={problem.problemPid} style={metricCard}>
-                <strong>{problem.problemPid}</strong>
-                <span style={{ color: "#526071" }}>
-                  提交 {problem.attemptCount} 次 · {problem.finalResult} · 最高分 {problem.bestScore ?? "未知"}
-                </span>
-                <span>{problem.reviewReason}</span>
-              </div>
-            ))}
+        <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 18 }}>
+          <div style={panel}>
+            <Title>高风险能力条</Title>
+            <div style={{ display: "grid", gap: 12 }}>
+              {topMastery.map((item) => (
+                <article key={item.unitId} style={card}>
+                  <div style={{ display: "flex", justifyContent: "space-between", gap: 10, flexWrap: "wrap" }}>
+                    <strong>{item.title}</strong>
+                    <span style={badge}>{statusLabel(item.status)}</span>
+                  </div>
+                  <Bar value={item.estimatedLoss} max={15} color={item.estimatedLoss >= 8 ? "#b42318" : "#b45309"} />
+                  <span style={muted}>预计失分风险 {formatNumber(item.estimatedLoss, 2)} 分，已完成 {item.completedTasks} 题</span>
+                  <span>{item.nextAction}</span>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div style={panel}>
+            <Title>通过标准</Title>
+            <div style={{ display: "grid", gap: 10 }}>
+              {daily.passCriteria.map((item, index) => (
+                <div key={item} style={{ display: "grid", gridTemplateColumns: "34px 1fr", gap: 10, alignItems: "start" }}>
+                  <span style={{ ...badge, justifyContent: "center", width: 26, height: 26, padding: 0 }}>{index + 1}</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        <section style={section}>
-          <h2 style={{ marginTop: 0 }}>达标验证</h2>
-          <div style={{ display: "grid", gap: 8 }}>
-            {Object.entries(readiness.criteria).map(([name, item]) => (
-              <div
-                key={name}
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "minmax(180px, 1fr) minmax(160px, 1fr) minmax(160px, 1fr) 80px",
-                  gap: 8,
-                  alignItems: "center",
-                  borderBottom: "1px solid #edf1f5",
-                  padding: "8px 0",
-                }}
-              >
-                <strong>{name}</strong>
-                <span>目标：{formatValue(item.target)}</span>
-                <span>实际：{formatValue(item.actual)}</span>
-                <span style={{ ...badge, justifySelf: "start", background: item.passed ? "#e7f6ee" : "#fff7ed" }}>
-                  {item.passed ? "通过" : "未达"}
-                </span>
-              </div>
-            ))}
+        <section style={panel}>
+          <Title>做完题后页面会怎么变</Title>
+          <div style={grid}>
+            <div style={card}>
+              <strong>1. 任务变成已结算</strong>
+              <span>今日闯关路线里的题目会从“待完成”变成“已结算”。</span>
+            </div>
+            <div style={card}>
+              <strong>2. XP 和等级增长</strong>
+              <span>独立 AC、低提交、低提示会涨得更多；看题解 AC 不会被当成完全掌握。</span>
+            </div>
+            <div style={card}>
+              <strong>3. 目标差距缩小</strong>
+              <span>系统会显示离 {goal.targetScore} 分还差多少，今天缩小了多少。</span>
+            </div>
+            <div style={card}>
+              <strong>4. 明天自动纠偏</strong>
+              <span>如果失败或提示过高，明天会优先重做复盘；如果稳定，就进入变式或真题验证。</span>
+            </div>
           </div>
-          <p style={{ color: "#526071" }}>{readiness.explanation}</p>
         </section>
       </div>
     </main>

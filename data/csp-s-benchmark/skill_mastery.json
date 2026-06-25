@@ -1,0 +1,3488 @@
+{
+  "generatedAt": "2026-06-25T06:50:23.392Z",
+  "items": [
+    {
+      "abilityId": "MATH.RECURRENCE.CORE",
+      "abilityName": "Recurrence core ability",
+      "domainId": "MATH",
+      "moduleId": "MATH.RECURRENCE",
+      "evidenceCount": 1,
+      "positiveEvidenceCount": 0,
+      "negativeEvidenceCount": 1,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 0,
+      "cspPastProblemCount": 1,
+      "blindTestCount": 0,
+      "masteryScore": 0,
+      "masteryLevel": "EXPOSED",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.33,
+      "topEvidence": [
+        {
+          "abilityId": "MATH.RECURRENCE.CORE",
+          "sourceType": "CSP_PAST_PROBLEM",
+          "problemPid": "P5657",
+          "weaknessId": null,
+          "weight": 0.65,
+          "performanceScore": 0,
+          "errorTypes": [
+            "IMPLEMENTATION_RISK",
+            "BOUNDARY_ERROR"
+          ],
+          "note": "slot=T1; result=UNKNOWN; score=0; blind=false"
+        }
+      ]
+    },
+    {
+      "abilityId": "IMPLEMENTATION.MULTITEST_CLEAR",
+      "abilityName": "Multi-test clearing",
+      "domainId": "PROGRAMMING_BASICS",
+      "moduleId": "PROGRAMMING_BASICS.IMPLEMENTATION",
+      "evidenceCount": 0,
+      "positiveEvidenceCount": 0,
+      "negativeEvidenceCount": 0,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 0,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0,
+      "masteryLevel": "NO_EVIDENCE",
+      "evidenceLevel": "NO_EVIDENCE",
+      "confidence": 0,
+      "topEvidence": []
+    },
+    {
+      "abilityId": "IMPLEMENTATION.IO_FORMAT",
+      "abilityName": "Input/output format stability",
+      "domainId": "PROGRAMMING_BASICS",
+      "moduleId": "PROGRAMMING_BASICS.IMPLEMENTATION",
+      "evidenceCount": 0,
+      "positiveEvidenceCount": 0,
+      "negativeEvidenceCount": 0,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 0,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0,
+      "masteryLevel": "NO_EVIDENCE",
+      "evidenceLevel": "NO_EVIDENCE",
+      "confidence": 0,
+      "topEvidence": []
+    },
+    {
+      "abilityId": "IMPLEMENTATION.TEMPLATE_CORRECTNESS",
+      "abilityName": "Template correctness",
+      "domainId": "PROGRAMMING_BASICS",
+      "moduleId": "PROGRAMMING_BASICS.IMPLEMENTATION",
+      "evidenceCount": 0,
+      "positiveEvidenceCount": 0,
+      "negativeEvidenceCount": 0,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 0,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0,
+      "masteryLevel": "NO_EVIDENCE",
+      "evidenceLevel": "NO_EVIDENCE",
+      "confidence": 0,
+      "topEvidence": []
+    },
+    {
+      "abilityId": "MATH.NUMBER_THEORY.CORE",
+      "abilityName": "Number theory core ability",
+      "domainId": "MATH",
+      "moduleId": "MATH.NUMBER_THEORY",
+      "evidenceCount": 0,
+      "positiveEvidenceCount": 0,
+      "negativeEvidenceCount": 0,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 0,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0,
+      "masteryLevel": "NO_EVIDENCE",
+      "evidenceLevel": "NO_EVIDENCE",
+      "confidence": 0,
+      "topEvidence": []
+    },
+    {
+      "abilityId": "MATH.MODULAR.CORE",
+      "abilityName": "Modular arithmetic core ability",
+      "domainId": "MATH",
+      "moduleId": "MATH.MODULAR",
+      "evidenceCount": 0,
+      "positiveEvidenceCount": 0,
+      "negativeEvidenceCount": 0,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 0,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0,
+      "masteryLevel": "NO_EVIDENCE",
+      "evidenceLevel": "NO_EVIDENCE",
+      "confidence": 0,
+      "topEvidence": []
+    },
+    {
+      "abilityId": "MATH.GCD_FACTOR.CORE",
+      "abilityName": "GCD and factorization core ability",
+      "domainId": "MATH",
+      "moduleId": "MATH.GCD_FACTOR",
+      "evidenceCount": 0,
+      "positiveEvidenceCount": 0,
+      "negativeEvidenceCount": 0,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 0,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0,
+      "masteryLevel": "NO_EVIDENCE",
+      "evidenceLevel": "NO_EVIDENCE",
+      "confidence": 0,
+      "topEvidence": []
+    },
+    {
+      "abilityId": "MATH.COUNTING.CORE",
+      "abilityName": "Counting core ability",
+      "domainId": "MATH",
+      "moduleId": "MATH.COUNTING",
+      "evidenceCount": 0,
+      "positiveEvidenceCount": 0,
+      "negativeEvidenceCount": 0,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 0,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0,
+      "masteryLevel": "NO_EVIDENCE",
+      "evidenceLevel": "NO_EVIDENCE",
+      "confidence": 0,
+      "topEvidence": []
+    },
+    {
+      "abilityId": "MATH.CONSTRUCTION.CORE",
+      "abilityName": "Construction core ability",
+      "domainId": "MATH",
+      "moduleId": "MATH.CONSTRUCTION",
+      "evidenceCount": 0,
+      "positiveEvidenceCount": 0,
+      "negativeEvidenceCount": 0,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 0,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0,
+      "masteryLevel": "NO_EVIDENCE",
+      "evidenceLevel": "NO_EVIDENCE",
+      "confidence": 0,
+      "topEvidence": []
+    },
+    {
+      "abilityId": "COMPREHENSIVE.EXAM_STRATEGY.TIME_ALLOCATION",
+      "abilityName": "Contest time allocation and stop-loss",
+      "domainId": "NON_KNOWLEDGE_SKILL",
+      "moduleId": "NON_KNOWLEDGE_SKILL.EXTRA",
+      "evidenceCount": 0,
+      "positiveEvidenceCount": 0,
+      "negativeEvidenceCount": 0,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 0,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0,
+      "masteryLevel": "NO_EVIDENCE",
+      "evidenceLevel": "NO_EVIDENCE",
+      "confidence": 0,
+      "topEvidence": []
+    },
+    {
+      "abilityId": "IMPLEMENTATION.STRESS_TEST",
+      "abilityName": "Brute-force stress testing",
+      "domainId": "NON_KNOWLEDGE_SKILL",
+      "moduleId": "NON_KNOWLEDGE_SKILL.STRESS_TEST",
+      "evidenceCount": 0,
+      "positiveEvidenceCount": 0,
+      "negativeEvidenceCount": 0,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 0,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0,
+      "masteryLevel": "NO_EVIDENCE",
+      "evidenceLevel": "NO_EVIDENCE",
+      "confidence": 0,
+      "topEvidence": []
+    },
+    {
+      "abilityId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+      "abilityName": "Subtask and partial-score decomposition",
+      "domainId": "NON_KNOWLEDGE_SKILL",
+      "moduleId": "NON_KNOWLEDGE_SKILL.EXTRA",
+      "evidenceCount": 84,
+      "positiveEvidenceCount": 0,
+      "negativeEvidenceCount": 69,
+      "weaknessEvidenceCount": 11,
+      "historicalProblemCount": 59,
+      "cspPastProblemCount": 1,
+      "blindTestCount": 0,
+      "masteryScore": 0.12,
+      "masteryLevel": "EXPOSED",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+          "sourceType": "WEAKNESS_CLUSTER",
+          "problemPid": null,
+          "weaknessId": "partial_score_partial_score_missed_19",
+          "weight": 0.475,
+          "performanceScore": 0.2129000000000001,
+          "errorTypes": [
+            "PARTIAL_SCORE_MISSED",
+            "IMPLEMENTATION_RISK",
+            "OVERFLOW_ERROR",
+            "INDEX_ERROR"
+          ],
+          "note": "severity=78.71; evidenceProblems=P10135,P1273,T23806,P7413,P1781,P1255,U615694,B3845"
+        },
+        {
+          "abilityId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P3685",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.22,
+          "errorTypes": [
+            "INIT_ERROR",
+            "COMPLEXITY_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK",
+            "PARTIAL_SCORE_MISSED"
+          ],
+          "note": "PARTIAL_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P7413",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.22,
+          "errorTypes": [
+            "PARTIAL_SCORE_MISSED",
+            "STRATEGY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "PARTIAL_STUCK; attempts=5; roles=T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "T699486",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.22,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "RECURSION_STACK_RISK",
+            "PARTIAL_SCORE_MISSED"
+          ],
+          "note": "PARTIAL_STUCK; attempts=2; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "T717044",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.22,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "BOUNDARY_ERROR",
+            "COMPLEXITY_ERROR",
+            "RECURSION_STACK_RISK",
+            "PARTIAL_SCORE_MISSED"
+          ],
+          "note": "PARTIAL_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P7859",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.22,
+          "errorTypes": [
+            "UNKNOWN",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK",
+            "PARTIAL_SCORE_MISSED"
+          ],
+          "note": "PARTIAL_STUCK; attempts=2; roles=T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P3431",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.22,
+          "errorTypes": [
+            "INDEX_ERROR",
+            "BOUNDARY_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK",
+            "PARTIAL_SCORE_MISSED"
+          ],
+          "note": "PARTIAL_STUCK; attempts=1; roles=T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P10135",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.22,
+          "errorTypes": [
+            "PARTIAL_SCORE_MISSED",
+            "STRATEGY_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "PARTIAL_STUCK; attempts=16; roles=T3_PARTIAL_SCORE/T4_STRATEGY"
+        }
+      ]
+    },
+    {
+      "abilityId": "MATH.COMBINATORICS.CORE",
+      "abilityName": "Combinatorics core ability",
+      "domainId": "MATH",
+      "moduleId": "MATH.COMBINATORICS",
+      "evidenceCount": 2,
+      "positiveEvidenceCount": 0,
+      "negativeEvidenceCount": 2,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 0,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0.35,
+      "masteryLevel": "UNSTABLE",
+      "evidenceLevel": "WEAK",
+      "confidence": 0.4,
+      "topEvidence": [
+        {
+          "abilityId": "MATH.COMBINATORICS.CORE",
+          "sourceType": "RULE_INFERENCE",
+          "problemPid": "P5664",
+          "weaknessId": null,
+          "weight": 0.1,
+          "performanceScore": 0.35,
+          "errorTypes": [],
+          "note": "CSP-S past problem has no student record yet; use as validation gap."
+        },
+        {
+          "abilityId": "MATH.COMBINATORICS.CORE",
+          "sourceType": "RULE_INFERENCE",
+          "problemPid": "P14364",
+          "weaknessId": null,
+          "weight": 0.1,
+          "performanceScore": 0.35,
+          "errorTypes": [],
+          "note": "CSP-S past problem has no student record yet; use as validation gap."
+        }
+      ]
+    },
+    {
+      "abilityId": "PROGRAMMING_BASICS.READING.CONSTRAINT_EXTRACTION",
+      "abilityName": "Extract objective, constraints and hidden cases",
+      "domainId": "PROGRAMMING_BASICS",
+      "moduleId": "PROGRAMMING_BASICS.READING",
+      "evidenceCount": 1,
+      "positiveEvidenceCount": 0,
+      "negativeEvidenceCount": 1,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 0,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0.35,
+      "masteryLevel": "UNSTABLE",
+      "evidenceLevel": "WEAK",
+      "confidence": 0.25,
+      "topEvidence": [
+        {
+          "abilityId": "PROGRAMMING_BASICS.READING.CONSTRAINT_EXTRACTION",
+          "sourceType": "RULE_INFERENCE",
+          "problemPid": "P9754",
+          "weaknessId": null,
+          "weight": 0.1,
+          "performanceScore": 0.35,
+          "errorTypes": [],
+          "note": "CSP-S past problem has no student record yet; use as validation gap."
+        }
+      ]
+    },
+    {
+      "abilityId": "MATH.PERIODICITY.CORE",
+      "abilityName": "Periodicity core ability",
+      "domainId": "MATH",
+      "moduleId": "MATH.PERIODICITY",
+      "evidenceCount": 1,
+      "positiveEvidenceCount": 0,
+      "negativeEvidenceCount": 1,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 0,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0.35,
+      "masteryLevel": "UNSTABLE",
+      "evidenceLevel": "WEAK",
+      "confidence": 0.25,
+      "topEvidence": [
+        {
+          "abilityId": "MATH.PERIODICITY.CORE",
+          "sourceType": "RULE_INFERENCE",
+          "problemPid": "P7075",
+          "weaknessId": null,
+          "weight": 0.1,
+          "performanceScore": 0.35,
+          "errorTypes": [],
+          "note": "CSP-S past problem has no student record yet; use as validation gap."
+        }
+      ]
+    },
+    {
+      "abilityId": "IMPLEMENTATION.INDEX_BOUNDARY",
+      "abilityName": "Index and boundary safety",
+      "domainId": "PROGRAMMING_BASICS",
+      "moduleId": "PROGRAMMING_BASICS.IMPLEMENTATION",
+      "evidenceCount": 670,
+      "positiveEvidenceCount": 421,
+      "negativeEvidenceCount": 163,
+      "weaknessEvidenceCount": 16,
+      "historicalProblemCount": 650,
+      "cspPastProblemCount": 1,
+      "blindTestCount": 0,
+      "masteryScore": 0.38,
+      "masteryLevel": "UNSTABLE",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "IMPLEMENTATION.INDEX_BOUNDARY",
+          "sourceType": "CSP_PAST_PROBLEM",
+          "problemPid": "P11232",
+          "weaknessId": null,
+          "weight": 0.65,
+          "performanceScore": 0,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "slot=T2; result=UNKNOWN; score=0; blind=false"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INDEX_BOUNDARY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P10156",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "IMPLEMENTATION_RISK",
+            "BOUNDARY_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INDEX_BOUNDARY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P15945",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "COMPLEXITY_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INDEX_BOUNDARY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2886",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "IMPLEMENTATION_RISK",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "INIT_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INDEX_BOUNDARY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U656632",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=3; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INDEX_BOUNDARY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U519362",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=24; roles=T1_STABILITY/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INDEX_BOUNDARY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P7518",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "IMPLEMENTATION_RISK",
+            "BOUNDARY_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INDEX_BOUNDARY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1676",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        }
+      ]
+    },
+    {
+      "abilityId": "DP.STATE_COMPRESSION.MASK_DESIGN",
+      "abilityName": "Mask meaning, transition and pruning",
+      "domainId": "DP",
+      "moduleId": "DP.STATE_COMPRESSION",
+      "evidenceCount": 10,
+      "positiveEvidenceCount": 2,
+      "negativeEvidenceCount": 5,
+      "weaknessEvidenceCount": 1,
+      "historicalProblemCount": 9,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0.46,
+      "masteryLevel": "BASIC",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.86,
+      "topEvidence": [
+        {
+          "abilityId": "DP.STATE_COMPRESSION.MASK_DESIGN",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P11827",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "UNKNOWN",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=3; roles=T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DP.STATE_COMPRESSION.MASK_DESIGN",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "CF1927C",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.18,
+          "errorTypes": [
+            "UNKNOWN",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "UNKNOWN_PATTERN; attempts=8; roles=T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "DP.STATE_COMPRESSION.MASK_DESIGN",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P7859",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.22,
+          "errorTypes": [
+            "UNKNOWN",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK",
+            "PARTIAL_SCORE_MISSED"
+          ],
+          "note": "PARTIAL_STUCK; attempts=2; roles=T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DP.STATE_COMPRESSION.MASK_DESIGN",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P11860",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.22,
+          "errorTypes": [
+            "UNKNOWN",
+            "RECURSION_STACK_RISK",
+            "PARTIAL_SCORE_MISSED"
+          ],
+          "note": "PARTIAL_STUCK; attempts=5; roles=T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "DP.STATE_COMPRESSION.MASK_DESIGN",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P11475",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.22,
+          "errorTypes": [
+            "UNKNOWN",
+            "PARTIAL_SCORE_MISSED"
+          ],
+          "note": "PARTIAL_STUCK; attempts=1; roles=T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DP.STATE_COMPRESSION.MASK_DESIGN",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P5461",
+          "weaknessId": null,
+          "weight": 0.35,
+          "performanceScore": 0.45,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "PARTIAL_TO_AC; attempts=9; roles=T1_STABILITY/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "DP.STATE_COMPRESSION.MASK_DESIGN",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P6691",
+          "weaknessId": null,
+          "weight": 0.35,
+          "performanceScore": 0.45,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "INDEX_ERROR",
+            "INIT_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "PARTIAL_TO_AC; attempts=17; roles=T1_STABILITY/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "DP.STATE_COMPRESSION.MASK_DESIGN",
+          "sourceType": "WEAKNESS_CLUSTER",
+          "problemPid": null,
+          "weaknessId": "state_compression_dp_partial_score_missed_21",
+          "weight": 0.2875,
+          "performanceScore": 0.5696,
+          "errorTypes": [
+            "PARTIAL_SCORE_MISSED",
+            "STATE_ERROR",
+            "IMPLEMENTATION_RISK"
+          ],
+          "note": "severity=43.04; evidenceProblems=P11860,P7859,P11475"
+        }
+      ]
+    },
+    {
+      "abilityId": "IMPLEMENTATION.INITIALIZATION",
+      "abilityName": "Initialization and reset",
+      "domainId": "PROGRAMMING_BASICS",
+      "moduleId": "PROGRAMMING_BASICS.IMPLEMENTATION",
+      "evidenceCount": 142,
+      "positiveEvidenceCount": 83,
+      "negativeEvidenceCount": 34,
+      "weaknessEvidenceCount": 7,
+      "historicalProblemCount": 135,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0.47,
+      "masteryLevel": "BASIC",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "IMPLEMENTATION.INITIALIZATION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2886",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "IMPLEMENTATION_RISK",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "INIT_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INITIALIZATION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2379",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INITIALIZATION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1342",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INITIALIZATION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1144",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "INIT_ERROR",
+            "COMPLEXITY_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INITIALIZATION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1919",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=14; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INITIALIZATION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P5331",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "INDEX_ERROR",
+            "INIT_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INITIALIZATION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P4118",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=5; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INITIALIZATION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U257605",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        }
+      ]
+    },
+    {
+      "abilityId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+      "abilityName": "Integer overflow and range estimate",
+      "domainId": "PROGRAMMING_BASICS",
+      "moduleId": "PROGRAMMING_BASICS.IMPLEMENTATION",
+      "evidenceCount": 459,
+      "positiveEvidenceCount": 256,
+      "negativeEvidenceCount": 129,
+      "weaknessEvidenceCount": 5,
+      "historicalProblemCount": 452,
+      "cspPastProblemCount": 1,
+      "blindTestCount": 0,
+      "masteryScore": 0.5,
+      "masteryLevel": "BASIC",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+          "sourceType": "CSP_PAST_PROBLEM",
+          "problemPid": "P5657",
+          "weaknessId": null,
+          "weight": 0.65,
+          "performanceScore": 0,
+          "errorTypes": [
+            "IMPLEMENTATION_RISK",
+            "BOUNDARY_ERROR"
+          ],
+          "note": "slot=T1; result=UNKNOWN; score=0; blind=false"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P10156",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "IMPLEMENTATION_RISK",
+            "BOUNDARY_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U656632",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=3; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U519362",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=24; roles=T1_STABILITY/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P7518",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "IMPLEMENTATION_RISK",
+            "BOUNDARY_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2343",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2063",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=3; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2379",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        }
+      ]
+    },
+    {
+      "abilityId": "GRAPH.SHORTEST_PATH.STATE_AND_INIT",
+      "abilityName": "Shortest-path state and initialization",
+      "domainId": "GRAPH",
+      "moduleId": "GRAPH.SHORTEST_PATH",
+      "evidenceCount": 15,
+      "positiveEvidenceCount": 6,
+      "negativeEvidenceCount": 6,
+      "weaknessEvidenceCount": 1,
+      "historicalProblemCount": 14,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0.5,
+      "masteryLevel": "BASIC",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "GRAPH.SHORTEST_PATH.STATE_AND_INIT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1144",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "INIT_ERROR",
+            "COMPLEXITY_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "GRAPH.SHORTEST_PATH.STATE_AND_INIT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P5331",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "INDEX_ERROR",
+            "INIT_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "GRAPH.SHORTEST_PATH.STATE_AND_INIT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P3685",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.22,
+          "errorTypes": [
+            "INIT_ERROR",
+            "COMPLEXITY_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK",
+            "PARTIAL_SCORE_MISSED"
+          ],
+          "note": "PARTIAL_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "GRAPH.SHORTEST_PATH.STATE_AND_INIT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1713",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.22,
+          "errorTypes": [
+            "INIT_ERROR",
+            "COMPLEXITY_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "PARTIAL_STUCK; attempts=2; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "GRAPH.SHORTEST_PATH.STATE_AND_INIT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P11860",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.22,
+          "errorTypes": [
+            "UNKNOWN",
+            "RECURSION_STACK_RISK",
+            "PARTIAL_SCORE_MISSED"
+          ],
+          "note": "PARTIAL_STUCK; attempts=5; roles=T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "GRAPH.SHORTEST_PATH.STATE_AND_INIT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2452",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.22,
+          "errorTypes": [
+            "INIT_ERROR",
+            "COMPLEXITY_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK",
+            "PARTIAL_SCORE_MISSED"
+          ],
+          "note": "PARTIAL_STUCK; attempts=11; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "GRAPH.SHORTEST_PATH.STATE_AND_INIT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P4779",
+          "weaknessId": null,
+          "weight": 0.35,
+          "performanceScore": 0.45,
+          "errorTypes": [
+            "INIT_ERROR",
+            "COMPLEXITY_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "PARTIAL_TO_AC; attempts=8; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "GRAPH.SHORTEST_PATH.STATE_AND_INIT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P3371",
+          "weaknessId": null,
+          "weight": 0.35,
+          "performanceScore": 0.45,
+          "errorTypes": [
+            "INIT_ERROR",
+            "COMPLEXITY_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "PARTIAL_TO_AC; attempts=9; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        }
+      ]
+    },
+    {
+      "abilityId": "IMPLEMENTATION.DEBUG_TIMEOUT",
+      "abilityName": "Debugging time control",
+      "domainId": "PROGRAMMING_BASICS",
+      "moduleId": "PROGRAMMING_BASICS.IMPLEMENTATION",
+      "evidenceCount": 108,
+      "positiveEvidenceCount": 46,
+      "negativeEvidenceCount": 39,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 108,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0.52,
+      "masteryLevel": "BASIC",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "IMPLEMENTATION.DEBUG_TIMEOUT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U519362",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=24; roles=T1_STABILITY/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.DEBUG_TIMEOUT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2063",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=3; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.DEBUG_TIMEOUT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P7910",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.DEBUG_TIMEOUT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P11232",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.DEBUG_TIMEOUT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U615693",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=8; roles=T1_STABILITY/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.DEBUG_TIMEOUT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2672",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "INDEX_ERROR",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.DEBUG_TIMEOUT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "T568846",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.DEBUG_TIMEOUT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1198",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=3; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        }
+      ]
+    },
+    {
+      "abilityId": "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+      "abilityName": "Range data-structure template and boundary",
+      "domainId": "DATA_STRUCTURE",
+      "moduleId": "DATA_STRUCTURE.RANGE_QUERY",
+      "evidenceCount": 20,
+      "positiveEvidenceCount": 6,
+      "negativeEvidenceCount": 10,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 14,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0.53,
+      "masteryLevel": "BASIC",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P4118",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=5; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "CF409H",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.18,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR"
+          ],
+          "note": "UNKNOWN_PATTERN; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P3431",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.22,
+          "errorTypes": [
+            "INDEX_ERROR",
+            "BOUNDARY_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK",
+            "PARTIAL_SCORE_MISSED"
+          ],
+          "note": "PARTIAL_STUCK; attempts=1; roles=T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P3987",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.22,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "PARTIAL_STUCK; attempts=10; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+          "sourceType": "RULE_INFERENCE",
+          "problemPid": "P5658",
+          "weaknessId": null,
+          "weight": 0.1,
+          "performanceScore": 0.35,
+          "errorTypes": [],
+          "note": "CSP-S past problem has no student record yet; use as validation gap."
+        },
+        {
+          "abilityId": "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+          "sourceType": "RULE_INFERENCE",
+          "problemPid": "P7078",
+          "weaknessId": null,
+          "weight": 0.1,
+          "performanceScore": 0.35,
+          "errorTypes": [],
+          "note": "CSP-S past problem has no student record yet; use as validation gap."
+        },
+        {
+          "abilityId": "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+          "sourceType": "RULE_INFERENCE",
+          "problemPid": "P8818",
+          "weaknessId": null,
+          "weight": 0.1,
+          "performanceScore": 0.35,
+          "errorTypes": [],
+          "note": "CSP-S past problem has no student record yet; use as validation gap."
+        },
+        {
+          "abilityId": "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+          "sourceType": "RULE_INFERENCE",
+          "problemPid": "P8820",
+          "weaknessId": null,
+          "weight": 0.1,
+          "performanceScore": 0.35,
+          "errorTypes": [],
+          "note": "CSP-S past problem has no student record yet; use as validation gap."
+        }
+      ]
+    },
+    {
+      "abilityId": "GRAPH.MODELING.GRAPH_ABSTRACTION",
+      "abilityName": "Turn problem relation into graph states and edges",
+      "domainId": "GRAPH",
+      "moduleId": "GRAPH.MODELING",
+      "evidenceCount": 146,
+      "positiveEvidenceCount": 70,
+      "negativeEvidenceCount": 52,
+      "weaknessEvidenceCount": 2,
+      "historicalProblemCount": 138,
+      "cspPastProblemCount": 2,
+      "blindTestCount": 0,
+      "masteryScore": 0.54,
+      "masteryLevel": "BASIC",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "GRAPH.MODELING.GRAPH_ABSTRACTION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P15945",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "COMPLEXITY_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "GRAPH.MODELING.GRAPH_ABSTRACTION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1144",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "INIT_ERROR",
+            "COMPLEXITY_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "GRAPH.MODELING.GRAPH_ABSTRACTION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P5331",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "INDEX_ERROR",
+            "INIT_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "GRAPH.MODELING.GRAPH_ABSTRACTION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P12734",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "COMPLEXITY_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "GRAPH.MODELING.GRAPH_ABSTRACTION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P11859",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "COMPLEXITY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "GRAPH.MODELING.GRAPH_ABSTRACTION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P11855",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "GRAPH.MODELING.GRAPH_ABSTRACTION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P11840",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "COMPLEXITY_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "GRAPH.MODELING.GRAPH_ABSTRACTION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P11827",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "UNKNOWN",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=3; roles=T3_PARTIAL_SCORE"
+        }
+      ]
+    },
+    {
+      "abilityId": "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY",
+      "abilityName": "Prove check monotonicity and boundary",
+      "domainId": "BASIC_ALGORITHM",
+      "moduleId": "BASIC_ALGORITHM.BINARY_SEARCH",
+      "evidenceCount": 62,
+      "positiveEvidenceCount": 27,
+      "negativeEvidenceCount": 19,
+      "weaknessEvidenceCount": 2,
+      "historicalProblemCount": 57,
+      "cspPastProblemCount": 1,
+      "blindTestCount": 0,
+      "masteryScore": 0.54,
+      "masteryLevel": "BASIC",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY",
+          "sourceType": "CSP_PAST_PROBLEM",
+          "problemPid": "P11232",
+          "weaknessId": null,
+          "weight": 0.65,
+          "performanceScore": 0,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "slot=T2; result=UNKNOWN; score=0; blind=false"
+        },
+        {
+          "abilityId": "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P5331",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "INDEX_ERROR",
+            "INIT_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P4118",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=5; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P11855",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P11791",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "BOUNDARY_ERROR",
+            "COMPLEXITY_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1756",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "BOUNDARY_ERROR",
+            "COMPLEXITY_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=4; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1020",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.18,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "BOUNDARY_ERROR",
+            "COMPLEXITY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "UNKNOWN_PATTERN; attempts=4; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P16181",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.18,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "BOUNDARY_ERROR",
+            "COMPLEXITY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "UNKNOWN_PATTERN; attempts=3; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        }
+      ]
+    },
+    {
+      "abilityId": "MATH.FORMULA_DERIVATION.CORE",
+      "abilityName": "Formula derivation core ability",
+      "domainId": "MATH",
+      "moduleId": "MATH.FORMULA_DERIVATION",
+      "evidenceCount": 62,
+      "positiveEvidenceCount": 37,
+      "negativeEvidenceCount": 20,
+      "weaknessEvidenceCount": 2,
+      "historicalProblemCount": 59,
+      "cspPastProblemCount": 1,
+      "blindTestCount": 0,
+      "masteryScore": 0.54,
+      "masteryLevel": "BASIC",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "MATH.FORMULA_DERIVATION.CORE",
+          "sourceType": "CSP_PAST_PROBLEM",
+          "problemPid": "P11232",
+          "weaknessId": null,
+          "weight": 0.65,
+          "performanceScore": 0,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "slot=T2; result=UNKNOWN; score=0; blind=false"
+        },
+        {
+          "abilityId": "MATH.FORMULA_DERIVATION.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1676",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "MATH.FORMULA_DERIVATION.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P4118",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=5; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "MATH.FORMULA_DERIVATION.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U257605",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "MATH.FORMULA_DERIVATION.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P10573",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "MATH.FORMULA_DERIVATION.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P10574",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "MATH.FORMULA_DERIVATION.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "T461430",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "COMPLEXITY_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "MATH.FORMULA_DERIVATION.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P10511",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        }
+      ]
+    },
+    {
+      "abilityId": "DP.INTERVAL.RECOGNIZE_STRUCTURE",
+      "abilityName": "Recognize interval substructure",
+      "domainId": "DP",
+      "moduleId": "DP.INTERVAL",
+      "evidenceCount": 82,
+      "positiveEvidenceCount": 44,
+      "negativeEvidenceCount": 22,
+      "weaknessEvidenceCount": 1,
+      "historicalProblemCount": 79,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0.55,
+      "masteryLevel": "BASIC",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "DP.INTERVAL.RECOGNIZE_STRUCTURE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2379",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DP.INTERVAL.RECOGNIZE_STRUCTURE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1342",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DP.INTERVAL.RECOGNIZE_STRUCTURE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1919",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=14; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "DP.INTERVAL.RECOGNIZE_STRUCTURE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P5331",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "INDEX_ERROR",
+            "INIT_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DP.INTERVAL.RECOGNIZE_STRUCTURE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P4118",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=5; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "DP.INTERVAL.RECOGNIZE_STRUCTURE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U257605",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DP.INTERVAL.RECOGNIZE_STRUCTURE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P10571",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=9; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "DP.INTERVAL.RECOGNIZE_STRUCTURE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P10511",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        }
+      ]
+    },
+    {
+      "abilityId": "DP.INTERVAL.INIT_AND_ORDER",
+      "abilityName": "Initialization and length-order enumeration",
+      "domainId": "DP",
+      "moduleId": "DP.INTERVAL",
+      "evidenceCount": 81,
+      "positiveEvidenceCount": 44,
+      "negativeEvidenceCount": 21,
+      "weaknessEvidenceCount": 1,
+      "historicalProblemCount": 79,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0.55,
+      "masteryLevel": "BASIC",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "DP.INTERVAL.INIT_AND_ORDER",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2379",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DP.INTERVAL.INIT_AND_ORDER",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1342",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DP.INTERVAL.INIT_AND_ORDER",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1919",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=14; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "DP.INTERVAL.INIT_AND_ORDER",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P5331",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "INDEX_ERROR",
+            "INIT_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DP.INTERVAL.INIT_AND_ORDER",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P4118",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=5; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "DP.INTERVAL.INIT_AND_ORDER",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U257605",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DP.INTERVAL.INIT_AND_ORDER",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P10571",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=9; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "DP.INTERVAL.INIT_AND_ORDER",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P10511",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        }
+      ]
+    },
+    {
+      "abilityId": "DATA_STRUCTURE.DSU.SET_MEANING",
+      "abilityName": "Define set meaning and merge condition",
+      "domainId": "DATA_STRUCTURE",
+      "moduleId": "DATA_STRUCTURE.DSU",
+      "evidenceCount": 38,
+      "positiveEvidenceCount": 20,
+      "negativeEvidenceCount": 7,
+      "weaknessEvidenceCount": 2,
+      "historicalProblemCount": 35,
+      "cspPastProblemCount": 1,
+      "blindTestCount": 0,
+      "masteryScore": 0.55,
+      "masteryLevel": "BASIC",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "DATA_STRUCTURE.DSU.SET_MEANING",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P11855",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DATA_STRUCTURE.DSU.SET_MEANING",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P10573",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DATA_STRUCTURE.DSU.SET_MEANING",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P10574",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DATA_STRUCTURE.DSU.SET_MEANING",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P10517",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DATA_STRUCTURE.DSU.SET_MEANING",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P5659",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.22,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK",
+            "PARTIAL_SCORE_MISSED"
+          ],
+          "note": "PARTIAL_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DATA_STRUCTURE.DSU.SET_MEANING",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P6121",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.22,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK",
+            "PARTIAL_SCORE_MISSED"
+          ],
+          "note": "PARTIAL_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DATA_STRUCTURE.DSU.SET_MEANING",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P3144",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.22,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK",
+            "PARTIAL_SCORE_MISSED"
+          ],
+          "note": "PARTIAL_STUCK; attempts=3; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DATA_STRUCTURE.DSU.SET_MEANING",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1955",
+          "weaknessId": null,
+          "weight": 0.35,
+          "performanceScore": 0.45,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "PARTIAL_TO_AC; attempts=19; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        }
+      ]
+    },
+    {
+      "abilityId": "MATH.MODEL_TO_DP.CORE",
+      "abilityName": "Math model to DP core ability",
+      "domainId": "MATH",
+      "moduleId": "MATH.MODEL_TO_DP",
+      "evidenceCount": 242,
+      "positiveEvidenceCount": 136,
+      "negativeEvidenceCount": 70,
+      "weaknessEvidenceCount": 2,
+      "historicalProblemCount": 240,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0.56,
+      "masteryLevel": "BASIC",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "MATH.MODEL_TO_DP.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U656632",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=3; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "MATH.MODEL_TO_DP.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U519362",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=24; roles=T1_STABILITY/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "MATH.MODEL_TO_DP.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2343",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "MATH.MODEL_TO_DP.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2063",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=3; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "MATH.MODEL_TO_DP.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1676",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "MATH.MODEL_TO_DP.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P7910",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "MATH.MODEL_TO_DP.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P11232",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "MATH.MODEL_TO_DP.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P5331",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "INDEX_ERROR",
+            "INIT_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        }
+      ]
+    },
+    {
+      "abilityId": "STRING.PATTERN.BOUNDARY",
+      "abilityName": "String boundary and pattern model",
+      "domainId": "STRING",
+      "moduleId": "STRING.PATTERN",
+      "evidenceCount": 194,
+      "positiveEvidenceCount": 109,
+      "negativeEvidenceCount": 62,
+      "weaknessEvidenceCount": 2,
+      "historicalProblemCount": 187,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0.56,
+      "masteryLevel": "BASIC",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "STRING.PATTERN.BOUNDARY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U656632",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=3; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "STRING.PATTERN.BOUNDARY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U519362",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=24; roles=T1_STABILITY/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "STRING.PATTERN.BOUNDARY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2063",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=3; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "STRING.PATTERN.BOUNDARY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1676",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "STRING.PATTERN.BOUNDARY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2379",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "STRING.PATTERN.BOUNDARY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1919",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=14; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "STRING.PATTERN.BOUNDARY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U615693",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=8; roles=T1_STABILITY/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "STRING.PATTERN.BOUNDARY",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P4342",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=5; roles=T1_STABILITY/T3_PARTIAL_SCORE/T4_STRATEGY"
+        }
+      ]
+    },
+    {
+      "abilityId": "MATH.OVERFLOW_RANGE.CORE",
+      "abilityName": "Overflow and range core ability",
+      "domainId": "MATH",
+      "moduleId": "MATH.OVERFLOW_RANGE",
+      "evidenceCount": 255,
+      "positiveEvidenceCount": 143,
+      "negativeEvidenceCount": 71,
+      "weaknessEvidenceCount": 1,
+      "historicalProblemCount": 253,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0.57,
+      "masteryLevel": "BASIC",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "MATH.OVERFLOW_RANGE.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U656632",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=3; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "MATH.OVERFLOW_RANGE.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U519362",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=24; roles=T1_STABILITY/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "MATH.OVERFLOW_RANGE.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2343",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "MATH.OVERFLOW_RANGE.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2063",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=3; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "MATH.OVERFLOW_RANGE.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P7910",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "MATH.OVERFLOW_RANGE.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P11232",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "MATH.OVERFLOW_RANGE.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1919",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=14; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "MATH.OVERFLOW_RANGE.CORE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P5331",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "INDEX_ERROR",
+            "INIT_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        }
+      ]
+    },
+    {
+      "abilityId": "DP.GENERAL.STATE_TRANSITION",
+      "abilityName": "State, transition, init and order",
+      "domainId": "DP",
+      "moduleId": "DP.GENERAL",
+      "evidenceCount": 116,
+      "positiveEvidenceCount": 68,
+      "negativeEvidenceCount": 34,
+      "weaknessEvidenceCount": 1,
+      "historicalProblemCount": 108,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0.57,
+      "masteryLevel": "BASIC",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "DP.GENERAL.STATE_TRANSITION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2379",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DP.GENERAL.STATE_TRANSITION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1342",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DP.GENERAL.STATE_TRANSITION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1198",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=3; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DP.GENERAL.STATE_TRANSITION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P4342",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=5; roles=T1_STABILITY/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "DP.GENERAL.STATE_TRANSITION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U257605",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DP.GENERAL.STATE_TRANSITION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U244733",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "COMPLEXITY_ERROR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "DP.GENERAL.STATE_TRANSITION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P10571",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=9; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "DP.GENERAL.STATE_TRANSITION",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U643929",
+          "weaknessId": null,
+          "weight": 0.3,
+          "performanceScore": 0.18,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "COMPLEXITY_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "UNKNOWN_PATTERN; attempts=10; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        }
+      ]
+    },
+    {
+      "abilityId": "IMPLEMENTATION.RECURSION_STACK",
+      "abilityName": "Recursion depth and stack safety",
+      "domainId": "PROGRAMMING_BASICS",
+      "moduleId": "PROGRAMMING_BASICS.IMPLEMENTATION",
+      "evidenceCount": 516,
+      "positiveEvidenceCount": 296,
+      "negativeEvidenceCount": 150,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 516,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0.59,
+      "masteryLevel": "BASIC",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "IMPLEMENTATION.RECURSION_STACK",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P15945",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "COMPLEXITY_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.RECURSION_STACK",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U656632",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=3; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.RECURSION_STACK",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U519362",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=24; roles=T1_STABILITY/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.RECURSION_STACK",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2343",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.RECURSION_STACK",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2063",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=3; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.RECURSION_STACK",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1676",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.RECURSION_STACK",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1144",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "INIT_ERROR",
+            "COMPLEXITY_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "IMPLEMENTATION.RECURSION_STACK",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P7910",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        }
+      ]
+    },
+    {
+      "abilityId": "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+      "abilityName": "Exchange argument and counterexample search",
+      "domainId": "GREEDY",
+      "moduleId": "GREEDY.PROOF",
+      "evidenceCount": 111,
+      "positiveEvidenceCount": 68,
+      "negativeEvidenceCount": 31,
+      "weaknessEvidenceCount": 2,
+      "historicalProblemCount": 98,
+      "cspPastProblemCount": 4,
+      "blindTestCount": 0,
+      "masteryScore": 0.6,
+      "masteryLevel": "TRANSFERABLE",
+      "evidenceLevel": "STRONG",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "U656632",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=3; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2063",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=3; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P5331",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "INDEX_ERROR",
+            "INIT_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P2672",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "INDEX_ERROR",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P4118",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "STATE_ERROR",
+            "TRANSITION_ERROR",
+            "INIT_ERROR",
+            "BOUNDARY_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=5; roles=T2_MODELING/T3_PARTIAL_SCORE/T4_STRATEGY"
+        },
+        {
+          "abilityId": "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P11855",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P11827",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "UNKNOWN",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=3; roles=T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1756",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "BOUNDARY_ERROR",
+            "COMPLEXITY_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=4; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        }
+      ]
+    },
+    {
+      "abilityId": "SEARCH.DFS_BFS.PRUNING_AND_STATE",
+      "abilityName": "Search state and pruning",
+      "domainId": "SEARCH",
+      "moduleId": "SEARCH.DFS_BFS",
+      "evidenceCount": 95,
+      "positiveEvidenceCount": 56,
+      "negativeEvidenceCount": 23,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 94,
+      "cspPastProblemCount": 0,
+      "blindTestCount": 0,
+      "masteryScore": 0.62,
+      "masteryLevel": "TRANSFERABLE",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.95,
+      "topEvidence": [
+        {
+          "abilityId": "SEARCH.DFS_BFS.PRUNING_AND_STATE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1144",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "INIT_ERROR",
+            "COMPLEXITY_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "SEARCH.DFS_BFS.PRUNING_AND_STATE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P5331",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "INDEX_ERROR",
+            "INIT_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T1_STABILITY/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "SEARCH.DFS_BFS.PRUNING_AND_STATE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P12734",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "COMPLEXITY_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "SEARCH.DFS_BFS.PRUNING_AND_STATE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P11855",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "SEARCH.DFS_BFS.PRUNING_AND_STATE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P1215",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "UNKNOWN",
+            "OVERFLOW_ERROR",
+            "RECURSION_STACK_RISK",
+            "DEBUG_TIMEOUT"
+          ],
+          "note": "ZERO_STUCK; attempts=2; roles=T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "SEARCH.DFS_BFS.PRUNING_AND_STATE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P10573",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "SEARCH.DFS_BFS.PRUNING_AND_STATE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P10574",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "TEMPLATE_UNFAMILIAR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        },
+        {
+          "abilityId": "SEARCH.DFS_BFS.PRUNING_AND_STATE",
+          "sourceType": "HISTORICAL_LUOGU",
+          "problemPid": "P10572",
+          "weaknessId": null,
+          "weight": 0.25,
+          "performanceScore": 0.08,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "COMPLEXITY_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "ZERO_STUCK; attempts=1; roles=T2_MODELING/T3_PARTIAL_SCORE"
+        }
+      ]
+    },
+    {
+      "abilityId": "BASIC_ALGORITHM.SIMULATION_ENUMERATION.CASE_SPLIT",
+      "abilityName": "Correct case split and enumeration",
+      "domainId": "BASIC_ALGORITHM",
+      "moduleId": "BASIC_ALGORITHM.SIMULATION_ENUMERATION",
+      "evidenceCount": 3,
+      "positiveEvidenceCount": 1,
+      "negativeEvidenceCount": 2,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 0,
+      "cspPastProblemCount": 1,
+      "blindTestCount": 0,
+      "masteryScore": 0.85,
+      "masteryLevel": "CONTEST_STABLE",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.58,
+      "topEvidence": [
+        {
+          "abilityId": "BASIC_ALGORITHM.SIMULATION_ENUMERATION.CASE_SPLIT",
+          "sourceType": "RULE_INFERENCE",
+          "problemPid": "P7913",
+          "weaknessId": null,
+          "weight": 0.1,
+          "performanceScore": 0.35,
+          "errorTypes": [],
+          "note": "CSP-S past problem has no student record yet; use as validation gap."
+        },
+        {
+          "abilityId": "BASIC_ALGORITHM.SIMULATION_ENUMERATION.CASE_SPLIT",
+          "sourceType": "RULE_INFERENCE",
+          "problemPid": "P9752",
+          "weaknessId": null,
+          "weight": 0.1,
+          "performanceScore": 0.35,
+          "errorTypes": [],
+          "note": "CSP-S past problem has no student record yet; use as validation gap."
+        },
+        {
+          "abilityId": "BASIC_ALGORITHM.SIMULATION_ENUMERATION.CASE_SPLIT",
+          "sourceType": "CSP_PAST_PROBLEM",
+          "problemPid": "P14361",
+          "weaknessId": null,
+          "weight": 0.65,
+          "performanceScore": 1,
+          "errorTypes": [
+            "MODEL_ERROR",
+            "OVERFLOW_ERROR",
+            "READING_ERROR",
+            "INDEX_ERROR",
+            "RECURSION_STACK_RISK"
+          ],
+          "note": "slot=T1; result=AC; score=100; blind=false"
+        }
+      ]
+    },
+    {
+      "abilityId": "MATH.INVARIANT.CORE",
+      "abilityName": "Invariant core ability",
+      "domainId": "MATH",
+      "moduleId": "MATH.INVARIANT",
+      "evidenceCount": 2,
+      "positiveEvidenceCount": 1,
+      "negativeEvidenceCount": 1,
+      "weaknessEvidenceCount": 0,
+      "historicalProblemCount": 0,
+      "cspPastProblemCount": 1,
+      "blindTestCount": 0,
+      "masteryScore": 0.91,
+      "masteryLevel": "CONTEST_STABLE",
+      "evidenceLevel": "MEDIUM",
+      "confidence": 0.48,
+      "topEvidence": [
+        {
+          "abilityId": "MATH.INVARIANT.CORE",
+          "sourceType": "RULE_INFERENCE",
+          "problemPid": "P8819",
+          "weaknessId": null,
+          "weight": 0.1,
+          "performanceScore": 0.35,
+          "errorTypes": [],
+          "note": "CSP-S past problem has no student record yet; use as validation gap."
+        },
+        {
+          "abilityId": "MATH.INVARIANT.CORE",
+          "sourceType": "CSP_PAST_PROBLEM",
+          "problemPid": "P11231",
+          "weaknessId": null,
+          "weight": 0.65,
+          "performanceScore": 1,
+          "errorTypes": [
+            "UNKNOWN",
+            "INDEX_ERROR",
+            "OVERFLOW_ERROR"
+          ],
+          "note": "slot=T1; result=AC; score=100; blind=false"
+        }
+      ]
+    }
+  ]
+}

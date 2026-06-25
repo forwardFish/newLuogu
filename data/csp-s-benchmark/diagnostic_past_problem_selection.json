@@ -1,0 +1,126 @@
+{
+  "generatedAt": "2026-06-25T06:50:23.483Z",
+  "principle": "Use real CSP-S past problems as blind probes before trusting historical Luogu weakness labels.",
+  "items": [
+    {
+      "problemId": "CSP-S-2025-T4",
+      "year": 2025,
+      "slot": "T4",
+      "luoguPid": "P14364",
+      "title": "员工招聘",
+      "targetAbilityId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+      "expectedLoss": 14.53,
+      "timeLimitMinutes": 110,
+      "expectedOutput": [
+        "Before coding: write model, constraints, partial-score routes, and implementation risks.",
+        "After attempt: record score, time, submissions, whether it was blind, and exact failure stage."
+      ],
+      "reason": "先用 T3/T4 真题盲测验证 PARTIAL_SCORE.SUBTASK_ANALYSIS，候选：2019T3P5659, 2019T4P5664, 2020T3P7077。未盲测前不要把它当成已确认短板。"
+    },
+    {
+      "problemId": "CSP-S-2024-T4",
+      "year": 2024,
+      "slot": "T4",
+      "luoguPid": "P11234",
+      "title": "擂台游戏",
+      "targetAbilityId": "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+      "expectedLoss": 7.34,
+      "timeLimitMinutes": 110,
+      "expectedOutput": [
+        "Before coding: write model, constraints, partial-score routes, and implementation risks.",
+        "After attempt: record score, time, submissions, whether it was blind, and exact failure stage."
+      ],
+      "reason": "先用 T3/T2/T4/T1 真题盲测验证 GREEDY.PROOF.EXCHANGE_ARGUMENT，候选：2019T3P5659, 2020T2P7076, 2020T4P7078。未盲测前不要把它当成已确认短板。"
+    },
+    {
+      "problemId": "CSP-S-2023-T3",
+      "year": 2023,
+      "slot": "T3",
+      "luoguPid": "P9754",
+      "title": "结构体",
+      "targetAbilityId": "IMPLEMENTATION.INDEX_BOUNDARY",
+      "expectedLoss": 4.96,
+      "timeLimitMinutes": 110,
+      "expectedOutput": [
+        "Before coding: write model, constraints, partial-score routes, and implementation risks.",
+        "After attempt: record score, time, submissions, whether it was blind, and exact failure stage."
+      ],
+      "reason": "先用 T1/T3/T2 真题盲测验证 IMPLEMENTATION.INDEX_BOUNDARY，候选：2020T1P7075, 2023T1P9752, 2023T3P9754。未盲测前不要把它当成已确认短板。"
+    },
+    {
+      "problemId": "CSP-S-2021-T4",
+      "year": 2021,
+      "slot": "T4",
+      "luoguPid": "P7916",
+      "title": "交通规划",
+      "targetAbilityId": "GRAPH.MODELING.GRAPH_ABSTRACTION",
+      "expectedLoss": 4.46,
+      "timeLimitMinutes": 110,
+      "expectedOutput": [
+        "Before coding: write model, constraints, partial-score routes, and implementation risks.",
+        "After attempt: record score, time, submissions, whether it was blind, and exact failure stage."
+      ],
+      "reason": "先用 T3/T4/T1/T2 真题盲测验证 GRAPH.MODELING.GRAPH_ABSTRACTION，候选：2019T3P5659, 2020T3P7077, 2021T4P7916。未盲测前不要把它当成已确认短板。"
+    },
+    {
+      "problemId": "CSP-S-2022-T4",
+      "year": 2022,
+      "slot": "T4",
+      "luoguPid": "P8820",
+      "title": "数据传输",
+      "targetAbilityId": "DP.GENERAL.STATE_TRANSITION",
+      "expectedLoss": 3.82,
+      "timeLimitMinutes": 110,
+      "expectedOutput": [
+        "Before coding: write model, constraints, partial-score routes, and implementation risks.",
+        "After attempt: record score, time, submissions, whether it was blind, and exact failure stage."
+      ],
+      "reason": "先用 T4/T3/T2 真题盲测验证 DP.GENERAL.STATE_TRANSITION，候选：2019T4P5664, 2020T3P7077, 2022T4P8820。未盲测前不要把它当成已确认短板。"
+    },
+    {
+      "problemId": "CSP-S-2025-T3",
+      "year": 2025,
+      "slot": "T3",
+      "luoguPid": "P14363",
+      "title": "谐音替换",
+      "targetAbilityId": "STRING.PATTERN.BOUNDARY",
+      "expectedLoss": 3.53,
+      "timeLimitMinutes": 110,
+      "expectedOutput": [
+        "Before coding: write model, constraints, partial-score routes, and implementation risks.",
+        "After attempt: record score, time, submissions, whether it was blind, and exact failure stage."
+      ],
+      "reason": "先用 T2/T3 真题盲测验证 STRING.PATTERN.BOUNDARY，候选：2019T2P5658, 2021T2P7914, 2021T3P7915。未盲测前不要把它当成已确认短板。"
+    },
+    {
+      "problemId": "CSP-S-2020-T4",
+      "year": 2020,
+      "slot": "T4",
+      "luoguPid": "P7078",
+      "title": "贪吃蛇",
+      "targetAbilityId": "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+      "expectedLoss": 3.45,
+      "timeLimitMinutes": 110,
+      "expectedOutput": [
+        "Before coding: write model, constraints, partial-score routes, and implementation risks.",
+        "After attempt: record score, time, submissions, whether it was blind, and exact failure stage."
+      ],
+      "reason": "先用 T2/T4/T3 真题盲测验证 DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY，候选：2019T2P5658, 2020T4P7078, 2022T2P8818。未盲测前不要把它当成已确认短板。"
+    },
+    {
+      "problemId": "CSP-S-2023-T4",
+      "year": 2023,
+      "slot": "T4",
+      "luoguPid": "P9755",
+      "title": "种树",
+      "targetAbilityId": "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY",
+      "expectedLoss": 2.39,
+      "timeLimitMinutes": 110,
+      "expectedOutput": [
+        "Before coding: write model, constraints, partial-score routes, and implementation risks.",
+        "After attempt: record score, time, submissions, whether it was blind, and exact failure stage."
+      ],
+      "reason": "先用 T1/T4/T2 真题盲测验证 BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY，候选：2020T1P7075, 2023T4P9755, 2024T2P11232。未盲测前不要把它当成已确认短板。"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-06-25T13:28:10.993Z",
+  "date": "2026-07-02",
+  "targetScore": 200,
+  "examSource": "CSP-S past paper / mixed set",
+  "tasks": [
+    {
+      "slot": "T1",
+      "problemPid": "P7913",
+      "title": "廊桥分配",
+      "targetScore": 90,
+      "timeLimitMinutes": 45,
+      "validationFocus": "GREEDY.PROOF.EXCHANGE_ARGUMENT"
+    },
+    {
+      "slot": "T2",
+      "problemPid": "P7076",
+      "title": "动物园",
+      "targetScore": 70,
+      "timeLimitMinutes": 75,
+      "validationFocus": "GREEDY.PROOF.EXCHANGE_ARGUMENT"
+    },
+    {
+      "slot": "T3",
+      "problemPid": "P5659",
+      "title": "树上的数",
+      "targetScore": 36,
+      "timeLimitMinutes": 90,
+      "validationFocus": "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+    },
+    {
+      "slot": "T4",
+      "problemPid": "P5664",
+      "title": "Emiya 家今天的饭",
+      "targetScore": 4,
+      "timeLimitMinutes": 45,
+      "validationFocus": "PARTIAL_SCORE.SUBTASK_ANALYSIS"
+    }
+  ],
+  "scoreTarget": {
+    "t1": 90,
+    "t2": 70,
+    "t3": 36,
+    "t4": 4
+  },
+  "rules": [
+    "Do not use full solution before the timer ends.",
+    "Record per-slot score, time usage, submission count, hint level and failed stage.",
+    "If T1 or T2 collapses, next week must prioritize stability before hard problems."
+  ]
+}

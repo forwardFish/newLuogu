@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-06-25T13:28:10.936Z",
+  "date": "2026-06-25",
+  "targetScore": 200,
+  "todayGoal": "Partial-score subtask decomposition",
+  "whyToday": [
+    "This unit is P0 for target score 200.",
+    "Estimated loss: 14.53.",
+    "Current mastery: EXPOSED.",
+    "The task order follows concept -> basic -> standard -> transfer -> review."
+  ],
+  "tasks": [
+    {
+      "order": 1,
+      "type": "CONCEPT_EXPLANATION",
+      "durationMinutes": 10,
+      "contentId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+      "goal": "Partial-score training starts from data ranges: brute force for small data, special properties for middle score, full solution last.",
+      "beforeCodingQuestions": [
+        "What are the constraints?",
+        "What brute force gets 20-30 points?",
+        "What special property gets 50-70?",
+        "Can I code the partial route now?",
+        "When should I stop chasing full marks?"
+      ]
+    },
+    {
+      "order": 2,
+      "type": "PRACTICE_BASIC",
+      "problemPid": "P10135",
+      "durationMinutes": 35,
+      "goal": "Finish the standard form with low pressure.",
+      "passSignal": "For 5 T3/T4 tasks, write 30/50/70 routes before coding."
+    },
+    {
+      "order": 3,
+      "type": "PRACTICE_STANDARD",
+      "problemPid": "P1273",
+      "durationMinutes": 60,
+      "goal": "Handle boundary, complexity and submission stability.",
+      "passSignal": "Record result, submissions, hint usage and failed stage."
+    },
+    {
+      "order": 4,
+      "type": "MUTATION",
+      "problemId": "mut_partial_score_001",
+      "durationMinutes": 45,
+      "goal": "Verify transfer instead of memorizing the original problem.",
+      "passSignal": "Solve without using hint level >= 3 and explain what changed from the base problem."
+    },
+    {
+      "order": 5,
+      "type": "REVIEW",
+      "durationMinutes": 20,
+      "goal": "Record result, score, submissions, hint level, failed stage and next redo decision."
+    }
+  ],
+  "passCriteria": [
+    "For 5 T3/T4 tasks, write 30/50/70 routes before coding.",
+    "At least 3 routes are executable.",
+    "Do not use full solution before attempt.",
+    "Record actual score vs predicted route."
+  ],
+  "scoreRouteReminder": [
+    "First protect T1 and T2. A 200-point route cannot tolerate unstable low-level mistakes.",
+    "Then train T3 partial-score decomposition. The goal is executable 30/50/70 routes, not immediate full marks.",
+    "Use T4 only as strategy training unless T1/T2 are already stable.",
+    "Every week must include one CSP-S-style set to verify transfer from single-problem practice to exam scoring."
+  ]
+}

@@ -1,0 +1,1219 @@
+{
+  "version": "1.0",
+  "generatedAt": "2026-06-25T06:50:23.078Z",
+  "source": [
+    {
+      "name": "NOI syllabus 2025 revision",
+      "type": "official",
+      "url": "https://www.noi.cn/xw/2025-04-18/841584.shtml"
+    }
+  ],
+  "domains": [
+    {
+      "domainId": "PROGRAMMING_BASICS",
+      "name": "Programming basics",
+      "modules": [
+        {
+          "moduleId": "PROGRAMMING_BASICS.READING",
+          "name": "Reading and constraints",
+          "cspRelevance": {
+            "slots": [
+              "T1",
+              "T2"
+            ],
+            "role": [
+              "STABLE_SCORE"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "PROGRAMMING_BASICS.READING.CONSTRAINT_EXTRACTION",
+              "name": "Extract objective, constraints and hidden cases",
+              "observableBehaviors": [
+                "State n, value range, answer type and corner cases before coding."
+              ],
+              "errorTypes": [
+                "READING_ERROR"
+              ],
+              "trainingMethods": [
+                "Read-and-rewrite drills"
+              ],
+              "verifyMethods": [
+                "Pre-code checklist has no missing constraint."
+              ]
+            }
+          ]
+        },
+        {
+          "moduleId": "PROGRAMMING_BASICS.IMPLEMENTATION",
+          "name": "Implementation stability",
+          "cspRelevance": {
+            "slots": [
+              "T1",
+              "T2",
+              "T3"
+            ],
+            "role": [
+              "STABLE_SCORE"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "IMPLEMENTATION.INDEX_BOUNDARY",
+              "name": "Index and boundary safety",
+              "observableBehaviors": [
+                "Can list array ranges and loop endpoints."
+              ],
+              "errorTypes": [
+                "INDEX_ERROR",
+                "BOUNDARY_ERROR"
+              ],
+              "trainingMethods": [
+                "Boundary checklist drills"
+              ],
+              "verifyMethods": [
+                "No out-of-range issue in blind task."
+              ]
+            },
+            {
+              "abilityId": "IMPLEMENTATION.INITIALIZATION",
+              "name": "Initialization and reset",
+              "observableBehaviors": [
+                "Can initialize DP/graph/multitest states completely."
+              ],
+              "errorTypes": [
+                "INIT_ERROR"
+              ],
+              "trainingMethods": [
+                "Initialization rewrite"
+              ],
+              "verifyMethods": [
+                "Pass multi-test stress."
+              ]
+            },
+            {
+              "abilityId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+              "name": "Integer overflow and range estimate",
+              "observableBehaviors": [
+                "Can compute max value and choose numeric type."
+              ],
+              "errorTypes": [
+                "OVERFLOW_ERROR"
+              ],
+              "trainingMethods": [
+                "Range estimation before code"
+              ],
+              "verifyMethods": [
+                "No overflow on max tests."
+              ]
+            },
+            {
+              "abilityId": "IMPLEMENTATION.MULTITEST_CLEAR",
+              "name": "Multi-test clearing",
+              "observableBehaviors": [
+                "Can reset all touched structures between cases."
+              ],
+              "errorTypes": [
+                "INIT_ERROR"
+              ],
+              "trainingMethods": [
+                "Multi-test conversion drills"
+              ],
+              "verifyMethods": [
+                "Pass repeated random tests."
+              ]
+            },
+            {
+              "abilityId": "IMPLEMENTATION.RECURSION_STACK",
+              "name": "Recursion depth and stack safety",
+              "observableBehaviors": [
+                "Can estimate recursion depth and switch to iterative when needed."
+              ],
+              "errorTypes": [
+                "RECURSION_STACK_RISK"
+              ],
+              "trainingMethods": [
+                "DFS iterative rewrite"
+              ],
+              "verifyMethods": [
+                "No stack risk on max chain/tree."
+              ]
+            },
+            {
+              "abilityId": "IMPLEMENTATION.IO_FORMAT",
+              "name": "Input/output format stability",
+              "observableBehaviors": [
+                "Can parse all formats and print exact expected output."
+              ],
+              "errorTypes": [
+                "IO_FORMAT_ERROR"
+              ],
+              "trainingMethods": [
+                "Format mutation drills"
+              ],
+              "verifyMethods": [
+                "No PE/format failures."
+              ]
+            },
+            {
+              "abilityId": "IMPLEMENTATION.TEMPLATE_CORRECTNESS",
+              "name": "Template correctness",
+              "observableBehaviors": [
+                "Can rebuild template without hidden stale assumptions."
+              ],
+              "errorTypes": [
+                "TEMPLATE_UNFAMILIAR"
+              ],
+              "trainingMethods": [
+                "Template from-scratch drills"
+              ],
+              "verifyMethods": [
+                "Template passes standard tests."
+              ]
+            },
+            {
+              "abilityId": "IMPLEMENTATION.DEBUG_TIMEOUT",
+              "name": "Debugging time control",
+              "observableBehaviors": [
+                "Can isolate bug with small cases within 20 minutes."
+              ],
+              "errorTypes": [
+                "DEBUG_TIMEOUT"
+              ],
+              "trainingMethods": [
+                "Debugging protocol drills"
+              ],
+              "verifyMethods": [
+                "Debug log identifies first failing invariant."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domainId": "BASIC_ALGORITHM",
+      "name": "Basic algorithms",
+      "modules": [
+        {
+          "moduleId": "BASIC_ALGORITHM.SIMULATION_ENUMERATION",
+          "name": "Simulation and enumeration",
+          "cspRelevance": {
+            "slots": [
+              "T1",
+              "T2"
+            ],
+            "role": [
+              "STABLE_SCORE"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "BASIC_ALGORITHM.SIMULATION_ENUMERATION.CASE_SPLIT",
+              "name": "Correct case split and enumeration",
+              "observableBehaviors": [
+                "Can enumerate all legal states without duplicates or omissions."
+              ],
+              "errorTypes": [
+                "BOUNDARY_ERROR",
+                "READING_ERROR"
+              ],
+              "trainingMethods": [
+                "T1 timed drills"
+              ],
+              "verifyMethods": [
+                "T1 blind score >= 90."
+              ]
+            }
+          ]
+        },
+        {
+          "moduleId": "BASIC_ALGORITHM.BINARY_SEARCH",
+          "name": "Binary search",
+          "cspRelevance": {
+            "slots": [
+              "T2",
+              "T3"
+            ],
+            "role": [
+              "MODELING"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY",
+              "name": "Prove check monotonicity and boundary",
+              "observableBehaviors": [
+                "Can explain why answer is monotonic and choose interval endpoints."
+              ],
+              "errorTypes": [
+                "MODEL_ERROR",
+                "BOUNDARY_ERROR"
+              ],
+              "trainingMethods": [
+                "Binary answer drills with proof"
+              ],
+              "verifyMethods": [
+                "AC in <= 2 submissions and proof written before code."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domainId": "DATA_STRUCTURE",
+      "name": "Data structures",
+      "modules": [
+        {
+          "moduleId": "DATA_STRUCTURE.DSU",
+          "name": "Disjoint set union",
+          "cspRelevance": {
+            "slots": [
+              "T2",
+              "T3"
+            ],
+            "role": [
+              "MODELING"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "DATA_STRUCTURE.DSU.SET_MEANING",
+              "name": "Define set meaning and merge condition",
+              "observableBehaviors": [
+                "Can state what each set represents after every merge."
+              ],
+              "errorTypes": [
+                "MODEL_ERROR",
+                "INIT_ERROR",
+                "INDEX_ERROR"
+              ],
+              "trainingMethods": [
+                "DSU with discretization variants"
+              ],
+              "verifyMethods": [
+                "No initialization/discretization error in blind task."
+              ]
+            }
+          ]
+        },
+        {
+          "moduleId": "DATA_STRUCTURE.RANGE_QUERY",
+          "name": "Segment tree and Fenwick tree",
+          "cspRelevance": {
+            "slots": [
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "IMPLEMENTATION",
+              "OPTIMIZATION"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+              "name": "Range data-structure template and boundary",
+              "observableBehaviors": [
+                "Can choose inclusive/exclusive ranges and maintain lazy tags correctly."
+              ],
+              "errorTypes": [
+                "INDEX_ERROR",
+                "TEMPLATE_UNFAMILIAR",
+                "BOUNDARY_ERROR"
+              ],
+              "trainingMethods": [
+                "Template rebuild and mutation"
+              ],
+              "verifyMethods": [
+                "Pass random stress tests against brute force."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domainId": "GRAPH",
+      "name": "Graph",
+      "modules": [
+        {
+          "moduleId": "GRAPH.MODELING",
+          "name": "Graph modeling",
+          "cspRelevance": {
+            "slots": [
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "MODELING",
+              "PARTIAL_SCORE"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "GRAPH.MODELING.GRAPH_ABSTRACTION",
+              "name": "Turn problem relation into graph states and edges",
+              "observableBehaviors": [
+                "Can define node, edge, weight and reachability meaning."
+              ],
+              "errorTypes": [
+                "MODEL_ERROR",
+                "COMPLEXITY_ERROR"
+              ],
+              "trainingMethods": [
+                "Graph model rewrite drills"
+              ],
+              "verifyMethods": [
+                "Can justify graph construction and complexity."
+              ]
+            }
+          ]
+        },
+        {
+          "moduleId": "GRAPH.SHORTEST_PATH",
+          "name": "Shortest path",
+          "cspRelevance": {
+            "slots": [
+              "T2",
+              "T3"
+            ],
+            "role": [
+              "MODELING"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "GRAPH.SHORTEST_PATH.STATE_AND_INIT",
+              "name": "Shortest-path state and initialization",
+              "observableBehaviors": [
+                "Can define distance state, unreachable value and start/end handling."
+              ],
+              "errorTypes": [
+                "INIT_ERROR",
+                "BOUNDARY_ERROR",
+                "MODEL_ERROR"
+              ],
+              "trainingMethods": [
+                "Shortest-path variants"
+              ],
+              "verifyMethods": [
+                "No INF/start/end mistake in blind task."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domainId": "DP",
+      "name": "Dynamic programming",
+      "modules": [
+        {
+          "moduleId": "DP.GENERAL",
+          "name": "General DP",
+          "cspRelevance": {
+            "slots": [
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "MODELING",
+              "PARTIAL_SCORE"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "DP.GENERAL.STATE_TRANSITION",
+              "name": "State, transition, init and order",
+              "observableBehaviors": [
+                "Can write state meaning, transition source, init and iteration order before coding."
+              ],
+              "errorTypes": [
+                "STATE_ERROR",
+                "TRANSITION_ERROR",
+                "INIT_ERROR"
+              ],
+              "trainingMethods": [
+                "DP state table drills"
+              ],
+              "verifyMethods": [
+                "State definition is accepted by review before code."
+              ]
+            }
+          ]
+        },
+        {
+          "moduleId": "DP.INTERVAL",
+          "name": "Interval DP",
+          "cspRelevance": {
+            "slots": [
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "MODELING",
+              "PARTIAL_SCORE"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "DP.INTERVAL.RECOGNIZE_STRUCTURE",
+              "name": "Recognize interval substructure",
+              "observableBehaviors": [
+                "Can decide whether dp[l][r] is valid and what the split means."
+              ],
+              "errorTypes": [
+                "MODEL_ERROR",
+                "STATE_ERROR"
+              ],
+              "trainingMethods": [
+                "Interval-DP identification drills"
+              ],
+              "verifyMethods": [
+                "Can reject false interval-DP labels."
+              ]
+            },
+            {
+              "abilityId": "DP.INTERVAL.INIT_AND_ORDER",
+              "name": "Initialization and length-order enumeration",
+              "observableBehaviors": [
+                "Can write len=1/empty interval initialization and enumerate by length."
+              ],
+              "errorTypes": [
+                "INIT_ERROR",
+                "BOUNDARY_ERROR",
+                "ENUMERATION_ORDER_ERROR"
+              ],
+              "trainingMethods": [
+                "Classic interval-DP rebuild"
+              ],
+              "verifyMethods": [
+                "AC in <= 2 submissions on blind variant."
+              ]
+            }
+          ]
+        },
+        {
+          "moduleId": "DP.STATE_COMPRESSION",
+          "name": "State compression DP",
+          "cspRelevance": {
+            "slots": [
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "MODELING",
+              "PARTIAL_SCORE"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "DP.STATE_COMPRESSION.MASK_DESIGN",
+              "name": "Mask meaning, transition and pruning",
+              "observableBehaviors": [
+                "Can define bit meaning, legal masks and transition complexity."
+              ],
+              "errorTypes": [
+                "STATE_ERROR",
+                "COMPLEXITY_ERROR"
+              ],
+              "trainingMethods": [
+                "Small-n brute to mask DP"
+              ],
+              "verifyMethods": [
+                "Can pass brute-force stress tests."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domainId": "MATH",
+      "name": "Mathematics",
+      "modules": [
+        {
+          "moduleId": "MATH.NUMBER_THEORY",
+          "name": "Number theory",
+          "cspRelevance": {
+            "slots": [
+              "T1",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "MODELING"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "MATH.NUMBER_THEORY.CORE",
+              "name": "Number theory core ability",
+              "observableBehaviors": [
+                "Can derive formula/model and verify it on small cases."
+              ],
+              "errorTypes": [
+                "MODEL_ERROR",
+                "FORMULA_ERROR"
+              ],
+              "trainingMethods": [
+                "Formula derivation plus brute-force check"
+              ],
+              "verifyMethods": [
+                "Derivation matches brute force on random small cases."
+              ]
+            }
+          ]
+        },
+        {
+          "moduleId": "MATH.MODULAR",
+          "name": "Modular arithmetic",
+          "cspRelevance": {
+            "slots": [
+              "T1",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "MODELING"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "MATH.MODULAR.CORE",
+              "name": "Modular arithmetic core ability",
+              "observableBehaviors": [
+                "Can derive formula/model and verify it on small cases."
+              ],
+              "errorTypes": [
+                "MODEL_ERROR",
+                "FORMULA_ERROR"
+              ],
+              "trainingMethods": [
+                "Formula derivation plus brute-force check"
+              ],
+              "verifyMethods": [
+                "Derivation matches brute force on random small cases."
+              ]
+            }
+          ]
+        },
+        {
+          "moduleId": "MATH.GCD_FACTOR",
+          "name": "GCD and factorization",
+          "cspRelevance": {
+            "slots": [
+              "T1",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "MODELING"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "MATH.GCD_FACTOR.CORE",
+              "name": "GCD and factorization core ability",
+              "observableBehaviors": [
+                "Can derive formula/model and verify it on small cases."
+              ],
+              "errorTypes": [
+                "MODEL_ERROR",
+                "FORMULA_ERROR"
+              ],
+              "trainingMethods": [
+                "Formula derivation plus brute-force check"
+              ],
+              "verifyMethods": [
+                "Derivation matches brute force on random small cases."
+              ]
+            }
+          ]
+        },
+        {
+          "moduleId": "MATH.COMBINATORICS",
+          "name": "Combinatorics",
+          "cspRelevance": {
+            "slots": [
+              "T1",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "MODELING"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "MATH.COMBINATORICS.CORE",
+              "name": "Combinatorics core ability",
+              "observableBehaviors": [
+                "Can derive formula/model and verify it on small cases."
+              ],
+              "errorTypes": [
+                "MODEL_ERROR",
+                "FORMULA_ERROR"
+              ],
+              "trainingMethods": [
+                "Formula derivation plus brute-force check"
+              ],
+              "verifyMethods": [
+                "Derivation matches brute force on random small cases."
+              ]
+            }
+          ]
+        },
+        {
+          "moduleId": "MATH.COUNTING",
+          "name": "Counting",
+          "cspRelevance": {
+            "slots": [
+              "T1",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "MODELING"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "MATH.COUNTING.CORE",
+              "name": "Counting core ability",
+              "observableBehaviors": [
+                "Can derive formula/model and verify it on small cases."
+              ],
+              "errorTypes": [
+                "MODEL_ERROR",
+                "FORMULA_ERROR"
+              ],
+              "trainingMethods": [
+                "Formula derivation plus brute-force check"
+              ],
+              "verifyMethods": [
+                "Derivation matches brute force on random small cases."
+              ]
+            }
+          ]
+        },
+        {
+          "moduleId": "MATH.RECURRENCE",
+          "name": "Recurrence",
+          "cspRelevance": {
+            "slots": [
+              "T1",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "MODELING"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "MATH.RECURRENCE.CORE",
+              "name": "Recurrence core ability",
+              "observableBehaviors": [
+                "Can derive formula/model and verify it on small cases."
+              ],
+              "errorTypes": [
+                "MODEL_ERROR",
+                "FORMULA_ERROR"
+              ],
+              "trainingMethods": [
+                "Formula derivation plus brute-force check"
+              ],
+              "verifyMethods": [
+                "Derivation matches brute force on random small cases."
+              ]
+            }
+          ]
+        },
+        {
+          "moduleId": "MATH.FORMULA_DERIVATION",
+          "name": "Formula derivation",
+          "cspRelevance": {
+            "slots": [
+              "T1",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "MODELING"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "MATH.FORMULA_DERIVATION.CORE",
+              "name": "Formula derivation core ability",
+              "observableBehaviors": [
+                "Can derive formula/model and verify it on small cases."
+              ],
+              "errorTypes": [
+                "MODEL_ERROR",
+                "FORMULA_ERROR"
+              ],
+              "trainingMethods": [
+                "Formula derivation plus brute-force check"
+              ],
+              "verifyMethods": [
+                "Derivation matches brute force on random small cases."
+              ]
+            }
+          ]
+        },
+        {
+          "moduleId": "MATH.INVARIANT",
+          "name": "Invariant",
+          "cspRelevance": {
+            "slots": [
+              "T1",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "MODELING"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "MATH.INVARIANT.CORE",
+              "name": "Invariant core ability",
+              "observableBehaviors": [
+                "Can derive formula/model and verify it on small cases."
+              ],
+              "errorTypes": [
+                "MODEL_ERROR",
+                "FORMULA_ERROR"
+              ],
+              "trainingMethods": [
+                "Formula derivation plus brute-force check"
+              ],
+              "verifyMethods": [
+                "Derivation matches brute force on random small cases."
+              ]
+            }
+          ]
+        },
+        {
+          "moduleId": "MATH.CONSTRUCTION",
+          "name": "Construction",
+          "cspRelevance": {
+            "slots": [
+              "T1",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "MODELING"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "MATH.CONSTRUCTION.CORE",
+              "name": "Construction core ability",
+              "observableBehaviors": [
+                "Can derive formula/model and verify it on small cases."
+              ],
+              "errorTypes": [
+                "MODEL_ERROR",
+                "FORMULA_ERROR"
+              ],
+              "trainingMethods": [
+                "Formula derivation plus brute-force check"
+              ],
+              "verifyMethods": [
+                "Derivation matches brute force on random small cases."
+              ]
+            }
+          ]
+        },
+        {
+          "moduleId": "MATH.PERIODICITY",
+          "name": "Periodicity",
+          "cspRelevance": {
+            "slots": [
+              "T1",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "MODELING"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "MATH.PERIODICITY.CORE",
+              "name": "Periodicity core ability",
+              "observableBehaviors": [
+                "Can derive formula/model and verify it on small cases."
+              ],
+              "errorTypes": [
+                "MODEL_ERROR",
+                "FORMULA_ERROR"
+              ],
+              "trainingMethods": [
+                "Formula derivation plus brute-force check"
+              ],
+              "verifyMethods": [
+                "Derivation matches brute force on random small cases."
+              ]
+            }
+          ]
+        },
+        {
+          "moduleId": "MATH.OVERFLOW_RANGE",
+          "name": "Overflow and range",
+          "cspRelevance": {
+            "slots": [
+              "T1",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "MODELING"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "MATH.OVERFLOW_RANGE.CORE",
+              "name": "Overflow and range core ability",
+              "observableBehaviors": [
+                "Can derive formula/model and verify it on small cases."
+              ],
+              "errorTypes": [
+                "OVERFLOW_ERROR",
+                "BOUNDARY_ERROR"
+              ],
+              "trainingMethods": [
+                "Formula derivation plus brute-force check"
+              ],
+              "verifyMethods": [
+                "Derivation matches brute force on random small cases."
+              ]
+            }
+          ]
+        },
+        {
+          "moduleId": "MATH.MODEL_TO_DP",
+          "name": "Math model to DP",
+          "cspRelevance": {
+            "slots": [
+              "T1",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "MODELING"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "MATH.MODEL_TO_DP.CORE",
+              "name": "Math model to DP core ability",
+              "observableBehaviors": [
+                "Can derive formula/model and verify it on small cases."
+              ],
+              "errorTypes": [
+                "MODEL_ERROR",
+                "STATE_ERROR"
+              ],
+              "trainingMethods": [
+                "Formula derivation plus brute-force check"
+              ],
+              "verifyMethods": [
+                "Derivation matches brute force on random small cases."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domainId": "STRING",
+      "name": "String",
+      "modules": [
+        {
+          "moduleId": "STRING.PATTERN",
+          "name": "String pattern and boundary",
+          "cspRelevance": {
+            "slots": [
+              "T1",
+              "T2",
+              "T3"
+            ],
+            "role": [
+              "STABLE_SCORE",
+              "MODELING"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "STRING.PATTERN.BOUNDARY",
+              "name": "String boundary and pattern model",
+              "observableBehaviors": [
+                "Can handle empty/single/extreme strings and define pattern state."
+              ],
+              "errorTypes": [
+                "BOUNDARY_ERROR",
+                "INDEX_ERROR",
+                "MODEL_ERROR"
+              ],
+              "trainingMethods": [
+                "String corner-case drills"
+              ],
+              "verifyMethods": [
+                "Corner-case checklist passed before submission."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domainId": "SEARCH",
+      "name": "Search",
+      "modules": [
+        {
+          "moduleId": "SEARCH.DFS_BFS",
+          "name": "DFS/BFS and pruning",
+          "cspRelevance": {
+            "slots": [
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "PARTIAL_SCORE"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "SEARCH.DFS_BFS.PRUNING_AND_STATE",
+              "name": "Search state and pruning",
+              "observableBehaviors": [
+                "Can define search state, visited rule and pruning correctness."
+              ],
+              "errorTypes": [
+                "COMPLEXITY_ERROR",
+                "RECURSION_STACK_RISK"
+              ],
+              "trainingMethods": [
+                "Brute force first, then prune"
+              ],
+              "verifyMethods": [
+                "Brute and optimized results match on small tests."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domainId": "GREEDY",
+      "name": "Greedy",
+      "modules": [
+        {
+          "moduleId": "GREEDY.PROOF",
+          "name": "Greedy proof and counterexample check",
+          "cspRelevance": {
+            "slots": [
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "MODELING"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+              "name": "Exchange argument and counterexample search",
+              "observableBehaviors": [
+                "Can explain why local choice is safe or find counterexample."
+              ],
+              "errorTypes": [
+                "MODEL_ERROR",
+                "STRATEGY_ERROR"
+              ],
+              "trainingMethods": [
+                "Proof-before-code greedy drills"
+              ],
+              "verifyMethods": [
+                "Can give proof or reject greedy within 20 minutes."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domainId": "COMPREHENSIVE",
+      "name": "Comprehensive contest strategy",
+      "modules": [
+        {
+          "moduleId": "COMPREHENSIVE.EXAM_STRATEGY",
+          "name": "Contest strategy",
+          "cspRelevance": {
+            "slots": [
+              "T1",
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "FIRST_PRIZE"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "COMPREHENSIVE.EXAM_STRATEGY.TIME_ALLOCATION",
+              "name": "Time allocation and stop-loss",
+              "observableBehaviors": [
+                "Can decide when to switch tasks and preserve safe score."
+              ],
+              "errorTypes": [
+                "STRATEGY_ERROR",
+                "DEBUG_TIMEOUT"
+              ],
+              "trainingMethods": [
+                "Four-problem mock exams"
+              ],
+              "verifyMethods": [
+                "Mock review shows no over-investment in one task."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "domainId": "NON_KNOWLEDGE_SKILL",
+      "name": "Non-knowledge skills",
+      "modules": [
+        {
+          "moduleId": "NON_KNOWLEDGE_SKILL.PARTIAL_SCORE",
+          "name": "Partial-score strategy",
+          "cspRelevance": {
+            "slots": [
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "PARTIAL_SCORE"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+              "name": "Subtask and partial-score decomposition",
+              "observableBehaviors": [
+                "Can write executable 30/50/70/100 point routes in 20 minutes."
+              ],
+              "errorTypes": [
+                "PARTIAL_SCORE_MISSED",
+                "STRATEGY_ERROR"
+              ],
+              "trainingMethods": [
+                "Hard problem partial-score drills"
+              ],
+              "verifyMethods": [
+                "At least 5 blind T3/T4 tasks show predicted route and actual score match."
+              ]
+            }
+          ]
+        },
+        {
+          "moduleId": "NON_KNOWLEDGE_SKILL.STRESS_TEST",
+          "name": "Stress testing",
+          "cspRelevance": {
+            "slots": [
+              "T2",
+              "T3",
+              "T4"
+            ],
+            "role": [
+              "VALIDATION"
+            ]
+          },
+          "abilities": [
+            {
+              "abilityId": "IMPLEMENTATION.STRESS_TEST",
+              "name": "Brute-force stress testing",
+              "observableBehaviors": [
+                "Can build brute/generator for uncertain algorithms."
+              ],
+              "errorTypes": [
+                "DEBUG_TIMEOUT",
+                "IMPLEMENTATION_RISK"
+              ],
+              "trainingMethods": [
+                "Random generator and brute comparator"
+              ],
+              "verifyMethods": [
+                "Bug found locally before submission."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "nonKnowledgeSkills": [
+    {
+      "abilityId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+      "name": "Subtask and partial-score decomposition",
+      "observableBehaviors": [
+        "Write 30/50/70/100 routes before coding.",
+        "Implement a reliable brute-force route first."
+      ],
+      "errorTypes": [
+        "PARTIAL_SCORE_MISSED",
+        "STRATEGY_ERROR"
+      ],
+      "trainingMethods": [
+        "T3/T4 partial-score drills"
+      ],
+      "verifyMethods": [
+        "Blind T3/T4 partial scores match predicted route."
+      ]
+    },
+    {
+      "abilityId": "COMPREHENSIVE.EXAM_STRATEGY.TIME_ALLOCATION",
+      "name": "Contest time allocation and stop-loss",
+      "observableBehaviors": [
+        "Protect T1/T2, cap debug time, switch to partial score route."
+      ],
+      "errorTypes": [
+        "STRATEGY_ERROR",
+        "DEBUG_TIMEOUT"
+      ],
+      "trainingMethods": [
+        "Four-problem mock exams"
+      ],
+      "verifyMethods": [
+        "Mock review shows time allocation target achieved."
+      ]
+    }
+  ]
+}

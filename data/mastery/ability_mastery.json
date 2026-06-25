@@ -1,0 +1,498 @@
+{
+  "generatedAt": "2026-06-25T13:28:10.931Z",
+  "items": [
+    {
+      "unitId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+      "title": "Partial-score subtask decomposition",
+      "sourceAbilityId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+      "status": "LEARNING",
+      "historicalMasteryLevel": "EXPOSED",
+      "estimatedLoss": 14.53,
+      "completedTasks": 0,
+      "acTasks": 0,
+      "averageScore": 0,
+      "maxHintLevelUsed": 0,
+      "passRules": {
+        "PASSED_BASIC": [
+          "For 5 T3/T4 tasks, write 30/50/70 routes before coding.",
+          "At least 3 routes are executable."
+        ],
+        "PASSED_TRANSFER": [
+          "Finish one mutation or generated diagnostic task.",
+          "No repeated core mistake.",
+          "Explain why the solution still works after the variant."
+        ],
+        "CONTEST_READY": [
+          "Finish one CSP-S style task under time limit.",
+          "Reach the slot target score.",
+          "Do not use full solution."
+        ]
+      },
+      "nextAction": "Do concept -> basic -> standard tasks before mutation."
+    },
+    {
+      "unitId": "GREEDY.PROOF_EXCHANGE",
+      "title": "Greedy proof and counterexample",
+      "sourceAbilityId": "GREEDY.PROOF.EXCHANGE_ARGUMENT",
+      "status": "PRACTICING",
+      "historicalMasteryLevel": "TRANSFERABLE",
+      "estimatedLoss": 7.34,
+      "completedTasks": 0,
+      "acTasks": 0,
+      "averageScore": 0,
+      "maxHintLevelUsed": 0,
+      "passRules": {
+        "PASSED_BASIC": [
+          "Finish 2 basic tasks and 1 transfer task.",
+          "submissionCount <= 2."
+        ],
+        "PASSED_TRANSFER": [
+          "Finish one mutation or generated diagnostic task.",
+          "No repeated core mistake.",
+          "Explain why the solution still works after the variant."
+        ],
+        "CONTEST_READY": [
+          "Finish one CSP-S style task under time limit.",
+          "Reach the slot target score.",
+          "Do not use full solution."
+        ]
+      },
+      "nextAction": "Add standard and mutation tasks."
+    },
+    {
+      "unitId": "IMPLEMENTATION.INDEX_BOUNDARY",
+      "title": "Index and boundary stability",
+      "sourceAbilityId": "IMPLEMENTATION.INDEX_BOUNDARY",
+      "status": "LEARNING",
+      "historicalMasteryLevel": "UNSTABLE",
+      "estimatedLoss": 4.96,
+      "completedTasks": 0,
+      "acTasks": 0,
+      "averageScore": 0,
+      "maxHintLevelUsed": 0,
+      "passRules": {
+        "PASSED_BASIC": [
+          "Pass boundary checklist before submission.",
+          "No overflow/index/init error in 3 consecutive tasks."
+        ],
+        "PASSED_TRANSFER": [
+          "Finish one mutation or generated diagnostic task.",
+          "No repeated core mistake.",
+          "Explain why the solution still works after the variant."
+        ],
+        "CONTEST_READY": [
+          "Finish one CSP-S style task under time limit.",
+          "Reach the slot target score.",
+          "Do not use full solution."
+        ]
+      },
+      "nextAction": "Do concept -> basic -> standard tasks before mutation."
+    },
+    {
+      "unitId": "GRAPH.BASIC_MODELING",
+      "title": "Graph modeling",
+      "sourceAbilityId": "GRAPH.MODELING.GRAPH_ABSTRACTION",
+      "status": "PRACTICING",
+      "historicalMasteryLevel": "BASIC",
+      "estimatedLoss": 4.46,
+      "completedTasks": 0,
+      "acTasks": 0,
+      "averageScore": 0,
+      "maxHintLevelUsed": 0,
+      "passRules": {
+        "PASSED_BASIC": [
+          "Finish 2 basic tasks and 1 transfer task.",
+          "submissionCount <= 2."
+        ],
+        "PASSED_TRANSFER": [
+          "Finish one mutation or generated diagnostic task.",
+          "No repeated core mistake.",
+          "Explain why the solution still works after the variant."
+        ],
+        "CONTEST_READY": [
+          "Finish one CSP-S style task under time limit.",
+          "Reach the slot target score.",
+          "Do not use full solution."
+        ]
+      },
+      "nextAction": "Add standard and mutation tasks."
+    },
+    {
+      "unitId": "DP.LINEAR.STATE_TRANSITION",
+      "title": "DP state and transition",
+      "sourceAbilityId": "DP.GENERAL.STATE_TRANSITION",
+      "status": "PRACTICING",
+      "historicalMasteryLevel": "BASIC",
+      "estimatedLoss": 3.82,
+      "completedTasks": 0,
+      "acTasks": 0,
+      "averageScore": 0,
+      "maxHintLevelUsed": 0,
+      "passRules": {
+        "PASSED_BASIC": [
+          "Finish 2 basic tasks and 1 transfer task.",
+          "submissionCount <= 2."
+        ],
+        "PASSED_TRANSFER": [
+          "Finish one mutation or generated diagnostic task.",
+          "No repeated core mistake.",
+          "Explain why the solution still works after the variant."
+        ],
+        "CONTEST_READY": [
+          "Finish one CSP-S style task under time limit.",
+          "Reach the slot target score.",
+          "Do not use full solution."
+        ]
+      },
+      "nextAction": "Add standard and mutation tasks."
+    },
+    {
+      "unitId": "BINARY_SEARCH.ANSWER_CHECK",
+      "title": "Binary answer check monotonicity",
+      "sourceAbilityId": "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY",
+      "status": "PRACTICING",
+      "historicalMasteryLevel": "BASIC",
+      "estimatedLoss": 2.39,
+      "completedTasks": 0,
+      "acTasks": 0,
+      "averageScore": 0,
+      "maxHintLevelUsed": 0,
+      "passRules": {
+        "PASSED_BASIC": [
+          "Finish 2 binary-answer tasks with submissionCount <= 2.",
+          "Write natural-language check meaning."
+        ],
+        "PASSED_TRANSFER": [
+          "Finish one mutation or generated diagnostic task.",
+          "No repeated core mistake.",
+          "Explain why the solution still works after the variant."
+        ],
+        "CONTEST_READY": [
+          "Finish one CSP-S style task under time limit.",
+          "Reach the slot target score.",
+          "Do not use full solution."
+        ]
+      },
+      "nextAction": "Add standard and mutation tasks."
+    },
+    {
+      "unitId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+      "title": "Integer range and overflow",
+      "sourceAbilityId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+      "status": "PRACTICING",
+      "historicalMasteryLevel": "BASIC",
+      "estimatedLoss": 1.77,
+      "completedTasks": 0,
+      "acTasks": 0,
+      "averageScore": 0,
+      "maxHintLevelUsed": 0,
+      "passRules": {
+        "PASSED_BASIC": [
+          "Pass boundary checklist before submission.",
+          "No overflow/index/init error in 3 consecutive tasks."
+        ],
+        "PASSED_TRANSFER": [
+          "Finish one mutation or generated diagnostic task.",
+          "No repeated core mistake.",
+          "Explain why the solution still works after the variant."
+        ],
+        "CONTEST_READY": [
+          "Finish one CSP-S style task under time limit.",
+          "Reach the slot target score.",
+          "Do not use full solution."
+        ]
+      },
+      "nextAction": "Add standard and mutation tasks."
+    },
+    {
+      "unitId": "T1.SIMULATION",
+      "title": "T1 simulation and reading stability",
+      "sourceAbilityId": "PROGRAMMING_BASICS.READING.CONSTRAINT_EXTRACTION",
+      "status": "LEARNING",
+      "historicalMasteryLevel": "UNSTABLE",
+      "estimatedLoss": 0.25,
+      "completedTasks": 0,
+      "acTasks": 0,
+      "averageScore": 0,
+      "maxHintLevelUsed": 0,
+      "passRules": {
+        "PASSED_BASIC": [
+          "Finish 2 basic tasks and 1 transfer task.",
+          "submissionCount <= 2."
+        ],
+        "PASSED_TRANSFER": [
+          "Finish one mutation or generated diagnostic task.",
+          "No repeated core mistake.",
+          "Explain why the solution still works after the variant."
+        ],
+        "CONTEST_READY": [
+          "Finish one CSP-S style task under time limit.",
+          "Reach the slot target score.",
+          "Do not use full solution."
+        ]
+      },
+      "nextAction": "Do concept -> basic -> standard tasks before mutation."
+    },
+    {
+      "unitId": "PARTIAL_SCORE.BRUTE_FORCE",
+      "title": "Executable brute-force route",
+      "sourceAbilityId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+      "status": "LEARNING",
+      "historicalMasteryLevel": "EXPOSED",
+      "estimatedLoss": 14.53,
+      "completedTasks": 0,
+      "acTasks": 0,
+      "averageScore": 0,
+      "maxHintLevelUsed": 0,
+      "passRules": {
+        "PASSED_BASIC": [
+          "For 5 T3/T4 tasks, write 30/50/70 routes before coding.",
+          "At least 3 routes are executable."
+        ],
+        "PASSED_TRANSFER": [
+          "Finish one mutation or generated diagnostic task.",
+          "No repeated core mistake.",
+          "Explain why the solution still works after the variant."
+        ],
+        "CONTEST_READY": [
+          "Finish one CSP-S style task under time limit.",
+          "Reach the slot target score.",
+          "Do not use full solution."
+        ]
+      },
+      "nextAction": "Do concept -> basic -> standard tasks before mutation."
+    },
+    {
+      "unitId": "STRING_PATTERN_BOUNDARY",
+      "title": "String Pattern Boundary",
+      "sourceAbilityId": "STRING.PATTERN.BOUNDARY",
+      "status": "PRACTICING",
+      "historicalMasteryLevel": "BASIC",
+      "estimatedLoss": 3.53,
+      "completedTasks": 0,
+      "acTasks": 0,
+      "averageScore": 0,
+      "maxHintLevelUsed": 0,
+      "passRules": {
+        "PASSED_BASIC": [
+          "Finish 2 basic tasks and 1 transfer task.",
+          "submissionCount <= 2."
+        ],
+        "PASSED_TRANSFER": [
+          "Finish one mutation or generated diagnostic task.",
+          "No repeated core mistake.",
+          "Explain why the solution still works after the variant."
+        ],
+        "CONTEST_READY": [
+          "Finish one CSP-S style task under time limit.",
+          "Reach the slot target score.",
+          "Do not use full solution."
+        ]
+      },
+      "nextAction": "Add standard and mutation tasks."
+    },
+    {
+      "unitId": "RANGE_QUERY_TEMPLATE_BOUNDARY",
+      "title": "Data Structure Range Query Template Boundary",
+      "sourceAbilityId": "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY",
+      "status": "PRACTICING",
+      "historicalMasteryLevel": "BASIC",
+      "estimatedLoss": 3.45,
+      "completedTasks": 0,
+      "acTasks": 0,
+      "averageScore": 0,
+      "maxHintLevelUsed": 0,
+      "passRules": {
+        "PASSED_BASIC": [
+          "Finish 2 basic tasks and 1 transfer task.",
+          "submissionCount <= 2."
+        ],
+        "PASSED_TRANSFER": [
+          "Finish one mutation or generated diagnostic task.",
+          "No repeated core mistake.",
+          "Explain why the solution still works after the variant."
+        ],
+        "CONTEST_READY": [
+          "Finish one CSP-S style task under time limit.",
+          "Reach the slot target score.",
+          "Do not use full solution."
+        ]
+      },
+      "nextAction": "Add standard and mutation tasks."
+    },
+    {
+      "unitId": "DP_INTERVAL_RECOGNIZE_STRUCTURE",
+      "title": "Dp Interval Recognize Structure",
+      "sourceAbilityId": "DP.INTERVAL.RECOGNIZE_STRUCTURE",
+      "status": "PRACTICING",
+      "historicalMasteryLevel": "BASIC",
+      "estimatedLoss": 1.38,
+      "completedTasks": 0,
+      "acTasks": 0,
+      "averageScore": 0,
+      "maxHintLevelUsed": 0,
+      "passRules": {
+        "PASSED_BASIC": [
+          "Finish 2 basic tasks and 1 transfer task.",
+          "submissionCount <= 2."
+        ],
+        "PASSED_TRANSFER": [
+          "Finish one mutation or generated diagnostic task.",
+          "No repeated core mistake.",
+          "Explain why the solution still works after the variant."
+        ],
+        "CONTEST_READY": [
+          "Finish one CSP-S style task under time limit.",
+          "Reach the slot target score.",
+          "Do not use full solution."
+        ]
+      },
+      "nextAction": "Add standard and mutation tasks."
+    },
+    {
+      "unitId": "MATH_FORMULA_DERIVATION_CORE",
+      "title": "Math Formula Derivation Core",
+      "sourceAbilityId": "MATH.FORMULA_DERIVATION.CORE",
+      "status": "PRACTICING",
+      "historicalMasteryLevel": "BASIC",
+      "estimatedLoss": 0.84,
+      "completedTasks": 0,
+      "acTasks": 0,
+      "averageScore": 0,
+      "maxHintLevelUsed": 0,
+      "passRules": {
+        "PASSED_BASIC": [
+          "Finish 2 basic tasks and 1 transfer task.",
+          "submissionCount <= 2."
+        ],
+        "PASSED_TRANSFER": [
+          "Finish one mutation or generated diagnostic task.",
+          "No repeated core mistake.",
+          "Explain why the solution still works after the variant."
+        ],
+        "CONTEST_READY": [
+          "Finish one CSP-S style task under time limit.",
+          "Reach the slot target score.",
+          "Do not use full solution."
+        ]
+      },
+      "nextAction": "Add standard and mutation tasks."
+    },
+    {
+      "unitId": "DP.INTERVAL.INIT_AND_ORDER",
+      "title": "Interval DP init and order",
+      "sourceAbilityId": "DP.INTERVAL.INIT_AND_ORDER",
+      "status": "PRACTICING",
+      "historicalMasteryLevel": "BASIC",
+      "estimatedLoss": 0.83,
+      "completedTasks": 0,
+      "acTasks": 0,
+      "averageScore": 0,
+      "maxHintLevelUsed": 0,
+      "passRules": {
+        "PASSED_BASIC": [
+          "Finish 2 basic tasks and 1 transfer task.",
+          "submissionCount <= 2."
+        ],
+        "PASSED_TRANSFER": [
+          "Finish one mutation or generated diagnostic task.",
+          "No repeated core mistake.",
+          "Explain why the solution still works after the variant."
+        ],
+        "CONTEST_READY": [
+          "Finish one CSP-S style task under time limit.",
+          "Reach the slot target score.",
+          "Do not use full solution."
+        ]
+      },
+      "nextAction": "Add standard and mutation tasks."
+    },
+    {
+      "unitId": "MATH_OVERFLOW_RANGE_CORE",
+      "title": "Math Overflow Range Core",
+      "sourceAbilityId": "MATH.OVERFLOW_RANGE.CORE",
+      "status": "PRACTICING",
+      "historicalMasteryLevel": "BASIC",
+      "estimatedLoss": 0.83,
+      "completedTasks": 0,
+      "acTasks": 0,
+      "averageScore": 0,
+      "maxHintLevelUsed": 0,
+      "passRules": {
+        "PASSED_BASIC": [
+          "Finish 2 basic tasks and 1 transfer task.",
+          "submissionCount <= 2."
+        ],
+        "PASSED_TRANSFER": [
+          "Finish one mutation or generated diagnostic task.",
+          "No repeated core mistake.",
+          "Explain why the solution still works after the variant."
+        ],
+        "CONTEST_READY": [
+          "Finish one CSP-S style task under time limit.",
+          "Reach the slot target score.",
+          "Do not use full solution."
+        ]
+      },
+      "nextAction": "Add standard and mutation tasks."
+    },
+    {
+      "unitId": "DSU.SET_MEANING",
+      "title": "DSU set meaning",
+      "sourceAbilityId": "DATA_STRUCTURE.DSU.SET_MEANING",
+      "status": "PRACTICING",
+      "historicalMasteryLevel": "BASIC",
+      "estimatedLoss": 0.51,
+      "completedTasks": 0,
+      "acTasks": 0,
+      "averageScore": 0,
+      "maxHintLevelUsed": 0,
+      "passRules": {
+        "PASSED_BASIC": [
+          "Finish 2 basic tasks and 1 transfer task.",
+          "submissionCount <= 2."
+        ],
+        "PASSED_TRANSFER": [
+          "Finish one mutation or generated diagnostic task.",
+          "No repeated core mistake.",
+          "Explain why the solution still works after the variant."
+        ],
+        "CONTEST_READY": [
+          "Finish one CSP-S style task under time limit.",
+          "Reach the slot target score.",
+          "Do not use full solution."
+        ]
+      },
+      "nextAction": "Add standard and mutation tasks."
+    },
+    {
+      "unitId": "CONTEST.TIME_ALLOCATION",
+      "title": "Contest time allocation",
+      "sourceAbilityId": "COMPREHENSIVE.EXAM_STRATEGY.TIME_ALLOCATION",
+      "status": "NOT_STARTED",
+      "historicalMasteryLevel": "NO_EVIDENCE",
+      "estimatedLoss": 0,
+      "completedTasks": 0,
+      "acTasks": 0,
+      "averageScore": 0,
+      "maxHintLevelUsed": 0,
+      "passRules": {
+        "PASSED_BASIC": [
+          "Finish 2 basic tasks and 1 transfer task.",
+          "submissionCount <= 2."
+        ],
+        "PASSED_TRANSFER": [
+          "Finish one mutation or generated diagnostic task.",
+          "No repeated core mistake.",
+          "Explain why the solution still works after the variant."
+        ],
+        "CONTEST_READY": [
+          "Finish one CSP-S style task under time limit.",
+          "Reach the slot target score.",
+          "Do not use full solution."
+        ]
+      },
+      "nextAction": "Start with concept explanation for CONTEST.TIME_ALLOCATION."
+    }
+  ]
+}

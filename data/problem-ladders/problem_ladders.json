@@ -1,0 +1,1082 @@
+{
+  "generatedAt": "2026-06-25T13:28:10.796Z",
+  "items": [
+    {
+      "unitId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+      "ladder": [
+        {
+          "level": 1,
+          "name": "Concept problem",
+          "taskType": "EXPLANATION_PROBLEM",
+          "purpose": "Understand the core model before coding.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P10135",
+          "title": "Partial-score subtask decomposition",
+          "difficulty": "提高+/省选-",
+          "timeLimitMinutes": 25,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 2,
+          "name": "Basic practice",
+          "taskType": "PRACTICE_BASIC",
+          "purpose": "Finish the standard form with low pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P10135",
+          "title": "Partial-score subtask decomposition",
+          "difficulty": "提高+/省选-",
+          "timeLimitMinutes": 35,
+          "passSignal": "For 5 T3/T4 tasks, write 30/50/70 routes before coding."
+        },
+        {
+          "level": 3,
+          "name": "Standard practice",
+          "taskType": "PRACTICE_STANDARD",
+          "purpose": "Handle boundary, complexity and submission stability.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P1273",
+          "title": "Partial-score subtask decomposition",
+          "difficulty": "提高+/省选-",
+          "timeLimitMinutes": 60,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 4,
+          "name": "Isomorphic mutation",
+          "taskType": "MUTATION",
+          "purpose": "Verify transfer instead of memorizing the original problem.",
+          "problemSource": "MUTATE_EXISTING",
+          "problemId": "mut_partial_score_001",
+          "title": "Partial-score subtask decomposition",
+          "difficulty": "提高",
+          "timeLimitMinutes": 45,
+          "passSignal": "Solve without using hint level >= 3 and explain what changed from the base problem."
+        },
+        {
+          "level": 5,
+          "name": "CSP-S past/style problem",
+          "taskType": "CSP_STYLE_PROBLEM",
+          "purpose": "Verify contest transfer under time pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P5659",
+          "title": "2019T3 树上的数",
+          "difficulty": "T3",
+          "timeLimitMinutes": 110,
+          "passSignal": "Reach the slot target score without full-solution hint."
+        }
+      ]
+    },
+    {
+      "unitId": "GREEDY.PROOF_EXCHANGE",
+      "ladder": [
+        {
+          "level": 1,
+          "name": "Concept problem",
+          "taskType": "EXPLANATION_PROBLEM",
+          "purpose": "Understand the core model before coding.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "U619605",
+          "title": "Greedy proof and counterexample",
+          "difficulty": "提高+/省选-",
+          "timeLimitMinutes": 25,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 2,
+          "name": "Basic practice",
+          "taskType": "PRACTICE_BASIC",
+          "purpose": "Finish the standard form with low pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "U619605",
+          "title": "Greedy proof and counterexample",
+          "difficulty": "提高+/省选-",
+          "timeLimitMinutes": 35,
+          "passSignal": "Finish 2 basic tasks and 1 transfer task."
+        },
+        {
+          "level": 3,
+          "name": "Standard practice",
+          "taskType": "PRACTICE_STANDARD",
+          "purpose": "Handle boundary, complexity and submission stability.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P10135",
+          "title": "Greedy proof and counterexample",
+          "difficulty": "提高+/省选-",
+          "timeLimitMinutes": 60,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 4,
+          "name": "Isomorphic mutation",
+          "taskType": "MUTATION",
+          "purpose": "Verify transfer instead of memorizing the original problem.",
+          "problemSource": "MUTATE_EXISTING",
+          "problemId": "mut_greedy_006",
+          "title": "Greedy proof and counterexample",
+          "difficulty": "普及+/提高-",
+          "timeLimitMinutes": 45,
+          "passSignal": "Solve without using hint level >= 3 and explain what changed from the base problem."
+        },
+        {
+          "level": 5,
+          "name": "CSP-S past/style problem",
+          "taskType": "CSP_STYLE_PROBLEM",
+          "purpose": "Verify contest transfer under time pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P5659",
+          "title": "2019T3 树上的数",
+          "difficulty": "T3",
+          "timeLimitMinutes": 110,
+          "passSignal": "Reach the slot target score without full-solution hint."
+        }
+      ]
+    },
+    {
+      "unitId": "IMPLEMENTATION.INDEX_BOUNDARY",
+      "ladder": [
+        {
+          "level": 1,
+          "name": "Concept problem",
+          "taskType": "EXPLANATION_PROBLEM",
+          "purpose": "Understand the core model before coding.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P1113",
+          "title": "Index and boundary stability",
+          "difficulty": "提高",
+          "timeLimitMinutes": 25,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 2,
+          "name": "Basic practice",
+          "taskType": "PRACTICE_BASIC",
+          "purpose": "Finish the standard form with low pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P1113",
+          "title": "Index and boundary stability",
+          "difficulty": "提高",
+          "timeLimitMinutes": 35,
+          "passSignal": "Pass boundary checklist before submission."
+        },
+        {
+          "level": 3,
+          "name": "Standard practice",
+          "taskType": "PRACTICE_STANDARD",
+          "purpose": "Handle boundary, complexity and submission stability.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P1003",
+          "title": "Index and boundary stability",
+          "difficulty": "提高",
+          "timeLimitMinutes": 60,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 4,
+          "name": "Isomorphic mutation",
+          "taskType": "MUTATION",
+          "purpose": "Verify transfer instead of memorizing the original problem.",
+          "problemSource": "MUTATE_EXISTING",
+          "problemId": "mut_partial_score_001",
+          "title": "Index and boundary stability",
+          "difficulty": "提高",
+          "timeLimitMinutes": 45,
+          "passSignal": "Solve without using hint level >= 3 and explain what changed from the base problem."
+        },
+        {
+          "level": 5,
+          "name": "CSP-S past/style problem",
+          "taskType": "CSP_STYLE_PROBLEM",
+          "purpose": "Verify contest transfer under time pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P7075",
+          "title": "2020T1 儒略日",
+          "difficulty": "T1",
+          "timeLimitMinutes": 45,
+          "passSignal": "Reach the slot target score without full-solution hint."
+        }
+      ]
+    },
+    {
+      "unitId": "GRAPH.BASIC_MODELING",
+      "ladder": [
+        {
+          "level": 1,
+          "name": "Concept problem",
+          "taskType": "EXPLANATION_PROBLEM",
+          "purpose": "Understand the core model before coding.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P4552",
+          "title": "Graph modeling",
+          "difficulty": "提高",
+          "timeLimitMinutes": 25,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 2,
+          "name": "Basic practice",
+          "taskType": "PRACTICE_BASIC",
+          "purpose": "Finish the standard form with low pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P4552",
+          "title": "Graph modeling",
+          "difficulty": "提高",
+          "timeLimitMinutes": 35,
+          "passSignal": "Finish 2 basic tasks and 1 transfer task."
+        },
+        {
+          "level": 3,
+          "name": "Standard practice",
+          "taskType": "PRACTICE_STANDARD",
+          "purpose": "Handle boundary, complexity and submission stability.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P1001",
+          "title": "Graph modeling",
+          "difficulty": "提高",
+          "timeLimitMinutes": 60,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 4,
+          "name": "Isomorphic mutation",
+          "taskType": "MUTATION",
+          "purpose": "Verify transfer instead of memorizing the original problem.",
+          "problemSource": "MUTATE_EXISTING",
+          "problemId": "mut_dp_005",
+          "title": "Graph modeling",
+          "difficulty": "普及+/提高-",
+          "timeLimitMinutes": 45,
+          "passSignal": "Solve without using hint level >= 3 and explain what changed from the base problem."
+        },
+        {
+          "level": 5,
+          "name": "CSP-S past/style problem",
+          "taskType": "CSP_STYLE_PROBLEM",
+          "purpose": "Verify contest transfer under time pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P5659",
+          "title": "2019T3 树上的数",
+          "difficulty": "T3",
+          "timeLimitMinutes": 110,
+          "passSignal": "Reach the slot target score without full-solution hint."
+        }
+      ]
+    },
+    {
+      "unitId": "DP.LINEAR.STATE_TRANSITION",
+      "ladder": [
+        {
+          "level": 1,
+          "name": "Concept problem",
+          "taskType": "EXPLANATION_PROBLEM",
+          "purpose": "Understand the core model before coding.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "DP state and transition",
+          "difficulty": "basic+/intermediate",
+          "timeLimitMinutes": 25,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 2,
+          "name": "Basic practice",
+          "taskType": "PRACTICE_BASIC",
+          "purpose": "Finish the standard form with low pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "DP state and transition",
+          "difficulty": "basic+/intermediate",
+          "timeLimitMinutes": 35,
+          "passSignal": "Finish 2 basic tasks and 1 transfer task."
+        },
+        {
+          "level": 3,
+          "name": "Standard practice",
+          "taskType": "PRACTICE_STANDARD",
+          "purpose": "Handle boundary, complexity and submission stability.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "DP state and transition",
+          "difficulty": "basic+/intermediate",
+          "timeLimitMinutes": 60,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 4,
+          "name": "Generated diagnostic",
+          "taskType": "GENERATE_DIAGNOSTIC",
+          "purpose": "Expose the target weakness with a focused generated task.",
+          "problemSource": "GENERATE_DIAGNOSTIC",
+          "title": "DP state and transition",
+          "difficulty": "basic+/intermediate",
+          "timeLimitMinutes": 45,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 5,
+          "name": "CSP-S past/style problem",
+          "taskType": "CSP_STYLE_PROBLEM",
+          "purpose": "Verify contest transfer under time pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P5664",
+          "title": "2019T4 Emiya 家今天的饭",
+          "difficulty": "T4",
+          "timeLimitMinutes": 110,
+          "passSignal": "Reach the slot target score without full-solution hint."
+        }
+      ]
+    },
+    {
+      "unitId": "BINARY_SEARCH.ANSWER_CHECK",
+      "ladder": [
+        {
+          "level": 1,
+          "name": "Concept problem",
+          "taskType": "EXPLANATION_PROBLEM",
+          "purpose": "Understand the core model before coding.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "Binary answer check monotonicity",
+          "difficulty": "basic+/intermediate",
+          "timeLimitMinutes": 25,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 2,
+          "name": "Basic practice",
+          "taskType": "PRACTICE_BASIC",
+          "purpose": "Finish the standard form with low pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "Binary answer check monotonicity",
+          "difficulty": "basic+/intermediate",
+          "timeLimitMinutes": 35,
+          "passSignal": "Finish 2 binary-answer tasks with submissionCount <= 2."
+        },
+        {
+          "level": 3,
+          "name": "Standard practice",
+          "taskType": "PRACTICE_STANDARD",
+          "purpose": "Handle boundary, complexity and submission stability.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "Binary answer check monotonicity",
+          "difficulty": "basic+/intermediate",
+          "timeLimitMinutes": 60,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 4,
+          "name": "Generated diagnostic",
+          "taskType": "GENERATE_DIAGNOSTIC",
+          "purpose": "Expose the target weakness with a focused generated task.",
+          "problemSource": "GENERATE_DIAGNOSTIC",
+          "title": "Binary answer check monotonicity",
+          "difficulty": "basic+/intermediate",
+          "timeLimitMinutes": 45,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 5,
+          "name": "CSP-S past/style problem",
+          "taskType": "CSP_STYLE_PROBLEM",
+          "purpose": "Verify contest transfer under time pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P7075",
+          "title": "2020T1 儒略日",
+          "difficulty": "T1",
+          "timeLimitMinutes": 45,
+          "passSignal": "Reach the slot target score without full-solution hint."
+        }
+      ]
+    },
+    {
+      "unitId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+      "ladder": [
+        {
+          "level": 1,
+          "name": "Concept problem",
+          "taskType": "EXPLANATION_PROBLEM",
+          "purpose": "Understand the core model before coding.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P1113",
+          "title": "Integer range and overflow",
+          "difficulty": "提高",
+          "timeLimitMinutes": 25,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 2,
+          "name": "Basic practice",
+          "taskType": "PRACTICE_BASIC",
+          "purpose": "Finish the standard form with low pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P1113",
+          "title": "Integer range and overflow",
+          "difficulty": "提高",
+          "timeLimitMinutes": 35,
+          "passSignal": "Pass boundary checklist before submission."
+        },
+        {
+          "level": 3,
+          "name": "Standard practice",
+          "taskType": "PRACTICE_STANDARD",
+          "purpose": "Handle boundary, complexity and submission stability.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P1003",
+          "title": "Integer range and overflow",
+          "difficulty": "提高",
+          "timeLimitMinutes": 60,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 4,
+          "name": "Isomorphic mutation",
+          "taskType": "MUTATION",
+          "purpose": "Verify transfer instead of memorizing the original problem.",
+          "problemSource": "MUTATE_EXISTING",
+          "problemId": "mut_partial_score_001",
+          "title": "Integer range and overflow",
+          "difficulty": "提高",
+          "timeLimitMinutes": 45,
+          "passSignal": "Solve without using hint level >= 3 and explain what changed from the base problem."
+        },
+        {
+          "level": 5,
+          "name": "CSP-S past/style problem",
+          "taskType": "CSP_STYLE_PROBLEM",
+          "purpose": "Verify contest transfer under time pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P5657",
+          "title": "2019T1 格雷码",
+          "difficulty": "T1",
+          "timeLimitMinutes": 45,
+          "passSignal": "Reach the slot target score without full-solution hint."
+        }
+      ]
+    },
+    {
+      "unitId": "T1.SIMULATION",
+      "ladder": [
+        {
+          "level": 1,
+          "name": "Concept problem",
+          "taskType": "EXPLANATION_PROBLEM",
+          "purpose": "Understand the core model before coding.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "T1 simulation and reading stability",
+          "difficulty": "intro/basic",
+          "timeLimitMinutes": 25,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 2,
+          "name": "Basic practice",
+          "taskType": "PRACTICE_BASIC",
+          "purpose": "Finish the standard form with low pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "T1 simulation and reading stability",
+          "difficulty": "intro/basic",
+          "timeLimitMinutes": 35,
+          "passSignal": "Finish 2 basic tasks and 1 transfer task."
+        },
+        {
+          "level": 3,
+          "name": "Standard practice",
+          "taskType": "PRACTICE_STANDARD",
+          "purpose": "Handle boundary, complexity and submission stability.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "T1 simulation and reading stability",
+          "difficulty": "intro/basic",
+          "timeLimitMinutes": 60,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 4,
+          "name": "Generated diagnostic",
+          "taskType": "GENERATE_DIAGNOSTIC",
+          "purpose": "Expose the target weakness with a focused generated task.",
+          "problemSource": "GENERATE_DIAGNOSTIC",
+          "title": "T1 simulation and reading stability",
+          "difficulty": "intro/basic",
+          "timeLimitMinutes": 45,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 5,
+          "name": "CSP-S past/style problem",
+          "taskType": "CSP_STYLE_PROBLEM",
+          "purpose": "Verify contest transfer under time pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P9754",
+          "title": "2023T3 结构体",
+          "difficulty": "T3",
+          "timeLimitMinutes": 110,
+          "passSignal": "Reach the slot target score without full-solution hint."
+        }
+      ]
+    },
+    {
+      "unitId": "PARTIAL_SCORE.BRUTE_FORCE",
+      "ladder": [
+        {
+          "level": 1,
+          "name": "Concept problem",
+          "taskType": "EXPLANATION_PROBLEM",
+          "purpose": "Understand the core model before coding.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P10135",
+          "title": "Executable brute-force route",
+          "difficulty": "提高+/省选-",
+          "timeLimitMinutes": 25,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 2,
+          "name": "Basic practice",
+          "taskType": "PRACTICE_BASIC",
+          "purpose": "Finish the standard form with low pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P10135",
+          "title": "Executable brute-force route",
+          "difficulty": "提高+/省选-",
+          "timeLimitMinutes": 35,
+          "passSignal": "For 5 T3/T4 tasks, write 30/50/70 routes before coding."
+        },
+        {
+          "level": 3,
+          "name": "Standard practice",
+          "taskType": "PRACTICE_STANDARD",
+          "purpose": "Handle boundary, complexity and submission stability.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P1273",
+          "title": "Executable brute-force route",
+          "difficulty": "提高+/省选-",
+          "timeLimitMinutes": 60,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 4,
+          "name": "Isomorphic mutation",
+          "taskType": "MUTATION",
+          "purpose": "Verify transfer instead of memorizing the original problem.",
+          "problemSource": "MUTATE_EXISTING",
+          "problemId": "mut_partial_score_001",
+          "title": "Executable brute-force route",
+          "difficulty": "提高",
+          "timeLimitMinutes": 45,
+          "passSignal": "Solve without using hint level >= 3 and explain what changed from the base problem."
+        },
+        {
+          "level": 5,
+          "name": "CSP-S past/style problem",
+          "taskType": "CSP_STYLE_PROBLEM",
+          "purpose": "Verify contest transfer under time pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P5659",
+          "title": "2019T3 树上的数",
+          "difficulty": "T3",
+          "timeLimitMinutes": 110,
+          "passSignal": "Reach the slot target score without full-solution hint."
+        }
+      ]
+    },
+    {
+      "unitId": "STRING_PATTERN_BOUNDARY",
+      "ladder": [
+        {
+          "level": 1,
+          "name": "Concept problem",
+          "taskType": "EXPLANATION_PROBLEM",
+          "purpose": "Understand the core model before coding.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "String Pattern Boundary",
+          "difficulty": "basic+/intermediate",
+          "timeLimitMinutes": 25,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 2,
+          "name": "Basic practice",
+          "taskType": "PRACTICE_BASIC",
+          "purpose": "Finish the standard form with low pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "String Pattern Boundary",
+          "difficulty": "basic+/intermediate",
+          "timeLimitMinutes": 35,
+          "passSignal": "Finish 2 basic tasks and 1 transfer task."
+        },
+        {
+          "level": 3,
+          "name": "Standard practice",
+          "taskType": "PRACTICE_STANDARD",
+          "purpose": "Handle boundary, complexity and submission stability.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "String Pattern Boundary",
+          "difficulty": "basic+/intermediate",
+          "timeLimitMinutes": 60,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 4,
+          "name": "Isomorphic mutation",
+          "taskType": "MUTATION",
+          "purpose": "Verify transfer instead of memorizing the original problem.",
+          "problemSource": "MUTATE_EXISTING",
+          "problemId": "mut_partial_score_001",
+          "title": "String Pattern Boundary",
+          "difficulty": "提高",
+          "timeLimitMinutes": 45,
+          "passSignal": "Solve without using hint level >= 3 and explain what changed from the base problem."
+        },
+        {
+          "level": 5,
+          "name": "CSP-S past/style problem",
+          "taskType": "CSP_STYLE_PROBLEM",
+          "purpose": "Verify contest transfer under time pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P5658",
+          "title": "2019T2 括号树",
+          "difficulty": "T2",
+          "timeLimitMinutes": 75,
+          "passSignal": "Reach the slot target score without full-solution hint."
+        }
+      ]
+    },
+    {
+      "unitId": "RANGE_QUERY_TEMPLATE_BOUNDARY",
+      "ladder": [
+        {
+          "level": 1,
+          "name": "Concept problem",
+          "taskType": "EXPLANATION_PROBLEM",
+          "purpose": "Understand the core model before coding.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "Data Structure Range Query Template Boundary",
+          "difficulty": "basic+/intermediate",
+          "timeLimitMinutes": 25,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 2,
+          "name": "Basic practice",
+          "taskType": "PRACTICE_BASIC",
+          "purpose": "Finish the standard form with low pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "Data Structure Range Query Template Boundary",
+          "difficulty": "basic+/intermediate",
+          "timeLimitMinutes": 35,
+          "passSignal": "Finish 2 basic tasks and 1 transfer task."
+        },
+        {
+          "level": 3,
+          "name": "Standard practice",
+          "taskType": "PRACTICE_STANDARD",
+          "purpose": "Handle boundary, complexity and submission stability.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "Data Structure Range Query Template Boundary",
+          "difficulty": "basic+/intermediate",
+          "timeLimitMinutes": 60,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 4,
+          "name": "Generated diagnostic",
+          "taskType": "GENERATE_DIAGNOSTIC",
+          "purpose": "Expose the target weakness with a focused generated task.",
+          "problemSource": "GENERATE_DIAGNOSTIC",
+          "title": "Data Structure Range Query Template Boundary",
+          "difficulty": "basic+/intermediate",
+          "timeLimitMinutes": 45,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 5,
+          "name": "CSP-S past/style problem",
+          "taskType": "CSP_STYLE_PROBLEM",
+          "purpose": "Verify contest transfer under time pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P5658",
+          "title": "2019T2 括号树",
+          "difficulty": "T2",
+          "timeLimitMinutes": 75,
+          "passSignal": "Reach the slot target score without full-solution hint."
+        }
+      ]
+    },
+    {
+      "unitId": "DP_INTERVAL_RECOGNIZE_STRUCTURE",
+      "ladder": [
+        {
+          "level": 1,
+          "name": "Concept problem",
+          "taskType": "EXPLANATION_PROBLEM",
+          "purpose": "Understand the core model before coding.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P8699",
+          "title": "Dp Interval Recognize Structure",
+          "difficulty": "提高",
+          "timeLimitMinutes": 25,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 2,
+          "name": "Basic practice",
+          "taskType": "PRACTICE_BASIC",
+          "purpose": "Finish the standard form with low pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P8699",
+          "title": "Dp Interval Recognize Structure",
+          "difficulty": "提高",
+          "timeLimitMinutes": 35,
+          "passSignal": "Finish 2 basic tasks and 1 transfer task."
+        },
+        {
+          "level": 3,
+          "name": "Standard practice",
+          "taskType": "PRACTICE_STANDARD",
+          "purpose": "Handle boundary, complexity and submission stability.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "U467266",
+          "title": "Dp Interval Recognize Structure",
+          "difficulty": "提高",
+          "timeLimitMinutes": 60,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 4,
+          "name": "Isomorphic mutation",
+          "taskType": "MUTATION",
+          "purpose": "Verify transfer instead of memorizing the original problem.",
+          "problemSource": "MUTATE_EXISTING",
+          "problemId": "mut_interval_dp_004",
+          "title": "Dp Interval Recognize Structure",
+          "difficulty": "提高",
+          "timeLimitMinutes": 45,
+          "passSignal": "Solve without using hint level >= 3 and explain what changed from the base problem."
+        },
+        {
+          "level": 5,
+          "name": "CSP-S past/style problem",
+          "taskType": "CSP_STYLE_PROBLEM",
+          "purpose": "Verify contest transfer under time pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P7914",
+          "title": "2021T2 括号序列",
+          "difficulty": "T2",
+          "timeLimitMinutes": 75,
+          "passSignal": "Reach the slot target score without full-solution hint."
+        }
+      ]
+    },
+    {
+      "unitId": "MATH_FORMULA_DERIVATION_CORE",
+      "ladder": [
+        {
+          "level": 1,
+          "name": "Concept problem",
+          "taskType": "EXPLANATION_PROBLEM",
+          "purpose": "Understand the core model before coding.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P10135",
+          "title": "Math Formula Derivation Core",
+          "difficulty": "提高+/省选-",
+          "timeLimitMinutes": 25,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 2,
+          "name": "Basic practice",
+          "taskType": "PRACTICE_BASIC",
+          "purpose": "Finish the standard form with low pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P10135",
+          "title": "Math Formula Derivation Core",
+          "difficulty": "提高+/省选-",
+          "timeLimitMinutes": 35,
+          "passSignal": "Finish 2 basic tasks and 1 transfer task."
+        },
+        {
+          "level": 3,
+          "name": "Standard practice",
+          "taskType": "PRACTICE_STANDARD",
+          "purpose": "Handle boundary, complexity and submission stability.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P1273",
+          "title": "Math Formula Derivation Core",
+          "difficulty": "提高+/省选-",
+          "timeLimitMinutes": 60,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 4,
+          "name": "Isomorphic mutation",
+          "taskType": "MUTATION",
+          "purpose": "Verify transfer instead of memorizing the original problem.",
+          "problemSource": "MUTATE_EXISTING",
+          "problemId": "mut_partial_score_001",
+          "title": "Math Formula Derivation Core",
+          "difficulty": "提高",
+          "timeLimitMinutes": 45,
+          "passSignal": "Solve without using hint level >= 3 and explain what changed from the base problem."
+        },
+        {
+          "level": 5,
+          "name": "CSP-S past/style problem",
+          "taskType": "CSP_STYLE_PROBLEM",
+          "purpose": "Verify contest transfer under time pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P11232",
+          "title": "2024T2 超速检测",
+          "difficulty": "T2",
+          "timeLimitMinutes": 75,
+          "passSignal": "Reach the slot target score without full-solution hint."
+        }
+      ]
+    },
+    {
+      "unitId": "DP.INTERVAL.INIT_AND_ORDER",
+      "ladder": [
+        {
+          "level": 1,
+          "name": "Concept problem",
+          "taskType": "EXPLANATION_PROBLEM",
+          "purpose": "Understand the core model before coding.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P8699",
+          "title": "Interval DP init and order",
+          "difficulty": "提高",
+          "timeLimitMinutes": 25,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 2,
+          "name": "Basic practice",
+          "taskType": "PRACTICE_BASIC",
+          "purpose": "Finish the standard form with low pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P8699",
+          "title": "Interval DP init and order",
+          "difficulty": "提高",
+          "timeLimitMinutes": 35,
+          "passSignal": "Finish 2 basic tasks and 1 transfer task."
+        },
+        {
+          "level": 3,
+          "name": "Standard practice",
+          "taskType": "PRACTICE_STANDARD",
+          "purpose": "Handle boundary, complexity and submission stability.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "U467266",
+          "title": "Interval DP init and order",
+          "difficulty": "提高",
+          "timeLimitMinutes": 60,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 4,
+          "name": "Isomorphic mutation",
+          "taskType": "MUTATION",
+          "purpose": "Verify transfer instead of memorizing the original problem.",
+          "problemSource": "MUTATE_EXISTING",
+          "problemId": "mut_interval_dp_004",
+          "title": "Interval DP init and order",
+          "difficulty": "提高",
+          "timeLimitMinutes": 45,
+          "passSignal": "Solve without using hint level >= 3 and explain what changed from the base problem."
+        },
+        {
+          "level": 5,
+          "name": "CSP-S past/style problem",
+          "taskType": "CSP_STYLE_PROBLEM",
+          "purpose": "Verify contest transfer under time pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P7914",
+          "title": "2021T2 括号序列",
+          "difficulty": "T2",
+          "timeLimitMinutes": 75,
+          "passSignal": "Reach the slot target score without full-solution hint."
+        }
+      ]
+    },
+    {
+      "unitId": "MATH_OVERFLOW_RANGE_CORE",
+      "ladder": [
+        {
+          "level": 1,
+          "name": "Concept problem",
+          "taskType": "EXPLANATION_PROBLEM",
+          "purpose": "Understand the core model before coding.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P10135",
+          "title": "Math Overflow Range Core",
+          "difficulty": "提高+/省选-",
+          "timeLimitMinutes": 25,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 2,
+          "name": "Basic practice",
+          "taskType": "PRACTICE_BASIC",
+          "purpose": "Finish the standard form with low pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P10135",
+          "title": "Math Overflow Range Core",
+          "difficulty": "提高+/省选-",
+          "timeLimitMinutes": 35,
+          "passSignal": "Finish 2 basic tasks and 1 transfer task."
+        },
+        {
+          "level": 3,
+          "name": "Standard practice",
+          "taskType": "PRACTICE_STANDARD",
+          "purpose": "Handle boundary, complexity and submission stability.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P1273",
+          "title": "Math Overflow Range Core",
+          "difficulty": "提高+/省选-",
+          "timeLimitMinutes": 60,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 4,
+          "name": "Isomorphic mutation",
+          "taskType": "MUTATION",
+          "purpose": "Verify transfer instead of memorizing the original problem.",
+          "problemSource": "MUTATE_EXISTING",
+          "problemId": "mut_partial_score_001",
+          "title": "Math Overflow Range Core",
+          "difficulty": "提高",
+          "timeLimitMinutes": 45,
+          "passSignal": "Solve without using hint level >= 3 and explain what changed from the base problem."
+        },
+        {
+          "level": 5,
+          "name": "CSP-S past/style problem",
+          "taskType": "CSP_STYLE_PROBLEM",
+          "purpose": "Verify contest transfer under time pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P7076",
+          "title": "2020T2 动物园",
+          "difficulty": "T2",
+          "timeLimitMinutes": 75,
+          "passSignal": "Reach the slot target score without full-solution hint."
+        }
+      ]
+    },
+    {
+      "unitId": "DSU.SET_MEANING",
+      "ladder": [
+        {
+          "level": 1,
+          "name": "Concept problem",
+          "taskType": "EXPLANATION_PROBLEM",
+          "purpose": "Understand the core model before coding.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "DSU set meaning",
+          "difficulty": "basic+/intermediate",
+          "timeLimitMinutes": 25,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 2,
+          "name": "Basic practice",
+          "taskType": "PRACTICE_BASIC",
+          "purpose": "Finish the standard form with low pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "DSU set meaning",
+          "difficulty": "basic+/intermediate",
+          "timeLimitMinutes": 35,
+          "passSignal": "Finish 2 basic tasks and 1 transfer task."
+        },
+        {
+          "level": 3,
+          "name": "Standard practice",
+          "taskType": "PRACTICE_STANDARD",
+          "purpose": "Handle boundary, complexity and submission stability.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "DSU set meaning",
+          "difficulty": "basic+/intermediate",
+          "timeLimitMinutes": 60,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 4,
+          "name": "Generated diagnostic",
+          "taskType": "GENERATE_DIAGNOSTIC",
+          "purpose": "Expose the target weakness with a focused generated task.",
+          "problemSource": "GENERATE_DIAGNOSTIC",
+          "title": "DSU set meaning",
+          "difficulty": "basic+/intermediate",
+          "timeLimitMinutes": 45,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 5,
+          "name": "CSP-S past/style problem",
+          "taskType": "CSP_STYLE_PROBLEM",
+          "purpose": "Verify contest transfer under time pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "problemPid": "P14362",
+          "title": "2025T2 道路修复",
+          "difficulty": "T2",
+          "timeLimitMinutes": 75,
+          "passSignal": "Reach the slot target score without full-solution hint."
+        }
+      ]
+    },
+    {
+      "unitId": "CONTEST.TIME_ALLOCATION",
+      "ladder": [
+        {
+          "level": 1,
+          "name": "Concept problem",
+          "taskType": "EXPLANATION_PROBLEM",
+          "purpose": "Understand the core model before coding.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "Contest time allocation",
+          "difficulty": "intro/basic",
+          "timeLimitMinutes": 25,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 2,
+          "name": "Basic practice",
+          "taskType": "PRACTICE_BASIC",
+          "purpose": "Finish the standard form with low pressure.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "Contest time allocation",
+          "difficulty": "intro/basic",
+          "timeLimitMinutes": 35,
+          "passSignal": "Finish 2 basic tasks and 1 transfer task."
+        },
+        {
+          "level": 3,
+          "name": "Standard practice",
+          "taskType": "PRACTICE_STANDARD",
+          "purpose": "Handle boundary, complexity and submission stability.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "Contest time allocation",
+          "difficulty": "intro/basic",
+          "timeLimitMinutes": 60,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 4,
+          "name": "Generated diagnostic",
+          "taskType": "GENERATE_DIAGNOSTIC",
+          "purpose": "Expose the target weakness with a focused generated task.",
+          "problemSource": "GENERATE_DIAGNOSTIC",
+          "title": "Contest time allocation",
+          "difficulty": "intro/basic",
+          "timeLimitMinutes": 45,
+          "passSignal": "Record result, submissions, hint usage and failed stage."
+        },
+        {
+          "level": 5,
+          "name": "CSP-S style validation",
+          "taskType": "CSP_STYLE_PROBLEM",
+          "purpose": "Verify contest ability.",
+          "problemSource": "SELECT_EXISTING",
+          "title": "Contest time allocation",
+          "difficulty": "intro/basic",
+          "timeLimitMinutes": 100,
+          "passSignal": "Reach the slot target score within the time limit."
+        }
+      ]
+    }
+  ]
+}

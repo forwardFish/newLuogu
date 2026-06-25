@@ -1,0 +1,4648 @@
+{
+  "generatedAt": "2026-06-25T13:28:10.890Z",
+  "policy": "Do not reveal the full solution before the student has attempted lower-level hints.",
+  "items": [
+    {
+      "problemRef": "P10135",
+      "unitId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Partial-score subtask decomposition",
+            "beforeCodingQuestions": [
+              "What are the constraints?",
+              "What brute force gets 20-30 points?",
+              "What special property gets 50-70?",
+              "Can I code the partial route now?",
+              "When should I stop chasing full marks?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Partial-score subtask decomposition is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What are the constraints?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "skip brute force",
+              "no 30/50/70 route",
+              "spend too long on full solution",
+              "ignore special properties"
+            ],
+            "fixSuggestion": [
+              "For 5 T3/T4 tasks, write 30/50/70 routes before coding.",
+              "At least 3 routes are executable.",
+              "Do not use full solution before attempt.",
+              "Record actual score vs predicted route."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P10135",
+      "unitId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Partial-score subtask decomposition",
+            "beforeCodingQuestions": [
+              "What are the constraints?",
+              "What brute force gets 20-30 points?",
+              "What special property gets 50-70?",
+              "Can I code the partial route now?",
+              "When should I stop chasing full marks?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Partial-score subtask decomposition is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What are the constraints?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "skip brute force",
+              "no 30/50/70 route",
+              "spend too long on full solution",
+              "ignore special properties"
+            ],
+            "fixSuggestion": [
+              "For 5 T3/T4 tasks, write 30/50/70 routes before coding.",
+              "At least 3 routes are executable.",
+              "Do not use full solution before attempt.",
+              "Record actual score vs predicted route."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P1273",
+      "unitId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Partial-score subtask decomposition",
+            "beforeCodingQuestions": [
+              "What are the constraints?",
+              "What brute force gets 20-30 points?",
+              "What special property gets 50-70?",
+              "Can I code the partial route now?",
+              "When should I stop chasing full marks?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Partial-score subtask decomposition is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What are the constraints?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "skip brute force",
+              "no 30/50/70 route",
+              "spend too long on full solution",
+              "ignore special properties"
+            ],
+            "fixSuggestion": [
+              "For 5 T3/T4 tasks, write 30/50/70 routes before coding.",
+              "At least 3 routes are executable.",
+              "Do not use full solution before attempt.",
+              "Record actual score vs predicted route."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "mut_partial_score_001",
+      "unitId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Partial-score subtask decomposition",
+            "beforeCodingQuestions": [
+              "What are the constraints?",
+              "What brute force gets 20-30 points?",
+              "What special property gets 50-70?",
+              "Can I code the partial route now?",
+              "When should I stop chasing full marks?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Partial-score subtask decomposition is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What are the constraints?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "skip brute force",
+              "no 30/50/70 route",
+              "spend too long on full solution",
+              "ignore special properties"
+            ],
+            "fixSuggestion": [
+              "For 5 T3/T4 tasks, write 30/50/70 routes before coding.",
+              "At least 3 routes are executable.",
+              "Do not use full solution before attempt.",
+              "Record actual score vs predicted route."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P5659",
+      "unitId": "PARTIAL_SCORE.SUBTASK_ANALYSIS",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Partial-score subtask decomposition",
+            "beforeCodingQuestions": [
+              "What are the constraints?",
+              "What brute force gets 20-30 points?",
+              "What special property gets 50-70?",
+              "Can I code the partial route now?",
+              "When should I stop chasing full marks?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Partial-score subtask decomposition is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What are the constraints?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "skip brute force",
+              "no 30/50/70 route",
+              "spend too long on full solution",
+              "ignore special properties"
+            ],
+            "fixSuggestion": [
+              "For 5 T3/T4 tasks, write 30/50/70 routes before coding.",
+              "At least 3 routes are executable.",
+              "Do not use full solution before attempt.",
+              "Record actual score vs predicted route."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "U619605",
+      "unitId": "GREEDY.PROOF_EXCHANGE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Greedy proof and counterexample",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Greedy proof and counterexample is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "U619605",
+      "unitId": "GREEDY.PROOF_EXCHANGE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Greedy proof and counterexample",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Greedy proof and counterexample is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P10135",
+      "unitId": "GREEDY.PROOF_EXCHANGE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Greedy proof and counterexample",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Greedy proof and counterexample is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "mut_greedy_006",
+      "unitId": "GREEDY.PROOF_EXCHANGE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Greedy proof and counterexample",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Greedy proof and counterexample is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P5659",
+      "unitId": "GREEDY.PROOF_EXCHANGE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Greedy proof and counterexample",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Greedy proof and counterexample is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P1113",
+      "unitId": "IMPLEMENTATION.INDEX_BOUNDARY",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Index and boundary stability",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Index and boundary stability is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "off-by-one",
+              "uninitialized array",
+              "overflow",
+              "multi-test not cleared"
+            ],
+            "fixSuggestion": [
+              "Pass boundary checklist before submission.",
+              "No overflow/index/init error in 3 consecutive tasks.",
+              "submissionCount <= 2."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P1113",
+      "unitId": "IMPLEMENTATION.INDEX_BOUNDARY",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Index and boundary stability",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Index and boundary stability is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "off-by-one",
+              "uninitialized array",
+              "overflow",
+              "multi-test not cleared"
+            ],
+            "fixSuggestion": [
+              "Pass boundary checklist before submission.",
+              "No overflow/index/init error in 3 consecutive tasks.",
+              "submissionCount <= 2."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P1003",
+      "unitId": "IMPLEMENTATION.INDEX_BOUNDARY",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Index and boundary stability",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Index and boundary stability is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "off-by-one",
+              "uninitialized array",
+              "overflow",
+              "multi-test not cleared"
+            ],
+            "fixSuggestion": [
+              "Pass boundary checklist before submission.",
+              "No overflow/index/init error in 3 consecutive tasks.",
+              "submissionCount <= 2."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "mut_partial_score_001",
+      "unitId": "IMPLEMENTATION.INDEX_BOUNDARY",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Index and boundary stability",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Index and boundary stability is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "off-by-one",
+              "uninitialized array",
+              "overflow",
+              "multi-test not cleared"
+            ],
+            "fixSuggestion": [
+              "Pass boundary checklist before submission.",
+              "No overflow/index/init error in 3 consecutive tasks.",
+              "submissionCount <= 2."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P7075",
+      "unitId": "IMPLEMENTATION.INDEX_BOUNDARY",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Index and boundary stability",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Index and boundary stability is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "off-by-one",
+              "uninitialized array",
+              "overflow",
+              "multi-test not cleared"
+            ],
+            "fixSuggestion": [
+              "Pass boundary checklist before submission.",
+              "No overflow/index/init error in 3 consecutive tasks.",
+              "submissionCount <= 2."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P4552",
+      "unitId": "GRAPH.BASIC_MODELING",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Graph modeling",
+            "beforeCodingQuestions": [
+              "What is a node?",
+              "What is an edge?",
+              "What does distance/connectivity mean?",
+              "What is the start/end state?",
+              "What is the complexity?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Graph modeling is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What is a node?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "wrong node meaning",
+              "missing edge condition",
+              "INF/init bug",
+              "complexity too high"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P4552",
+      "unitId": "GRAPH.BASIC_MODELING",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Graph modeling",
+            "beforeCodingQuestions": [
+              "What is a node?",
+              "What is an edge?",
+              "What does distance/connectivity mean?",
+              "What is the start/end state?",
+              "What is the complexity?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Graph modeling is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What is a node?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "wrong node meaning",
+              "missing edge condition",
+              "INF/init bug",
+              "complexity too high"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P1001",
+      "unitId": "GRAPH.BASIC_MODELING",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Graph modeling",
+            "beforeCodingQuestions": [
+              "What is a node?",
+              "What is an edge?",
+              "What does distance/connectivity mean?",
+              "What is the start/end state?",
+              "What is the complexity?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Graph modeling is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What is a node?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "wrong node meaning",
+              "missing edge condition",
+              "INF/init bug",
+              "complexity too high"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "mut_dp_005",
+      "unitId": "GRAPH.BASIC_MODELING",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Graph modeling",
+            "beforeCodingQuestions": [
+              "What is a node?",
+              "What is an edge?",
+              "What does distance/connectivity mean?",
+              "What is the start/end state?",
+              "What is the complexity?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Graph modeling is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What is a node?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "wrong node meaning",
+              "missing edge condition",
+              "INF/init bug",
+              "complexity too high"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P5659",
+      "unitId": "GRAPH.BASIC_MODELING",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Graph modeling",
+            "beforeCodingQuestions": [
+              "What is a node?",
+              "What is an edge?",
+              "What does distance/connectivity mean?",
+              "What is the start/end state?",
+              "What is the complexity?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Graph modeling is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What is a node?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "wrong node meaning",
+              "missing edge condition",
+              "INF/init bug",
+              "complexity too high"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P5664",
+      "unitId": "DP.LINEAR.STATE_TRANSITION",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "DP state and transition",
+            "beforeCodingQuestions": [
+              "What does dp state mean?",
+              "Where does the transition come from?",
+              "What is initialized?",
+              "What is the iteration order?",
+              "What is the complexity?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of DP state and transition is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does dp state mean?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "state not defined",
+              "wrong transition source",
+              "bad initialization",
+              "wrong enumeration order"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P7075",
+      "unitId": "BINARY_SEARCH.ANSWER_CHECK",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Binary answer check monotonicity",
+            "beforeCodingQuestions": [
+              "What is the answer?",
+              "What does check(x) mean?",
+              "Which direction is monotonic?",
+              "What are l/r boundaries?",
+              "What is the complexity?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Binary answer check monotonicity is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What is the answer?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "check meaning reversed",
+              "wrong monotonic direction",
+              "l/r boundary error",
+              "mid update infinite loop",
+              "wrong answer range"
+            ],
+            "fixSuggestion": [
+              "Finish 2 binary-answer tasks with submissionCount <= 2.",
+              "Write natural-language check meaning.",
+              "Explain monotonicity.",
+              "No boundary convergence error."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P1113",
+      "unitId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Integer range and overflow",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Integer range and overflow is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "off-by-one",
+              "uninitialized array",
+              "overflow",
+              "multi-test not cleared"
+            ],
+            "fixSuggestion": [
+              "Pass boundary checklist before submission.",
+              "No overflow/index/init error in 3 consecutive tasks.",
+              "submissionCount <= 2."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P1113",
+      "unitId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Integer range and overflow",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Integer range and overflow is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "off-by-one",
+              "uninitialized array",
+              "overflow",
+              "multi-test not cleared"
+            ],
+            "fixSuggestion": [
+              "Pass boundary checklist before submission.",
+              "No overflow/index/init error in 3 consecutive tasks.",
+              "submissionCount <= 2."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P1003",
+      "unitId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Integer range and overflow",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Integer range and overflow is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "off-by-one",
+              "uninitialized array",
+              "overflow",
+              "multi-test not cleared"
+            ],
+            "fixSuggestion": [
+              "Pass boundary checklist before submission.",
+              "No overflow/index/init error in 3 consecutive tasks.",
+              "submissionCount <= 2."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "mut_partial_score_001",
+      "unitId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Integer range and overflow",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Integer range and overflow is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "off-by-one",
+              "uninitialized array",
+              "overflow",
+              "multi-test not cleared"
+            ],
+            "fixSuggestion": [
+              "Pass boundary checklist before submission.",
+              "No overflow/index/init error in 3 consecutive tasks.",
+              "submissionCount <= 2."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P5657",
+      "unitId": "IMPLEMENTATION.INTEGER_OVERFLOW",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Integer range and overflow",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Integer range and overflow is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "off-by-one",
+              "uninitialized array",
+              "overflow",
+              "multi-test not cleared"
+            ],
+            "fixSuggestion": [
+              "Pass boundary checklist before submission.",
+              "No overflow/index/init error in 3 consecutive tasks.",
+              "submissionCount <= 2."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P9754",
+      "unitId": "T1.SIMULATION",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "T1 simulation and reading stability",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of T1 simulation and reading stability is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P10135",
+      "unitId": "PARTIAL_SCORE.BRUTE_FORCE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Executable brute-force route",
+            "beforeCodingQuestions": [
+              "What are the constraints?",
+              "What brute force gets 20-30 points?",
+              "What special property gets 50-70?",
+              "Can I code the partial route now?",
+              "When should I stop chasing full marks?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Executable brute-force route is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What are the constraints?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "skip brute force",
+              "no 30/50/70 route",
+              "spend too long on full solution",
+              "ignore special properties"
+            ],
+            "fixSuggestion": [
+              "For 5 T3/T4 tasks, write 30/50/70 routes before coding.",
+              "At least 3 routes are executable.",
+              "Do not use full solution before attempt.",
+              "Record actual score vs predicted route."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P10135",
+      "unitId": "PARTIAL_SCORE.BRUTE_FORCE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Executable brute-force route",
+            "beforeCodingQuestions": [
+              "What are the constraints?",
+              "What brute force gets 20-30 points?",
+              "What special property gets 50-70?",
+              "Can I code the partial route now?",
+              "When should I stop chasing full marks?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Executable brute-force route is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What are the constraints?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "skip brute force",
+              "no 30/50/70 route",
+              "spend too long on full solution",
+              "ignore special properties"
+            ],
+            "fixSuggestion": [
+              "For 5 T3/T4 tasks, write 30/50/70 routes before coding.",
+              "At least 3 routes are executable.",
+              "Do not use full solution before attempt.",
+              "Record actual score vs predicted route."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P1273",
+      "unitId": "PARTIAL_SCORE.BRUTE_FORCE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Executable brute-force route",
+            "beforeCodingQuestions": [
+              "What are the constraints?",
+              "What brute force gets 20-30 points?",
+              "What special property gets 50-70?",
+              "Can I code the partial route now?",
+              "When should I stop chasing full marks?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Executable brute-force route is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What are the constraints?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "skip brute force",
+              "no 30/50/70 route",
+              "spend too long on full solution",
+              "ignore special properties"
+            ],
+            "fixSuggestion": [
+              "For 5 T3/T4 tasks, write 30/50/70 routes before coding.",
+              "At least 3 routes are executable.",
+              "Do not use full solution before attempt.",
+              "Record actual score vs predicted route."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "mut_partial_score_001",
+      "unitId": "PARTIAL_SCORE.BRUTE_FORCE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Executable brute-force route",
+            "beforeCodingQuestions": [
+              "What are the constraints?",
+              "What brute force gets 20-30 points?",
+              "What special property gets 50-70?",
+              "Can I code the partial route now?",
+              "When should I stop chasing full marks?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Executable brute-force route is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What are the constraints?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "skip brute force",
+              "no 30/50/70 route",
+              "spend too long on full solution",
+              "ignore special properties"
+            ],
+            "fixSuggestion": [
+              "For 5 T3/T4 tasks, write 30/50/70 routes before coding.",
+              "At least 3 routes are executable.",
+              "Do not use full solution before attempt.",
+              "Record actual score vs predicted route."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P5659",
+      "unitId": "PARTIAL_SCORE.BRUTE_FORCE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Executable brute-force route",
+            "beforeCodingQuestions": [
+              "What are the constraints?",
+              "What brute force gets 20-30 points?",
+              "What special property gets 50-70?",
+              "Can I code the partial route now?",
+              "When should I stop chasing full marks?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Executable brute-force route is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What are the constraints?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "skip brute force",
+              "no 30/50/70 route",
+              "spend too long on full solution",
+              "ignore special properties"
+            ],
+            "fixSuggestion": [
+              "For 5 T3/T4 tasks, write 30/50/70 routes before coding.",
+              "At least 3 routes are executable.",
+              "Do not use full solution before attempt.",
+              "Record actual score vs predicted route."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "mut_partial_score_001",
+      "unitId": "STRING_PATTERN_BOUNDARY",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "String Pattern Boundary",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of String Pattern Boundary is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P5658",
+      "unitId": "STRING_PATTERN_BOUNDARY",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "String Pattern Boundary",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of String Pattern Boundary is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P5658",
+      "unitId": "RANGE_QUERY_TEMPLATE_BOUNDARY",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Data Structure Range Query Template Boundary",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Data Structure Range Query Template Boundary is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P8699",
+      "unitId": "DP_INTERVAL_RECOGNIZE_STRUCTURE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Dp Interval Recognize Structure",
+            "beforeCodingQuestions": [
+              "What does dp state mean?",
+              "Where does the transition come from?",
+              "What is initialized?",
+              "What is the iteration order?",
+              "What is the complexity?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Dp Interval Recognize Structure is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does dp state mean?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "state not defined",
+              "wrong transition source",
+              "bad initialization",
+              "wrong enumeration order"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P8699",
+      "unitId": "DP_INTERVAL_RECOGNIZE_STRUCTURE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Dp Interval Recognize Structure",
+            "beforeCodingQuestions": [
+              "What does dp state mean?",
+              "Where does the transition come from?",
+              "What is initialized?",
+              "What is the iteration order?",
+              "What is the complexity?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Dp Interval Recognize Structure is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does dp state mean?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "state not defined",
+              "wrong transition source",
+              "bad initialization",
+              "wrong enumeration order"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "U467266",
+      "unitId": "DP_INTERVAL_RECOGNIZE_STRUCTURE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Dp Interval Recognize Structure",
+            "beforeCodingQuestions": [
+              "What does dp state mean?",
+              "Where does the transition come from?",
+              "What is initialized?",
+              "What is the iteration order?",
+              "What is the complexity?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Dp Interval Recognize Structure is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does dp state mean?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "state not defined",
+              "wrong transition source",
+              "bad initialization",
+              "wrong enumeration order"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "mut_interval_dp_004",
+      "unitId": "DP_INTERVAL_RECOGNIZE_STRUCTURE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Dp Interval Recognize Structure",
+            "beforeCodingQuestions": [
+              "What does dp state mean?",
+              "Where does the transition come from?",
+              "What is initialized?",
+              "What is the iteration order?",
+              "What is the complexity?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Dp Interval Recognize Structure is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does dp state mean?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "state not defined",
+              "wrong transition source",
+              "bad initialization",
+              "wrong enumeration order"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P7914",
+      "unitId": "DP_INTERVAL_RECOGNIZE_STRUCTURE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Dp Interval Recognize Structure",
+            "beforeCodingQuestions": [
+              "What does dp state mean?",
+              "Where does the transition come from?",
+              "What is initialized?",
+              "What is the iteration order?",
+              "What is the complexity?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Dp Interval Recognize Structure is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does dp state mean?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "state not defined",
+              "wrong transition source",
+              "bad initialization",
+              "wrong enumeration order"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P10135",
+      "unitId": "MATH_FORMULA_DERIVATION_CORE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Math Formula Derivation Core",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Math Formula Derivation Core is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P10135",
+      "unitId": "MATH_FORMULA_DERIVATION_CORE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Math Formula Derivation Core",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Math Formula Derivation Core is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P1273",
+      "unitId": "MATH_FORMULA_DERIVATION_CORE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Math Formula Derivation Core",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Math Formula Derivation Core is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "mut_partial_score_001",
+      "unitId": "MATH_FORMULA_DERIVATION_CORE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Math Formula Derivation Core",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Math Formula Derivation Core is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P11232",
+      "unitId": "MATH_FORMULA_DERIVATION_CORE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Math Formula Derivation Core",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Math Formula Derivation Core is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P8699",
+      "unitId": "DP.INTERVAL.INIT_AND_ORDER",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Interval DP init and order",
+            "beforeCodingQuestions": [
+              "What does dp state mean?",
+              "Where does the transition come from?",
+              "What is initialized?",
+              "What is the iteration order?",
+              "What is the complexity?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Interval DP init and order is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does dp state mean?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "state not defined",
+              "wrong transition source",
+              "bad initialization",
+              "wrong enumeration order"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P8699",
+      "unitId": "DP.INTERVAL.INIT_AND_ORDER",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Interval DP init and order",
+            "beforeCodingQuestions": [
+              "What does dp state mean?",
+              "Where does the transition come from?",
+              "What is initialized?",
+              "What is the iteration order?",
+              "What is the complexity?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Interval DP init and order is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does dp state mean?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "state not defined",
+              "wrong transition source",
+              "bad initialization",
+              "wrong enumeration order"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "U467266",
+      "unitId": "DP.INTERVAL.INIT_AND_ORDER",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Interval DP init and order",
+            "beforeCodingQuestions": [
+              "What does dp state mean?",
+              "Where does the transition come from?",
+              "What is initialized?",
+              "What is the iteration order?",
+              "What is the complexity?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Interval DP init and order is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does dp state mean?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "state not defined",
+              "wrong transition source",
+              "bad initialization",
+              "wrong enumeration order"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "mut_interval_dp_004",
+      "unitId": "DP.INTERVAL.INIT_AND_ORDER",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Interval DP init and order",
+            "beforeCodingQuestions": [
+              "What does dp state mean?",
+              "Where does the transition come from?",
+              "What is initialized?",
+              "What is the iteration order?",
+              "What is the complexity?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Interval DP init and order is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does dp state mean?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "state not defined",
+              "wrong transition source",
+              "bad initialization",
+              "wrong enumeration order"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P7914",
+      "unitId": "DP.INTERVAL.INIT_AND_ORDER",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Interval DP init and order",
+            "beforeCodingQuestions": [
+              "What does dp state mean?",
+              "Where does the transition come from?",
+              "What is initialized?",
+              "What is the iteration order?",
+              "What is the complexity?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Interval DP init and order is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does dp state mean?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "state not defined",
+              "wrong transition source",
+              "bad initialization",
+              "wrong enumeration order"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P10135",
+      "unitId": "MATH_OVERFLOW_RANGE_CORE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Math Overflow Range Core",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Math Overflow Range Core is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P10135",
+      "unitId": "MATH_OVERFLOW_RANGE_CORE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Math Overflow Range Core",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Math Overflow Range Core is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P1273",
+      "unitId": "MATH_OVERFLOW_RANGE_CORE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Math Overflow Range Core",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Math Overflow Range Core is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "mut_partial_score_001",
+      "unitId": "MATH_OVERFLOW_RANGE_CORE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Math Overflow Range Core",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Math Overflow Range Core is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P7076",
+      "unitId": "MATH_OVERFLOW_RANGE_CORE",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "Math Overflow Range Core",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of Math Overflow Range Core is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    },
+    {
+      "problemRef": "P14362",
+      "unitId": "DSU.SET_MEANING",
+      "stagePlan": [
+        {
+          "stage": "PRE_SOLVE",
+          "content": {
+            "thisProblemTrains": "DSU set meaning",
+            "beforeCodingQuestions": [
+              "What does this unit train?",
+              "What can go wrong?",
+              "How do I verify it before submission?"
+            ],
+            "doNotReveal": [
+              "full code",
+              "full solution"
+            ]
+          }
+        },
+        {
+          "stage": "HINTS",
+          "hints": [
+            {
+              "level": 1,
+              "type": "DIRECTION",
+              "content": "Identify which part of DSU set meaning is being tested."
+            },
+            {
+              "level": 2,
+              "type": "MODEL",
+              "content": "Write the model in natural language before writing code."
+            },
+            {
+              "level": 3,
+              "type": "KEY_STEP",
+              "content": "What does this unit train?"
+            },
+            {
+              "level": 4,
+              "type": "SOLUTION_OUTLINE",
+              "content": "Describe the algorithm route, but still write the code independently."
+            },
+            {
+              "level": 5,
+              "type": "FULL_SOLUTION",
+              "content": "Use only after the attempt is finished; mark hasSeenSolution=true in the log."
+            }
+          ]
+        },
+        {
+          "stage": "AFTER_SUBMISSION",
+          "content": {
+            "diagnosis": "Compare the actual failed stage with the target ability. Do not treat AC after high-level hints as full mastery.",
+            "errorTypes": [
+              "unclear model",
+              "boundary not checked",
+              "no small-case verification"
+            ],
+            "fixSuggestion": [
+              "Finish 2 basic tasks and 1 transfer task.",
+              "submissionCount <= 2.",
+              "Can explain model and complexity.",
+              "No repeated core mistake."
+            ]
+          }
+        },
+        {
+          "stage": "REVIEW",
+          "content": {
+            "summaryQuestions": [
+              "What was the key idea?",
+              "Which hint level did you use?",
+              "Which failed stage appeared?",
+              "Should this unit be redone tomorrow?"
+            ],
+            "needRedoRule": "Redo if score < target, submissionCount > 2, hintLevelUsed >= 3, or hasSeenSolution=true."
+          }
+        }
+      ]
+    }
+  ]
+}

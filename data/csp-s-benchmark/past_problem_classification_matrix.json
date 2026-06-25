@@ -1,0 +1,271 @@
+{
+  "generatedAt": "2026-06-25T06:50:23.216Z",
+  "bySlot": {
+    "T1": 7,
+    "T2": 7,
+    "T3": 7,
+    "T4": 7
+  },
+  "byAbility": {
+    "MATH.RECURRENCE.CORE": 1,
+    "IMPLEMENTATION.INTEGER_OVERFLOW": 2,
+    "DATA_STRUCTURE.RANGE_QUERY.TEMPLATE_BOUNDARY": 6,
+    "STRING.PATTERN.BOUNDARY": 5,
+    "GRAPH.MODELING.GRAPH_ABSTRACTION": 6,
+    "GREEDY.PROOF.EXCHANGE_ARGUMENT": 11,
+    "PARTIAL_SCORE.SUBTASK_ANALYSIS": 14,
+    "DP.GENERAL.STATE_TRANSITION": 7,
+    "MATH.COMBINATORICS.CORE": 2,
+    "BASIC_ALGORITHM.BINARY_SEARCH.CHECK_MONOTONICITY": 3,
+    "MATH.PERIODICITY.CORE": 1,
+    "IMPLEMENTATION.INDEX_BOUNDARY": 4,
+    "MATH.OVERFLOW_RANGE.CORE": 1,
+    "BASIC_ALGORITHM.SIMULATION_ENUMERATION.CASE_SPLIT": 3,
+    "DP.INTERVAL.RECOGNIZE_STRUCTURE": 2,
+    "DP.INTERVAL.INIT_AND_ORDER": 1,
+    "SEARCH.DFS_BFS.PRUNING_AND_STATE": 1,
+    "MATH.INVARIANT.CORE": 2,
+    "PROGRAMMING_BASICS.READING.CONSTRAINT_EXTRACTION": 1,
+    "MATH.FORMULA_DERIVATION.CORE": 1,
+    "DATA_STRUCTURE.DSU.SET_MEANING": 1
+  },
+  "byPrimary": {
+    "MATH": 8,
+    "IMPLEMENTATION": 6,
+    "DATA_STRUCTURE": 7,
+    "STRING": 5,
+    "GRAPH": 6,
+    "GREEDY": 11,
+    "PARTIAL_SCORE": 14,
+    "DP": 9,
+    "BASIC_ALGORITHM": 6,
+    "SEARCH": 1,
+    "PROGRAMMING_BASICS": 1
+  },
+  "needsReview": [
+    {
+      "year": 2019,
+      "slot": "T1",
+      "luoguPid": "P5657",
+      "title": "格雷码",
+      "status": "NEEDS_MANUAL_CONFIRMATION",
+      "note": "2019 had more public CSP-S tasks; keep manual confirmation for the exact four-task benchmark."
+    },
+    {
+      "year": 2019,
+      "slot": "T2",
+      "luoguPid": "P5658",
+      "title": "括号树",
+      "status": "NEEDS_MANUAL_CONFIRMATION",
+      "note": "2019 exact slot policy needs manual confirmation."
+    },
+    {
+      "year": 2019,
+      "slot": "T3",
+      "luoguPid": "P5659",
+      "title": "树上的数",
+      "status": "NEEDS_MANUAL_CONFIRMATION",
+      "note": "2019 exact slot policy needs manual confirmation."
+    },
+    {
+      "year": 2019,
+      "slot": "T4",
+      "luoguPid": "P5664",
+      "title": "Emiya 家今天的饭",
+      "status": "NEEDS_MANUAL_CONFIRMATION",
+      "note": "2019 exact slot policy needs manual confirmation."
+    },
+    {
+      "year": 2020,
+      "slot": "T1",
+      "luoguPid": "P7075",
+      "title": "儒略日",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2020 public list seed."
+    },
+    {
+      "year": 2020,
+      "slot": "T2",
+      "luoguPid": "P7076",
+      "title": "动物园",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2020 public list seed."
+    },
+    {
+      "year": 2020,
+      "slot": "T3",
+      "luoguPid": "P7077",
+      "title": "函数调用",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2020 public list seed."
+    },
+    {
+      "year": 2020,
+      "slot": "T4",
+      "luoguPid": "P7078",
+      "title": "贪吃蛇",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2020 public list seed."
+    },
+    {
+      "year": 2021,
+      "slot": "T1",
+      "luoguPid": "P7913",
+      "title": "廊桥分配",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2021 public list seed."
+    },
+    {
+      "year": 2021,
+      "slot": "T2",
+      "luoguPid": "P7914",
+      "title": "括号序列",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2021 public list seed."
+    },
+    {
+      "year": 2021,
+      "slot": "T3",
+      "luoguPid": "P7915",
+      "title": "回文",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2021 public list seed."
+    },
+    {
+      "year": 2021,
+      "slot": "T4",
+      "luoguPid": "P7916",
+      "title": "交通规划",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2021 public list seed."
+    },
+    {
+      "year": 2022,
+      "slot": "T1",
+      "luoguPid": "P8817",
+      "title": "假期计划",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2022 public list seed."
+    },
+    {
+      "year": 2022,
+      "slot": "T2",
+      "luoguPid": "P8818",
+      "title": "策略游戏",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2022 public list seed."
+    },
+    {
+      "year": 2022,
+      "slot": "T3",
+      "luoguPid": "P8819",
+      "title": "星战",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2022 public list seed."
+    },
+    {
+      "year": 2022,
+      "slot": "T4",
+      "luoguPid": "P8820",
+      "title": "数据传输",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2022 public list seed."
+    },
+    {
+      "year": 2023,
+      "slot": "T1",
+      "luoguPid": "P9752",
+      "title": "密码锁",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2023 public list seed."
+    },
+    {
+      "year": 2023,
+      "slot": "T2",
+      "luoguPid": "P9753",
+      "title": "消消乐",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2023 public list seed."
+    },
+    {
+      "year": 2023,
+      "slot": "T3",
+      "luoguPid": "P9754",
+      "title": "结构体",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2023 public list seed."
+    },
+    {
+      "year": 2023,
+      "slot": "T4",
+      "luoguPid": "P9755",
+      "title": "种树",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2023 public list seed."
+    },
+    {
+      "year": 2024,
+      "slot": "T1",
+      "luoguPid": "P11231",
+      "title": "决斗",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2024 public list seed."
+    },
+    {
+      "year": 2024,
+      "slot": "T2",
+      "luoguPid": "P11232",
+      "title": "超速检测",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2024 public list seed."
+    },
+    {
+      "year": 2024,
+      "slot": "T3",
+      "luoguPid": "P11233",
+      "title": "染色",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2024 public list seed."
+    },
+    {
+      "year": 2024,
+      "slot": "T4",
+      "luoguPid": "P11234",
+      "title": "擂台游戏",
+      "status": "NEEDS_REVIEW",
+      "note": "Luogu CSP-S 2024 public list seed."
+    },
+    {
+      "year": 2025,
+      "slot": "T1",
+      "luoguPid": "P14361",
+      "title": "社团招新",
+      "status": "NEEDS_MANUAL_CONFIRMATION",
+      "note": "Luogu CSP-S 2025 public list seed; please confirm official order."
+    },
+    {
+      "year": 2025,
+      "slot": "T2",
+      "luoguPid": "P14362",
+      "title": "道路修复",
+      "status": "NEEDS_MANUAL_CONFIRMATION",
+      "note": "Luogu CSP-S 2025 public list seed; please confirm official order."
+    },
+    {
+      "year": 2025,
+      "slot": "T3",
+      "luoguPid": "P14363",
+      "title": "谐音替换",
+      "status": "NEEDS_MANUAL_CONFIRMATION",
+      "note": "Luogu CSP-S 2025 public list seed; please confirm problem id/order."
+    },
+    {
+      "year": 2025,
+      "slot": "T4",
+      "luoguPid": "P14364",
+      "title": "员工招聘",
+      "status": "NEEDS_MANUAL_CONFIRMATION",
+      "note": "Luogu CSP-S 2025 public list seed; please confirm problem id/order."
+    }
+  ]
+}
