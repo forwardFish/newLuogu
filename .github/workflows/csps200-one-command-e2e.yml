@@ -1,0 +1,68 @@
+name: CSP-S 200 One Command E2E
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/csps200-*.ts'
+      - 'config/**'
+      - 'data/**'
+      - 'package.json'
+      - '.github/workflows/csps200-one-command-e2e.yml'
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.8.0
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile=false
+
+      - name: Run CSP-S 200 E2E
+        run: pnpm tsx scripts/csps200-run-e2e.ts
+
+      - name: Print E2E summary
+        if: always()
+        run: |
+          echo '--- e2e_summary.md ---'
+          cat data/local-loop/e2e_summary.md || true
+          echo '--- today.md ---'
+          sed -n '1,220p' data/local-loop/today.md || true
+          echo '--- data_quality_block.md ---'
+          cat data/local-loop/data_quality_block.md || true
+
+      - name: Upload E2E reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: csps200-one-command-e2e-reports
+          path: |
+            data/local-loop/e2e_summary.json
+            data/local-loop/e2e_summary.md
+            data/local-loop/student_analysis_report.json
+            data/local-loop/student_analysis_report.md
+            data/local-loop/analysis_quality_report.json
+            data/local-loop/today.json
+            data/local-loop/today.md
+            data/local-loop/data_quality_block.json
+            data/local-loop/data_quality_block.md
+            data/local-loop/training_log_validation.json
+            data/local-loop/training_log_validation.md
+            data/local-loop/loop_verify_report.json
+            data/local-loop/loop_verify_report.md
+          if-no-files-found: ignore
