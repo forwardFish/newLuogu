@@ -1,0 +1,33 @@
+n = int(input())
+coeffs = list(map(int, input().split()))
+result = []
+is_first = True
+
+for i in range(n + 1):
+    coeff = coeffs[i]
+    degree = n - i
+    if coeff == 0:
+        continue
+    # 处理符号
+    if is_first:
+        sign = '-' if coeff < 0 else ''
+        is_first = False
+    else:
+        sign = '+' if coeff > 0 else '-'
+    # 处理系数和次数部分
+    abs_coeff = abs(coeff)
+    if degree == 0:
+        term = str(abs_coeff)
+    else:
+        term = '' if abs_coeff == 1 else str(abs_coeff)
+    # 构建当前项的部分
+    if degree == 0:
+        part = term
+    elif degree == 1:
+        part = term + 'x'
+    else:
+        part = term + 'x^' + str(degree)
+    # 合并符号和部分
+    result.append(sign + part)
+
+print(''.join(result))

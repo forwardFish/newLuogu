@@ -1,0 +1,27 @@
+s_prime = input().strip()
+c = int(input())
+
+chars = []
+current_char = None
+current_num = ''
+
+for ch in s_prime:
+    if ch.isalpha():
+        if current_char is not None:
+            chars.append((current_char, int(current_num)))
+            current_num = ''
+        current_char = ch
+    else:
+        current_num += ch
+if current_char is not None:
+    chars.append((current_char, int(current_num)))
+
+total = sum(count for char, count in chars)
+pos = c % total
+
+current_sum = 0
+for char, count in chars:
+    if current_sum + count > pos:
+        print(char)
+        exit()
+    current_sum += count

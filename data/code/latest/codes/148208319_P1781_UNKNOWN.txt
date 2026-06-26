@@ -1,0 +1,13 @@
+n=int(input())
+l=[]
+for i in range(n):
+    a=int(input())
+    l.append(a)
+c=[]
+c=l
+c.sort()
+for i in range(n):
+    if(l[i]==c[n-1]):
+        d=i;
+print(d+1)
+print(c[n-1])

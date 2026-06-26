@@ -1,0 +1,50 @@
+n = int(input())
+grid = [[0] * (n + 1) for _ in range(n + 1)]
+while True:
+    x, y, val = map(int, input().split())
+    if x == 0 and y == 0 and val == 0:
+        break
+    grid[x][y] = val
+
+max_step = 2 * n - 2
+INF = float('-inf')
+dp = [[[INF] * (n + 1) for _ in range(n + 1)] for _ in range(max_step + 1)]
+dp[0][1][1] = grid[1][1]
+
+for s in range(1, max_step + 1):
+    for i1 in range(max(1, s + 2 - n), min(n, s + 1) + 1):
+        j1 = s + 2 - i1
+        if j1 < 1 or j1 > n:
+            continue
+        for i2 in range(max(1, s + 2 - n), min(n, s + 1) + 1):
+            j2 = s + 2 - i2
+            if j2 < 1 or j2 > n:
+                continue
+            prev_i1 = []
+            for delta in (-1, 0):
+                pi1 = i1 + delta
+                if 1 <= pi1 <= n:
+                    pj1 = (s - 1) + 2 - pi1
+                    if 1 <= pj1 <= n:
+                        prev_i1.append(pi1)
+            prev_i2 = []
+            for delta in (-1, 0):
+                pi2 = i2 + delta
+                if 1 <= pi2 <= n:
+                    pj2 = (s - 1) + 2 - pi2
+                    if 1 <= pj2 <= n:
+                        prev_i2.append(pi2)
+            max_prev = INF
+            for pi1 in prev_i1:
+                for pi2 in prev_i2:
+                    if dp[s - 1][pi1][pi2] > max_prev:
+                        max_prev = dp[s - 1][pi1][pi2]
+            if max_prev == INF:
+                continue
+            if i1 == i2 and j1 == j2:
+                current_val = grid[i1][j1]
+            else:
+                current_val = grid[i1][j1] + grid[i2][j2]
+            dp[s][i1][i2] = max_prev + current_val
+
+print(dp[max_step][n][n])

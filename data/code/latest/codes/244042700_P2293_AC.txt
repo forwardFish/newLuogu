@@ -1,0 +1,20 @@
+from sys import set_int_max_str_digits
+set_int_max_str_digits(10010)
+x=int(input())
+y=int(input())
+a=0
+b=1
+while b**x<=y: 
+    a=b;b=b*2
+
+while a+1<b:
+    mid=(a+b)//2
+    if  mid**x<=y:
+        a=mid
+    else:
+        b=mid
+if a**x<=y:
+    print(a)
+else:
+    print(b)
+
