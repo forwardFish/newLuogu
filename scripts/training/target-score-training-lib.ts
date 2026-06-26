@@ -3,8 +3,12 @@ import path from "path";
 
 type JsonObject = Record<string, unknown>;
 type Slot = "T1" | "T2" | "T3" | "T4";
+type SlotKey = "t1" | "t2" | "t3" | "t4";
 type TrainingPriority = "P0" | "P1" | "P2";
 type MasteryStatus = "NOT_STARTED" | "LEARNING" | "PRACTICING" | "UNSTABLE" | "PASSED_BASIC" | "PASSED_TRANSFER" | "CONTEST_READY";
+
+const SLOT_KEYS: SlotKey[] = ["t1", "t2", "t3", "t4"];
+const SLOT_BY_KEY: Record<SlotKey, Slot> = { t1: "T1", t2: "T2", t3: "T3", t4: "T4" };
 
 type TargetTrainingOptions = {
   targetScore: number;
@@ -53,7 +57,7 @@ type GoalScorePlan = {
   generatedAt: string;
   targetScore: number;
   weeklyHours: number;
-  scoreBreakdown: Record<"t1" | "t2" | "t3" | "t4", {
+  scoreBreakdown: Record<SlotKey, {
     targetRange: [number, number];
     targetScore: number;
     role: string;
@@ -61,6 +65,17 @@ type GoalScorePlan = {
     currentEstimate: number;
     gap: number;
   }>;
+  calibration?: {
+    source: string;
+    method: string;
+    baselineYear: number;
+    baselineExamName: string;
+    baselineTotalScore: number;
+    rawEstimateTotal: number;
+    calibratedTotal: number;
+    confidence: string;
+    note: string;
+  } | null;
   trainingStrategy: {
     t1Ratio: number;
     t2Ratio: number;
@@ -170,6 +185,16 @@ type TrainingSettlement = {
   };
 };
 
+type StudentExamBaseline = {
+  year: number;
+  examName: string;
+  totalScore: number;
+  perSlotScores?: Partial<Record<Slot, number | null>>;
+  source: string;
+  confidence: string;
+  notes?: string[];
+};
+
 export function parseTargetTrainingOptions(argv = process.argv.slice(2)): TargetTrainingOptions {
   const args: Record<string, string> = {};
   for (let index = 0; index < argv.length; index += 1) {
@@ -198,17 +223,19 @@ export function parseTargetTrainingOptions(argv = process.argv.slice(2)): Target
 
 export async function buildGoalScorePlan(options: TargetTrainingOptions): Promise<GoalScorePlan> {
   const losses = await loadExpectedLosses(options);
+  const baseline = await loadLatestExamBaseline(options);
   const tLoss = lossBySlot(losses);
   const t1Target = clamp(Math.round(options.targetScore * 0.45), 80, 100);
   const t2Target = clamp(Math.round(options.targetScore * 0.35), 60, 90);
   const t3Target = clamp(Math.round(options.targetScore * 0.18), 30, 60);
   const t4Target = clamp(options.targetScore - t1Target - t2Target - t3Target, 0, 30);
-  const current = {
+  const rawCurrent: Record<SlotKey, number> = {
     t1: clamp(t1Target - Math.round(tLoss.T1), 0, 100),
     t2: clamp(t2Target - Math.round(tLoss.T2), 0, 100),
     t3: clamp(t3Target - Math.round(tLoss.T3), 0, 100),
     t4: clamp(t4Target - Math.round(tLoss.T4), 0, 100),
   };
+  const { current, calibration } = calibrateCurrentEstimate(rawCurrent, baseline, options.targetScore);
   const plan: GoalScorePlan = {
     generatedAt: new Date().toISOString(),
     targetScore: options.targetScore,
@@ -219,6 +246,7 @@ export async function buildGoalScorePlan(options: TargetTrainingOptions): Promis
       t3: scorePart([30, 60], t3Target, "Partial-score zone. Train 30/50/70 routes.", "P1", current.t3),
       t4: scorePart([0, 30], t4Target, "Strategy score. Take brute force and special properties without hurting T1/T2.", "P2", current.t4),
     },
+    calibration,
     trainingStrategy: buildTrainingStrategy(options.targetScore, tLoss),
     route: [
       "First protect T1 and T2. A 200-point route cannot tolerate unstable low-level mistakes.",
@@ -541,6 +569,93 @@ function scorePart(targetRange: [number, number], targetScore: number, role: str
   };
 }
 
+function calibrateCurrentEstimate(
+  rawCurrent: Record<SlotKey, number>,
+  baseline: StudentExamBaseline | null,
+  targetScore: number,
+): { current: Record<SlotKey, number>; calibration: GoalScorePlan["calibration"] } {
+  if (!baseline || !Number.isFinite(baseline.totalScore)) {
+    return { current: rawCurrent, calibration: null };
+  }
+  const rawEstimateTotal = sumSlotScores(rawCurrent);
+  const baselineTotalScore = clamp(Math.round(baseline.totalScore), 0, targetScore);
+  const explicitSlotScores = Object.fromEntries(
+    SLOT_KEYS.flatMap((key) => {
+      const value = baseline.perSlotScores?.[SLOT_BY_KEY[key]];
+      return Number.isFinite(value) ? [[key, clamp(Math.round(Number(value)), 0, 100)]] : [];
+    }),
+  ) as Partial<Record<SlotKey, number>>;
+  const method = Object.keys(explicitSlotScores).length > 0
+    ? "official_slot_scores_with_proportional_unknown_slots"
+    : "official_total_score_proportional_slot_estimate";
+  const current = Object.keys(explicitSlotScores).length > 0
+    ? distributeUnknownSlots(rawCurrent, explicitSlotScores, baselineTotalScore)
+    : scaleSlotScoresToTotal(rawCurrent, baselineTotalScore);
+
+  return {
+    current,
+    calibration: {
+      source: baseline.source,
+      method,
+      baselineYear: baseline.year,
+      baselineExamName: baseline.examName,
+      baselineTotalScore,
+      rawEstimateTotal,
+      calibratedTotal: sumSlotScores(current),
+      confidence: baseline.confidence,
+      note: Object.keys(explicitSlotScores).length > 0
+        ? "Official per-slot scores are used where present; missing slots are distributed by model proportion."
+        : "Only the official total score is known, so T1/T2/T3/T4 are proportional estimates, not real slot scores.",
+    },
+  };
+}
+
+function distributeUnknownSlots(rawCurrent: Record<SlotKey, number>, knownScores: Partial<Record<SlotKey, number>>, targetTotal: number): Record<SlotKey, number> {
+  const knownTotal = SLOT_KEYS.reduce((sum, key) => sum + (knownScores[key] ?? 0), 0);
+  const unknownKeys = SLOT_KEYS.filter((key) => knownScores[key] === undefined);
+  const unknownTarget = clamp(targetTotal - knownTotal, 0, unknownKeys.length * 100);
+  const scaledUnknown = scaleSlotSubsetToTotal(rawCurrent, unknownKeys, unknownTarget);
+  return normalizeSlotTotal({
+    t1: knownScores.t1 ?? scaledUnknown.t1 ?? 0,
+    t2: knownScores.t2 ?? scaledUnknown.t2 ?? 0,
+    t3: knownScores.t3 ?? scaledUnknown.t3 ?? 0,
+    t4: knownScores.t4 ?? scaledUnknown.t4 ?? 0,
+  }, targetTotal);
+}
+
+function scaleSlotScoresToTotal(rawCurrent: Record<SlotKey, number>, targetTotal: number): Record<SlotKey, number> {
+  return scaleSlotSubsetToTotal(rawCurrent, SLOT_KEYS, targetTotal);
+}
+
+function scaleSlotSubsetToTotal(rawCurrent: Record<SlotKey, number>, keys: SlotKey[], targetTotal: number): Record<SlotKey, number> {
+  const rawTotal = keys.reduce((sum, key) => sum + rawCurrent[key], 0);
+  const weighted = Object.fromEntries(SLOT_KEYS.map((key) => [key, 0])) as Record<SlotKey, number>;
+  if (keys.length === 0 || targetTotal <= 0) return weighted;
+  for (const key of keys) {
+    weighted[key] = rawTotal > 0
+      ? clamp(Math.round(rawCurrent[key] / rawTotal * targetTotal), 0, 100)
+      : clamp(Math.round(targetTotal / keys.length), 0, 100);
+  }
+  return normalizeSlotTotal(weighted, targetTotal, keys);
+}
+
+function normalizeSlotTotal(scores: Record<SlotKey, number>, targetTotal: number, adjustableKeys = SLOT_KEYS): Record<SlotKey, number> {
+  const output = { ...scores };
+  let diff = targetTotal - sumSlotScores(output);
+  while (diff !== 0) {
+    const direction = diff > 0 ? 1 : -1;
+    const key = adjustableKeys.find((item) => direction > 0 ? output[item] < 100 : output[item] > 0);
+    if (!key) break;
+    output[key] += direction;
+    diff -= direction;
+  }
+  return output;
+}
+
+function sumSlotScores(scores: Record<SlotKey, number>): number {
+  return SLOT_KEYS.reduce((sum, key) => sum + scores[key], 0);
+}
+
 function buildTrainingStrategy(targetScore: number, tLoss: Record<Slot, number>) {
   const totalLoss = Math.max(1, tLoss.T1 + tLoss.T2 + tLoss.T3 + tLoss.T4);
   const base = targetScore <= 220
@@ -787,6 +902,18 @@ function renderGoalScorePlan(plan: GoalScorePlan): string {
     "|---|---:|---:|---:|---|---|",
     ...Object.entries(plan.scoreBreakdown).map(([slot, item]) => `| ${slot.toUpperCase()} | ${item.targetScore} | ${item.currentEstimate} | ${item.gap} | ${item.role} | ${item.trainingPriority} |`),
     "",
+    ...(plan.calibration ? [
+      "## Calibration",
+      "",
+      `- Source: ${plan.calibration.source}`,
+      `- Method: ${plan.calibration.method}`,
+      `- Baseline: ${plan.calibration.baselineYear} ${plan.calibration.baselineExamName}, total ${plan.calibration.baselineTotalScore}`,
+      `- Raw estimate total: ${plan.calibration.rawEstimateTotal}`,
+      `- Calibrated total: ${plan.calibration.calibratedTotal}`,
+      `- Confidence: ${plan.calibration.confidence}`,
+      `- Note: ${plan.calibration.note}`,
+      "",
+    ] : []),
     "## Training Ratio",
     "",
     ...Object.entries(plan.trainingStrategy).map(([key, value]) => `- ${key}: ${value}`),
@@ -1063,6 +1190,15 @@ async function loadSkillMastery(options: TargetTrainingOptions): Promise<SkillMa
 async function loadPastProblems(options: TargetTrainingOptions): Promise<JsonObject[]> {
   const filePath = path.join(options.benchmarkDir, "past_problems_2019_2025.json");
   return (await readJsonIfExists<{ problems?: JsonObject[] }>(filePath, { problems: [] })).problems ?? [];
+}
+
+async function loadLatestExamBaseline(options: TargetTrainingOptions): Promise<StudentExamBaseline | null> {
+  const filePath = path.join(options.benchmarkDir, "student_exam_baselines.json");
+  const value = await readJsonIfExists<{ items?: StudentExamBaseline[] }>(filePath, { items: [] });
+  const items = (value.items ?? [])
+    .filter((item) => Number.isFinite(item.year) && Number.isFinite(item.totalScore))
+    .sort((a, b) => a.year - b.year);
+  return items.at(-1) ?? null;
 }
 
 async function loadSelectedTrainingTasks(options: TargetTrainingOptions): Promise<JsonObject[]> {

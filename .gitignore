@@ -7,4 +7,9 @@ coverage
 *.tsbuildinfo
 prisma/migrations
 data/
+!data/
+data/*
+!data/csp-s-benchmark/
+data/csp-s-benchmark/*
+!data/csp-s-benchmark/student_exam_baselines.json
 .tmp/

@@ -16,6 +16,17 @@ type GoalScorePlan = {
   targetScore: number;
   weeklyHours: number;
   scoreBreakdown: Record<string, ScorePart>;
+  calibration?: {
+    source: string;
+    method: string;
+    baselineYear: number;
+    baselineExamName: string;
+    baselineTotalScore: number;
+    rawEstimateTotal: number;
+    calibratedTotal: number;
+    confidence: string;
+    note: string;
+  } | null;
 };
 
 type DailyTask = {
@@ -89,6 +100,43 @@ type MasteryReport = {
     averageScore: number;
     nextAction: string;
   }>;
+};
+
+type PastProblemRecord = {
+  result?: string;
+  score?: number;
+  submissionCount?: number;
+  isBlindTest?: boolean;
+  source?: string;
+};
+
+type PastProblem = {
+  year: number;
+  slot: string;
+  luoguPid: string;
+  title: string;
+  studentRecord?: PastProblemRecord | null;
+};
+
+type PastProblemDb = {
+  problems?: PastProblem[];
+};
+
+type SlotEvidence = {
+  slot: string;
+  modelEstimate: number;
+  targetScore: number;
+  records: Array<{
+    year: number;
+    luoguPid: string;
+    title: string;
+    result: string;
+    score: number | null;
+    source: string;
+    submissionCount: number | null;
+  }>;
+  averageScore: number | null;
+  sourceNote: string;
 };
 
 async function readData<T>(relativePath: string): Promise<T | null> {
@@ -216,12 +264,47 @@ function Stat({ label, value, note }: { label: string; value: string; note?: str
   );
 }
 
+function buildSlotEvidence(goal: GoalScorePlan, db: PastProblemDb | null): SlotEvidence[] {
+  return ["t1", "t2", "t3", "t4"].map((slotKey) => {
+    const slot = slotKey.toUpperCase();
+    const part = goal.scoreBreakdown[slotKey];
+    const records = (db?.problems ?? [])
+      .filter((problem) => problem.slot === slot && problem.studentRecord)
+      .map((problem) => ({
+        year: problem.year,
+        luoguPid: problem.luoguPid,
+        title: problem.title,
+        result: problem.studentRecord?.result ?? "UNKNOWN",
+        score: Number.isFinite(problem.studentRecord?.score) ? Number(problem.studentRecord?.score) : null,
+        source: problem.studentRecord?.source ?? (problem.studentRecord?.isBlindTest ? "blind_test" : "manual_or_unknown"),
+        submissionCount: Number.isFinite(problem.studentRecord?.submissionCount) ? Number(problem.studentRecord?.submissionCount) : null,
+      }))
+      .sort((a, b) => a.year - b.year);
+    const scored = records.map((item) => item.score).filter((value): value is number => Number.isFinite(value));
+    const averageScore = scored.length > 0 ? scored.reduce((sum, value) => sum + value, 0) / scored.length : null;
+    const hasBlind = records.some((item) => item.source === "blind_test");
+    return {
+      slot,
+      modelEstimate: part?.currentEstimate ?? 0,
+      targetScore: part?.targetScore ?? 0,
+      records,
+      averageScore,
+      sourceNote: records.length === 0
+        ? "当前数据集没有该 T 位历史真题证据。"
+        : hasBlind
+        ? "包含盲测证据。"
+        : "只有洛谷历史推断，不是正式考试证据。",
+    };
+  });
+}
+
 export default async function TrainingPage() {
-  const [goal, daily, settlement, mastery] = await Promise.all([
+  const [goal, daily, settlement, mastery, pastProblemDb] = await Promise.all([
     readData<GoalScorePlan>("training-goal/goal_score_plan.json"),
     readData<DailyTrainingPlan>("training/daily_training_plan.json"),
     readData<TrainingSettlement>("training/training_settlement.json"),
     readData<MasteryReport>("mastery/ability_mastery.json"),
+    readData<PastProblemDb>("csp-s-benchmark/past_problems_2019_2025.json"),
   ]);
 
   if (!goal || !daily) {
@@ -244,6 +327,8 @@ export default async function TrainingPage() {
   const currentScore = scoreItems.reduce((sum, [, item]) => sum + item.currentEstimate, 0);
   const totalGap = Math.max(0, goal.targetScore - currentScore);
   const currentAfterSettlement = settlement?.today.scoreProxyAfter ?? currentScore;
+  const slotEvidence = buildSlotEvidence(goal, pastProblemDb);
+  const calibration = goal.calibration;
   const xpAfter = settlement?.level.xpAfter ?? 0;
   const nextLevelXp = settlement?.level.nextLevelXp ?? 300;
   const doneCount = settlement?.today.completedTasks ?? 0;
@@ -304,13 +389,61 @@ export default async function TrainingPage() {
 
         <section style={grid}>
           <Stat label="目标分" value={`${goal.targetScore}`} note={`每周 ${goal.weeklyHours} 小时`} />
-          <Stat label="当前代理分" value={`${formatNumber(currentAfterSettlement)}`} note="不是正式模拟赛分，只是训练进度" />
+          <Stat
+            label="训练代理分"
+            value={`${formatNumber(currentAfterSettlement)}`}
+            note={calibration ? `已按 ${calibration.baselineExamName} ${calibration.baselineTotalScore} 校准` : "未接入正式考试基线"}
+          />
           <Stat label="目标缺口" value={`${formatNumber(settlement?.today.distanceAfter ?? totalGap)} 分`} note="越小越接近目标" />
           <Stat label="预计风险下降" value={`${formatNumber(settlement?.today.riskReduced ?? 0, 2)} 分`} note="做完题后自动更新" />
         </section>
 
         <section style={panel}>
           <Title>今日闯关路线</Title>
+          <div style={{ marginBottom: 14 }}>
+            <Title>T1/T2/T3/T4 历年真题证据</Title>
+            <p style={{ ...muted, marginTop: 0 }}>
+              训练代理分不是正式考试分。下面只展示系统已经找到的 CSP-S 历年真题做题记录，用来判断 T1/T2/T3/T4 的估算是否可信。
+            </p>
+            {calibration ? (
+              <p style={muted}>
+                当前总分已从原始模型估计 {calibration.rawEstimateTotal} 校准到正式基线 {calibration.calibratedTotal}。
+                因为没有真实 T 位分项，下面的 T1/T2/T3/T4 仍是比例估计，不是正式分项。
+              </p>
+            ) : null}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(245px, 1fr))", gap: 12 }}>
+              {slotEvidence.map((item) => (
+                <div key={item.slot} style={card}>
+                  <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}>
+                    <strong>{item.slot}</strong>
+                    <span style={badge}>
+                      估计 {formatNumber(item.modelEstimate)} / 目标 {formatNumber(item.targetScore)}
+                    </span>
+                  </div>
+                  <span style={muted}>
+                    历史均分: {item.averageScore === null ? "暂无数据" : formatNumber(item.averageScore)} | 记录数: {item.records.length}
+                  </span>
+                  <span style={muted}>{item.sourceNote}</span>
+                  <div style={{ display: "grid", gap: 6 }}>
+                    {item.records.slice(0, 4).map((record) => (
+                      <div key={`${item.slot}-${record.year}-${record.luoguPid}`} style={{ borderTop: "1px solid #edf2f7", paddingTop: 6 }}>
+                        <strong>{record.year} {record.luoguPid}</strong>
+                        <div style={muted}>{record.title}</div>
+                        <div style={muted}>
+                          得分 {record.score === null ? "unknown" : record.score} | {record.result} | 提交 {record.submissionCount ?? "?"}
+                        </div>
+                      </div>
+                    ))}
+                    {item.records.length === 0 ? <span style={muted}>未找到该 T 位的 CSP-S 历史做题记录。</span> : null}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p style={{ ...muted, marginBottom: 0 }}>
+              已知问题：只有正式总分基线，没有 T1/T2/T3/T4 分项。下一步需要录入一次完整模拟赛或真题重测分项，才能校准每个 T 位。
+            </p>
+          </div>
+
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(185px, 1fr))", gap: 12 }}>
             {daily.tasks.map((task, index) => {
               const isDone = index < doneCount;

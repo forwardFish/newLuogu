@@ -1,6 +1,6 @@
 ﻿# Daily training settlement
 
-Date: 2026-06-25
+Date: 2026-06-26
 Target score: 200
 
 ## Growth
@@ -9,8 +9,8 @@ Target score: 200
 - XP gained: 0
 - Level: 1 -> 1 (Training starter)
 - Upgraded: no
-- Score proxy: 158 -> 158
-- Distance to target: 42 -> 42
+- Score proxy: 104 -> 104
+- Distance to target: 96 -> 96
 - Estimated risk reduced: 0
 
 ## Ability Changes
