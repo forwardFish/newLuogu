@@ -1,0 +1,89 @@
+name: CSP-S 200 E2E
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/csps200-*.ts'
+      - 'config/**'
+      - 'data/**'
+      - 'package.json'
+      - '.github/workflows/csps200-e2e.yml'
+
+jobs:
+  csps200-e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.8.0
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile=false
+
+      - name: Show available data
+        run: |
+          echo '--- data files ---'
+          find data -maxdepth 4 -type f | sort | sed -n '1,120p' || true
+          echo '--- config ---'
+          sed -n '1,160p' config/local-loop.example.json || true
+
+      - name: Initialize local loop config if missing
+        run: pnpm csps200:init
+
+      - name: Build student analysis
+        run: pnpm csps200:student-analysis
+
+      - name: Select today tasks
+        run: pnpm csps200:select-today
+
+      - name: Validate training log
+        run: pnpm tsx scripts/csps200-validate-training-log.ts || true
+
+      - name: Verify loop
+        run: pnpm tsx scripts/csps200-verify-loop.ts || true
+
+      - name: Print generated reports
+        if: always()
+        run: |
+          echo '--- student_analysis_report.md ---'
+          sed -n '1,220p' data/local-loop/student_analysis_report.md || true
+          echo '--- analysis_quality_report.json ---'
+          cat data/local-loop/analysis_quality_report.json || true
+          echo '--- today.md ---'
+          sed -n '1,220p' data/local-loop/today.md || true
+          echo '--- data_quality_block.md ---'
+          cat data/local-loop/data_quality_block.md || true
+          echo '--- loop_verify_report.md ---'
+          cat data/local-loop/loop_verify_report.md || true
+
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: csps200-e2e-reports
+          path: |
+            data/local-loop/student_analysis_report.json
+            data/local-loop/student_analysis_report.md
+            data/local-loop/analysis_quality_report.json
+            data/local-loop/today.json
+            data/local-loop/today.md
+            data/local-loop/data_quality_block.json
+            data/local-loop/data_quality_block.md
+            data/local-loop/training_log_validation.json
+            data/local-loop/training_log_validation.md
+            data/local-loop/loop_verify_report.json
+            data/local-loop/loop_verify_report.md
+          if-no-files-found: ignore
