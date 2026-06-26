@@ -76,13 +76,13 @@ async function buildSummary(results: StepResult[]) {
     failedSteps,
     steps: results.map((step) => ({ name: step.name, command: step.command, ok: step.ok, exitCode: step.exitCode, stderrTail: tail(step.stderr) })),
     reports: {
-      studentAnalysis: fileState("data/local-loop/student_analysis_report.json"),
-      analysisQuality: fileState("data/local-loop/analysis_quality_report.json"),
-      today: fileState("data/local-loop/today.json"),
-      todayMarkdown: fileState("data/local-loop/today.md"),
-      dataQualityBlock: fileState("data/local-loop/data_quality_block.md"),
-      trainingLogValidation: fileState("data/local-loop/training_log_validation.json"),
-      loopVerify: fileState("data/local-loop/loop_verify_report.json"),
+      studentAnalysis: await fileState("data/local-loop/student_analysis_report.json"),
+      analysisQuality: await fileState("data/local-loop/analysis_quality_report.json"),
+      today: await fileState("data/local-loop/today.json"),
+      todayMarkdown: await fileState("data/local-loop/today.md"),
+      dataQualityBlock: await fileState("data/local-loop/data_quality_block.md"),
+      trainingLogValidation: await fileState("data/local-loop/training_log_validation.json"),
+      loopVerify: await fileState("data/local-loop/loop_verify_report.json"),
     },
     snapshot: {
       estimatedCurrentScore: getNumber(student, "scoreEstimate.estimatedCurrentScore"),
@@ -128,9 +128,9 @@ function renderSummary(summary: Obj) {
   ].join("\n");
 }
 
-function fileState(relativePath: string) {
+async function fileState(relativePath: string) {
   const absolute = path.join(ROOT, relativePath);
-  return { path: relativePath, exists: false, absolute };
+  return { path: relativePath, exists: await exists(absolute), absolute };
 }
 
 async function writeJson(filePath: string, value: unknown) {
