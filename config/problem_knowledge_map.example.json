@@ -1,0 +1,31 @@
+{
+  "$schema": "csps200.problemKnowledgeMap.v1",
+  "$description": "Map Luogu problem ids to CSP-S abilities. Copy this file to data/problem-metadata/problem_knowledge_map.json and fill problems used by the student.",
+  "P1000": {
+    "title": "A+B Problem",
+    "tags": ["implementation", "basic"],
+    "difficulty": 800,
+    "cspSlot": "T1",
+    "abilities": ["T1_STABILITY", "IMPLEMENTATION"],
+    "phase": "104_TO_120",
+    "source": "example"
+  },
+  "Pxxxx": {
+    "title": "Example CSP-S T2 modeling problem",
+    "tags": ["binary_search", "greedy", "modeling"],
+    "difficulty": 1600,
+    "cspSlot": "T2",
+    "abilities": ["T2_MODELING", "COMPLEXITY"],
+    "phase": "120_TO_160",
+    "source": "manual"
+  },
+  "Pyyyy": {
+    "title": "Example CSP-S T3 partial-score problem",
+    "tags": ["dp", "partial_score"],
+    "difficulty": 2100,
+    "cspSlot": "T3",
+    "abilities": ["T3_PARTIAL_SCORE", "STATE_DESIGN"],
+    "phase": "160_TO_180",
+    "source": "manual"
+  }
+}
