@@ -1,0 +1,82 @@
+{
+  "version": "csps-200-v1",
+  "targetScore": 200,
+  "targetName": "CSP-S 200 分路线",
+  "principle": "先保 T1，再攻 T2，再练 T3 部分分；T4 只做策略验证，不能影响 T1/T2。",
+  "slotTarget": {
+    "T1": [90, 100],
+    "T2": [65, 80],
+    "T3": [30, 50],
+    "T4": [0, 10]
+  },
+  "dailyMix": {
+    "foundation": 1,
+    "weakness": 1,
+    "reviewOrTransfer": 1
+  },
+  "weeklyMix": {
+    "normalDays": 5,
+    "mockDay": 1,
+    "reviewDay": 1
+  },
+  "firstWeekThemes": [
+    {
+      "day": 1,
+      "theme": "T1 稳定性诊断",
+      "tasks": ["简单实现/模拟", "边界/数组风险题", "旧错题复盘"]
+    },
+    {
+      "day": 2,
+      "theme": "二分 / 贪心 / 前缀类 T2 入口",
+      "tasks": ["保分题", "二分或贪心题", "同类迁移题"]
+    },
+    {
+      "day": 3,
+      "theme": "基础 DP",
+      "tasks": ["T1 保分题", "线性 DP / 背包 DP", "旧 DP 错题复盘"]
+    },
+    {
+      "day": 4,
+      "theme": "图论基础",
+      "tasks": ["保分题", "BFS/最短路/并查集", "图建模复盘题"]
+    },
+    {
+      "day": 5,
+      "theme": "综合中档题",
+      "tasks": ["T1 限时题", "T2 综合题", "短板模块复盘"]
+    },
+    {
+      "day": 6,
+      "theme": "CSP-S 四题模拟",
+      "tasks": ["T1", "T2", "T3", "T4"]
+    },
+    {
+      "day": 7,
+      "theme": "复盘与调整",
+      "tasks": ["重做失败题", "整理错因", "生成下周计划"]
+    }
+  ],
+  "logFields": [
+    "date",
+    "unitId",
+    "problemPid",
+    "taskType",
+    "result",
+    "score",
+    "timeMinutes",
+    "submissionCount",
+    "hintLevelUsed",
+    "hasSeenSolution",
+    "errorTypes",
+    "failedStage",
+    "studentSummary",
+    "needRedo"
+  ],
+  "decisionRules": {
+    "t1Collapse": "如果 T1 或基础题连续失败，下周减少难题，增加基础稳定性和旧题重写。",
+    "t2Weak": "如果 T2 建模题无法独立推进，继续二分/DP/图论入口训练，不急着加 T3 难题。",
+    "t3Zero": "如果 T3 无法写出 30 分路线，下周固定部分分拆解训练。",
+    "hintHeavy": "如果看提示或题解比例高，掌握度不得升级，下一天必须重做或同类迁移。",
+    "cleanAc": "如果连续独立 AC 且提交次数低，可以小幅提高难度或转入迁移题。"
+  }
+}
