@@ -82,7 +82,18 @@
     "csp:loss": "tsx scripts/csp-benchmark/calculate-expected-score-loss.ts",
     "csp:report": "tsx scripts/csp-benchmark/generate-first-prize-gap-report.ts",
     "csp:diagnostic": "tsx scripts/csp-benchmark/select-diagnostic-past-problems.ts",
-    "csp:all": "tsx scripts/csp-benchmark/build-csp-benchmark-system.ts"
+    "csp:all": "tsx scripts/csp-benchmark/build-csp-benchmark-system.ts",
+    "csps200:init": "tsx scripts/csps200-local-loop.ts --action init",
+    "csps200:diagnose": "tsx scripts/csps200-local-loop.ts --action diagnose",
+    "csps200:student-analysis": "tsx scripts/csps200-local-loop.ts --action student-analysis",
+    "csps200:plan": "tsx scripts/csps200-local-loop.ts --action plan",
+    "csps200:today": "tsx scripts/csps200-local-loop.ts --action today",
+    "csps200:select-today": "tsx scripts/csps200-task-selector.ts",
+    "csps200:verify": "tsx scripts/csps200-local-loop.ts --action verify",
+    "csps200:log": "tsx scripts/csps200-local-loop.ts --action log",
+    "csps200:settle": "tsx scripts/csps200-local-loop.ts --action settle",
+    "csps200:parent-day": "tsx scripts/csps200-ai-post-analysis.ts --action daily",
+    "csps200:parent-week": "tsx scripts/csps200-ai-post-analysis.ts --action week --week 1"
   },
   "dependencies": {
     "@prisma/client": "^6.10.1",
