@@ -37,13 +37,16 @@ export default function AnalyzePage() {
       })
     });
     const baseline = await baselineResponse.json();
-    setLog((current) => `${current}\n${JSON.stringify(baseline, null, 2)}`);
+    setLog((current) => `${current}\n${JSON.stringify(baseline, null, 2)}\ngenerating student analysis v2...`);
+    const analysisResponse = await fetch(`/api/student-analysis-v2?subjectId=${subject.subjectId}&syncJobId=${sync.syncJobId}`);
+    const analysis = await analysisResponse.json();
+    setLog((current) => `${current}\n${JSON.stringify(analysis, null, 2)}`);
   }
 
   return (
-    <main style={{ maxWidth: 880, margin: "0 auto", padding: 24 }}>
+    <main style={{ maxWidth: 1080, margin: "0 auto", padding: 24 }}>
       <h1>AI OI Coach MVP</h1>
-      <p>功能优先的最小调试入口。页面不做美化。</p>
+      <p>功能优先的最小调试入口。现在会输出 Baseline 和 Student Analysis V2。</p>
       <div style={{ display: "grid", gap: 12, maxWidth: 420 }}>
         <input
           value={uid}
@@ -59,7 +62,7 @@ export default function AnalyzePage() {
           Run full analysis
         </button>
       </div>
-      <pre style={{ marginTop: 24, padding: 16, background: "#111827", color: "#f9fafb", overflow: "auto" }}>
+      <pre style={{ marginTop: 24, padding: 16, background: "#111827", color: "#f9fafb", overflow: "auto", whiteSpace: "pre-wrap" }}>
         {log}
       </pre>
     </main>
