@@ -41,6 +41,10 @@ jobs:
         run: |
           echo '--- e2e_summary.md ---'
           cat data/local-loop/e2e_summary.md || true
+          echo '--- mock_calibration.md ---'
+          cat data/local-loop/mock_calibration.md || true
+          echo '--- problem_knowledge_map_report.md ---'
+          cat data/problem-metadata/problem_knowledge_map_report.md || true
           echo '--- today.md ---'
           sed -n '1,220p' data/local-loop/today.md || true
           echo '--- data_quality_block.md ---'
@@ -57,6 +61,9 @@ jobs:
             data/local-loop/student_analysis_report.json
             data/local-loop/student_analysis_report.md
             data/local-loop/analysis_quality_report.json
+            data/local-loop/mock_calibration.json
+            data/local-loop/mock_calibration.md
+            data/local-loop/calibrated_student_analysis.md
             data/local-loop/today.json
             data/local-loop/today.md
             data/local-loop/data_quality_block.json
@@ -65,4 +72,6 @@ jobs:
             data/local-loop/training_log_validation.md
             data/local-loop/loop_verify_report.json
             data/local-loop/loop_verify_report.md
+            data/problem-metadata/problem_knowledge_map.json
+            data/problem-metadata/problem_knowledge_map_report.md
           if-no-files-found: ignore
