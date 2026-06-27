@@ -29,9 +29,10 @@ async function main() {
   const strict = args.strict === "true" || args.strict === "1";
   const steps: Array<[string, string[]]> = [
     ["init", ["tsx", "scripts/csps200-local-loop.ts", "--action", "init"]],
-    ["problem-metadata", ["tsx", "scripts/csps200-build-problem-metadata.ts"]],
+    ["build-problem-metadata", ["tsx", "scripts/csps200-build-problem-metadata.ts"]],
     ["student-analysis", ["tsx", "scripts/csps200-student-analysis.ts"]],
     ["mock-calibration", ["tsx", "scripts/csps200-mock-calibration.ts"]],
+    ["apply-calibration", ["tsx", "scripts/csps200-apply-calibration.ts"]],
     ["select-today", ["tsx", "scripts/csps200-task-selector.ts"]],
     ["validate-training-log", ["tsx", "scripts/csps200-validate-training-log.ts"]],
     ["verify-loop", ["tsx", "scripts/csps200-verify-loop.ts"]],
@@ -69,8 +70,7 @@ async function buildSummary(results: StepResult[]) {
   const today = await readJsonIfExists<Obj>(path.join(LOCAL_DIR, "today.json"), {});
   const verify = await readJsonIfExists<Obj>(path.join(LOCAL_DIR, "loop_verify_report.json"), {});
   const validation = await readJsonIfExists<Obj>(path.join(LOCAL_DIR, "training_log_validation.json"), {});
-  const mockCalibration = await readJsonIfExists<Obj>(path.join(LOCAL_DIR, "mock_calibration_report.json"), {});
-  const metadataReport = await readJsonIfExists<Obj>(path.join(ROOT, "data", "problem-metadata", "problem_metadata_coverage_report.json"), {});
+  const calibration = await readJsonIfExists<Obj>(path.join(LOCAL_DIR, "mock_calibration.json"), {});
   const dataQuality = getString(quality, "dataQuality.overall") || getString(student, "sourceQuality.overall") || "UNKNOWN";
   const failedSteps = results.filter((step) => !step.ok).map((step) => step.name);
   return {
@@ -80,16 +80,15 @@ async function buildSummary(results: StepResult[]) {
     failedSteps,
     steps: results.map((step) => ({ name: step.name, command: step.command, ok: step.ok, exitCode: step.exitCode, stderrTail: tail(step.stderr) })),
     reports: {
+      problemMetadata: await fileState("data/problem-metadata/problem_knowledge_map.json"),
       studentAnalysis: await fileState("data/local-loop/student_analysis_report.json"),
       analysisQuality: await fileState("data/local-loop/analysis_quality_report.json"),
+      mockCalibration: await fileState("data/local-loop/mock_calibration.json"),
       today: await fileState("data/local-loop/today.json"),
       todayMarkdown: await fileState("data/local-loop/today.md"),
       dataQualityBlock: await fileState("data/local-loop/data_quality_block.md"),
       trainingLogValidation: await fileState("data/local-loop/training_log_validation.json"),
       loopVerify: await fileState("data/local-loop/loop_verify_report.json"),
-      mockCalibration: await fileState("data/local-loop/mock_calibration_report.json"),
-      problemMetadata: await fileState("data/problem-metadata/problem_knowledge_map.json"),
-      problemMetadataReport: await fileState("data/problem-metadata/problem_metadata_coverage_report.json"),
     },
     snapshot: {
       estimatedCurrentScore: getNumber(student, "scoreEstimate.estimatedCurrentScore"),
@@ -97,9 +96,7 @@ async function buildSummary(results: StepResult[]) {
       todayTaskCount: arrayOfObjects(today.tasks).length,
       verifyPass: verify.pass === true,
       trainingLogValidationPass: validation.pass === true,
-      mockCalibrationStatus: getString(mockCalibration, "status") || "NO_REPORT",
-      mockTotalScore: getNumber(mockCalibration, "totalScore"),
-      metadataSlotCoverage: getNumber(metadataReport, "slotCoverage"),
+      mockCalibrationStatus: getString(calibration, "status") || "UNKNOWN",
     },
   };
 }
@@ -118,7 +115,6 @@ function renderSummary(summary: Obj) {
     `当前阶段：${getString(snapshot, "currentStage") || "未知"}`,
     `今日任务数：${getNumber(snapshot, "todayTaskCount")}`,
     `模拟赛校准：${getString(snapshot, "mockCalibrationStatus")}`,
-    `元数据 T 位覆盖率：${Math.round(getNumber(snapshot, "metadataSlotCoverage") * 100)}%`,
     "",
     "## 步骤结果",
     "",
