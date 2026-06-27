@@ -1,0 +1,49 @@
+{
+  "$schema": "csps200.mockExamResult.v1",
+  "$description": "Copy to data/local-loop/mock_exam_result.json after a timed CSP-S style mock exam.",
+  "examName": "CSP-S 四题结构模拟",
+  "date": "2026-06-27",
+  "timeLimitMinutes": 240,
+  "isTimed": true,
+  "isIndependent": true,
+  "hasSeenSolutionsBeforeExam": false,
+  "totalScore": 104,
+  "slots": {
+    "T1": {
+      "problemPid": "Pxxxx",
+      "title": "T1 保分题",
+      "score": 68,
+      "maxScore": 100,
+      "timeMinutes": 45,
+      "submissionCount": 1,
+      "notes": "边界处理仍需加强"
+    },
+    "T2": {
+      "problemPid": "Pyyyy",
+      "title": "T2 主攻题",
+      "score": 35,
+      "maxScore": 100,
+      "timeMinutes": 75,
+      "submissionCount": 3,
+      "notes": "建模入口不稳定"
+    },
+    "T3": {
+      "problemPid": "Pzzzz",
+      "title": "T3 部分分题",
+      "score": 10,
+      "maxScore": 100,
+      "timeMinutes": 70,
+      "submissionCount": 2,
+      "notes": "部分分路线不足"
+    },
+    "T4": {
+      "problemPid": "Pwwww",
+      "title": "T4 策略题",
+      "score": 0,
+      "maxScore": 100,
+      "timeMinutes": 50,
+      "submissionCount": 0,
+      "notes": "暂不主攻"
+    }
+  }
+}
