@@ -32,9 +32,11 @@ async function main() {
     ["problem-metadata", ["tsx", "scripts/csps200-build-problem-metadata.ts"]],
     ["student-analysis", ["tsx", "scripts/csps200-student-analysis.ts"]],
     ["mock-calibration", ["tsx", "scripts/csps200-mock-calibration.ts"]],
+    ["apply-mock-calibration", ["tsx", "scripts/csps200-apply-mock-calibration.ts"]],
     ["select-today", ["tsx", "scripts/csps200-task-selector.ts"]],
     ["validate-training-log", ["tsx", "scripts/csps200-validate-training-log.ts"]],
     ["verify-loop", ["tsx", "scripts/csps200-verify-loop.ts"]],
+    ["quality-tuning-report", ["tsx", "scripts/csps200-quality-tuning-report.ts"]],
   ];
 
   const results: StepResult[] = [];
@@ -52,10 +54,12 @@ async function main() {
 }
 
 async function runStep(name: string, command: string[]): Promise<StepResult> {
-  const cmd = process.platform === "win32" ? "pnpm.cmd" : "pnpm";
   const display = `pnpm ${command.join(" ")}`;
+  const isWindows = process.platform === "win32";
+  const cmd = isWindows ? "cmd.exe" : "pnpm";
+  const args = isWindows ? ["/d", "/s", "/c", ["pnpm", ...command].map(shellQuote).join(" ")] : command;
   try {
-    const { stdout, stderr } = await execFileAsync(cmd, command, { cwd: ROOT, maxBuffer: 20 * 1024 * 1024 });
+    const { stdout, stderr } = await execFileAsync(cmd, args, { cwd: ROOT, maxBuffer: 20 * 1024 * 1024 });
     return { name, command: display, ok: true, exitCode: 0, stdout, stderr };
   } catch (error) {
     const err = error as Error & { code?: number; stdout?: string; stderr?: string };
@@ -70,17 +74,25 @@ async function buildSummary(results: StepResult[]) {
   const verify = await readJsonIfExists<Obj>(path.join(LOCAL_DIR, "loop_verify_report.json"), {});
   const validation = await readJsonIfExists<Obj>(path.join(LOCAL_DIR, "training_log_validation.json"), {});
   const mockCalibration = await readJsonIfExists<Obj>(path.join(LOCAL_DIR, "mock_calibration.json"), {});
-  const metadataReport = await readJsonIfExists<Obj>(path.join(ROOT, "data", "problem-metadata", "problem_knowledge_map_report.json"), {});
+  const calibratedStudent = await readJsonIfExists<Obj>(path.join(LOCAL_DIR, "calibrated_student_analysis_report.json"), {});
+  const tuning = await readJsonIfExists<Obj>(path.join(LOCAL_DIR, "tuning_report.json"), {});
+  const metadata = await readJsonIfExists<Obj>(path.join(ROOT, "data", "problem-metadata", "problem_knowledge_map.json"), {});
   const dataQuality = getString(quality, "dataQuality.overall") || getString(student, "sourceQuality.overall") || "UNKNOWN";
   const failedSteps = results.filter((step) => !step.ok).map((step) => step.name);
+  const metadataItems = Object.entries(metadata).filter(([key, value]) => !key.startsWith("$") && Object.keys(asRecord(value)).length);
+  const metadataKnownSlotCount = metadataItems.filter(([, value]) => getString(value, "cspSlot") && getString(value, "cspSlot") !== "UNKNOWN").length;
+  const fallbackTaskCount = arrayOfObjects(today.tasks).filter((task) => getString(task, "source") === "fallback" || !getString(task, "problemPid")).length;
   return {
     generatedAt: new Date().toISOString(),
     ok: failedSteps.length === 0 && dataQuality !== "LOW",
     dataQuality,
+    metadataCoverage: metadataItems.length ? round(metadataKnownSlotCount / metadataItems.length, 3) : 0,
     failedSteps,
     steps: results.map((step) => ({ name: step.name, command: step.command, ok: step.ok, exitCode: step.exitCode, stderrTail: tail(step.stderr) })),
     reports: {
       studentAnalysis: await fileState("data/local-loop/student_analysis_report.json"),
+      calibratedStudentAnalysis: await fileState("data/local-loop/calibrated_student_analysis_report.json"),
+      calibratedStudentAnalysisMarkdown: await fileState("data/local-loop/calibrated_student_analysis_report.md"),
       analysisQuality: await fileState("data/local-loop/analysis_quality_report.json"),
       today: await fileState("data/local-loop/today.json"),
       todayMarkdown: await fileState("data/local-loop/today.md"),
@@ -89,6 +101,8 @@ async function buildSummary(results: StepResult[]) {
       loopVerify: await fileState("data/local-loop/loop_verify_report.json"),
       mockCalibration: await fileState("data/local-loop/mock_calibration.json"),
       mockCalibrationMarkdown: await fileState("data/local-loop/mock_calibration.md"),
+      tuningReport: await fileState("data/local-loop/tuning_report.json"),
+      tuningReportMarkdown: await fileState("data/local-loop/tuning_report.md"),
       problemMetadata: await fileState("data/problem-metadata/problem_knowledge_map.json"),
       problemMetadataReport: await fileState("data/problem-metadata/problem_knowledge_map_report.md"),
     },
@@ -100,9 +114,21 @@ async function buildSummary(results: StepResult[]) {
       trainingLogValidationPass: validation.pass === true,
       mockCalibrationStatus: getString(mockCalibration, "status") || "NO_REPORT",
       mockCalibratedTotal: getNumber(mockCalibration, "total.calibratedTotal"),
-      metadataProblemCount: getNumber(metadataReport, "problems"),
+      calibratedScore: getNumber(calibratedStudent, "scoreEstimate.estimatedCurrentScore"),
+      todayCalibrationUsed: getString(today, "selectionInputs.calibrationUsed") === "true",
+      fallbackTaskCount,
+      tuningStatus: getString(tuning, "status") || "NO_REPORT",
+      tuningP0Count: getNumber(tuning, "priorityCounts.P0"),
+      tuningP1Count: getNumber(tuning, "priorityCounts.P1"),
+      metadataProblemCount: metadataItems.length,
+      metadataKnownSlotCount,
     },
   };
+}
+
+function shellQuote(value: string) {
+  if (!/[ \t"&|<>^]/.test(value)) return value;
+  return `"${value.replace(/"/g, '\\"')}"`;
 }
 
 function renderSummary(summary: Obj) {
@@ -115,11 +141,14 @@ function renderSummary(summary: Obj) {
     `生成时间：${getString(summary, "generatedAt")}`,
     `整体状态：${summary.ok ? "通过" : "需要处理"}`,
     `数据质量：${getString(summary, "dataQuality")}`,
+    `元数据覆盖：${getNumber(summary, "metadataCoverage")}`,
     `当前代理分：${getNumber(snapshot, "estimatedCurrentScore")}`,
     `当前阶段：${getString(snapshot, "currentStage") || "未知"}`,
     `今日任务数：${getNumber(snapshot, "todayTaskCount")}`,
+    `fallback 任务数：${getNumber(snapshot, "fallbackTaskCount")}`,
     `模拟赛校准：${getString(snapshot, "mockCalibrationStatus")}`,
-    `校准后代理分：${getNumber(snapshot, "mockCalibratedTotal") || "未校准"}`,
+    `校准后代理分：${getNumber(snapshot, "calibratedScore") || getNumber(snapshot, "mockCalibratedTotal") || "未校准"}`,
+    `调参诊断：${getString(snapshot, "tuningStatus")}，P0=${getNumber(snapshot, "tuningP0Count")}，P1=${getNumber(snapshot, "tuningP1Count")}`,
     "",
     "## 步骤结果",
     "",
@@ -206,6 +235,11 @@ function getNumber(value: unknown, key?: string): number {
   if (typeof source === "number" && Number.isFinite(source)) return source;
   if (typeof source === "string" && Number.isFinite(Number(source))) return Number(source);
   return 0;
+}
+
+function round(value: number, digits = 0) {
+  const base = 10 ** digits;
+  return Math.round(value * base) / base;
 }
 
 function tail(text: string, max = 1200) {

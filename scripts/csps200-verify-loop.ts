@@ -35,7 +35,7 @@ async function main() {
     ...required(dataQuality !== "UNKNOWN", "analysis quality missing"),
     ...required(Object.keys(student).length > 0, "student_analysis_report missing"),
     ...required(tasks.length > 0, "today tasks missing"),
-    ...required(str(today, "version").includes("task-selector") || str(today, "sourceStudentAnalysis") || today.analysisDriven, "today is not analysis-driven"),
+    ...required(str(today, "version").includes("task-selector") || Boolean(str(today, "sourceStudentAnalysis")) || Boolean(today.analysisDriven), "today is not analysis-driven"),
     ...required(dataQuality !== "LOW" || !(tasks.length > 0), "LOW data quality should not produce formal tasks"),
     ...required(logItems.every(hasCoreLogFields), "some training log items miss core fields"),
   ];

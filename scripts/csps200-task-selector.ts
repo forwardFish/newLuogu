@@ -2,7 +2,7 @@ import { promises as fs } from "fs";
 import path from "path";
 
 type Obj = Record<string, unknown>;
-type Cand = { pid: string; title: string; source: string; tags: string[]; abilities: string[]; slot: string; difficulty: number; raw: Obj };
+type Cand = { pid: string; title: string; source: string; tags: string[]; abilities: string[]; slot: string; difficulty: number; confidence: string; raw: Obj };
 
 const ROOT = process.cwd();
 const LOCAL = path.join(ROOT, "data", "local-loop");
@@ -13,7 +13,8 @@ main().catch((error) => { console.error(error); process.exit(1); });
 async function main() {
   await mkdir(LOCAL);
   const config = await readJson<Obj>(path.join(LOCAL, "config.json"), {});
-  const student = await readJson<Obj>(path.join(LOCAL, "student_analysis_report.json"), {});
+  const studentInput = await loadStudentAnalysis();
+  const student = studentInput.student;
   const quality = await readJson<Obj>(path.join(LOCAL, "analysis_quality_report.json"), {});
   const dataQuality = str(quality, "dataQuality.overall") || str(student, "sourceQuality.overall") || "LOW";
 
@@ -26,13 +27,13 @@ async function main() {
   }
 
   const candidates = mergeMeta(await loadCandidates(config), await loadMeta());
-  const today = selectToday(config, student, dataQuality, candidates);
+  const today = selectToday(config, student, dataQuality, candidates, studentInput);
   await writeJson(path.join(LOCAL, "today.json"), today);
   await fs.writeFile(path.join(LOCAL, "today.md"), renderToday(today), "utf8");
   console.log(JSON.stringify({ status: "OK", mode: today.mode, tasks: arr(today.tasks).length, files: [rel(path.join(LOCAL, "today.json")), rel(path.join(LOCAL, "today.md"))] }, null, 2));
 }
 
-function selectToday(config: Obj, student: Obj, dataQuality: string, candidates: Cand[]) {
+function selectToday(config: Obj, student: Obj, dataQuality: string, candidates: Cand[], studentInput: { source: string; calibrationUsed: boolean }) {
   const weak = objs(student.knowledgeMastery).filter((x) => num(x, "score") < 65);
   const evidence = objs(student.evidenceProblems);
   const stage = rec(student.currentStage);
@@ -41,25 +42,35 @@ function selectToday(config: Obj, student: Obj, dataQuality: string, candidates:
   const mode = dataQuality === "MEDIUM" ? "MEDIUM_CONSERVATIVE" : "HIGH_STANDARD";
   const requested = Number(args.count || 0);
   const taskCount = clamp(requested || (dataQuality === "MEDIUM" ? 3 : score >= 150 ? 4 : 3), dataQuality === "MEDIUM" ? 2 : 3, dataQuality === "HIGH" ? 4 : 3);
+  const formalCandidates = filterFormalCandidates(candidates, dataQuality);
+  const t1Mock = num(student, "slotReadiness.T1.mockScore");
+  const t2Mock = num(student, "slotReadiness.T2.mockScore");
+  const t3Mock = num(student, "slotReadiness.T3.mockScore");
   const used = new Set<string>();
   const picked: any[] = [];
 
-  const foundation = pick(candidates, used, (c) => (c.slot === "T1" ? 60 : 0) + (has(c, ["implementation", "simulation", "basic", "模拟", "枚举"]) ? 25 : 0) + (c.difficulty && c.difficulty <= 1400 ? 10 : 0));
-  picked.push(task(1, "foundation", "T1", foundation, `当前阶段 ${str(stage, "stage") || "未知"}，先保证保分题稳定。`, 35));
+  const foundation = pick(formalCandidates, used, (c) => (c.slot === "T1" ? 60 : 0) + (has(c, ["implementation", "simulation", "basic", "模拟", "枚举"]) ? 25 : 0) + (c.difficulty && c.difficulty <= 1400 ? 10 : 0));
+  picked.push(task(1, "foundation", "T1", foundation, t1Mock > 0 && t1Mock < 80 ? `T1 模拟赛得分 ${t1Mock}，先强制安排保分稳定性训练。` : `当前阶段 ${str(stage, "stage") || "未知"}，先保证保分题稳定。`, 35));
   mark(used, foundation);
 
-  const weakness = pickWeak(candidates, used, weak[0]);
+  const forcedT2 = studentInput.calibrationUsed && t2Mock > 0 && t2Mock < 50;
+  const weakness = forcedT2
+    ? pick(formalCandidates, used, (c) => (c.slot === "T2" ? 60 : 0) + (has(c, ["modeling", "dp", "graph", "binary", "greedy", "data_structure", "建模"]) ? 25 : 0))
+    : pickWeak(formalCandidates, used, weak[0]);
   if (taskCount >= 3 || dataQuality === "HIGH") {
-    picked.push(task(picked.length + 1, "weakness", slotOf(weakness, "T2"), weakness, weak[0] ? `最大短板：${str(weak[0], "name")}，掌握度 ${num(weak[0], "score")}。` : "训练当前最大短板。", 55));
+    picked.push(task(picked.length + 1, "weakness", forcedT2 ? "T2" : slotOf(weakness, "T2"), weakness, forcedT2 ? `T2 模拟赛得分 ${t2Mock}，强制安排建模入口题。` : weak[0] ? `最大短板：${str(weak[0], "name")}，掌握度 ${num(weak[0], "score")}。` : "训练当前最大短板。", 55));
     mark(used, weakness);
   }
 
-  const review = pickEvidence(candidates, used, evidence[0]);
-  picked.push(task(picked.length + 1, "reviewOrTransfer", slotOf(review, "T2"), review, evidence[0] ? `证据题：${str(evidence[0], "reason") || str(evidence[0], "diagnosis")}` : "复盘/迁移题。", 45));
+  const forcedT3 = studentInput.calibrationUsed && t3Mock > 0 && t3Mock < 30;
+  const review = forcedT3
+    ? pick(formalCandidates, used, (c) => (c.slot === "T3" ? 60 : 0) + (has(c, ["partial", "部分分", "dp", "tree", "subtask"]) ? 25 : 0)) || pickEvidence(formalCandidates, used, evidence[0])
+    : pickEvidence(formalCandidates, used, evidence[0]);
+  picked.push(task(picked.length + 1, forcedT3 ? "partialScore" : "reviewOrTransfer", forcedT3 ? "T3" : slotOf(review, "T2"), review, forcedT3 ? `T3 模拟赛得分 ${t3Mock}，优先安排部分分或证据迁移题。` : evidence[0] ? `证据题：${str(evidence[0], "reason") || str(evidence[0], "diagnosis")}` : "复盘/迁移题。", 45));
   mark(used, review);
 
   if (taskCount >= 4) {
-    const partial = pick(candidates, used, (c) => (["T3", "T4"].includes(c.slot) ? 40 : 0) + (has(c, ["partial", "部分分", "dp", "tree", "segment"]) ? 20 : 0) + (c.difficulty >= 1800 ? 10 : 0));
+    const partial = pick(formalCandidates, used, (c) => (["T3", "T4"].includes(c.slot) ? 40 : 0) + (has(c, ["partial", "部分分", "dp", "tree", "segment"]) ? 20 : 0) + (c.difficulty >= 1800 ? 10 : 0));
     picked.push(task(picked.length + 1, "partialOrMock", slotOf(partial, "T3"), partial, "第 4 题用于 T3 部分分或四题结构验证。", 70));
   }
 
@@ -73,7 +84,15 @@ function selectToday(config: Obj, student: Obj, dataQuality: string, candidates:
     slotReadiness: student.slotReadiness || null,
     weakestKnowledge: weak.slice(0, 5),
     evidenceProblems: evidence.slice(0, 5),
-    selectionInputs: { candidateCount: candidates.length, weakKnowledgeCount: weak.length, evidenceProblemCount: evidence.length },
+    selectionInputs: {
+      candidateCount: candidates.length,
+      formalCandidateCount: formalCandidates.length,
+      weakKnowledgeCount: weak.length,
+      evidenceProblemCount: evidence.length,
+      studentAnalysisSource: studentInput.source,
+      calibrationUsed: studentInput.calibrationUsed,
+      mockScores: studentInput.calibrationUsed ? { T1: t1Mock, T2: t2Mock, T3: t3Mock, T4: num(student, "slotReadiness.T4.mockScore") } : null,
+    },
     taskPolicy: {
       dynamicTaskRange: dataQuality === "MEDIUM" ? [2, 3] : [3, 4],
       mediumStrategy: "保守训练：优先保分题、证据题和最大短板题，减少新题和高难题。",
@@ -132,6 +151,24 @@ function slotOf(c: Cand | null, fallback: string) { return c?.slot || fallback; 
 function has(c: Cand, keys: string[]) { const t = text(c); return keys.some((k) => t.includes(k.toLowerCase())); }
 function text(c: Cand) { return `${c.pid} ${c.title} ${c.tags.join(" ")} ${c.abilities.join(" ")} ${c.slot}`.toLowerCase(); }
 
+async function loadStudentAnalysis() {
+  const calibratedPath = path.join(LOCAL, "calibrated_student_analysis_report.json");
+  const basePath = path.join(LOCAL, "student_analysis_report.json");
+  const calibrated = await readJson<Obj>(calibratedPath, {});
+  if (getStringPath(calibrated, "calibration.status") === "APPLIED") {
+    return { student: calibrated, source: "data/local-loop/calibrated_student_analysis_report.json", calibrationUsed: true };
+  }
+  return { student: await readJson<Obj>(basePath, {}), source: "data/local-loop/student_analysis_report.json", calibrationUsed: false };
+}
+
+function filterFormalCandidates(candidates: Cand[], dataQuality: string) {
+  const knownSlot = candidates.filter((c) => c.slot && c.slot !== "UNKNOWN");
+  const base = knownSlot.length ? knownSlot : candidates;
+  if (dataQuality !== "MEDIUM") return base;
+  const conservative = base.filter((c) => c.slot !== "T4" && c.confidence !== "LOW");
+  return conservative.length ? conservative : base.filter((c) => c.slot !== "T4");
+}
+
 async function loadCandidates(config: Obj) {
   const out: Cand[] = [];
   out.push(...await loadJsonDir(str(config, "problemLaddersDir") || "data/problem-ladders", "problem_ladders"));
@@ -170,6 +207,7 @@ function mergeMeta(cands: Cand[], meta: Record<string, Obj>) {
       existing.abilities = uniq([...existing.abilities, ...strings(m.abilities)]);
       existing.slot = existing.slot || str(m, "cspSlot");
       existing.difficulty = existing.difficulty || num(m, "difficulty");
+      existing.confidence = strongerConfidence(existing.confidence, str(m, "confidence"));
       existing.source += "+metadata";
     } else out.push(cand(m, "metadata"));
   }
@@ -177,10 +215,22 @@ function mergeMeta(cands: Cand[], meta: Record<string, Obj>) {
 }
 
 function cand(o: Obj, source: string): Cand {
-  return { pid: pid(o), title: str(o, "title") || str(o, "problemTitle"), source, tags: uniq([...strings(o.tags), ...strings(o.luoguTags), str(o, "knowledgeCode")]), abilities: uniq([...strings(o.abilities), ...strings(o.cspAbilityRoles), str(o, "relatedAbility")]), slot: str(o, "cspSlot") || abilitySlot(`${strings(o.abilities).join(" ")} ${strings(o.cspAbilityRoles).join(" ")} ${str(o, "relatedAbility")}`), difficulty: num(o, "difficulty") || num(o, "luoguDifficulty"), raw: o };
+  return {
+    pid: pid(o),
+    title: str(o, "title") || str(o, "problemTitle"),
+    source,
+    tags: uniq([...strings(o.tags), ...strings(o.luoguTags), str(o, "knowledgeCode")]),
+    abilities: uniq([...strings(o.abilities), ...strings(o.cspAbilityRoles), str(o, "relatedAbility")]),
+    slot: str(o, "cspSlot") || abilitySlot(`${strings(o.abilities).join(" ")} ${strings(o.cspAbilityRoles).join(" ")} ${str(o, "relatedAbility")}`),
+    difficulty: num(o, "difficulty") || num(o, "luoguDifficulty"),
+    confidence: normalizeConfidence(str(o, "confidence")),
+    raw: o,
+  };
 }
 
 function abilitySlot(s: string) { const u = s.toUpperCase(); return u.includes("T1") ? "T1" : u.includes("T2") ? "T2" : u.includes("T3") ? "T3" : u.includes("T4") ? "T4" : ""; }
+function normalizeConfidence(value: string) { const u = value.toUpperCase(); return ["HIGH", "MEDIUM", "LOW"].includes(u) ? u : "UNKNOWN"; }
+function strongerConfidence(a: string, b: string) { const rank: Record<string, number> = { HIGH: 3, MEDIUM: 2, LOW: 1, UNKNOWN: 0 }; const aa = normalizeConfidence(a); const bb = normalizeConfidence(b); return rank[bb] > rank[aa] ? bb : aa; }
 function pid(o: Obj) { return str(o, "problemPid") || str(o, "pid") || str(o, "problemId") || str(o, "luoguPid"); }
 
 function lowBlock(student: Obj, quality: Obj) { return { generatedAt: new Date().toISOString(), reason: "analysis quality is LOW", fixes: uniq(["确认 codeDir/codeIndex 指向最新洛谷源码导出。", "重新执行 pnpm csps200:diagnose。", "补齐题目元数据 problem_knowledge_map.json。", ...objs(quality.passCriteria).filter((x) => x.passed === false).map((x) => `未通过检查：${str(x, "criterion")}`), ...arr(pathGet(student, "sourceQuality.mainLimitations")).map(String)]) }; }
@@ -200,6 +250,7 @@ function arr(v: unknown): unknown[] { return Array.isArray(v) ? v : []; }
 function objs(v: unknown): Obj[] { return arr(v).map(rec).filter((x) => Object.keys(x).length); }
 function strings(v: unknown): string[] { return arr(v).filter((x): x is string => typeof x === "string" && x.length > 0); }
 function pathGet(v: unknown, k: string): unknown { return k.split(".").reduce((a, b) => rec(a)[b], v); }
+function getStringPath(v: unknown, k: string): string { const x = pathGet(v, k); return typeof x === "string" ? x : typeof x === "number" || typeof x === "boolean" ? String(x) : ""; }
 function str(v: unknown, k?: string): string { const x = k ? pathGet(v, k) : v; return typeof x === "string" ? x : typeof x === "number" ? String(x) : ""; }
 function num(v: unknown, k?: string): number { const x = k ? pathGet(v, k) : v; return typeof x === "number" ? x : typeof x === "string" && Number.isFinite(Number(x)) ? Number(x) : 0; }
 function uniq<T>(xs: T[]): T[] { return [...new Set(xs.filter(Boolean))]; }

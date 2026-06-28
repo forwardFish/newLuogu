@@ -43,6 +43,10 @@ jobs:
           cat data/local-loop/e2e_summary.md || true
           echo '--- mock_calibration.md ---'
           cat data/local-loop/mock_calibration.md || true
+          echo '--- calibrated_student_analysis_report.md ---'
+          cat data/local-loop/calibrated_student_analysis_report.md || true
+          echo '--- tuning_report.md ---'
+          cat data/local-loop/tuning_report.md || true
           echo '--- problem_knowledge_map_report.md ---'
           cat data/problem-metadata/problem_knowledge_map_report.md || true
           echo '--- today.md ---'
@@ -63,9 +67,13 @@ jobs:
             data/local-loop/analysis_quality_report.json
             data/local-loop/mock_calibration.json
             data/local-loop/mock_calibration.md
+            data/local-loop/calibrated_student_analysis_report.json
+            data/local-loop/calibrated_student_analysis_report.md
             data/local-loop/calibrated_student_analysis.md
             data/local-loop/today.json
             data/local-loop/today.md
+            data/local-loop/tuning_report.json
+            data/local-loop/tuning_report.md
             data/local-loop/data_quality_block.json
             data/local-loop/data_quality_block.md
             data/local-loop/training_log_validation.json
