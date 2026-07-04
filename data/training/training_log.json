@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-06-25T07:35:35.137Z",
-  "items": [],
+  "updatedAt": "2026-07-01T02:21:54.143Z",
   "schema": {
     "requiredFields": [
       "date",
@@ -20,5 +20,73 @@
     ],
     "exampleCommand": "pnpm train:log -- --unitId BINARY_SEARCH.ANSWER_CHECK --problemPid P2678 --taskType PRACTICE_STANDARD --result AC --score 100 --timeMinutes 45 --submissionCount 2 --hintLevelUsed 1 --hasSeenSolution false"
   },
-  "note": "No --problemPid provided. This file is initialized and ready for real training logs."
+  "items": [
+    {
+      "date": "2026-06-29",
+      "unitId": "UNKNOWN_UNIT",
+      "problemPid": "P1000",
+      "taskType": "T1",
+      "result": "PC",
+      "score": 72,
+      "timeMinutes": 42,
+      "submissionCount": 3,
+      "hintLevelUsed": 1,
+      "hasSeenSolution": false,
+      "errorTypes": [
+        "PARTIAL_SCORE_BOUNDARY",
+        "COMPLEXITY_ESTIMATE"
+      ],
+      "failedStage": "SUBTASK_BOUNDARY",
+      "studentSummary": "Simulated user completed P1000 with a partial score route. Boundary handling and complexity estimate were unstable, so this attempt needs redo review.",
+      "needRedo": true
+    },
+    {
+      "date": "2026-06-30",
+      "unitId": "UNKNOWN_UNIT",
+      "problemPid": "P1000",
+      "taskType": "T1",
+      "result": "PC",
+      "score": 72,
+      "timeMinutes": 46,
+      "submissionCount": 2,
+      "hintLevelUsed": 0,
+      "hasSeenSolution": false,
+      "errorTypes": [],
+      "failedStage": "NONE",
+      "studentSummary": "Playwright user flow: simulated student finished the task and recorded thoughts.",
+      "needRedo": true
+    },
+    {
+      "date": "2026-06-30",
+      "unitId": "T1-basic-001",
+      "problemPid": "P1001",
+      "taskType": "PRACTICE_STANDARD",
+      "result": "AC",
+      "score": 100,
+      "timeMinutes": 12,
+      "submissionCount": 1,
+      "hintLevelUsed": 0,
+      "hasSeenSolution": false,
+      "errorTypes": [],
+      "failedStage": "NONE",
+      "studentSummary": "网页记录训练结果",
+      "needRedo": false
+    },
+    {
+      "date": "2026-07-01",
+      "unitId": "T1-basic-001",
+      "problemPid": "P1001",
+      "taskType": "PRACTICE_STANDARD",
+      "result": "AC",
+      "score": 100,
+      "timeMinutes": 12,
+      "submissionCount": 1,
+      "hintLevelUsed": 0,
+      "hasSeenSolution": false,
+      "errorTypes": [],
+      "failedStage": "NONE",
+      "studentSummary": "网页记录训练结果",
+      "needRedo": false
+    }
+  ]
 }

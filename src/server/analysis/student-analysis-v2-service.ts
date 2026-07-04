@@ -1,5 +1,5 @@
 import { prisma } from "@/src/lib/prisma";
-import { asArray, asRecord } from "@/src/lib/json";
+import { asRecord } from "@/src/lib/json";
 import { FeatureExtractorService } from "@/src/server/features/feature-extractor-service";
 import { DataQualityService } from "@/src/server/quality/data-quality-service";
 import { KNOWLEDGE_NODES } from "@/src/server/knowledge/knowledge-seed";
@@ -260,18 +260,18 @@ async function selectEvidenceProblems(
   }
   return candidates.slice(0, 8).map(({ stat }) => {
     const modules = stat.problemId ? moduleByProblem.get(stat.problemId) ?? [] : [];
-    const module = modules[0] ?? weaknesses[0]?.module ?? "unknown";
+    const knowledgeModule = modules[0] ?? weaknesses[0]?.module ?? "unknown";
     return {
       problemPid: stat.problemPid,
       title: stat.problem?.title ?? null,
       difficulty: stat.problem?.difficulty ?? null,
       difficultyName: stat.problem?.difficultyName ?? null,
-      module,
-      moduleName: knowledgeName(module),
+      module: knowledgeModule,
+      moduleName: knowledgeName(knowledgeModule),
       attemptCount: stat.totalAttempts,
       finalResult: stat.isAc ? "AC" : stat.bestScore && stat.bestScore > 0 ? "PARTIAL" : stat.mainErrorType ?? "UNKNOWN",
       bestScore: stat.bestScore,
-      diagnosis: evidenceDiagnosis(stat.totalAttempts, stat.isAc, stat.bestScore, module)
+      diagnosis: evidenceDiagnosis(stat.totalAttempts, stat.isAc, stat.bestScore, knowledgeModule)
     };
   });
 }

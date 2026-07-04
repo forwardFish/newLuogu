@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { StudentAnalysisV2Service } from "@/src/server/analysis/student-analysis-v2-service";
+import { isDatabaseMissing, localStudentAnalysisV2 } from "@/src/server/local-loop/api-fallback";
 
 export default async function handler(request: NextApiRequest, response: NextApiResponse) {
   try {
@@ -13,6 +14,7 @@ export default async function handler(request: NextApiRequest, response: NextApi
     });
     return send(response, 200, report);
   } catch (error) {
+    if (isDatabaseMissing(error)) return send(response, 200, await localStudentAnalysisV2());
     return send(response, 400, { error: error instanceof Error ? error.message : String(error) });
   }
 }

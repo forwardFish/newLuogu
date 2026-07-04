@@ -411,11 +411,15 @@ export async function recordTrainingLog(options: TargetTrainingOptions, argv = p
     studentSummary: args.studentSummary ?? "",
     needRedo: booleanField(args.needRedo),
   };
+  const existingItems = current.items ?? [];
+  const retainedItems = existingItems.filter((existing) => {
+    return !(existing.date === item.date && existing.problemPid === item.problemPid);
+  });
   await writeJson(logPath, {
     generatedAt: current.generatedAt ?? new Date().toISOString(),
     updatedAt: new Date().toISOString(),
     schema: trainingLogSchema(),
-    items: [...(current.items ?? []), item],
+    items: [...retainedItems, item],
   });
   await updateMastery(options);
   await buildTrainingSettlement(options);

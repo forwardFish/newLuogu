@@ -1,12 +1,11 @@
-import type { Metadata } from "next";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "AI OI Coach MVP",
-  description: "Luogu public data based CSP-S baseline analysis"
+export const metadata = {
+  title: "千里策｜CSP-J/S 目标分训练教练",
+  description: "AI 信奥训练教练 · CSP-J/S 目标分训练系统",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="zh-CN">
       <body>{children}</body>

@@ -153,9 +153,11 @@ function text(c: Cand) { return `${c.pid} ${c.title} ${c.tags.join(" ")} ${c.abi
 
 async function loadStudentAnalysis() {
   const calibratedPath = path.join(LOCAL, "calibrated_student_analysis_report.json");
+  const mockCalibrationPath = path.join(LOCAL, "mock_calibration.json");
   const basePath = path.join(LOCAL, "student_analysis_report.json");
+  const mockCalibration = await readJson<Obj>(mockCalibrationPath, {});
   const calibrated = await readJson<Obj>(calibratedPath, {});
-  if (getStringPath(calibrated, "calibration.status") === "APPLIED") {
+  if (getStringPath(mockCalibration, "status") === "OK" && getStringPath(calibrated, "calibration.status") === "APPLIED") {
     return { student: calibrated, source: "data/local-loop/calibrated_student_analysis_report.json", calibrationUsed: true };
   }
   return { student: await readJson<Obj>(basePath, {}), source: "data/local-loop/student_analysis_report.json", calibrationUsed: false };

@@ -48,7 +48,7 @@ async function main() {
   const fallbackTasks = tasks.filter((task) => getString(task, "source") === "fallback" || !getString(task, "problemPid")).length;
   const calibrationUsed = getBool(today, "selectionInputs.calibrationUsed");
   const mockStatus = getString(mockCalibration, "status") || "NO_REPORT";
-  const calibratedStatus = getString(calibratedStudent, "calibration.status") || "NO_REPORT";
+  const calibratedStatus = mockStatus === "OK" ? getString(calibratedStudent, "calibration.status") || "NO_REPORT" : "SKIPPED";
   const trainingBlocking = arrayOfObjects(trainingLogValidation.blockingIssues).length;
   const trainingWarnings = arrayOfObjects(trainingLogValidation.warnings).length;
 

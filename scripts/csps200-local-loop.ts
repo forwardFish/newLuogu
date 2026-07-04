@@ -762,6 +762,7 @@ function stripActionArgs(argv: string[]) {
       continue;
     }
     if (token.startsWith("--action=")) continue;
+    if (token === "--") continue;
     output.push(token);
   }
   return output;

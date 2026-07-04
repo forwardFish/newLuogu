@@ -1,29 +1,29 @@
 {
-  "generatedAt": "2026-06-26T05:56:57.110Z",
-  "date": "2026-06-26",
+  "generatedAt": "2026-07-01T02:21:54.165Z",
+  "date": "2026-07-01",
   "targetScore": 200,
   "today": {
-    "completedTasks": 0,
-    "xpGained": 0,
-    "riskReduced": 0,
-    "scoreProxyBefore": 104,
-    "scoreProxyAfter": 104,
-    "distanceBefore": 96,
-    "distanceAfter": 96,
-    "distanceDelta": 0
+    "completedTasks": 1,
+    "xpGained": 139,
+    "riskReduced": 0.26,
+    "scoreProxyBefore": 104.4,
+    "scoreProxyAfter": 104.7,
+    "distanceBefore": 95.6,
+    "distanceAfter": 95.3,
+    "distanceDelta": 0.3
   },
   "level": {
     "before": 1,
-    "after": 1,
+    "after": 2,
     "title": "Training starter",
-    "upgraded": false,
-    "xpBefore": 0,
-    "xpAfter": 0,
-    "nextLevelXp": 300
+    "upgraded": true,
+    "xpBefore": 263,
+    "xpAfter": 402,
+    "nextLevelXp": 600
   },
   "abilityChanges": [],
   "evidence": [
-    "No real training log yet. Finish today's tasks and record them with pnpm train:log."
+    "P1001: T1-basic-001, score 100, 1 submissions, no hint, failedStage=NONE."
   ],
   "nextAdjustment": {
     "action": "ADVANCE_OR_TRANSFER",

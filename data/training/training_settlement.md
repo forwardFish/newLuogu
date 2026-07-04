@@ -1,23 +1,23 @@
 ﻿# Daily training settlement
 
-Date: 2026-06-26
+Date: 2026-07-01
 Target score: 200
 
 ## Growth
 
-- Completed tasks: 0
-- XP gained: 0
-- Level: 1 -> 1 (Training starter)
-- Upgraded: no
-- Score proxy: 104 -> 104
-- Distance to target: 96 -> 96
-- Estimated risk reduced: 0
+- Completed tasks: 1
+- XP gained: 139
+- Level: 1 -> 2 (Training starter)
+- Upgraded: yes
+- Score proxy: 104.4 -> 104.7
+- Distance to target: 95.6 -> 95.3
+- Estimated risk reduced: 0.26
 
 ## Ability Changes
 
 ## Evidence
 
-- No real training log yet. Finish today's tasks and record them with pnpm train:log.
+- P1001: T1-basic-001, score 100, 1 submissions, no hint, failedStage=NONE.
 
 ## Next Adjustment
 
