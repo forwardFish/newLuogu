@@ -1,0 +1,171 @@
+{
+  "generatedAt": "2026-07-07T00:00:00.000Z",
+  "source": {
+    "name": "Luogu problem list",
+    "url": "https://www.luogu.com.cn/problem/list",
+    "contentOnly": false,
+    "maxPages": 1,
+    "startPage": 1,
+    "delayMs": 0,
+    "parsers": [
+      "html"
+    ],
+    "note": "Small checked sample for schema validation only. Run scripts/problem-bank/crawl-luogu-problem-list.ts to generate data/problem-bank/luogu_problem_catalog.json. Problem statements are intentionally not copied."
+  },
+  "totalCountFromLuogu": null,
+  "totalFetched": 3,
+  "tagSchemaVersion": "2026-07-07",
+  "tagIndex": {
+    "ALGO_DP": {
+      "count": 1,
+      "buckets": [
+        "algorithm"
+      ]
+    },
+    "ALGO_RECURRENCE": {
+      "count": 1,
+      "buckets": [
+        "algorithm"
+      ]
+    },
+    "ALGO_SIMULATION": {
+      "count": 1,
+      "buckets": [
+        "algorithm"
+      ]
+    },
+    "CONTEST_NOIP_POPULAR": {
+      "count": 1,
+      "buckets": [
+        "contest"
+      ]
+    },
+    "DP_MEMOIZED_SEARCH": {
+      "count": 1,
+      "buckets": [
+        "algorithm"
+      ]
+    },
+    "TOPIC_STRING": {
+      "count": 1,
+      "buckets": [
+        "topic"
+      ]
+    },
+    "YEAR_2002": {
+      "count": 1,
+      "buckets": [
+        "year"
+      ]
+    }
+  },
+  "items": [
+    {
+      "pid": "P1000",
+      "title": "超级玛丽游戏",
+      "url": "https://www.luogu.com.cn/problem/P1000",
+      "difficulty": {
+        "level": null,
+        "name": "未知",
+        "band": "UNKNOWN"
+      },
+      "rawLuoguTags": [
+        "字符串",
+        "O2优化"
+      ],
+      "luoguTagIds": [],
+      "tags": [
+        "TOPIC_STRING"
+      ],
+      "categories": {
+        "topic": [
+          "TOPIC_STRING"
+        ]
+      },
+      "trainingTarget": "MIXED",
+      "stats": {
+        "totalSubmit": null,
+        "accepted": null,
+        "passRate": null
+      },
+      "source": "luogu_problem_list",
+      "lastUpdatedAt": "2026-07-07T00:00:00.000Z"
+    },
+    {
+      "pid": "P1001",
+      "title": "A+B Problem",
+      "url": "https://www.luogu.com.cn/problem/P1001",
+      "difficulty": {
+        "level": null,
+        "name": "未知",
+        "band": "UNKNOWN"
+      },
+      "rawLuoguTags": [
+        "模拟"
+      ],
+      "luoguTagIds": [],
+      "tags": [
+        "ALGO_SIMULATION"
+      ],
+      "categories": {
+        "algorithm": [
+          "ALGO_SIMULATION"
+        ]
+      },
+      "trainingTarget": "MIXED",
+      "stats": {
+        "totalSubmit": null,
+        "accepted": null,
+        "passRate": null
+      },
+      "source": "luogu_problem_list",
+      "lastUpdatedAt": "2026-07-07T00:00:00.000Z"
+    },
+    {
+      "pid": "P1002",
+      "title": "[NOIP 2002 普及组] 过河卒",
+      "url": "https://www.luogu.com.cn/problem/P1002",
+      "difficulty": {
+        "level": null,
+        "name": "未知",
+        "band": "UNKNOWN"
+      },
+      "rawLuoguTags": [
+        "动态规划 DP",
+        "递推",
+        "2002",
+        "NOIP 普及组",
+        "记忆化搜索"
+      ],
+      "luoguTagIds": [],
+      "tags": [
+        "ALGO_DP",
+        "ALGO_RECURRENCE",
+        "CONTEST_NOIP_POPULAR",
+        "DP_MEMOIZED_SEARCH",
+        "YEAR_2002"
+      ],
+      "categories": {
+        "algorithm": [
+          "ALGO_DP",
+          "ALGO_RECURRENCE",
+          "DP_MEMOIZED_SEARCH"
+        ],
+        "contest": [
+          "CONTEST_NOIP_POPULAR"
+        ],
+        "year": [
+          "YEAR_2002"
+        ]
+      },
+      "trainingTarget": "CSP_J",
+      "stats": {
+        "totalSubmit": null,
+        "accepted": null,
+        "passRate": null
+      },
+      "source": "luogu_problem_list",
+      "lastUpdatedAt": "2026-07-07T00:00:00.000Z"
+    }
+  ]
+}
