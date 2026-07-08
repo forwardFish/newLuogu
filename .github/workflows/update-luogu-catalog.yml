@@ -6,7 +6,7 @@ on:
       max_pages:
         description: "Maximum Luogu list pages to crawl"
         required: false
-        default: "200"
+        default: "500"
       delay_ms:
         description: "Delay between requests in milliseconds"
         required: false
@@ -21,7 +21,7 @@ jobs:
   update-luogu-catalog:
     runs-on: ubuntu-latest
     env:
-      MAX_PAGES: ${{ github.event.inputs.max_pages || '200' }}
+      MAX_PAGES: ${{ github.event.inputs.max_pages || '500' }}
       DELAY_MS: ${{ github.event.inputs.delay_ms || '1500' }}
     steps:
       - name: Checkout
