@@ -1,9 +1,10 @@
-import { jsonResponse } from "@/src/lib/json";
+import { formatErrorDetail, jsonResponse } from "@/src/lib/json";
 import { isDatabaseMissing, localSyncJob } from "@/src/server/local-loop/api-fallback";
 import { SyncJobService } from "@/src/server/sync/sync-job-service";
 
 export async function GET(_request: Request, { params }: { params: Promise<{ syncJobId: string }> }) {
   const { syncJobId } = await params;
+  if (!/^\d+$/.test(syncJobId)) return jsonResponse({ error: "syncJobId must be numeric" }, { status: 400 });
   try {
     const id = BigInt(syncJobId);
     const job = await new SyncJobService().get(id);
@@ -31,6 +32,6 @@ export async function GET(_request: Request, { params }: { params: Promise<{ syn
     if (isDatabaseMissing(error)) {
       return jsonResponse(await localSyncJob());
     }
-    throw error;
+    return jsonResponse({ error: "failed to read sync job", detail: formatErrorDetail(error) }, { status: 500 });
   }
 }

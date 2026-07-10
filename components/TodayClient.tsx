@@ -2,103 +2,140 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import SyncModal from "@/components/SyncModal";
-import { Badge, IconBubble, Progress } from "@/components/Ui";
-import type { UiTask } from "@/src/server/local-loop/ui-data";
-import { BarChart3, CheckSquare, Clock, Eye, FileText, ListChecks, RefreshCw, ShieldCheck } from "lucide-react";
 import { useState } from "react";
+import SyncModal from "@/components/SyncModal";
+import { Badge, IconBubble } from "@/components/Ui";
+import type { UiTask } from "@/src/server/local-loop/ui-data";
+import { CalendarCheck2, ChevronRight, Clock, FileText, Target } from "lucide-react";
 
 type TodayClientProps = {
   initialSyncOpen?: boolean;
   tasks: UiTask[];
   totalDurationMinutes: number;
   mode: string;
+  mainGoal?: string;
 };
 
-export default function TodayClient({
-  initialSyncOpen = false,
-  tasks,
-  totalDurationMinutes,
-  mode
-}: TodayClientProps) {
-  const [open, setOpen] = useState(initialSyncOpen);
+function minutesFromTask(task: UiTask) {
+  const parsed = Number.parseInt(task.time, 10);
+  return Number.isFinite(parsed) ? parsed : 45;
+}
+
+function taskRole(task: UiTask, index: number) {
+  if (/T1/i.test(task.tag)) return "保分题";
+  if (/T2/i.test(task.tag)) return "主攻题";
+  if (/T3/i.test(task.tag)) return index === 2 ? "复盘题" : "提升题";
+  return index === 0 ? "热身题" : index === 1 ? "核心题" : "复盘题";
+}
+
+export default function TodayClient({ initialSyncOpen = false, tasks, totalDurationMinutes, mode, mainGoal }: TodayClientProps) {
+  const [syncOpen, setSyncOpen] = useState(initialSyncOpen);
   const taskCount = tasks.length;
+  const todayGoal = mainGoal || tasks[0]?.goal || tasks[0]?.why || "夯实 T2 稳定性，减少低级失分";
+  const planSteps = [
+    { title: "热身题", desc: "保持手感，进入状态" },
+    { title: "核心题", desc: "突破重点，提升得分" },
+    { title: "复盘题", desc: "巩固迁移，总结提升" }
+  ];
 
   return (
-    <div className="today-page" style={{ position: "relative" }}>
-      <Image src="/assets/today-top-owl.png" alt="AI 教练" width={350} height={180} className="today-hero" />
-      <h1>今天只做最关键的 <span className="text-grad">{taskCount}</span> 题</h1>
-      <p style={{ color: "#5e688e", margin: "10px 0 0", fontSize: 17 }}>专注最重要的练习，稳步缩短与目标分的差距。</p>
+    <div className="today-page">
+      <Image src="/assets/today-reference-hero.png" alt="AI 教练" width={611} height={220} className="today-hero" priority />
 
-      <div className="stat-row" style={{ width: 858 }}>
-        <div className="stat-card card"><IconBubble icon={FileText}/><b style={{ fontSize: 18 }}>今日 <span className="text-grad">{taskCount}</span> 题</b></div>
-        <div className="stat-card card"><IconBubble icon={Clock}/><b style={{ fontSize: 18 }}>预计 <span className="text-grad">{totalDurationMinutes}</span> 分钟</b></div>
-        <div className="stat-card card"><IconBubble icon={BarChart3}/><b style={{ fontSize: 18 }}>训练模式 <span className="text-grad">{mode}</span></b></div>
-      </div>
+      <section className="today-title-hero">
+        <h1>
+          今天只做最关键的 <span className="text-grad">{taskCount}</span> 题
+        </h1>
+        <p>专注最重要的练习，稳步缩短与目标分的差距。</p>
+      </section>
 
-      <div className="today-layout">
-        <div className="today-main">
-          <div className="rule-card card">
-            <h2 className="section-title"><ShieldCheck size={24} color="#5b43ff"/> 无剧透训练规则</h2>
-            <div className="rule-row">
-              <div><IconBubble icon={Clock} size={44}/><div><b>不提示算法</b><br/><span className="small-muted">自主思考，独立解决</span></div></div>
-              <div><IconBubble icon={ListChecks} size={44}/><div><b>不先看题解</b><br/><span className="small-muted">先做题，再对照参考</span></div></div>
-              <div><IconBubble icon={RefreshCw} size={44}/><div><b>先独立思考，再记录结果</b><br/><span className="small-muted">真实反映自己的水平</span></div></div>
-            </div>
+      <section className="today-stat-row">
+        <div className="today-stat-card card">
+          <IconBubble icon={FileText} size={58} />
+          <b>
+            今日 <span className="text-grad">{taskCount}</span> 题
+          </b>
+        </div>
+        <div className="today-stat-card card">
+          <IconBubble icon={Clock} size={58} />
+          <b>
+            预计 <span className="text-grad">{totalDurationMinutes}</span>
+            <br />
+            分钟
+          </b>
+        </div>
+        <div className="today-stat-card card today-goal-stat">
+          <IconBubble icon={Target} size={58} />
+          <div>
+            <span>训练目标</span>
+            <b>{todayGoal}</b>
+            <em>{mode}</em>
           </div>
+        </div>
+      </section>
 
-          {tasks.map((task) => (
-            <div className="task-card card" key={`${task.no}-${task.id}`}>
-              <div className="task-num">{task.no}</div>
-              <div>
-                <h2 style={{ margin: 0, fontSize: 22, fontWeight: 950 }}>{task.id} {task.title} <Badge>{task.tag}</Badge></h2>
-                <p style={{ margin: "18px 0 0", color: "#4f5a84" }}><Clock size={16} style={{ verticalAlign: -3 }}/> 预计 {task.time}</p>
-                <p style={{ margin: "10px 0 0", color: "#283462", lineHeight: 1.6 }}><b>为什么练：</b>{task.why}</p>
+      <section className="today-plan-card card-large">
+        <h2 className="section-title">
+          <CalendarCheck2 size={24} color="#5b43ff" />
+          今日训练计划
+        </h2>
+
+        <div className="today-step-row">
+          {planSteps.map((step, index) => (
+            <div className="today-step" key={step.title}>
+              <span className="today-step-num">{index + 1}</span>
+              <div className="today-step-copy">
+                <b>{step.title}</b>
+                <p>{step.desc}</p>
               </div>
-              <div>
-                <div style={{ textAlign: "right", color: "#332aff", fontWeight: 900, fontSize: 19, marginBottom: 20 }}>{task.status}</div>
-                <div className="task-actions">
-                  <a href={`https://www.luogu.com.cn/problem/${task.id}`} target="_blank" rel="noreferrer" className="small-btn primary"><CheckSquare size={16}/>前往练习</a>
-                  <button onClick={() => setOpen(true)} className="small-btn"><RefreshCw size={15}/>同步结果</button>
-                  <Link href={`/training-result?problemPid=${encodeURIComponent(task.id)}`} className="small-btn"><FileText size={15}/>生成 AI 复盘</Link>
-                  <Link href={`/review?problemPid=${encodeURIComponent(task.id)}`} className="small-btn"><Eye size={15}/>查看 AI 复盘</Link>
-                </div>
-              </div>
+              {index < planSteps.length - 1 ? <span className="today-step-arrow">→</span> : null}
             </div>
           ))}
-
-          <div style={{ color: "#566081", fontSize: 14 }}><span className="text-grad">※</span> 题目和训练理由来自 `data/local-loop/today.json`，做完后再同步和复盘。</div>
         </div>
 
-        <aside style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-          <div className="side-card card">
-            <h2 className="section-title">今日结构</h2>
-            <div className="timeline">
-              {tasks.map((task) => (
-                <div className="timeline-row" key={`side-${task.no}`}>
-                  <div className="task-num" style={{ width: 28, height: 28 }}>{task.no}</div>
-                  <div><b>{task.tag}</b><br/><span className="small-muted">{task.goal || task.why}</span></div>
+        <div className="today-task-list">
+          {tasks.map((task, index) => {
+            const minutes = minutesFromTask(task);
+            const role = taskRole(task, index);
+
+            return (
+              <article className="today-task-row" key={`${task.no}-${task.id}`}>
+                <div className="task-num">{index + 1}</div>
+                <div className="today-task-title">
+                  <h3>
+                    {task.id} {task.title}
+                  </h3>
+                  <Badge>{task.tag}</Badge>
+                  <span>{role}</span>
                 </div>
-              ))}
-            </div>
-          </div>
+                <div className="today-task-meta">
+                  <Clock size={17} />
+                  预计 {minutes} 分钟
+                </div>
+                <p className="today-task-reason">{task.why}</p>
+                <Link href={`https://www.luogu.com.cn/problem/${task.id}`} target="_blank" className="today-start-btn">
+                  开始训练
+                </Link>
+              </article>
+            );
+          })}
+        </div>
+      </section>
 
-          <div className="side-card card">
-            <h2 className="section-title">今日进度</h2>
-            <div className="text-grad" style={{ fontSize: 50, fontWeight: 950, marginTop: 20 }}>0<span style={{ color: "#1b244f", fontSize: 26 }}> / {taskCount}</span></div>
-            <span className="small-muted">已完成题目数</span>
-            <Progress value={0} className="mt-4"/>
+      <section className="today-review-card card">
+        <div>
+          <IconBubble icon={FileText} size={52} />
+          <div>
+            <b>完成全部训练后，将生成 AI 复盘</b>
+            <p>同步结果后会沉淀到训练日历与周报，形成下一轮目标分计划。</p>
           </div>
+        </div>
+        <Link href="/review" className="today-review-link">
+          了解 AI 复盘 <ChevronRight size={18} />
+        </Link>
+      </section>
 
-          <div className="side-ad">
-            <h2 className="section-title">完成全部训练后，<br/>将生成 AI 复盘</h2>
-            <p className="small-muted">全面分析表现，给出提升建议，并沉淀到训练日历与周报。</p>
-            <Image src="/assets/today-side-owl.png" alt="" width={270} height={290}/>
-          </div>
-        </aside>
-      </div>
-
-      <SyncModal open={open} onClose={() => setOpen(false)} problemPids={tasks.map((task) => task.id)} />
+      <SyncModal open={syncOpen} onClose={() => setSyncOpen(false)} problemPids={tasks.map((task) => task.id)} />
     </div>
   );
 }

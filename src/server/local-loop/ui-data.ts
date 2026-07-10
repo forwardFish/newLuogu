@@ -58,6 +58,7 @@ export type UiAttemptReview = {
   parentSummary: string;
   studentFeedback: string;
   nextAction: string;
+  studentSummary: string;
   evidence: string[];
   generatedAt: string | null;
 };
@@ -280,6 +281,7 @@ function normalizeAttemptReview(review: AnyRecord): UiAttemptReview {
     parentSummary: stringValue(diagnosis.parentSummary, "暂无家长摘要"),
     studentFeedback: stringValue(diagnosis.studentFeedback, "暂无学生反馈"),
     nextAction: stringValue(diagnosis.nextAction, "继续完成今日训练并记录结果。"),
+    studentSummary: stringValue(attempt.studentSummary, ""),
     evidence: asArray(diagnosis.evidence).map((item) => stringValue(item, "")).filter(Boolean),
     generatedAt: stringOrNull(review.generatedAt)
   };

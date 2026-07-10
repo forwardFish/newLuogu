@@ -32,17 +32,19 @@ export default async function AppShell({
   children,
   logo = "a",
   nav = defaultNav,
-  activeHref
+  activeHref,
+  className
 }: {
   children: React.ReactNode;
   logo?: "a" | "robot";
   nav?: NavItem[];
   activeHref?: string;
+  className?: string;
 }) {
   const profile = await getLocalLoopProfile();
 
   return (
-    <div className="page-1448 page-bg">
+    <div className={cn("page-1448 page-bg", className)}>
       <div className="app-shell">
         <aside className="sidebar">
           <div className="brand-wrap">

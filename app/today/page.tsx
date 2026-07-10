@@ -17,7 +17,7 @@ export default async function TodayPage() {
       { href: "/calendar", label: "训练日历", icon: CalendarDays },
       { href: "/report", label: "周报计划", icon: BarChart3 }
     ]}>
-      <TodayClient tasks={keyTasks} totalDurationMinutes={keyTaskDurationMinutes} mode={data.dataQuality} />
+      <TodayClient tasks={keyTasks} totalDurationMinutes={keyTaskDurationMinutes} mode={data.dataQuality} mainGoal={data.mainGoal} />
     </AppShell>
   );
 }

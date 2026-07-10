@@ -11,7 +11,7 @@ def load_json(path: str):
 capture = load_json("docs/auto-execute/results/visual-capture.json")
 compare = load_json("docs/auto-execute/results/visual-compare.json")
 api = load_json("docs/auto-execute/results/api-smoke.json")
-icons = load_json("docs/auto-execute/results/icon-trim-manifest.json")
+icons = load_json("docs/auto-execute/results/icon-normalized-manifest.json")
 block_compare_path = Path("docs/auto-execute/results/visual-block-compare.json")
 block_compare = load_json(str(block_compare_path)) if block_compare_path.exists() else {}
 api_results = api.get("results", []) if isinstance(api, dict) else api
@@ -32,7 +32,7 @@ summary = {
         "count": len(api_results),
         "failures": sum(1 for result in api_results if not result.get("ok")),
     },
-    "icons": {key: icons.get(key) for key in ["count", "beforeBytes", "afterBytes", "savedBytes", "maxEdge", "padding"]},
+    "icons": {key: icons.get(key) for key in ["count", "canvas", "padding", "alphaThreshold", "runtime"]},
 }
 
 out = Path("docs/auto-execute/results/current-summary.json")

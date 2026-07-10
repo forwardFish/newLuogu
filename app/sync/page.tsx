@@ -24,6 +24,7 @@ export default async function SyncPage() {
         tasks={keyTasks}
         totalDurationMinutes={keyTaskDurationMinutes}
         mode={data.dataQuality}
+        mainGoal={data.mainGoal}
       />
     </AppShell>
   );

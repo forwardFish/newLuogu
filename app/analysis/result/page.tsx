@@ -38,6 +38,7 @@ export default async function AnalysisResultPage() {
     }
   ];
   const scoreTargets = [90, 70, 50, 10];
+  const qualityLabel = data.dataQuality === "HIGH" ? "充分" : data.dataQuality === "LOW" ? "偏少" : "中等";
 
   return (
     <div className="page-1448 page-bg analysis-result">
@@ -109,7 +110,7 @@ export default async function AnalysisResultPage() {
         </div>
       </div>
 
-      <p style={{ textAlign: "center", marginTop: 14, color: "#697397", fontSize: 13 }}>本次分析来自真实本地闭环文件；如果继续训练并同步，估分和短板会随产物更新。</p>
+      <p style={{ textAlign: "center", marginTop: 14, color: "#697397", fontSize: 13 }}>本次分析基于 {data.tasks.length} 道题、数据量{qualityLabel}，建议持续训练以获得更准确的评估结果。</p>
     </div>
   );
 }

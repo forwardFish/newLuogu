@@ -7,7 +7,7 @@ export default function OnboardingShell({ active, children }: { active: number; 
   return (
     <div className="page-1448 onboarding-page page-bg">
       <header className="onboard-header">
-        <Brand variant="robot" />
+        <Brand variant="owl" />
         <div className="stepper">
           {steps.map((s, i) => (
             <div key={s} style={{ display: "flex", alignItems: "center", gap: 18 }}>

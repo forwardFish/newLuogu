@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import AppShell from "@/components/AppShell";
-import CalendarFilterRowClient from "@/components/CalendarFilterRowClient";
 import { Badge, IconBubble } from "@/components/Ui";
 import { getLocalLoopUiData } from "@/src/server/local-loop/ui-data";
 import { BarChart3, CalendarDays, CheckCircle2, ChevronRight, Clock, FileText } from "lucide-react";
@@ -20,16 +19,14 @@ export default async function CalendarPage() {
   return (
     <AppShell activeHref="/calendar" nav={[{href:"/dashboard",label:"目标总览",icon:BarChart3},{href:"/today",label:"今日训练",icon:CalendarDays},{href:"/calendar",label:"训练日历",icon:CalendarDays},{href:"/report",label:"周报计划",icon:FileText}]}>
       <div className="calendar-page" style={{ position: "relative" }}>
-        <CalendarFilterRowClient dataQuality={data.dataQuality} />
         <Image src="/assets/calendar-owl.png" alt="" width={168} height={155} className="calendar-hero" />
         <h1>训练日历</h1>
         <p style={{ color: "#53608d", fontSize: 17, margin: "10px 0 0" }}>当前列表来自 `today.json` 中的证据题和本地复盘产物。</p>
 
-        <div className="calendar-stats" style={{ width: 1030 }}>
+        <div className="calendar-stats" style={{ width: 850 }}>
           <div className="stat-card card"><IconBubble icon={CalendarDays}/><div><span>本周训练天数</span><br/><b style={{ fontSize: 36 }}>1 <span style={{ fontSize: 17 }}>天</span></b></div></div>
           <div className="stat-card card"><IconBubble icon={BarChart3}/><div><span>证据题数量</span><br/><b style={{ fontSize: 36 }}>{data.evidenceProblems.length} <span style={{ fontSize: 17 }}>题</span></b></div></div>
           <div className="stat-card card"><IconBubble icon={CheckCircle2}/><div><span>AI 复盘</span><br/><b style={{ fontSize: 36 }}>{reviewedCount} <span style={{ fontSize: 17 }}>次</span></b></div></div>
-          <div className="stat-card card"><IconBubble icon={Clock}/><div><span>最近一次训练</span><br/><b style={{ fontSize: 36 }}>今天</b></div></div>
         </div>
 
         <div className="calendar-layout">

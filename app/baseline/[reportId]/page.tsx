@@ -34,7 +34,7 @@ export default async function BaselineReportPage({ params }: BaselinePageProps) 
               <div className="detail-grid" style={{ gridTemplateColumns: "1fr 1fr", marginTop: 24 }}>
                 <section className="card" style={{ padding: 22 }}>
                   <h2 className="section-title">能力分</h2>
-                  <KeyValueList value={result.local.slotReadiness} />
+                  <AbilityScoreList value={result.local.slotReadiness} />
                 </section>
                 <section className="card" style={{ padding: 22 }}>
                   <h2 className="section-title">主要短板</h2>
@@ -44,9 +44,7 @@ export default async function BaselineReportPage({ params }: BaselinePageProps) 
 
               <section className="card" style={{ padding: 22, marginTop: 24 }}>
                 <h2 className="section-title">本地闭环报告</h2>
-                <pre style={{ whiteSpace: "pre-wrap", lineHeight: 1.8, color: "#36426d", fontFamily: "inherit" }}>
-                  {result.local.reportText}
-                </pre>
+                <LocalLoopReport text={result.local.reportText} />
               </section>
 
               <div className="report-actions" style={{ marginTop: 24 }}>
@@ -70,7 +68,7 @@ export default async function BaselineReportPage({ params }: BaselinePageProps) 
               <div className="detail-grid" style={{ gridTemplateColumns: "1fr 1fr", marginTop: 24 }}>
                 <section className="card" style={{ padding: 22 }}>
                   <h2 className="section-title">能力分</h2>
-                  <KeyValueList value={result.report.abilityJson} />
+                  <AbilityScoreList value={result.report.abilityJson} />
                 </section>
                 <section className="card" style={{ padding: 22 }}>
                   <h2 className="section-title">主要短板</h2>
@@ -143,11 +141,40 @@ function Metric({ title, value }: { title: string; value: React.ReactNode }) {
   return <div className="metric-card card"><div className="label">{title}</div><div className="value">{value}</div><Badge>baseline</Badge></div>;
 }
 
-function KeyValueList({ value }: { value: unknown }) {
+function AbilityScoreList({ value }: { value: unknown }) {
   const record = asRecord(value);
   const entries = Object.entries(record);
   if (!entries.length) return <p className="small-muted">暂无结构化能力分。</p>;
-  return <div style={{ display: "grid", gap: 10 }}>{entries.map(([key, item]) => <div className="action-link" key={key}><span>{key}</span><b>{formatValue(item)}</b></div>)}</div>;
+  return (
+    <div style={{ display: "grid", gap: 12 }}>
+      {entries.map(([key, item]) => {
+        const ability = asRecord(item);
+        if (!Object.keys(ability).length) {
+          return (
+            <div className="action-link baseline-kv" key={key}>
+              <span>{key}</span>
+              <b>{formatValue(item)}</b>
+            </div>
+          );
+        }
+        const risks = toTextList(ability.mainRisks);
+        const actions = toTextList(ability.calibrationActions);
+        return (
+          <div className="card baseline-ability-card" key={key}>
+            <div className="baseline-ability-head">
+              <b>{key}</b>
+              <span className="num-grad">{formatValue(ability.calibratedScore ?? ability.score ?? ability.modelScore)}</span>
+            </div>
+            <div className="small-muted">{formatValue(ability.role ?? ability.status ?? "")}</div>
+            <div className="baseline-chip-row">
+              {risks.slice(0, 3).map((risk) => <span className="badge orange" key={risk}>{risk}</span>)}
+            </div>
+            {actions.length ? <p className="small-muted baseline-action">{actions.slice(0, 2).join("；")}</p> : null}
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 
 function WeaknessList({ value }: { value: unknown }) {
@@ -163,6 +190,44 @@ function WeaknessList({ value }: { value: unknown }) {
   );
 }
 
+function LocalLoopReport({ text }: { text: string }) {
+  let parsed: Record<string, unknown> = {};
+  try {
+    parsed = asRecord(JSON.parse(text));
+  } catch {
+    parsed = {};
+  }
+  const mockCalibration = asRecord(parsed.mockCalibration);
+  const rows = [
+    ["当前阶段", formatValue(parsed.currentStage)],
+    ["核心目标", formatValue(parsed.mainGoal)],
+    ["校准状态", formatValue(mockCalibration.calibrationConfidence ?? mockCalibration.status ?? "APPLIED")],
+  ].filter(([, value]) => value);
+  const blockers = toTextList(parsed.blockingIssues);
+
+  if (!Object.keys(parsed).length) {
+    return <p className="small-muted">{text}</p>;
+  }
+
+  return (
+    <div className="baseline-local-report">
+      <div className="baseline-local-grid">
+        {rows.map(([label, value]) => (
+          <div className="card baseline-local-card" key={label}>
+            <span>{label}</span>
+            <b>{value}</b>
+          </div>
+        ))}
+      </div>
+      {blockers.length ? (
+        <div className="baseline-chip-row">
+          {blockers.slice(0, 4).map((item) => <span className="badge orange" key={item}>{item}</span>)}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
 function StateMessage({ title, message }: { title: string; message: string }) {
   return <div><h2 className="section-title">{title}</h2><p className="small-muted">{message}</p></div>;
 }
@@ -171,8 +236,12 @@ function asRecord(value: unknown): Record<string, unknown> {
   return value && typeof value === "object" && !Array.isArray(value) ? value as Record<string, unknown> : {};
 }
 
+function toTextList(value: unknown) {
+  return Array.isArray(value) ? value.map((item) => String(item)).filter(Boolean) : [];
+}
+
 function formatValue(value: unknown) {
   if (typeof value === "number" || typeof value === "string") return String(value);
-  if (value && typeof value === "object") return JSON.stringify(value);
+  if (value && typeof value === "object") return "";
   return "";
 }

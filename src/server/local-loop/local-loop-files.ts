@@ -23,6 +23,14 @@ export async function readLocalText(relativePath: string): Promise<string | null
   }
 }
 
+export async function writeLocalJson(relativePath: string, value: unknown) {
+  const target = path.resolve(ROOT, relativePath);
+  const root = path.resolve(ROOT) + path.sep;
+  if (!target.startsWith(root)) throw new Error("Refusing to write outside the project root");
+  await fs.mkdir(path.dirname(target), { recursive: true });
+  await fs.writeFile(target, JSON.stringify(value, null, 2) + "\n", "utf8");
+}
+
 export async function listAttemptAnalyses() {
   const dir = path.join(LOCAL_DIR, "attempt-analysis");
   try {

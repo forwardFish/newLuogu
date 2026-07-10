@@ -1,9 +1,10 @@
 import { prisma } from "@/src/lib/prisma";
-import { jsonResponse } from "@/src/lib/json";
+import { formatErrorDetail, jsonResponse } from "@/src/lib/json";
 import { isDatabaseMissing, localBaselineReport } from "@/src/server/local-loop/api-fallback";
 
 export async function GET(_request: Request, { params }: { params: Promise<{ reportId: string }> }) {
   const { reportId } = await params;
+  if (!/^\d+$/.test(reportId)) return jsonResponse({ error: "reportId must be numeric" }, { status: 400 });
   try {
     const report = await prisma.baselineAnalysisReport.findUnique({
       where: { id: BigInt(reportId) },
@@ -35,6 +36,6 @@ export async function GET(_request: Request, { params }: { params: Promise<{ rep
     if (isDatabaseMissing(error)) {
       return jsonResponse(await localBaselineReport());
     }
-    throw error;
+    return jsonResponse({ error: "failed to read baseline report", detail: formatErrorDetail(error) }, { status: 500 });
   }
 }

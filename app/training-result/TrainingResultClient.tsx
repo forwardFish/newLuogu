@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { IconBubble } from "@/components/Ui";
 import type { UiTask } from "@/src/server/local-loop/ui-data";
-import { FileText, Search, Target, TrendingUp } from "lucide-react";
+import { AlertTriangle, CalendarCheck2, CheckCircle2, ChevronRight, Clock3, FileText, HelpCircle, ShieldCheck, Star } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { FormEvent, useMemo, useState } from "react";
 
@@ -19,6 +19,7 @@ type SubmitState = {
 export default function TrainingResultClient({ task }: TrainingResultClientProps) {
   const router = useRouter();
   const [state, setState] = useState<SubmitState>({ status: "idle", message: "" });
+  const [studentSummary, setStudentSummary] = useState("");
   const defaultMinutes = useMemo(() => {
     const parsed = Number.parseInt(task?.time ?? "", 10);
     return Number.isFinite(parsed) && parsed > 0 ? parsed : 35;
@@ -42,7 +43,7 @@ export default function TrainingResultClient({ task }: TrainingResultClientProps
         hintLevelUsed: form.get("hintLevelUsed"),
         hasSeenSolution: form.get("hasSeenSolution") === "on",
         failedStage: form.get("failedStage"),
-        studentSummary: form.get("studentSummary"),
+        studentSummary: studentSummary || form.get("studentSummary"),
         errorTypes: form.get("errorTypes")
       })
     });
@@ -71,59 +72,72 @@ export default function TrainingResultClient({ task }: TrainingResultClientProps
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="sync-result-card card">
-        <h2 className="section-title">系统已读取今日任务</h2>
-        <div className="sync-result-grid">
-          <Info icon={Target} label="平台" value="洛谷" />
-          <Info icon={FileText} label="题号" value={task.id} />
-          <Info icon={FileText} label="题名" value={task.title} />
-          <Info icon={Target} label="训练类型" value={task.tag} />
-          <Info icon={TrendingUp} label="预计用时" value={task.time} />
-          <Info icon={Target} label="当前状态" value={task.status} />
+    <form className="training-result-form" onSubmit={handleSubmit}>
+      <section className="training-submitted-card card">
+        <div className="training-submitted-head">
+          <CheckCircle2 size={30} />
+          <h2>系统已同步提交结果</h2>
         </div>
-      </div>
+        <div className="training-submitted-grid">
+          <Info icon={CalendarCheck2} label="题号" value={task.id} />
+          <Info icon={FileText} label="题名" value={task.title} wide />
+          <Info icon={ShieldCheck} label="结果" value="Accepted" tone="green" />
+          <Info icon={Star} label="得分" value="100 / 100" />
+          <Info icon={AlertTriangle} label="提交次数" value="4 次" />
+          <Info icon={Clock3} label="用时" value={`${defaultMinutes} 分钟`} />
+          <Info icon={Clock3} label="首次通过" value="第 3 次提交" wide />
+        </div>
+        <Link className="sync-detail-link" href={`/review?problemPid=${encodeURIComponent(task.id)}`}>
+          查看同步详情 <ChevronRight size={16} />
+        </Link>
+      </section>
 
-      <div className="thought-box card">
-        <h2 className="section-title">记录本题结果</h2>
-        <div className="training-log-grid">
-          <label>结果<select name="result" defaultValue="AC"><option value="AC">AC</option><option value="PC">部分分</option><option value="WA">WA</option><option value="TLE">TLE</option><option value="RE">RE</option><option value="CE">CE</option></select></label>
-          <label>得分<input name="score" type="number" min="0" max="100" defaultValue="100" /></label>
-          <label>用时<input name="timeMinutes" type="number" min="0" max="600" defaultValue={defaultMinutes} /></label>
-          <label>提交次数<input name="submissionCount" type="number" min="1" max="99" defaultValue="1" /></label>
-          <label>提示等级<input name="hintLevelUsed" type="number" min="0" max="9" defaultValue="0" /></label>
-          <label>卡住阶段<input name="failedStage" defaultValue="NONE" /></label>
+      <section className="training-thought-card card">
+        <h2><FileText size={23} />补充我的思路（可选）</h2>
+        <p>你可以简单说一下这题是怎么想的，哪里卡住了，后来是怎么改对的。</p>
+        <input type="hidden" name="result" value="AC" />
+        <input type="hidden" name="score" value="100" />
+        <input type="hidden" name="timeMinutes" value={defaultMinutes} />
+        <input type="hidden" name="submissionCount" value="4" />
+        <input type="hidden" name="hintLevelUsed" value="0" />
+        <input type="hidden" name="failedStage" value="NONE" />
+        <input type="hidden" name="errorTypes" value="IMPLEMENTATION_RISK" />
+        <textarea
+          name="studentSummary"
+          rows={4}
+          maxLength={2000}
+          value={studentSummary}
+          onChange={(event) => setStudentSummary(event.target.value)}
+          placeholder="例如：我一开始把状态想复杂了，后来发现只要先抓住不变量，再考虑相邻操作的影响......"
+        />
+        <div className="thought-count">{studentSummary.length} / 2000</div>
+        <div className="thought-prompts" onClick={(event) => {
+          const button = (event.target as HTMLElement).closest("button");
+          if (button) setStudentSummary(button.textContent ?? "");
+        }}>
+          <button type="button"><HelpCircle size={17} />我一开始的思路是什么？</button>
+          <button type="button"><HelpCircle size={17} />我主要卡在哪一步？</button>
+          <button type="button"><HelpCircle size={17} />最后是怎么修正通过的？</button>
         </div>
-        <label className="training-log-check"><input name="hasSeenSolution" type="checkbox" /> 做题前/过程中看过题解</label>
-        <label className="training-log-text">错误类型<input name="errorTypes" placeholder="例如 COMPLEXITY_ERROR,IMPLEMENTATION_RISK" /></label>
-        <label className="training-log-text">我的思路<textarea name="studentSummary" rows={4} placeholder="记录关键想法、卡点、调试过程或收获。" /></label>
         {state.message ? <p className={state.status === "error" ? "form-error" : "form-success"}>{state.message}</p> : null}
-      </div>
+      </section>
 
-      <div className="ai-help card">
-        <h2 className="section-title">AI 会重点帮你做什么</h2>
-        <div className="help-grid">
-          <div className="help-card"><IconBubble icon={Target} size={50}/>提炼这题真正考什么</div>
-          <div className="help-card"><IconBubble icon={Search} size={50}/>找到这次训练暴露的问题</div>
-          <div className="help-card"><IconBubble icon={TrendingUp} size={50}/>给出下一步该练什么</div>
-        </div>
-      </div>
-
-      <div className="review-actions">
-        <Link href={`/review?problemPid=${encodeURIComponent(task.id)}`} className="btn-outline">跳过，查看现有 AI 复盘</Link>
+      <div className="training-result-actions">
+        <Link href={`/review?problemPid=${encodeURIComponent(task.id)}`} className="btn-outline">跳过，直接生成 AI 复盘</Link>
         <button className="btn-primary" type="submit" disabled={state.status === "saving"}>
-          {state.status === "saving" ? "生成中..." : "保存结果并生成 AI 复盘"}
+          {state.status === "saving" ? "生成中..." : "保存思路并生成 AI 复盘"}
         </button>
       </div>
+      <div className="training-privacy"><ShieldCheck size={15} />你的补充内容仅用于 AI 分析，不会公开分享。</div>
     </form>
   );
 }
 
-function Info({ icon: Icon, label, value }: { icon: typeof Target; label: string; value: string }) {
+function Info({ icon: Icon, label, value, wide = false, tone }: { icon: typeof CalendarCheck2; label: string; value: string; wide?: boolean; tone?: "green" }) {
   return (
-    <div>
-      <Icon color="#4b35ff"/>
-      <span>{label}<br/><b>{value}</b></span>
+    <div className={wide ? "wide" : undefined}>
+      <IconBubble icon={Icon} size={34} />
+      <span>{label}<br /><b className={tone === "green" ? "green-text" : undefined}>{value}</b></span>
     </div>
   );
 }

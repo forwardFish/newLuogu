@@ -13,11 +13,9 @@ export default function OnboardingStep1Client({ profile }: Props) {
   const router = useRouter();
   const [exam, setExam] = useState<"CSP-J" | "CSP-S">(profile.grade === "CSP-J" ? "CSP-J" : "CSP-S");
   const [cspJScore, setCspJScore] = useState("");
-  const [cspSScore, setCspSScore] = useState(String(profile.currentScore || ""));
-  const [targetScore, setTargetScore] = useState(String(profile.targetScore || 200));
-  const [note, setNote] = useState(
-    `当前 UID ${profile.uid}，数据质量 ${profile.dataQuality}，围绕 ${profile.targetScore} 分目标继续校准训练。`
-  );
+  const [cspSScore, setCspSScore] = useState("");
+  const [targetScore, setTargetScore] = useState("");
+  const [note, setNote] = useState("");
 
   const activeScore = useMemo(() => (exam === "CSP-J" ? cspJScore : cspSScore), [cspJScore, cspSScore, exam]);
 
@@ -65,7 +63,7 @@ export default function OnboardingStep1Client({ profile }: Props) {
               className="input-box field-control"
               inputMode="numeric"
               name="cspSScore"
-              placeholder={`当前估分 ${profile.currentScore}`}
+              placeholder="例如 112"
               value={cspSScore}
               onChange={(event) => setCspSScore(event.target.value)}
             />
@@ -80,6 +78,7 @@ export default function OnboardingStep1Client({ profile }: Props) {
             className="input-box field-control"
             inputMode="numeric"
             name="targetScore"
+            placeholder="例如 200"
             value={targetScore}
             onChange={(event) => setTargetScore(event.target.value)}
           />
@@ -92,6 +91,7 @@ export default function OnboardingStep1Client({ profile }: Props) {
         <textarea
           className="textarea-box field-control textarea-control"
           name="note"
+          placeholder="例如：最近 T2 不稳定，想冲 200 分"
           value={note}
           onChange={(event) => setNote(event.target.value)}
         />

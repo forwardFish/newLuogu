@@ -18,7 +18,7 @@ export default function OnboardingStep3Client({ plannedMinutes, taskCount, curre
   const [minutes, setMinutes] = useState("60 分钟");
   const [weekend, setWeekend] = useState("可以");
   const [pace, setPace] = useState("稳步提升");
-  const [note, setNote] = useState(`当前今日训练计划约 ${plannedMinutes} 分钟，围绕 ${currentScore} → ${nextMilestone} 分阶段目标安排。`);
+  const [note, setNote] = useState("");
 
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -38,7 +38,7 @@ export default function OnboardingStep3Client({ plannedMinutes, taskCount, curre
         <div className="form-title">
           5. 备注 <span style={{ color: "#687295", fontWeight: 700 }}>（可选）</span>
         </div>
-        <textarea className="textarea-box field-control textarea-control" name="note" value={note} onChange={(event) => setNote(event.target.value)} />
+        <textarea className="textarea-box field-control textarea-control" name="note" placeholder="例如：周末可以安排更长时间" value={note} onChange={(event) => setNote(event.target.value)} />
       </div>
       <div className="info-strip">
         <Clock size={22} color="#4b35ff" />

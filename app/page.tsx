@@ -54,18 +54,18 @@ export default async function HomePage() {
             <p style={{ fontSize: 18, lineHeight: 1.9, color: "#3f4a75", margin: 0 }}>
               基于孩子的训练记录、代码提交和做题表现，<br/>AI 生成 CSP-J/S 目标分诊断、阶段规划、<br/>每日训练任务和家长可读报告。
             </p>
-            <PrimaryLink href="/onboarding" className="mt-7" style={{ width: 310, marginLeft: 30 } satisfies CSSProperties}>免费测一次能力诊断 →</PrimaryLink>
+            <PrimaryLink href="/onboarding" className="mt-7" style={{ width: 318 } satisfies CSSProperties}>免费测一次能力诊断 →</PrimaryLink>
             <div style={{ marginTop: 15, color: "#4f5a84", fontSize: 14, display: "flex", alignItems: "center", gap: 8 }}><CheckCircle2 size={17} color="#4733ff"/>支持训练记录 / 代码数据导入，10 分钟生成诊断</div>
           </div>
           <div className="card-large" style={{ height: 410, borderRadius: 26, marginTop: 0, position: "relative", padding: 26, overflow: "hidden" }}>
             <div style={{ fontWeight: 900, fontSize: 19, marginBottom: 12 }}>✦ 训练策略示例（CSP-J/S）</div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, width: 370, position: "relative", zIndex: 1 }}>
-              <div className="card" style={{ height: 122, padding: 16, background: "#fff" }}><Target size={25} color="#4b35ff"/><p style={{ margin: "10px 0 5px", fontWeight: 900 }}>当前预估分</p><b style={{ fontSize: 29 }}>{data.currentScore}<span style={{ fontSize: 15 }}> 分</span></b><div style={{ color: "#5e688e", fontSize: 12 }}>数据质量 {qualityLabel}</div></div>
-              <div className="card" style={{ height: 122, padding: 16, background: "#fff" }}><Target size={25} color="#4b35ff"/><p style={{ margin: "10px 0 5px", fontWeight: 900 }}>目标分</p><b style={{ fontSize: 29 }}>{data.targetScore}<span style={{ fontSize: 15 }}> 分</span></b><div style={{ color: "#5e688e", fontSize: 12 }}>里程碑 {data.nextMilestone} 分</div></div>
-              <div className="card" style={{ height: 122, padding: 16, background: "#fff" }}><Zap size={23} color="#4b35ff"/><p style={{ margin: "10px 0 5px", fontWeight: 900 }}>最大短板</p><b style={{ fontSize: 18 }}>{shortWeakness}</b><div className="progress-track" style={{ marginTop: 10 }}><div className="progress-fill" style={{ width: progressWidth }}/></div></div>
-              <div className="card" style={{ height: 122, padding: 14, background: "#fff" }}><FileText size={22} color="#4b35ff"/><p style={{ margin: "6px 0 3px", fontWeight: 900 }}>今日计划</p><b style={{ display: "block", fontSize: 13, lineHeight: 1.22 }}>{planLines.map((line) => <span key={line}>{line}<br/></span>)}</b></div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, width: 390, position: "relative", zIndex: 1 }}>
+              <div className="card" style={{ height: 122, padding: 18, background: "#fff" }}><Target size={26} color="#4b35ff"/><p style={{ margin: "12px 0 6px", fontWeight: 900 }}>当前预估分</p><b style={{ fontSize: 30 }}>{data.currentScore}<span style={{ fontSize: 16 }}> 分</span></b><div style={{ color: "#5e688e", fontSize: 13 }}>数据质量 {qualityLabel}</div></div>
+              <div className="card" style={{ height: 122, padding: 18, background: "#fff" }}><Target size={26} color="#4b35ff"/><p style={{ margin: "12px 0 6px", fontWeight: 900 }}>目标分</p><b style={{ fontSize: 30 }}>{data.targetScore}<span style={{ fontSize: 16 }}> 分</span></b><div style={{ color: "#5e688e", fontSize: 13 }}>里程碑 {data.nextMilestone} 分</div></div>
+              <div className="card" style={{ height: 122, padding: 18, background: "#fff" }}><Zap size={24} color="#4b35ff"/><p style={{ margin: "12px 0 6px", fontWeight: 900 }}>最大短板</p><b style={{ fontSize: 22 }}>{shortWeakness}</b><div className="progress-track" style={{ marginTop: 12 }}><div className="progress-fill" style={{ width: progressWidth }}/></div></div>
+              <div className="card" style={{ height: 122, padding: 18, background: "#fff" }}><FileText size={24} color="#4b35ff"/><p style={{ margin: "12px 0 6px", fontWeight: 900 }}>今日计划</p><b style={{ display: "block", fontSize: 20, lineHeight: 1.8 }}>{planLines.map((line) => <span key={line}>{line}<br/></span>)}</b></div>
             </div>
-            <Image src="/assets/payment-top-owl.png" alt="AI 教练" width={445} height={210} style={{ position: "absolute", right: -4, bottom: 38, width: 250, height: "auto", zIndex: 0 }} />
+            <Image src="/assets/today-top-owl.png" alt="AI 教练" width={445} height={210} style={{ position: "absolute", right: -25, bottom: 28, width: 325, height: "auto", zIndex: 0 }} />
             <div style={{ position: "absolute", right: 10, top: -14, width: 210, height: 160, borderRadius: "50%", background: "radial-gradient(circle, rgba(145,130,255,.24), transparent 68%)" }} />
           </div>
         </section>
@@ -121,49 +121,12 @@ export default async function HomePage() {
           </div>
         </section>
 
-        <section id="report" className="card" style={{ marginTop: 16, padding: "14px 24px", minHeight: 172 }}>
-          <div style={{ display: "grid", gridTemplateColumns: "298px 166px 138px 246px", gap: 12, alignItems: "stretch" }}>
-            <div>
-              <b style={{ fontSize: 14 }}>阶段进展总览</b>
-              <div style={{ marginTop: 7, color: "#5e688e", fontSize: 10 }}>{data.generatedAt?.slice(5, 10) ?? "本周"} - {data.currentStage}</div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 8, marginTop: 8 }}>
-                {reportMetrics.map((item) => (
-                  <div key={item.label} className="card" style={{ height: 45, padding: "7px 10px", boxShadow: "none", borderRadius: 8 }}>
-                    <b style={{ display: "block", fontSize: 14, lineHeight: 1 }}>{item.value}</b>
-                    <span style={{ display: "block", color: "#667096", fontSize: 9, marginTop: 4 }}>{item.label}</span>
-                    <span style={{ color: "#17a66b", fontSize: 9 }}>{item.change}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div style={{ position: "relative", display: "grid", placeItems: "center" }}>
-              <svg width="170" height="110" viewBox="0 0 180 112" aria-label="能力雷达图">
-                <polygon points="90,8 137,37 122,90 58,90 43,37" fill="#f1efff" stroke="#d9d4ff" strokeWidth="1" />
-                <polygon points="90,22 123,43 112,78 68,78 57,43" fill="#eeeaff" stroke="#d9d4ff" strokeWidth="1" />
-                <polygon points={radarPoints} fill="rgba(92,65,255,.25)" stroke="#684dff" strokeWidth="2" />
-                {[["算法思维",90,6],["数据结构",132,86],["编程实力",47,86],["代码调试",36,43],["基础稳固",136,43]].map(([text, x, y]) => (
-                  <text key={text} x={Number(x)} y={Number(y)} textAnchor="middle" fontSize="8" fill="#596389">{text}</text>
-                ))}
-              </svg>
-            </div>
-            <div className="card" style={{ padding: 12, boxShadow: "none", borderRadius: 10, overflow: "hidden" }}>
-              <b style={{ fontSize: 14 }}>本周重点</b>
-              <ul style={{ margin: "8px 0 0", paddingLeft: 16, lineHeight: 1.75, color: "#334066", fontSize: 10 }}>
-                {[data.mainGoal, mainWeakness, recentReview?.nextAction ?? `冲刺 ${stageMid} 分里程碑`].map((item) => <li key={item}>{item}</li>)}
-              </ul>
-            </div>
-            <div style={{ display: "grid", gap: 8 }}>
-              {[
-                ["训练数据可视化", "时长、正确率、题型分布一目了然"],
-                ["错题分析与建议", "AI 分析错因，给出针对性建议"],
-                ["阶段目标跟踪", "阶段目标完成情况，清晰可见"]
-              ].map(([title, desc]) => (
-                <div className="card" key={title} style={{ height: 39, display: "flex", alignItems: "center", gap: 9, padding: "0 12px", boxShadow: "none", borderRadius: 9 }}>
-                  <MiniSquare icon={CheckCircle2}/>
-                  <span><b style={{ display: "block", fontSize: 12 }}>{title}</b><span style={{ color: "#667096", fontSize: 9 }}>{desc}</span></span>
-                </div>
-              ))}
-            </div>
+        <section id="report" className="card" style={{ marginTop: 16, padding: "24px 30px", minHeight: 172 }}>
+          <h2 style={{ textAlign: "center", margin: "0 0 20px", fontSize: 24, fontWeight: 950 }}>家长能看到什么</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "1.15fr .9fr 1fr", gap: 18 }}>
+            <div className="card" style={{ minHeight: 108, padding: 16 }}><b>阶段进展总览</b><div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 8, marginTop: 10 }}>{reportMetrics.map((item) => <div key={item.label} style={{ background: "#fbfcff", border: "1px solid #eef1fa", borderRadius: 8, padding: 8, fontWeight: 900 }}>{item.value}<br/><span style={{ fontSize: 10, color: "#1aaf70" }}>{item.change}</span></div>)}</div></div>
+            <div className="card" style={{ minHeight: 108, padding: 16 }}><b>本周重点</b><ul style={{ margin: "12px 0 0", lineHeight: 1.8, color: "#334066", fontSize: 13 }}>{[data.mainGoal, mainWeakness, recentReview?.nextAction ?? `冲刺 ${stageMid} 分里程碑`].map((item) => <li key={item}>{item}</li>)}</ul></div>
+            <div style={{ display: "grid", gap: 8 }}>{["训练数据可视化","错题分析与建议","阶段目标跟踪"].map((t) => <div className="card" key={t} style={{ height: 44, display: "flex", alignItems: "center", gap: 12, padding: "0 14px" }}><MiniSquare icon={CheckCircle2}/><b>{t}</b></div>)}</div>
           </div>
         </section>
       </main>

@@ -8,7 +8,16 @@ export const LOCAL_SYNC_JOB_ID = 1024038001;
 export const LOCAL_BASELINE_REPORT_ID = 1024038002;
 
 export function isDatabaseMissing(error: unknown) {
-  return formatErrorDetail(error).includes("DATABASE_URL");
+  const detail = formatErrorDetail(error);
+  return [
+    "DATABASE_URL",
+    "DIRECT_URL",
+    "Can't reach database server",
+    "database server at",
+    "P1001",
+    "P1000",
+    "password authentication failed"
+  ].some((marker) => detail.includes(marker));
 }
 
 export async function localSubject() {

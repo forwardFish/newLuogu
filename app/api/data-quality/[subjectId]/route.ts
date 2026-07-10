@@ -1,9 +1,10 @@
-import { jsonResponse } from "@/src/lib/json";
+import { formatErrorDetail, jsonResponse } from "@/src/lib/json";
 import { isDatabaseMissing, localDataQuality } from "@/src/server/local-loop/api-fallback";
 import { DataQualityService } from "@/src/server/quality/data-quality-service";
 
 export async function GET(_request: Request, { params }: { params: Promise<{ subjectId: string }> }) {
   const { subjectId } = await params;
+  if (!/^\d+$/.test(subjectId)) return jsonResponse({ error: "subjectId must be numeric" }, { status: 400 });
   try {
     const report = await new DataQualityService().latest(BigInt(subjectId));
     if (!report) return jsonResponse({ error: "data quality report not found" }, { status: 404 });
@@ -25,6 +26,6 @@ export async function GET(_request: Request, { params }: { params: Promise<{ sub
     if (isDatabaseMissing(error)) {
       return jsonResponse(await localDataQuality());
     }
-    throw error;
+    return jsonResponse({ error: "failed to read data quality", detail: formatErrorDetail(error) }, { status: 500 });
   }
 }

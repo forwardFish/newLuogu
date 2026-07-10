@@ -7,17 +7,29 @@ const snapshotRoots = ["data/training", "data/local-loop", "data/mastery"];
 
 const endpoints = [
   ["POST", "/api/subjects", { luoguUid: "1024038", displayName: "local-smoke", subjectType: "PUBLIC_UID", target: "CSP-S_FIRST_PRIZE" }],
-  ["POST", "/api/sync/start", { subjectId: "1024038", maxRecordPages: 1, syncType: "baseline" }],
-  ["GET", "/api/sync/1024038001"],
-  ["POST", "/api/analysis/baseline", { subjectId: "1024038", syncJobId: "1024038001", target: "CSP-S_FIRST_PRIZE" }],
-  ["GET", "/api/analysis/baseline/1024038002"],
-  ["GET", "/api/data-quality/1024038"],
+  ["POST", "/api/sync/start", { subjectId: ":subjectId", maxRecordPages: 1, syncType: "baseline" }],
+  ["GET", "/api/sync/:syncJobId"],
+  ["POST", "/api/analysis/baseline", { subjectId: ":subjectId", syncJobId: ":syncJobId", target: "CSP-S_FIRST_PRIZE" }],
+  ["GET", "/api/analysis/baseline/:reportId"],
+  ["GET", "/api/data-quality/:subjectId"],
   ["GET", "/api/training/today"],
   ["POST", "/api/training/log", { problemPid: "P1001", unitId: "T1-basic-001", taskType: "PRACTICE_STANDARD", result: "AC", score: 100, timeMinutes: 12, submissionCount: 1 }],
-  ["POST", "/api/review", { submissionId: "local-submission-001" }],
+  ["POST", "/api/review", { problemPid: "P1001", studentSummary: "Acceptance user note: explain the boundary decision." }],
   ["GET", "/api/report/weekly"],
-  ["POST", "/api/analyze", { subjectId: "1024038", syncJobId: "1024038001", target: "CSP-S_FIRST_PRIZE" }],
+  ["POST", "/api/analyze", { subjectId: ":subjectId", syncJobId: ":syncJobId", target: "CSP-S_FIRST_PRIZE" }],
+  ["GET", "/api/calibration/mock"],
+  ["GET", "/api/student-analysis-v2?subjectId=:subjectId&syncJobId=:syncJobId"],
+  ["POST", "/api/luogu/sync", { luoguUid: "1024038", maxRecordPages: 1, syncType: "baseline" }],
+  ["GET", "/api/sync/not-a-number"],
+  ["GET", "/api/analysis/baseline/not-a-number"],
+  ["GET", "/api/data-quality/not-a-number"],
 ];
+
+const expectedStatuses = new Map([
+  ["GET /api/sync/not-a-number", 400],
+  ["GET /api/analysis/baseline/not-a-number", 400],
+  ["GET /api/data-quality/not-a-number", 400],
+]);
 
 async function pathExists(target) {
   try {
@@ -70,13 +82,34 @@ async function restoreSnapshot(snapshot) {
   }
 }
 
+const flowState = {
+  subjectId: "1024038",
+  syncJobId: "1024038001",
+  reportId: "1024038002",
+};
+
+function replaceTokens(value) {
+  if (typeof value === "string") {
+    return value.replaceAll(":subjectId", flowState.subjectId)
+      .replaceAll(":syncJobId", flowState.syncJobId)
+      .replaceAll(":reportId", flowState.reportId);
+  }
+  if (Array.isArray(value)) return value.map(replaceTokens);
+  if (value && typeof value === "object") {
+    return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, replaceTokens(item)]));
+  }
+  return value;
+}
+
 async function runEndpoint([method, route, body]) {
   const started = Date.now();
+  const actualRoute = replaceTokens(route);
+  const actualBody = replaceTokens(body);
   try {
-    const response = await fetch(new URL(route, baseUrl), {
+    const response = await fetch(new URL(actualRoute, baseUrl), {
       method,
-      headers: body ? { "content-type": "application/json" } : undefined,
-      body: body ? JSON.stringify(body) : undefined,
+      headers: actualBody ? { "content-type": "application/json" } : undefined,
+      body: actualBody ? JSON.stringify(actualBody) : undefined,
     });
     const text = await response.text();
     let json = null;
@@ -85,20 +118,33 @@ async function runEndpoint([method, route, body]) {
     } catch {
       json = null;
     }
+    if (route === "/api/subjects" && response.ok && json?.subjectId !== undefined) {
+      flowState.subjectId = String(json.subjectId);
+    }
+    if (route === "/api/sync/start" && response.ok && json?.syncJobId !== undefined) {
+      flowState.syncJobId = String(json.syncJobId);
+    }
+    if (route === "/api/analysis/baseline" && response.ok && json?.analysisReportId !== undefined) {
+      flowState.reportId = String(json.analysisReportId);
+    }
+    const expectedStatus = expectedStatuses.get(`${method} ${route}`) ?? 200;
     return {
       method,
-      path: route,
+      path: actualRoute,
+      contract: route,
       status: response.status,
-      ok: response.status >= 200 && response.status < 300,
+      ok: response.status === expectedStatus,
       durationMs: Date.now() - started,
       sampleKeys: json && typeof json === "object" ? Object.keys(json).slice(0, 8) : [],
       statusField: json?.status,
       source: json?.source,
+      expectedStatus,
     };
   } catch (error) {
     return {
       method,
-      path: route,
+      path: actualRoute,
+      contract: route,
       status: null,
       ok: false,
       durationMs: Date.now() - started,

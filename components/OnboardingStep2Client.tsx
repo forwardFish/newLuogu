@@ -17,7 +17,7 @@ export default function OnboardingStep2Client({ weakness, taskCount, dataQuality
   const [cspJTimes, setCspJTimes] = useState("1 次");
   const [cspSTimes, setCspSTimes] = useState("0 次");
   const [learned, setLearned] = useState<string[]>(["基础语法", "搜索", "贪心", "动态规划"]);
-  const [note, setNote] = useState(`当前诊断重点：${weakness}；今日计划已有 ${taskCount} 个训练任务，数据质量 ${dataQuality}。`);
+  const [note, setNote] = useState("");
 
   function toggleLearned(value: string) {
     setLearned((current) => current.includes(value) ? current.filter((item) => item !== value) : [...current, value]);
@@ -57,7 +57,7 @@ export default function OnboardingStep2Client({ weakness, taskCount, dataQuality
         <div className="form-title">
           5. 补充说明 <span style={{ color: "#687295", fontWeight: 700 }}>（可选）</span>
         </div>
-        <textarea className="textarea-box field-control textarea-control" name="note" value={note} onChange={(event) => setNote(event.target.value)} />
+        <textarea className="textarea-box field-control textarea-control" name="note" placeholder="例如：学校上过基础算法课，最近开始做 DP 题" value={note} onChange={(event) => setNote(event.target.value)} />
       </div>
       <div className="onboard-actions">
         <button className="btn-outline" type="button" onClick={() => router.push("/onboarding")}>
